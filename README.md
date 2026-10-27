@@ -18,7 +18,7 @@ I grouped the stores by theme. If an item has no store, or sits in the wrong one
 
 ## In development
 
-This is a hobby project. I made it in collaboration with AI (yes, vibe-coded), but with a lot of time and care: the models went through round after round, and some heaps are settled with a real physics simulation. Not everything is that far yet. Some stores still look a bit rough. If something looks off, tell me; it helps.
+This is a hobby project. I made it in collaboration with AI (yes, vibe-coded), but with a lot of time and care: the models went through round after round. Some of it is done with a real physics simulation: the heaps in several stores are settled that way ahead of time, so it costs nothing while you play. Other parts would take a lot more time to get right with my limited coding and 3D modeling knowledge, so not everything is that far yet. Some stores still look a bit rough. If something looks off, tell me; it helps.
 
 Storehouse is experimental and still in development. When I update it, I make sure you keep your items. Still, **back up your world (or your server) before you install it, and before every update.**
 
@@ -151,6 +151,6 @@ Requires Jotunn. License: MIT. You can do what you want with it, as long as the 
 ## My other mods
 
 I'm a designer, not a software developer, and I got into making Valheim mods together with AI. These are the others:
-- [Hearthwoven Stats Book](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Hearthwoven_Stats_Book/): all your stats in an in-game book, from cooking and mining to damage per weapon.
-- [Portal Compass](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/PortalCompass/): search, pin and pick XPortal destinations, with a map of your portals.
-- [Oof](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Oof/): feel your inventory's weight at a glance.
+- **Hearthwoven Stats Book** ([GitHub](https://github.com/joostliebregts/Hearthwoven), [Thunderstore](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Hearthwoven_Stats_Book/)): all your stats in an in-game book, from cooking and mining to damage per weapon.
+- **Portal Compass** ([GitHub](https://github.com/joostliebregts/valheim-portal-compass), [Thunderstore](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/PortalCompass/)): search, pin and pick XPortal destinations, with a map of your portals.
+- **Oof** ([Thunderstore](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Oof/)): feel your inventory's weight at a glance.
