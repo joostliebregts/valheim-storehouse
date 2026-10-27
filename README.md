@@ -12,7 +12,7 @@ I wanted a base that is organized by theme, with storage that fits what goes in 
 - **One kind of stuff per store.** You know at a glance where the hides go, or the bones, or the tar. The store refuses what doesn't belong, and nothing lies mixed.
 - **Big, and based on real things.** Most stores hold more than a black metal chest. Most items show at their real size; some are a bit smaller so they fit, and some are there just so you can see them.
 - **The armor stands are chests.** No more putting gear on a stand one item at a time with the hotbar keys. Open it, take your set, go.
-- **A little work to build, not a grind.** No fine wood, because that's annoying to get. Most stores use boards, which you make from normal wood, plus nails and the materials that make sense for that piece.
+- **A little work to build, not a grind.** No fine wood, because you always run short of it. Most stores use **Boards**, an item this mod adds, which you make from normal wood. Add nails and the materials that make sense for that piece.
 
 I grouped the stores by theme. If an item has no store, or sits in the wrong one, tell me on the [GitHub page](https://github.com/joostliebregts/valheim-storehouse), or change it yourself with the Accepts setting.
 
@@ -41,6 +41,7 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 - **Produce Crates**: vegetables, mushrooms, berries, herbs, seeds, cones and eggs.
 - **Pantry Dresser**: flour, spices and other cooking ingredients.
 
+![The Mead Rack, meads and potions on its shelves](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/mead-rack.webp)
 ![The Pantry Dresser](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/pantry.webp)
 
 **Crafting goods**
@@ -53,7 +54,6 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 - **Ember Cabinet**: wisps, cores, embers, orbs, glow worms and the elemental stones.
 
 ![The Ossuary Bin](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/ossuary.webp)
-![The Tall Apothecary Rack](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/apothecary.webp)
 
 **Ammunition**
 - **Fletcher's Barrels**: arrows, bolts and bombs.
@@ -63,9 +63,9 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![Fletcher's Barrels up close, every kind of arrow in its own barrel](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/fletcher-row.webp)
 
-**Weapons.** Your real weapons at their true size, modded ones included.
+**Weapons.** Your real weapons at their true size (or very close to it), modded ones included.
 - **Weapon Rack A** and **Weapon Rack B**: eight one-handed weapons each, two builds of the same idea. Put several side by side.
-- **Arsenal B**: weapons, bows and shields, the best shield on show.
+- **Arsenal**: weapons, bows and shields, the best shield on show.
 - **Arsenal Spine**, **Arsenal Shield Trough**, **Arsenal Long Rack** and **Arsenal Bow Rack**: an arsenal you put together yourself. The spine holds one-handed weapons; shield troughs snap to its sides, the long rack and the bow rack to its ends.
 
 ![An Arsenal with shields and weapons](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/arsenal.webp)
@@ -73,7 +73,7 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 **Armor**
 - **Armor Stand** and **Armor Stand, open**: a carved wooden mannequin wearing a full set of armor with its cape, weapon and shield. The open one has no back rail and snaps to other stands and the armory rails.
 - **Armory Rail**, **Short Armory Rail** and **Armory Island**: rows of the same mannequins, ready to grab.
-- **Armor Cabinet** and **Armor Coffer**: helmets in their places, the rest folded.
+- **Armor Cabinet** and **Armor Coffer**: helmets in their places, the rest folded on piles.
 
 ![Armor Stands](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/mannequins.webp)
 ![The armories from above](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/armory-overview.webp)
@@ -86,7 +86,7 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 - **Jeweller's Casket**: gems and jewellery, sorted finer.
 
 **Shelves**
-- **Shelf** with 1, 2 or 3 planks: a wall shelf for whatever you grab in a hurry, such as portal materials next to the portal. It holds anything; only what fits on the planks shows.
+- **Shelf** with 1, 2 or 3 planks: a wall shelf for what you grab in a hurry, such as portal materials next to the portal, or your gear for the run back to a boss after you die. It holds anything. Each stack shows as one item on the planks; when the planks are full, the rest stays inside, out of sight.
 
 ## Building them
 
