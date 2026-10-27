@@ -6,6 +6,8 @@ Storage for Valheim that holds a lot and shows what's inside. There's a store fo
 
 ## Why I made this
 
+I wanted storage that actually fits the game, and that shows you what's in it and how full it is. I love giving your brain more ways to understand something than reading numbers. My mod [Oof](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Oof/) does that for the weight you carry; Storehouse does it for everything you store. You look at your base and you see your stock.
+
 I'm a designer. I studied industrial design, worked with CAD, and I like making things. AI unlocks a lot of that for me: Storehouse is the fourth Valheim mod I made in the last two months. Each one got a lot of time and care. It starts with playing the game and noticing what I'd love to have in it, and then I get caught up in the details.
 
 This one started as an experiment. I wanted to see how far today's AI models (Claude Opus 5.5 and Sol 6.1) can go with 3D models for a game, and I was thoroughly impressed. So I went with it, and before I knew it I had a whole storage system: a fitting store for almost everything you can carry. I didn't model any of it by hand. I directed, the AI built. It took three or four days of focused work, and without AI this mod wouldn't exist.
