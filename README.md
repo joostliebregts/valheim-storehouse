@@ -49,14 +49,14 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![The Timber Crib filling up](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/timber-crib-fill.webp)
 
-*Time-lapse: a Timber Crib fills up. The more wood you store, the higher the log pile.*
+*Time-lapse: a Timber Crib fills up with wood. The more you store, the higher the log pile.*
 
 **Metal**
 - **Metal Rack** (tall, tall half, low, low half) and **Metal Pallet**: metal bars. All stack; two halves side by side make a whole rack, two lows stacked make a tall one.
 
 ![Metal Racks and a Metal Pallet with bars](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/metal-racks.webp)
 
-*Metal Racks and a Metal Pallet along a wall, from empty to full: bars stacked per kind of metal.*
+*Metal Racks and a Metal Pallet along a wall, from empty to full: copper, tin, iron, silver and other bars, stacked per metal.*
 
 **Kitchen**
 - **Brewer's Cabinet**: meads and potions. Stacks.
@@ -69,17 +69,13 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 *The Brewer's Cabinet: meads and potions, each kind in its own compartments.*
 
-![The Larder Hutch, full of meals](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/larder.webp)
-
-*The Larder Hutch, full: every meal on show, a little under its real size.*
-
 ![The Larder Hutch filling up with meals](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/larder-fill.webp)
 
 *Time-lapse: the Larder Hutch fills up with meals, shelf by shelf.*
 
 ![The Produce Crates filling up, a crate per kind](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/produce-crates-fill.webp)
 
-*Time-lapse: the Produce Crates take in one crop after another, each in its own crate.*
+*Time-lapse: the Produce Crates fill up with crops, berries and mushrooms, each kind in its own crate.*
 
 **Crafting goods**
 - **Cooper's Row**: tar, resin, sap, guck, eitr, ooze and the like, a vessel per kind. The **Stacking Cooper's Row** puts the same vessels under a plank deck that something else can stand on.
@@ -96,15 +92,15 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![The Ossuary Bin filling up, the heaps growing in their bays](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/ossuary-fill.webp)
 
-*Time-lapse: the Ossuary Bin fills up. The heaps were settled by a physics simulation, so they lie the way bones would.*
+*Time-lapse: the Ossuary Bin fills up with bones, skulls and antlers. The heaps were settled by a physics simulation, so they lie the way bones would.*
 
 ![Smith's Drawers filling up](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/smiths-drawers-fill.webp)
 
-*Time-lapse: Smith's Drawers fill up, drawer by drawer.*
+*Time-lapse: Smith's Drawers fill up with nails, chain, barrel rings, springs and other smithing parts, drawer by drawer.*
 
 ![Cooper's Row filling up, a vessel per kind](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/coopers-row-fill.webp)
 
-*Time-lapse: Cooper's Row fills up, each good in its own vessel.*
+*Time-lapse: Cooper's Row fills up with tar, resin, sap, guck and the other goopy stuff monsters drop, one vessel per kind.*
 
 **Ammunition**
 - **Fletcher's Barrels**: arrows, bolts and bombs.
@@ -114,7 +110,7 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![Fletcher's Barrels up close, every kind of arrow in its own barrel](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/fletcher-row.webp)
 
-*A slow pass along the Bolt Crate and Fletcher's Barrels: every kind of bolt and arrow in its own place.*
+*A slow pass along the Bolt Crate and Fletcher's Barrels: every kind of bolt, arrow and bomb in its own place.*
 
 **Weapons.** Your real weapons at their true size (or very close to it), modded ones included.
 - **Weapon Rack A** and **Weapon Rack B**: eight one-handed weapons each, two builds of the same idea. Put several side by side.
@@ -133,11 +129,11 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![Armor Stands](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/mannequins.webp)
 
-*Two Armor Stands, each wearing a full set, with a Shelf between them. You open a stand like a chest.*
+*Two Armor Stands, each wearing a full set, with the emergency Shelf between them: the gear you grab on your way back to a boss after you die. The stands work like chests: open one and take your set.*
 
 ![The armories from above](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/armory-overview.webp)
 
-*The armories from above: Armory Rails and an Armory Island, each mannequin wearing its set.*
+*The armories from above: Armory Rails and an Armory Island, each mannequin wearing its set. They work like chests, not like the game's own armor stands.*
 
 **Trophies**
 - **Trophy Hall** and **Tall Trophy Hall**: a free-standing wall with a trophy mounted on each board, the bosses' too.
