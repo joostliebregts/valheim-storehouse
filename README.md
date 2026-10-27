@@ -29,6 +29,8 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 - **Ore Bin**: ore and scrap.
 - **Coal & Stone Bunker**: coal, stone, flint, obsidian, black marble and other loose heaps, in three bays. Stacks. The **Open Coal & Stone Bunker** is the same without a load-bearing top.
 
+![The Timber Crib filling up](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/timber-crib-fill.webp)
+
 **Metal**
 - **Metal Rack** (tall, tall half, low, low half) and **Metal Pallet**: metal bars. All stack; two halves side by side make a whole rack, two lows stacked make a tall one.
 
@@ -43,6 +45,8 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![The Mead Rack, meads and potions on its shelves](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/mead-rack.webp)
 ![The Pantry Dresser](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/pantry.webp)
+![The Larder Hutch filling up with meals](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/larder-fill.webp)
+![The Produce Crates filling up, a crate per kind](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/produce-crates-fill.webp)
 
 **Crafting goods**
 - **Cooper's Row**: tar, resin, sap, guck, eitr, ooze and the like, a vessel per kind. The **Stacking Cooper's Row** puts the same vessels under a plank deck that something else can stand on.
@@ -54,6 +58,9 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 - **Ember Cabinet**: wisps, cores, embers, orbs, glow worms and the elemental stones.
 
 ![The Ossuary Bin](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/ossuary.webp)
+![The Ossuary Bin filling up, the heaps growing in their bays](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/ossuary-fill.webp)
+![Smith's Drawers filling up](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/smiths-drawers-fill.webp)
+![Cooper's Row filling up, a vessel per kind](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/coopers-row-fill.webp)
 
 **Ammunition**
 - **Fletcher's Barrels**: arrows, bolts and bombs.
