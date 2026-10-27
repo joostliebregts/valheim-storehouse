@@ -69,9 +69,9 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 *The Brewer's Cabinet: meads and potions, each kind in its own compartments.*
 
-![The Pantry Dresser](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/pantry.webp)
+![The Larder Hutch, full of meals](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/larder.webp)
 
-*The Pantry Dresser, stocked with flour, spices and other ingredients.*
+*The Larder Hutch, full: every meal on show, a little under its real size.*
 
 ![The Larder Hutch filling up with meals](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/larder-fill.webp)
 
