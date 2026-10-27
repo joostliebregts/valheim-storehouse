@@ -1,12 +1,18 @@
 # Storehouse
 
-Storage furniture for Valheim that holds a lot and shows what's inside. There's a store for each kind of stuff: logs in a timber crib, ore in a bin, arrows in barrels, hides on stretching frames, armor on carved mannequins. Each store takes only its own kind of item and fills up with the real item models as you put things in. Full looks full.
+Storage for Valheim that holds a lot and shows what's inside. There's a store for each kind of stuff: logs in a timber crib, ore in a bin, arrows in barrels, hides on stretching frames, armor on carved mannequins. Each store takes only its own kind of item and fills up with the real items as you put things in. Full looks full.
 
 ![Produce Crates filled with vegetables, berries and mushrooms](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/produce-crates.webp)
 
 ## Why I made this
 
-I wanted a base that is organized by theme, with storage that fits what goes in it. Plain chests don't do that, so I started making stores for each kind of item. It grew. Now there's a place for almost everything you can carry in the game.
+I'm a designer. I studied industrial design, worked with CAD, and I like making things. AI unlocks a lot of that for me: Storehouse is the fourth Valheim mod I made this month, and each one got a lot of time and care.
+
+This one started as an experiment. I wanted to see how far today's AI models (Claude Opus 5.5 and Sol 6.1) can go with 3D models for a game, and I was thoroughly impressed. So I went with it, and before I knew it I had a whole storage system: a fitting store for almost everything you can carry. I didn't model any of it by hand. I directed, the AI built. It took three or four days of focused work, and without AI this mod wouldn't exist.
+
+I quite like it, and that's why I'm sharing it. You can build amazing bases with it, organized by theme, with storage that fits what goes in it. I'm curious how you use it and what you think of it.
+
+## What it does
 
 - **You see what's in it.** The items lie in the store as themselves: heaps of coal, bars on a rack, meads on a shelf, a full set of armor on a mannequin. As you add more, the heaps grow and the shelves fill.
 - **One kind of stuff per store.** You know at a glance where the hides go, or the bones, or the tar. The store refuses what doesn't belong, and nothing lies mixed.
@@ -14,15 +20,19 @@ I wanted a base that is organized by theme, with storage that fits what goes in 
 - **The armor stands are chests.** No more putting gear on a stand one item at a time with the hotbar keys. Open it, take your set, go.
 - **A little work to build, not a grind.** No fine wood, because you always run short of it. Most stores use **Boards**, an item this mod adds, which you make from normal wood. Add nails and the materials that make sense for that piece.
 
-I grouped the stores by theme. If an item has no store, or sits in the wrong one, tell me on the [GitHub page](https://github.com/joostliebregts/valheim-storehouse), or change it yourself with the Accepts setting.
+## An experiment, in development
 
-## A hobby project, in development
+Storehouse is a hobby project, made in collaboration with AI (yes, vibe-coded). It isn't perfect, and that's part of the experiment. The heaps in several stores are settled by a real physics simulation ahead of time, so they cost nothing while you play. Other stores are simpler for now, and some still look a bit rough. I keep working on them.
 
-Storehouse is a hobby project and an experiment: how far can today's AI go with code and 3D models for a game? I made it in collaboration with AI (yes, vibe-coded). I studied industrial design and worked in CAD, so I know how 3D models are built, but I didn't model these by hand: I directed, the AI built. It took three or four days of focused work, and without AI this mod wouldn't exist. That doesn't make it bad; I think it's quite good. The heaps in several stores are settled by a real physics simulation ahead of time, so they cost nothing while you play. Other stores are simpler for now.
+It isn't balanced the way Valheim is, on purpose: the stores hold a lot and cost less than a black metal chest. It's made for one thing: a base that looks great, with storage that fits.
 
-It's not balanced the way Valheim is: the stores hold a lot and cost less than a black metal chest. It's made for one thing: a base that looks great, with storage that fits. If the build costs feel off to you, tell me what you think is fair. You can also change them yourself with the Recipe setting.
+When I update the mod, I make sure you keep your items. Still, **back up your world (or your server) before you install it, and before every update.**
 
-Storehouse is experimental and still in development. When I update it, I make sure you keep your items. Still, **back up your world (or your server) before you install it, and before every update.**
+## Tell me what you think
+
+On the [GitHub page](https://github.com/joostliebregts/valheim-storehouse), open an issue for anything: a store that looks off, an item with no store or in the wrong one, a build cost that feels unfair, an idea for a new store. I'm not a professional developer, so I'm learning how this works along the way.
+
+In the meantime, you can change a lot yourself: the **Accepts** setting decides what goes in a store, and the **Recipe** setting what it costs.
 
 ## The stores
 
@@ -152,7 +162,7 @@ Requires Jotunn. License: MIT. You can do what you want with it, as long as the 
 
 ## My other mods
 
-I'm a designer, not a software developer, and I got into making Valheim mods together with AI. These are the others:
+Storehouse is one of four Valheim mods I made this month, all in collaboration with AI. The other three:
 - **Hearthwoven Stats Book** ([GitHub](https://github.com/joostliebregts/Hearthwoven), [Thunderstore](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Hearthwoven_Stats_Book/)): all your stats in an in-game book, from cooking and mining to damage per weapon.
 - **Portal Compass** ([GitHub](https://github.com/joostliebregts/valheim-portal-compass), [Thunderstore](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/PortalCompass/)): search, pin and pick XPortal destinations, with a map of your portals.
 - **Oof** ([Thunderstore](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Oof/)): feel your inventory's weight at a glance.
