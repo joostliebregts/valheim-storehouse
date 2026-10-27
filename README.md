@@ -4,6 +4,8 @@ Storage for Valheim that holds a lot and shows what's inside. There's a store fo
 
 ![Produce Crates filled with vegetables, berries and mushrooms](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/produce-crates.webp)
 
+*The Produce Crates in a kitchen corner. Every crate holds one kind of crop, and you see at a glance how much is in it.*
+
 ## Why I made this
 
 I wanted storage that actually fits the game, and that shows you what's in it and how full it is. I love giving your brain more ways to understand something than reading text or numbers. My mod [Oof](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Oof/) does that for the weight you carry; Storehouse does it for everything you store. You look at your base and you see your stock.
@@ -47,10 +49,14 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![The Timber Crib filling up](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/timber-crib-fill.webp)
 
+*Time-lapse: a Timber Crib fills up. The more wood you store, the higher the log pile.*
+
 **Metal**
 - **Metal Rack** (tall, tall half, low, low half) and **Metal Pallet**: metal bars. All stack; two halves side by side make a whole rack, two lows stacked make a tall one.
 
 ![Metal Racks and a Metal Pallet with bars](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/metal-racks.webp)
+
+*Metal Racks and a Metal Pallet along a wall, from empty to full: bars stacked per kind of metal.*
 
 **Kitchen**
 - **Brewer's Cabinet**: meads and potions. Stacks.
@@ -60,9 +66,20 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 - **Pantry Dresser**: flour, spices and other cooking ingredients.
 
 ![The Brewer's Cabinet, meads and potions in its compartments](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/mead-rack.webp)
+
+*The Brewer's Cabinet: meads and potions, each kind in its own compartments.*
+
 ![The Pantry Dresser](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/pantry.webp)
+
+*The Pantry Dresser, stocked with flour, spices and other ingredients.*
+
 ![The Larder Hutch filling up with meals](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/larder-fill.webp)
+
+*Time-lapse: the Larder Hutch fills up with meals, shelf by shelf.*
+
 ![The Produce Crates filling up, a crate per kind](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/produce-crates-fill.webp)
+
+*Time-lapse: the Produce Crates take in one crop after another, each in its own crate.*
 
 **Crafting goods**
 - **Cooper's Row**: tar, resin, sap, guck, eitr, ooze and the like, a vessel per kind. The **Stacking Cooper's Row** puts the same vessels under a plank deck that something else can stand on.
@@ -74,9 +91,20 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 - **Ember Cabinet**: wisps, cores, embers, orbs, glow worms and the elemental stones.
 
 ![The Ossuary Bin](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/ossuary.webp)
+
+*The Ossuary Bin: bones, skulls and antlers in heaps, one kind per bay.*
+
 ![The Ossuary Bin filling up, the heaps growing in their bays](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/ossuary-fill.webp)
+
+*Time-lapse: the Ossuary Bin fills up. The heaps were settled by a physics simulation, so they lie the way bones would.*
+
 ![Smith's Drawers filling up](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/smiths-drawers-fill.webp)
+
+*Time-lapse: Smith's Drawers fill up, drawer by drawer.*
+
 ![Cooper's Row filling up, a vessel per kind](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/coopers-row-fill.webp)
+
+*Time-lapse: Cooper's Row fills up, each good in its own vessel.*
 
 **Ammunition**
 - **Fletcher's Barrels**: arrows, bolts and bombs.
@@ -86,6 +114,8 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![Fletcher's Barrels up close, every kind of arrow in its own barrel](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/fletcher-row.webp)
 
+*A slow pass along the Bolt Crate and Fletcher's Barrels: every kind of bolt and arrow in its own place.*
+
 **Weapons.** Your real weapons at their true size (or very close to it), modded ones included.
 - **Weapon Rack A** and **Weapon Rack B**: eight one-handed weapons each, two builds of the same idea. Put several side by side.
 - **Arsenal**: weapons, bows and shields, the best shield on show.
@@ -93,13 +123,21 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 ![An Arsenal with shields and weapons](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/arsenal.webp)
 
+*An Arsenal: one-handed and long weapons in racks, bows, and shields on show at the front.*
+
 **Armor**
 - **Armor Stand** and **Armor Stand, open**: a carved wooden mannequin wearing a full set of armor with its cape, weapon and shield. The open one has no back rail and snaps to other stands and the armory rails.
 - **Armory Rail**, **Short Armory Rail** and **Armory Island**: rows of the same mannequins, ready to grab.
+- **Armory**: armor, weapons and shields together, on two sides, so you can reach it from both aisles.
 - **Armor Cabinet** and **Armor Coffer**: helmets in their places, the rest folded on piles.
 
 ![Armor Stands](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/mannequins.webp)
+
+*Two Armor Stands, each wearing a full set, with a Shelf between them. You open a stand like a chest.*
+
 ![The armories from above](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/armory-overview.webp)
+
+*The armories from above: Armory Rails and an Armory Island, each mannequin wearing its set.*
 
 **Trophies**
 - **Trophy Hall** and **Tall Trophy Hall**: a free-standing wall with a trophy mounted on each board, the bosses' too.
