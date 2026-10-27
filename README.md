@@ -53,13 +53,13 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 ![Metal Racks and a Metal Pallet with bars](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/metal-racks.webp)
 
 **Kitchen**
-- **Mead Rack**: meads and potions. Stacks.
+- **Brewer's Cabinet**: meads and potions. Stacks.
 - **Larder Hutch**: cooked meals. Stacks.
 - **Meat Rack**: meat and fish, raw or cooked.
 - **Produce Crates**: vegetables, mushrooms, berries, herbs, seeds, cones and eggs.
 - **Pantry Dresser**: flour, spices and other cooking ingredients.
 
-![The Mead Rack, meads and potions on its shelves](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/mead-rack.webp)
+![The Brewer's Cabinet, meads and potions in its compartments](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/mead-rack.webp)
 ![The Pantry Dresser](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/pantry.webp)
 ![The Larder Hutch filling up with meals](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/larder-fill.webp)
 ![The Produce Crates filling up, a crate per kind](https://raw.githubusercontent.com/joostliebregts/valheim-storehouse/main/media/produce-crates-fill.webp)
@@ -115,7 +115,7 @@ Build them with the hammer, on their own **Storage** tab, near a workbench.
 
 Most stores are built from **Boards**, a new item made at the workbench: 1 wood makes 2 boards, or 5 wood make 10 in one go. Add some nails, iron, wood, stone or leather depending on the store; the hammer shows the exact cost.
 
-Big outdoor stores stand on level ground or a floor. Only stores with a flat, sturdy top take another on top: the Coal & Stone Bunker, the metal racks and pallet, the Mead Rack, the Larder Hutch and the Stacking Cooper's Row. The Shelf hangs on a wall.
+Big outdoor stores stand on level ground or a floor. Only stores with a flat, sturdy top take another on top: the Coal & Stone Bunker, the metal racks and pallet, the Brewer's Cabinet, the Larder Hutch and the Stacking Cooper's Row. The Shelf hangs on a wall.
 
 ## How they behave
 
