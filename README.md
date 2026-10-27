@@ -16,9 +16,11 @@ I wanted a base that is organized by theme, with storage that fits what goes in 
 
 I grouped the stores by theme. If an item has no store, or sits in the wrong one, tell me on the [GitHub page](https://github.com/joostliebregts/valheim-storehouse), or change it yourself with the Accepts setting.
 
-## In development
+## A hobby project, in development
 
-This is a hobby project. I made it in collaboration with AI (yes, vibe-coded), but with a lot of time and care: the models went through round after round. Some of it is done with a real physics simulation: the heaps in several stores are settled that way ahead of time, so it costs nothing while you play. Other parts would take a lot more time to get right with my limited coding and 3D modeling knowledge, so not everything is that far yet. Some stores still look a bit rough. If something looks off, tell me; it helps.
+Storehouse is a hobby project and an experiment: how far can today's AI go with code and 3D models for a game? I made it in collaboration with AI (yes, vibe-coded). I studied industrial design and worked in CAD, so I know how 3D models are built, but I didn't model these by hand: I directed, the AI built. It took three or four days of focused work, and without AI this mod wouldn't exist. That doesn't make it bad; I think it's quite good. The heaps in several stores are settled by a real physics simulation ahead of time, so they cost nothing while you play. Other stores are simpler for now.
+
+It's not balanced the way Valheim is: the stores hold a lot and cost less than a black metal chest. It's made for one thing: a base that looks great, with storage that fits. If the build costs feel off to you, tell me what you think is fair. You can also change them yourself with the Recipe setting.
 
 Storehouse is experimental and still in development. When I update it, I make sure you keep your items. Still, **back up your world (or your server) before you install it, and before every update.**
 
