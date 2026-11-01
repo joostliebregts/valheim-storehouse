@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.8.6
+
+- The mod no longer ships any shapes taken from the game's files or other mods. Items whose model the game keeps on the graphics card are now measured in your own game the first time a store shows them, and remembered in BepInEx/cache (Storehouse-item-points.bin). They sit in the stores as before; items from other mods are now measured too.
+- The first piece in the Storage tab says that Storehouse is an unofficial mod, not affiliated with or endorsed by Iron Gate or Coffee Stain.
+- The Brewer's Cabinet takes the barley wine base too; it took the finished barley wine but refused its base. Thanks to ShadowTox for the report.
+- The Brewer's Cabinet takes everything a Fermenter takes in or gives out, from the game and from any mod, so other mods' meads and mead bases fit too.
+- A store opens where its items are: at the top when a sorting or filter mod put them there, at the bottom when the game did, and at the top when it's empty. Thanks to ShadowTox for the report.
+- The main menu shows "Storehouse 0.8.6 loaded" at the top left, so after an update you can see it loaded before you load your world. If it did not load fully, a red warning shows instead; no line at all means it did not load.
+- Works together with other 0.8 versions: you can join a server that runs an older 0.8.
+
 ## 0.8.5
 
 - Fixed backpacks disappearing when you put them into a store that doesn't take them, with Store All (Quick Stack mod), shift-click or any other way. Adventure Backpacks said yes after the store said no; the store's no now holds, and the backpack stays with you.

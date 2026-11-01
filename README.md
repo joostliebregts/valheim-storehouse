@@ -2,7 +2,7 @@
 
 Storage for Valheim that holds a lot and shows what's inside. There's a store for each kind of stuff: logs in a timber crib, ore in a bin, arrows in barrels, hides on stretching frames, armor on carved mannequins. Each store takes only its own kind of item and fills up with the real items as you put things in. Full looks full.
 
-**Install:** [Storehouse on Thunderstore](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Storehouse/) · **Source:** [GitHub](https://github.com/joostliebregts/valheim-storehouse) (MIT)
+**Install:** [Storehouse on Thunderstore](https://thunderstore.io/c/valheim/p/DJ_Lifecoach/Storehouse/) · **Source:** [GitHub](https://github.com/joostliebregts/valheim-storehouse) (MIT) · **Roadmap:** [what is coming next](https://github.com/joostliebregts/valheim-storehouse/blob/main/ROADMAP.md)
 
 *Unofficial mod: not affiliated with or endorsed by Iron Gate or Coffee Stain.*
 

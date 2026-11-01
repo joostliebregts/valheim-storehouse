@@ -90,7 +90,6 @@ check-pose-tables.py
 check-rounds.py
 copy-models.sh
 install-lock.sh
-item-points.py
 make-icon.py
 package/icon.png
 package/manifest.json
@@ -1309,7 +1308,6 @@ assets/ossuary_r5/ossuary_layouts.json
 assets/ossuary_r5b/Ossuary.obj
 assets/ossuary_r5b/ossuary_anchors.json
 assets/ossuary_r5b/ossuary_atlas.png
-assets/ossuary_r5b/ossuary_display.json
 assets/ossuary_r5b/ossuary_layouts.json
 assets/pantry_r4/Pantry.obj
 assets/pantry_r4/Vessel_basket.obj
@@ -1369,3 +1367,4 @@ assets/weaponrackb_r3/equipment_anchors.json
 assets/weaponrackb_r4/Frame.obj
 assets/weaponrackb_r4/atlas.png
 assets/weaponrackb_r4/equipment_anchors.json
+ROADMAP.md

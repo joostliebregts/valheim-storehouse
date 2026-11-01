@@ -76,7 +76,7 @@ case "${1:-}" in
     rm -rf "$stage"
     mkdir -p "$stage"
     cp $out/Storehouse.dll $out/Storehouse.pdb "$stage/"
-    copy_models "$stage/Storehouse"
+    copy_models "$stage/Storehouse" "$([ $release = 1 ] || echo dev)"
     echo "staged $([ $release = 1 ] && echo release || echo dev) build $v in $stage ($(find "$stage/Storehouse/assets" -type f | wc -l) model files), DLL sha256 $(sha256sum "$stage/Storehouse.dll" | cut -c1-12)"
     ;;
   on)

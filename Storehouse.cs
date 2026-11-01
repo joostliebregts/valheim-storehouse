@@ -52,7 +52,8 @@ namespace Finn.Storehouse;
 public sealed class Plugin : BaseUnityPlugin
 {
     public const string Id = "com.joostliebregts.storehouse";
-    public const string Version = "0.8.5";   // a store's refusal holds against other mods; shift-click no longer doubles a stacked item (31 Oct)
+    public const string Version = "0.8.6";   // ships nothing of the game's: item shapes read from the GPU, the Ossuary sidecar dev-only; unofficial note (1 Nov)
+    // 0.8.5: a store's refusal holds against other mods; shift-click no longer doubles a stacked item (31 Oct)
     // 0.8.1: the sorting hotfix (Joost, 28 Oct)
     // 0.8.0: the release (Joost, 27 Oct: "a good number that feels like it's almost finished")
 
@@ -101,6 +102,7 @@ public sealed class Plugin : BaseUnityPlugin
         started = true;
         Live = true;
         AppDomain.CurrentDomain.SetData(LiveSlot, this);
+        if (FromScripts) Guard("version check", ShowToVersionCheck);
 #else
         Dir = Path.GetDirectoryName(Info.Location);
         Live = true;
@@ -154,6 +156,21 @@ public sealed class Plugin : BaseUnityPlugin
         if (ObjectDB.instance) AddPieces();
     }
 
+    // A scripts copy shows itself to Jotunn's version check, so the live dev build can join a server that runs 0.8.x (Joost, 1 Nov:
+    // test on the server). Jotunn lists the mods BepInEx loaded (Chainloader.PluginInfos), once, in its own cache; a ScriptEngine
+    // copy is in neither, and the server answered "Storehouse 0.8.5 was not loaded on your game". The dev attribute (NotEnforced)
+    // asks nothing of a server; the server's rule for its own Storehouse (EveryoneMustHaveMod, Minor) then accepts any 0.8.
+    void ShowToVersionCheck()
+    {
+        var info = Info;
+        if (info.Instance != this) AccessTools.Property(typeof(PluginInfo), "Instance").SetValue(info, this);
+        BepInEx.Bootstrap.Chainloader.PluginInfos[Id] = info;
+        var cache = AccessTools.Field(typeof(BepInExUtils), "Plugins");   // null until Jotunn first asks; then built from the list above
+        if (cache.GetValue(null) is BaseUnityPlugin[] cached)
+            cache.SetValue(null, cached.Where(p => p && p.Info?.Metadata?.GUID != Id).Append(this).ToArray());   // an old copy is gone (false)
+        Log.LogInfo($"Version check: this live copy counts as Storehouse {info.Metadata.Version}; a server with any 0.8 lets it in.");
+    }
+
     // A scripts copy: hook in once Jotunn is up and no older copy is live any more.
     void TryBegin()
     {
@@ -177,9 +194,7 @@ public sealed class Plugin : BaseUnityPlugin
     {
         Application.quitting -= onQuit;
         ModelWatch.Stop();   // its events would otherwise fire into a copy that has left
-#if !RELEASE
         if (GetComponent<LoadWarning>() is { } warning) Destroy(warning);   // the next copy says its own
-#endif
         if (!started) return;
         Live = false;
         if (ReferenceEquals(AppDomain.CurrentDomain.GetData(LiveSlot), this)) AppDomain.CurrentDomain.SetData(LiveSlot, null);
@@ -282,6 +297,15 @@ public sealed class Plugin : BaseUnityPlugin
         Icons.Tick();   // re-render an icon whose piece changed, or that missed items before ObjectDB had them
     }
 
+    // Iron Gate asks every mod to say it is unofficial, in game and on any website (README too): once, under the description of the
+    // first piece in the Storage tab, which the build menu shows when you open the tab.
+    const string UnofficialNote = "Unofficial mod, not affiliated with or endorsed by Iron Gate or Coffee Stain.";
+    static void Unofficial(Dictionary<string, string> words)
+    {
+        string key = Kinds.All.First(k => k == Kinds.Crib || Kinds.InRelease(k)).Token + "_desc";
+        if (words.TryGetValue(key, out var desc) && !desc.EndsWith(UnofficialNote, StringComparison.Ordinal)) words[key] = desc + "\n\n" + UnofficialNote;
+    }
+
     static void AddLocalization()
     {
         var words = new Dictionary<string, string>
@@ -295,6 +319,7 @@ public sealed class Plugin : BaseUnityPlugin
             [Kinds.Bin.Token] = "Ore Bin",
             [Kinds.Bin.Token + "_desc"] = "A stone-lined bin with an iron rim. Holds ore, scrap, stone, coal and metal bars only. Stands on level ground or a floor.",
         };
+        Unofficial(words);
         LocalizationManager.Instance.GetLocalization().AddTranslation("English", words);
 #if DEV
         // The stores (dev only). The Ore Bin store reuses the parked Ore Bin's token, so its text replaces that one.
@@ -305,6 +330,7 @@ public sealed class Plugin : BaseUnityPlugin
                 stores[k.Token] = k.Shown ?? k.Title;
                 stores[k.Token + "_desc"] = k.Desc;
             }
+        Unofficial(stores);
         LocalizationManager.Instance.GetLocalization().AddTranslation("English", stores);
         // Jotunn hands its words to the game when the language is set up; a live reload comes after that, so a changed name
         // or description goes straight into the running game's table too (only once the game has made it).
@@ -341,6 +367,7 @@ public sealed class Plugin : BaseUnityPlugin
         // "0 one-handed weapons tested"), so after every mod's items are in a world's ObjectDB (OnItemsRegistered, at each world load;
         // Report runs once), or right away on a live reload into a world.
         Guard("weapon rack fit", () => { ItemManager.OnItemsRegistered += EquipFit.Report; EquipFit.Report(); });
+        Guard("points check", PointsCheck.Hook);
 #endif
         // A live reload: the pieces already standing in the world, the ghost in your hand, and recipes with the real items.
         try { Reload.AfterPieces(); }
@@ -354,9 +381,7 @@ public sealed class Plugin : BaseUnityPlugin
 #endif
         Log.LogInfo($"Storehouse {Version}: live, sha256 {DllSha()}, {added}/{Kinds.All.Length} pieces, {Failures.Count} start-up failure(s)"
             + (Failures.Count > 0 ? $": {string.Join("; ", Failures)}" : "") + copy + ".");
-#if !RELEASE
-        if (Failures.Count > 0 && !Headless && !GetComponent<LoadWarning>()) gameObject.AddComponent<LoadWarning>();
-#endif
+        if (!Headless && !GetComponent<LoadWarning>()) gameObject.AddComponent<LoadWarning>().Set(added, Kinds.All.Length);
     }
 
     // The hammer's Storehouse pieces in Kinds.All's order (the theme groups) wherever they sit in the hammer's list: Jotunn keeps a
@@ -622,7 +647,7 @@ static class Kinds
     {
         // Shown as "Brewer's Cabinet" (Joost, 27 Oct, release names); its config section stays "Mead Rack".
         Shown("Brewer's Cabinet", Store("meadrack", "Mead Rack", "A rack of shelves for bottles. Holds meads and potions only.", "Meads and potions only",
-            ItemRules.Mead, "BarleyWine,MeadBase*", 64, Placement.Normal, "StorehouseBoard:16,BronzeNails:10", "piece_workbench", mirror: true, rounds: new[] { "_r3", "_r2" })),
+            ItemRules.Mead, "BarleyWine,BarleyWineBase,MeadBase*", 64, Placement.Normal, "StorehouseBoard:16,BronzeNails:10", "piece_workbench", mirror: true, rounds: new[] { "_r3", "_r2" })),
         Store("larder", "Larder Hutch", "A kitchen hutch for cooked food. Holds meals only.", "Meals only",
             ItemRules.Meal, "", 64, Placement.Normal, "StorehouseBoard:18,BronzeNails:12", "piece_workbench", display: true, mirror: true, rounds: new[] { "_r6", "_r5", "_r4", "_r3", "_r2" }),
         Store("meatrack", "Meat Rack", "Hooks and bins for the day's catch. Holds meat and fish, raw or cooked, and the animal parts for food and meads.", "Meat and fish only",
@@ -914,6 +939,7 @@ static class Settings
         ["4 - Ember Cabinet"] = new[] { "Wisp,GlowWorm,FaderEmber,MemorialCoal,MoltenCore,BlackCore,FrostCore,ShieldCore,OrbFrostFire,OrbThunderBlood,SurtlingCore,FrozenFuel,Thunderstone,Crystal", "Wisp,GlowWorm,FaderEmber,MemorialCoal,MoltenCore,BlackCore,FrostCore,ShieldCore,OrbFrostFire,OrbThunderBlood,SurtlingCore,FrozenFuel,Thunderstone", "Wisp,GlowWorm,FaderEmber,MemorialCoal,MoltenCore,BlackCore,FrostCore,ShieldCore,OrbFrostFire,OrbThunderBlood,SurtlingCore" },
         ["4 - Fletchers Barrels"] = new[] { "Arrow*,Bolt*,Bomb*,Dynamite" },
         ["4 - Jewellers Casket"] = new[] { "Coins,Amber,Ruby,AmberPearl,GemstoneBlue,GemstoneGreen,GemstoneRed,AncientGemstone*,AncientCoin,SilverNecklace,CrownJewel,Pot_Shard*" },
+        ["4 - Mead Rack"] = new[] { "BarleyWine,MeadBase*" },
         ["4 - Open Coal & Stone Bunker"] = new[] { "Coal,Stone,Flint,Grausten,BlackMarble,Obsidian,SulfurStone,StoneRock,PungentPebbles,BFP_Clay,Ice", "Coal,Stone,Flint,Grausten,BlackMarble,Obsidian,Crystal,SulfurStone,StoneRock,PungentPebbles,Thunderstone,BFP_Clay,FrozenFuel,Ice", "Coal,Stone,Flint,Grausten,BlackMarble,Obsidian,Crystal" },
         ["4 - Ossuary Bin"] = new[] { "BoneFragments,CharredBone,WitheredBone,Charredskull,HardAntler,AsksvinCarrionSkull,BonemawSerpentTooth" },
         ["4 - Produce Crates"] = new[] { "Turnip,Onion,Carrot,Barley,Flax,Thistle,Dandelion,Fiddleheadfern,*Seeds,Mushroom*,*berries,Raspberry,Cloudberry" },
@@ -1318,7 +1344,10 @@ static class StorageReviewPolicy
     public static bool MeadProductName(string prefab) => !string.IsNullOrEmpty(prefab)
         && (prefab.Equals("BarleyWine", StringComparison.OrdinalIgnoreCase)
             || prefab.StartsWith("Mead", StringComparison.OrdinalIgnoreCase) && !prefab.StartsWith("MeadBase", StringComparison.OrdinalIgnoreCase));
-    public static bool MeadProduct(bool consumable, bool food, bool fermenterProduct, string prefab) => consumable && !food && (fermenterProduct || MeadProductName(prefab));
+    // The Brewer's Cabinet by type (fix list F5; Joost, 1 Nov: "take everything from the brewing casket"): whatever a Fermenter, the
+    // game's or any mod's, takes in (a base) or gives out (the drink), whatever its item type or food values; and for drinks no
+    // Fermenter makes (potions, other mods' meads), a consumable without food values named Mead* or BarleyWine.
+    public static bool MeadProduct(bool consumable, bool food, bool fermenter, string prefab) => fermenter || consumable && !food && MeadProductName(prefab);
     public static bool CoinWellAllows(string store, bool coinHome, string prefab) => store != "treasure" || !coinHome || prefab == "Coins";
     public static bool ValuableName(string prefab) => prefab != null && (valuables.Contains(prefab)
         || prefab.StartsWith("AncientGemstone", StringComparison.Ordinal) || prefab.StartsWith("Pot_Shard", StringComparison.Ordinal));
@@ -3524,32 +3553,64 @@ static class Patches
 #endif
     }
 
-    // Our stores open scrolled to the bottom (Joost): materials land in the bottom rows, the game's own way (Inventory.TopFirst)
-    // and Quick Stack Store's Sort alike, so in a 10-row store they sat out of sight. You scroll up for the rest.
-    // Again whenever the window or the grid changes size while it is open (StorehouseUI grows the window after it opens, which
-    // left the view halfway, Joost); scrolling by hand in between is left alone.
+    // Our stores open on their items (fix list F6; issue #2, ShadowTox: a sort or filter mod put them top left, and opening at the
+    // bottom showed empty rows; design by Astra Finn, 1 Nov): the first row holding an item at the top of the view, as far as the
+    // grid scrolls; an empty store at the top. What the game puts in the bottom rows (Inventory.TopFirst, Quick Stack Store's Sort)
+    // still opens at the bottom, as before (Joost). The row is chosen once, when the store opens: putting items in while it is open
+    // never moves the view. Again whenever the window or the grid changes size while it is open (StorehouseUI grows the window after
+    // it opens, which left the view halfway, Joost), until you scroll by hand: from then on the view is yours. Only the scroll view;
+    // no item moves.
     static Container scrolledFor;
     static int scrollFrames;
     static float openedAt;
     static Vector2 scrolledSize;
-    [HarmonyPatch(typeof(InventoryGui), "UpdateContainer"), HarmonyPostfix]
-    static void OpenAtBottom(InventoryGui __instance)
+    static int openRow;                   // the first row with an item when the store opened; -1: empty
+    static float placedAt = float.NaN;    // where we last put the view: a different position at the same size is a hand scroll
+    static bool handScrolled;
+    static readonly AccessTools.FieldRef<InventoryGrid, List<InventoryElement>> GridCells = AccessTools.FieldRefAccess<InventoryGrid, List<InventoryElement>>("m_elements");
+    // After StorehouseUI's postfix (Priority.Last; its Harmony id changes per load, so HarmonyAfter cannot name it): it grows the
+    // window in the same frame, and placing the view before that drew one frame at the old size (Joost, 1 Nov: "you can see it twitch").
+    [HarmonyPatch(typeof(InventoryGui), "UpdateContainer"), HarmonyPostfix, HarmonyPriority(Priority.Last - 1)]
+    static void OpenAtItems(InventoryGui __instance)
     {
         if (!Plugin.Live) return;
         var c = GuiContainer(__instance);
         if (!c) { scrolledFor = null; return; }
-        if (c != scrolledFor) { scrolledFor = c; scrollFrames = 3; openedAt = Time.unscaledTime; }   // the grid lays itself out after opening
-        if (Kinds.ByToken(c.m_name) == null) return;
+        if (c != scrolledFor) { scrolledFor = c; scrollFrames = 3; openedAt = Time.unscaledTime; handScrolled = false; placedAt = float.NaN; }
+        if (handScrolled || Kinds.ByToken(c.m_name) == null) return;
         var grid = GuiContainerGrid(__instance);
-        if (!grid || grid.GetComponentInParent<ScrollRect>() is not { } scroll || !scroll) return;
-        var size = new Vector2(scroll.viewport ? scroll.viewport.rect.height : 0f, scroll.content ? scroll.content.rect.height : 0f);
-        if (size != scrolledSize) { scrolledSize = size; scrollFrames = Mathf.Max(scrollFrames, 2); }
-        // The first half second after opening every frame (the game and StorehouseUI lay the window out in turns), then a few
-        // frames after each size change.
-        if (scrollFrames <= 0 && Time.unscaledTime - openedAt > 0.5f) return;
-        scrollFrames--;
+        if (!grid || grid.GetComponentInParent<ScrollRect>() is not { } scroll || !scroll || !scroll.content) return;
+        var view = scroll.viewport ? scroll.viewport : (RectTransform)scroll.transform;   // no viewport set: Unity scrolls in its own rect
+        float age = Time.unscaledTime - openedAt;
+        bool settling = age <= 0.5f;   // the game and StorehouseUI lay the window out in turns: the view is ours, whatever moves it
+        if (settling)   // the row is read until the window settles: the items can arrive a frame after the window opens
+            openRow = c.GetInventory()?.GetAllItems() is { } items && items.Any(i => i != null) ? items.Where(i => i != null).Min(i => i.m_gridPos.y) : -1;
+        var size = new Vector2(view.rect.height, scroll.content.rect.height);
+        float now = scroll.verticalNormalizedPosition;
+        if (size != scrolledSize) { scrolledSize = size; scrollFrames = Mathf.Max(scrollFrames, 2); }   // the layout moved it, not a hand
+        else if (!settling && scrollFrames <= 0 && !float.IsNaN(placedAt) && Mathf.Abs(now - placedAt) > 0.002f)
+        {
+            handScrolled = true;
+            return;
+        }
+        if (!settling && scrollFrames <= 0) return;   // after the first half second: only a few frames after each size change
+        if (!settling) scrollFrames--;
         scroll.velocity = Vector2.zero;
-        scroll.verticalNormalizedPosition = 0f;
+        scroll.verticalNormalizedPosition = placedAt = RowAtTop(grid, scroll, view, openRow);
+    }
+
+    // The scroll position (1 top, 0 bottom) that puts this row's top edge at the top of the view, from the cell's own rectangle in
+    // the scrolled content (not a row count times a guessed height). Empty, unknown or not scrollable: the top.
+    static float RowAtTop(InventoryGrid grid, ScrollRect scroll, RectTransform view, int row)
+    {
+        float range = scroll.content.rect.height - view.rect.height;
+        if (row < 0 || range <= 0.5f) return 1f;
+        var cell = GridCells(grid)?.FirstOrDefault(e => e && e.Position.y == row);
+        if (cell == null) return 1f;
+        var corners = new Vector3[4];
+        ((RectTransform)cell.transform).GetWorldCorners(corners);   // [1]: the top left corner
+        float fromTop = scroll.content.rect.yMax - scroll.content.InverseTransformPoint(corners[1]).y;
+        return Mathf.Clamp01(1f - fromTop / range);
     }
 
     // Once per session: confirm in the log that the container grid scrolls for our 8-wide, 6-8 row chests.
@@ -8222,44 +8283,244 @@ static class Packing
 // An item's own look, read from the running game's item prefab: every visible mesh renderer (LOD 0 only, no colliders,
 // physics, ItemDrop or ZNetView: we only take mesh, materials and where they sit). Cached per prefab.
 // The real shape of items whose meshes the game keeps on the GPU only (Mesh.isReadable false: Unity uploaded the vertices and kept
-// no copy a script may read), as points taken from the game's own bundle and the mods' by the models session (item-points.py
-// writes assets/item_points.bin). Read once; an item the file doesn't list, or a missing file, keeps the game's box.
+// no copy a script may read). Read back from the GPU in the player's own game, once per item: the mesh's vertex buffer through
+// AsyncGPUReadback, every part in ItemVisual's turned item space (root scale not applied), at most 600 points (the extremes in 13
+// directions, the rest evenly through the distinct positions). Kept in BepInEx/cache/Storehouse-item-points.bin with the item's
+// meshes (name and vertex count) and the game's box, so a game or mod update that changes a mesh measures it again. Until 0.8.5 these points shipped
+// in assets/item_points.bin, taken from the game's bundle and the mods'; from 0.8.6 the mod ships nothing of theirs (1 Nov 2026).
+// No graphics device (a dedicated server) or a failed read: the measured table (ItemTightBounds), else the game's box.
 static class ItemPoints
 {
-    static Dictionary<string, (Vector3 boxMin, Vector3 boxMax, Vector3[] points)> rows;
+    public const int Max = 600;
+    const string Magic = "SHPC1";
+    static Dictionary<string, (string key, Vector3 boxMin, Vector3 boxMax, Vector3[] points)> rows;
+    static bool dirty;
+    static float lastSave;
+    static Action onQuit;
+    static string CacheFile => Path.Combine(BepInEx.Paths.CachePath, "Storehouse-item-points.bin");
 
-    public static (Vector3 boxMin, Vector3 boxMax, Vector3[] points)? Get(string prefab)
+    public static Vector3[] Get(string prefab, IReadOnlyList<ItemVisual.Part> parts, Bounds box)
     {
+        if (prefab == null || Plugin.Headless || !SystemInfo.supportsAsyncGPUReadback) return null;
         if (rows == null) Load();
-        return rows.TryGetValue(prefab, out var r) ? r : null;
+        string key = Key(parts);
+        if (rows.TryGetValue(prefab, out var r) && r.key == key && Near(r.boxMin, box.min) && Near(r.boxMax, box.max)) return r.points;
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        var all = Vertices(parts, out string why);
+        if (all == null || all.Count == 0)
+        {
+            Plugin.Log.LogWarning($"Item points: '{prefab}' not read from the GPU ({why ?? "no vertices"}); measured by the table or its box.");
+            return null;
+        }
+        var pts = Sample(all);
+        rows[prefab] = (key, box.min, box.max, pts);
+        dirty = true;
+        Plugin.Log.LogInfo($"Item points: '{prefab}' read from the GPU, {all.Count} vertices, {pts.Length} points kept, in {watch.ElapsedMilliseconds} ms.");
+        if (Time.realtimeSinceStartup - lastSave > 10f) Save();
+        return pts;
     }
 
+    static string Key(IReadOnlyList<ItemVisual.Part> parts) => string.Join("|", parts.Select(p => p.Mesh ? $"{p.Mesh.name}:{p.Mesh.vertexCount}" : "-"));
+    static bool Near(Vector3 a, Vector3 b) => Mathf.Abs(a.x - b.x) <= 1e-4f && Mathf.Abs(a.y - b.y) <= 1e-4f && Mathf.Abs(a.z - b.z) <= 1e-4f;
+
+    // Every vertex of every part, in turned item space: a readable part's own, the others read back from the GPU. Null: one failed.
+    public static List<Vector3> Vertices(IReadOnlyList<ItemVisual.Part> parts, out string why)
+    {
+        why = null;
+        var all = new List<Vector3>();
+        foreach (var part in parts)
+        {
+            if (!part.Mesh) continue;
+            var vs = part.Readable ? part.Mesh.vertices : Gpu(part.Mesh, out why);
+            if (vs == null) { why = $"{part.Mesh.name}: {why}"; return null; }
+            foreach (var p in vs) all.Add(part.M.MultiplyPoint3x4(p));
+        }
+        return all;
+    }
+
+    // A mesh's positions from its GPU vertex buffer (the stream that holds them, at their offset and stride; float32 or float16).
+    static Vector3[] Gpu(Mesh mesh, out string why)
+    {
+        why = null;
+        var pos = UnityEngine.Rendering.VertexAttribute.Position;
+        if (!mesh.HasVertexAttribute(pos)) { why = "no positions"; return null; }
+        var format = mesh.GetVertexAttributeFormat(pos);
+        if (format != UnityEngine.Rendering.VertexAttributeFormat.Float32 && format != UnityEngine.Rendering.VertexAttributeFormat.Float16) { why = $"positions as {format}"; return null; }
+        int stream = mesh.GetVertexAttributeStream(pos), offset = mesh.GetVertexAttributeOffset(pos), stride = mesh.GetVertexBufferStride(stream), n = mesh.vertexCount;
+        byte[] data;
+        using (var buffer = mesh.GetVertexBuffer(stream))
+        {
+            if (buffer == null) { why = "no vertex buffer"; return null; }
+            var request = UnityEngine.Rendering.AsyncGPUReadback.Request(buffer);
+            request.WaitForCompletion();
+            if (request.hasError) { why = "the GPU read-back failed"; return null; }
+            data = request.GetData<byte>().ToArray();
+        }
+        int size = format == UnityEngine.Rendering.VertexAttributeFormat.Float32 ? 4 : 2;
+        if (n == 0 || data.Length < (n - 1) * stride + offset + 3 * size) { why = $"{data.Length} bytes for {n} vertices of {stride}"; return null; }
+        var v = new Vector3[n];
+        for (int i = 0; i < n; i++)
+        {
+            int at = i * stride + offset;
+            v[i] = size == 4
+                ? new Vector3(BitConverter.ToSingle(data, at), BitConverter.ToSingle(data, at + 4), BitConverter.ToSingle(data, at + 8))
+                : new Vector3(Mathf.HalfToFloat(BitConverter.ToUInt16(data, at)), Mathf.HalfToFloat(BitConverter.ToUInt16(data, at + 2)), Mathf.HalfToFloat(BitConverter.ToUInt16(data, at + 4)));
+        }
+        return v;
+    }
+
+    // At most Max points: the extremes along the 3 axes, 6 edge and 4 corner diagonals (both ways), then evenly through the rest.
+    static readonly Vector3[] Directions =
+    {
+        new(1, 0, 0), new(0, 1, 0), new(0, 0, 1), new(1, 1, 0), new(1, -1, 0), new(1, 0, 1), new(1, 0, -1), new(0, 1, 1), new(0, 1, -1),
+        new(1, 1, 1), new(1, 1, -1), new(1, -1, 1), new(-1, 1, 1),
+    };
+
+    static Vector3[] Sample(List<Vector3> all)
+    {
+        if (all.Count > Max)   // one point per position: a seam's split vertices share theirs (to 0.1 mm)
+        {
+            var seen = new HashSet<(int, int, int)>();
+            all = all.Where(p => seen.Add((Mathf.RoundToInt(p.x * 1e4f), Mathf.RoundToInt(p.y * 1e4f), Mathf.RoundToInt(p.z * 1e4f)))).ToList();
+        }
+        if (all.Count <= Max) return all.ToArray();
+        var keep = new SortedSet<int>();
+        foreach (var d in Directions)
+        {
+            int lo = 0, hi = 0;
+            float min = float.MaxValue, max = float.MinValue;
+            for (int i = 0; i < all.Count; i++)
+            {
+                float t = Vector3.Dot(all[i], d);
+                if (t < min) { min = t; lo = i; }
+                if (t > max) { max = t; hi = i; }
+            }
+            keep.Add(lo);
+            keep.Add(hi);
+        }
+        int room = Max - keep.Count;
+        for (int k = 0; k < room && keep.Count < Max; k++) keep.Add((int)((long)k * all.Count / room));
+        return keep.Select(i => all[i]).ToArray();
+    }
+
+    // Format (little-endian): "SHPC1", int32 count; per item: name and key (BinaryWriter strings), 6 float32 (box min, box max),
+    // uint16 n, n x 3 float32.
     static void Load()
     {
-        rows = new Dictionary<string, (Vector3, Vector3, Vector3[])>(StringComparer.Ordinal);
-        var path = StoreModel.AssetPath("item_points.bin");
+        rows = new Dictionary<string, (string, Vector3, Vector3, Vector3[])>(StringComparer.Ordinal);
+        onQuit = Save;
+        Application.quitting += onQuit;
+        var path = CacheFile;
+        if (!File.Exists(path)) return;
         try
         {
-            if (!File.Exists(path)) { Plugin.Log.LogWarning($"Item points: no {path}; items the game won't let us read keep its box."); return; }
             using var r = new BinaryReader(File.OpenRead(path));
-            if (new string(r.ReadChars(5)) != "SHPT1") { Plugin.Log.LogWarning($"Item points: {path} is not an item points file."); return; }
+            if (new string(r.ReadChars(Magic.Length)) != Magic) { Plugin.Log.LogWarning($"Item points: {path} is not an item points cache; measured again."); return; }
             int count = r.ReadInt32();
             for (int i = 0; i < count; i++)
             {
-                string name = System.Text.Encoding.UTF8.GetString(r.ReadBytes(r.ReadByte()));
+                string name = r.ReadString(), key = r.ReadString();
                 var min = new Vector3(r.ReadSingle(), r.ReadSingle(), r.ReadSingle());
                 var max = new Vector3(r.ReadSingle(), r.ReadSingle(), r.ReadSingle());
                 var pts = new Vector3[r.ReadUInt16()];
-                for (int k = 0; k < pts.Length; k++) pts[k] = new Vector3(r.ReadInt16(), r.ReadInt16(), r.ReadInt16()) * 0.001f;
-                if (pts.Length > 0) rows[name] = (min, max, pts);
+                for (int k = 0; k < pts.Length; k++) pts[k] = new Vector3(r.ReadSingle(), r.ReadSingle(), r.ReadSingle());
+                if (pts.Length > 0) rows[name] = (key, min, max, pts);
             }
             Plugin.Log.LogInfo($"Item points: {rows.Count} item shape(s) from {path}.");
         }
-        catch (Exception e) { Plugin.Log.LogWarning($"Item points: {path} unreadable ({e.Message}); items the game won't let us read keep its box."); }
+        catch (Exception e) { rows.Clear(); Plugin.Log.LogWarning($"Item points: {path} unreadable ({e.Message}); measured again."); }
     }
 
-    public static void Release() => rows = null;
+    static void Save()
+    {
+        lastSave = Time.realtimeSinceStartup;
+        if (!dirty || rows == null) return;
+        var path = CacheFile;
+        try
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            using (var w = new BinaryWriter(File.Create(path + ".tmp")))
+            {
+                w.Write(Magic.ToCharArray());
+                w.Write(rows.Count);
+                foreach (var kv in rows)
+                {
+                    w.Write(kv.Key);
+                    w.Write(kv.Value.key);
+                    foreach (var c in new[] { kv.Value.boxMin, kv.Value.boxMax }) { w.Write(c.x); w.Write(c.y); w.Write(c.z); }
+                    w.Write((ushort)kv.Value.points.Length);
+                    foreach (var p in kv.Value.points) { w.Write(p.x); w.Write(p.y); w.Write(p.z); }
+                }
+            }
+            if (File.Exists(path)) File.Delete(path);
+            File.Move(path + ".tmp", path);
+            dirty = false;
+        }
+        catch (Exception e) { Plugin.Log.LogWarning($"Item points: could not write {path} ({e.Message}); measured again next time."); }
+    }
+
+    public static void Release()
+    {
+        Save();
+        if (onQuit != null) Application.quitting -= onQuit;
+        onQuit = null;
+        rows = null;
+    }
 }
+
+#if !RELEASE
+// The GPU read-back checked against the true bounds measured from the game's files (ItemTightBounds; dev builds, STOREHOUSE_POINTS_CHECK=1
+// in the game's environment, "quit" to close the game after): on the main menu, once every mod's items are in, every item with a part
+// the game keeps on the GPU only. BepInEx/cache/storehouse-points-check.md. Its first run (1 Nov 2026, against the 0.8.5
+// item_points.bin too): 792 items read back, 84/84 within 2 mm of the table, every one of the 161,578 old points on a vertex read back.
+static class PointsCheck
+{
+    public static void Hook()
+    {
+        var mode = Environment.GetEnvironmentVariable("STOREHOUSE_POINTS_CHECK");
+        if (string.IsNullOrEmpty(mode)) return;
+        void Once() { ItemManager.OnItemsRegisteredFejd -= Once; Run(mode == "quit"); }
+        ItemManager.OnItemsRegisteredFejd += Once;
+    }
+
+    static void Run(bool quit)
+    {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        var sb = new StringBuilder("| item | vertices | points | vs table (mm) |\n|---|---|---|---|\n");
+        int items = 0, read = 0, tableOk = 0, tableN = 0;
+        foreach (var prefab in ObjectDB.instance.m_items.Where(p => p).OrderBy(p => p.name, StringComparer.Ordinal))
+        {
+            ItemVisual v;
+            try { v = ItemVisual.Get(prefab); } catch (Exception e) { sb.Append($"| {prefab.name} | error {e.Message} |\n"); continue; }
+            if (v == null || v.Parts.All(p => p.Readable) || v.PrefabName != prefab.name) continue;
+            items++;
+            var all = ItemPoints.Vertices(v.Parts, out string why);
+            if (all == null) { sb.Append($"| {prefab.name} | not read: {why} |\n"); continue; }
+            read++;
+            string table = "";
+            if (ItemTightBounds.Rows.TryGetValue(prefab.name, out var row) && Off(row.boxMin, row.boxMax, v.Bounds.min, v.Bounds.max) <= 2f)
+            {
+                float off = Off(row.min, row.max, v.Tight.min, v.Tight.max);
+                tableN++; if (off <= 2f) tableOk++;
+                table = $"{off:F1}";
+            }
+            sb.Append($"| {prefab.name} | {all.Count} | {v.Points().Length} | {table} |\n");
+        }
+        string summary = $"Points check: {items} item(s) with a part on the GPU only, {read} read back; true bounds within 2 mm of the table for {tableOk}/{tableN}; {watch.ElapsedMilliseconds} ms.";
+        var path = Path.Combine(BepInEx.Paths.CachePath, "storehouse-points-check.md");
+        File.WriteAllText(path, $"# {summary}\n\n{sb}");
+        Plugin.Log.LogInfo(summary + $" ({path})");
+        if (quit) Application.Quit();
+    }
+
+    static float Off(Vector3 aMin, Vector3 aMax, Vector3 bMin, Vector3 bMax)
+    {
+        var d = Vector3.Max(new Vector3(Mathf.Abs(aMin.x - bMin.x), Mathf.Abs(aMin.y - bMin.y), Mathf.Abs(aMin.z - bMin.z)),
+            new Vector3(Mathf.Abs(aMax.x - bMax.x), Mathf.Abs(aMax.y - bMax.y), Mathf.Abs(aMax.z - bMax.z)));
+        return Mathf.Max(d.x, d.y, d.z) * 1000f;
+    }
+}
+#endif
 
 sealed class ItemVisual
 {
@@ -8535,19 +8796,14 @@ sealed class ItemVisual
 
     static Bounds TightOf(ItemVisual v, out string how)
     {
-        // Its real shape from the game's files (assets/item_points.bin): the points stand in for the vertices the game won't give.
-        if (v.Parts.Any(p => !p.Readable) && v.prefabName != null && ItemPoints.Get(v.prefabName) is { } shape)
+        // Its real shape, read back from the GPU (ItemPoints): the points stand in for the vertices the game won't give.
+        if (v.Parts.Any(p => !p.Readable) && ItemPoints.Get(v.prefabName, v.Parts, v.Bounds) is { Length: > 0 } shape)
         {
-            var off = Vector3.Max(Abs(shape.boxMin - v.Bounds.min), Abs(shape.boxMax - v.Bounds.max));
-            if (Mathf.Max(off.x, off.y, off.z) <= 0.002f)
-            {
-                how = "measured points";
-                v.measured = shape.points;
-                var t = new Bounds(shape.points[0], Vector3.zero);
-                foreach (var p in shape.points) t.Encapsulate(p);
-                return t;
-            }
-            Plugin.Log.LogWarning($"Item model '{v.prefabName}': its box no longer matches the measured points (up to {Mathf.Max(off.x, off.y, off.z) * 1000f:F0} mm; a game update?).");
+            how = "GPU points";
+            v.measured = shape;
+            var t = new Bounds(shape[0], Vector3.zero);
+            foreach (var p in shape) t.Encapsulate(p);
+            return t;
         }
         if (v.Parts.Any(p => !p.Readable) && v.prefabName != null && ItemTightBounds.Rows.TryGetValue(v.prefabName, out var row))
         {
@@ -10004,26 +10260,45 @@ static class Jitter
     }
 }
 
-#if !RELEASE
-// A dev build that did not load fully says so on the main menu, before a world is loaded (the coordinator's retro, 26 Oct: a refused
-// config key once stopped the start unnoticed, and Valheim removed every placed piece).
+// The main menu says whether Storehouse loaded, before a world is loaded (fix list F8; Joost, 1 Nov: players check this after an
+// update instead of reading the log). Loaded with every piece: a quiet line at the bottom. Not fully: the red box (the coordinator's
+// retro, 26 Oct: a refused config key once stopped the start unnoticed, and Valheim removed every placed piece). No line at all:
+// Storehouse did not load.
 sealed class LoadWarning : MonoBehaviour
 {
-    GUIStyle style;
+    GUIStyle style, okStyle;
+    int pieces, total;
+    public void Set(int added, int all) { pieces = added; total = all; }
 
     void OnGUI()
     {
-        if (!FejdStartup.instance || Plugin.Failures.Count == 0) return;
+        if (!FejdStartup.instance) return;
+        if (Plugin.Failures.Count == 0 && pieces == total)
+        {
+            // Top left, where the eye starts, sized to the screen (Joost, 1 Nov: 16 px at the bottom was "very subtle and very
+            // invisible" on a 4K menu); a dark shadow keeps it readable on the bright sky.
+            int size = Mathf.Max(18, Screen.height / 42);
+            okStyle ??= new GUIStyle(GUI.skin.label) { alignment = TextAnchor.UpperLeft, fontStyle = FontStyle.Bold };
+            okStyle.fontSize = size;
+            var at = new Rect(size * 1.2f, size * 1.0f, Screen.width * 0.5f, size * 2f);
+            string text = $"Storehouse {Plugin.Version} loaded: {pieces} pieces ready";
+            okStyle.normal.textColor = new Color(0f, 0f, 0f, 0.85f);
+            GUI.Label(new Rect(at.x + size * 0.08f, at.y + size * 0.08f, at.width, at.height), text, okStyle);
+            okStyle.normal.textColor = new Color(0.98f, 0.82f, 0.45f, 1f);
+            GUI.Label(at, text, okStyle);
+            return;
+        }
         style ??= new GUIStyle(GUI.skin.box) { fontSize = 18, wordWrap = true, alignment = TextAnchor.MiddleCenter, normal = { textColor = Color.white } };
         var before = GUI.backgroundColor;
         GUI.backgroundColor = new Color(0.85f, 0.05f, 0.05f, 1f);
-        string what = string.Join("; ", Plugin.Failures.Take(4)) + (Plugin.Failures.Count > 4 ? $" and {Plugin.Failures.Count - 4} more" : "");
+        string what = Plugin.Failures.Count == 0 ? $"{pieces} of {total} pieces registered"
+            : string.Join("; ", Plugin.Failures.Take(4)) + (Plugin.Failures.Count > 4 ? $" and {Plugin.Failures.Count - 4} more" : "");
         GUI.Box(new Rect(Screen.width * 0.2f, 20f, Screen.width * 0.6f, 96f),
             $"Storehouse {Plugin.Version} did not load fully: {what}. Don't load a world you care about; details in BepInEx/LogOutput.log.", style);
         GUI.backgroundColor = before;
     }
 }
-#endif
+
 
 static class EquipRules
 {
@@ -10179,7 +10454,7 @@ static class ItemRules
     public static bool ArrowOrBolt(ItemDrop.ItemData i) => Arrow(i) || Bolt(i);
     static ObjectDB forDb;
     static ZNetScene forScene;
-    static readonly HashSet<string> made = new(), cooked = new(), roasted = new(), smelted = new(), fuel = new(), grown = new(), bars = new(), brewed = new();
+    static readonly HashSet<string> made = new(), cooked = new(), roasted = new(), smelted = new(), fuel = new(), grown = new(), bars = new(), brewed = new(), brewing = new();
     static readonly List<(string station, ItemDrop from, ItemDrop to)> smelts = new();
 
     static void Refresh()
@@ -10189,7 +10464,7 @@ static class ItemRules
         if (db == forDb && scene == forScene) return;
         forDb = db;
         forScene = scene;
-        foreach (var set in new[] { made, cooked, roasted, smelted, fuel, grown, bars, brewed }) set.Clear();
+        foreach (var set in new[] { made, cooked, roasted, smelted, fuel, grown, bars, brewed, brewing }) set.Clear();
         if (db) foreach (var r in db.m_recipes) if (r && r.m_item) Add(made, r.m_item);
         if (scene)
             foreach (var p in scene.m_prefabs)
@@ -10204,7 +10479,7 @@ static class ItemRules
                         Add(cooked, c.m_from);
                         Add(roasted, c.m_to);
                     }
-                if (p.GetComponent<Fermenter>() is { } f) foreach (var c in f.m_conversion) if (c != null) { Add(made, c.m_to); Add(brewed, c.m_to); }
+                if (p.GetComponent<Fermenter>() is { } f) foreach (var c in f.m_conversion) if (c != null) { Add(made, c.m_to); Add(brewed, c.m_to); Add(brewing, c.m_from); }
                 // Bars: what the coal-fired smelters (smelter, blast furnace) make. Not every Smelter: the charcoal kiln is one too
                 // and made coal count as metal (Joost: Store All put coal on a Metal Rack).
                 if (p.GetComponent<Smelter>() is { } sm && sm.m_fuelItem && sm.m_fuelItem.name == "Coal")
@@ -10232,7 +10507,7 @@ static class ItemRules
         smelts.Clear();
         if (db && scene)
             Plugin.Log.LogInfo($"Item types: {made.Count} made items, {cooked.Count} raw for the cooking station, {smelted.Count} smelter inputs, "
-                + $"{fuel.Count} smelter fuel(s), {grown.Count} crop yields.");
+                + $"{fuel.Count} smelter fuel(s), {grown.Count} crop yields, {brewing.Count} fermenter bases, {brewed.Count} fermenter drinks.");
     }
 
     static void Add(HashSet<string> set, ItemDrop d)
@@ -10247,7 +10522,7 @@ static class ItemRules
     public static bool Mead(ItemDrop.ItemData i)
     {
         Refresh();
-        return StorageReviewPolicy.MeadProduct(Consumable(i), Food(i), brewed.Contains(i.m_shared.m_name),
+        return StorageReviewPolicy.MeadProduct(Consumable(i), Food(i), brewed.Contains(i.m_shared.m_name) || brewing.Contains(i.m_shared.m_name),
             i.m_dropPrefab ? i.m_dropPrefab.name : null);
     }
     public static bool ArcaneCore(ItemDrop.ItemData i) => i.m_dropPrefab && i.m_dropPrefab.name == "SurtlingCore";

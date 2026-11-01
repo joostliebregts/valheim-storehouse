@@ -21,7 +21,8 @@ TESTED = ['2 - Timber Crib', '4 - Coal & Stone Bunker', '4 - Open Coal & Stone B
 # The 0.8.0 public release (27 Oct): its defaults reached every server and player, so a value equal to one is no decision either.
 # Only the sections 0.8.1 changed (Joost's sorting round, 28 Oct).
 RELEASED_080 = ['4 - Coal & Stone Bunker', '4 - Open Coal & Stone Bunker', '4 - Coopers Row', '4 - Stacking Coopers Row',
-                '4 - Apothecary Rack', '4 - Tall Apothecary Rack', '4 - Ember Cabinet']
+                '4 - Apothecary Rack', '4 - Tall Apothecary Rack', '4 - Ember Cabinet',
+                '4 - Mead Rack']   # 0.8.6: BarleyWineBase added (issue #2, fix list F3)
 EXTRA = {'4f70e4b0f': TESTED, '907e2164b': TESTED, 'b307bcb3c': RELEASED_080}
 BEGIN, END = '    // ACCEPTS HISTORY BEGIN (accepts-history.py)', '    // ACCEPTS HISTORY END'
 NOT_IN_SECTION = set('=\n\t\\"\'[]')

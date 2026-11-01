@@ -3,6 +3,8 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Deterministic>true</Deterministic>
+    <!-- No git commit in the version string: otherwise any commit after a test start changes the DLL and build.sh's live gate refuses it (1 Nov). -->
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <PathMap>$(MSBuildProjectDirectory)=.</PathMap>
     <AssemblyName>Storehouse</AssemblyName>
     <Version>0.1.0</Version>

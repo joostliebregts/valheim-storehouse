@@ -27,12 +27,18 @@ The code needs the `DEV` constant in every build (`RELEASE` on top for the relea
 `./build.sh` without an argument makes the release zip. It packs only after a real game start ran exactly that DLL
 (the live gate in `build.sh`, with `test-swap.sh`).
 
-## What a source build leaves out
+## Nothing of the game's
 
-Two files in the released zip hold shapes measured from the game's own items, so they stay out of this repository:
-`assets/item_points.bin` (the true shape of items whose mesh the game keeps on the GPU) and the Ossuary's native bone meshes
-(`assets/ossuary_r5b/display_meshes/*-native.json`). Without them the mod measures those items by their bounding box and draws the
-Ossuary with the game's own meshes. Everything else, the furniture models included, is our own work and is here.
+Since 0.8.6 neither this repository nor the released zip holds anything taken from the game's files or other mods:
+
+- Items whose mesh the game keeps on the graphics card are measured in the player's own game: the mod reads their vertices back from
+  the GPU the first time a store shows them and keeps the result in `BepInEx/cache/Storehouse-item-points.bin`. Until 0.8.5 these
+  shapes shipped as `assets/item_points.bin`.
+- The Ossuary's display sidecar (the game's bone meshes as `display_meshes/*-native.json`, and `ossuary_display.json`) is a dev-only
+  experiment. Release builds never read it, `copy-models.sh` copies it only into dev installs, and it is not in this repository: a
+  release build draws the Ossuary's bones with the game's own meshes.
+
+Everything here, the furniture models included, is our own work.
 
 The `blender/` scripts that made the models expect a local extraction of the game's files for reference and scale; they are
 included to show how each model was made, not as a one-step rebuild.
