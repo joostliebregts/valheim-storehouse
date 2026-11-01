@@ -1,0 +1,1335 @@
+{
+  "schema": "storehouse-anchors/1",
+  "furniture": "arsenal_sol61b",
+  "author": "Sol 6.1 / extra high",
+  "units": 22,
+  "slots_designed_for": 64,
+  "stack_per_unit": true,
+  "capacity_note": "64 inventory slots, 22 typed visible places. Hidden overflow remains in inventory; never shrink or duplicate display models to represent it.",
+  "space": {
+    "from_blender": "ux=-bx,uy=bz,uz=-by; R_u=C R_b C^T. ItemVisual already adds 180 degree item-space correction; do not add another."
+  },
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png",
+    "size_blender_xyz_m": [
+      3.08,
+      1.565,
+      1.345
+    ]
+  },
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "long",
+      "position": [
+        1.0399999618530273,
+        1.3643100261688232,
+        -0.30000001192092896
+      ],
+      "box_size": [
+        0.15685999393463135,
+        2.4266200065612793,
+        0.11671999096870422
+      ],
+      "render_item": "SpearBronze",
+      "accepted_item_types": [
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.0399999618530273,
+        0.1509999930858612,
+        -0.30000001192092896
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.11843,
+          0.24164,
+          0.151
+        ],
+        "max": [
+          -0.96157,
+          0.35836,
+          2.57762
+        ],
+        "size": [
+          0.15685,
+          0.11672,
+          2.42662
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 1,
+      "kind": "long",
+      "position": [
+        0.7699999809265137,
+        1.3643100261688232,
+        -0.30000001192092896
+      ],
+      "box_size": [
+        0.15685999393463135,
+        2.4266200065612793,
+        0.11671999096870422
+      ],
+      "render_item": "SpearBronze",
+      "accepted_item_types": [
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.7699999809265137,
+        0.1509999930858612,
+        -0.30000001192092896
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.84843,
+          0.24164,
+          0.151
+        ],
+        "max": [
+          -0.69157,
+          0.35836,
+          2.57762
+        ],
+        "size": [
+          0.15685,
+          0.11672,
+          2.42662
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 2,
+      "kind": "long",
+      "position": [
+        0.5,
+        1.3643100261688232,
+        -0.30000001192092896
+      ],
+      "box_size": [
+        0.15685999393463135,
+        2.4266200065612793,
+        0.11671999096870422
+      ],
+      "render_item": "SpearBronze",
+      "accepted_item_types": [
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.5,
+        0.1509999930858612,
+        -0.30000001192092896
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.57843,
+          0.24164,
+          0.151
+        ],
+        "max": [
+          -0.42157,
+          0.35836,
+          2.57762
+        ],
+        "size": [
+          0.15685,
+          0.11672,
+          2.42662
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 3,
+      "kind": "long",
+      "position": [
+        0.22999998927116394,
+        1.3643100261688232,
+        -0.30000001192092896
+      ],
+      "box_size": [
+        0.15685997903347015,
+        2.4266200065612793,
+        0.11671999096870422
+      ],
+      "render_item": "SpearBronze",
+      "accepted_item_types": [
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.23000000417232513,
+        0.1509999930858612,
+        -0.30000001192092896
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.30843,
+          0.24164,
+          0.151
+        ],
+        "max": [
+          -0.15157,
+          0.35836,
+          2.57762
+        ],
+        "size": [
+          0.15685,
+          0.11672,
+          2.42662
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 4,
+      "kind": "long",
+      "position": [
+        0.739995002746582,
+        1.0367249250411987,
+        -0.5199949741363525
+      ],
+      "box_size": [
+        0.7598099708557129,
+        1.7714499235153198,
+        0.17530998587608337
+      ],
+      "render_item": "BattleaxeCrystal",
+      "accepted_item_types": [
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.7400000095367432,
+        0.1509999930858612,
+        -0.5199999809265137
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.1199,
+          0.43234,
+          0.151
+        ],
+        "max": [
+          -0.36009,
+          0.60765,
+          1.92245
+        ],
+        "size": [
+          0.75981,
+          0.17531,
+          1.77145
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 5,
+      "kind": "long",
+      "position": [
+        0.12999999523162842,
+        1.1063649654388428,
+        -0.5200049877166748
+      ],
+      "box_size": [
+        0.24489998817443848,
+        1.9107298851013184,
+        0.052049994468688965
+      ],
+      "render_item": "THSwordKrom",
+      "accepted_item_types": [
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.12999999523162842,
+        0.1509999930858612,
+        -0.5199999809265137
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.25245,
+          0.49398,
+          0.151
+        ],
+        "max": [
+          -0.00755,
+          0.54603,
+          2.06173
+        ],
+        "size": [
+          0.2449,
+          0.05205,
+          1.91073
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 6,
+      "kind": "handheld",
+      "position": [
+        1.0399949550628662,
+        0.7856550216674805,
+        0.5
+      ],
+      "box_size": [
+        0.14398998022079468,
+        1.2693099975585938,
+        0.05408000946044922
+      ],
+      "render_item": "SwordIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.0399999618530273,
+        0.1509999930858612,
+        0.5
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.11199,
+          -0.52704,
+          0.151
+        ],
+        "max": [
+          -0.968,
+          -0.47296,
+          1.42031
+        ],
+        "size": [
+          0.14399,
+          0.05408,
+          1.26931
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 7,
+      "kind": "handheld",
+      "position": [
+        0.7699949741363525,
+        0.5908200144767761,
+        0.5
+      ],
+      "box_size": [
+        0.28318995237350464,
+        0.8796399831771851,
+        0.06327998638153076
+      ],
+      "render_item": "AxeIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.7699999809265137,
+        0.1509999930858612,
+        0.5
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.91159,
+          -0.53164,
+          0.151
+        ],
+        "max": [
+          -0.6284,
+          -0.46836,
+          1.03064
+        ],
+        "size": [
+          0.28319,
+          0.06328,
+          0.87964
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 8,
+      "kind": "handheld",
+      "position": [
+        0.5,
+        0.6667900085449219,
+        0.5
+      ],
+      "box_size": [
+        0.2164200246334076,
+        1.0315799713134766,
+        0.2208399772644043
+      ],
+      "render_item": "MaceIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.5,
+        0.1509999930858612,
+        0.5
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.60821,
+          -0.61042,
+          0.151
+        ],
+        "max": [
+          -0.39179,
+          -0.38958,
+          1.18258
+        ],
+        "size": [
+          0.21642,
+          0.22084,
+          1.03158
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 9,
+      "kind": "handheld",
+      "position": [
+        0.22999998927116394,
+        0.7948850393295288,
+        0.5
+      ],
+      "box_size": [
+        0.19461999833583832,
+        1.2877700328826904,
+        0.059239983558654785
+      ],
+      "render_item": "SwordBlackmetal",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.23000000417232513,
+        0.1509999930858612,
+        0.5
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.32731,
+          -0.52962,
+          0.151
+        ],
+        "max": [
+          -0.13269,
+          -0.47038,
+          1.43877
+        ],
+        "size": [
+          0.19462,
+          0.05924,
+          1.28777
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 10,
+      "kind": "handheld",
+      "position": [
+        1.0399999618530273,
+        0.798009991645813,
+        0.25
+      ],
+      "box_size": [
+        0.20372003316879272,
+        1.2940199375152588,
+        0.05408000946044922
+      ],
+      "render_item": "SwordSilver",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.0399999618530273,
+        0.1509999930858612,
+        0.25
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.14186,
+          -0.27704,
+          0.151
+        ],
+        "max": [
+          -0.93814,
+          -0.22296,
+          1.44502
+        ],
+        "size": [
+          0.20372,
+          0.05408,
+          1.29402
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 11,
+      "kind": "handheld",
+      "position": [
+        0.7699999809265137,
+        0.4735400080680847,
+        0.25
+      ],
+      "box_size": [
+        0.19152003526687622,
+        0.6450799703598022,
+        0.03798000514507294
+      ],
+      "render_item": "KnifeSilver",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.7699999809265137,
+        0.1509999930858612,
+        0.25
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.86576,
+          -0.26899,
+          0.151
+        ],
+        "max": [
+          -0.67424,
+          -0.23101,
+          0.79608
+        ],
+        "size": [
+          0.19152,
+          0.03798,
+          0.64508
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 12,
+      "kind": "handheld",
+      "position": [
+        0.49999499320983887,
+        0.5908200144767761,
+        0.25
+      ],
+      "box_size": [
+        0.2831900119781494,
+        0.8796399831771851,
+        0.06327998638153076
+      ],
+      "render_item": "AxeIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.5,
+        0.1509999930858612,
+        0.25
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.64159,
+          -0.28164,
+          0.151
+        ],
+        "max": [
+          -0.3584,
+          -0.21836,
+          1.03064
+        ],
+        "size": [
+          0.28319,
+          0.06328,
+          0.87964
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 13,
+      "kind": "handheld",
+      "position": [
+        0.22999998927116394,
+        0.6667900085449219,
+        0.25
+      ],
+      "box_size": [
+        0.2164199948310852,
+        1.0315799713134766,
+        0.2208399921655655
+      ],
+      "render_item": "MaceIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.23000000417232513,
+        0.1509999930858612,
+        0.25
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.33821,
+          -0.36042,
+          0.151
+        ],
+        "max": [
+          -0.12179,
+          -0.13958,
+          1.18258
+        ],
+        "size": [
+          0.21642,
+          0.22084,
+          1.03158
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 14,
+      "kind": "bow",
+      "position": [
+        0.8999999761581421,
+        0.893155038356781,
+        -0.019999999552965164
+      ],
+      "box_size": [
+        0.46688002347946167,
+        1.4843100309371948,
+        0.1149199977517128
+      ],
+      "render_item": "Bow",
+      "accepted_item_types": [
+        "Bow"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.8999999761581421,
+        0.1509999930858612,
+        -0.019999999552965164
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.13344,
+          -0.03746,
+          0.151
+        ],
+        "max": [
+          -0.66656,
+          0.07746,
+          1.63531
+        ],
+        "size": [
+          0.46688,
+          0.11492,
+          1.48431
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 15,
+      "kind": "bow",
+      "position": [
+        0.25,
+        0.893155038356781,
+        -0.019999999552965164
+      ],
+      "box_size": [
+        0.46688002347946167,
+        1.4843100309371948,
+        0.1149199977517128
+      ],
+      "render_item": "Bow",
+      "accepted_item_types": [
+        "Bow"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.25,
+        0.1509999930858612,
+        -0.019999999552965164
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.48344,
+          -0.03746,
+          0.151
+        ],
+        "max": [
+          -0.01656,
+          0.07746,
+          1.63531
+        ],
+        "size": [
+          0.46688,
+          0.11492,
+          1.48431
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 16,
+      "kind": "shield reserve",
+      "position": [
+        -1.0799949169158936,
+        0.6280950307846069,
+        0.3700000047683716
+      ],
+      "box_size": [
+        0.9454699754714966,
+        0.9541900157928467,
+        0.14767998456954956
+      ],
+      "render_item": "ShieldBanded",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.0800000429153442,
+        0.1509999930858612,
+        0.3700000047683716
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.60726,
+          -0.44384,
+          0.151
+        ],
+        "max": [
+          1.55273,
+          -0.29616,
+          1.10519
+        ],
+        "size": [
+          0.94547,
+          0.14768,
+          0.9542
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 17,
+      "kind": "shield reserve",
+      "position": [
+        -1.0800000429153442,
+        0.4570000171661377,
+        0.1599999964237213
+      ],
+      "box_size": [
+        0.6118400692939758,
+        0.6119999885559082,
+        0.17674000561237335
+      ],
+      "render_item": "ShieldIronBuckler",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.0800000429153442,
+        0.1509999930858612,
+        0.1599999964237213
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.77408,
+          -0.24837,
+          0.151
+        ],
+        "max": [
+          1.38592,
+          -0.07163,
+          0.763
+        ],
+        "size": [
+          0.61184,
+          0.17674,
+          0.612
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 18,
+      "kind": "shield reserve",
+      "position": [
+        -1.0799949169158936,
+        0.6280950307846069,
+        -0.04999999701976776
+      ],
+      "box_size": [
+        0.9454699754714966,
+        0.9541900157928467,
+        0.14767999947071075
+      ],
+      "render_item": "ShieldBanded",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.0800000429153442,
+        0.1509999930858612,
+        -0.05000000074505806
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.60726,
+          -0.02384,
+          0.151
+        ],
+        "max": [
+          1.55273,
+          0.12384,
+          1.10519
+        ],
+        "size": [
+          0.94547,
+          0.14768,
+          0.9542
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 19,
+      "kind": "shield reserve",
+      "position": [
+        -1.0800000429153442,
+        0.4570000171661377,
+        -0.25999999046325684
+      ],
+      "box_size": [
+        0.6118400692939758,
+        0.6119999885559082,
+        0.17673999071121216
+      ],
+      "render_item": "ShieldIronBuckler",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.0800000429153442,
+        0.1509999930858612,
+        -0.25999999046325684
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.77408,
+          0.17163,
+          0.151
+        ],
+        "max": [
+          1.38592,
+          0.34837,
+          0.763
+        ],
+        "size": [
+          0.61184,
+          0.17674,
+          0.612
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 20,
+      "kind": "shield reserve",
+      "position": [
+        -1.0799949169158936,
+        0.6280950307846069,
+        -0.4699999988079071
+      ],
+      "box_size": [
+        0.9454699754714966,
+        0.9541900157928467,
+        0.14767998456954956
+      ],
+      "render_item": "ShieldBanded",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.0800000429153442,
+        0.1509999930858612,
+        -0.4699999988079071
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.60726,
+          0.39616,
+          0.151
+        ],
+        "max": [
+          1.55273,
+          0.54384,
+          1.10519
+        ],
+        "size": [
+          0.94547,
+          0.14768,
+          0.9542
+        ]
+      },
+      "feature_priority": false
+    },
+    {
+      "index": 21,
+      "kind": "featured shield",
+      "position": [
+        -1.0799999237060547,
+        0.829604983329773,
+        0.7749999761581421
+      ],
+      "box_size": [
+        1.0397599935531616,
+        1.0172100067138672,
+        0.20455998182296753
+      ],
+      "render_item": "ShieldBlackmetal",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.0800000429153442,
+        0.32100000977516174,
+        0.7749999761581421
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.56012,
+          -0.87728,
+          0.321
+        ],
+        "max": [
+          1.59988,
+          -0.67272,
+          1.33821
+        ],
+        "size": [
+          1.03976,
+          0.20456,
+          1.01721
+        ]
+      },
+      "feature_priority": true
+    }
+  ],
+  "runtime_needed": [
+    "Type-based item-family allocation, including modded gear, not prefab whitelist.",
+    "Use native root scale including RootScaleV, with no Fit.Volume normalization against demo, fit_box shrink, DisplaySize cap or growth. Current copies.scale=1 selects Fit.Volume and is insufficient; native_scale_required needs an explicit runtime path.",
+    "Native bottom placement must be recalculated for every item from bottom_position_unity and its actual rotated native bounds height. Exported position is the demo center only. Current Store.Place Bottom uses pre-copy-rotation height when FitAfterRotation is false; do not use unchanged.",
+    "Keep exact native size; oversized gear remains stored and unseen, never clipped or resized.",
+    "Featured shield: choose best supported shield by effective block power then quality, stable prefab/id tie-break; exclude that stack from reserve duplication. Runtime ranking not implemented here."
+  ],
+  "prototype_only": true
+}

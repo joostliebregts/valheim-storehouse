@@ -1,0 +1,718 @@
+{
+  "schema": "storehouse-anchors/1",
+  "furniture": "handheld_sol61b_r2",
+  "author": "Sol 6.1 / extra high",
+  "units": 8,
+  "slots_designed_for": 8,
+  "stack_per_unit": true,
+  "capacity_note": "8 inventory slots; 8 typed native-scale display cells.",
+  "space": {
+    "from_blender": "ux=-bx,uy=bz,uz=-by; R_u=C R_b C^T. ItemVisual already adds 180 degree item-space correction; do not add another."
+  },
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png",
+    "size_blender_xyz_m": [
+      1.8350000381469727,
+      0.7709999978542328,
+      0.8100000023841858
+    ]
+  },
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "handheld",
+      "position": [
+        0.5475000441074371,
+        0.6657879948616028,
+        0.15250000730156898
+      ],
+      "box_size": [
+        0.46,
+        1.6,
+        0.28
+      ],
+      "clear_box": [
+        0.46,
+        1.6,
+        0.28
+      ],
+      "render_item": "MaceIron",
+      "example_item": "MaceIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070462107658386,
+            -0.009255741722881794,
+            0.009255742654204369,
+            0.7070462107658386
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.5475000143051147,
+        0.15000000596046448,
+        0.1525000035762787
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.6557211875915527,
+          -0.2628801763057709,
+          0.1499999761581421
+        ],
+        "max": [
+          -0.43927890062332153,
+          -0.042119838297367096,
+          1.1815760135650635
+        ],
+        "size": [
+          0.2164422869682312,
+          0.22076033800840378,
+          1.0315760374069214
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          0.31750001430511476,
+          0.15,
+          0.012500003576278673
+        ],
+        "max": [
+          0.7775000143051147,
+          1.75,
+          0.2925000035762787
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.28,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 1,
+      "kind": "handheld",
+      "position": [
+        0.12250000610947609,
+        0.58982153236866,
+        0.1524999961256981
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "render_item": "AxeIron",
+      "example_item": "AxeIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.012340699322521687,
+            -0.7069991230964661,
+            0.7069990634918213,
+            0.012340699322521687
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.12250000238418579,
+        0.15000000596046448,
+        0.1525000035762787
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.264035165309906,
+          -0.18384885787963867,
+          0.15000000596046448
+        ],
+        "max": [
+          0.019035153090953827,
+          -0.12115113437175751,
+          1.0296430587768555
+        ],
+        "size": [
+          0.28307031840085983,
+          0.06269772350788116,
+          0.879643052816391
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.04749999761581422,
+          0.15,
+          0.012500003576278673
+        ],
+        "max": [
+          0.29250000238418583,
+          1.75,
+          0.2925000035762787
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.28,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 2,
+      "kind": "handheld",
+      "position": [
+        -0.24250000715255737,
+        0.7846536338329315,
+        0.1524999961256981
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "render_item": "SwordIron",
+      "example_item": "SwordIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070798277854919,
+            0.006170592270791531,
+            -0.006170592270791531,
+            0.7070798277854919
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -0.24250000715255737,
+        0.15000000596046448,
+        0.1525000035762787
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.1705159842967987,
+          -0.1795358806848526,
+          0.15000003576278687
+        ],
+        "max": [
+          0.31448403000831604,
+          -0.12546411156654358,
+          1.4193072319030762
+        ],
+        "size": [
+          0.14396804571151733,
+          0.05407176911830902,
+          1.2693071961402893
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.4125000071525574,
+          0.15,
+          0.012500003576278673
+        ],
+        "max": [
+          -0.07250000715255736,
+          1.75,
+          0.2925000035762787
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.28,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 3,
+      "kind": "handheld",
+      "position": [
+        -0.6074999868869781,
+        0.6174890398979187,
+        0.15250000730156898
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "render_item": "AxeBlackMetal",
+      "example_item": "AxeBlackMetal",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.006170588079839945,
+            0.7070798277854919,
+            -0.7070798277854919,
+            0.006170588079839945
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -0.6075000166893005,
+        0.15000000596046448,
+        0.1525000035762787
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.44376373291015625,
+          -0.20208251476287842,
+          0.1499999761581421
+        ],
+        "max": [
+          0.7712362408638,
+          -0.10291749984025955,
+          1.0849781036376953
+        ],
+        "size": [
+          0.3274725079536438,
+          0.09916501492261887,
+          0.9349781274795532
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.7775000166893006,
+          0.15,
+          0.012500003576278673
+        ],
+        "max": [
+          -0.4375000166893005,
+          1.75,
+          0.2925000035762787
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.28,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 4,
+      "kind": "handheld",
+      "position": [
+        0.5475000441074371,
+        0.6232565343379974,
+        -0.15250000730156898
+      ],
+      "box_size": [
+        0.46,
+        1.6,
+        0.28
+      ],
+      "clear_box": [
+        0.46,
+        1.6,
+        0.28
+      ],
+      "render_item": "MaceSilver",
+      "example_item": "MaceSilver",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7069764733314514,
+            0.01357464212924242,
+            -0.01357464212924242,
+            0.7069764733314514
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.5475000143051147,
+        0.15000000596046448,
+        -0.1525000035762787
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.7677590250968933,
+          0.07211024314165115,
+          0.15000003576278687
+        ],
+        "max": [
+          -0.32724106311798096,
+          0.23288977146148682,
+          1.096513032913208
+        ],
+        "size": [
+          0.44051796197891235,
+          0.16077952831983566,
+          0.9465129971504211
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          0.31750001430511476,
+          0.15,
+          -0.2925000035762787
+        ],
+        "max": [
+          0.7775000143051147,
+          1.75,
+          -0.012500003576278673
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.28,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 5,
+      "kind": "handheld",
+      "position": [
+        0.12250000983476639,
+        0.4725405126810074,
+        -0.1524999961256981
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "render_item": "KnifeSilver",
+      "example_item": "KnifeSilver",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7069990634918213,
+            -0.012340715155005455,
+            0.012340715155005455,
+            0.7069991230964661
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.12250000238418579,
+        0.15000000596046448,
+        -0.1525000035762787
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.21820268034934998,
+          0.13227175176143646,
+          0.15000000596046448
+        ],
+        "max": [
+          -0.0267973393201828,
+          0.17272824048995972,
+          0.7950810194015503
+        ],
+        "size": [
+          0.19140534102916718,
+          0.040456488728523254,
+          0.6450810134410858
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.04749999761581422,
+          0.15,
+          -0.2925000035762787
+        ],
+        "max": [
+          0.29250000238418583,
+          1.75,
+          -0.012500003576278673
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.28,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 6,
+      "kind": "handheld",
+      "position": [
+        -0.24250000715255737,
+        0.7970089316368103,
+        -0.1524999961256981
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "render_item": "SwordSilver",
+      "example_item": "SwordSilver",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.004936505109071732,
+            -0.7070895433425903,
+            0.7070895433425903,
+            0.004936505109071732
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -0.24250000715255737,
+        0.15000000596046448,
+        -0.1525000035762787
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.14064794778823853,
+          0.1254626363515854,
+          0.1499999761581421
+        ],
+        "max": [
+          0.3443520665168762,
+          0.1795373558998108,
+          1.4440178871154785
+        ],
+        "size": [
+          0.2037041187286377,
+          0.0540747195482254,
+          1.2940179109573364
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.4125000071525574,
+          0.15,
+          -0.2925000035762787
+        ],
+        "max": [
+          -0.07250000715255736,
+          1.75,
+          -0.012500003576278673
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.28,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 7,
+      "kind": "handheld",
+      "position": [
+        -0.6075000166893005,
+        0.7938835024833679,
+        -0.1524999998509884
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.28
+      ],
+      "render_item": "SwordBlackmetal",
+      "example_item": "SwordBlackmetal",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070540189743042,
+            0.008638723753392696,
+            -0.008638724684715271,
+            0.7070539593696594
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -0.6075000166893005,
+        0.15000000596046448,
+        -0.1525000035762787
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.5102210640907288,
+          0.12069223076105118,
+          0.1499999761581421
+        ],
+        "max": [
+          0.7047789692878723,
+          0.1843077689409256,
+          1.4377670288085938
+        ],
+        "size": [
+          0.19455790519714355,
+          0.06361553817987442,
+          1.2877670526504517
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.7775000166893006,
+          0.15,
+          -0.2925000035762787
+        ],
+        "max": [
+          -0.4375000166893005,
+          1.75,
+          -0.012500003576278673
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.28,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    }
+  ],
+  "runtime_needed": [
+    "Read clear_box as a strict prefab-axis size in metres; never use the old x1.25 +0.02 allowance.",
+    "Keep original native-scale type allocation and per-item rotated bottom placement. Long cells also accept OneHandedWeapon so spears can route there.",
+    "No type-ignoring fallback into unrelated bow or shield cells.",
+    "These are asset/mirror checks, not in-game runtime integration."
+  ],
+  "prototype_only": true,
+  "clear_box_contract": "clear_box is [width,height,depth] in prefab Unity axes, bottom-centred on bottom_position_unity. Strict rotated native bounds <= clear_box; no 1.25 factor and no 2cm allowance. Cell domain caps open-top height.",
+  "modules": [
+    {
+      "kind": "handheld",
+      "x0": -0.8475,
+      "width": 1.695
+    }
+  ]
+}

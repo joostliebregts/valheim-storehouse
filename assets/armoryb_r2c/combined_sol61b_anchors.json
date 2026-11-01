@@ -1,0 +1,5798 @@
+{
+  "schema": "storehouse-anchors/1",
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png",
+    "size_m": [
+      5.440000057220459,
+      1.4624999165534973,
+      2.0799999237060547
+    ],
+    "body_height_m": 1.45,
+    "obj_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1",
+    "atlas_sha256": "f37e30424fc30687c02c2ae374feb14d014af511c284b038ef145b133c52b2a8"
+  },
+  "author": "Sol 6.1 / extra high",
+  "prototype": true,
+  "units": 48,
+  "slots_designed_for": 48,
+  "stack_per_unit": false,
+  "display_places": 51,
+  "display_caps": {
+    "armor": 32,
+    "weapons": 8,
+    "shields": 8
+  },
+  "space": {
+    "position": "Unity prefab metres ux=-bx,uy=bz,uz=-by",
+    "anchor": "bottom centre; clear_box is relative to this anchor, axes identical to box_size",
+    "rotation": "ItemVisual correction already included, no second half-turn"
+  },
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "armor_folded",
+      "bay": "regular-0-0-0",
+      "place": "folded armor",
+      "position": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.008333850651979446,
+            0.0,
+            0.9999653100967407
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-0",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 1,
+      "kind": "armor_folded",
+      "bay": "regular-0-0-0",
+      "place": "folded armor",
+      "position": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.006588571239262819,
+            0.0,
+            0.9999783039093018
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-0",
+      "support_layer": 1,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 2,
+      "kind": "armor_folded",
+      "bay": "regular-0-0-0",
+      "place": "folded armor",
+      "position": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 2,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.002443458419293165,
+            0.0,
+            0.9999970197677612
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-0",
+      "support_layer": 2,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 3,
+      "kind": "armor_folded",
+      "bay": "regular-0-0-0",
+      "place": "folded armor",
+      "position": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 3,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.009468269534409046,
+            0.0,
+            0.9999551773071289
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-0",
+      "support_layer": 3,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 4,
+      "kind": "armor_folded",
+      "bay": "regular-0-0-0",
+      "place": "folded armor",
+      "position": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 4,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.005672290455549955,
+            0.0,
+            0.9999839067459106
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-0",
+      "support_layer": 4,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 5,
+      "kind": "armor_folded",
+      "bay": "regular-0-0-0",
+      "place": "folded armor",
+      "position": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.234999895095825,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 5,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.002312559401616454,
+            0.0,
+            0.9999973177909851
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-0",
+      "support_layer": 5,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 6,
+      "kind": "armor_folded",
+      "bay": "regular-0-1-0",
+      "place": "folded armor",
+      "position": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.008028429001569748,
+            0.0,
+            0.9999678134918213
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-6",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 7,
+      "kind": "armor_folded",
+      "bay": "regular-0-1-0",
+      "place": "folded armor",
+      "position": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.004756004549562931,
+            0.0,
+            0.9999886751174927
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-6",
+      "support_layer": 1,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 8,
+      "kind": "armor_folded",
+      "bay": "regular-0-1-0",
+      "place": "folded armor",
+      "position": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 2,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0021380267571657896,
+            0.0,
+            0.9999977350234985
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-6",
+      "support_layer": 2,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 9,
+      "kind": "armor_folded",
+      "bay": "regular-0-1-0",
+      "place": "folded armor",
+      "position": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 3,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.009773689322173595,
+            0.0,
+            0.9999522566795349
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-6",
+      "support_layer": 3,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 10,
+      "kind": "armor_folded",
+      "bay": "regular-0-1-0",
+      "place": "folded armor",
+      "position": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 4,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.005366861820220947,
+            0.0,
+            0.9999855756759644
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-6",
+      "support_layer": 4,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 11,
+      "kind": "armor_folded",
+      "bay": "regular-0-1-0",
+      "place": "folded armor",
+      "position": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.524999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 5,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0026179910637438297,
+            0.0,
+            0.999996542930603
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-6",
+      "support_layer": 5,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 12,
+      "kind": "armor_folded",
+      "bay": "regular-0-2-0",
+      "place": "folded armor",
+      "position": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.007723005022853613,
+            0.0,
+            0.9999701976776123
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-12",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 13,
+      "kind": "armor_folded",
+      "bay": "regular-0-2-0",
+      "place": "folded armor",
+      "position": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.005061433184891939,
+            0.0,
+            0.9999872446060181
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-12",
+      "support_layer": 1,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 14,
+      "kind": "armor_folded",
+      "bay": "regular-0-2-0",
+      "place": "folded armor",
+      "position": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 2,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.003970613237470388,
+            0.0,
+            0.9999921321868896
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-12",
+      "support_layer": 2,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 15,
+      "kind": "armor_folded",
+      "bay": "regular-0-2-0",
+      "place": "folded armor",
+      "position": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 3,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.01007910631597042,
+            0.0,
+            0.9999492168426514
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-12",
+      "support_layer": 3,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 16,
+      "kind": "armor_folded",
+      "bay": "regular-0-2-0",
+      "place": "folded armor",
+      "position": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 4,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.005061433184891939,
+            0.0,
+            0.9999872446060181
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-12",
+      "support_layer": 4,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 17,
+      "kind": "armor_folded",
+      "bay": "regular-0-2-0",
+      "place": "folded armor",
+      "position": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.8149999976158142,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 5,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.002923422260209918,
+            0.0,
+            0.9999957084655762
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-12",
+      "support_layer": 5,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 18,
+      "kind": "armor_folded",
+      "bay": "regular-0-3-0",
+      "place": "folded armor",
+      "position": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0074175819754600525,
+            0.0,
+            0.9999724626541138
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-18",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 19,
+      "kind": "armor_folded",
+      "bay": "regular-0-3-0",
+      "place": "folded armor",
+      "position": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.005366861820220947,
+            0.0,
+            0.9999855756759644
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-18",
+      "support_layer": 1,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 20,
+      "kind": "armor_folded",
+      "bay": "regular-0-3-0",
+      "place": "folded armor",
+      "position": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 2,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.003665183437988162,
+            0.0,
+            0.9999933242797852
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-18",
+      "support_layer": 2,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 21,
+      "kind": "armor_folded",
+      "bay": "regular-0-3-0",
+      "place": "folded armor",
+      "position": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 3,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.008246587589383125,
+            0.0,
+            0.999966025352478
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-18",
+      "support_layer": 3,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 22,
+      "kind": "armor_folded",
+      "bay": "regular-0-3-0",
+      "place": "folded armor",
+      "position": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 4,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.004756004549562931,
+            0.0,
+            0.9999886751174927
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-18",
+      "support_layer": 4,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 23,
+      "kind": "armor_folded",
+      "bay": "regular-0-3-0",
+      "place": "folded armor",
+      "position": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.67,
+        1.0499999999999998,
+        0.64
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorIronChest",
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.10499999672174454,
+        0.10000000149011612,
+        0.32499998807907104
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 6,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 5,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.00322885368950665,
+            0.0,
+            0.9999947547912598
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-18",
+      "support_layer": 5,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.150000001490116,
+      "clear_box": {
+        "min": [
+          -0.335,
+          0.0,
+          -0.32
+        ],
+        "max": [
+          0.335,
+          1.0499999999999998,
+          0.32
+        ],
+        "size": [
+          0.67,
+          1.0499999999999998,
+          0.64
+        ],
+        "center": [
+          0.0,
+          0.5249999999999999,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.150000001490116,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 24,
+      "kind": "armor_folded",
+      "bay": "wide-heavy",
+      "place": "wide folded heavy armor",
+      "position": [
+        -0.8299999833106995,
+        0.10000000149011612,
+        0.2199999988079071
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        1.06,
+        1.02,
+        0.86
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "accepted_item_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "allocation_group": "armor",
+      "render_item": "ArmorDeepNorthHeavyChest",
+      "example_item": "ArmorDeepNorthHeavyChest",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.8299999833106995,
+        0.10000000149011612,
+        0.2199999988079071
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0071121565997600555,
+            0.0,
+            0.9999747276306152
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-24",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          1.06,
+          1.02,
+          0.86
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.1200000014901161,
+      "clear_box": {
+        "min": [
+          -0.53,
+          0.0,
+          -0.43
+        ],
+        "max": [
+          0.53,
+          1.02,
+          0.43
+        ],
+        "size": [
+          1.06,
+          1.02,
+          0.86
+        ],
+        "center": [
+          0.0,
+          0.51,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.1200000014901161,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 25,
+      "kind": "armor_helmet",
+      "bay": "crest-0",
+      "place": "crested helmet",
+      "position": [
+        -1.7050000429153442,
+        0.10000000149011612,
+        0.3199999928474426
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.48,
+        0.565,
+        0.58
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetPadded",
+      "example_item": "HelmetPadded",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.7050000429153442,
+        0.10000000149011612,
+        0.3199999928474426
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0074175819754600525,
+            0.0,
+            0.9999724626541138
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-25",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.48,
+          0.565,
+          0.58
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 0.6650000014901161,
+      "clear_box": {
+        "min": [
+          -0.24,
+          0.0,
+          -0.29
+        ],
+        "max": [
+          0.24,
+          0.565,
+          0.29
+        ],
+        "size": [
+          0.48,
+          0.565,
+          0.58
+        ],
+        "center": [
+          0.0,
+          0.2825,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 0.6650000014901161,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 26,
+      "kind": "armor_helmet",
+      "bay": "crest-1",
+      "place": "crested helmet",
+      "position": [
+        -2.234999895095825,
+        0.10000000149011612,
+        0.3199999928474426
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.48,
+        0.565,
+        0.58
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetPadded",
+      "example_item": "HelmetPadded",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.234999895095825,
+        0.10000000149011612,
+        0.3199999928474426
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.007723005022853613,
+            0.0,
+            0.9999701976776123
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-26",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.48,
+          0.565,
+          0.58
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 0.6650000014901161,
+      "clear_box": {
+        "min": [
+          -0.24,
+          0.0,
+          -0.29
+        ],
+        "max": [
+          0.24,
+          0.565,
+          0.29
+        ],
+        "size": [
+          0.48,
+          0.565,
+          0.58
+        ],
+        "center": [
+          0.0,
+          0.2825,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 0.6650000014901161,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 27,
+      "kind": "armor_helmet",
+      "bay": "helmet-0-0",
+      "place": "ordinary helmet",
+      "position": [
+        -1.7050000429153442,
+        0.7599999904632568,
+        0.46000000834465027
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.285,
+        0.315,
+        0.295
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetIron",
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.7050000429153442,
+        0.7599999904632568,
+        0.46000000834465027
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.008028429001569748,
+            0.0,
+            0.9999678134918213
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-27",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "helmet_shelf_0",
+      "clear_domain": {
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.0699970999979171,
+      "clear_box": {
+        "min": [
+          -0.1425,
+          0.0,
+          -0.1475
+        ],
+        "max": [
+          0.1425,
+          0.30999710953466025,
+          0.1475
+        ],
+        "size": [
+          0.285,
+          0.30999710953466025,
+          0.295
+        ],
+        "center": [
+          0.0,
+          0.15499855476733013,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.0699970999979171,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 28,
+      "kind": "armor_helmet",
+      "bay": "helmet-0-1",
+      "place": "ordinary helmet",
+      "position": [
+        -1.7050000429153442,
+        0.7599999904632568,
+        0.14000000059604645
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.285,
+        0.315,
+        0.295
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetIron",
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.7050000429153442,
+        0.7599999904632568,
+        0.14000000059604645
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.008333850651979446,
+            0.0,
+            0.9999653100967407
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-28",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "helmet_shelf_0",
+      "clear_domain": {
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.0699970999979171,
+      "clear_box": {
+        "min": [
+          -0.1425,
+          0.0,
+          -0.1475
+        ],
+        "max": [
+          0.1425,
+          0.30999710953466025,
+          0.1475
+        ],
+        "size": [
+          0.285,
+          0.30999710953466025,
+          0.295
+        ],
+        "center": [
+          0.0,
+          0.15499855476733013,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.0699970999979171,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 29,
+      "kind": "armor_helmet",
+      "bay": "helmet-0-2",
+      "place": "ordinary helmet",
+      "position": [
+        -2.234999895095825,
+        0.7599999904632568,
+        0.46000000834465027
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.285,
+        0.315,
+        0.295
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetIron",
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.234999895095825,
+        0.7599999904632568,
+        0.46000000834465027
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.006501305848360062,
+            0.0,
+            0.9999788999557495
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-29",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "helmet_shelf_0",
+      "clear_domain": {
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.0699970999979171,
+      "clear_box": {
+        "min": [
+          -0.1425,
+          0.0,
+          -0.1475
+        ],
+        "max": [
+          0.1425,
+          0.30999710953466025,
+          0.1475
+        ],
+        "size": [
+          0.285,
+          0.30999710953466025,
+          0.295
+        ],
+        "center": [
+          0.0,
+          0.15499855476733013,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.0699970999979171,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 30,
+      "kind": "armor_helmet",
+      "bay": "helmet-0-3",
+      "place": "ordinary helmet",
+      "position": [
+        -2.234999895095825,
+        0.7599999904632568,
+        0.14000000059604645
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.285,
+        0.315,
+        0.295
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetIron",
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.234999895095825,
+        0.7599999904632568,
+        0.14000000059604645
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.006806732155382633,
+            0.0,
+            0.9999768733978271
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-30",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "helmet_shelf_0",
+      "clear_domain": {
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.0699970999979171,
+      "clear_box": {
+        "min": [
+          -0.1425,
+          0.0,
+          -0.1475
+        ],
+        "max": [
+          0.1425,
+          0.30999710953466025,
+          0.1475
+        ],
+        "size": [
+          0.285,
+          0.30999710953466025,
+          0.295
+        ],
+        "center": [
+          0.0,
+          0.15499855476733013,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.0699970999979171,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 31,
+      "kind": "armor_helmet",
+      "bay": "helmet-1-0",
+      "place": "ordinary helmet",
+      "position": [
+        -1.7050000429153442,
+        1.1200000047683716,
+        0.46000000834465027
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.285,
+        0.315,
+        0.295
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetIron",
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.7050000429153442,
+        1.1200000047683716,
+        0.46000000834465027
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0071121565997600555,
+            0.0,
+            0.9999747276306152
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-31",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "helmet_shelf_1",
+      "clear_domain": {
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.4350000047683715,
+      "clear_box": {
+        "min": [
+          -0.1425,
+          0.0,
+          -0.1475
+        ],
+        "max": [
+          0.1425,
+          0.315,
+          0.1475
+        ],
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "center": [
+          0.0,
+          0.1575,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.4350000047683715,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 32,
+      "kind": "armor_helmet",
+      "bay": "helmet-1-1",
+      "place": "ordinary helmet",
+      "position": [
+        -1.7050000429153442,
+        1.1200000047683716,
+        0.14000000059604645
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.285,
+        0.315,
+        0.295
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetIron",
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.7050000429153442,
+        1.1200000047683716,
+        0.14000000059604645
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0074175819754600525,
+            0.0,
+            0.9999724626541138
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-32",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "helmet_shelf_1",
+      "clear_domain": {
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.4350000047683715,
+      "clear_box": {
+        "min": [
+          -0.1425,
+          0.0,
+          -0.1475
+        ],
+        "max": [
+          0.1425,
+          0.315,
+          0.1475
+        ],
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "center": [
+          0.0,
+          0.1575,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.4350000047683715,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 33,
+      "kind": "armor_helmet",
+      "bay": "helmet-1-2",
+      "place": "ordinary helmet",
+      "position": [
+        -2.234999895095825,
+        1.1200000047683716,
+        0.46000000834465027
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.285,
+        0.315,
+        0.295
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetIron",
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.234999895095825,
+        1.1200000047683716,
+        0.46000000834465027
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.007723005022853613,
+            0.0,
+            0.9999701976776123
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-33",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "helmet_shelf_1",
+      "clear_domain": {
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.4350000047683715,
+      "clear_box": {
+        "min": [
+          -0.1425,
+          0.0,
+          -0.1475
+        ],
+        "max": [
+          0.1425,
+          0.315,
+          0.1475
+        ],
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "center": [
+          0.0,
+          0.1575,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.4350000047683715,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 34,
+      "kind": "armor_helmet",
+      "bay": "helmet-1-3",
+      "place": "ordinary helmet",
+      "position": [
+        -2.234999895095825,
+        1.1200000047683716,
+        0.14000000059604645
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.285,
+        0.315,
+        0.295
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "accepted_item_types": [
+        "Helmet"
+      ],
+      "allocation_group": "helmets",
+      "render_item": "HelmetIron",
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.234999895095825,
+        1.1200000047683716,
+        0.14000000059604645
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.008028429001569748,
+            0.0,
+            0.9999678134918213
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "support_stack_id": "stack-34",
+      "support_layer": 0,
+      "support_policy": "actual_triangle_contact",
+      "support_frame_member": "helmet_shelf_1",
+      "clear_domain": {
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "anchor": "bottom_center",
+        "reason": "reserved physical bay envelope; stack layers share one envelope"
+      },
+      "max_top_unity": 1.4350000047683715,
+      "clear_box": {
+        "min": [
+          -0.1425,
+          0.0,
+          -0.1475
+        ],
+        "max": [
+          0.1425,
+          0.315,
+          0.1475
+        ],
+        "size": [
+          0.285,
+          0.315,
+          0.295
+        ],
+        "center": [
+          0.0,
+          0.1575,
+          0.0
+        ],
+        "anchor": "bottom_center",
+        "space": "anchor-local Unity metres; x/y/z match box_size",
+        "fixed_ceiling_unity": 1.4350000047683715,
+        "frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4"
+      }
+    },
+    {
+      "index": 35,
+      "kind": "weapons",
+      "bay": "rear-weapon-0",
+      "place": "rear leaning weapon heel slot",
+      "position": [
+        -0.5100255,
+        0.5547430648453804,
+        -0.5333067851376899
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.175,
+        1.8510001,
+        0.384
+      ],
+      "equipment_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "render_item": "AxeBronze",
+      "example_item": "AxeBronze",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.51,
+        0.1005,
+        -0.5125
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5416752696037292,
+            -0.5416752099990845,
+            0.4545195400714874,
+            0.4545195400714874
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-weapon-0",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.175,
+          1.8510001,
+          0.384
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.0875,
+          0,
+          -0.192
+        ],
+        "max": [
+          0.0875,
+          1.8510001,
+          0.192
+        ],
+        "size": [
+          0.175,
+          1.8510001,
+          0.384
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 36,
+      "kind": "weapons",
+      "bay": "rear-weapon-1",
+      "place": "rear leaning weapon heel slot",
+      "position": [
+        -0.77,
+        0.7333438910179593,
+        -0.5074566940208067
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.175,
+        1.8510001,
+        0.384
+      ],
+      "equipment_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "render_item": "SwordSilver",
+      "example_item": "SwordSilver",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.77,
+        0.1005,
+        -0.5125
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5495252013206482,
+            0.5495252013206482,
+            -0.44499671459198,
+            0.44499671459198
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-weapon-1",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.175,
+          1.8510001,
+          0.384
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.0875,
+          0,
+          -0.192
+        ],
+        "max": [
+          0.0875,
+          1.8510001,
+          0.192
+        ],
+        "size": [
+          0.175,
+          1.8510001,
+          0.384
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 37,
+      "kind": "weapons",
+      "bay": "rear-weapon-2",
+      "place": "rear leaning weapon heel slot",
+      "position": [
+        -1.0300395,
+        0.3487249533418032,
+        -0.3864149842737525
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.175,
+        1.8510001,
+        0.384
+      ],
+      "equipment_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "render_item": "KnifeChitin",
+      "example_item": "KnifeChitin",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.03,
+        0.1005,
+        -0.5125
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5376881957054138,
+            0.5376881957054138,
+            -0.45922914147377014,
+            0.45922914147377014
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-weapon-2",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.175,
+          1.8510001,
+          0.384
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.0875,
+          0,
+          -0.192
+        ],
+        "max": [
+          0.0875,
+          1.8510001,
+          0.192
+        ],
+        "size": [
+          0.175,
+          1.8510001,
+          0.384
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 38,
+      "kind": "weapons",
+      "bay": "rear-weapon-3",
+      "place": "rear leaning weapon heel slot",
+      "position": [
+        -1.2899945000000002,
+        0.5063687824431966,
+        -0.4981416960688366
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.175,
+        1.8510001,
+        0.384
+      ],
+      "equipment_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "render_item": "MaceBronze",
+      "example_item": "MaceBronze",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.29,
+        0.1005,
+        -0.5125
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5533875226974487,
+            0.5533875226974487,
+            -0.4401843249797821,
+            0.4401843249797821
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-weapon-3",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.175,
+          1.8510001,
+          0.384
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.0875,
+          0,
+          -0.192
+        ],
+        "max": [
+          0.0875,
+          1.8510001,
+          0.192
+        ],
+        "size": [
+          0.175,
+          1.8510001,
+          0.384
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 39,
+      "kind": "weapons",
+      "bay": "rear-weapon-4",
+      "place": "rear leaning weapon heel slot",
+      "position": [
+        -1.5499990000000001,
+        1.2695596619872624,
+        -0.32764122413326946
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.175,
+        1.8510001,
+        0.524
+      ],
+      "equipment_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "render_item": "SpearFlint",
+      "example_item": "SpearFlint",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.55,
+        0.1005,
+        -0.4425
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5356793403625488,
+            0.535679280757904,
+            -0.4615708291530609,
+            0.4615708291530609
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-weapon-4",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.175,
+          1.8510001,
+          0.524
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.0875,
+          0,
+          -0.262
+        ],
+        "max": [
+          0.0875,
+          1.8510001,
+          0.262
+        ],
+        "size": [
+          0.175,
+          1.8510001,
+          0.524
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 40,
+      "kind": "weapons",
+      "bay": "rear-weapon-5",
+      "place": "rear leaning weapon heel slot",
+      "position": [
+        -1.810001,
+        1.0382886950620747,
+        -0.40825217852286183
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.175,
+        1.8510001,
+        0.524
+      ],
+      "equipment_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "render_item": "THSwordKrom",
+      "example_item": "THSwordKrom",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.81,
+        0.1005,
+        -0.4425
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5456209778785706,
+            0.5456209778785706,
+            -0.4497752785682678,
+            0.4497752785682678
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-weapon-5",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.175,
+          1.8510001,
+          0.524
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.0875,
+          0,
+          -0.262
+        ],
+        "max": [
+          0.0875,
+          1.8510001,
+          0.262
+        ],
+        "size": [
+          0.175,
+          1.8510001,
+          0.524
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 41,
+      "kind": "weapons",
+      "bay": "rear-weapon-6",
+      "place": "rear leaning weapon heel slot",
+      "position": [
+        -2.0699645,
+        0.903566769398291,
+        -0.46355747482813053
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.175,
+        1.8510001,
+        0.524
+      ],
+      "equipment_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "render_item": "BowFineWood",
+      "example_item": "BowFineWood",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.0700000000000003,
+        0.1005,
+        -0.4425
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5572077631950378,
+            0.5572077035903931,
+            -0.4353383779525757,
+            0.4353383779525757
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-weapon-6",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.175,
+          1.8510001,
+          0.524
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.0875,
+          0,
+          -0.262
+        ],
+        "max": [
+          0.0875,
+          1.8510001,
+          0.262
+        ],
+        "size": [
+          0.175,
+          1.8510001,
+          0.524
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 42,
+      "kind": "weapons",
+      "bay": "rear-weapon-7",
+      "place": "rear leaning weapon heel slot",
+      "position": [
+        -2.33,
+        0.6666552884955154,
+        -0.34159243667238987
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.175,
+        1.8510001,
+        0.524
+      ],
+      "equipment_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "Bow",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "render_item": "VAAntler_Sword",
+      "example_item": "VAAntler_Sword",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.33,
+        0.1005,
+        -0.4425
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5396868586540222,
+            0.5396868586540222,
+            -0.456878662109375,
+            0.456878662109375
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-weapon-7",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.175,
+          1.8510001,
+          0.524
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.0875,
+          0,
+          -0.262
+        ],
+        "max": [
+          0.0875,
+          1.8510001,
+          0.262
+        ],
+        "size": [
+          0.175,
+          1.8510001,
+          0.524
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 43,
+      "kind": "shields",
+      "bay": "rear-shield-0",
+      "place": "rear leaning shield trough",
+      "position": [
+        2.128569947312943,
+        0.41397565275099907,
+        -0.4151178205456856
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.29,
+        1.8510001,
+        0.5315000000000001
+      ],
+      "equipment_types": [
+        "Shield"
+      ],
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "render_item": "ShieldIronBuckler",
+      "example_item": "ShieldIronBuckler",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.17,
+        0.1005,
+        -0.43875
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.23035401105880737,
+            -0.7305895686149597,
+            0.6130374670028687,
+            0.19328998029232025
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-shield-0",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.145,
+          0,
+          -0.26575000000000004
+        ],
+        "max": [
+          0.145,
+          1.8510001,
+          0.26575000000000004
+        ],
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 44,
+      "kind": "shields",
+      "bay": "rear-shield-1",
+      "place": "rear leaning shield trough",
+      "position": [
+        1.8708998220409379,
+        0.4950327551766616,
+        -0.4328270998260433
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.29,
+        1.8510001,
+        0.5315000000000001
+      ],
+      "equipment_types": [
+        "Shield"
+      ],
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "render_item": "ShieldWood",
+      "example_item": "ShieldWood",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.8699999999999999,
+        0.1005,
+        -0.43875
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.23369231820106506,
+            -0.7411772608757019,
+            0.6001935005187988,
+            0.18924029171466827
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-shield-1",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.145,
+          0,
+          -0.26575000000000004
+        ],
+        "max": [
+          0.145,
+          1.8510001,
+          0.26575000000000004
+        ],
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 45,
+      "kind": "shields",
+      "bay": "rear-shield-2",
+      "place": "rear leaning shield trough",
+      "position": [
+        1.5443501495174898,
+        0.3796425745849508,
+        -0.3867179759540851
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.29,
+        1.8510001,
+        0.5315000000000001
+      ],
+      "equipment_types": [
+        "Shield"
+      ],
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "render_item": "ShieldBronzeBuckler",
+      "example_item": "ShieldBronzeBuckler",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.5699999999999998,
+        0.1005,
+        -0.43875
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.22865846753120422,
+            -0.7252120971679688,
+            0.6193895936012268,
+            0.19529277086257935
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-shield-2",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.145,
+          0,
+          -0.26575000000000004
+        ],
+        "max": [
+          0.145,
+          1.8510001,
+          0.26575000000000004
+        ],
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 46,
+      "kind": "shields",
+      "bay": "rear-shield-3",
+      "place": "rear leaning shield trough",
+      "position": [
+        1.292549205454972,
+        0.4651273926974083,
+        -0.39038319752426004
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.29,
+        1.8510001,
+        0.5315000000000001
+      ],
+      "equipment_types": [
+        "Shield"
+      ],
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "render_item": "ShieldSilver",
+      "example_item": "ShieldSilver",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.27,
+        0.1005,
+        -0.43875
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.23533481359481812,
+            -0.746386706829071,
+            0.5937027335166931,
+            0.18719373643398285
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-shield-3",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.145,
+          0,
+          -0.26575000000000004
+        ],
+        "max": [
+          0.145,
+          1.8510001,
+          0.26575000000000004
+        ],
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 47,
+      "kind": "shields",
+      "bay": "rear-shield-4",
+      "place": "rear leaning shield trough",
+      "position": [
+        0.928569947312943,
+        0.41339303964198615,
+        -0.4130391770704341
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.29,
+        1.8510001,
+        0.5315000000000001
+      ],
+      "equipment_types": [
+        "Shield"
+      ],
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "render_item": "ShieldIronBuckler",
+      "example_item": "ShieldIronBuckler",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.97,
+        0.1005,
+        -0.43875
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.22780416905879974,
+            -0.722502589225769,
+            0.62254798412323,
+            0.19628863036632538
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-shield-4",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.145,
+          0,
+          -0.26575000000000004
+        ],
+        "max": [
+          0.145,
+          1.8510001,
+          0.26575000000000004
+        ],
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 48,
+      "kind": "shields",
+      "bay": "rear-shield-5",
+      "place": "rear leaning shield trough",
+      "position": [
+        0.6687232282029767,
+        0.4296353215913893,
+        -0.41721795677783247
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.29,
+        1.8510001,
+        0.5315000000000001
+      ],
+      "equipment_types": [
+        "Shield"
+      ],
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "render_item": "ShieldGoldBuckler",
+      "example_item": "ShieldGoldBuckler",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.6699999999999999,
+        0.1005,
+        -0.43875
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.23203197121620178,
+            -0.73591148853302,
+            0.6066385507583618,
+            0.19127239286899567
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-shield-5",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.145,
+          0,
+          -0.26575000000000004
+        ],
+        "max": [
+          0.145,
+          1.8510001,
+          0.26575000000000004
+        ],
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 49,
+      "kind": "shields",
+      "bay": "rear-shield-6",
+      "place": "rear leaning shield trough",
+      "position": [
+        0.34358470463448176,
+        0.6361036787257304,
+        -0.5380191895898331
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.29,
+        1.8510001,
+        0.5315000000000001
+      ],
+      "equipment_types": [
+        "Shield"
+      ],
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "render_item": "ShieldIronSquare",
+      "example_item": "ShieldIronSquare",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.3700000000000001,
+        0.1005,
+        -0.43875
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.1162288561463356,
+            0.29846441745758057,
+            0.03664682060480118,
+            0.9466081261634827
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-shield-6",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.145,
+          0,
+          -0.26575000000000004
+        ],
+        "max": [
+          0.145,
+          1.8510001,
+          0.26575000000000004
+        ],
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    },
+    {
+      "index": 50,
+      "kind": "shields",
+      "bay": "rear-shield-7",
+      "place": "rear leaning shield trough",
+      "position": [
+        0.004123457390926897,
+        0.49345508286876083,
+        -0.5945225515478809
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.29,
+        1.8510001,
+        0.5315000000000001
+      ],
+      "equipment_types": [
+        "Shield"
+      ],
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "render_item": "ShieldCarapaceBuckler",
+      "example_item": "ShieldCarapaceBuckler",
+      "example_scale": 1.0,
+      "native_scale": 1.0,
+      "native_scale_required": true,
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.06999999999999984,
+        0.1005,
+        -0.43875
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1.0
+      },
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.2974008619785309,
+            -0.7179892659187317,
+            0.5814162492752075,
+            0.24083048105239868
+          ],
+          "scale": 1.0,
+          "anchor": "tight_bounds_center"
+        }
+      ],
+      "support_stack_id": "rear-shield-7",
+      "support_layer": 0,
+      "support_policy": "native_table_floor_and_upper_back_contact",
+      "support_frame_member": "armor_floor",
+      "clear_domain": {
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "anchor": "bottom_position_unity",
+        "reason": "Measured empty cuboid on aisle side of backrest. Contact table is authoritative for native angled items; do not fit leaning displays inside this cuboid."
+      },
+      "max_top_unity": 1.9515001,
+      "clear_box": {
+        "min": [
+          -0.145,
+          0,
+          -0.26575000000000004
+        ],
+        "max": [
+          0.145,
+          1.8510001,
+          0.26575000000000004
+        ],
+        "size": [
+          0.29,
+          1.8510001,
+          0.5315000000000001
+        ],
+        "center": [
+          0,
+          0.92550005,
+          0
+        ],
+        "anchor": "bottom_position_unity",
+        "space": "Unity metres relative to bottom_position_unity, axis aligned; empty aisle-side diagnostic cuboid, not the native leaning display envelope",
+        "fixed_ceiling_unity": 1.9515001,
+        "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+      },
+      "faces": "Use full table quaternion and fitted pivot. Front of shield / weapon faces rear aisle; no extra yaw, centering or procedural lean."
+    }
+  ],
+  "runtime_required": [
+    "Retain the first 35 front records and armor display cap 32. Inventory stays 48. Back caps are 8 weapons and 8 shields.",
+    "Back records use measurements/armoryb_r2c/lean-table.json per place and prefab. Its fitted display pivot and quaternion implement T(pivot)*R*T(-tight centre). Do not apply r2b yaw 180 a second time.",
+    "Read fit:false reasons; no scale reduction or inferred sample pitch. Choose a compatible free table row, then check filled-neighbour crossings.",
+    "First wired result requires in-game self-test before any further Armory B modelling round.",
+    "Back position/copy quaternion fields show the validated mixed non-example stock, using tight_bounds_center. Look up the requested prefab for each back place; never reuse an example pivot for a different item.",
+    "Rear clear_box entries are independently measured empty cuboids, anchored to bottom_position_unity. A native display can extend past the reserved diagnostic cuboid; the table checks its actual surfaces and contacts. For places 35-50 use the contact table instead of legacy box fitting.",
+    "Inventory acceptance remains unchanged. A fit:false table row is a display-placement failure, not a new storage refusal. The full table documents finite tested orientations and explicit source mismatches. No floating fallback or scale reduction."
+  ],
+  "coordinate_validation": {
+    "sampled_vertex_error_m": 2.384185791015625e-07,
+    "loader_half_turn_accounted": true,
+    "native_scale": 1.0
+  },
+  "export": "armoryb_r2c",
+  "display_budget": 48,
+  "revision": "2c",
+  "allocation_policy": {
+    "fit": "rotated true mesh bounds must fit clear_box exactly; NO x1.25 and NO +2cm",
+    "special": "prefer ordinary places for ordinary items; reserve wide/crest alternatives for items that need them",
+    "support": "allocate each stack bottom-up; upper absent unless a lower item exists; actual triangle contact, no exemplar pitch",
+    "category_budgets": {
+      "armor": 32,
+      "weapons": 8,
+      "shields": 8
+    },
+    "overflow": "keep inventory records; do not draw beyond display budget or shrink items"
+  },
+  "clear_box_contract": {
+    "schema": "storehouse-clear-box/1",
+    "scope": "Front records 0-34 retain their r2b clear-box proof; geometry in those domains is retained. Rear records 35-50 use measured empty cuboids in clear-boxes.json and native lean-table poses for eligibility and drawing.",
+    "method": "Front: inherited r2b exact triangle/box clipping proof. Rear: exported face bounds, slat plane, finite triangle crossings and contained-frame-vertex rejection; 0.5 mm face margins.",
+    "dimensions": "grow reserved width, then depth, then maximum height; frame or domain boundary stops each axis",
+    "stacking": "clear_box fixed in prefab space; move copy bottom by actual contact and test remaining height to fixed ceiling",
+    "tolerance_m": 2e-06,
+    "retreat_at_frame_m": 5e-06,
+    "frame_sha256": "d41cfe7fcfa37a8322756fa3753bda238cf1d1caf201768eeff5257049408ce1"
+  },
+  "r2b_change": "yaw 180 on the 11 back-face places (indices 35-45: 8 weapons, 3 shields) so their copies face the back aisle; boxes and clear boxes are centred, so they are unchanged; frame, atlas and copies unchanged (Joost, 27 Oct: shields on the back point toward the front)",
+  "r2c_change": {
+    "front": "records 0-34 retained exactly",
+    "shield_count_before": 3,
+    "shield_count_after": 8,
+    "weapon_count": 8,
+    "inventory_slots": 48,
+    "physical_alternative_records": 51,
+    "tradeoff": "Eight shields fan at 0.30 m pitch like the trough overlapping fan places, occupying the left 2.9 m; eight edge-on weapons occupy the right 2.1 m. Eight shields instead of ten preserve the weapon row and readable faces.",
+    "weapon_x_blender": [
+      0.51,
+      0.77,
+      1.03,
+      1.29,
+      1.55,
+      1.81,
+      2.0700000000000003,
+      2.33
+    ],
+    "shield_x_blender": [
+      -2.17,
+      -1.8699999999999999,
+      -1.5699999999999998,
+      -1.27,
+      -0.97,
+      -0.6699999999999999,
+      -0.3700000000000001,
+      -0.06999999999999984
+    ],
+    "weapon_backrest_plane_blender": {
+      "y_by_place": [
+        0.32,
+        0.32,
+        0.32,
+        0.32,
+        0.18,
+        0.18,
+        0.18,
+        0.18
+      ],
+      "frame_slat_lean_degrees": 0,
+      "item_lean_degrees": "8-14"
+    },
+    "shield_board_rear_y_blender": 0.1725,
+    "retained_front_clear_box_baseline_frame_sha256": "306f3396dd6f6ff5d11591d21193e658fca0b917dfcf882b7d1e7f3e6a358ec4",
+    "validated_mixed_shield_prefabs": [
+      "ShieldBronzeBuckler",
+      "ShieldCarapaceBuckler",
+      "ShieldGoldBuckler",
+      "ShieldIronBuckler",
+      "ShieldIronSquare",
+      "ShieldSilver",
+      "ShieldWood"
+    ]
+  }
+}

@@ -1,0 +1,2647 @@
+{
+ "RawMeat": {
+  "kind": "single",
+  "scale": 0.51292,
+  "x_true_size": 0.5129,
+  "true_longest_m": 0.6063,
+  "item_longest_m": 0.311,
+  "copies": [
+   {
+    "offset": [
+     -0.0151,
+     -0.2012,
+     -0.0324
+    ],
+    "rot_quat_xyzw": [
+     -0.06107,
+     -0.702,
+     -0.70351,
+     0.09242
+    ],
+    "bounds_center": [
+     0.004,
+     -0.2751,
+     -0.0102
+    ]
+   }
+  ],
+  "cord_obj": "Cord_RawMeat.obj",
+  "cord_tris": 28,
+  "extent_min": [
+   -0.0658,
+   -0.4318,
+   -0.075
+  ],
+  "extent_max": [
+   0.0658,
+   -0.1015,
+   0.055
+  ],
+  "footprint_m": [
+   0.1317,
+   0.4318,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 165
+  }
+ },
+ "LoxMeat": {
+  "kind": "single",
+  "scale": 0.28425,
+  "x_true_size": 0.2842,
+  "true_longest_m": 0.8428,
+  "item_longest_m": 0.2396,
+  "copies": [
+   {
+    "offset": [
+     -0.0068,
+     -0.2087,
+     -0.0131
+    ],
+    "rot_quat_xyzw": [
+     0.67349,
+     0.18714,
+     -0.15361,
+     0.69842
+    ],
+    "bounds_center": [
+     -0.005,
+     -0.2415,
+     -0.0046
+    ]
+   }
+  ],
+  "cord_obj": "Cord_LoxMeat.obj",
+  "cord_tris": 20,
+  "extent_min": [
+   -0.0711,
+   -0.3609,
+   -0.0706
+  ],
+  "extent_max": [
+   0.0711,
+   -0.1038,
+   0.0717
+  ],
+  "footprint_m": [
+   0.1422,
+   0.3609,
+   0.1423
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 330
+  }
+ },
+ "DeerMeat": {
+  "kind": "single",
+  "scale": 0.73306,
+  "x_true_size": 0.7331,
+  "true_longest_m": 0.4304,
+  "item_longest_m": 0.3155,
+  "copies": [
+   {
+    "offset": [
+     -0.0163,
+     -0.3068,
+     -0.048
+    ],
+    "rot_quat_xyzw": [
+     -0.10891,
+     -0.6803,
+     -0.7015,
+     0.18229
+    ],
+    "bounds_center": [
+     0.0005,
+     -0.2777,
+     -0.0074
+    ]
+   }
+  ],
+  "cord_obj": "Cord_DeerMeat.obj",
+  "cord_tris": 34,
+  "extent_min": [
+   -0.1098,
+   -0.4387,
+   -0.075
+  ],
+  "extent_max": [
+   0.1098,
+   -0.1011,
+   0.0549
+  ],
+  "footprint_m": [
+   0.2195,
+   0.4387,
+   0.1299
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 150
+  }
+ },
+ "NeckTail": {
+  "kind": "single",
+  "scale": 0.6189,
+  "x_true_size": 0.6189,
+  "true_longest_m": 0.65,
+  "item_longest_m": 0.4023,
+  "copies": [
+   {
+    "offset": [
+     0.0054,
+     -0.3643,
+     -0.0283
+    ],
+    "rot_quat_xyzw": [
+     -0.57096,
+     -0.37595,
+     -0.32964,
+     0.65116
+    ],
+    "bounds_center": [
+     0.0201,
+     -0.3304,
+     -0.0368
+    ]
+   }
+  ],
+  "cord_obj": "Cord_NeckTail.obj",
+  "cord_tris": 16,
+  "extent_min": [
+   -0.0704,
+   -0.537,
+   -0.0706
+  ],
+  "extent_max": [
+   0.0691,
+   -0.1016,
+   0.0541
+  ],
+  "footprint_m": [
+   0.1395,
+   0.537,
+   0.1247
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 60
+  }
+ },
+ "WolfMeat": {
+  "kind": "single",
+  "scale": 0.53819,
+  "x_true_size": 0.5382,
+  "true_longest_m": 0.9568,
+  "item_longest_m": 0.5149,
+  "copies": [
+   {
+    "offset": [
+     -0.0242,
+     -0.2805,
+     -0.0522
+    ],
+    "rot_quat_xyzw": [
+     -0.02206,
+     -0.70106,
+     -0.70676,
+     0.0923
+    ],
+    "bounds_center": [
+     0.0151,
+     -0.3862,
+     -0.0125
+    ]
+   }
+  ],
+  "cord_obj": "Cord_WolfMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.1013,
+   -0.6462,
+   -0.075
+  ],
+  "extent_max": [
+   0.1013,
+   -0.1008,
+   0.055
+  ],
+  "footprint_m": [
+   0.2026,
+   0.6462,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 165
+  }
+ },
+ "AsksvinMeat": {
+  "kind": "single",
+  "scale": 0.3599,
+  "x_true_size": 0.3599,
+  "true_longest_m": 0.8543,
+  "item_longest_m": 0.3075,
+  "copies": [
+   {
+    "offset": [
+     0.0564,
+     -0.3116,
+     0.0033
+    ],
+    "rot_quat_xyzw": [
+     -0.45819,
+     0.49673,
+     0.35248,
+     0.64736
+    ],
+    "bounds_center": [
+     -0.0375,
+     -0.2802,
+     -0.0218
+    ]
+   }
+  ],
+  "cord_obj": "Cord_AsksvinMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.098,
+   -0.4457,
+   -0.075
+  ],
+  "extent_max": [
+   0.098,
+   -0.1009,
+   0.055
+  ],
+  "footprint_m": [
+   0.1959,
+   0.4457,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 285
+  }
+ },
+ "BugMeat": {
+  "kind": "single",
+  "scale": 0.28983,
+  "x_true_size": 0.2898,
+  "true_longest_m": 1.2811,
+  "item_longest_m": 0.3713,
+  "copies": [
+   {
+    "offset": [
+     -0.0,
+     -0.3222,
+     0.0445
+    ],
+    "rot_quat_xyzw": [
+     -0.48323,
+     0.51623,
+     -0.48323,
+     0.51623
+    ],
+    "bounds_center": [
+     0.0,
+     -0.3067,
+     -0.0149
+    ]
+   }
+  ],
+  "cord_obj": "Cord_BugMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.0674,
+   -0.4935,
+   -0.075
+  ],
+  "extent_max": [
+   0.0674,
+   -0.1015,
+   0.055
+  ],
+  "footprint_m": [
+   0.1348,
+   0.4935,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 270
+  }
+ },
+ "ChickenMeat": {
+  "kind": "single",
+  "scale": 0.80158,
+  "x_true_size": 0.8016,
+  "true_longest_m": 0.4292,
+  "item_longest_m": 0.344,
+  "copies": [
+   {
+    "offset": [
+     0.004,
+     -0.3172,
+     0.0284
+    ],
+    "rot_quat_xyzw": [
+     -0.47238,
+     -0.59411,
+     0.55339,
+     0.34301
+    ],
+    "bounds_center": [
+     0.0079,
+     -0.3075,
+     -0.0196
+    ]
+   }
+  ],
+  "cord_obj": "Cord_ChickenMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.1054,
+   -0.4897,
+   -0.0664
+  ],
+  "extent_max": [
+   0.1054,
+   -0.1028,
+   0.0334
+  ],
+  "footprint_m": [
+   0.2109,
+   0.4897,
+   0.0998
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 120
+  }
+ },
+ "HareMeat": {
+  "kind": "single",
+  "scale": 0.36114,
+  "x_true_size": 0.3611,
+  "true_longest_m": 1.3234,
+  "item_longest_m": 0.4779,
+  "copies": [
+   {
+    "offset": [
+     0.0078,
+     -0.3498,
+     -0.0435
+    ],
+    "rot_quat_xyzw": [
+     0.42796,
+     0.43294,
+     0.55773,
+     0.56422
+    ],
+    "bounds_center": [
+     0.001,
+     -0.3591,
+     -0.0179
+    ]
+   }
+  ],
+  "cord_obj": "Cord_HareMeat.obj",
+  "cord_tris": 40,
+  "extent_min": [
+   -0.11,
+   -0.598,
+   -0.0556
+  ],
+  "extent_max": [
+   0.11,
+   -0.1006,
+   0.0238
+  ],
+  "footprint_m": [
+   0.2199,
+   0.598,
+   0.0793
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 285
+  }
+ },
+ "VoltureMeat": {
+  "kind": "single",
+  "scale": 0.24239,
+  "x_true_size": 0.2424,
+  "true_longest_m": 1.1181,
+  "item_longest_m": 0.271,
+  "copies": [
+   {
+    "offset": [
+     -0.0,
+     -0.2943,
+     0.042
+    ],
+    "rot_quat_xyzw": [
+     -0.63102,
+     0.0,
+     0.0,
+     0.77577
+    ],
+    "bounds_center": [
+     -0.0,
+     -0.2578,
+     -0.0081
+    ]
+   }
+  ],
+  "cord_obj": "Cord_VoltureMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.097,
+   -0.3956,
+   -0.0709
+  ],
+  "extent_max": [
+   0.097,
+   -0.1024,
+   0.053
+  ],
+  "footprint_m": [
+   0.194,
+   0.3956,
+   0.1239
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 0
+  }
+ },
+ "SerpentMeat": {
+  "kind": "single",
+  "scale": 0.15526,
+  "x_true_size": 0.1553,
+  "true_longest_m": 1.3355,
+  "item_longest_m": 0.2074,
+  "copies": [
+   {
+    "offset": [
+     -0.001,
+     -0.2266,
+     -0.0384
+    ],
+    "rot_quat_xyzw": [
+     0.7334,
+     0.0,
+     0.00574,
+     0.67977
+    ],
+    "bounds_center": [
+     0.0,
+     -0.2239,
+     0.0014
+    ]
+   }
+  ],
+  "cord_obj": "Cord_SerpentMeat.obj",
+  "cord_tris": 40,
+  "extent_min": [
+   -0.0971,
+   -0.3273,
+   -0.0633
+  ],
+  "extent_max": [
+   0.0971,
+   -0.101,
+   0.0557
+  ],
+  "footprint_m": [
+   0.1942,
+   0.3273,
+   0.119
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 0
+  }
+ },
+ "BoneMawSerpentMeat": {
+  "kind": "single",
+  "scale": 0.18801,
+  "x_true_size": 0.188,
+  "true_longest_m": 1.4291,
+  "item_longest_m": 0.2687,
+  "copies": [
+   {
+    "offset": [
+     -0.0016,
+     -0.2431,
+     0.0346
+    ],
+    "rot_quat_xyzw": [
+     -0.72044,
+     0.0,
+     -0.01074,
+     0.69343
+    ],
+    "bounds_center": [
+     -0.0011,
+     -0.2542,
+     -0.0052
+    ]
+   }
+  ],
+  "cord_obj": "Cord_BoneMawSerpentMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.0901,
+   -0.3892,
+   -0.0739
+  ],
+  "extent_max": [
+   0.0901,
+   -0.1013,
+   0.0536
+  ],
+  "footprint_m": [
+   0.1802,
+   0.3892,
+   0.1275
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 0
+  }
+ },
+ "BjornMeat": {
+  "kind": "single",
+  "scale": 0.42951,
+  "x_true_size": 0.4295,
+  "true_longest_m": 0.7448,
+  "item_longest_m": 0.3199,
+  "copies": [
+   {
+    "offset": [
+     -0.0063,
+     -0.2804,
+     -0.0193
+    ],
+    "rot_quat_xyzw": [
+     0.52364,
+     0.49881,
+     0.47767,
+     0.49881
+    ],
+    "bounds_center": [
+     -0.0,
+     -0.2796,
+     -0.0156
+    ]
+   }
+  ],
+  "cord_obj": "Cord_BjornMeat.obj",
+  "cord_tris": 40,
+  "extent_min": [
+   -0.0888,
+   -0.4387,
+   -0.075
+  ],
+  "extent_max": [
+   0.0888,
+   -0.1015,
+   0.0442
+  ],
+  "footprint_m": [
+   0.1777,
+   0.4387,
+   0.1192
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 270
+  }
+ },
+ "SealBlubber": {
+  "kind": "single",
+  "scale": 0.5988,
+  "x_true_size": 0.5988,
+  "true_longest_m": 0.5376,
+  "item_longest_m": 0.3219,
+  "copies": [
+   {
+    "offset": [
+     -0.0074,
+     -0.277,
+     -0.0547
+    ],
+    "rot_quat_xyzw": [
+     0.00068,
+     -0.70711,
+     -0.70711,
+     0.0
+    ],
+    "bounds_center": [
+     -0.0001,
+     -0.2809,
+     -0.0165
+    ]
+   }
+  ],
+  "cord_obj": "Cord_SealBlubber.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.103,
+   -0.4419,
+   -0.074
+  ],
+  "extent_max": [
+   0.103,
+   -0.1012,
+   0.0377
+  ],
+  "footprint_m": [
+   0.2061,
+   0.4419,
+   0.1117
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 180
+  }
+ },
+ "Entrails": {
+  "kind": "single",
+  "scale": 0.40145,
+  "x_true_size": 0.4015,
+  "true_longest_m": 0.593,
+  "item_longest_m": 0.2381,
+  "copies": [
+   {
+    "offset": [
+     -0.0135,
+     -0.225,
+     -0.0308
+    ],
+    "rot_quat_xyzw": [
+     0.36328,
+     0.6825,
+     0.62781,
+     0.08985
+    ],
+    "bounds_center": [
+     -0.0052,
+     -0.238,
+     0.0076
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Entrails.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.11,
+   -0.3494,
+   -0.0716
+  ],
+  "extent_max": [
+   0.11,
+   -0.1031,
+   0.0529
+  ],
+  "footprint_m": [
+   0.22,
+   0.3494,
+   0.1245
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 195
+  }
+ },
+ "FreezeGland": {
+  "kind": "single",
+  "scale": 0.443,
+  "x_true_size": 0.443,
+  "true_longest_m": 0.5549,
+  "item_longest_m": 0.2458,
+  "copies": [
+   {
+    "offset": [
+     0.0078,
+     -0.2496,
+     0.0394
+    ],
+    "rot_quat_xyzw": [
+     -0.24955,
+     0.66589,
+     -0.69759,
+     0.08767
+    ],
+    "bounds_center": [
+     -0.0014,
+     -0.2485,
+     -0.0043
+    ]
+   }
+  ],
+  "cord_obj": "Cord_FreezeGland.obj",
+  "cord_tris": 22,
+  "extent_min": [
+   -0.107,
+   -0.3714,
+   -0.0744
+  ],
+  "extent_max": [
+   0.107,
+   -0.1038,
+   0.061
+  ],
+  "footprint_m": [
+   0.2139,
+   0.3714,
+   0.1354
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 195
+  }
+ },
+ "FishRaw": {
+  "kind": "single",
+  "scale": 0.62748,
+  "x_true_size": 0.6275,
+  "true_longest_m": 0.5662,
+  "item_longest_m": 0.3553,
+  "copies": [
+   {
+    "offset": [
+     -0.0523,
+     -0.2341,
+     -0.0169
+    ],
+    "rot_quat_xyzw": [
+     -0.3915,
+     -0.59869,
+     -0.52656,
+     0.45939
+    ],
+    "bounds_center": [
+     0.0003,
+     -0.3084,
+     -0.0069
+    ]
+   }
+  ],
+  "cord_obj": "Cord_FishRaw.obj",
+  "cord_tris": 14,
+  "extent_min": [
+   -0.1064,
+   -0.4999,
+   -0.075
+  ],
+  "extent_max": [
+   0.1064,
+   -0.1008,
+   0.055
+  ],
+  "footprint_m": [
+   0.2128,
+   0.4999,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 105
+  }
+ },
+ "Fish1": {
+  "kind": "pair",
+  "scale": 0.49509,
+  "x_true_size": 0.4951,
+  "true_longest_m": 1.0263,
+  "item_longest_m": 0.5081,
+  "copies": [
+   {
+    "offset": [
+     -0.0007,
+     -0.3649,
+     -0.055
+    ],
+    "rot_quat_xyzw": [
+     0.35469,
+     0.61039,
+     -0.61435,
+     0.35241
+    ],
+    "bounds_center": [
+     -0.0,
+     -0.3741,
+     -0.015
+    ]
+   },
+   {
+    "offset": [
+     0.0007,
+     -0.3649,
+     0.022
+    ],
+    "rot_quat_xyzw": [
+     0.61435,
+     -0.35241,
+     0.35469,
+     0.61039
+    ],
+    "bounds_center": [
+     0.0,
+     -0.3741,
+     -0.018
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish1.obj",
+  "cord_tris": 48,
+  "extent_min": [
+   -0.0987,
+   -0.6286,
+   -0.075
+  ],
+  "extent_max": [
+   0.0987,
+   -0.1023,
+   0.042
+  ],
+  "footprint_m": [
+   0.1974,
+   0.6286,
+   0.117
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 240
+  }
+ },
+ "Fish2": {
+  "kind": "single",
+  "scale": 0.3213,
+  "x_true_size": 0.3213,
+  "true_longest_m": 1.7106,
+  "item_longest_m": 0.5496,
+  "copies": [
+   {
+    "offset": [
+     -0.0002,
+     -0.3708,
+     0.0161
+    ],
+    "rot_quat_xyzw": [
+     0.56239,
+     -0.42938,
+     0.43154,
+     0.55958
+    ],
+    "bounds_center": [
+     0.0,
+     -0.3948,
+     -0.0153
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish2.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.0953,
+   -0.6699,
+   -0.0457
+  ],
+  "extent_max": [
+   0.0953,
+   -0.1027,
+   0.0127
+  ],
+  "footprint_m": [
+   0.1905,
+   0.6699,
+   0.0585
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 75
+  }
+ },
+ "Fish3": {
+  "kind": "pair",
+  "scale": 0.31587,
+  "x_true_size": 0.3159,
+  "true_longest_m": 1.7408,
+  "item_longest_m": 0.5499,
+  "copies": [
+   {
+    "offset": [
+     -0.0042,
+     -0.3674,
+     -0.0696
+    ],
+    "rot_quat_xyzw": [
+     0.43096,
+     0.56058,
+     -0.56125,
+     0.43015
+    ],
+    "bounds_center": [
+     0.0,
+     -0.395,
+     -0.0166
+    ]
+   },
+   {
+    "offset": [
+     0.0042,
+     -0.3674,
+     0.0366
+    ],
+    "rot_quat_xyzw": [
+     0.56125,
+     -0.43015,
+     0.43096,
+     0.56058
+    ],
+    "bounds_center": [
+     -0.0,
+     -0.395,
+     -0.0164
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish3.obj",
+  "cord_tris": 48,
+  "extent_min": [
+   -0.1094,
+   -0.67,
+   -0.0685
+  ],
+  "extent_max": [
+   0.1094,
+   -0.103,
+   0.0355
+  ],
+  "footprint_m": [
+   0.2188,
+   0.67,
+   0.1041
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 255
+  }
+ },
+ "Fish4_cave": {
+  "kind": "single",
+  "scale": 0.52299,
+  "x_true_size": 0.523,
+  "true_longest_m": 0.8883,
+  "item_longest_m": 0.4646,
+  "copies": [
+   {
+    "offset": [
+     -0.0407,
+     -0.3818,
+     -0.0028
+    ],
+    "rot_quat_xyzw": [
+     -0.0,
+     -0.73111,
+     -0.68226,
+     0.0
+    ],
+    "bounds_center": [
+     0.0,
+     -0.3553,
+     -0.0011
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish4_cave.obj",
+  "cord_tris": 34,
+  "extent_min": [
+   -0.0797,
+   -0.5891,
+   -0.075
+  ],
+  "extent_max": [
+   0.0797,
+   -0.1039,
+   0.078
+  ],
+  "footprint_m": [
+   0.1593,
+   0.5891,
+   0.153
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 180
+  }
+ },
+ "Fish5": {
+  "kind": "single",
+  "scale": 0.36006,
+  "x_true_size": 0.3601,
+  "true_longest_m": 1.4118,
+  "item_longest_m": 0.5083,
+  "copies": [
+   {
+    "offset": [
+     -0.0306,
+     -0.3108,
+     0.019
+    ],
+    "rot_quat_xyzw": [
+     0.27163,
+     0.65079,
+     -0.65576,
+     0.26957
+    ],
+    "bounds_center": [
+     0.0106,
+     -0.3741,
+     -0.0222
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish5.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.0634,
+   -0.6277,
+   -0.075
+  ],
+  "extent_max": [
+   0.0634,
+   -0.1031,
+   0.0517
+  ],
+  "footprint_m": [
+   0.1267,
+   0.6277,
+   0.1267
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 225
+  }
+ },
+ "Fish6": {
+  "kind": "single",
+  "scale": 0.57477,
+  "x_true_size": 0.5748,
+  "true_longest_m": 0.9177,
+  "item_longest_m": 0.5275,
+  "copies": [
+   {
+    "offset": [
+     -0.0498,
+     -0.3546,
+     0.0087
+    ],
+    "rot_quat_xyzw": [
+     0.44134,
+     -0.54644,
+     0.57516,
+     0.4193
+    ],
+    "bounds_center": [
+     0.0013,
+     -0.384,
+     -0.0151
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish6.obj",
+  "cord_tris": 34,
+  "extent_min": [
+   -0.11,
+   -0.6499,
+   -0.0748
+  ],
+  "extent_max": [
+   0.11,
+   -0.1032,
+   0.0651
+  ],
+  "footprint_m": [
+   0.22,
+   0.6499,
+   0.1399
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 105
+  }
+ },
+ "Fish7": {
+  "kind": "pair",
+  "scale": 0.47334,
+  "x_true_size": 0.4733,
+  "true_longest_m": 1.1539,
+  "item_longest_m": 0.5462,
+  "copies": [
+   {
+    "offset": [
+     0.0397,
+     -0.3934,
+     -0.0077
+    ],
+    "rot_quat_xyzw": [
+     0.57358,
+     0.42057,
+     -0.44012,
+     0.5481
+    ],
+    "bounds_center": [
+     0.0015,
+     -0.3944,
+     0.0046
+    ]
+   },
+   {
+    "offset": [
+     -0.0397,
+     -0.3934,
+     -0.0023
+    ],
+    "rot_quat_xyzw": [
+     0.44012,
+     -0.5481,
+     0.57358,
+     0.42057
+    ],
+    "bounds_center": [
+     -0.0015,
+     -0.3944,
+     -0.0146
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish7.obj",
+  "cord_tris": 68,
+  "extent_min": [
+   -0.107,
+   -0.6699,
+   -0.069
+  ],
+  "extent_max": [
+   0.107,
+   -0.1024,
+   0.059
+  ],
+  "footprint_m": [
+   0.2141,
+   0.6699,
+   0.1281
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 285
+  }
+ },
+ "Fish8": {
+  "kind": "single",
+  "scale": 0.38874,
+  "x_true_size": 0.3887,
+  "true_longest_m": 1.405,
+  "item_longest_m": 0.5462,
+  "copies": [
+   {
+    "offset": [
+     0.0129,
+     -0.3614,
+     -0.0294
+    ],
+    "rot_quat_xyzw": [
+     0.5463,
+     0.44144,
+     -0.41919,
+     0.5753
+    ],
+    "bounds_center": [
+     0.0022,
+     -0.3938,
+     -0.0106
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish8.obj",
+  "cord_tris": 34,
+  "extent_min": [
+   -0.098,
+   -0.6699,
+   -0.0714
+  ],
+  "extent_max": [
+   0.098,
+   -0.1035,
+   0.0384
+  ],
+  "footprint_m": [
+   0.1961,
+   0.6699,
+   0.1099
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 285
+  }
+ },
+ "Fish9": {
+  "kind": "single",
+  "scale": 0.24363,
+  "x_true_size": 0.2436,
+  "true_longest_m": 0.9292,
+  "item_longest_m": 0.2264,
+  "copies": [
+   {
+    "offset": [
+     0.0087,
+     -0.208,
+     0.0061
+    ],
+    "rot_quat_xyzw": [
+     0.24988,
+     0.57793,
+     -0.19048,
+     0.75318
+    ],
+    "bounds_center": [
+     0.0293,
+     -0.2277,
+     0.012
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish9.obj",
+  "cord_tris": 18,
+  "extent_min": [
+   -0.0931,
+   -0.3515,
+   -0.075
+  ],
+  "extent_max": [
+   0.0931,
+   -0.1009,
+   0.095
+  ],
+  "footprint_m": [
+   0.1862,
+   0.3515,
+   0.1699
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 285
+  }
+ },
+ "Fish10": {
+  "kind": "single",
+  "scale": 0.28859,
+  "x_true_size": 0.2886,
+  "true_longest_m": 1.8964,
+  "item_longest_m": 0.5473,
+  "copies": [
+   {
+    "offset": [
+     -0.0014,
+     -0.3794,
+     -0.0267
+    ],
+    "rot_quat_xyzw": [
+     0.43979,
+     0.54855,
+     -0.57315,
+     0.42092
+    ],
+    "bounds_center": [
+     0.0018,
+     -0.3949,
+     -0.0276
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish10.obj",
+  "cord_tris": 40,
+  "extent_min": [
+   -0.1075,
+   -0.6698,
+   -0.0657
+  ],
+  "extent_max": [
+   0.1075,
+   -0.1014,
+   0.0327
+  ],
+  "footprint_m": [
+   0.215,
+   0.6698,
+   0.0985
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 255
+  }
+ },
+ "Fish11": {
+  "kind": "single",
+  "scale": 0.47199,
+  "x_true_size": 0.472,
+  "true_longest_m": 0.8023,
+  "item_longest_m": 0.3787,
+  "copies": [
+   {
+    "offset": [
+     -0.0592,
+     -0.3018,
+     -0.0294
+    ],
+    "rot_quat_xyzw": [
+     0.54287,
+     0.44392,
+     -0.41656,
+     0.57853
+    ],
+    "bounds_center": [
+     -0.0084,
+     -0.312,
+     -0.0129
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish11.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.11,
+   -0.4943,
+   -0.0676
+  ],
+  "extent_max": [
+   0.11,
+   -0.1038,
+   0.0476
+  ],
+  "footprint_m": [
+   0.22,
+   0.4943,
+   0.1152
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 285
+  }
+ },
+ "Fish12": {
+  "kind": "single",
+  "scale": 0.23541,
+  "x_true_size": 0.2354,
+  "true_longest_m": 0.6349,
+  "item_longest_m": 0.1495,
+  "copies": [
+   {
+    "offset": [
+     -0.0077,
+     -0.217,
+     0.0033
+    ],
+    "rot_quat_xyzw": [
+     0.06186,
+     -0.99775,
+     0.02579,
+     0.0
+    ],
+    "bounds_center": [
+     -0.0003,
+     -0.1974,
+     -0.01
+    ]
+   }
+  ],
+  "cord_obj": "Cord_Fish12.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.0753,
+   -0.2708,
+   -0.075
+  ],
+  "extent_max": [
+   0.0753,
+   -0.1017,
+   0.055
+  ],
+  "footprint_m": [
+   0.1506,
+   0.2708,
+   0.1299
+  ],
+  "pose": {
+   "hung_by": "middle axis, wide end up",
+   "turn_deg": 180
+  }
+ },
+ "CookedMeat": {
+  "kind": "single",
+  "scale": 0.51292,
+  "x_true_size": 0.5129,
+  "true_longest_m": 0.6063,
+  "item_longest_m": 0.311,
+  "copies": [
+   {
+    "offset": [
+     -0.0139,
+     -0.2268,
+     -0.0326
+    ],
+    "rot_quat_xyzw": [
+     -0.06107,
+     -0.702,
+     -0.70351,
+     0.09242
+    ],
+    "bounds_center": [
+     0.004,
+     -0.2751,
+     -0.0102
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedMeat.obj",
+  "cord_tris": 28,
+  "extent_min": [
+   -0.0658,
+   -0.4318,
+   -0.075
+  ],
+  "extent_max": [
+   0.0658,
+   -0.1015,
+   0.055
+  ],
+  "footprint_m": [
+   0.1317,
+   0.4318,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 165
+  }
+ },
+ "CookedLoxMeat": {
+  "kind": "single",
+  "scale": 0.28425,
+  "x_true_size": 0.2842,
+  "true_longest_m": 0.8428,
+  "item_longest_m": 0.2396,
+  "copies": [
+   {
+    "offset": [
+     -0.0119,
+     -0.2378,
+     -0.025
+    ],
+    "rot_quat_xyzw": [
+     0.67349,
+     0.18714,
+     -0.15361,
+     0.69842
+    ],
+    "bounds_center": [
+     -0.005,
+     -0.2415,
+     -0.0046
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedLoxMeat.obj",
+  "cord_tris": 20,
+  "extent_min": [
+   -0.0711,
+   -0.3609,
+   -0.0706
+  ],
+  "extent_max": [
+   0.0711,
+   -0.1038,
+   0.0717
+  ],
+  "footprint_m": [
+   0.1422,
+   0.3609,
+   0.1423
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 330
+  }
+ },
+ "CookedDeerMeat": {
+  "kind": "single",
+  "scale": 0.73275,
+  "x_true_size": 0.7327,
+  "true_longest_m": 0.4304,
+  "item_longest_m": 0.3154,
+  "copies": [
+   {
+    "offset": [
+     -0.0163,
+     -0.3068,
+     -0.048
+    ],
+    "rot_quat_xyzw": [
+     -0.10913,
+     -0.6803,
+     -0.70147,
+     0.18229
+    ],
+    "bounds_center": [
+     0.0005,
+     -0.2777,
+     -0.0074
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedDeerMeat.obj",
+  "cord_tris": 32,
+  "extent_min": [
+   -0.1097,
+   -0.4385,
+   -0.075
+  ],
+  "extent_max": [
+   0.1097,
+   -0.1011,
+   0.0549
+  ],
+  "footprint_m": [
+   0.2194,
+   0.4385,
+   0.1299
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 150
+  }
+ },
+ "NeckTailGrilled": {
+  "kind": "single",
+  "scale": 0.6189,
+  "x_true_size": 0.6189,
+  "true_longest_m": 0.65,
+  "item_longest_m": 0.4023,
+  "copies": [
+   {
+    "offset": [
+     -0.0106,
+     -0.3667,
+     -0.0191
+    ],
+    "rot_quat_xyzw": [
+     -0.57096,
+     -0.37595,
+     -0.32964,
+     0.65116
+    ],
+    "bounds_center": [
+     0.0201,
+     -0.3304,
+     -0.0368
+    ]
+   }
+  ],
+  "cord_obj": "Cord_NeckTailGrilled.obj",
+  "cord_tris": 16,
+  "extent_min": [
+   -0.0704,
+   -0.537,
+   -0.0706
+  ],
+  "extent_max": [
+   0.0691,
+   -0.1016,
+   0.0541
+  ],
+  "footprint_m": [
+   0.1395,
+   0.537,
+   0.1247
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 60
+  }
+ },
+ "CookedWolfMeat": {
+  "kind": "single",
+  "scale": 0.53819,
+  "x_true_size": 0.5382,
+  "true_longest_m": 0.9568,
+  "item_longest_m": 0.5149,
+  "copies": [
+   {
+    "offset": [
+     -0.0291,
+     -0.2801,
+     -0.0505
+    ],
+    "rot_quat_xyzw": [
+     -0.02206,
+     -0.70106,
+     -0.70676,
+     0.0923
+    ],
+    "bounds_center": [
+     0.0151,
+     -0.3862,
+     -0.0125
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedWolfMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.1013,
+   -0.6462,
+   -0.075
+  ],
+  "extent_max": [
+   0.1013,
+   -0.1008,
+   0.055
+  ],
+  "footprint_m": [
+   0.2026,
+   0.6462,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 165
+  }
+ },
+ "CookedAsksvinMeat": {
+  "kind": "single",
+  "scale": 0.3599,
+  "x_true_size": 0.3599,
+  "true_longest_m": 0.8543,
+  "item_longest_m": 0.3075,
+  "copies": [
+   {
+    "offset": [
+     0.0564,
+     -0.3116,
+     0.0033
+    ],
+    "rot_quat_xyzw": [
+     -0.45819,
+     0.49673,
+     0.35248,
+     0.64736
+    ],
+    "bounds_center": [
+     -0.0375,
+     -0.2802,
+     -0.0218
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedAsksvinMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.098,
+   -0.4457,
+   -0.075
+  ],
+  "extent_max": [
+   0.098,
+   -0.1009,
+   0.055
+  ],
+  "footprint_m": [
+   0.1959,
+   0.4457,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 285
+  }
+ },
+ "CookedBugMeat": {
+  "kind": "single",
+  "scale": 0.28983,
+  "x_true_size": 0.2898,
+  "true_longest_m": 1.2811,
+  "item_longest_m": 0.3713,
+  "copies": [
+   {
+    "offset": [
+     -0.0,
+     -0.3222,
+     0.0445
+    ],
+    "rot_quat_xyzw": [
+     -0.48323,
+     0.51623,
+     -0.48323,
+     0.51623
+    ],
+    "bounds_center": [
+     0.0,
+     -0.3067,
+     -0.0149
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedBugMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.0674,
+   -0.4935,
+   -0.075
+  ],
+  "extent_max": [
+   0.0674,
+   -0.1015,
+   0.055
+  ],
+  "footprint_m": [
+   0.1348,
+   0.4935,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 270
+  }
+ },
+ "CookedChickenMeat": {
+  "kind": "single",
+  "scale": 0.80158,
+  "x_true_size": 0.8016,
+  "true_longest_m": 0.4292,
+  "item_longest_m": 0.344,
+  "copies": [
+   {
+    "offset": [
+     0.004,
+     -0.3172,
+     0.0284
+    ],
+    "rot_quat_xyzw": [
+     -0.47238,
+     -0.59411,
+     0.55339,
+     0.34301
+    ],
+    "bounds_center": [
+     0.0079,
+     -0.3075,
+     -0.0196
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedChickenMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.1054,
+   -0.4897,
+   -0.0664
+  ],
+  "extent_max": [
+   0.1054,
+   -0.1028,
+   0.0334
+  ],
+  "footprint_m": [
+   0.2109,
+   0.4897,
+   0.0998
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 120
+  }
+ },
+ "CookedHareMeat": {
+  "kind": "single",
+  "scale": 0.36114,
+  "x_true_size": 0.3611,
+  "true_longest_m": 1.3234,
+  "item_longest_m": 0.4779,
+  "copies": [
+   {
+    "offset": [
+     0.0078,
+     -0.3498,
+     -0.0435
+    ],
+    "rot_quat_xyzw": [
+     0.42796,
+     0.43294,
+     0.55773,
+     0.56422
+    ],
+    "bounds_center": [
+     0.001,
+     -0.3591,
+     -0.0179
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedHareMeat.obj",
+  "cord_tris": 40,
+  "extent_min": [
+   -0.11,
+   -0.598,
+   -0.0556
+  ],
+  "extent_max": [
+   0.11,
+   -0.1006,
+   0.0238
+  ],
+  "footprint_m": [
+   0.2199,
+   0.598,
+   0.0793
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 285
+  }
+ },
+ "CookedVoltureMeat": {
+  "kind": "single",
+  "scale": 0.24239,
+  "x_true_size": 0.2424,
+  "true_longest_m": 1.1181,
+  "item_longest_m": 0.271,
+  "copies": [
+   {
+    "offset": [
+     -0.0,
+     -0.2943,
+     0.042
+    ],
+    "rot_quat_xyzw": [
+     -0.63102,
+     0.0,
+     0.0,
+     0.77577
+    ],
+    "bounds_center": [
+     -0.0,
+     -0.2578,
+     -0.0081
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedVoltureMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.097,
+   -0.3956,
+   -0.0709
+  ],
+  "extent_max": [
+   0.097,
+   -0.1024,
+   0.053
+  ],
+  "footprint_m": [
+   0.194,
+   0.3956,
+   0.1239
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 0
+  }
+ },
+ "SerpentMeatCooked": {
+  "kind": "single",
+  "scale": 0.15526,
+  "x_true_size": 0.1553,
+  "true_longest_m": 1.3355,
+  "item_longest_m": 0.2074,
+  "copies": [
+   {
+    "offset": [
+     -0.0007,
+     -0.2735,
+     -0.036
+    ],
+    "rot_quat_xyzw": [
+     0.7334,
+     0.0,
+     0.00574,
+     0.67977
+    ],
+    "bounds_center": [
+     0.0,
+     -0.2239,
+     0.0014
+    ]
+   }
+  ],
+  "cord_obj": "Cord_SerpentMeatCooked.obj",
+  "cord_tris": 40,
+  "extent_min": [
+   -0.0971,
+   -0.3273,
+   -0.0633
+  ],
+  "extent_max": [
+   0.0971,
+   -0.101,
+   0.0557
+  ],
+  "footprint_m": [
+   0.1942,
+   0.3273,
+   0.119
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 0
+  }
+ },
+ "CookedBoneMawSerpentMeat": {
+  "kind": "single",
+  "scale": 0.18801,
+  "x_true_size": 0.188,
+  "true_longest_m": 1.4291,
+  "item_longest_m": 0.2687,
+  "copies": [
+   {
+    "offset": [
+     -0.0015,
+     -0.2434,
+     0.0274
+    ],
+    "rot_quat_xyzw": [
+     -0.72044,
+     0.0,
+     -0.01074,
+     0.69343
+    ],
+    "bounds_center": [
+     -0.0011,
+     -0.2542,
+     -0.0052
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedBoneMawSerpentMeat.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.0901,
+   -0.3892,
+   -0.0739
+  ],
+  "extent_max": [
+   0.0901,
+   -0.1013,
+   0.0536
+  ],
+  "footprint_m": [
+   0.1802,
+   0.3892,
+   0.1275
+  ],
+  "pose": {
+   "hung_by": "long axis, wide end up",
+   "turn_deg": 0
+  }
+ },
+ "CookedBjornMeat": {
+  "kind": "single",
+  "scale": 0.42951,
+  "x_true_size": 0.4295,
+  "true_longest_m": 0.7448,
+  "item_longest_m": 0.3199,
+  "copies": [
+   {
+    "offset": [
+     -0.0063,
+     -0.2804,
+     -0.0193
+    ],
+    "rot_quat_xyzw": [
+     0.52364,
+     0.49881,
+     0.47767,
+     0.49881
+    ],
+    "bounds_center": [
+     -0.0,
+     -0.2796,
+     -0.0156
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedBjornMeat.obj",
+  "cord_tris": 40,
+  "extent_min": [
+   -0.0888,
+   -0.4387,
+   -0.075
+  ],
+  "extent_max": [
+   0.0888,
+   -0.1015,
+   0.0442
+  ],
+  "footprint_m": [
+   0.1777,
+   0.4387,
+   0.1192
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 270
+  }
+ },
+ "CookedSealBlubber": {
+  "kind": "single",
+  "scale": 0.5988,
+  "x_true_size": 0.5988,
+  "true_longest_m": 0.5376,
+  "item_longest_m": 0.3219,
+  "copies": [
+   {
+    "offset": [
+     -0.0074,
+     -0.277,
+     -0.0547
+    ],
+    "rot_quat_xyzw": [
+     0.00068,
+     -0.70711,
+     -0.70711,
+     0.0
+    ],
+    "bounds_center": [
+     -0.0001,
+     -0.2809,
+     -0.0165
+    ]
+   }
+  ],
+  "cord_obj": "Cord_CookedSealBlubber.obj",
+  "cord_tris": 24,
+  "extent_min": [
+   -0.103,
+   -0.4419,
+   -0.074
+  ],
+  "extent_max": [
+   0.103,
+   -0.1012,
+   0.0377
+  ],
+  "footprint_m": [
+   0.2061,
+   0.4419,
+   0.1117
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 180
+  }
+ },
+ "FishCooked": {
+  "kind": "single",
+  "scale": 0.62748,
+  "x_true_size": 0.6275,
+  "true_longest_m": 0.5662,
+  "item_longest_m": 0.3553,
+  "copies": [
+   {
+    "offset": [
+     -0.0523,
+     -0.2341,
+     -0.0169
+    ],
+    "rot_quat_xyzw": [
+     -0.3915,
+     -0.59869,
+     -0.52656,
+     0.45939
+    ],
+    "bounds_center": [
+     0.0003,
+     -0.3084,
+     -0.0069
+    ]
+   }
+  ],
+  "cord_obj": "Cord_FishCooked.obj",
+  "cord_tris": 14,
+  "extent_min": [
+   -0.1064,
+   -0.4999,
+   -0.075
+  ],
+  "extent_max": [
+   0.1064,
+   -0.1008,
+   0.055
+  ],
+  "footprint_m": [
+   0.2128,
+   0.4999,
+   0.13
+  ],
+  "pose": {
+   "hung_by": "long axis, narrow end up",
+   "turn_deg": 105
+  }
+ },
+ "_generic": {
+  "kind": "stack",
+  "cord_obj": "Cord__generic.obj",
+  "cord_tris": 48,
+  "rule": "(documentation: the mod skips keys starting with '_'; an item with no recipe keeps the anchors' bundle) for an item with no recipe of its own: turn it so its longest bounds axis runs along x and its thinnest along z (depth), scale it uniformly to fit inside fit_box, and put the bottom centre of its fitted bounds at bottom_center.",
+  "copies": [
+   {
+    "fit_box": [
+     0.18,
+     0.2,
+     0.1
+    ],
+    "bottom_center": [
+     -0.0,
+     -0.315,
+     -0.0
+    ],
+    "align": {
+     "long_axis_to": [
+      1,
+      0,
+      0
+     ],
+     "thin_axis_to": [
+      0,
+      0,
+      1
+     ]
+    }
+   },
+   {
+    "fit_box": [
+     0.18,
+     0.2,
+     0.1
+    ],
+    "bottom_center": [
+     -0.0,
+     -0.526,
+     -0.0
+    ],
+    "align": {
+     "long_axis_to": [
+      1,
+      0,
+      0
+     ],
+     "thin_axis_to": [
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  ],
+  "footprint_m": [
+   0.18,
+   0.537,
+   0.1
+  ]
+ },
+ "_fish": {
+  "kind": "pair",
+  "cord_obj": "Cord_Fish1.obj",
+  "cord_tris": 48,
+  "rule": "(documentation) for a fish with no recipe of its own (modded fish): the vanilla fish models have the tail on the same end, so Fish1's pose fits: scale so the longest bounds side = longest_m, rotate by rot_quat_xyzw, put the bounds centre at bounds_center. All twelve vanilla fish have their own recipe in round 2.",
+  "longest_m": 0.5081,
+  "copies": [
+   {
+    "rot_quat_xyzw": [
+     0.35469,
+     0.61039,
+     -0.61435,
+     0.35241
+    ],
+    "bounds_center": [
+     -0.0,
+     -0.3741,
+     -0.015
+    ]
+   },
+   {
+    "rot_quat_xyzw": [
+     0.61435,
+     -0.35241,
+     0.35469,
+     0.61039
+    ],
+    "bounds_center": [
+     0.0,
+     -0.3741,
+     -0.018
+    ]
+   }
+  ]
+ },
+ "_hooks_meatrack_r4": {
+  "24": {
+   "row": "ridge",
+   "hook_point": [
+    -0.1,
+    1.755,
+    0.09
+   ],
+   "faces": "front"
+  },
+  "25": {
+   "row": "ridge",
+   "hook_point": [
+    0.3,
+    1.755,
+    0.09
+   ],
+   "faces": "front"
+  },
+  "26": {
+   "row": "ridge",
+   "hook_point": [
+    -0.5,
+    1.755,
+    0.09
+   ],
+   "faces": "front"
+  },
+  "27": {
+   "row": "ridge",
+   "hook_point": [
+    0.7,
+    1.755,
+    0.09
+   ],
+   "faces": "front"
+  },
+  "28": {
+   "row": "ridge",
+   "hook_point": [
+    0.1,
+    1.755,
+    -0.09
+   ],
+   "faces": "back"
+  },
+  "29": {
+   "row": "ridge",
+   "hook_point": [
+    -0.3,
+    1.755,
+    -0.09
+   ],
+   "faces": "back"
+  },
+  "30": {
+   "row": "ridge",
+   "hook_point": [
+    0.5,
+    1.755,
+    -0.09
+   ],
+   "faces": "back"
+  },
+  "31": {
+   "row": "ridge",
+   "hook_point": [
+    -0.7,
+    1.755,
+    -0.09
+   ],
+   "faces": "back"
+  },
+  "32": {
+   "row": "uf",
+   "hook_point": [
+    0.1,
+    1.52,
+    0.215
+   ],
+   "faces": "front"
+  },
+  "33": {
+   "row": "uf",
+   "hook_point": [
+    -0.1,
+    1.52,
+    0.215
+   ],
+   "faces": "front"
+  },
+  "34": {
+   "row": "uf",
+   "hook_point": [
+    0.3,
+    1.52,
+    0.215
+   ],
+   "faces": "front"
+  },
+  "35": {
+   "row": "uf",
+   "hook_point": [
+    -0.3,
+    1.52,
+    0.215
+   ],
+   "faces": "front"
+  },
+  "36": {
+   "row": "uf",
+   "hook_point": [
+    0.5,
+    1.52,
+    0.215
+   ],
+   "faces": "front"
+  },
+  "37": {
+   "row": "uf",
+   "hook_point": [
+    -0.5,
+    1.52,
+    0.215
+   ],
+   "faces": "front"
+  },
+  "38": {
+   "row": "uf",
+   "hook_point": [
+    0.7,
+    1.52,
+    0.215
+   ],
+   "faces": "front"
+  },
+  "39": {
+   "row": "uf",
+   "hook_point": [
+    -0.7,
+    1.52,
+    0.215
+   ],
+   "faces": "front"
+  },
+  "40": {
+   "row": "ub",
+   "hook_point": [
+    0.1,
+    1.52,
+    -0.215
+   ],
+   "faces": "back"
+  },
+  "41": {
+   "row": "ub",
+   "hook_point": [
+    -0.1,
+    1.52,
+    -0.215
+   ],
+   "faces": "back"
+  },
+  "42": {
+   "row": "ub",
+   "hook_point": [
+    0.3,
+    1.52,
+    -0.215
+   ],
+   "faces": "back"
+  },
+  "43": {
+   "row": "ub",
+   "hook_point": [
+    -0.3,
+    1.52,
+    -0.215
+   ],
+   "faces": "back"
+  },
+  "44": {
+   "row": "ub",
+   "hook_point": [
+    0.5,
+    1.52,
+    -0.215
+   ],
+   "faces": "back"
+  },
+  "45": {
+   "row": "ub",
+   "hook_point": [
+    -0.5,
+    1.52,
+    -0.215
+   ],
+   "faces": "back"
+  },
+  "46": {
+   "row": "ub",
+   "hook_point": [
+    0.7,
+    1.52,
+    -0.215
+   ],
+   "faces": "back"
+  },
+  "47": {
+   "row": "ub",
+   "hook_point": [
+    -0.7,
+    1.52,
+    -0.215
+   ],
+   "faces": "back"
+  },
+  "48": {
+   "row": "lf",
+   "hook_point": [
+    0.1,
+    1.22,
+    0.401
+   ],
+   "faces": "front"
+  },
+  "49": {
+   "row": "lf",
+   "hook_point": [
+    -0.1,
+    1.22,
+    0.401
+   ],
+   "faces": "front"
+  },
+  "50": {
+   "row": "lf",
+   "hook_point": [
+    0.3,
+    1.22,
+    0.401
+   ],
+   "faces": "front"
+  },
+  "51": {
+   "row": "lf",
+   "hook_point": [
+    -0.3,
+    1.22,
+    0.401
+   ],
+   "faces": "front"
+  },
+  "52": {
+   "row": "lf",
+   "hook_point": [
+    0.5,
+    1.22,
+    0.401
+   ],
+   "faces": "front"
+  },
+  "53": {
+   "row": "lf",
+   "hook_point": [
+    -0.5,
+    1.22,
+    0.401
+   ],
+   "faces": "front"
+  },
+  "54": {
+   "row": "lf",
+   "hook_point": [
+    0.7,
+    1.22,
+    0.401
+   ],
+   "faces": "front"
+  },
+  "55": {
+   "row": "lf",
+   "hook_point": [
+    -0.7,
+    1.22,
+    0.401
+   ],
+   "faces": "front"
+  },
+  "56": {
+   "row": "lb",
+   "hook_point": [
+    0.1,
+    1.22,
+    -0.401
+   ],
+   "faces": "back"
+  },
+  "57": {
+   "row": "lb",
+   "hook_point": [
+    -0.1,
+    1.22,
+    -0.401
+   ],
+   "faces": "back"
+  },
+  "58": {
+   "row": "lb",
+   "hook_point": [
+    0.3,
+    1.22,
+    -0.401
+   ],
+   "faces": "back"
+  },
+  "59": {
+   "row": "lb",
+   "hook_point": [
+    -0.3,
+    1.22,
+    -0.401
+   ],
+   "faces": "back"
+  },
+  "60": {
+   "row": "lb",
+   "hook_point": [
+    0.5,
+    1.22,
+    -0.401
+   ],
+   "faces": "back"
+  },
+  "61": {
+   "row": "lb",
+   "hook_point": [
+    -0.5,
+    1.22,
+    -0.401
+   ],
+   "faces": "back"
+  },
+  "62": {
+   "row": "lb",
+   "hook_point": [
+    0.7,
+    1.22,
+    -0.401
+   ],
+   "faces": "back"
+  },
+  "63": {
+   "row": "lb",
+   "hook_point": [
+    -0.7,
+    1.22,
+    -0.401
+   ],
+   "faces": "back"
+  }
+ },
+ "_not_ripped": {
+  "Bloodclot": "_generic",
+  "BloodBag": "_generic"
+ },
+ "_checks": {
+  "rack_clash": 0,
+  "rack_mesh_tests": 2802,
+  "hook_relations": 83,
+  "frame_clash": 0,
+  "lowest_piece_bottom_z": 0.55,
+  "bin_heap_top_z": 0.459,
+  "envelope": {
+   "top_v": -0.12,
+   "bottom_v": -0.67,
+   "inward_u": 0.075,
+   "outward_u": "0.055 (v >= -0.235), 0.095 (to -0.33), 0.042 below",
+   "rail_pitch_m": 0.2,
+   "air_to_next_hook_m": 0.006
+  }
+ },
+ "doc": "Meat Rack bundles round 2 (blender/meatbundles_r2.py): one recipe per item prefab, the game's OWN item model plus our cord, now ONE big piece per hook (kind single), a string of 2-3 one under the other for small pieces (kind stack, partial stacks show the top ones first), or two flat fish back to back (kind pair). Same schema as round 1. Hook space: origin = the hook point = centre of the rack's horizontal hook bar where the cord hangs (_hooks_meatrack_r4 lists them per r4 bundle unit, Unity prefab space). Unity axes: x across the rail, y up, z front (ux=-bx, uy=bz, uz=-by from Blender). Per copy: the item model in ItemVisual's item space (prefab root space without the root's own scale, already turned 180 degrees about up) gets the uniform `scale` (absolute, on the prefab's native size), then rot_quat_xyzw, and its ROOT goes to `offset`: copy matrix = T(hook) R(face) T(offset) R(rot) S(scale). Every item here has root scale 1, so scale = x_true_size, the fraction of the item's true size in the world; true_longest_m and item_longest_m give the longest bounds side at 1 and as hung. bounds_center is where the item's (rip) bounds centre lands. Fill: the first k copies for a partial stack; the cord is drawn whole. cord_obj is in the same folder: our own mesh (forward -Z, up Y, load with flipX like the frames), UVs on meatbundles_atlas.png (v 0.5-1 cord hemp, v 0-0.5 binding hemp), not tinted. Our strands start inside the frame's knot, 0.095 m below the hook point. Every bundle stays in the hook-space envelope of _checks (top 0.12 m and bottom 0.67 m below the hook point, 0.075 m behind to 0.042-0.095 m in front of the cord) and clear of its own copy 0.194 m along the rail, so a full rack has no two meshes touching (checked: _checks). Back-row hooks (faces=back): turn the whole bundle (copies and cord) 180 degrees about up through the hook point. Eggs never hang (the mod keeps them in the bins) and have no recipe. _generic, _fish and _not_ripped are documentation: the mod skips keys starting with '_'."
+}

@@ -1,0 +1,12317 @@
+{
+ "store": "Ember Cabinet round 2: a dark oiled lantern cabinet on four hewn posts. Base: three roomy hewn bays for the elemental stones (Thunderstone, FrozenFuel, Crystal; 8 units each), reaching forward under a low front board. Above: 12 dark niches in 3 columns x 4 rows behind a face frame, an iron kerb and an open iron grille (no glass), for Frost core, Shield core, Glow worm, Molten core, Black core, Memorial coal, the two orbs, Surtling core, Wisp, Fader's ember and one spare; one kind per bay or niche",
+ "slots": 64,
+ "units": 64,
+ "steps": 8,
+ "stack_per_unit": 1,
+ "frame": {
+  "obj": "EmberCabinet.obj",
+  "tris": 4828,
+  "size_m": [
+   1.17,
+   1.99,
+   0.801
+  ],
+  "atlas": "embercabinet_atlas.png 128x128",
+  "atlas_sources": "rows 0-31 hewn timber, 32-63 x0-63 end grain, 64-79 and 112-127 dark iron: assets/bunker_r4; 32-63 x64-95 dark oiled timber texel, x96-127 wear swatch, 80-111 dark oiled hewn strip: assets/metalpallet_r3; nothing new"
+ },
+ "placement": "ground",
+ "filter_prefabs": [
+  "Thunderstone",
+  "FrozenFuel",
+  "Crystal",
+  "FrostCore",
+  "ShieldCore",
+  "GlowWorm",
+  "MoltenCore",
+  "BlackCore",
+  "MemorialCoal",
+  "OrbFrostFire",
+  "OrbThunderBlood",
+  "SurtlingCore",
+  "Wisp",
+  "FaderEmber"
+ ],
+ "space": "Unity prefab space, origin = footprint centre on the ground. Blender z-up/-y front -> Unity y-up/+z front: ux=-bx, uy=bz, uz=-by. OBJ export (forward NEGATIVE_Z, up Y) writes (bx, bz, -by); Unity's importer negates x, same mapping.",
+ "unit_semantics": "SETTLED: every copy has an explicit final pose from a rigid-body simulation (each copy's collision shape is its own convex hull, shrunk by the Bullet margin so it rests within about a millimetre of what carries it; friction 0.75, restitution 0), dropped in batches onto the frozen earlier copies; each niche's copy sequence is cut into its units in drop order. Each copy: the item's bounds centre at unit.position + copy.offset (= copy.world_position), rotated by copy.quat_xyzw (or copy.euler, Unity ZXY), longest side fit_longest_m. unit.position = centre of unit.box = the bounding box of the unit's copies, its bottom lowered to the lowest rotated-bounds corner (the never-below-the-floor lift leaves every settled copy alone).",
+ "fill_order": "units are listed in fill order (interleaved over the niches); within a niche its units fill bottom up. Show the first n copies of a unit for a partial stack. Later copies rest on earlier ones, earlier ones never move. One item kind per niche (unit.bin = row * 3 + column; row 0 = the stone base bays, rows 1-4 = the niche rows bottom up; column 0 the left as seen from the front; unit.item = the kind the bay or niche is for). Bin 14 (row 4 column 2, top right) is spare: its units have no item, only example_item; it is free for any kind that has no place or more stock than its own. Thunderstone (bin 0), FrozenFuel (bin 1) and Crystal (bin 2) have no rip yet: their bays were laid out with ripped stand-in lumps (Stone, BlackMarble, Flint) at a generic 0.14 m; copies.item names the stand-in, unit.item the kind.",
+ "bins": [
+  {
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "home": "Thunderstone",
+   "layout_item": "Stone",
+   "units": 8,
+   "copies": 21,
+   "copies_per_unit": [
+    3,
+    2,
+    3,
+    2,
+    3,
+    3,
+    2,
+    3
+   ],
+   "inner_x_unity": [
+    0.175,
+    0.445
+   ],
+   "inner_z_unity": [
+    -0.1975,
+    0.46
+   ],
+   "floor_y": 0.1,
+   "ceiling_y": 0.444,
+   "heap_peak_y": 0.395,
+   "cover": 0.5
+  },
+  {
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "home": "FrozenFuel",
+   "layout_item": "BlackMarble",
+   "units": 8,
+   "copies": 24,
+   "copies_per_unit": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "inner_x_unity": [
+    -0.135,
+    0.135
+   ],
+   "inner_z_unity": [
+    -0.1975,
+    0.46
+   ],
+   "floor_y": 0.1,
+   "ceiling_y": 0.444,
+   "heap_peak_y": 0.412,
+   "cover": 0.75
+  },
+  {
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "home": "Crystal",
+   "layout_item": "Flint",
+   "units": 8,
+   "copies": 70,
+   "copies_per_unit": [
+    9,
+    9,
+    8,
+    9,
+    9,
+    8,
+    9,
+    9
+   ],
+   "inner_x_unity": [
+    -0.445,
+    -0.175
+   ],
+   "inner_z_unity": [
+    -0.1975,
+    0.46
+   ],
+   "floor_y": 0.1,
+   "ceiling_y": 0.444,
+   "heap_peak_y": 0.383,
+   "cover": 0.193
+  },
+  {
+   "bin": 3,
+   "cell": [
+    0,
+    1
+   ],
+   "home": "FrostCore",
+   "layout_item": "FrostCore",
+   "units": 3,
+   "copies": 14,
+   "copies_per_unit": [
+    5,
+    4,
+    5
+   ],
+   "inner_x_unity": [
+    0.175,
+    0.445
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 0.5,
+   "ceiling_y": 0.8,
+   "heap_peak_y": 0.732,
+   "cover": 0.299
+  },
+  {
+   "bin": 4,
+   "cell": [
+    1,
+    1
+   ],
+   "home": "ShieldCore",
+   "layout_item": "ShieldCore",
+   "units": 3,
+   "copies": 20,
+   "copies_per_unit": [
+    7,
+    6,
+    7
+   ],
+   "inner_x_unity": [
+    -0.135,
+    0.135
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 0.5,
+   "ceiling_y": 0.8,
+   "heap_peak_y": 0.783,
+   "cover": 0.961
+  },
+  {
+   "bin": 5,
+   "cell": [
+    2,
+    1
+   ],
+   "home": "GlowWorm",
+   "layout_item": "GlowWorm",
+   "units": 3,
+   "copies": 28,
+   "copies_per_unit": [
+    9,
+    10,
+    9
+   ],
+   "inner_x_unity": [
+    -0.445,
+    -0.175
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 0.5,
+   "ceiling_y": 0.8,
+   "heap_peak_y": 0.771,
+   "cover": 0.883
+  },
+  {
+   "bin": 6,
+   "cell": [
+    0,
+    2
+   ],
+   "home": "MoltenCore",
+   "layout_item": "MoltenCore",
+   "units": 4,
+   "copies": 22,
+   "copies_per_unit": [
+    6,
+    5,
+    5,
+    6
+   ],
+   "inner_x_unity": [
+    0.175,
+    0.445
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 0.84,
+   "ceiling_y": 1.1,
+   "heap_peak_y": 1.087,
+   "cover": 0.857
+  },
+  {
+   "bin": 7,
+   "cell": [
+    1,
+    2
+   ],
+   "home": "BlackCore",
+   "layout_item": "BlackCore",
+   "units": 4,
+   "copies": 23,
+   "copies_per_unit": [
+    6,
+    6,
+    5,
+    6
+   ],
+   "inner_x_unity": [
+    -0.135,
+    0.135
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 0.84,
+   "ceiling_y": 1.1,
+   "heap_peak_y": 1.071,
+   "cover": 0.74
+  },
+  {
+   "bin": 8,
+   "cell": [
+    2,
+    2
+   ],
+   "home": "MemorialCoal",
+   "layout_item": "MemorialCoal",
+   "units": 3,
+   "copies": 18,
+   "copies_per_unit": [
+    6,
+    6,
+    6
+   ],
+   "inner_x_unity": [
+    -0.445,
+    -0.175
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 0.84,
+   "ceiling_y": 1.1,
+   "heap_peak_y": 1.053,
+   "cover": 0.636
+  },
+  {
+   "bin": 9,
+   "cell": [
+    0,
+    3
+   ],
+   "home": "OrbFrostFire",
+   "layout_item": "OrbFrostFire",
+   "units": 3,
+   "copies": 22,
+   "copies_per_unit": [
+    7,
+    8,
+    7
+   ],
+   "inner_x_unity": [
+    0.175,
+    0.445
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 1.14,
+   "ceiling_y": 1.38,
+   "heap_peak_y": 1.334,
+   "cover": 0.494
+  },
+  {
+   "bin": 10,
+   "cell": [
+    1,
+    3
+   ],
+   "home": "OrbThunderBlood",
+   "layout_item": "OrbThunderBlood",
+   "units": 3,
+   "copies": 26,
+   "copies_per_unit": [
+    9,
+    8,
+    9
+   ],
+   "inner_x_unity": [
+    -0.135,
+    0.135
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 1.14,
+   "ceiling_y": 1.38,
+   "heap_peak_y": 1.35,
+   "cover": 0.74
+  },
+  {
+   "bin": 11,
+   "cell": [
+    2,
+    3
+   ],
+   "home": "SurtlingCore",
+   "layout_item": "SurtlingCore",
+   "units": 3,
+   "copies": 9,
+   "copies_per_unit": [
+    3,
+    3,
+    3
+   ],
+   "inner_x_unity": [
+    -0.445,
+    -0.175
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 1.14,
+   "ceiling_y": 1.38,
+   "heap_peak_y": 1.361,
+   "cover": 0.87
+  },
+  {
+   "bin": 12,
+   "cell": [
+    0,
+    4
+   ],
+   "home": "Wisp",
+   "layout_item": "Wisp",
+   "units": 5,
+   "copies": 21,
+   "copies_per_unit": [
+    4,
+    4,
+    5,
+    4,
+    4
+   ],
+   "inner_x_unity": [
+    0.175,
+    0.445
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 1.42,
+   "ceiling_y": 1.6,
+   "heap_peak_y": 1.556,
+   "cover": 0.909
+  },
+  {
+   "bin": 13,
+   "cell": [
+    1,
+    4
+   ],
+   "home": "FaderEmber",
+   "layout_item": "FaderEmber",
+   "units": 4,
+   "copies": 23,
+   "copies_per_unit": [
+    6,
+    6,
+    5,
+    6
+   ],
+   "inner_x_unity": [
+    -0.135,
+    0.135
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 1.42,
+   "ceiling_y": 1.6,
+   "heap_peak_y": 1.554,
+   "cover": 0.844
+  },
+  {
+   "bin": 14,
+   "cell": [
+    2,
+    4
+   ],
+   "home": null,
+   "layout_item": "OrbFrostFire",
+   "units": 2,
+   "copies": 26,
+   "copies_per_unit": [
+    13,
+    13
+   ],
+   "inner_x_unity": [
+    -0.445,
+    -0.175
+   ],
+   "inner_z_unity": [
+    -0.2,
+    0.2
+   ],
+   "floor_y": 1.42,
+   "ceiling_y": 1.6,
+   "heap_peak_y": 1.561,
+   "cover": 0.922
+  }
+ ],
+ "items": {
+  "BlackCore@0.12": {
+   "bounds_size_unity": [
+    0.1818,
+    0.3152,
+    0.182
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.157,
+    -0.03
+   ],
+   "scale_used": 0.38071,
+   "fit_longest_m": 0.12,
+   "tris_per_copy_in_game": 688
+  },
+  "BlackMarble@0.14": {
+   "bounds_size_unity": [
+    0.4939,
+    0.5901,
+    0.4563
+   ],
+   "bounds_center_unity": [
+    -0.0007,
+    0.0468,
+    0.0284
+   ],
+   "scale_used": 0.23725,
+   "fit_longest_m": 0.14,
+   "tris_per_copy_in_game": 78,
+   "note": "STAND-IN: the FrozenFuel niche was laid out with this ripped lump (BlackMarble) because FrozenFuel has no rip yet; fit_longest_m 0.14 is a generic size (the cabinet's big-core size), not measured from FrozenFuel. The mod draws the stored item itself at these poses, longest side fit_longest_m."
+  },
+  "FaderEmber@0.07": {
+   "bounds_size_unity": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "scale_used": 0.7,
+   "fit_longest_m": 0.07,
+   "tris_per_copy_in_game": 768,
+   "note": "The prefab's model is demister_ball: a MeshRenderer with Unity's built-in Sphere at scale 0.1 (0.1 m). Round 2 lays it out with that sphere as ripped from the bundle (768 triangles; r1 used a UV-sphere stand-in of the same size). ParticleSystems and the prefab's point light are not drawn by the mod."
+  },
+  "Flint@0.14": {
+   "bounds_size_unity": [
+    0.3216,
+    0.1944,
+    0.6506
+   ],
+   "bounds_center_unity": [
+    -0.0009,
+    0.0972,
+    0.0036
+   ],
+   "scale_used": 0.21519,
+   "fit_longest_m": 0.14,
+   "tris_per_copy_in_game": 48,
+   "note": "STAND-IN: the Crystal niche was laid out with this ripped lump (Flint) because Crystal has no rip yet; fit_longest_m 0.14 is a generic size (the cabinet's big-core size), not measured from Crystal. The mod draws the stored item itself at these poses, longest side fit_longest_m."
+  },
+  "FrostCore@0.12": {
+   "bounds_size_unity": [
+    0.7165,
+    0.5984,
+    0.7132
+   ],
+   "bounds_center_unity": [
+    -0.039,
+    0.0079,
+    -0.0379
+   ],
+   "scale_used": 0.16748,
+   "fit_longest_m": 0.12,
+   "tris_per_copy_in_game": 124
+  },
+  "GlowWorm@0.13": {
+   "bounds_size_unity": [
+    0.3234,
+    0.5126,
+    0.7094
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    -0.0543,
+    0.1145
+   ],
+   "scale_used": 0.18325,
+   "fit_longest_m": 0.13,
+   "tris_per_copy_in_game": 472
+  },
+  "MemorialCoal@0.12": {
+   "bounds_size_unity": [
+    0.4447,
+    0.6029,
+    0.4444
+   ],
+   "bounds_center_unity": [
+    0.0038,
+    0.0068,
+    -0.0587
+   ],
+   "scale_used": 0.19904,
+   "fit_longest_m": 0.12,
+   "tris_per_copy_in_game": 56
+  },
+  "MoltenCore@0.09": {
+   "bounds_size_unity": [
+    0.2448,
+    0.264,
+    0.235
+   ],
+   "bounds_center_unity": [
+    0.0231,
+    0.124,
+    -0.0215
+   ],
+   "scale_used": 0.34091,
+   "fit_longest_m": 0.09,
+   "tris_per_copy_in_game": 280
+  },
+  "OrbFrostFire@0.07": {
+   "bounds_size_unity": [
+    0.2772,
+    0.2772,
+    0.2772
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "scale_used": 0.25253,
+   "fit_longest_m": 0.07,
+   "tris_per_copy_in_game": 120
+  },
+  "OrbFrostFire@0.085": {
+   "bounds_size_unity": [
+    0.2772,
+    0.2772,
+    0.2772
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "scale_used": 0.30664,
+   "fit_longest_m": 0.085,
+   "tris_per_copy_in_game": 120
+  },
+  "OrbThunderBlood@0.085": {
+   "bounds_size_unity": [
+    0.2772,
+    0.2772,
+    0.2772
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "scale_used": 0.30664,
+   "fit_longest_m": 0.085,
+   "tris_per_copy_in_game": 120
+  },
+  "ShieldCore@0.13": {
+   "bounds_size_unity": [
+    0.2612,
+    0.5449,
+    0.3426
+   ],
+   "bounds_center_unity": [
+    0.0009,
+    0.1783,
+    -0.0
+   ],
+   "scale_used": 0.23858,
+   "fit_longest_m": 0.13,
+   "tris_per_copy_in_game": 1420
+  },
+  "Stone@0.14": {
+   "bounds_size_unity": [
+    0.5304,
+    0.3206,
+    0.5023
+   ],
+   "bounds_center_unity": [
+    -0.0015,
+    0.1603,
+    0.0027
+   ],
+   "scale_used": 0.26395,
+   "fit_longest_m": 0.14,
+   "tris_per_copy_in_game": 48,
+   "note": "STAND-IN: the Thunderstone niche was laid out with this ripped lump (Stone) because Thunderstone has no rip yet; fit_longest_m 0.14 is a generic size (the cabinet's big-core size), not measured from Thunderstone. The mod draws the stored item itself at these poses, longest side fit_longest_m."
+  },
+  "SurtlingCore@0.11": {
+   "bounds_size_unity": [
+    0.2846,
+    0.2874,
+    0.2816
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.127,
+    0.0029
+   ],
+   "scale_used": 0.38274,
+   "fit_longest_m": 0.11,
+   "tris_per_copy_in_game": 302
+  },
+  "Wisp@0.07": {
+   "bounds_size_unity": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "scale_used": 0.7,
+   "fit_longest_m": 0.07,
+   "tris_per_copy_in_game": 768,
+   "note": "The prefab's model is demister_ball: a MeshRenderer with Unity's built-in Sphere at scale 0.1 (0.1 m). Round 2 lays it out with that sphere as ripped from the bundle (768 triangles; r1 used a UV-sphere stand-in of the same size). ParticleSystems and the prefab's point light are not drawn by the mod."
+  }
+ },
+ "checks": {
+  "clipping_frame": 0,
+  "of_copies": 367,
+  "escaped": 0,
+  "interpenetration_hull_max_m": 0.0,
+  "hull_pairs_overlapping": 0,
+  "rest": {
+   "on_floor": 133,
+   "on_copies_only": 234,
+   "hovering": 0,
+   "wedged": 0,
+   "front_air": 0,
+   "mesh_clip_pairs": 0,
+   "floor_gap_mm_max": 1.2,
+   "floor_gap_mm_median": 1.19,
+   "floor_gap_mm_min": 0.86,
+   "support_gap_mm_max": 2.26,
+   "support_gap_mm_median": 1.65,
+   "touch_mm": 4.0,
+   "hover_list": [],
+   "wedged_list": [],
+   "wedged_removed": 0
+  },
+  "retries": 151,
+  "pen_removed": 0,
+  "front_lean_removed": 142,
+  "mesh_clip_removed": 4,
+  "batches_dropped": 37,
+  "contents_tris_full_in_game": 117974,
+  "frame_tris": 4828,
+  "total_tris_full": 122802,
+  "coplanar_frame": {
+   "same_facing_overlaps": 0,
+   "back_to_back": 1319,
+   "tolerance_mm": 2.0,
+   "min_area_cm2": 0.002
+  },
+  "per_bin": {
+   "0": {
+    "item": "Stone",
+    "home": "Thunderstone",
+    "copies": 21,
+    "cap": 70,
+    "cover": 0.5,
+    "peak": 0.395,
+    "ceiling": 0.444,
+    "floor": 0.1,
+    "seconds": 0.5
+   },
+   "1": {
+    "item": "BlackMarble",
+    "home": "FrozenFuel",
+    "copies": 24,
+    "cap": 70,
+    "cover": 0.75,
+    "peak": 0.412,
+    "ceiling": 0.444,
+    "floor": 0.1,
+    "seconds": 0.9
+   },
+   "2": {
+    "item": "Flint",
+    "home": "Crystal",
+    "copies": 70,
+    "cap": 70,
+    "cover": 0.193,
+    "peak": 0.383,
+    "ceiling": 0.444,
+    "floor": 0.1,
+    "seconds": 2.4
+   },
+   "3": {
+    "item": "FrostCore",
+    "home": "FrostCore",
+    "copies": 14,
+    "cap": 45,
+    "cover": 0.299,
+    "peak": 0.732,
+    "ceiling": 0.8,
+    "floor": 0.5,
+    "seconds": 0.5
+   },
+   "4": {
+    "item": "ShieldCore",
+    "home": "ShieldCore",
+    "copies": 20,
+    "cap": 26,
+    "cover": 0.961,
+    "peak": 0.783,
+    "ceiling": 0.8,
+    "floor": 0.5,
+    "seconds": 2.5
+   },
+   "5": {
+    "item": "GlowWorm",
+    "home": "GlowWorm",
+    "copies": 28,
+    "cap": 30,
+    "cover": 0.883,
+    "peak": 0.771,
+    "ceiling": 0.8,
+    "floor": 0.5,
+    "seconds": 1.5
+   },
+   "6": {
+    "item": "MoltenCore",
+    "home": "MoltenCore",
+    "copies": 22,
+    "cap": 60,
+    "cover": 0.857,
+    "peak": 1.087,
+    "ceiling": 1.1,
+    "floor": 0.84,
+    "seconds": 2.8
+   },
+   "7": {
+    "item": "BlackCore",
+    "home": "BlackCore",
+    "copies": 23,
+    "cap": 30,
+    "cover": 0.74,
+    "peak": 1.071,
+    "ceiling": 1.1,
+    "floor": 0.84,
+    "seconds": 1.2
+   },
+   "8": {
+    "item": "MemorialCoal",
+    "home": "MemorialCoal",
+    "copies": 18,
+    "cap": 45,
+    "cover": 0.636,
+    "peak": 1.053,
+    "ceiling": 1.1,
+    "floor": 0.84,
+    "seconds": 0.9
+   },
+   "9": {
+    "item": "OrbFrostFire",
+    "home": "OrbFrostFire",
+    "copies": 22,
+    "cap": 50,
+    "cover": 0.494,
+    "peak": 1.334,
+    "ceiling": 1.38,
+    "floor": 1.14,
+    "seconds": 1.0
+   },
+   "10": {
+    "item": "OrbThunderBlood",
+    "home": "OrbThunderBlood",
+    "copies": 26,
+    "cap": 50,
+    "cover": 0.74,
+    "peak": 1.35,
+    "ceiling": 1.38,
+    "floor": 1.14,
+    "seconds": 1.1
+   },
+   "11": {
+    "item": "SurtlingCore",
+    "home": "SurtlingCore",
+    "copies": 9,
+    "cap": 36,
+    "cover": 0.87,
+    "peak": 1.361,
+    "ceiling": 1.38,
+    "floor": 1.14,
+    "seconds": 0.6
+   },
+   "12": {
+    "item": "Wisp",
+    "home": "Wisp",
+    "copies": 21,
+    "cap": 55,
+    "cover": 0.909,
+    "peak": 1.556,
+    "ceiling": 1.6,
+    "floor": 1.42,
+    "seconds": 2.6
+   },
+   "13": {
+    "item": "FaderEmber",
+    "home": "FaderEmber",
+    "copies": 23,
+    "cap": 55,
+    "cover": 0.844,
+    "peak": 1.554,
+    "ceiling": 1.6,
+    "floor": 1.42,
+    "seconds": 2.7
+   },
+   "14": {
+    "item": "OrbFrostFire",
+    "home": null,
+    "copies": 26,
+    "cap": 55,
+    "cover": 0.922,
+    "peak": 1.561,
+    "ceiling": 1.6,
+    "floor": 1.42,
+    "seconds": 0.6
+   }
+  }
+ },
+ "rotation_convert_max_err": 1.867540390776412e-06,
+ "units_list": [
+  {
+   "index": 0,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "FrozenFuel",
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0135,
+    0.1265,
+    0.2081
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.239,
+    0.1751,
+    0.4246
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0373,
+      0.0188,
+      0.1502
+     ],
+     "euler": [
+      -139.829,
+      -17.693,
+      -34.778
+     ],
+     "quat_xyzw": [
+      -0.86981,
+      -0.32774,
+      -0.23925,
+      0.28067
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0509,
+      0.1453,
+      0.3582
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0605,
+      0.0125,
+      -0.1586
+     ],
+     "euler": [
+      114.414,
+      44.634,
+      -71.896
+     ],
+     "quat_xyzw": [
+      0.50882,
+      0.62303,
+      -0.55256,
+      0.21822
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.047,
+      0.139,
+      0.0494
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0523,
+      0.0257,
+      -0.0225
+     ],
+     "euler": [
+      148.054,
+      -27.217,
+      -71.66
+     ],
+     "quat_xyzw": [
+      0.79547,
+      0.49449,
+      0.02683,
+      0.34926
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0388,
+      0.1521,
+      0.1856
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "Crystal",
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "position": [
+    -0.311,
+    0.1169,
+    0.137
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2637,
+    0.0711,
+    0.6082
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Flint",
+     "offset": [
+      0.0519,
+      0.0041,
+      -0.2473
+     ],
+     "euler": [
+      6.009,
+      49.56,
+      163.204
+     ],
+     "quat_xyzw": [
+      0.42102,
+      0.01405,
+      0.89374,
+      0.15415
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2591,
+      0.121,
+      -0.1104
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0617,
+      0.0042,
+      -0.1314
+     ],
+     "euler": [
+      -6.538,
+      -87.638,
+      -163.191
+     ],
+     "quat_xyzw": [
+      0.67782,
+      -0.14173,
+      -0.71839,
+      0.06623
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3726,
+      0.1212,
+      0.0056
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0867,
+      0.0052,
+      0.0534
+     ],
+     "euler": [
+      0.0,
+      2.39,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.0,
+      0.02086,
+      -0.0,
+      0.99978
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2243,
+      0.1221,
+      0.1904
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0488,
+      0.0041,
+      0.205
+     ],
+     "euler": [
+      6.009,
+      -69.19,
+      163.204
+     ],
+     "quat_xyzw": [
+      -0.55461,
+      -0.12549,
+      0.81758,
+      0.09062
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2622,
+      0.121,
+      0.342
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0875,
+      0.0042,
+      0.119
+     ],
+     "euler": [
+      173.706,
+      -21.078,
+      17.126
+     ],
+     "quat_xyzw": [
+      0.96921,
+      -0.15609,
+      0.18863,
+      0.02618
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3985,
+      0.1211,
+      0.2559
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0625,
+      0.0052,
+      -0.1056
+     ],
+     "euler": [
+      -0.0,
+      -81.909,
+      0.0
+     ],
+     "quat_xyzw": [
+      -0.0,
+      -0.65546,
+      0.0,
+      0.75523
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2484,
+      0.1221,
+      0.0313
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0794,
+      0.0052,
+      -0.2367
+     ],
+     "euler": [
+      0.0,
+      -149.712,
+      0.0
+     ],
+     "quat_xyzw": [
+      -0.0,
+      -0.96527,
+      0.0,
+      0.26125
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3904,
+      0.1221,
+      -0.0997
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0729,
+      0.0041,
+      0.2429
+     ],
+     "euler": [
+      173.991,
+      28.595,
+      -16.796
+     ],
+     "quat_xyzw": [
+      0.95543,
+      0.15414,
+      -0.25139,
+      0.01423
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3838,
+      0.121,
+      0.3799
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0129,
+      0.0052,
+      0.0153
+     ],
+     "euler": [
+      0.0,
+      -13.344,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.0,
+      -0.11619,
+      -0.0,
+      0.99323
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2981,
+      0.1221,
+      0.1523
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "Thunderstone",
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "position": [
+    0.2941,
+    0.1391,
+    0.1203
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2325,
+    0.1685,
+    0.4646
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Stone",
+     "offset": [
+      0.0157,
+      0.0025,
+      0.0478
+     ],
+     "euler": [
+      4.812,
+      -43.832,
+      -163.101
+     ],
+     "quat_xyzw": [
+      0.3746,
+      -0.01627,
+      -0.91455,
+      0.1517
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3098,
+      0.1415,
+      0.1681
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      0.0438,
+      0.0114,
+      -0.1661
+     ],
+     "euler": [
+      -19.905,
+      -95.562,
+      -143.638
+     ],
+     "quat_xyzw": [
+      0.65679,
+      -0.33794,
+      -0.66875,
+      0.08491
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3379,
+      0.1504,
+      -0.0458
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0642,
+      0.0137,
+      0.1594
+     ],
+     "euler": [
+      -18.385,
+      -22.663,
+      138.85
+     ],
+     "quat_xyzw": [
+      -0.23664,
+      0.07848,
+      0.89514,
+      0.36955
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2299,
+      0.1527,
+      0.2797
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "Wisp",
+   "bin": 12,
+   "cell": [
+    0,
+    4
+   ],
+   "position": [
+    0.3083,
+    1.4427,
+    -0.0784
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2509,
+    0.096,
+    0.2215
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Wisp",
+     "offset": [
+      0.0301,
+      0.0133,
+      0.0758
+     ],
+     "euler": [
+      44.318,
+      59.574,
+      124.966
+     ],
+     "quat_xyzw": [
+      0.55928,
+      -0.07775,
+      0.62628,
+      0.53753
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.3385,
+      1.456,
+      -0.0026
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      0.0905,
+      0.0132,
+      -0.0757
+     ],
+     "euler": [
+      -26.308,
+      -37.361,
+      -28.746
+     ],
+     "quat_xyzw": [
+      -0.13141,
+      -0.35564,
+      -0.29959,
+      0.8755
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.3988,
+      1.4559,
+      -0.1541
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0906,
+      0.0132,
+      0.0438
+     ],
+     "euler": [
+      -57.523,
+      -124.607,
+      29.801
+     ],
+     "quat_xyzw": [
+      -0.41571,
+      -0.69258,
+      -0.30694,
+      0.5033
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2177,
+      1.4558,
+      -0.0346
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0322,
+      0.0132,
+      -0.0168
+     ],
+     "euler": [
+      37.984,
+      82.048,
+      -70.583
+     ],
+     "quat_xyzw": [
+      -0.15817,
+      0.64843,
+      -0.58649,
+      0.45886
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2761,
+      1.4558,
+      -0.0952
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "FaderEmber",
+   "bin": 13,
+   "cell": [
+    1,
+    4
+   ],
+   "position": [
+    -0.0014,
+    1.4422,
+    -0.0022
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2554,
+    0.0971,
+    0.3139
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0607,
+      0.0138,
+      -0.0005
+     ],
+     "euler": [
+      139.699,
+      -29.885,
+      -43.835
+     ],
+     "quat_xyzw": [
+      0.87464,
+      0.25617,
+      0.10034,
+      0.39914
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0593,
+      1.456,
+      -0.0028
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0287,
+      0.0136,
+      -0.0333
+     ],
+     "euler": [
+      -27.737,
+      141.855,
+      -72.4
+     ],
+     "quat_xyzw": [
+      -0.60512,
+      0.69417,
+      -0.00456,
+      0.3898
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0302,
+      1.4558,
+      -0.0355
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0929,
+      0.0136,
+      0.1222
+     ],
+     "euler": [
+      -5.523,
+      -107.914,
+      -95.823
+     ],
+     "quat_xyzw": [
+      0.58035,
+      -0.56238,
+      -0.46226,
+      0.36502
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0943,
+      1.4559,
+      0.12
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0019,
+      0.0136,
+      -0.1223
+     ],
+     "euler": [
+      151.74,
+      -9.785,
+      -97.222
+     ],
+     "quat_xyzw": [
+      0.65445,
+      0.71112,
+      -0.1278,
+      0.22287
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0005,
+      1.4558,
+      -0.1245
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0928,
+      0.0136,
+      -0.0936
+     ],
+     "euler": [
+      -5.713,
+      -170.327,
+      6.646
+     ],
+     "quat_xyzw": [
+      -0.06188,
+      -0.99328,
+      -0.04469,
+      0.08695
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0914,
+      1.4558,
+      -0.0958
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0038,
+      0.0136,
+      0.1192
+     ],
+     "euler": [
+      -61.202,
+      30.091,
+      168.806
+     ],
+     "quat_xyzw": [
+      -0.17443,
+      -0.51106,
+      -0.84015,
+      0.05045
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0052,
+      1.4559,
+      0.117
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "BlackCore",
+   "bin": 7,
+   "cell": [
+    1,
+    2
+   ],
+   "position": [
+    0.0232,
+    0.8648,
+    0.0068
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2163,
+    0.092,
+    0.368
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0269,
+      0.011,
+      0.0477
+     ],
+     "euler": [
+      90.0,
+      0.0,
+      -50.729
+     ],
+     "quat_xyzw": [
+      0.63894,
+      0.30291,
+      -0.30291,
+      0.63894
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0037,
+      0.8759,
+      0.0545
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0011,
+      0.0112,
+      -0.1449
+     ],
+     "euler": [
+      112.743,
+      -70.528,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.67986,
+      -0.31974,
+      0.48072,
+      0.45218
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0244,
+      0.876,
+      -0.1381
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0633,
+      0.011,
+      -0.0795
+     ],
+     "euler": [
+      0.0,
+      125.485,
+      90.0
+     ],
+     "quat_xyzw": [
+      0.62859,
+      0.62859,
+      0.32385,
+      0.32385
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.04,
+      0.8758,
+      -0.0727
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.073,
+      0.011,
+      -0.0358
+     ],
+     "euler": [
+      0.0,
+      -109.242,
+      90.0
+     ],
+     "quat_xyzw": [
+      -0.57653,
+      -0.57653,
+      0.4094,
+      0.4094
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0962,
+      0.8758,
+      -0.029
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0685,
+      0.0112,
+      0.1111
+     ],
+     "euler": [
+      67.254,
+      -152.542,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.13143,
+      -0.80887,
+      0.53796,
+      0.19761
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0452,
+      0.876,
+      0.1179
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0646,
+      0.0112,
+      0.1273
+     ],
+     "euler": [
+      112.743,
+      -148.117,
+      0.0
+     ],
+     "quat_xyzw": [
+      0.22869,
+      -0.53251,
+      0.80062,
+      0.1521
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0879,
+      0.876,
+      0.1341
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "MoltenCore",
+   "bin": 6,
+   "cell": [
+    0,
+    2
+   ],
+   "position": [
+    0.3112,
+    0.8685,
+    -0.0067
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2621,
+    0.1117,
+    0.381
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0413,
+      0.0122,
+      -0.0545
+     ],
+     "euler": [
+      -4.582,
+      86.478,
+      -82.298
+     ],
+     "quat_xyzw": [
+      -0.47234,
+      0.49626,
+      -0.45836,
+      0.56615
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.3525,
+      0.8807,
+      -0.0612
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0856,
+      0.0125,
+      -0.133
+     ],
+     "euler": [
+      84.494,
+      -126.282,
+      -31.827
+     ],
+     "quat_xyzw": [
+      0.47319,
+      -0.5518,
+      0.48511,
+      0.48608
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2256,
+      0.881,
+      -0.1398
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0674,
+      0.0125,
+      0.089
+     ],
+     "euler": [
+      84.494,
+      -58.995,
+      -31.827
+     ],
+     "quat_xyzw": [
+      0.66269,
+      -0.19007,
+      0.1417,
+      0.71038
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2437,
+      0.881,
+      0.0823
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0631,
+      0.0134,
+      0.0587
+     ],
+     "euler": [
+      -7.565,
+      149.934,
+      92.24
+     ],
+     "quat_xyzw": [
+      0.68275,
+      0.6803,
+      0.23071,
+      0.13347
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.3743,
+      0.882,
+      0.0519
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0578,
+      0.0129,
+      0.1479
+     ],
+     "euler": [
+      3.222,
+      -44.628,
+      119.018
+     ],
+     "quat_xyzw": [
+      -0.31385,
+      -0.21498,
+      0.80228,
+      0.46002
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.3689,
+      0.8815,
+      0.1411
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0853,
+      0.014,
+      -0.1474
+     ],
+     "euler": [
+      44.409,
+      111.027,
+      18.318
+     ],
+     "quat_xyzw": [
+      0.33272,
+      0.71935,
+      -0.22409,
+      0.56712
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.3964,
+      0.8826,
+      -0.1541
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "OrbThunderBlood",
+   "bin": 10,
+   "cell": [
+    1,
+    3
+   ],
+   "position": [
+    -0.0,
+    1.1663,
+    -0.0019
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2643,
+    0.1183,
+    0.3862
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0598,
+      0.0146,
+      0.0488
+     ],
+     "euler": [
+      -14.529,
+      165.738,
+      74.994
+     ],
+     "quat_xyzw": [
+      0.58671,
+      0.79048,
+      0.17451,
+      0.02132
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0598,
+      1.1809,
+      0.0469
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0557,
+      0.0146,
+      0.0042
+     ],
+     "euler": [
+      14.529,
+      -17.947,
+      74.984
+     ],
+     "quat_xyzw": [
+      0.00493,
+      -0.19878,
+      0.61203,
+      0.76543
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0557,
+      1.1809,
+      0.0023
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.029,
+      0.0146,
+      -0.0891
+     ],
+     "euler": [
+      -110.77,
+      57.833,
+      -45.027
+     ],
+     "quat_xyzw": [
+      -0.77066,
+      -0.02209,
+      0.17722,
+      0.61171
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.029,
+      1.1809,
+      -0.091
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0687,
+      0.0146,
+      0.1496
+     ],
+     "euler": [
+      -14.529,
+      66.858,
+      -74.994
+     ],
+     "quat_xyzw": [
+      -0.41638,
+      0.36933,
+      -0.44867,
+      0.69922
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0687,
+      1.1809,
+      0.1478
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0626,
+      0.0152,
+      -0.1508
+     ],
+     "euler": [
+      10.744,
+      -39.007,
+      -45.028
+     ],
+     "quat_xyzw": [
+      0.2088,
+      -0.27327,
+      -0.33048,
+      0.87892
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0626,
+      1.1815,
+      -0.1527
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0603,
+      0.0156,
+      0.1511
+     ],
+     "euler": [
+      -50.296,
+      -58.565,
+      113.715
+     ],
+     "quat_xyzw": [
+      -0.57337,
+      0.06829,
+      0.54746,
+      0.6057
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0603,
+      1.1819,
+      0.1492
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0913,
+      0.0169,
+      -0.0316
+     ],
+     "euler": [
+      -118.41,
+      32.781,
+      -76.187
+     ],
+     "quat_xyzw": [
+      -0.7377,
+      -0.39473,
+      -0.11225,
+      0.53609
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0913,
+      1.1833,
+      -0.0334
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0892,
+      0.0146,
+      -0.1491
+     ],
+     "euler": [
+      110.767,
+      23.415,
+      -45.038
+     ],
+     "quat_xyzw": [
+      0.70026,
+      0.41512,
+      -0.36731,
+      0.44989
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0891,
+      1.1809,
+      -0.151
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0906,
+      0.0164,
+      -0.071
+     ],
+     "euler": [
+      -37.573,
+      12.317,
+      134.644
+     ],
+     "quat_xyzw": [
+      -0.02973,
+      0.33459,
+      0.88181,
+      0.33103
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0907,
+      1.1828,
+      -0.0729
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "FrostCore",
+   "bin": 3,
+   "cell": [
+    0,
+    1
+   ],
+   "position": [
+    0.3197,
+    0.5365,
+    -0.005
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2457,
+    0.1562,
+    0.3849
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FrostCore",
+     "offset": [
+      -0.0224,
+      0.01,
+      0.0089
+     ],
+     "euler": [
+      39.795,
+      -142.214,
+      87.958
+     ],
+     "quat_xyzw": [
+      0.53846,
+      0.71671,
+      -0.44314,
+      0.0045
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.2973,
+      0.5466,
+      0.0039
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      -0.0773,
+      0.0223,
+      -0.1432
+     ],
+     "euler": [
+      -19.433,
+      27.024,
+      -93.867
+     ],
+     "quat_xyzw": [
+      -0.2803,
+      0.03737,
+      -0.67322,
+      0.68323
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.2424,
+      0.5588,
+      -0.1483
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      0.0777,
+      0.0185,
+      -0.114
+     ],
+     "euler": [
+      11.29,
+      -29.188,
+      -148.183
+     ],
+     "quat_xyzw": [
+      0.26724,
+      0.02282,
+      -0.91936,
+      0.28781
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.3975,
+      0.555,
+      -0.1191
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      -0.0423,
+      0.0099,
+      0.148
+     ],
+     "euler": [
+      -129.864,
+      -8.531,
+      86.766
+     ],
+     "quat_xyzw": [
+      -0.67814,
+      0.59754,
+      0.24125,
+      0.35336
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.2774,
+      0.5465,
+      0.143
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      0.0653,
+      0.0099,
+      0.0431
+     ],
+     "euler": [
+      -50.136,
+      16.063,
+      -93.234
+     ],
+     "quat_xyzw": [
+      -0.38015,
+      -0.21798,
+      -0.6112,
+      0.65909
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.3851,
+      0.5465,
+      0.038
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "SurtlingCore",
+   "bin": 11,
+   "cell": [
+    2,
+    3
+   ],
+   "position": [
+    -0.3099,
+    1.1962,
+    -0.0319
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2646,
+    0.1611,
+    0.3196
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      -0.0766,
+      -0.0027,
+      -0.1005
+     ],
+     "euler": [
+      2.246,
+      74.192,
+      -104.786
+     ],
+     "quat_xyzw": [
+      -0.46819,
+      0.38038,
+      -0.63898,
+      0.47729
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.3865,
+      1.1935,
+      -0.1324
+     ]
+    },
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      0.0694,
+      -0.0033,
+      0.101
+     ],
+     "euler": [
+      73.525,
+      -60.031,
+      96.422
+     ],
+     "quat_xyzw": [
+      0.04655,
+      -0.65345,
+      0.71672,
+      0.23903
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.2405,
+      1.1929,
+      0.0691
+     ]
+    },
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      0.066,
+      0.0133,
+      -0.0351
+     ],
+     "euler": [
+      -38.454,
+      95.615,
+      28.747
+     ],
+     "quat_xyzw": [
+      -0.04059,
+      0.73257,
+      0.39377,
+      0.55375
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.244,
+      1.2095,
+      -0.067
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "MemorialCoal",
+   "bin": 8,
+   "cell": [
+    2,
+    2
+   ],
+   "position": [
+    -0.3109,
+    0.8979,
+    -0.0063
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2626,
+    0.2049,
+    0.3702
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      0.06,
+      -0.0214,
+      -0.102
+     ],
+     "euler": [
+      -12.192,
+      28.592,
+      111.751
+     ],
+     "quat_xyzw": [
+      0.14553,
+      0.22293,
+      0.81236,
+      0.51884
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.2509,
+      0.8765,
+      -0.1083
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0124,
+      -0.0213,
+      0.0581
+     ],
+     "euler": [
+      -13.634,
+      -57.105,
+      -113.904
+     ],
+     "quat_xyzw": [
+      0.34094,
+      -0.34621,
+      -0.76201,
+      0.42807
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.3233,
+      0.8766,
+      0.0518
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0916,
+      -0.0213,
+      -0.1209
+     ],
+     "euler": [
+      -12.064,
+      59.415,
+      111.792
+     ],
+     "quat_xyzw": [
+      0.3569,
+      0.35191,
+      0.74441,
+      0.44118
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.4026,
+      0.8766,
+      -0.1272
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0719,
+      -0.0194,
+      0.1189
+     ],
+     "euler": [
+      -115.043,
+      12.551,
+      21.886
+     ],
+     "quat_xyzw": [
+      -0.81215,
+      0.21681,
+      0.19186,
+      0.50656
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.3828,
+      0.8785,
+      0.1126
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      0.0738,
+      -0.0224,
+      0.1136
+     ],
+     "euler": [
+      46.51,
+      57.256,
+      117.263
+     ],
+     "quat_xyzw": [
+      0.55625,
+      -0.06676,
+      0.5901,
+      0.5813
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.2371,
+      0.8755,
+      0.1073
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0745,
+      0.0419,
+      0.0649
+     ],
+     "euler": [
+      125.568,
+      85.713,
+      32.236
+     ],
+     "quat_xyzw": [
+      0.71264,
+      0.11786,
+      -0.48802,
+      0.49
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.3855,
+      0.9398,
+      0.0587
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "ShieldCore",
+   "bin": 4,
+   "cell": [
+    1,
+    1
+   ],
+   "position": [
+    -0.0009,
+    0.5636,
+    -0.0143
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2634,
+    0.1537,
+    0.3657
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0974,
+      -0.0239,
+      0.1166
+     ],
+     "euler": [
+      -85.305,
+      -177.21,
+      -0.0
+     ],
+     "quat_xyzw": [
+      -0.01649,
+      -0.73526,
+      -0.67735,
+      0.0179
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0965,
+      0.5397,
+      0.1024
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0615,
+      -0.0239,
+      0.1353
+     ],
+     "euler": [
+      -85.305,
+      103.021,
+      -0.0
+     ],
+     "quat_xyzw": [
+      -0.42169,
+      0.57567,
+      0.53033,
+      0.45774
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0625,
+      0.5397,
+      0.121
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0611,
+      -0.0314,
+      -0.081
+     ],
+     "euler": [
+      5.672,
+      73.194,
+      90.0
+     ],
+     "quat_xyzw": [
+      0.44914,
+      0.39296,
+      0.54615,
+      0.58786
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0602,
+      0.5322,
+      -0.0952
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0479,
+      -0.0239,
+      0.0447
+     ],
+     "euler": [
+      -85.305,
+      101.021,
+      0.001
+     ],
+     "quat_xyzw": [
+      -0.43088,
+      0.5676,
+      0.5229,
+      0.46771
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0488,
+      0.5397,
+      0.0304
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0352,
+      -0.024,
+      -0.0559
+     ],
+     "euler": [
+      -31.009,
+      116.136,
+      86.776
+     ],
+     "quat_xyzw": [
+      0.45903,
+      0.69142,
+      0.51497,
+      0.21455
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0361,
+      0.5395,
+      -0.0701
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0273,
+      0.0433,
+      0.1106
+     ],
+     "euler": [
+      -9.807,
+      13.076,
+      -87.887
+     ],
+     "quat_xyzw": [
+      -0.13987,
+      0.02275,
+      -0.6799,
+      0.71948
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0264,
+      0.6069,
+      0.0964
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0637,
+      -0.0171,
+      -0.1518
+     ],
+     "euler": [
+      -76.12,
+      -69.369,
+      -20.079
+     ],
+     "quat_xyzw": [
+      -0.42107,
+      -0.52956,
+      -0.45831,
+      0.57638
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0646,
+      0.5464,
+      -0.1661
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "GlowWorm",
+   "bin": 5,
+   "cell": [
+    2,
+    1
+   ],
+   "position": [
+    -0.3099,
+    0.5521,
+    -0.0028
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2649,
+    0.1899,
+    0.3887
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0571,
+      -0.0229,
+      -0.1431
+     ],
+     "euler": [
+      5.085,
+      102.042,
+      75.721
+     ],
+     "quat_xyzw": [
+      0.49867,
+      0.59601,
+      0.35846,
+      0.5173
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2528,
+      0.5292,
+      -0.1458
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0549,
+      -0.0236,
+      -0.1258
+     ],
+     "euler": [
+      5.876,
+      -152.687,
+      -86.7
+     ],
+     "quat_xyzw": [
+      0.67497,
+      -0.69738,
+      -0.12564,
+      0.20565
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3648,
+      0.5285,
+      -0.1286
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0382,
+      -0.0197,
+      -0.0612
+     ],
+     "euler": [
+      19.111,
+      -89.767,
+      155.445
+     ],
+     "quat_xyzw": [
+      -0.65495,
+      -0.26291,
+      0.70764,
+      0.03412
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2717,
+      0.5324,
+      -0.0639
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0244,
+      -0.0197,
+      0.1263
+     ],
+     "euler": [
+      160.889,
+      -9.615,
+      24.556
+     ],
+     "quat_xyzw": [
+      0.95722,
+      -0.22256,
+      0.11594,
+      0.14406
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2855,
+      0.5324,
+      0.1236
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0626,
+      -0.0236,
+      -0.0096
+     ],
+     "euler": [
+      5.876,
+      -119.513,
+      -86.701
+     ],
+     "quat_xyzw": [
+      0.61102,
+      -0.60965,
+      -0.3131,
+      0.39618
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3724,
+      0.5285,
+      -0.0124
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0782,
+      0.0356,
+      -0.124
+     ],
+     "euler": [
+      -4.897,
+      -39.782,
+      36.723
+     ],
+     "quat_xyzw": [
+      -0.14521,
+      -0.30996,
+      0.28215,
+      0.89623
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2317,
+      0.5877,
+      -0.1267
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0759,
+      -0.0179,
+      0.1351
+     ],
+     "euler": [
+      158.367,
+      44.027,
+      -7.029
+     ],
+     "quat_xyzw": [
+      0.9046,
+      0.12603,
+      -0.37814,
+      0.15109
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3858,
+      0.5342,
+      0.1324
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0734,
+      0.0437,
+      -0.1622
+     ],
+     "euler": [
+      14.967,
+      -111.614,
+      42.812
+     ],
+     "quat_xyzw": [
+      -0.23117,
+      -0.79025,
+      0.30366,
+      0.47944
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3833,
+      0.5957,
+      -0.165
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0257,
+      0.036,
+      -0.0558
+     ],
+     "euler": [
+      162.731,
+      12.291,
+      -11.907
+     ],
+     "quat_xyzw": [
+      0.97602,
+      0.11794,
+      -0.12075,
+      0.13749
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3355,
+      0.5881,
+      -0.0586
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "OrbFrostFire",
+   "bin": 9,
+   "cell": [
+    0,
+    3
+   ],
+   "position": [
+    0.3144,
+    1.1666,
+    -0.0058
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2527,
+    0.113,
+    0.3803
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0523,
+      0.0149,
+      0.148
+     ],
+     "euler": [
+      10.744,
+      -142.575,
+      45.028
+     ],
+     "quat_xyzw": [
+      -0.33333,
+      -0.88261,
+      0.20422,
+      0.26112
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.3667,
+      1.1815,
+      0.1421
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0516,
+      0.0155,
+      -0.1491
+     ],
+     "euler": [
+      -3.951,
+      91.073,
+      15.003
+     ],
+     "quat_xyzw": [
+      0.06918,
+      0.71032,
+      0.11578,
+      0.69083
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.2627,
+      1.1822,
+      -0.1549
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0852,
+      0.0143,
+      -0.0485
+     ],
+     "euler": [
+      -165.47,
+      -1.105,
+      -75.0
+     ],
+     "quat_xyzw": [
+      -0.78621,
+      -0.60481,
+      -0.08456,
+      0.0945
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.3996,
+      1.1809,
+      -0.0543
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0841,
+      0.0143,
+      0.0361
+     ],
+     "euler": [
+      -14.529,
+      -158.7,
+      -74.994
+     ],
+     "quat_xyzw": [
+      0.57489,
+      -0.78768,
+      -0.21019,
+      0.0698
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.2303,
+      1.1809,
+      0.0303
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0342,
+      0.0149,
+      0.1217
+     ],
+     "euler": [
+      -10.735,
+      89.419,
+      -45.024
+     ],
+     "quat_xyzw": [
+      -0.32959,
+      0.6216,
+      -0.21012,
+      0.67885
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.2802,
+      1.1815,
+      0.1159
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0427,
+      0.0143,
+      -0.0549
+     ],
+     "euler": [
+      -43.201,
+      87.13,
+      -69.898
+     ],
+     "quat_xyzw": [
+      -0.58571,
+      0.37242,
+      -0.17798,
+      0.69755
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.2717,
+      1.1809,
+      -0.0607
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0561,
+      0.0143,
+      -0.1457
+     ],
+     "euler": [
+      14.529,
+      56.085,
+      105.016
+     ],
+     "quat_xyzw": [
+      0.43795,
+      0.1953,
+      0.65849,
+      0.58005
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.3705,
+      1.1809,
+      -0.1515
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "Thunderstone",
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "position": [
+    0.3099,
+    0.1546,
+    0.1396
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.265,
+    0.1786,
+    0.3536
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0571,
+      -0.014,
+      -0.1056
+     ],
+     "euler": [
+      12.156,
+      -56.846,
+      163.2
+     ],
+     "quat_xyzw": [
+      -0.45462,
+      -0.16127,
+      0.87249,
+      0.0779
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2528,
+      0.1407,
+      0.0341
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      0.0595,
+      0.0163,
+      0.1176
+     ],
+     "euler": [
+      -29.716,
+      -94.706,
+      115.561
+     ],
+     "quat_xyzw": [
+      -0.69409,
+      -0.23208,
+      0.45343,
+      0.5087
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3695,
+      0.1709,
+      0.2573
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "Crystal",
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "position": [
+    -0.3097,
+    0.1477,
+    0.1786
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2649,
+    0.1522,
+    0.5572
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Flint",
+     "offset": [
+      0.0043,
+      -0.0148,
+      -0.2337
+     ],
+     "euler": [
+      19.411,
+      70.205,
+      168.354
+     ],
+     "quat_xyzw": [
+      0.57788,
+      -0.0797,
+      0.79242,
+      0.17826
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3054,
+      0.1329,
+      -0.0551
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0649,
+      -0.0176,
+      0.2139
+     ],
+     "euler": [
+      4.868,
+      -65.565,
+      119.543
+     ],
+     "quat_xyzw": [
+      -0.44943,
+      -0.3032,
+      0.73734,
+      0.40302
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2448,
+      0.1301,
+      0.3925
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0817,
+      -0.0054,
+      -0.0113
+     ],
+     "euler": [
+      -33.062,
+      -61.959,
+      174.499
+     ],
+     "quat_xyzw": [
+      -0.50459,
+      0.21998,
+      0.81394,
+      0.18573
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3915,
+      0.1424,
+      0.1673
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.03,
+      -0.0123,
+      0.0561
+     ],
+     "euler": [
+      22.231,
+      3.856,
+      -179.231
+     ],
+     "quat_xyzw": [
+      -0.03172,
+      0.19289,
+      -0.98071,
+      0.0001
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2798,
+      0.1354,
+      0.2347
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0698,
+      -0.0072,
+      -0.0922
+     ],
+     "euler": [
+      6.372,
+      63.505,
+      -161.893
+     ],
+     "quat_xyzw": [
+      -0.51145,
+      0.12936,
+      -0.84304,
+      0.10472
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2399,
+      0.1406,
+      0.0864
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0914,
+      0.0084,
+      -0.2066
+     ],
+     "euler": [
+      -175.997,
+      15.288,
+      -14.736
+     ],
+     "quat_xyzw": [
+      -0.98293,
+      -0.12242,
+      0.1274,
+      0.05137
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2183,
+      0.1561,
+      -0.028
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0036,
+      0.0258,
+      0.2259
+     ],
+     "euler": [
+      -28.963,
+      28.897,
+      174.094
+     ],
+     "quat_xyzw": [
+      -0.22878,
+      -0.25429,
+      -0.93957,
+      0.01401
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3061,
+      0.1736,
+      0.4045
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0519,
+      -0.0069,
+      0.1273
+     ],
+     "euler": [
+      -30.97,
+      -37.249,
+      147.196
+     ],
+     "quat_xyzw": [
+      -0.36669,
+      0.1558,
+      0.85199,
+      0.33967
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3616,
+      0.1408,
+      0.3059
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0253,
+      0.0197,
+      0.0239
+     ],
+     "euler": [
+      13.816,
+      7.226,
+      -149.27
+     ],
+     "quat_xyzw": [
+      -0.02851,
+      0.13232,
+      -0.95736,
+      0.25521
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.335,
+      0.1674,
+      0.2025
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "FrozenFuel",
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0,
+    0.1499,
+    0.1311
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2643,
+    0.1915,
+    0.6525
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0682,
+      0.0006,
+      -0.2584
+     ],
+     "euler": [
+      39.449,
+      -111.257,
+      108.309
+     ],
+     "quat_xyzw": [
+      -0.51823,
+      -0.60944,
+      0.59391,
+      0.0854
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0682,
+      0.1505,
+      -0.1273
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0942,
+      0.0181,
+      0.1421
+     ],
+     "euler": [
+      0.833,
+      65.706,
+      -158.936
+     ],
+     "quat_xyzw": [
+      -0.53222,
+      0.10516,
+      -0.82661,
+      0.14967
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0941,
+      0.1681,
+      0.2733
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0682,
+      0.0028,
+      0.2577
+     ],
+     "euler": [
+      15.766,
+      -55.343,
+      108.392
+     ],
+     "quat_xyzw": [
+      -0.30202,
+      -0.36762,
+      0.74874,
+      0.46155
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0681,
+      0.1527,
+      0.3888
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "step": 2,
+   "kind": "heap_step",
+   "example_item": "OrbFrostFire",
+   "bin": 14,
+   "cell": [
+    2,
+    4
+   ],
+   "position": [
+    -0.3137,
+    1.4516,
+    -0.0005
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2569,
+    0.1181,
+    0.3835
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0582,
+      0.0029,
+      -0.0374
+     ],
+     "euler": [
+      -149.422,
+      -75.21,
+      36.202
+     ],
+     "quat_xyzw": [
+      -0.77637,
+      0.08448,
+      -0.49459,
+      0.38144
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3719,
+      1.4544,
+      -0.0379
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0362,
+      0.0024,
+      0.0843
+     ],
+     "euler": [
+      43.2,
+      65.444,
+      -110.08
+     ],
+     "quat_xyzw": [
+      -0.23445,
+      0.54181,
+      -0.7551,
+      0.28513
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3499,
+      1.4539,
+      0.0837
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0914,
+      0.0024,
+      -0.0828
+     ],
+     "euler": [
+      69.239,
+      100.062,
+      45.076
+     ],
+     "quat_xyzw": [
+      0.57882,
+      0.44265,
+      -0.19953,
+      0.65515
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2223,
+      1.4539,
+      -0.0833
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0851,
+      0.0029,
+      0.0872
+     ],
+     "euler": [
+      169.267,
+      7.185,
+      45.002
+     ],
+     "quat_xyzw": [
+      0.92026,
+      -0.37486,
+      -0.02191,
+      0.11011
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2286,
+      1.4544,
+      0.0866
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0568,
+      0.0029,
+      0.0052
+     ],
+     "euler": [
+      10.733,
+      -124.899,
+      -45.002
+     ],
+     "quat_xyzw": [
+      0.37778,
+      -0.79896,
+      -0.09962,
+      0.45718
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2569,
+      1.4544,
+      0.0046
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.094,
+      0.0031,
+      -0.1541
+     ],
+     "euler": [
+      14.102,
+      -143.378,
+      -69.417
+     ],
+     "quat_xyzw": [
+      0.56819,
+      -0.75257,
+      -0.08174,
+      0.32267
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.4077,
+      1.4546,
+      -0.1546
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0082,
+      0.0024,
+      -0.1268
+     ],
+     "euler": [
+      165.468,
+      27.435,
+      74.996
+     ],
+     "quat_xyzw": [
+      0.78281,
+      -0.56283,
+      -0.11183,
+      0.24067
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3055,
+      1.4539,
+      -0.1273
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0936,
+      0.0029,
+      0.0356
+     ],
+     "euler": [
+      10.733,
+      112.308,
+      134.998
+     ],
+     "quat_xyzw": [
+      0.78388,
+      0.26832,
+      0.48258,
+      0.28398
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.4073,
+      1.4544,
+      0.0351
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0936,
+      0.0034,
+      -0.1579
+     ],
+     "euler": [
+      -3.956,
+      59.335,
+      165.013
+     ],
+     "quat_xyzw": [
+      0.48654,
+      0.09425,
+      0.8632,
+      0.09632
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2202,
+      1.4549,
+      -0.1585
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0269,
+      0.0034,
+      0.1574
+     ],
+     "euler": [
+      175.47,
+      10.218,
+      -14.672
+     ],
+     "quat_xyzw": [
+      0.98665,
+      0.13057,
+      -0.09328,
+      0.02769
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2868,
+      1.4549,
+      0.1569
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0167,
+      0.0029,
+      -0.0537
+     ],
+     "euler": [
+      30.561,
+      -12.522,
+      -143.785
+     ],
+     "quat_xyzw": [
+      0.18141,
+      0.21631,
+      -0.90247,
+      0.32534
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.297,
+      1.4544,
+      -0.0543
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0532,
+      0.0253,
+      -0.1028
+     ],
+     "euler": [
+      -10.479,
+      61.574,
+      -168.439
+     ],
+     "quat_xyzw": [
+      -0.51502,
+      -0.02671,
+      -0.84643,
+      0.13267
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3669,
+      1.4768,
+      -0.1033
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0829,
+      0.0024,
+      0.1472
+     ],
+     "euler": [
+      43.199,
+      138.395,
+      -69.92
+     ],
+     "quat_xyzw": [
+      -0.39089,
+      0.78724,
+      -0.47124,
+      0.07344
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3967,
+      1.4539,
+      0.1467
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "Thunderstone",
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "position": [
+    0.31,
+    0.1594,
+    0.1313
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2643,
+    0.1962,
+    0.6521
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0622,
+      0.0059,
+      -0.2597
+     ],
+     "euler": [
+      -103.783,
+      3.487,
+      -77.807
+     ],
+     "quat_xyzw": [
+      -0.62383,
+      -0.47931,
+      -0.36877,
+      0.49508
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2478,
+      0.1653,
+      -0.1284
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0656,
+      0.0443,
+      -0.01
+     ],
+     "euler": [
+      10.476,
+      -70.155,
+      -174.425
+     ],
+     "quat_xyzw": [
+      0.57524,
+      0.04679,
+      -0.81144,
+      0.09204
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2444,
+      0.2036,
+      0.1213
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      0.083,
+      -0.003,
+      0.2577
+     ],
+     "euler": [
+      -167.406,
+      -19.535,
+      -49.103
+     ],
+     "quat_xyzw": [
+      -0.88326,
+      -0.42394,
+      -0.19829,
+      0.02826
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.393,
+      0.1564,
+      0.389
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "FrozenFuel",
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0001,
+    0.1612,
+    0.0004
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2646,
+    0.2449,
+    0.3368
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0697,
+      0.0019,
+      0.0975
+     ],
+     "euler": [
+      -65.588,
+      -43.917,
+      84.041
+     ],
+     "quat_xyzw": [
+      -0.5836,
+      0.10273,
+      0.37143,
+      0.71477
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0697,
+      0.1631,
+      0.0978
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0304,
+      -0.016,
+      -0.1016
+     ],
+     "euler": [
+      -40.191,
+      6.095,
+      144.335
+     ],
+     "quat_xyzw": [
+      -0.05754,
+      0.34191,
+      0.89833,
+      0.2698
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0304,
+      0.1452,
+      -0.1012
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0818,
+      0.0472,
+      0.0991
+     ],
+     "euler": [
+      152.315,
+      -3.317,
+      -15.817
+     ],
+     "quat_xyzw": [
+      0.96227,
+      0.12668,
+      -0.00507,
+      0.24074
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0817,
+      0.2084,
+      0.0995
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "Crystal",
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "position": [
+    -0.3017,
+    0.1516,
+    0.0734
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2385,
+    0.1568,
+    0.5367
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0464,
+      0.0199,
+      -0.2173
+     ],
+     "euler": [
+      -4.647,
+      121.701,
+      23.942
+     ],
+     "quat_xyzw": [
+      0.16168,
+      0.85775,
+      0.13558,
+      0.46876
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3481,
+      0.1714,
+      -0.1439
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0105,
+      0.0262,
+      -0.1401
+     ],
+     "euler": [
+      4.238,
+      177.848,
+      11.846
+     ],
+     "quat_xyzw": [
+      0.1038,
+      0.99373,
+      -0.03483,
+      0.02248
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2912,
+      0.1778,
+      -0.0667
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0245,
+      -0.0086,
+      0.0255
+     ],
+     "euler": [
+      145.895,
+      47.251,
+      -27.455
+     ],
+     "quat_xyzw": [
+      0.82299,
+      0.32202,
+      -0.43595,
+      0.17007
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3262,
+      0.143,
+      0.0989
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0655,
+      0.0122,
+      0.224
+     ],
+     "euler": [
+      159.38,
+      -48.644,
+      -58.69
+     ],
+     "quat_xyzw": [
+      0.81762,
+      0.3751,
+      0.2733,
+      0.34074
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2362,
+      0.1638,
+      0.2974
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0639,
+      0.0075,
+      -0.2338
+     ],
+     "euler": [
+      50.174,
+      72.863,
+      60.655
+     ],
+     "quat_xyzw": [
+      0.56603,
+      0.29198,
+      0.15061,
+      0.75609
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2379,
+      0.159,
+      -0.1604
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0128,
+      0.0255,
+      0.2046
+     ],
+     "euler": [
+      7.469,
+      -54.093,
+      -83.117
+     ],
+     "quat_xyzw": [
+      0.34442,
+      -0.30105,
+      -0.56742,
+      0.68468
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2889,
+      0.1771,
+      0.278
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0606,
+      0.0148,
+      -0.091
+     ],
+     "euler": [
+      165.574,
+      47.398,
+      -36.287
+     ],
+     "quat_xyzw": [
+      -0.84754,
+      -0.33084,
+      0.41473,
+      0.01492
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3623,
+      0.1663,
+      -0.0177
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0415,
+      0.0298,
+      0.049
+     ],
+     "euler": [
+      27.555,
+      12.418,
+      130.731
+     ],
+     "quat_xyzw": [
+      0.19417,
+      -0.17142,
+      0.86692,
+      0.42587
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2602,
+      0.1814,
+      0.1224
+     ]
+    }
+   ]
+  },
+  {
+   "index": 21,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "Wisp",
+   "bin": 12,
+   "cell": [
+    0,
+    4
+   ],
+   "position": [
+    0.3085,
+    1.4438,
+    0.0991
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2515,
+    0.0935,
+    0.1507
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0006,
+      0.0121,
+      0.0156
+     ],
+     "euler": [
+      38.092,
+      -73.208,
+      109.276
+     ],
+     "quat_xyzw": [
+      -0.30804,
+      -0.53984,
+      0.73145,
+      0.28048
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.3079,
+      1.4559,
+      0.1147
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      0.0909,
+      0.012,
+      0.017
+     ],
+     "euler": [
+      16.971,
+      38.194,
+      -83.006
+     ],
+     "quat_xyzw": [
+      -0.11,
+      0.33474,
+      -0.65549,
+      0.66796
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.3994,
+      1.4558,
+      0.1162
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0852,
+      0.012,
+      0.0405
+     ],
+     "euler": [
+      37.949,
+      78.027,
+      19.477
+     ],
+     "quat_xyzw": [
+      0.3497,
+      0.54398,
+      -0.07744,
+      0.75881
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2233,
+      1.4558,
+      0.1396
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.091,
+      0.012,
+      -0.0407
+     ],
+     "euler": [
+      -5.511,
+      -95.289,
+      95.81
+     ],
+     "quat_xyzw": [
+      -0.56943,
+      -0.47078,
+      0.47554,
+      0.47748
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2174,
+      1.4559,
+      0.0585
+     ]
+    }
+   ]
+  },
+  {
+   "index": 22,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "MoltenCore",
+   "bin": 6,
+   "cell": [
+    0,
+    2
+   ],
+   "position": [
+    0.2684,
+    0.9049,
+    -0.059
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1811,
+    0.1802,
+    0.245
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0168,
+      -0.0206,
+      0.0227
+     ],
+     "euler": [
+      133.039,
+      -64.406,
+      -66.942
+     ],
+     "quat_xyzw": [
+      0.7645,
+      0.25091,
+      0.22179,
+      0.55081
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2515,
+      0.8843,
+      -0.0362
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0467,
+      -0.0007,
+      -0.076
+     ],
+     "euler": [
+      -130.188,
+      -56.2,
+      44.296
+     ],
+     "quat_xyzw": [
+      -0.81583,
+      0.11791,
+      -0.25564,
+      0.50514
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.315,
+      0.9042,
+      -0.135
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0452,
+      0.0322,
+      0.0794
+     ],
+     "euler": [
+      -40.056,
+      -31.046,
+      -38.053
+     ],
+     "quat_xyzw": [
+      -0.22999,
+      -0.34528,
+      -0.38177,
+      0.82592
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2231,
+      0.9371,
+      0.0204
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0404,
+      0.0216,
+      0.0758
+     ],
+     "euler": [
+      33.783,
+      -67.02,
+      120.901
+     ],
+     "quat_xyzw": [
+      -0.34008,
+      -0.47128,
+      0.77316,
+      0.25391
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.3088,
+      0.9264,
+      0.0169
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0197,
+      0.0479,
+      -0.0359
+     ],
+     "euler": [
+      -20.695,
+      -46.139,
+      62.337
+     ],
+     "quat_xyzw": [
+      -0.3409,
+      -0.2443,
+      0.4082,
+      0.81085
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2487,
+      0.9527,
+      -0.0949
+     ]
+    }
+   ]
+  },
+  {
+   "index": 23,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "FaderEmber",
+   "bin": 13,
+   "cell": [
+    1,
+    4
+   ],
+   "position": [
+    0.0003,
+    1.4651,
+    -0.0047
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2636,
+    0.1269,
+    0.383
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0956,
+      -0.0093,
+      0.1566
+     ],
+     "euler": [
+      -28.224,
+      127.309,
+      -82.838
+     ],
+     "quat_xyzw": [
+      -0.6561,
+      0.58014,
+      -0.12089,
+      0.46729
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0959,
+      1.4558,
+      0.152
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0917,
+      -0.0093,
+      -0.148
+     ],
+     "euler": [
+      -61.104,
+      45.982,
+      11.24
+     ],
+     "quat_xyzw": [
+      -0.43275,
+      0.38057,
+      0.27523,
+      0.76951
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0914,
+      1.4558,
+      -0.1526
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0969,
+      -0.0092,
+      -0.0042
+     ],
+     "euler": [
+      -174.56,
+      -59.238,
+      28.317
+     ],
+     "quat_xyzw": [
+      -0.84771,
+      0.18966,
+      -0.46859,
+      0.16075
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0966,
+      1.4559,
+      -0.0089
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0971,
+      -0.0093,
+      0.0807
+     ],
+     "euler": [
+      16.845,
+      162.745,
+      -73.92
+     ],
+     "quat_xyzw": [
+      -0.57049,
+      0.7947,
+      -0.20494,
+      0.0315
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0974,
+      1.4558,
+      0.076
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0631,
+      -0.0091,
+      -0.1567
+     ],
+     "euler": [
+      -5.058,
+      -84.638,
+      133.113
+     ],
+     "quat_xyzw": [
+      -0.63006,
+      -0.23766,
+      0.66589,
+      0.32114
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0634,
+      1.456,
+      -0.1614
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0514,
+      0.0287,
+      0.0826
+     ],
+     "euler": [
+      -37.234,
+      -132.313,
+      -98.949
+     ],
+     "quat_xyzw": [
+      0.57501,
+      -0.66132,
+      -0.48092,
+      0.02697
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0511,
+      1.4938,
+      0.0779
+     ]
+    }
+   ]
+  },
+  {
+   "index": 24,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "BlackCore",
+   "bin": 7,
+   "cell": [
+    1,
+    2
+   ],
+   "position": [
+    -0.0003,
+    0.9102,
+    -0.0025
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2651,
+    0.1838,
+    0.3895
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.091,
+      0.0015,
+      -0.1446
+     ],
+     "euler": [
+      14.04,
+      63.643,
+      129.209
+     ],
+     "quat_xyzw": [
+      0.51729,
+      0.13062,
+      0.7342,
+      0.41988
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0914,
+      0.9118,
+      -0.1471
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0247,
+      0.0039,
+      -0.0152
+     ],
+     "euler": [
+      -31.5,
+      41.034,
+      -16.424
+     ],
+     "quat_xyzw": [
+      -0.2998,
+      0.29755,
+      -0.0346,
+      0.90575
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0244,
+      0.9141,
+      -0.0177
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0165,
+      0.0047,
+      0.1521
+     ],
+     "euler": [
+      -138.471,
+      89.998,
+      32.817
+     ],
+     "quat_xyzw": [
+      -0.56345,
+      0.42725,
+      0.70505,
+      0.05371
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0162,
+      0.9149,
+      0.1497
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0782,
+      0.0216,
+      -0.0921
+     ],
+     "euler": [
+      -14.617,
+      -35.577,
+      70.591
+     ],
+     "quat_xyzw": [
+      -0.27395,
+      -0.17733,
+      0.51398,
+      0.7933
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0779,
+      0.9318,
+      -0.0946
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0796,
+      -0.0207,
+      -0.0078
+     ],
+     "euler": [
+      -130.104,
+      45.17,
+      12.874
+     ],
+     "quat_xyzw": [
+      -0.81372,
+      0.25482,
+      0.38969,
+      0.34795
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0799,
+      0.8895,
+      -0.0102
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0061,
+      0.0469,
+      0.0726
+     ],
+     "euler": [
+      -33.946,
+      11.663,
+      -52.541
+     ],
+     "quat_xyzw": [
+      -0.30343,
+      -0.0414,
+      -0.39455,
+      0.86634
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0064,
+      0.9572,
+      0.0701
+     ]
+    }
+   ]
+  },
+  {
+   "index": 25,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "Thunderstone",
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "position": [
+    0.3399,
+    0.1938,
+    0.1314
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.205,
+    0.1767,
+    0.6521
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Stone",
+     "offset": [
+      0.0377,
+      0.0255,
+      -0.2659
+     ],
+     "euler": [
+      -172.942,
+      21.142,
+      -31.602
+     ],
+     "quat_xyzw": [
+      -0.94717,
+      -0.2563,
+      0.15971,
+      0.10808
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3776,
+      0.2193,
+      -0.1344
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0346,
+      0.0029,
+      0.2514
+     ],
+     "euler": [
+      40.663,
+      -21.862,
+      -163.247
+     ],
+     "quat_xyzw": [
+      0.22561,
+      0.3116,
+      -0.90126,
+      0.19931
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3053,
+      0.1967,
+      0.3828
+     ]
+    }
+   ]
+  },
+  {
+   "index": 26,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "Crystal",
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "position": [
+    -0.3101,
+    0.1803,
+    0.1243
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2649,
+    0.1462,
+    0.6385
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0648,
+      0.0039,
+      0.1137
+     ],
+     "euler": [
+      -23.559,
+      90.305,
+      -150.701
+     ],
+     "quat_xyzw": [
+      -0.7079,
+      0.03624,
+      -0.63132,
+      0.31463
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3749,
+      0.1843,
+      0.2381
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0663,
+      0.015,
+      -0.2449
+     ],
+     "euler": [
+      -164.38,
+      76.138,
+      -10.065
+     ],
+     "quat_xyzw": [
+      -0.78431,
+      0.01505,
+      0.59915,
+      0.16016
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2438,
+      0.1954,
+      -0.1205
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0761,
+      -0.0221,
+      -0.0345
+     ],
+     "euler": [
+      -170.332,
+      -43.802,
+      -37.714
+     ],
+     "quat_xyzw": [
+      0.86475,
+      0.32856,
+      0.377,
+      0.04614
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3862,
+      0.1582,
+      0.0898
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0338,
+      0.0322,
+      -0.2585
+     ],
+     "euler": [
+      -169.292,
+      26.612,
+      -25.295
+     ],
+     "quat_xyzw": [
+      -0.9501,
+      -0.19119,
+      0.2037,
+      0.13877
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3439,
+      0.2125,
+      -0.1341
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0764,
+      -0.0107,
+      0.269
+     ],
+     "euler": [
+      31.952,
+      -51.979,
+      172.078
+     ],
+     "quat_xyzw": [
+      0.40319,
+      0.27591,
+      -0.87042,
+      0.06062
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3865,
+      0.1696,
+      0.3933
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.1116,
+      -0.0071,
+      0.0586
+     ],
+     "euler": [
+      8.269,
+      -5.917,
+      -98.024
+     ],
+     "quat_xyzw": [
+      0.08608,
+      0.02059,
+      -0.74944,
+      0.65613
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.1985,
+      0.1732,
+      0.1829
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0845,
+      0.0135,
+      -0.0664
+     ],
+     "euler": [
+      147.14,
+      31.697,
+      -33.181
+     ],
+     "quat_xyzw": [
+      0.86224,
+      0.33749,
+      -0.32873,
+      0.18598
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3947,
+      0.1938,
+      0.058
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0394,
+      0.0213,
+      0.2465
+     ],
+     "euler": [
+      11.13,
+      67.421,
+      -52.806
+     ],
+     "quat_xyzw": [
+      -0.17338,
+      0.53064,
+      -0.41637,
+      0.71764
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2707,
+      0.2017,
+      0.3708
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0777,
+      0.0366,
+      0.0518
+     ],
+     "euler": [
+      -167.626,
+      3.897,
+      -19.646
+     ],
+     "quat_xyzw": [
+      -0.97966,
+      -0.16591,
+      0.01493,
+      0.1119
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2324,
+      0.2169,
+      0.1761
+     ]
+    }
+   ]
+  },
+  {
+   "index": 27,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "FrozenFuel",
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0002,
+    0.1546,
+    0.0935
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2647,
+    0.1897,
+    0.4025
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0865,
+      0.0195,
+      -0.1274
+     ],
+     "euler": [
+      15.516,
+      -50.595,
+      -165.153
+     ],
+     "quat_xyzw": [
+      0.43562,
+      0.06631,
+      -0.88087,
+      0.17294
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0863,
+      0.1741,
+      -0.0339
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0517,
+      -0.006,
+      0.1503
+     ],
+     "euler": [
+      -5.885,
+      -8.896,
+      -113.695
+     ],
+     "quat_xyzw": [
+      0.03686,
+      -0.08521,
+      -0.83577,
+      0.54117
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0519,
+      0.1486,
+      0.2438
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0244,
+      0.0393,
+      -0.1324
+     ],
+     "euler": [
+      44.548,
+      106.856,
+      -52.702
+     ],
+     "quat_xyzw": [
+      -0.1275,
+      0.7662,
+      -0.51751,
+      0.35897
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0246,
+      0.1939,
+      -0.0389
+     ]
+    }
+   ]
+  },
+  {
+   "index": 28,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "MemorialCoal",
+   "bin": 8,
+   "cell": [
+    2,
+    2
+   ],
+   "position": [
+    -0.3107,
+    0.9112,
+    -0.0078
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2631,
+    0.233,
+    0.3787
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      0.0689,
+      -0.0357,
+      0.003
+     ],
+     "euler": [
+      44.686,
+      -48.429,
+      117.723
+     ],
+     "quat_xyzw": [
+      -0.14542,
+      -0.49292,
+      0.80264,
+      0.30275
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.2419,
+      0.8755,
+      -0.0048
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0618,
+      -0.0347,
+      -0.036
+     ],
+     "euler": [
+      -167.808,
+      -7.214,
+      -68.249
+     ],
+     "quat_xyzw": [
+      -0.81776,
+      -0.56225,
+      -0.11124,
+      0.05265
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.3725,
+      0.8765,
+      -0.0439
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0085,
+      -0.0063,
+      -0.0747
+     ],
+     "euler": [
+      -173.167,
+      84.913,
+      -1.955
+     ],
+     "quat_xyzw": [
+      -0.73706,
+      0.02766,
+      0.67298,
+      0.05546
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.3192,
+      0.9049,
+      -0.0825
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      0.0736,
+      0.0332,
+      -0.038
+     ],
+     "euler": [
+      -46.032,
+      52.797,
+      81.284
+     ],
+     "quat_xyzw": [
+      0.0008,
+      0.53862,
+      0.66888,
+      0.51234
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.2372,
+      0.9445,
+      -0.0459
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0655,
+      0.0622,
+      -0.1358
+     ],
+     "euler": [
+      -31.105,
+      -53.454,
+      55.563
+     ],
+     "quat_xyzw": [
+      -0.41382,
+      -0.27171,
+      0.29438,
+      0.81748
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.3763,
+      0.9735,
+      -0.1436
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0886,
+      0.0679,
+      0.147
+     ],
+     "euler": [
+      19.972,
+      -138.915,
+      -47.073
+     ],
+     "quat_xyzw": [
+      0.42406,
+      -0.8212,
+      0.01087,
+      0.38168
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.3993,
+      0.9791,
+      0.1392
+     ]
+    }
+   ]
+  },
+  {
+   "index": 29,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "OrbThunderBlood",
+   "bin": 10,
+   "cell": [
+    1,
+    3
+   ],
+   "position": [
+    -0.0,
+    1.2052,
+    -0.0295
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2643,
+    0.196,
+    0.3355
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0181,
+      -0.0234,
+      0.1077
+     ],
+     "euler": [
+      -28.274,
+      21.128,
+      -142.603
+     ],
+     "quat_xyzw": [
+      -0.24537,
+      -0.17044,
+      -0.88861,
+      0.34802
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0182,
+      1.1818,
+      0.0783
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0905,
+      0.0152,
+      0.0974
+     ],
+     "euler": [
+      9.698,
+      124.63,
+      -128.928
+     ],
+     "quat_xyzw": [
+      -0.77923,
+      0.41579,
+      -0.44999,
+      0.13202
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0905,
+      1.2204,
+      0.0679
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0054,
+      0.027,
+      -0.1254
+     ],
+     "euler": [
+      -22.123,
+      59.128,
+      155.504
+     ],
+     "quat_xyzw": [
+      0.43781,
+      0.26581,
+      0.8543,
+      0.08859
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0054,
+      1.2322,
+      -0.1548
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0164,
+      0.0127,
+      0.0134
+     ],
+     "euler": [
+      51.48,
+      29.723,
+      17.491
+     ],
+     "quat_xyzw": [
+      0.45001,
+      0.16453,
+      0.02228,
+      0.87745
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0163,
+      1.2179,
+      -0.016
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0633,
+      0.0576,
+      0.029
+     ],
+     "euler": [
+      149.42,
+      -72.672,
+      -36.197
+     ],
+     "quat_xyzw": [
+      0.78714,
+      0.09287,
+      0.47728,
+      0.37947
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0633,
+      1.2628,
+      -0.0004
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0875,
+      0.0371,
+      -0.062
+     ],
+     "euler": [
+      -54.921,
+      40.677,
+      -93.9
+     ],
+     "quat_xyzw": [
+      -0.52054,
+      -0.10545,
+      -0.49859,
+      0.68508
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0874,
+      1.2423,
+      -0.0914
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0919,
+      0.0347,
+      0.1259
+     ],
+     "euler": [
+      -22.668,
+      85.522,
+      -37.038
+     ],
+     "quat_xyzw": [
+      -0.34826,
+      0.5854,
+      -0.10213,
+      0.72498
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0919,
+      1.2399,
+      0.0964
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0922,
+      0.0557,
+      -0.1265
+     ],
+     "euler": [
+      -17.628,
+      77.482,
+      -97.138
+     ],
+     "quat_xyzw": [
+      -0.54274,
+      0.31961,
+      -0.51444,
+      0.58193
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0922,
+      1.2609,
+      -0.156
+     ]
+    }
+   ]
+  },
+  {
+   "index": 30,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "FrostCore",
+   "bin": 3,
+   "cell": [
+    0,
+    1
+   ],
+   "position": [
+    0.2731,
+    0.6219,
+    -0.0395
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1906,
+    0.2195,
+    0.3088
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FrostCore",
+     "offset": [
+      0.0396,
+      -0.0109,
+      -0.0439
+     ],
+     "euler": [
+      3.024,
+      47.753,
+      35.325
+     ],
+     "quat_xyzw": [
+      0.14576,
+      0.37823,
+      0.26717,
+      0.87425
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.3127,
+      0.611,
+      -0.0834
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      -0.0429,
+      -0.0081,
+      -0.0166
+     ],
+     "euler": [
+      37.662,
+      -67.825,
+      113.131
+     ],
+     "quat_xyzw": [
+      -0.29309,
+      -0.51449,
+      0.75471,
+      0.28249
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.2302,
+      0.6138,
+      -0.0561
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      -0.0372,
+      -0.0293,
+      0.095
+     ],
+     "euler": [
+      4.811,
+      -104.887,
+      69.515
+     ],
+     "quat_xyzw": [
+      -0.43054,
+      -0.66531,
+      0.37453,
+      0.48138
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.2359,
+      0.5926,
+      0.0555
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      -0.055,
+      0.0454,
+      -0.1097
+     ],
+     "euler": [
+      -131.056,
+      -67.83,
+      31.493
+     ],
+     "quat_xyzw": [
+      -0.7897,
+      -0.01748,
+      -0.39549,
+      0.46869
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.2181,
+      0.6674,
+      -0.1492
+     ]
+    }
+   ]
+  },
+  {
+   "index": 31,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "OrbFrostFire",
+   "bin": 9,
+   "cell": [
+    0,
+    3
+   ],
+   "position": [
+    0.31,
+    1.2068,
+    -0.0301
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2643,
+    0.1885,
+    0.3342
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0263,
+      -0.0253,
+      0.0441
+     ],
+     "euler": [
+      10.744,
+      9.859,
+      -45.028
+     ],
+     "quat_xyzw": [
+      0.0534,
+      0.11475,
+      -0.38725,
+      0.91325
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.3362,
+      1.1815,
+      0.014
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0922,
+      0.025,
+      0.1258
+     ],
+     "euler": [
+      18.167,
+      81.224,
+      -163.407
+     ],
+     "quat_xyzw": [
+      -0.61875,
+      0.21135,
+      -0.7566,
+      0.00648
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.2178,
+      1.2318,
+      0.0956
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0924,
+      -0.0236,
+      0.0955
+     ],
+     "euler": [
+      62.402,
+      146.77,
+      -15.109
+     ],
+     "quat_xyzw": [
+      0.03908,
+      0.832,
+      -0.52426,
+      0.17719
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.4023,
+      1.1832,
+      0.0653
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0253,
+      0.0265,
+      -0.0432
+     ],
+     "euler": [
+      40.347,
+      40.644,
+      -118.355
+     ],
+     "quat_xyzw": [
+      -0.11424,
+      0.44475,
+      -0.81727,
+      0.34816
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.3352,
+      1.2333,
+      -0.0733
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0208,
+      0.0304,
+      0.0838
+     ],
+     "euler": [
+      58.734,
+      -44.835,
+      -42.282
+     ],
+     "quat_xyzw": [
+      0.54269,
+      -0.14648,
+      -0.11613,
+      0.81887
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.2892,
+      1.2373,
+      0.0537
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0067,
+      0.0387,
+      -0.1247
+     ],
+     "euler": [
+      -11.678,
+      91.383,
+      63.533
+     ],
+     "quat_xyzw": [
+      0.31436,
+      0.64265,
+      0.42773,
+      0.55248
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.3166,
+      1.2455,
+      -0.1548
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0898,
+      0.0336,
+      0.0011
+     ],
+     "euler": [
+      8.961,
+      -155.806,
+      81.79
+     ],
+     "quat_xyzw": [
+      -0.62581,
+      -0.74758,
+      0.19452,
+      0.10792
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.2202,
+      1.2404,
+      -0.029
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0916,
+      0.0528,
+      -0.1258
+     ],
+     "euler": [
+      66.469,
+      22.61,
+      65.897
+     ],
+     "quat_xyzw": [
+      0.54017,
+      -0.15471,
+      0.35594,
+      0.74672
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.4015,
+      1.2596,
+      -0.1559
+     ]
+    }
+   ]
+  },
+  {
+   "index": 32,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "SurtlingCore",
+   "bin": 11,
+   "cell": [
+    2,
+    3
+   ],
+   "position": [
+    -0.3372,
+    1.227,
+    -0.0246
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2073,
+    0.2074,
+    0.3451
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      0.0392,
+      0.0364,
+      -0.1169
+     ],
+     "euler": [
+      -36.547,
+      90.0,
+      61.739
+     ],
+     "quat_xyzw": [
+      0.1542,
+      0.69009,
+      0.53481,
+      0.46257
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.298,
+      1.2633,
+      -0.1414
+     ]
+    },
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      -0.0251,
+      -0.0327,
+      0.0094
+     ],
+     "euler": [
+      0.4,
+      96.16,
+      164.78
+     ],
+     "quat_xyzw": [
+      0.73783,
+      0.09623,
+      0.66186,
+      0.09105
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.3622,
+      1.1943,
+      -0.0152
+     ]
+    },
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      -0.0433,
+      -0.0302,
+      0.1186
+     ],
+     "euler": [
+      -65.863,
+      -79.372,
+      90.0
+     ],
+     "quat_xyzw": [
+      -0.67482,
+      -0.08317,
+      0.21124,
+      0.7022
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.3805,
+      1.1967,
+      0.094
+     ]
+    }
+   ]
+  },
+  {
+   "index": 33,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "Wisp",
+   "bin": 12,
+   "cell": [
+    0,
+    4
+   ],
+   "position": [
+    0.312,
+    1.4622,
+    -0.0578
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2603,
+    0.1209,
+    0.2786
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Wisp",
+     "offset": [
+      0.0954,
+      -0.0063,
+      0.0348
+     ],
+     "euler": [
+      -5.756,
+      -5.769,
+      -80.399
+     ],
+     "quat_xyzw": [
+      -0.00586,
+      -0.07075,
+      -0.64575,
+      0.76024
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.4074,
+      1.4559,
+      -0.023
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0305,
+      0.0256,
+      0.026
+     ],
+     "euler": [
+      3.295,
+      53.957,
+      33.098
+     ],
+     "quat_xyzw": [
+      0.15372,
+      0.42739,
+      0.24123,
+      0.85762
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2815,
+      1.4878,
+      -0.0318
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0954,
+      -0.0064,
+      -0.0854
+     ],
+     "euler": [
+      -16.865,
+      -94.899,
+      17.129
+     ],
+     "quat_xyzw": [
+      -0.20658,
+      -0.70583,
+      -0.00721,
+      0.67756
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2166,
+      1.4558,
+      -0.1432
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.011,
+      -0.0064,
+      -0.1045
+     ],
+     "euler": [
+      -113.913,
+      15.357,
+      44.309
+     ],
+     "quat_xyzw": [
+      -0.74193,
+      0.38075,
+      0.30752,
+      0.45825
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.301,
+      1.4559,
+      -0.1623
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0244,
+      0.0013,
+      0.1044
+     ],
+     "euler": [
+      -11.184,
+      28.154,
+      48.604
+     ],
+     "quat_xyzw": [
+      0.01348,
+      0.25952,
+      0.41889,
+      0.87006
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2876,
+      1.4635,
+      0.0466
+     ]
+    }
+   ]
+  },
+  {
+   "index": 34,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "ShieldCore",
+   "bin": 4,
+   "cell": [
+    1,
+    1
+   ],
+   "position": [
+    -0.0002,
+    0.6191,
+    -0.0393
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2653,
+    0.1807,
+    0.3163
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0633,
+      -0.0158,
+      0.0454
+     ],
+     "euler": [
+      -75.698,
+      125.572,
+      -63.927
+     ],
+     "quat_xyzw": [
+      -0.6098,
+      0.44721,
+      0.27177,
+      0.59522
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.063,
+      0.6033,
+      0.0061
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0811,
+      -0.0255,
+      -0.0548
+     ],
+     "euler": [
+      19.64,
+      102.14,
+      96.401
+     ],
+     "quat_xyzw": [
+      0.64286,
+      0.43101,
+      0.37315,
+      0.5116
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0809,
+      0.5935,
+      -0.0942
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0608,
+      -0.0252,
+      0.0058
+     ],
+     "euler": [
+      -163.517,
+      -3.638,
+      67.312
+     ],
+     "quat_xyzw": [
+      -0.82589,
+      0.54442,
+      0.05325,
+      0.13667
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.061,
+      0.5939,
+      -0.0335
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0886,
+      0.0478,
+      0.0114
+     ],
+     "euler": [
+      28.41,
+      89.247,
+      -100.293
+     ],
+     "quat_xyzw": [
+      -0.41084,
+      0.57046,
+      -0.64015,
+      0.30983
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0883,
+      0.6669,
+      -0.0279
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0886,
+      -0.0007,
+      0.0864
+     ],
+     "euler": [
+      -22.155,
+      83.675,
+      117.888
+     ],
+     "quat_xyzw": [
+      0.48691,
+      0.46032,
+      0.69247,
+      0.2674
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0888,
+      0.6184,
+      0.0471
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0744,
+      -0.0013,
+      -0.0975
+     ],
+     "euler": [
+      3.275,
+      54.515,
+      -75.424
+     ],
+     "quat_xyzw": [
+      -0.25994,
+      0.3777,
+      -0.5539,
+      0.69496
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0746,
+      0.6178,
+      -0.1368
+     ]
+    }
+   ]
+  },
+  {
+   "index": 35,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "GlowWorm",
+   "bin": 5,
+   "cell": [
+    2,
+    1
+   ],
+   "position": [
+    -0.3099,
+    0.5888,
+    -0.0405
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2646,
+    0.2293,
+    0.3137
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0662,
+      -0.0603,
+      0.0726
+     ],
+     "euler": [
+      5.876,
+      -97.801,
+      -86.7
+     ],
+     "quat_xyzw": [
+      0.54111,
+      -0.52412,
+      -0.42258,
+      0.50391
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2437,
+      0.5285,
+      0.032
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0951,
+      0.0022,
+      -0.0316
+     ],
+     "euler": [
+      44.679,
+      -35.276,
+      -16.815
+     ],
+     "quat_xyzw": [
+      0.39931,
+      -0.22429,
+      -0.01495,
+      0.88883
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.405,
+      0.591,
+      -0.0721
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0381,
+      -0.03,
+      0.1225
+     ],
+     "euler": [
+      -57.432,
+      74.957,
+      -11.203
+     ],
+     "quat_xyzw": [
+      -0.43156,
+      0.49386,
+      0.22302,
+      0.72119
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.348,
+      0.5588,
+      0.082
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0771,
+      0.0803,
+      -0.114
+     ],
+     "euler": [
+      -16.241,
+      -124.979,
+      50.824
+     ],
+     "quat_xyzw": [
+      -0.43572,
+      -0.76508,
+      0.08307,
+      0.46679
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3869,
+      0.6691,
+      -0.1545
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0948,
+      0.0024,
+      0.082
+     ],
+     "euler": [
+      152.114,
+      -6.456,
+      28.631
+     ],
+     "quat_xyzw": [
+      0.93555,
+      -0.25274,
+      0.11244,
+      0.21959
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2151,
+      0.5912,
+      0.0415
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0436,
+      0.0349,
+      0.0063
+     ],
+     "euler": [
+      -6.517,
+      -131.573,
+      -13.876
+     ],
+     "quat_xyzw": [
+      0.08685,
+      -0.9067,
+      -0.10093,
+      0.40021
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2663,
+      0.6237,
+      -0.0342
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0909,
+      0.0221,
+      0.081
+     ],
+     "euler": [
+      52.194,
+      157.243,
+      -42.71
+     ],
+     "quat_xyzw": [
+      -0.23977,
+      0.85156,
+      -0.46615,
+      0.00797
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.4007,
+      0.6109,
+      0.0405
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0379,
+      0.0384,
+      -0.1278
+     ],
+     "euler": [
+      100.515,
+      19.673,
+      -73.488
+     ],
+     "quat_xyzw": [
+      0.54176,
+      0.54076,
+      -0.48211,
+      0.4262
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2719,
+      0.6272,
+      -0.1683
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0964,
+      0.0301,
+      -0.0288
+     ],
+     "euler": [
+      61.476,
+      11.572,
+      38.394
+     ],
+     "quat_xyzw": [
+      0.50872,
+      -0.08537,
+      0.23252,
+      0.82453
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2135,
+      0.6189,
+      -0.0693
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0001,
+      0.0287,
+      0.0871
+     ],
+     "euler": [
+      -6.968,
+      -75.156,
+      -35.491
+     ],
+     "quat_xyzw": [
+      0.13966,
+      -0.59443,
+      -0.2764,
+      0.74212
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3098,
+      0.6175,
+      0.0466
+     ]
+    }
+   ]
+  },
+  {
+   "index": 36,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "Crystal",
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "position": [
+    -0.3101,
+    0.2048,
+    0.137
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2649,
+    0.1561,
+    0.6415
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Flint",
+     "offset": [
+      0.0788,
+      0.0099,
+      -0.2002
+     ],
+     "euler": [
+      -162.68,
+      -41.937,
+      49.292
+     ],
+     "quat_xyzw": [
+      -0.86151,
+      0.33598,
+      -0.26291,
+      0.27532
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2313,
+      0.2147,
+      -0.0632
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0568,
+      0.0151,
+      -0.12
+     ],
+     "euler": [
+      -24.582,
+      53.078,
+      99.22
+     ],
+     "quat_xyzw": [
+      0.20911,
+      0.42794,
+      0.72741,
+      0.49398
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3669,
+      0.2199,
+      0.0169
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0568,
+      0.0264,
+      0.1558
+     ],
+     "euler": [
+      -171.257,
+      -20.042,
+      -24.303
+     ],
+     "quat_xyzw": [
+      -0.95709,
+      -0.21965,
+      -0.18541,
+      0.03686
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2533,
+      0.2312,
+      0.2927
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0074,
+      0.0514,
+      -0.2566
+     ],
+     "euler": [
+      -13.227,
+      -159.522,
+      9.816
+     ],
+     "quat_xyzw": [
+      -0.10403,
+      -0.97219,
+      -0.09781,
+      0.18563
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3027,
+      0.2562,
+      -0.1197
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.01,
+      0.0188,
+      0.007
+     ],
+     "euler": [
+      19.41,
+      -8.341,
+      170.732
+     ],
+     "quat_xyzw": [
+      -0.05787,
+      -0.17337,
+      0.98086,
+      0.0672
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3001,
+      0.2236,
+      0.1439
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0762,
+      0.0157,
+      0.2761
+     ],
+     "euler": [
+      35.328,
+      -61.95,
+      107.812
+     ],
+     "quat_xyzw": [
+      -0.24301,
+      -0.49912,
+      0.75215,
+      0.35509
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3864,
+      0.2205,
+      0.413
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0834,
+      0.0028,
+      0.0449
+     ],
+     "euler": [
+      -22.184,
+      -12.17,
+      -156.638
+     ],
+     "quat_xyzw": [
+      0.06314,
+      -0.2084,
+      -0.95971,
+      0.17759
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3935,
+      0.2076,
+      0.1819
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0692,
+      0.0055,
+      -0.1137
+     ],
+     "euler": [
+      -18.265,
+      -66.31,
+      -179.101
+     ],
+     "quat_xyzw": [
+      -0.53891,
+      0.13711,
+      0.82724,
+      0.08032
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2409,
+      0.2103,
+      0.0233
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0812,
+      0.0033,
+      -0.2113
+     ],
+     "euler": [
+      -124.273,
+      -103.922,
+      -39.459
+     ],
+     "quat_xyzw": [
+      -0.38852,
+      -0.53039,
+      -0.75262,
+      0.03604
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3914,
+      0.2081,
+      -0.0744
+     ]
+    }
+   ]
+  },
+  {
+   "index": 37,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "FrozenFuel",
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0,
+    0.2287,
+    0.1031
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2645,
+    0.2015,
+    0.5956
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0317,
+      0.0094,
+      0.2544
+     ],
+     "euler": [
+      33.392,
+      -6.022,
+      -81.797
+     ],
+     "quat_xyzw": [
+      0.2498,
+      0.14981,
+      -0.61485,
+      0.73289
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0317,
+      0.2381,
+      0.3575
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0686,
+      0.0435,
+      -0.0757
+     ],
+     "euler": [
+      -3.612,
+      -129.54,
+      51.682
+     ],
+     "quat_xyzw": [
+      -0.40619,
+      -0.80789,
+      0.16005,
+      0.39587
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0686,
+      0.2721,
+      0.0274
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0817,
+      -0.0005,
+      -0.2473
+     ],
+     "euler": [
+      140.434,
+      87.802,
+      -14.907
+     ],
+     "quat_xyzw": [
+      0.64184,
+      0.32066,
+      -0.67861,
+      0.15717
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0817,
+      0.2282,
+      -0.1442
+     ]
+    }
+   ]
+  },
+  {
+   "index": 38,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "Thunderstone",
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "position": [
+    0.3098,
+    0.2162,
+    0.1129
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2648,
+    0.1893,
+    0.4474
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Stone",
+     "offset": [
+      0.0748,
+      -0.0141,
+      -0.0422
+     ],
+     "euler": [
+      35.526,
+      103.41,
+      -5.743
+     ],
+     "quat_xyzw": [
+      0.15139,
+      0.75595,
+      -0.2687,
+      0.57743
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3846,
+      0.202,
+      0.0707
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0474,
+      0.0261,
+      0.1592
+     ],
+     "euler": [
+      -159.79,
+      88.35,
+      20.435
+     ],
+     "quat_xyzw": [
+      -0.6732,
+      0.24557,
+      0.69749,
+      0.00215
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2625,
+      0.2422,
+      0.2721
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0566,
+      0.0284,
+      -0.1572
+     ],
+     "euler": [
+      16.469,
+      -56.966,
+      156.419
+     ],
+     "quat_xyzw": [
+      -0.4363,
+      -0.21967,
+      0.8655,
+      0.11089
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2532,
+      0.2446,
+      -0.0443
+     ]
+    }
+   ]
+  },
+  {
+   "index": 39,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "FaderEmber",
+   "bin": 13,
+   "cell": [
+    1,
+    4
+   ],
+   "position": [
+    0.0022,
+    1.4724,
+    0.0166
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2598,
+    0.1415,
+    0.2633
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0534,
+      0.0358,
+      -0.0086
+     ],
+     "euler": [
+      -48.292,
+      128.563,
+      -75.417
+     ],
+     "quat_xyzw": [
+      -0.64328,
+      0.54182,
+      0.04936,
+      0.53869
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0512,
+      1.5082,
+      0.008
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0951,
+      -0.0165,
+      -0.0968
+     ],
+     "euler": [
+      138.871,
+      35.463,
+      -6.692
+     ],
+     "quat_xyzw": [
+      0.88404,
+      0.15885,
+      -0.30419,
+      0.31736
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0929,
+      1.456,
+      -0.0802
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0293,
+      0.0065,
+      -0.0809
+     ],
+     "euler": [
+      -10.761,
+      70.625,
+      -20.654
+     ],
+     "quat_xyzw": [
+      -0.17844,
+      0.55245,
+      -0.09231,
+      0.80897
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0316,
+      1.4789,
+      -0.0644
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0951,
+      0.0358,
+      0.011
+     ],
+     "euler": [
+      15.994,
+      131.417,
+      -77.41
+     ],
+     "quat_xyzw": [
+      -0.51974,
+      0.74015,
+      -0.35369,
+      0.23862
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0973,
+      1.5082,
+      0.0276
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0504,
+      0.0249,
+      0.0969
+     ],
+     "euler": [
+      27.49,
+      48.318,
+      -53.577
+     ],
+     "quat_xyzw": [
+      0.01434,
+      0.45259,
+      -0.48625,
+      0.74734
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0526,
+      1.4973,
+      0.1135
+     ]
+    }
+   ]
+  },
+  {
+   "index": 40,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "MoltenCore",
+   "bin": 6,
+   "cell": [
+    0,
+    2
+   ],
+   "position": [
+    0.3371,
+    0.9532,
+    0.0038
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2102,
+    0.1706,
+    0.2908
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0281,
+      -0.0216,
+      0.1035
+     ],
+     "euler": [
+      -14.356,
+      -132.79,
+      -12.212
+     ],
+     "quat_xyzw": [
+      0.04695,
+      -0.90931,
+      -0.15611,
+      0.38286
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.309,
+      0.9315,
+      0.1073
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0612,
+      -0.0067,
+      -0.1009
+     ],
+     "euler": [
+      -29.641,
+      50.787,
+      -143.691
+     ],
+     "quat_xyzw": [
+      -0.46593,
+      -0.09041,
+      -0.79568,
+      0.37635
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.3983,
+      0.9465,
+      -0.0971
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0628,
+      -0.0163,
+      -0.0111
+     ],
+     "euler": [
+      -10.341,
+      71.973,
+      50.727
+     ],
+     "quat_xyzw": [
+      0.18478,
+      0.56003,
+      0.39305,
+      0.7055
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.4,
+      0.9368,
+      -0.0073
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0625,
+      0.0423,
+      -0.0262
+     ],
+     "euler": [
+      47.17,
+      -165.165,
+      -20.233
+     ],
+     "quat_xyzw": [
+      0.21048,
+      -0.8856,
+      0.36981,
+      0.18617
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2746,
+      0.9955,
+      -0.0223
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0637,
+      -0.0001,
+      0.0983
+     ],
+     "euler": [
+      44.568,
+      -19.264,
+      1.766
+     ],
+     "quat_xyzw": [
+      0.37142,
+      -0.16057,
+      0.0775,
+      0.91119
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.4008,
+      0.953,
+      0.1022
+     ]
+    }
+   ]
+  },
+  {
+   "index": 41,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "BlackCore",
+   "bin": 7,
+   "cell": [
+    1,
+    2
+   ],
+   "position": [
+    0.0006,
+    0.9564,
+    -0.0335
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2654,
+    0.2285,
+    0.3274
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.06,
+      -0.0009,
+      -0.0393
+     ],
+     "euler": [
+      18.066,
+      -8.69,
+      96.496
+     ],
+     "quat_xyzw": [
+      0.04843,
+      -0.16662,
+      0.74258,
+      0.64689
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0594,
+      0.9555,
+      -0.0728
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0953,
+      0.0556,
+      -0.1227
+     ],
+     "euler": [
+      150.311,
+      2.013,
+      10.087
+     ],
+     "quat_xyzw": [
+      0.96313,
+      -0.08049,
+      0.00561,
+      0.25666
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0959,
+      1.012,
+      -0.1562
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.09,
+      -0.0351,
+      0.0841
+     ],
+     "euler": [
+      -21.897,
+      -0.308,
+      -32.74
+     ],
+     "quat_xyzw": [
+      -0.18148,
+      -0.05606,
+      -0.2772,
+      0.94185
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0906,
+      0.9212,
+      0.0506
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0174,
+      -0.0076,
+      -0.1037
+     ],
+     "euler": [
+      157.808,
+      -111.234,
+      -0.257
+     ],
+     "quat_xyzw": [
+      0.55452,
+      -0.15759,
+      0.80961,
+      0.1105
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0168,
+      0.9487,
+      -0.1372
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0958,
+      -0.013,
+      0.106
+     ],
+     "euler": [
+      60.416,
+      9.048,
+      -147.52
+     ],
+     "quat_xyzw": [
+      0.07482,
+      0.50062,
+      -0.83824,
+      0.20283
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0953,
+      0.9433,
+      0.0725
+     ]
+    }
+   ]
+  },
+  {
+   "index": 42,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "Crystal",
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "position": [
+    -0.31,
+    0.2372,
+    0.0932
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2651,
+    0.1515,
+    0.5769
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0693,
+      -0.033,
+      0.2043
+     ],
+     "euler": [
+      166.089,
+      64.455,
+      -2.912
+     ],
+     "quat_xyzw": [
+      0.8378,
+      0.08589,
+      -0.53179,
+      0.08896
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3793,
+      0.2042,
+      0.2974
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0919,
+      0.0144,
+      -0.1032
+     ],
+     "euler": [
+      -2.533,
+      -15.503,
+      122.532
+     ],
+     "quat_xyzw": [
+      -0.12877,
+      -0.04562,
+      0.8672,
+      0.47885
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2181,
+      0.2515,
+      -0.01
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0609,
+      0.0161,
+      0.1043
+     ],
+     "euler": [
+      167.461,
+      94.414,
+      7.814
+     ],
+     "quat_xyzw": [
+      0.67918,
+      0.03393,
+      -0.72267,
+      0.12372
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2491,
+      0.2533,
+      0.1975
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0876,
+      0.0192,
+      -0.2138
+     ],
+     "euler": [
+      138.157,
+      40.92,
+      68.43
+     ],
+     "quat_xyzw": [
+      0.79388,
+      -0.38888,
+      -0.08187,
+      0.46025
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3976,
+      0.2564,
+      -0.1206
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.1023,
+      0.0225,
+      0.1816
+     ],
+     "euler": [
+      -20.673,
+      -175.501,
+      -28.262
+     ],
+     "quat_xyzw": [
+      -0.23317,
+      0.95499,
+      0.18329,
+      0.00632
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.4123,
+      0.2597,
+      0.2748
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0012,
+      0.0221,
+      0.2497
+     ],
+     "euler": [
+      11.429,
+      -78.412,
+      -170.028
+     ],
+     "quat_xyzw": [
+      0.63329,
+      0.0222,
+      -0.76264,
+      0.12972
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3088,
+      0.2593,
+      0.3429
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0301,
+      0.0335,
+      -0.0992
+     ],
+     "euler": [
+      -5.608,
+      -21.397,
+      -12.895
+     ],
+     "quat_xyzw": [
+      -0.02694,
+      -0.18964,
+      -0.11923,
+      0.97421
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2799,
+      0.2707,
+      -0.0061
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0999,
+      0.0039,
+      -0.2325
+     ],
+     "euler": [
+      128.597,
+      8.601,
+      34.271
+     ],
+     "quat_xyzw": [
+      0.86823,
+      -0.23366,
+      0.06285,
+      0.43317
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2101,
+      0.2411,
+      -0.1393
+     ]
+    }
+   ]
+  },
+  {
+   "index": 43,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "FrozenFuel",
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0435,
+    0.242,
+    0.0758
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1784,
+    0.1767,
+    0.5412
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.026,
+      0.012,
+      0.2143
+     ],
+     "euler": [
+      14.126,
+      16.044,
+      117.392
+     ],
+     "quat_xyzw": [
+      0.18159,
+      -0.03207,
+      0.83073,
+      0.52525
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0695,
+      0.254,
+      0.2901
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.015,
+      0.0145,
+      0.0992
+     ],
+     "euler": [
+      -136.549,
+      -9.995,
+      23.681
+     ],
+     "quat_xyzw": [
+      -0.91236,
+      0.15833,
+      -0.00354,
+      0.37751
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0284,
+      0.2565,
+      0.1751
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0282,
+      0.0357,
+      -0.2189
+     ],
+     "euler": [
+      40.772,
+      -126.27,
+      -7.244
+     ],
+     "quat_xyzw": [
+      0.20993,
+      -0.82459,
+      0.28337,
+      0.44237
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0716,
+      0.2777,
+      -0.143
+     ]
+    }
+   ]
+  },
+  {
+   "index": 44,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "Wisp",
+   "bin": 12,
+   "cell": [
+    0,
+    4
+   ],
+   "position": [
+    0.3247,
+    1.4746,
+    -0.0582
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2062,
+    0.1437,
+    0.2778
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Wisp",
+     "offset": [
+      0.0654,
+      -0.0114,
+      0.1041
+     ],
+     "euler": [
+      23.366,
+      43.378,
+      -34.16
+     ],
+     "quat_xyzw": [
+      0.07357,
+      0.40121,
+      -0.3388,
+      0.84784
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.39,
+      1.4632,
+      0.0459
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      0.0684,
+      0.0073,
+      -0.0296
+     ],
+     "euler": [
+      -4.456,
+      -16.359,
+      151.291
+     ],
+     "quat_xyzw": [
+      -0.14727,
+      0.00203,
+      0.95683,
+      0.25057
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.3931,
+      1.4819,
+      -0.0878
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      0.0235,
+      0.0291,
+      -0.0804
+     ],
+     "euler": [
+      -27.138,
+      155.395,
+      13.726
+     ],
+     "quat_xyzw": [
+      0.06386,
+      0.94894,
+      0.25233,
+      0.17825
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.3482,
+      1.5037,
+      -0.1386
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0682,
+      0.037,
+      -0.1041
+     ],
+     "euler": [
+      31.019,
+      -166.186,
+      -9.807
+     ],
+     "quat_xyzw": [
+      0.11381,
+      -0.95034,
+      0.25458,
+      0.13814
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2564,
+      1.5116,
+      -0.1623
+     ]
+    }
+   ]
+  },
+  {
+   "index": 45,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "Thunderstone",
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "position": [
+    0.375,
+    0.2508,
+    0.161
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1353,
+    0.1903,
+    0.4885
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0034,
+      0.011,
+      0.038
+     ],
+     "euler": [
+      -35.664,
+      28.528,
+      130.723
+     ],
+     "quat_xyzw": [
+      0.08947,
+      0.36755,
+      0.87007,
+      0.31605
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3716,
+      0.2619,
+      0.199
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0024,
+      0.0207,
+      0.1701
+     ],
+     "euler": [
+      30.369,
+      43.595,
+      132.755
+     ],
+     "quat_xyzw": [
+      0.42579,
+      -0.07922,
+      0.78203,
+      0.44818
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3726,
+      0.2716,
+      0.3311
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      0.0167,
+      0.0377,
+      -0.1704
+     ],
+     "euler": [
+      -23.257,
+      -158.547,
+      45.76
+     ],
+     "quat_xyzw": [
+      -0.40873,
+      -0.87206,
+      -0.11159,
+      0.24496
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3917,
+      0.2886,
+      -0.0093
+     ]
+    }
+   ]
+  },
+  {
+   "index": 46,
+   "step": 5,
+   "kind": "heap_step",
+   "example_item": "OrbFrostFire",
+   "bin": 14,
+   "cell": [
+    2,
+    4
+   ],
+   "position": [
+    -0.31,
+    1.4783,
+    -0.003
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2644,
+    0.1652,
+    0.3884
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0184,
+      -0.0234,
+      0.0188
+     ],
+     "euler": [
+      3.962,
+      143.671,
+      14.987
+     ],
+     "quat_xyzw": [
+      0.13453,
+      0.94008,
+      0.00807,
+      0.31319
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3284,
+      1.4549,
+      0.0158
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0983,
+      -0.0228,
+      0.1603
+     ],
+     "euler": [
+      25.341,
+      -51.501,
+      -28.272
+     ],
+     "quat_xyzw": [
+      0.2951,
+      -0.36279,
+      -0.12221,
+      0.87542
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2117,
+      1.4555,
+      0.1573
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.054,
+      0.0238,
+      -0.119
+     ],
+     "euler": [
+      16.844,
+      16.251,
+      -88.077
+     ],
+     "quat_xyzw": [
+      0.00704,
+      0.20131,
+      -0.69562,
+      0.68959
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.256,
+      1.5021,
+      -0.122
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0975,
+      0.0285,
+      -0.0066
+     ],
+     "euler": [
+      -77.817,
+      57.296,
+      -127.238
+     ],
+     "quat_xyzw": [
+      -0.57913,
+      -0.32802,
+      -0.47797,
+      0.5732
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.4075,
+      1.5068,
+      -0.0096
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0974,
+      0.0173,
+      0.0937
+     ],
+     "euler": [
+      -5.732,
+      114.161,
+      6.076
+     ],
+     "quat_xyzw": [
+      0.0173,
+      0.83865,
+      0.07068,
+      0.53979
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.4074,
+      1.4956,
+      0.0906
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0209,
+      0.0008,
+      0.0707
+     ],
+     "euler": [
+      -141.397,
+      -21.183,
+      -20.464
+     ],
+     "quat_xyzw": [
+      -0.90217,
+      -0.22458,
+      -0.22843,
+      0.28893
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2892,
+      1.4791,
+      0.0677
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0147,
+      0.0316,
+      -0.0084
+     ],
+     "euler": [
+      -10.134,
+      125.63,
+      -121.348
+     ],
+     "quat_xyzw": [
+      -0.79227,
+      0.3988,
+      -0.35828,
+      0.29138
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2953,
+      1.5099,
+      -0.0114
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0611,
+      0.0269,
+      0.1307
+     ],
+     "euler": [
+      -41.696,
+      -4.148,
+      -161.922
+     ],
+     "quat_xyzw": [
+      -0.02247,
+      -0.35655,
+      -0.92434,
+      0.134
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2489,
+      1.5052,
+      0.1277
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0314,
+      0.0264,
+      -0.1592
+     ],
+     "euler": [
+      -122.446,
+      1.532,
+      -3.334
+     ],
+     "quat_xyzw": [
+      -0.87624,
+      -0.01907,
+      -0.00229,
+      0.4815
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3414,
+      1.5047,
+      -0.1622
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0976,
+      0.0199,
+      0.038
+     ],
+     "euler": [
+      -113.563,
+      -103.873,
+      44.06
+     ],
+     "quat_xyzw": [
+      -0.63991,
+      -0.20637,
+      -0.48389,
+      0.56016
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.2124,
+      1.4981,
+      0.035
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0501,
+      0.0313,
+      0.0456
+     ],
+     "euler": [
+      -67.405,
+      -58.603,
+      -97.002
+     ],
+     "quat_xyzw": [
+      -0.01568,
+      -0.6322,
+      -0.72331,
+      0.27732
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3602,
+      1.5096,
+      0.0426
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0979,
+      0.0477,
+      -0.0736
+     ],
+     "euler": [
+      3.209,
+      -58.421,
+      61.83
+     ],
+     "quat_xyzw": [
+      -0.22966,
+      -0.43108,
+      0.45998,
+      0.74152
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.4079,
+      1.526,
+      -0.0766
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0309,
+      0.0167,
+      0.1423
+     ],
+     "euler": [
+      46.061,
+      15.509,
+      -94.777
+     ],
+     "quat_xyzw": [
+      0.17106,
+      0.36936,
+      -0.70685,
+      0.57851
+     ],
+     "scale": 0.25253,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.3409,
+      1.4949,
+      0.1393
+     ]
+    }
+   ]
+  },
+  {
+   "index": 47,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "FrozenFuel",
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "position": [
+    0.0392,
+    0.2829,
+    0.0702
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.178,
+    0.1978,
+    0.4933
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0163,
+      0.0015,
+      -0.0388
+     ],
+     "euler": [
+      23.432,
+      -96.324,
+      -63.286
+     ],
+     "quat_xyzw": [
+      0.49803,
+      -0.55,
+      -0.21385,
+      0.6354
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0229,
+      0.2844,
+      0.0314
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0338,
+      0.0095,
+      0.2041
+     ],
+     "euler": [
+      4.929,
+      -23.001,
+      -115.689
+     ],
+     "quat_xyzw": [
+      0.19107,
+      -0.07034,
+      -0.82428,
+      0.52831
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0731,
+      0.2924,
+      0.2743
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0277,
+      0.0371,
+      -0.165
+     ],
+     "euler": [
+      -129.527,
+      99.883,
+      25.934
+     ],
+     "quat_xyzw": [
+      -0.49407,
+      0.44863,
+      0.73625,
+      0.11204
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0115,
+      0.32,
+      -0.0948
+     ]
+    }
+   ]
+  },
+  {
+   "index": 48,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "Thunderstone",
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "position": [
+    0.2891,
+    0.3062,
+    -0.0275
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2224,
+    0.1652,
+    0.3115
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Stone",
+     "offset": [
+      0.04,
+      0.0136,
+      -0.1003
+     ],
+     "euler": [
+      -14.645,
+      67.724,
+      -38.415
+     ],
+     "quat_xyzw": [
+      -0.28176,
+      0.48707,
+      -0.20389,
+      0.80113
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.3291,
+      0.3197,
+      -0.1278
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0687,
+      0.0089,
+      0.0868
+     ],
+     "euler": [
+      -158.52,
+      0.037,
+      -89.813
+     ],
+     "quat_xyzw": [
+      -0.6959,
+      -0.69354,
+      -0.13133,
+      0.13221
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2204,
+      0.3151,
+      0.0594
+     ]
+    }
+   ]
+  },
+  {
+   "index": 49,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "Crystal",
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "position": [
+    -0.3128,
+    0.2676,
+    0.1489
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2588,
+    0.1546,
+    0.6173
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0502,
+      -0.0042,
+      -0.0518
+     ],
+     "euler": [
+      -21.621,
+      -173.871,
+      30.067
+     ],
+     "quat_xyzw": [
+      -0.2641,
+      -0.94468,
+      -0.16727,
+      0.09929
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.363,
+      0.2635,
+      0.0971
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.1066,
+      0.0012,
+      0.2391
+     ],
+     "euler": [
+      -6.428,
+      0.973,
+      -93.101
+     ],
+     "quat_xyzw": [
+      -0.04471,
+      -0.03487,
+      -0.72448,
+      0.68696
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.4194,
+      0.2688,
+      0.388
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0278,
+      -0.0001,
+      0.114
+     ],
+     "euler": [
+      47.427,
+      -70.611,
+      28.737
+     ],
+     "quat_xyzw": [
+      0.18662,
+      -0.59403,
+      0.41057,
+      0.66613
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.285,
+      0.2675,
+      0.2629
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0692,
+      0.0251,
+      -0.2442
+     ],
+     "euler": [
+      172.931,
+      20.672,
+      -68.661
+     ],
+     "quat_xyzw": [
+      -0.80461,
+      -0.5629,
+      0.18209,
+      0.05091
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2436,
+      0.2927,
+      -0.0954
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0713,
+      0.0266,
+      0.0539
+     ],
+     "euler": [
+      -30.802,
+      19.721,
+      159.322
+     ],
+     "quat_xyzw": [
+      0.11546,
+      0.28703,
+      0.94259,
+      0.12573
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3841,
+      0.2943,
+      0.2028
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0178,
+      -0.0202,
+      0.2714
+     ],
+     "euler": [
+      1.841,
+      105.004,
+      -86.879
+     ],
+     "quat_xyzw": [
+      -0.53834,
+      0.58272,
+      -0.42775,
+      0.43318
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.295,
+      0.2474,
+      0.4203
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0203,
+      0.0081,
+      -0.1782
+     ],
+     "euler": [
+      177.674,
+      -15.5,
+      -48.497
+     ],
+     "quat_xyzw": [
+      0.90438,
+      0.40436,
+      0.11467,
+      0.07371
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3331,
+      0.2757,
+      -0.0293
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0135,
+      0.0102,
+      0.0168
+     ],
+     "euler": [
+      12.059,
+      -23.516,
+      34.167
+     ],
+     "quat_xyzw": [
+      0.03877,
+      -0.22392,
+      0.30647,
+      0.92436
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3263,
+      0.2779,
+      0.1657
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.0749,
+      0.0329,
+      0.0472
+     ],
+     "euler": [
+      159.602,
+      37.306,
+      13.068
+     ],
+     "quat_xyzw": [
+      0.93289,
+      -0.04985,
+      -0.29365,
+      0.2025
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2379,
+      0.3006,
+      0.1961
+     ]
+    }
+   ]
+  },
+  {
+   "index": 50,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "ShieldCore",
+   "bin": 4,
+   "cell": [
+    1,
+    1
+   ],
+   "position": [
+    -0.005,
+    0.676,
+    -0.0312
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2545,
+    0.2145,
+    0.3003
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0561,
+      -0.0038,
+      -0.0336
+     ],
+     "euler": [
+      29.575,
+      -91.139,
+      -101.981
+     ],
+     "quat_xyzw": [
+      0.64897,
+      -0.29577,
+      -0.41122,
+      0.56767
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0612,
+      0.6722,
+      -0.0649
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0197,
+      -0.0336,
+      -0.0853
+     ],
+     "euler": [
+      -22.606,
+      62.415,
+      -58.389
+     ],
+     "quat_xyzw": [
+      -0.39417,
+      0.36178,
+      -0.32045,
+      0.7817
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0147,
+      0.6424,
+      -0.1165
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0684,
+      0.0143,
+      0.1073
+     ],
+     "euler": [
+      121.929,
+      101.246,
+      6.238
+     ],
+     "quat_xyzw": [
+      0.57428,
+      0.34444,
+      -0.65808,
+      0.34423
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0634,
+      0.6904,
+      0.0761
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0161,
+      -0.0134,
+      0.0887
+     ],
+     "euler": [
+      -52.577,
+      -165.564,
+      -47.405
+     ],
+     "quat_xyzw": [
+      -0.3066,
+      0.83681,
+      0.4476,
+      0.07348
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0211,
+      0.6626,
+      0.0574
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0266,
+      0.0355,
+      -0.0651
+     ],
+     "euler": [
+      0.654,
+      -101.627,
+      -120.179
+     ],
+     "quat_xyzw": [
+      0.67364,
+      -0.38337,
+      -0.54547,
+      0.3189
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0216,
+      0.7115,
+      -0.0964
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      -0.0724,
+      0.0541,
+      0.0479
+     ],
+     "euler": [
+      2.802,
+      129.986,
+      -104.247
+     ],
+     "quat_xyzw": [
+      -0.70878,
+      0.5644,
+      -0.34718,
+      0.24197
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.0775,
+      0.7301,
+      0.0167
+     ]
+    },
+    {
+     "item": "ShieldCore",
+     "offset": [
+      0.0567,
+      0.0632,
+      0.0376
+     ],
+     "euler": [
+      16.576,
+      1.344,
+      104.381
+     ],
+     "quat_xyzw": [
+      0.09753,
+      -0.10676,
+      0.78071,
+      0.60793
+     ],
+     "scale": 0.23858,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      0.0517,
+      0.7392,
+      0.0064
+     ]
+    }
+   ]
+  },
+  {
+   "index": 51,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "SurtlingCore",
+   "bin": 11,
+   "cell": [
+    2,
+    3
+   ],
+   "position": [
+    -0.3286,
+    1.2787,
+    -0.0073
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2271,
+    0.1643,
+    0.2428
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      -0.058,
+      0.0108,
+      -0.0548
+     ],
+     "euler": [
+      14.442,
+      109.458,
+      -35.103
+     ],
+     "quat_xyzw": [
+      -0.17505,
+      0.79414,
+      -0.2706,
+      0.51525
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.3866,
+      1.2895,
+      -0.0621
+     ]
+    },
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      -0.061,
+      0.0229,
+      0.066
+     ],
+     "euler": [
+      -3.398,
+      76.029,
+      -97.922
+     ],
+     "quat_xyzw": [
+      -0.47965,
+      0.38656,
+      -0.582,
+      0.53083
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.3895,
+      1.3016,
+      0.0587
+     ]
+    },
+    {
+     "item": "SurtlingCore",
+     "offset": [
+      0.0467,
+      0.0129,
+      0.0152
+     ],
+     "euler": [
+      26.566,
+      -49.491,
+      129.861
+     ],
+     "quat_xyzw": [
+      -0.2806,
+      -0.36163,
+      0.84136,
+      0.2874
+     ],
+     "scale": 0.38274,
+     "fit_longest_m": 0.11,
+     "world_position": [
+      -0.2819,
+      1.2916,
+      0.008
+     ]
+    }
+   ]
+  },
+  {
+   "index": 52,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "GlowWorm",
+   "bin": 5,
+   "cell": [
+    2,
+    1
+   ],
+   "position": [
+    -0.31,
+    0.6568,
+    0.0061
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2644,
+    0.2278,
+    0.3631
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0241,
+      0.0096,
+      -0.0507
+     ],
+     "euler": [
+      8.238,
+      -151.829,
+      -93.994
+     ],
+     "quat_xyzw": [
+      0.71942,
+      -0.64704,
+      -0.13001,
+      0.21651
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3342,
+      0.6664,
+      -0.0446
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0985,
+      0.0332,
+      -0.0226
+     ],
+     "euler": [
+      -25.203,
+      -19.257,
+      1.572
+     ],
+     "quat_xyzw": [
+      -0.21731,
+      -0.16026,
+      -0.02328,
+      0.96257
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.4085,
+      0.69,
+      -0.0165
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0162,
+      -0.0417,
+      0.1341
+     ],
+     "euler": [
+      27.593,
+      -57.771,
+      112.332
+     ],
+     "quat_xyzw": [
+      -0.27341,
+      -0.43465,
+      0.77047,
+      0.37776
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2938,
+      0.6151,
+      0.1402
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0122,
+      0.0671,
+      -0.1148
+     ],
+     "euler": [
+      19.681,
+      2.293,
+      119.362
+     ],
+     "quat_xyzw": [
+      0.10328,
+      -0.13754,
+      0.84863,
+      0.50024
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3222,
+      0.724,
+      -0.1087
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0761,
+      -0.0188,
+      0.1187
+     ],
+     "euler": [
+      44.432,
+      53.084,
+      -47.083
+     ],
+     "quat_xyzw": [
+      0.14486,
+      0.51435,
+      -0.48569,
+      0.69178
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3861,
+      0.638,
+      0.1247
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0559,
+      0.048,
+      -0.0857
+     ],
+     "euler": [
+      22.124,
+      -144.54,
+      57.964
+     ],
+     "quat_xyzw": [
+      -0.40183,
+      -0.84605,
+      0.30468,
+      0.17289
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2541,
+      0.7048,
+      -0.0797
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0841,
+      0.0244,
+      0.074
+     ],
+     "euler": [
+      154.665,
+      -33.378,
+      56.378
+     ],
+     "quat_xyzw": [
+      0.79397,
+      -0.49698,
+      0.34618,
+      0.05279
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2259,
+      0.6812,
+      0.0801
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      0.0638,
+      0.0713,
+      0.0015
+     ],
+     "euler": [
+      -34.197,
+      -118.232,
+      92.826
+     ],
+     "quat_xyzw": [
+      -0.6982,
+      -0.45623,
+      0.1814,
+      0.52102
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.2462,
+      0.7282,
+      0.0076
+     ]
+    },
+    {
+     "item": "GlowWorm",
+     "offset": [
+      -0.0196,
+      0.0227,
+      0.0509
+     ],
+     "euler": [
+      29.545,
+      -95.685,
+      123.979
+     ],
+     "quat_xyzw": [
+      -0.55246,
+      -0.48772,
+      0.66174,
+      0.13791
+     ],
+     "scale": 0.18325,
+     "fit_longest_m": 0.13,
+     "world_position": [
+      -0.3296,
+      0.6795,
+      0.0569
+     ]
+    }
+   ]
+  },
+  {
+   "index": 53,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "FrostCore",
+   "bin": 3,
+   "cell": [
+    0,
+    1
+   ],
+   "position": [
+    0.3323,
+    0.5937,
+    -0.003
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.22,
+    0.2706,
+    0.3883
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FrostCore",
+     "offset": [
+      -0.0539,
+      0.0672,
+      0.0012
+     ],
+     "euler": [
+      11.224,
+      78.129,
+      109.579
+     ],
+     "quat_xyzw": [
+      0.55621,
+      0.29957,
+      0.59581,
+      0.49589
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.2784,
+      0.6609,
+      -0.0017
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      0.0595,
+      0.0425,
+      -0.0004
+     ],
+     "euler": [
+      -22.963,
+      158.573,
+      -79.611
+     ],
+     "quat_xyzw": [
+      -0.64486,
+      0.71604,
+      0.03362,
+      0.26516
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.3919,
+      0.6362,
+      -0.0033
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      0.0044,
+      0.0365,
+      0.0979
+     ],
+     "euler": [
+      -125.427,
+      -93.137,
+      -39.771
+     ],
+     "quat_xyzw": [
+      -0.46131,
+      -0.52089,
+      -0.71411,
+      0.07685
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.3367,
+      0.6303,
+      0.095
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      0.065,
+      0.053,
+      -0.1411
+     ],
+     "euler": [
+      119.458,
+      20.696,
+      -102.698
+     ],
+     "quat_xyzw": [
+      0.45993,
+      0.72006,
+      -0.48417,
+      0.18856
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.3974,
+      0.6468,
+      -0.1441
+     ]
+    },
+    {
+     "item": "FrostCore",
+     "offset": [
+      0.0577,
+      -0.0473,
+      0.1396
+     ],
+     "euler": [
+      -50.136,
+      -15.762,
+      -93.234
+     ],
+     "quat_xyzw": [
+      -0.19801,
+      -0.39033,
+      -0.69201,
+      0.57407
+     ],
+     "scale": 0.16748,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.39,
+      0.5465,
+      0.1366
+     ]
+    }
+   ]
+  },
+  {
+   "index": 54,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "OrbFrostFire",
+   "bin": 9,
+   "cell": [
+    0,
+    3
+   ],
+   "position": [
+    0.31,
+    1.2546,
+    0.0152
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2644,
+    0.158,
+    0.3399
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0898,
+      -0.0125,
+      -0.1285
+     ],
+     "euler": [
+      62.338,
+      51.08,
+      14.899
+     ],
+     "quat_xyzw": [
+      0.51088,
+      0.30524,
+      -0.12116,
+      0.79445
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.2201,
+      1.2421,
+      -0.1133
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0764,
+      -0.0049,
+      0.0003
+     ],
+     "euler": [
+      -34.663,
+      51.399,
+      -59.405
+     ],
+     "quat_xyzw": [
+      -0.43828,
+      0.22656,
+      -0.314,
+      0.81116
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.3863,
+      1.2497,
+      0.0155
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0913,
+      0.0282,
+      -0.0746
+     ],
+     "euler": [
+      157.064,
+      17.474,
+      -40.124
+     ],
+     "quat_xyzw": [
+      0.89953,
+      0.36065,
+      -0.20724,
+      0.13353
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.4012,
+      1.2828,
+      -0.0594
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0159,
+      0.0252,
+      -0.0322
+     ],
+     "euler": [
+      -172.066,
+      5.417,
+      69.89
+     ],
+     "quat_xyzw": [
+      -0.81495,
+      0.57346,
+      0.07822,
+      0.02965
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.294,
+      1.2798,
+      -0.017
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0905,
+      -0.0032,
+      0.0981
+     ],
+     "euler": [
+      45.316,
+      -20.98,
+      89.207
+     ],
+     "quat_xyzw": [
+      0.15171,
+      -0.38561,
+      0.68711,
+      0.5968
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.4004,
+      1.2514,
+      0.1132
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      0.0095,
+      -0.0055,
+      0.1281
+     ],
+     "euler": [
+      -130.88,
+      65.412,
+      -15.114
+     ],
+     "quat_xyzw": [
+      -0.78821,
+      0.12199,
+      0.44118,
+      0.41134
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.3195,
+      1.2491,
+      0.1433
+     ]
+    },
+    {
+     "item": "OrbFrostFire",
+     "offset": [
+      -0.0879,
+      0.0366,
+      0.0219
+     ],
+     "euler": [
+      -153.089,
+      86.781,
+      -13.056
+     ],
+     "quat_xyzw": [
+      -0.72033,
+      0.07847,
+      0.64456,
+      0.24395
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.222,
+      1.2912,
+      0.0371
+     ]
+    }
+   ]
+  },
+  {
+   "index": 55,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "MemorialCoal",
+   "bin": 8,
+   "cell": [
+    2,
+    2
+   ],
+   "position": [
+    -0.3081,
+    0.9588,
+    -0.0366
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2608,
+    0.1877,
+    0.321
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.0118,
+      0.0286,
+      0.0596
+     ],
+     "euler": [
+      -73.079,
+      17.447,
+      139.259
+     ],
+     "quat_xyzw": [
+      -0.09061,
+      0.5941,
+      0.77592,
+      0.19178
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.3199,
+      0.9874,
+      0.0231
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      0.0287,
+      -0.0152,
+      0.1045
+     ],
+     "euler": [
+      -43.999,
+      86.67,
+      -104.463
+     ],
+     "quat_xyzw": [
+      -0.66986,
+      0.17433,
+      -0.37566,
+      0.61626
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.2794,
+      0.9436,
+      0.0679
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      -0.066,
+      0.0205,
+      -0.0114
+     ],
+     "euler": [
+      -77.136,
+      -13.291,
+      -37.603
+     ],
+     "quat_xyzw": [
+      -0.55705,
+      -0.28523,
+      -0.31859,
+      0.71193
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.374,
+      0.9793,
+      -0.048
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      0.0307,
+      0.0485,
+      -0.0367
+     ],
+     "euler": [
+      -26.82,
+      -17.813,
+      -73.321
+     ],
+     "quat_xyzw": [
+      -0.09388,
+      -0.25761,
+      -0.6026,
+      0.74947
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.2773,
+      1.0073,
+      -0.0732
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      0.0867,
+      0.0456,
+      0.0816
+     ],
+     "euler": [
+      -9.755,
+      87.252,
+      95.461
+     ],
+     "quat_xyzw": [
+      0.46731,
+      0.50794,
+      0.57317,
+      0.4417
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.2214,
+      1.0044,
+      0.045
+     ]
+    },
+    {
+     "item": "MemorialCoal",
+     "offset": [
+      0.0381,
+      -0.01,
+      -0.1251
+     ],
+     "euler": [
+      -14.684,
+      77.752,
+      -155.028
+     ],
+     "quat_xyzw": [
+      -0.62928,
+      0.03745,
+      -0.73652,
+      0.24525
+     ],
+     "scale": 0.19904,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.27,
+      0.9488,
+      -0.1617
+     ]
+    }
+   ]
+  },
+  {
+   "index": 56,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "OrbThunderBlood",
+   "bin": 10,
+   "cell": [
+    1,
+    3
+   ],
+   "position": [
+    -0.0008,
+    1.2571,
+    -0.0073
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2625,
+    0.185,
+    0.3797
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0902,
+      0.0035,
+      0.1482
+     ],
+     "euler": [
+      45.67,
+      -12.434,
+      -86.587
+     ],
+     "quat_xyzw": [
+      0.34924,
+      0.19191,
+      -0.59769,
+      0.69568
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0911,
+      1.2606,
+      0.1409
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0891,
+      -0.0051,
+      0.0212
+     ],
+     "euler": [
+      38.911,
+      150.136,
+      69.273
+     ],
+     "quat_xyzw": [
+      0.58843,
+      0.70082,
+      -0.1267,
+      0.38282
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0883,
+      1.2521,
+      0.0139
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0313,
+      -0.0138,
+      -0.0734
+     ],
+     "euler": [
+      -37.368,
+      176.481,
+      22.875
+     ],
+     "quat_xyzw": [
+      -0.17812,
+      -0.93,
+      -0.31961,
+      0.03499
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0321,
+      1.2433,
+      -0.0807
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0181,
+      -0.002,
+      0.0665
+     ],
+     "euler": [
+      -56.256,
+      67.365,
+      -132.039
+     ],
+     "quat_xyzw": [
+      -0.60632,
+      -0.15966,
+      -0.56424,
+      0.53714
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0173,
+      1.2551,
+      0.0593
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0887,
+      0.0468,
+      0.0778
+     ],
+     "euler": [
+      63.028,
+      -35.617,
+      -37.474
+     ],
+     "quat_xyzw": [
+      0.55504,
+      -0.08705,
+      -0.10933,
+      0.82
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0895,
+      1.3039,
+      0.0705
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0255,
+      0.0507,
+      -0.1287
+     ],
+     "euler": [
+      -58.599,
+      25.898,
+      143.054
+     ],
+     "quat_xyzw": [
+      0.03423,
+      0.51427,
+      0.84085,
+      0.16528
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.0263,
+      1.3078,
+      -0.136
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0325,
+      0.0347,
+      -0.0452
+     ],
+     "euler": [
+      36.013,
+      -76.803,
+      121.993
+     ],
+     "quat_xyzw": [
+      -0.3992,
+      -0.4983,
+      0.74493,
+      0.19343
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0317,
+      1.2919,
+      -0.0525
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      0.0666,
+      0.0333,
+      -0.1488
+     ],
+     "euler": [
+      -33.489,
+      147.907,
+      45.375
+     ],
+     "quat_xyzw": [
+      0.28148,
+      0.87979,
+      0.35755,
+      0.13742
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      0.0658,
+      1.2904,
+      -0.1561
+     ]
+    },
+    {
+     "item": "OrbThunderBlood",
+     "offset": [
+      -0.0032,
+      -0.0227,
+      0.1489
+     ],
+     "euler": [
+      -32.767,
+      -127.29,
+      72.638
+     ],
+     "quat_xyzw": [
+      -0.61006,
+      -0.6185,
+      0.0486,
+      0.49287
+     ],
+     "scale": 0.30664,
+     "fit_longest_m": 0.085,
+     "world_position": [
+      -0.004,
+      1.2344,
+      0.1416
+     ]
+    }
+   ]
+  },
+  {
+   "index": 57,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "MoltenCore",
+   "bin": 6,
+   "cell": [
+    0,
+    2
+   ],
+   "position": [
+    0.3057,
+    1.0018,
+    -0.0436
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2557,
+    0.1706,
+    0.307
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0524,
+      -0.0035,
+      0.0832
+     ],
+     "euler": [
+      -57.174,
+      -82.258,
+      41.884
+     ],
+     "quat_xyzw": [
+      -0.54305,
+      -0.41059,
+      -0.05754,
+      0.73021
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.358,
+      0.9983,
+      0.0396
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0067,
+      -0.011,
+      -0.1118
+     ],
+     "euler": [
+      31.373,
+      148.114,
+      53.937
+     ],
+     "quat_xyzw": [
+      0.486,
+      0.79138,
+      -0.11178,
+      0.35359
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.299,
+      0.9908,
+      -0.1554
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0838,
+      0.0248,
+      -0.0945
+     ],
+     "euler": [
+      29.155,
+      116.79,
+      93.755
+     ],
+     "quat_xyzw": [
+      0.69179,
+      0.46716,
+      0.22367,
+      0.50315
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2219,
+      1.0267,
+      -0.1381
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      0.0839,
+      0.0124,
+      0.002
+     ],
+     "euler": [
+      -148.873,
+      -65.808,
+      27.781
+     ],
+     "quat_xyzw": [
+      -0.82013,
+      0.05268,
+      -0.45394,
+      0.34431
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.3896,
+      1.0143,
+      -0.0417
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.033,
+      -0.0034,
+      0.111
+     ],
+     "euler": [
+      151.859,
+      7.712,
+      76.037
+     ],
+     "quat_xyzw": [
+      0.77251,
+      -0.58321,
+      0.09801,
+      0.23127
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2727,
+      0.9984,
+      0.0674
+     ]
+    },
+    {
+     "item": "MoltenCore",
+     "offset": [
+      -0.0866,
+      0.0412,
+      0.0605
+     ],
+     "euler": [
+      29.433,
+      7.355,
+      1.547
+     ],
+     "quat_xyzw": [
+      0.25432,
+      0.05861,
+      -0.00326,
+      0.96534
+     ],
+     "scale": 0.34091,
+     "fit_longest_m": 0.09,
+     "world_position": [
+      0.2191,
+      1.0431,
+      0.0169
+     ]
+    }
+   ]
+  },
+  {
+   "index": 58,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "FaderEmber",
+   "bin": 13,
+   "cell": [
+    1,
+    4
+   ],
+   "position": [
+    0.0,
+    1.5004,
+    -0.1029
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2642,
+    0.1067,
+    0.1885
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0973,
+      0.0168,
+      -0.0135
+     ],
+     "euler": [
+      71.65,
+      150.346,
+      42.67
+     ],
+     "quat_xyzw": [
+      0.42468,
+      0.6756,
+      -0.45156,
+      0.39912
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0973,
+      1.5172,
+      -0.1164
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0382,
+      0.0018,
+      -0.0594
+     ],
+     "euler": [
+      0.791,
+      73.631,
+      -22.073
+     ],
+     "quat_xyzw": [
+      -0.10929,
+      0.5892,
+      -0.15732,
+      0.78495
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0382,
+      1.5022,
+      -0.1623
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0367,
+      0.0171,
+      -0.0213
+     ],
+     "euler": [
+      -8.47,
+      68.41,
+      -129.719
+     ],
+     "quat_xyzw": [
+      -0.53346,
+      0.18288,
+      -0.72901,
+      0.38798
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0367,
+      1.5174,
+      -0.1242
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0971,
+      0.0037,
+      0.0593
+     ],
+     "euler": [
+      -16.067,
+      -44.248,
+      -152.486
+     ],
+     "quat_xyzw": [
+      0.33143,
+      -0.21443,
+      -0.90348,
+      0.16701
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0971,
+      1.5041,
+      -0.0436
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      -0.0335,
+      0.0054,
+      0.0165
+     ],
+     "euler": [
+      23.606,
+      36.86,
+      -67.936
+     ],
+     "quat_xyzw": [
+      -0.01196,
+      0.36507,
+      -0.5725,
+      0.73405
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      -0.0335,
+      1.5058,
+      -0.0863
+     ]
+    },
+    {
+     "item": "FaderEmber",
+     "offset": [
+      0.0974,
+      0.0184,
+      -0.0593
+     ],
+     "euler": [
+      46.826,
+      -25.411,
+      85.372
+     ],
+     "quat_xyzw": [
+      0.1481,
+      -0.41117,
+      0.67117,
+      0.59878
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.0974,
+      1.5188,
+      -0.1622
+     ]
+    }
+   ]
+  },
+  {
+   "index": 59,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "BlackCore",
+   "bin": 7,
+   "cell": [
+    1,
+    2
+   ],
+   "position": [
+    -0.0002,
+    0.9789,
+    -0.0143
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2648,
+    0.1663,
+    0.3658
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0857,
+      -0.0125,
+      -0.0087
+     ],
+     "euler": [
+      -0.163,
+      -178.565,
+      -38.246
+     ],
+     "quat_xyzw": [
+      0.32756,
+      -0.94475,
+      -0.00545,
+      0.01137
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0855,
+      0.9663,
+      -0.0229
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0848,
+      0.0117,
+      0.0129
+     ],
+     "euler": [
+      -142.015,
+      -80.284,
+      -15.547
+     ],
+     "quat_xyzw": [
+      -0.68782,
+      -0.30565,
+      -0.63763,
+      0.16405
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.085,
+      0.9906,
+      -0.0014
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0857,
+      0.0442,
+      0.0857
+     ],
+     "euler": [
+      7.104,
+      56.479,
+      -63.294
+     ],
+     "quat_xyzw": [
+      -0.20132,
+      0.43066,
+      -0.4863,
+      0.73316
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0859,
+      1.023,
+      0.0715
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0909,
+      -0.0081,
+      0.1195
+     ],
+     "euler": [
+      -8.053,
+      7.922,
+      3.534
+     ],
+     "quat_xyzw": [
+      -0.06789,
+      0.07103,
+      0.03554,
+      0.99453
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0907,
+      0.9707,
+      0.1052
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      -0.0737,
+      0.0132,
+      -0.1456
+     ],
+     "euler": [
+      -169.359,
+      -23.254,
+      69.241
+     ],
+     "quat_xyzw": [
+      -0.81319,
+      0.53871,
+      -0.11354,
+      0.18875
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      -0.0739,
+      0.9921,
+      -0.1599
+     ]
+    },
+    {
+     "item": "BlackCore",
+     "offset": [
+      0.0207,
+      0.0168,
+      0.1425
+     ],
+     "euler": [
+      -37.251,
+      -102.267,
+      15.583
+     ],
+     "quat_xyzw": [
+      -0.29859,
+      -0.70385,
+      -0.16576,
+      0.62287
+     ],
+     "scale": 0.38071,
+     "fit_longest_m": 0.12,
+     "world_position": [
+      0.0205,
+      0.9956,
+      0.1283
+     ]
+    }
+   ]
+  },
+  {
+   "index": 60,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "Wisp",
+   "bin": 12,
+   "cell": [
+    0,
+    4
+   ],
+   "position": [
+    0.31,
+    1.4994,
+    0.0524
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2642,
+    0.1124,
+    0.1603
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0975,
+      0.0103,
+      -0.0407
+     ],
+     "euler": [
+      -5.293,
+      113.496,
+      57.665
+     ],
+     "quat_xyzw": [
+      0.38068,
+      0.74402,
+      0.29798,
+      0.46122
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.2125,
+      1.5097,
+      0.0117
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      0.0971,
+      0.0213,
+      -0.0453
+     ],
+     "euler": [
+      34.419,
+      60.649,
+      48.875
+     ],
+     "quat_xyzw": [
+      0.43203,
+      0.33344,
+      0.20511,
+      0.81247
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.4071,
+      1.5207,
+      0.0071
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      0.044,
+      0.0057,
+      0.0389
+     ],
+     "euler": [
+      -17.151,
+      -138.813,
+      59.307
+     ],
+     "quat_xyzw": [
+      -0.50354,
+      -0.77846,
+      0.05077,
+      0.37131
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.354,
+      1.5051,
+      0.0913
+     ]
+    },
+    {
+     "item": "Wisp",
+     "offset": [
+      -0.0531,
+      0.0033,
+      0.0454
+     ],
+     "euler": [
+      -53.585,
+      73.69,
+      -48.0
+     ],
+     "quat_xyzw": [
+      -0.54726,
+      0.34228,
+      -0.04362,
+      0.76253
+     ],
+     "scale": 0.7,
+     "fit_longest_m": 0.07,
+     "world_position": [
+      0.257,
+      1.5027,
+      0.0978
+     ]
+    }
+   ]
+  },
+  {
+   "index": 61,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "Thunderstone",
+   "bin": 0,
+   "cell": [
+    0,
+    0
+   ],
+   "position": [
+    0.2739,
+    0.2966,
+    0.2424
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1926,
+    0.197,
+    0.4302
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Stone",
+     "offset": [
+      0.0255,
+      0.0151,
+      -0.1578
+     ],
+     "euler": [
+      -0.558,
+      -27.224,
+      114.839
+     ],
+     "quat_xyzw": [
+      -0.20086,
+      -0.12274,
+      0.81834,
+      0.52432
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2994,
+      0.3117,
+      0.0846
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0388,
+      0.0259,
+      -0.0354
+     ],
+     "euler": [
+      137.456,
+      -48.151,
+      13.004
+     ],
+     "quat_xyzw": [
+      0.82857,
+      -0.24339,
+      0.41521,
+      0.28606
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.235,
+      0.3225,
+      0.207
+     ]
+    },
+    {
+     "item": "Stone",
+     "offset": [
+      -0.0224,
+      -0.0144,
+      0.1433
+     ],
+     "euler": [
+      -152.48,
+      24.891,
+      -14.051
+     ],
+     "quat_xyzw": [
+      -0.94763,
+      -0.06514,
+      0.17934,
+      0.25612
+     ],
+     "scale": 0.26395,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.2515,
+      0.2821,
+      0.3857
+     ]
+    }
+   ]
+  },
+  {
+   "index": 62,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "FrozenFuel",
+   "bin": 1,
+   "cell": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0002,
+    0.3202,
+    0.238
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.265,
+    0.1826,
+    0.3454
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMarble",
+     "offset": [
+      0.0778,
+      -0.0063,
+      -0.0773
+     ],
+     "euler": [
+      -11.33,
+      -19.452,
+      -3.868
+     ],
+     "quat_xyzw": [
+      -0.09156,
+      -0.1713,
+      -0.04977,
+      0.97969
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      0.0776,
+      0.3139,
+      0.1607
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0242,
+      0.0204,
+      0.1117
+     ],
+     "euler": [
+      145.602,
+      8.387,
+      66.036
+     ],
+     "quat_xyzw": [
+      0.81064,
+      -0.50101,
+      0.10212,
+      0.28534
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0244,
+      0.3406,
+      0.3497
+     ]
+    },
+    {
+     "item": "BlackMarble",
+     "offset": [
+      -0.0681,
+      0.0252,
+      -0.0956
+     ],
+     "euler": [
+      -46.376,
+      -133.443,
+      -89.323
+     ],
+     "quat_xyzw": [
+      0.48285,
+      -0.70997,
+      -0.51262,
+      0.00415
+     ],
+     "scale": 0.23725,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.0682,
+      0.3454,
+      0.1424
+     ]
+    }
+   ]
+  },
+  {
+   "index": 63,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "Crystal",
+   "bin": 2,
+   "cell": [
+    2,
+    0
+   ],
+   "position": [
+    -0.3101,
+    0.2722,
+    0.1214
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2654,
+    0.2226,
+    0.6247
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Flint",
+     "offset": [
+      0.0664,
+      -0.0069,
+      -0.0321
+     ],
+     "euler": [
+      21.667,
+      71.654,
+      174.296
+     ],
+     "quat_xyzw": [
+      0.58178,
+      -0.12359,
+      0.78988,
+      0.14951
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2437,
+      0.2653,
+      0.0893
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0794,
+      0.0066,
+      -0.1548
+     ],
+     "euler": [
+      124.604,
+      103.288,
+      -0.811
+     ],
+     "quat_xyzw": [
+      0.54684,
+      0.36837,
+      -0.69634,
+      0.28352
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3895,
+      0.2788,
+      -0.0334
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.1113,
+      -0.0443,
+      0.249
+     ],
+     "euler": [
+      23.873,
+      7.741,
+      -66.612
+     ],
+     "quat_xyzw": [
+      0.1362,
+      0.16851,
+      -0.54768,
+      0.80815
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.1989,
+      0.2279,
+      0.3704
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0634,
+      0.0348,
+      -0.006
+     ],
+     "euler": [
+      4.936,
+      21.63,
+      176.449
+     ],
+     "quat_xyzw": [
+      0.18869,
+      -0.03647,
+      0.98061,
+      0.03848
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3735,
+      0.307,
+      0.1153
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0161,
+      0.0361,
+      -0.2476
+     ],
+     "euler": [
+      -12.187,
+      -19.299,
+      164.138
+     ],
+     "quat_xyzw": [
+      -0.17952,
+      0.08065,
+      0.96845,
+      0.15288
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3262,
+      0.3083,
+      -0.1262
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0788,
+      0.0294,
+      0.1918
+     ],
+     "euler": [
+      5.954,
+      27.756,
+      18.496
+     ],
+     "quat_xyzw": [
+      0.08826,
+      0.22832,
+      0.14351,
+      0.9589
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3889,
+      0.3016,
+      0.3131
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.0166,
+      0.0086,
+      0.142
+     ],
+     "euler": [
+      -120.617,
+      -106.646,
+      34.498
+     ],
+     "quat_xyzw": [
+      -0.61334,
+      -0.22554,
+      -0.57765,
+      0.48915
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3267,
+      0.2808,
+      0.2634
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      0.02,
+      0.0412,
+      -0.0861
+     ],
+     "euler": [
+      10.412,
+      89.313,
+      160.934
+     ],
+     "quat_xyzw": [
+      0.70098,
+      0.05227,
+      0.68806,
+      0.18022
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.2901,
+      0.3134,
+      0.0353
+     ]
+    },
+    {
+     "item": "Flint",
+     "offset": [
+      -0.031,
+      0.0896,
+      -0.2295
+     ],
+     "euler": [
+      -8.246,
+      -139.084,
+      18.216
+     ],
+     "quat_xyzw": [
+      -0.17274,
+      -0.91874,
+      -0.01133,
+      0.35488
+     ],
+     "scale": 0.21519,
+     "fit_longest_m": 0.14,
+     "world_position": [
+      -0.3411,
+      0.3618,
+      -0.1081
+     ]
+    }
+   ]
+  }
+ ]
+}

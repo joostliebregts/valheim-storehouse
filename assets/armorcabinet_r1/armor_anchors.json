@@ -1,0 +1,3239 @@
+{
+  "schema": "storehouse-anchors/1",
+  "author": "Sol 6.1 / extra high",
+  "furniture": "Armor Coffer Cabinet",
+  "export": "armorchest_sol61b",
+  "units": 64,
+  "slots_designed_for": 64,
+  "stack_per_unit": true,
+  "space": {
+    "unity": "prefab metres; +y up,+z front",
+    "from_blender": "ux=-bx, uy=bz, uz=-by; Ru=C Rb C^T. Copy/unit rotations identity; ItemVisual already applies the180deg up correction."
+  },
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "armor_atlas.png",
+    "size_m": [
+      3.5,
+      1.6402003765106201,
+      2.135253429412842
+    ],
+    "body_height_m": 2.135
+  },
+  "capacity": {
+    "logical_slots": 64,
+    "display_places": 64,
+    "one_model_per_visual_place": true,
+    "native_full_mix": {
+      "ArmorIronChest": 16,
+      "ArmorIronLegs": 16,
+      "CapeDeerHide": 16,
+      "HelmetIron": 16
+    },
+    "all_one_folded_type_display_cap": 48,
+    "all_helmet_display_cap": 16,
+    "limitations": "No64-native-fit claim forA or every possible inventory mixture. No armor item stacking; each visual place represents one independent inventory record."
+  },
+  "fill_order": "Typed compatible bays only, native size, supported lower layers before upper, front before rear. No manual armor-stand keys.",
+  "native_scale_required": true,
+  "runtime_needed": [
+    "Register two separate buildable chest pieces with64logical slots and chest inventory interaction; contents automatic, no numbered armor stand assignment.",
+    "Parse/honor native_scale_required: use exact source RootScaleV, bypass DisplaySize(default0.7), FitBox resizing and global grow. Do not shrink oversized armor; use compatible empty place or do not draw past visible capacity.",
+    "Allocate by actual ItemDrop item type for vanilla and modded Helmet/Chest/Legs/Shoulder; helmet-only and folded-armor places have equipment_types. Preserve one item kind perbay and individual durability/quality/custom data.",
+    "For this existing units_data layout, honor one copies record per place and Layer/Pitch; native-scale layer lift changes with actual item's bounds. Skip/reallocate if native body exceeds available tier height/width/depth."
+  ],
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        1.14,
+        0.1408,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        1.14,
+        0.1408,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        1.14,
+        0.1408,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        1.14,
+        0.1408,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        0.38,
+        0.1408,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        0.38,
+        0.1408,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        0.38,
+        0.1408,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        0.38,
+        0.1408,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        -0.38,
+        0.1408,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        -0.38,
+        0.1408,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        -0.38,
+        0.1408,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        -0.38,
+        0.1408,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        -1.14,
+        0.1408,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        -1.14,
+        0.1408,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        -1.14,
+        0.1408,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "kind": "armor_folded",
+      "bay": 0,
+      "position": [
+        -1.14,
+        0.1408,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "ArmorIronChest",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        1.14,
+        0.5308,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        1.14,
+        0.5308,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        1.14,
+        0.5308,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        1.14,
+        0.5308,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        0.38,
+        0.5308,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        0.38,
+        0.5308,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        0.38,
+        0.5308,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        0.38,
+        0.5308,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        -0.38,
+        0.5308,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        -0.38,
+        0.5308,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        -0.38,
+        0.5308,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        -0.38,
+        0.5308,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        -1.14,
+        0.5308,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        -1.14,
+        0.5308,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        -1.14,
+        0.5308,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "kind": "armor_folded",
+      "bay": 1,
+      "position": [
+        -1.14,
+        0.5308,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.0052689961175816
+      },
+      "render_item": "ArmorIronLegs",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        1.14,
+        0.9208,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        1.14,
+        0.9208,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        1.14,
+        0.9208,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        1.14,
+        0.9208,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        0.38,
+        0.9208,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        0.38,
+        0.9208,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        0.38,
+        0.9208,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        0.38,
+        0.9208,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        -0.38,
+        0.9208,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        -0.38,
+        0.9208,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        -0.38,
+        0.9208,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        -0.38,
+        0.9208,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        -1.14,
+        0.9208,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        -1.14,
+        0.9208,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        -1.14,
+        0.9208,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "kind": "armor_folded",
+      "bay": 2,
+      "position": [
+        -1.14,
+        0.9208,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.65,
+        0.335,
+        0.65
+      ],
+      "equipment_types": [
+        "Chest",
+        "Legs",
+        "Shoulder"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 2,
+        "pitch_frac": 1.005015419679245
+      },
+      "render_item": "CapeDeerHide",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        1.14,
+        1.3108,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        1.14,
+        1.3108,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        0.38,
+        1.3108,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        0.38,
+        1.3108,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        -0.38,
+        1.3108,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        -0.38,
+        1.3108,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        -1.14,
+        1.3108,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        -1.14,
+        1.3108,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        1.14,
+        1.6508,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        1.14,
+        1.6508,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        0.38,
+        1.6508,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        0.38,
+        1.6508,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        -0.38,
+        1.6508,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        -0.38,
+        1.6508,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        -1.14,
+        1.6508,
+        0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "kind": "armor_helmet",
+      "bay": 3,
+      "position": [
+        -1.14,
+        1.6508,
+        -0.345
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.25,
+        0.3,
+        0.32
+      ],
+      "equipment_types": [
+        "Helmet"
+      ],
+      "layout": {
+        "cols": 1,
+        "rows": 1,
+        "layers": 1,
+        "pitch_frac": 1
+      },
+      "render_item": "HelmetIron",
+      "native_scale_required": true,
+      "copies": [
+        {
+          "layer": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "anchor": "bottom_center"
+        }
+      ]
+    }
+  ],
+  "source_provenance": {
+    "brief_windows": {
+      "path": "C:/Users/joost/Projects/valheim/work/storehouse-0.5/BRIEF-B.md",
+      "sha256": "3f725ff59c6ef777930471aa4c79cda6bdc5f0cace4e681ea6aca6a83f83e39d"
+    },
+    "larder_windows": {
+      "path": "C:/Users/joost/.pai/tools/valheim-storehouse/assets/larder_r5/LarderAnchors.json",
+      "sha256": "30439f5af5a6f09785ee52bde830b069176c16b70a522af3aad455525b4c3774"
+    },
+    "trophy_windows": {
+      "path": "C:/Users/joost/.pai/tools/valheim-storehouse/assets/trophyhall_r2/trophyhall_anchors.json",
+      "sha256": "7348ca85470ec310d19a5c22da8e4c8393214b094ea92916fa1dfb2b1e0461b4"
+    },
+    "runtime_read_snapshot": {
+      "path": "/Users/joost/storehouse-concepts-sol61-20261025/runtime-source/Storehouse.cs",
+      "sha256": "ec251d2a85bc4d5c801996dc0c3ce77f16406de6b6f811e9800293b4381b04e7"
+    }
+  },
+  "native_demo_bounds_blender": {
+    "ArmorIronChest": {
+      "min": [
+        -0.294881,
+        -0.315764,
+        -0.066183
+      ],
+      "max": [
+        0.312303,
+        0.311469,
+        0.089138
+      ],
+      "size": [
+        0.607184,
+        0.6272329999999999,
+        0.155321
+      ]
+    },
+    "ArmorIronLegs": {
+      "min": [
+        -0.294881,
+        -0.315764,
+        -0.066183
+      ],
+      "max": [
+        0.312303,
+        0.311469,
+        0.078057
+      ],
+      "size": [
+        0.607184,
+        0.6272329999999999,
+        0.14424
+      ]
+    },
+    "CapeDeerHide": {
+      "min": [
+        -0.294881,
+        -0.315764,
+        -0.066183
+      ],
+      "max": [
+        0.312303,
+        0.311469,
+        0.089138
+      ],
+      "size": [
+        0.607184,
+        0.6272329999999999,
+        0.155321
+      ]
+    },
+    "HelmetIron": {
+      "min": [
+        -0.104676,
+        -0.125478,
+        -0.053467
+      ],
+      "max": [
+        0.104676,
+        0.155343,
+        0.2115
+      ],
+      "size": [
+        0.209352,
+        0.280821,
+        0.264967
+      ]
+    }
+  }
+}

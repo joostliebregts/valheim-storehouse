@@ -1,0 +1,1255 @@
+{
+  "schema": "storehouse-anchors/1",
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png"
+  },
+  "author": "Sol 6.1 / extra high",
+  "prototype": true,
+  "units": 64,
+  "slots_designed_for": 64,
+  "stack_per_unit": false,
+  "display_places": 29,
+  "display_caps": {
+    "tools": 7,
+    "saddles": 2,
+    "larger_worn": 5,
+    "small_trinkets": 15
+  },
+  "space": {
+    "position": "Unity local metres ux=-bx,uy=bz,uz=-by",
+    "rotation": "R_u=C*R_b*C^T; ItemVisual already applies180Y, do not add another half-turn",
+    "anchor": "source bounds centre derived from actual native vertices"
+  },
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "tools",
+      "place": "open end tool floor",
+      "position": [
+        1.8400002,
+        0.8875915,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.589903,
+        1.475183,
+        0.6338489
+      ],
+      "example_item": "Shovel",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071068,
+            0.0,
+            0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true
+    },
+    {
+      "index": 1,
+      "kind": "tools",
+      "place": "open end tool floor",
+      "position": [
+        1.84,
+        0.3854635,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.274034,
+        0.470927,
+        0.132092
+      ],
+      "example_item": "Hammer",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071068,
+            0.0,
+            0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true
+    },
+    {
+      "index": 2,
+      "kind": "tools",
+      "place": "open end tool floor",
+      "position": [
+        -1.84,
+        0.9003785,
+        0.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.292831,
+        1.500757,
+        0.254458
+      ],
+      "example_item": "Cultivator",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071068,
+            0.0,
+            0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true
+    },
+    {
+      "index": 3,
+      "kind": "tools",
+      "place": "open end tool floor",
+      "position": [
+        -1.84,
+        1.084173,
+        -0.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.137273,
+        1.868346,
+        1.059988
+      ],
+      "example_item": "Scythe",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true
+    },
+    {
+      "index": 4,
+      "kind": "tools",
+      "place": "open shelf above short hammer",
+      "position": [
+        1.84,
+        0.8933055,
+        -0.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.448664,
+        0.186611,
+        0.928984
+      ],
+      "example_item": "Feaster",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            -0.0,
+            -0.7071068,
+            -0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true
+    },
+    {
+      "index": 5,
+      "kind": "tools",
+      "place": "small front head tray",
+      "position": [
+        1.84,
+        0.8794745,
+        1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.320103,
+        0.258949,
+        0.205327
+      ],
+      "example_item": "Hoe",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true
+    },
+    {
+      "index": 6,
+      "kind": "tools",
+      "place": "separate front horizontal rod ledge",
+      "position": [
+        0.0,
+        0.36165,
+        1.1000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        3.6886029,
+        0.1233,
+        0.236653
+      ],
+      "example_item": "FishingRod",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            -0.0,
+            -0.7071068,
+            -0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true
+    },
+    {
+      "index": 7,
+      "kind": "saddles",
+      "place": "flat native saddle base on tabletop",
+      "position": [
+        0.69,
+        1.4037721,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.863044,
+        0.647544,
+        1.255745
+      ],
+      "example_item": "SaddleAsksvin",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "saddles",
+      "requires_true_scale": true
+    },
+    {
+      "index": 8,
+      "kind": "saddles",
+      "place": "native cloth base flat on tabletop",
+      "position": [
+        -0.6900001,
+        1.437736,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        1.034561,
+        0.715472,
+        1.680433
+      ],
+      "example_item": "SaddleMoose",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "saddles",
+      "requires_true_scale": true
+    },
+    {
+      "index": 9,
+      "kind": "larger_worn",
+      "place": "two-sided bottom worn-drop shelf",
+      "position": [
+        0.7,
+        0.3075495,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.55568,
+        0.315099,
+        0.464141
+      ],
+      "example_item": "BeltStrength",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true
+    },
+    {
+      "index": 10,
+      "kind": "larger_worn",
+      "place": "two-sided bottom worn-drop shelf",
+      "position": [
+        -0.6,
+        0.279691,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.986417,
+        0.259382,
+        0.721648
+      ],
+      "example_item": "Wishbone",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            -0.0,
+            -0.7071068,
+            -0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true
+    },
+    {
+      "index": 11,
+      "kind": "larger_worn",
+      "place": "two-sided bottom worn-drop shelf",
+      "position": [
+        0.7,
+        0.3075495,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.55568,
+        0.315099,
+        0.464141
+      ],
+      "example_item": "IceShoes",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true
+    },
+    {
+      "index": 12,
+      "kind": "larger_worn",
+      "place": "two-sided bottom worn-drop shelf",
+      "position": [
+        -0.6,
+        0.3075495,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.55568,
+        0.315099,
+        0.464141
+      ],
+      "example_item": "IceSkates",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true
+    },
+    {
+      "index": 13,
+      "kind": "larger_worn",
+      "place": "rear open shelf; actual mesh body, particles absent",
+      "position": [
+        0.0,
+        0.2,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "example_item": "Demister",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true
+    },
+    {
+      "index": 14,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        0.96,
+        0.6767545,
+        0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.445108,
+        0.293509,
+        0.323812
+      ],
+      "example_item": "TrinketBlackStamina",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 15,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        0.32,
+        0.628566,
+        0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.20129,
+        0.197132,
+        0.190424
+      ],
+      "example_item": "TrinketFlametalEitr",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 16,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        -0.32,
+        0.6223844,
+        0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.531492,
+        0.184769,
+        0.261888
+      ],
+      "example_item": "TrinketChitinSwim",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 17,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        -0.96,
+        0.551964,
+        0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.286366,
+        0.043928,
+        0.182997
+      ],
+      "example_item": "TrinketBlackDamageHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 18,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        0.96,
+        0.9364396,
+        0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.234298,
+        0.052879,
+        0.301632
+      ],
+      "example_item": "TrinketFlametalStaminaHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 19,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        0.32,
+        0.9359645,
+        0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.206346,
+        0.051929,
+        0.239863
+      ],
+      "example_item": "TrinketSilverDamage",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 20,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        -0.32,
+        0.933353,
+        0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.185554,
+        0.046706,
+        0.235107
+      ],
+      "example_item": "TrinketBloodGoldStamina",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 21,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        -0.96,
+        0.929416,
+        0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.2343,
+        0.038832,
+        0.29776
+      ],
+      "example_item": "TrinketSilverResist",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 22,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        0.96,
+        0.5490239,
+        -0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.146739,
+        0.038048,
+        0.147116
+      ],
+      "example_item": "TrinketScaleStaminaDamage",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 23,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        0.32,
+        0.546543,
+        -0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.137695,
+        0.033086,
+        0.068422
+      ],
+      "example_item": "TrinketBloodGoldHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 24,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        -0.32,
+        0.546056,
+        -0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.08085,
+        0.032112,
+        0.058295
+      ],
+      "example_item": "TrinketCarapaceEitr",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 25,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        -0.96,
+        0.5448629,
+        -0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.158016,
+        0.029726,
+        0.163616
+      ],
+      "example_item": "TrinketIronHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 26,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        0.96,
+        0.9223565,
+        -0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.154591,
+        0.024713,
+        0.119503
+      ],
+      "example_item": "TrinketBronzeHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 27,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        0.32,
+        0.9216176,
+        -0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.165342,
+        0.023235,
+        0.17572
+      ],
+      "example_item": "TrinketIronStamina",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    },
+    {
+      "index": 28,
+      "kind": "small_trinkets",
+      "place": "two-sided individual named trinket shelf cell",
+      "position": [
+        -0.32,
+        0.9206315,
+        -0.63
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.234299,
+        0.021263,
+        0.332098
+      ],
+      "example_item": "TrinketBronzeStamina",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true
+    }
+  ],
+  "runtime_required": [
+    "type/size allocation including modded gear; do not sequentially assign saddle to trinket cell",
+    "native scale1.0 override bypasses display clamp and ItemSize grow",
+    "overflow quantities stay in64 logical slots; display cap is separate",
+    "automatic best-shield ranking; edge-on reserve copies keep quaternion"
+  ],
+  "coordinate_validation": {
+    "sampled_vertex_error_m": 2.4027400458748785e-07,
+    "loader_half_turn_accounted": true,
+    "native_scale": 1.0
+  }
+}

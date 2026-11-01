@@ -1,0 +1,1063 @@
+"""Cooper's Row, round 4 (Joost on round 3): Sap goes back into round 2's birch-bark tub (the big vat, the jug and the dipper
+are gone); the liquid is the Sap item's own light green (sampled from the ripped YggdrasilSap texture: mean of its green
+texels sRGB 0.31/0.70/0.28, muted per STYLE.md, a slightly lighter top); Liquid_Sap.obj follows the tub's narrowest inside
+(its 16 faces at the tub's own angles, 5 mm in), so it never touches a wall at any fill. In front of the tub stands the real
+Sap item (the small glowing keg) as its label: one copy on the sap group's FIRST unit (the mod draws a liquid unit's copies
+too), the other sap units have none. The tub keeps round 3's slot on the row, so the other five vessels and their contents
+are round 3's (same positions, same simulation).
+Round 3's notes (the liquid schema still holds):
+Cooper's Row, round 3: Sap is a LIQUID (Joost). Its vessel is now one big hooped sap vat (straight staves, 16 of them, the
+sight slot with its hoops and gauge bar kept) that fills with liquid: the mod draws Liquid_Sap.obj, a closed 16-sided cylinder
+of height 1 that follows the vat's inner staves 5 mm inside, scaled to the stock (anchors "liquids": floor + top_y, drawn as
+T(floor) * S(1, (top_y - floor.y) * fill, 1) with the frame's material). The Sap group keeps 9 units, each "item": "Sap",
+kind "liquid", with no copies. Decor: a clay jug with sap in it on the skid in front, between the vat and the Guck barrel,
+and a wooden dipper hanging on an iron hook on the vat's front-left. The atlas gains two sap tiles (side, lighter top).
+The other five vessels are round 2's (same sizes, compartments, order and item fields); the row grows to 4.12 m.
+Round 2's notes, still true for the other five:
+Cooper's Row, round 2: round 1 grown into the family's scale (coordinator, 23 Oct: next to the bunker and the Ore Bin the
+round 1 vessels (rim 0.76 m) read small and the 0.15 m lumps like toy contents beside 0.33 m ore). Round 2: vessels about
+0.95 m to the rim (the clay pots and the half barrel a little lower), widths scaled to match (row 4.0 x 1.1 m), item lumps
+0.25-0.27 m on their longest side (LONGS per item); fewer copies, still crowned over the rim when full. Everything else as
+round 1: sight slots, gauges, 64 units (Resin 16), compartments 0-5 in the same order, the same anchors schema, every unit
+names its item ("item", the mod's homes), STYLE.md.
+Round 1's notes, still true:
+Six vessels for sticky goods on one timber skid (concept: scratchpad sketch7/barrels, Joost liked it).
+Left to right as seen from the front: Tar (oiled barrel), Resin (clay pot), Sap (birch-bark tub), Guck (half barrel),
+Eitr (cask), Ooze (dark clay pot). One item kind per vessel (the mod's ByGroup, group key "compartment" = vessel 0-5).
+Run: blender -b -P coopersrow_r4.py -- [--out DIR] [--assets DIR] [--quick] [--no-render] [--views a,b] [--cap N]
+
+Fullness reads through the copies themselves (the mod only places item copies at anchors, it cannot draw a fill column):
+every vessel has a sight slot in its front (two staves / two clay faces left out from just over the floor to under the top
+band), the item's own lumps heap up inside and crown over the rim when full. The slot shows the heap's level from a standing
+player's eye; barrels carry iron hoops at the slot's quarter heights and an iron gauge bar at the half, the clay pots and the
+birch tub three riveted gauge bars (1/4, 1/2, 3/4).
+
+Contents: 64 units (an 8 x 8 container grid): Tar 10, Resin 16 (the most stock on the server: 1,429), Sap 9, Guck 10,
+Eitr 10, Ooze 9. Each vessel is filled copy by copy (Blender rigid bodies / Bullet, convex hulls, friction 0.75,
+restitution 0; every copy is dropped onto the frozen earlier ones at the spot of 16 that lies furthest under the target
+surface and frozen when it has settled) until its target surface is covered: from the rim's inside (EDGE under it) rising
+inward at CROWN, at most CAPOVER over the rim. The invisible collider is the vessel's inner wall pulled in by WALLGAP (and
+closes the slot), extended straight up over the rim; a copy that leans on that extension (over the rim, within 2 cm of it),
+leaves the collider or touches the frame is taken out and dropped again elsewhere. The copy sequence is then cut into the
+vessel's units in drop order, so any prefix of units (and any prefix of a unit's copies) only rests on what is shown.
+Eitr: its prefab uses a built-in Unity mesh the extractor cannot read, so its vessel is laid out with Resin lumps at Resin's
+size (fit_longest_m); at runtime the mod draws the game's own Eitr model at that longest size.
+unit.position: x = centre of the unit's copies, y = one height for every unit, z = 0 (vessel axis line), so the mod's
+ByGroup sees the six vessels only by x (left to right); unit.box.y reaches from the lowest rotated-bounds corner of any copy
+(the mod's never-below-the-floor lift never moves a settled copy) up to the highest copy, box.z is the chord a divider board
+may take inside the round vessel (70% of its inner diameter).
+Atlas (128 px, point filtered, 48 px per metre): timber, end grain and iron rows from assets/bunker_r4, the dark oiled timber
+and the wear swatch (worn timber / worn iron for chamfers and rivet heads) from assets/metalpallet_r3; new: clay, dark clay,
+birch bark, root lashing.
+Files: assets/coopersrow_r4/{CoopersRow.obj, Liquid_Sap.obj, coopersrow_atlas.png, coopersrow_anchors.json}, the json written last
+(temp file + rename). Renders and simlog in --out (default: the scratchpad coopersrow1 folder).
+"""
+import bpy, bmesh, sys, os, math, json, random, time
+import numpy as np
+from mathutils import Vector, Matrix, Euler, Quaternion
+from mathutils.bvhtree import BVHTree
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.normpath(os.path.join(HERE, ".."))
+argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+def arg(k, d=None): return argv[argv.index(k) + 1] if k in argv else d
+SCR = "C:/Users/joost/AppData/Local/Temp/claude/C--Users-joost--pai/5e4bc60b-cdfe-4638-8e29-2e507fa13cf9/scratchpad/coopersrow4"
+OUTA = arg("--assets", os.path.join(REPO, "assets", "coopersrow_r4"))
+OUT = arg("--out", SCR)
+QUICK = "--quick" in argv
+NORENDER = "--no-render" in argv
+VIEWSEL = arg("--views").split(",") if "--views" in argv else None
+CAP = int(arg("--cap", 90))                 # most copies per vessel
+ITEMS_DIR = "C:/Users/joost/ValheimRip/items"
+sys.path.append(ITEMS_DIR)
+from load_item import load_item
+os.makedirs(OUTA, exist_ok=True); os.makedirs(OUT, exist_ok=True)
+rng = random.Random(17)        # frame
+crng = random.Random(int(arg("--cseed", 29)))   # contents
+
+TEX, DENS = 128, 48.0
+FPS = 24
+MARGIN = 0.003
+# longest side of the lumps per item (m), in the family range (ore bin ~0.33): the kinds with many units a little smaller so
+# every unit still gets at least one copy (Resin 16 units, Sap 9, Eitr 10 in their vessels)
+LONGS = {"Tar": 0.26, "Resin": 0.25, "Sap": 0.22, "Guck": 0.26, "Eitr": 0.25, "Ooze": 0.25}
+WALLGAP = 0.012                # collider inside the inner wall
+EDGE, CROWN, CAPOVER = 0.04, 0.85, 0.18
+COVER_TOL = 0.06
+LIQUID = {"Sap"}               # drawn as a liquid column by the mod, no lumps
+LIQ_INSET, LIQ_FLOOR, LIQ_FREEBOARD = 0.005, 0.003, 0.07   # inside the staves, over the inner floor, under the rim when full
+GRID = 0.03
+
+# ---------- layout (Blender metres, z up, -y = front) ----------
+SLEEPER_H, PLANK_T = 0.10, 0.05
+DECK = SLEEPER_H + PLANK_T     # 0.15: deck top, vessel bottoms
+FLREL = 0.06                   # inner floor over the vessel bottom
+FL = DECK + FLREL
+D = 1.10                       # skid depth
+# item, kind, rim height (world), outer profile shape [(r, z/h)] (round 1's), units, widest outer radius (the shape is scaled to it)
+_V = [
+    ("Tar",   "barrel", 0.95, [(0.225, 0), (0.25, 0.12), (0.27, 0.5), (0.25, 0.88), (0.23, 1.0)], 10, 0.30),
+    ("Resin", "clay",   0.88, [(0.19, 0), (0.26, 0.15), (0.30, 0.45), (0.285, 0.72), (0.25, 0.88), (0.272, 0.93), (0.272, 1.0)], 16, 0.36),
+    ("Sap",   "bark",   0.90, [(0.24, 0), (0.255, 0.5), (0.27, 1.0)], 9, 0.28),       # round 2's tub
+    ("Guck",  "half",   0.84, [(0.25, 0), (0.27, 0.3), (0.285, 0.7), (0.29, 1.0)], 10, 0.31),
+    ("Eitr",  "cask",   0.95, [(0.20, 0), (0.235, 0.14), (0.25, 0.5), (0.235, 0.86), (0.205, 1.0)], 10, 0.30),
+    ("Ooze",  "dclay",  0.84, [(0.17, 0), (0.23, 0.15), (0.26, 0.45), (0.245, 0.72), (0.215, 0.88), (0.235, 0.93), (0.235, 1.0)], 9, 0.30),
+]
+VESSELS = [(it, k, rim, [(r * R / max(a for a, _ in pr), z) for r, z in pr], nu) for it, k, rim, pr, nu, R in _V]
+NUNITS = sum(v[4] for v in VESSELS)
+assert NUNITS == 64
+NSEG = {"vat": 16, "barrel": 14, "half": 14, "cask": 12, "clay": 16, "dclay": 16, "bark": 16}
+NW = 2                          # faces left out for the slot
+WALLT = {"vat": 0.04, "barrel": 0.04, "half": 0.04, "cask": 0.04, "clay": 0.035, "dclay": 0.035, "bark": 0.03}
+HOOPOUT = 0.012
+GAP = 0.012
+L = 4.12
+SLOT_R = {"Sap": 0.34}          # round 4: the tub keeps round 3's vat slot (room in front for the label keg)
+xs, cur = [], -L / 2 + 0.03
+for it, kind, rim, prof, nu in VESSELS:
+    R = SLOT_R.get(it, max(r for r, _ in prof)) + HOOPOUT + 0.003
+    xs.append(cur + R); cur += 2 * R + GAP
+SHIFT = -(cur - GAP - (-L / 2 + 0.03)) / 2 - (-L / 2 + 0.03)
+xs = [x + SHIFT for x in xs]
+
+# ---------- atlas ----------
+TILES = {"hewn": (0, 0, 128, 32), "end0": (0, 32, 32, 32), "end1": (32, 32, 32, 32), "dark": (64, 32, 32, 32),
+         "wearw": (96, 32, 32, 16), "weari": (96, 48, 32, 16), "iron": (0, 64, 128, 16),
+         "clay": (0, 80, 32, 32), "dclay": (32, 80, 32, 32), "bark": (64, 80, 32, 32), "root": (96, 80, 32, 32),
+         "sapside": (0, 112, 32, 16), "saptop": (32, 112, 32, 16), "iron2": (64, 112, 64, 16)}
+
+def load_px(path):
+    im = bpy.data.images.load(path)
+    w, h = im.size
+    a = np.array(im.pixels[:], np.float32).reshape(h, w, 4)[::-1, :, :3]     # top-down
+    bpy.data.images.remove(im)
+    return a
+
+def mix(a, b, t): t = np.clip(t, 0, 1)[..., None]; return a * (1 - t) + b * t
+def srgb(c): return np.array(c, np.float32)
+
+def build_atlas():
+    B = load_px(os.path.join(REPO, "assets", "bunker_r4", "bunker_atlas.png"))
+    P = load_px(os.path.join(REPO, "assets", "metalpallet_r3", "metalpallet_atlas.png"))
+    A = np.zeros((TEX, TEX, 3), np.float32)
+    A[0:32] = B[0:32]                       # bunker hewn timber
+    A[32:64, 0:64] = B[32:64, 0:64]         # bunker end grain, rings 0 and 1
+    A[32:64, 64:96] = P[0:32, 0:32]         # pallet dark oiled hewn timber
+    A[32:64, 96:128] = P[32:64, 96:128]     # pallet wear swatch: worn timber (top), worn iron (bottom)
+    A[64:80] = B[64:80]                     # bunker iron
+    A[112:128] = B[64:80]                   # (spare) bunker iron again; round 3 paints sap into x 0-63
+    nr = np.random.default_rng(41)
+    yy, xx = np.meshgrid(np.arange(32), np.arange(32), indexing="ij")
+    blocky = lambda s: np.kron(nr.random((32 // s, 32 // s)), np.ones((s, s), np.float32))
+    edge = np.minimum(np.minimum(xx, 31 - xx), np.minimum(yy, 31 - yy))
+    def clay(base, dark, light):
+        t = blocky(8) * 0.22 + blocky(4) * 0.22 + blocky(2) * 0.14 + nr.random((32, 32)) * 0.14
+        rings = 0.5 + 0.5 * np.sin(yy * 1.1 + 0.6 * np.sin(xx * 0.35 + 1.0))          # throwing rings, horizontal
+        t += np.clip(rings - 0.7, 0, 1) * 1.1
+        t += ((yy % 9) == 4) * 0.25                                                     # a crevice every few rings
+        img = mix(base, dark, t)
+        worn = (nr.random((32, 32)) < 0.05) & (t < 0.45)
+        img[worn] = mix(img[worn], np.broadcast_to(light, img[worn].shape), np.full(worn.sum(), 0.6))
+        return img
+    A[80:112, 0:32] = clay(srgb((0.45, 0.31, 0.22)), srgb((0.27, 0.17, 0.12)), srgb((0.58, 0.45, 0.34)))
+    A[80:112, 32:64] = clay(srgb((0.29, 0.24, 0.19)), srgb((0.14, 0.115, 0.09)), srgb((0.42, 0.36, 0.29)))
+    # birch bark: muted off-white, dark horizontal lenticels, a few peeled warm patches, darker crevices
+    base, dark, warm = srgb((0.64, 0.61, 0.54)), srgb((0.19, 0.16, 0.13)), srgb((0.47, 0.35, 0.24))
+    t = blocky(4) * 0.18 + nr.random((32, 32)) * 0.12
+    img = mix(base, dark, t)
+    peel = (blocky(8) > 0.88) & (blocky(2) > 0.5)
+    img[peel] = mix(img[peel], np.broadcast_to(warm, img[peel].shape), np.full(peel.sum(), 0.55))
+    for _ in range(22):
+        y, x, n = nr.integers(0, 32), nr.integers(0, 32), nr.integers(2, 6)
+        for k in range(n): img[y, (x + k) % 32] = mix(img[y, (x + k) % 32][None], dark[None], np.array([0.6]))[0]
+    img = mix(img, np.broadcast_to(dark, img.shape), (edge <= 0) * 0.25)
+    A[80:112, 64:96] = img
+    # root lashing: twisted withies, diagonal strands with dark gaps
+    base, dark, light = srgb((0.40, 0.31, 0.19)), srgb((0.17, 0.12, 0.075)), srgb((0.53, 0.43, 0.29))
+    s = (xx + yy * 0.8) % 7
+    t = (s < 1.2) * 0.85 + nr.random((32, 32)) * 0.2 + ((yy % 8) == 0) * 0.5
+    img = mix(base, dark, t)
+    hl = (s > 3.0) & (s < 4.2)
+    img[hl] = mix(img[hl], np.broadcast_to(light, img[hl].shape), np.full(hl.sum(), 0.45))
+    A[80:112, 96:128] = img
+    # sap (round 4: the Sap item's light green, sampled from YggdrasilSap_d.png, muted), a liquid. Side (x 0-31): darker, faint vertical streaks (the mod stretches it with the fill);
+    # top (x 32-63): lighter, a few pale glints and a darker ring at the edge
+    yy16, xx16 = np.meshgrid(np.arange(16), np.arange(32), indexing="ij")
+    base, dark, light = srgb((0.30, 0.48, 0.25)), srgb((0.19, 0.33, 0.15)), srgb((0.44, 0.62, 0.36))
+    t = 0.35 + 0.25 * np.sin(xx16 * 0.9 + 1.3 * np.sin(xx16 * 0.27)) + nr.random((16, 32)) * 0.15
+    A[112:128, 0:32] = mix(mix(base, dark, t), np.broadcast_to(light, (16, 32, 3)), (nr.random((16, 32)) < 0.04) * 0.6)
+    base, dark, light = srgb((0.40, 0.58, 0.32)), srgb((0.28, 0.44, 0.22)), srgb((0.58, 0.74, 0.47))
+    t = nr.random((16, 32)) * 0.25 + 0.15 * np.sin(xx16 * 0.5 + yy16 * 0.7)
+    top = mix(base, dark, t)
+    gl = nr.random((16, 32)) < 0.05
+    top[gl] = mix(top[gl], np.broadcast_to(light, top[gl].shape), np.full(gl.sum(), 0.8))
+    A[112:128, 32:64] = top
+    A[112:128, 64:128] = B[64:80, 0:64]
+    im = bpy.data.images.new("coopersrow_atlas", TEX, TEX, alpha=False)
+    px = np.concatenate([np.clip(A[::-1], 0, 1), np.ones((TEX, TEX, 1), np.float32)], 2)
+    im.pixels.foreach_set(px.ravel())
+    im.filepath_raw = os.path.join(OUTA, "coopersrow_atlas.png"); im.file_format = "PNG"; im.save()
+    return im
+
+def tuv(tile, px, py):
+    x0, y0, w, h = TILES[tile]
+    return ((x0 + px) / TEX, 1 - (y0 + py) / TEX)
+
+def texel(tile, r):
+    x0, y0, w, h = TILES[tile]
+    return tuv(tile, 1.5 + r.randrange(w - 3), 1.5 + r.randrange(h - 3))
+
+# ---------- frame geometry ----------
+PARTS = []
+MAT = None
+
+def new_obj(name, bm):
+    bm.normal_update()
+    me = bpy.data.meshes.new(name); bm.to_mesh(me); bm.free()
+    for p in me.polygons: p.use_smooth = False
+    ob = bpy.data.objects.new(name, me); bpy.context.scene.collection.objects.link(ob)
+    ob.data.materials.append(MAT); PARTS.append(ob)
+    return ob
+
+# box timbers: bunker_r4's mapping (hewn strip v 0.75, end grain v 0.5 two rings, iron v 0.375), chamfers -> wear swatch
+STRIP = {"hewn": 0.75, "end": 0.50, "iron": 0.375}
+STRIPH = {"hewn": 32, "iron": 16}
+def uv_box_face(f, uvl, kind, long_axis, seed):
+    n = f.normal
+    r = random.Random(seed * 7919 + f.index)
+    if kind == "rivet" or max(abs(n[0]), abs(n[1]), abs(n[2])) < 0.98:
+        uv = texel("weari" if kind in ("iron", "rivet") else "wearw", r)
+        for l in f.loops: l[uvl].uv = uv
+        return
+    ax = max(range(3), key=lambda i: abs(n[i]))
+    tang = [i for i in range(3) if i != ax]
+    if kind != "iron" and ax == long_axis:
+        k = seed % 2
+        cs = [l.vert.co for l in f.loops]
+        c = sum(cs, Vector()) / len(cs)
+        ext = max(max(abs(v[tang[0]] - c[tang[0]]), abs(v[tang[1]] - c[tang[1]])) for v in cs) or 1
+        for l in f.loops:
+            a = (l.vert.co[tang[0]] - c[tang[0]]) / ext; b = (l.vert.co[tang[1]] - c[tang[1]]) / ext
+            l[uvl].uv = ((k + 0.5 + a * 0.45) / 4, STRIP["end"] + (0.5 + b * 0.45) / 4)
+        return
+    ua = long_axis if long_axis in tang else tang[0]
+    va = tang[1] if ua == tang[0] else tang[0]
+    off = (seed * 0.37) % 1
+    vs = [l.vert.co[va] for l in f.loops]
+    vmin, span = min(vs), max(max(vs) - min(vs), 1e-4)
+    hpx = STRIPH[kind]
+    vscale = min(1.0, (hpx / DENS) / span)
+    room = max(hpx / TEX - span * vscale * DENS / TEX * 0.94 - 0.012, 0)
+    voff = ((seed * 0.618) % 1) * room
+    for l in f.loops:
+        u = l.vert.co[ua] * DENS / TEX + off
+        v = STRIP[kind] + ((l.vert.co[va] - vmin) * vscale * DENS / TEX) * 0.94 + 0.0075 + voff
+        l[uvl].uv = (u, v)
+
+def timber(name, size, pos, kind="hewn", rot=(0, 0, 0), jitter=0.012, bevel=0.016):
+    bm = bmesh.new()
+    bmesh.ops.create_cube(bm, size=1.0)
+    for v in bm.verts: v.co = Vector((v.co.x * size[0], v.co.y * size[1], v.co.z * size[2]))
+    long_axis = max(range(3), key=lambda i: size[i])
+    for v in bm.verts:
+        for i in range(3):
+            if i != long_axis: v.co[i] += rng.uniform(-jitter, jitter)
+    if bevel > 0: bmesh.ops.bevel(bm, geom=bm.edges[:], offset=bevel, segments=1, affect="EDGES")
+    bm.normal_update()
+    uvl = bm.loops.layers.uv.verify()
+    seed = rng.randrange(1000)
+    for f in bm.faces: uv_box_face(f, uvl, kind, long_axis, seed + f.index % 2)
+    bmesh.ops.rotate(bm, verts=bm.verts, cent=(0, 0, 0), matrix=Euler([math.radians(a) for a in rot]).to_matrix())
+    bmesh.ops.translate(bm, verts=bm.verts, vec=Vector(pos))
+    return new_obj(name, bm)
+
+def iron(name, size, pos, rot=(0, 0, 0)):
+    return timber(name, size, pos, kind="iron", rot=rot, jitter=0.0015, bevel=0)
+
+def rivet(pos, normal, s=0.024, h=0.008):
+    """square iron rivet head standing h off a face with this outward normal (a unit axis vector or a horizontal direction)"""
+    n = Vector(normal).normalized()
+    yaw = math.degrees(math.atan2(n.y, n.x)) if abs(n.z) < 0.5 else 0
+    size = (h, s, s) if abs(n.z) < 0.5 else (s, s, h)
+    p = Vector(pos) + n * (h / 2)
+    timber("rivet", size, tuple(p), kind="rivet", rot=(0, 0, yaw), jitter=0, bevel=0)
+
+def lerp_prof(prof, z):
+    for (r0, h0), (r1, h1) in zip(prof, prof[1:]):
+        if h0 <= z <= h1 + 1e-9 and h1 > h0: return r0 + (r1 - r0) * (z - h0) / (h1 - h0)
+    return prof[-1][0] if z > prof[-1][1] else prof[0][0]
+
+def vessel(vi):
+    item, kind, rimz, prof_n, _nu = VESSELS[vi]
+    x = xs[vi]
+    h = rimz - DECK
+    prof = [(r, f * h) for r, f in prof_n]
+    clayish = kind in ("clay", "dclay")
+    core = prof[:-2] + [(prof[-3][0], h)] if clayish else prof        # inner reference: without the rolled lip
+    N = NSEG[kind]; T = WALLT[kind]
+    phase = -math.pi / 2 - NW * math.pi / N                            # faces 0..NW-1 = the slot, centred on the front (-y)
+    ang = [phase + 2 * math.pi * i / N for i in range(N + 1)]
+    rin = lambda z: lerp_prof(core, z) - T
+    rout = lambda z: lerp_prof(prof, z)
+    wlo, whi = FLREL + 0.035, h - 0.13                                 # the slot, vessel-relative heights
+    # profile rows: profile points, every ~0.08 m, the slot's ends
+    zs = sorted(set([round(z, 5) for _r, z in prof] + [round(z, 5) for z in np.linspace(0, h, max(2, round(h / 0.08)) + 1)]
+                    + [round(wlo, 5), round(whi, 5), round(FLREL, 5)]))
+    zs = [z for z in zs if 0 <= z <= h + 1e-9]
+    bm = bmesh.new(); uvl = bm.loops.layers.uv.verify()
+    def P(r, a, z): return Vector((x + r * math.cos(a), r * math.sin(a), DECK + z))
+    def face(pts, uvs):
+        try: f = bm.faces.new([bm.verts.new(p) for p in pts])
+        except ValueError: return
+        for l, uv in zip(f.loops, uvs): l[uvl].uv = uv
+    r_ = random.Random(100 + vi)
+    staves = kind in ("barrel", "half", "cask", "vat")
+    otile = {"vat": "hewn", "barrel": "dark", "half": "hewn", "cask": "hewn", "clay": "clay", "dclay": "dclay", "bark": "bark"}[kind]
+    itile = {"vat": "dark", "barrel": "dark", "half": "dark", "cask": "dark", "clay": "dclay", "dclay": "dclay", "bark": "dark"}[kind]
+    in_slot = lambda i, z0, z1: i < NW and z0 >= wlo - 1e-6 and z1 <= whi + 1e-6
+    for i in range(N):
+        a0, a1 = ang[i], ang[i + 1]
+        cu = r_.uniform(0.5, 128) if otile == "hewn" else r_.uniform(0.5, max(0.6, 32 - h * DENS - 0.5))
+        top_edge = r_.random() < 0.5
+        cu_in = r_.uniform(0.5, max(0.6, 32 - h * DENS - 0.5))
+        def stave_uv(tile, cu_, z, arc, width):
+            py = 0.5 + arc * DENS if top_edge else 32 - 0.5 - (width - arc) * DENS
+            # round 4 fix: a 32 px tile (dark timber) holds the whole stave height; rounds 2-3 ran into the wear swatch at the top
+            return tuv(tile, cu_ + z * (DENS if tile == "hewn" else min(DENS, 30.5 / h)), py)
+        def col_uv(tile, cu_, z, arc):     # clay/bark: rings follow z
+            # round 4 fix: kept inside the 32 px tile on tall vessels (rounds 2-3 ran past it at the foot of the pots)
+            return tuv(tile, min(cu_ + arc * DENS, 31.5), 0.5 + (h - z) * min(DENS * 0.97, 30.5 / h))
+        for k in range(len(zs) - 1):
+            z0, z1 = zs[k], zs[k + 1]
+            if in_slot(i, z0, z1): continue
+            r0, r1 = rout(z0), rout(z1)
+            if staves:
+                c = 0.007
+                d0, d1 = 0.012 / r0, 0.012 / r1
+                cols = [(a0, -c), (a0 + d0, 0), (a1 - d0, 0), (a1, -c)]
+                cols1 = [(a0, -c), (a0 + d1, 0), (a1 - d1, 0), (a1, -c)]
+                for j in range(3):
+                    pts = [P(r0 + cols[j][1], cols[j][0], z0), P(r0 + cols[j + 1][1], cols[j + 1][0], z0),
+                           P(r1 + cols1[j + 1][1], cols1[j + 1][0], z1), P(r1 + cols1[j][1], cols1[j][0], z1)]
+                    if j == 1:
+                        w0, w1 = r0 * (a1 - a0), r1 * (a1 - a0)
+                        uvs = [stave_uv(otile, cu, z0, d0 * r0, w0), stave_uv(otile, cu, z0, (a1 - d0 - a0) * r0, w0),
+                               stave_uv(otile, cu, z1, (a1 - d1 - a0) * r1, w1), stave_uv(otile, cu, z1, d1 * r1, w1)]
+                    else:
+                        uvs = [texel("wearw", r_)] * 4
+                    face(pts, uvs)
+            else:
+                pts = [P(r0, a0, z0), P(r0, a1, z0), P(r1, a1, z1), P(r1, a0, z1)]
+                face(pts, [col_uv(otile, cu, z0, 0), col_uv(otile, cu, z0, r0 * (a1 - a0)),
+                           col_uv(otile, cu, z1, r1 * (a1 - a0)), col_uv(otile, cu, z1, 0)])
+            if z1 > FLREL + 1e-6:      # inner wall (seen from inside)
+                zi0 = max(z0, FLREL)
+                q0, q1 = rin(zi0), rin(z1)
+                pts = [P(q0, a1, zi0), P(q0, a0, zi0), P(q1, a0, z1), P(q1, a1, z1)]
+                if staves:
+                    w0, w1 = q0 * (a1 - a0), q1 * (a1 - a0)
+                    uvs = [stave_uv(itile, cu_in, zi0, w0 * 0.98, w0), stave_uv(itile, cu_in, zi0, 0.0, w0),
+                           stave_uv(itile, cu_in, z1, 0.0, w1), stave_uv(itile, cu_in, z1, w1 * 0.98, w1)]
+                else:
+                    uvs = [col_uv(itile, cu_in, zi0, q0 * (a1 - a0)), col_uv(itile, cu_in, zi0, 0),
+                           col_uv(itile, cu_in, z1, 0), col_uv(itile, cu_in, z1, q1 * (a1 - a0))]
+                face(pts, uvs)
+        # top of the wall: end grain (staves) / clay or bark (pots, tub)
+        ro, ri = rout(h), rin(h)
+        if staves:
+            c = 0.007; d = 0.012 / ro
+            pts = [P(ri, a0, h), P(ri, a1, h), P(ro - c, a1, h), P(ro, a1 - d, h), P(ro, a0 + d, h), P(ro - c, a0, h)][::-1]
+            et = "end0" if r_.random() < 0.5 else "end1"; cx_, cy_ = r_.uniform(9, 23), r_.uniform(9, 23)
+            mid = (P(ri, (a0 + a1) / 2, h) + P(ro, (a0 + a1) / 2, h)) / 2
+            face(pts, [tuv(et, cx_ + (p.x - mid.x) * DENS, cy_ + (p.y - mid.y) * DENS) for p in pts])
+        else:
+            pts = [P(ri, a0, h), P(ri, a1, h), P(ro, a1, h), P(ro, a0, h)]
+            uvs = [col_uv(otile, cu, h - (ro - ri), 0), col_uv(otile, cu, h - (ro - ri), ri * (a1 - a0)),
+                   col_uv(otile, cu, h, ro * (a1 - a0)), col_uv(otile, cu, h, 0)]
+            face(pts[::-1], uvs[::-1])
+    # slot: cut ends (horizontal) and reveals (the neighbouring walls' cut sides)
+    a0, a1 = ang[0], ang[NW]
+    for zc, up in ((wlo, True), (whi, False)):
+        ro, ri = rout(zc), rin(zc)
+        for i in range(NW):
+            b0, b1 = ang[i], ang[i + 1]
+            pts = [P(ri, b0, zc), P(ri, b1, zc), P(ro, b1, zc), P(ro, b0, zc)]
+            if up: pts = pts[::-1]                  # top of the part below the slot faces up, bottom of the part above down
+            if staves:
+                et = "end0" if r_.random() < 0.5 else "end1"
+                mid = sum(pts, Vector()) / 4
+                face(pts, [tuv(et, 16 + (p.x - mid.x) * DENS, 16 + (p.y - mid.y) * DENS) for p in pts])
+            else:
+                face(pts, [tuv(otile, 4 + (p.x - pts[0].x) * DENS * 0.7 + 8, 3 + abs(p.y - pts[0].y) * DENS) for p in pts])
+    srows = [z for z in zs if wlo - 1e-6 <= z <= whi + 1e-6]
+    for a, side in ((a0, 1), (a1, -1)):
+        for z0, z1 in zip(srows, srows[1:]):
+            pts = [P(rin(z0), a, z0), P(rout(z0), a, z0), P(rout(z1), a, z1), P(rin(z1), a, z1)]
+            tile = "hewn" if otile == "hewn" else ("dark" if staves else otile)
+            uvs = [tuv(tile, 4 + ((z0 if j in (0, 1) else z1) - wlo) * DENS * 0.9, 2 + (rout(z0) - rin(z0)) * DENS * (1 if j in (1, 2) else 0)) for j in range(4)]
+            if side > 0: pts = [pts[1], pts[0], pts[3], pts[2]]; uvs = [uvs[1], uvs[0], uvs[3], uvs[2]]
+            face(pts, uvs)
+    # inner floor
+    fr = rin(FLREL)
+    pts = [P(fr, ang[i], FLREL) for i in range(N)]
+    ft = "dark" if not clayish else "dclay"
+    face(pts, [tuv(ft, 16 + (p.x - x) * DENS * 0.6, 16 + p.y * DENS * 0.6) for p in pts])
+    ob = new_obj(f"vessel_{item}", bm)
+
+    # ---- bands: iron hoops (barrels), root lashing + bent-wood rim (tub) ----
+    def band(z0, z1, tile, out=HOOPOUT, inner_over_slot=True, name="hoop"):
+        b = bmesh.new(); ul = b.loops.layers.uv.verify()
+        bo = random.Random(rng.randrange(10 ** 6)).uniform(0, 128)
+        def F(pts, uvs):
+            f = b.faces.new([b.verts.new(p) for p in pts])
+            for l, uv in zip(f.loops, uvs): l[ul].uv = uv
+        circ = 0.0
+        for i in range(N):
+            c0, c1 = ang[i], ang[i + 1]
+            r00, r01 = rout(z0) + out, rout(z1) + out
+            arc = r00 * (c1 - c0)
+            if tile in ("iron",):
+                uvs = [tuv(tile, bo + circ * DENS, 14.5), tuv(tile, bo + (circ + arc) * DENS, 14.5),
+                       tuv(tile, bo + (circ + arc) * DENS, 1.5), tuv(tile, bo + circ * DENS, 1.5)]
+            elif tile == "hewn":
+                uvs = [tuv(tile, bo + circ * DENS, 30.5), tuv(tile, bo + (circ + arc) * DENS, 30.5),
+                       tuv(tile, bo + (circ + arc) * DENS, 30.5 - (z1 - z0) * DENS), tuv(tile, bo + circ * DENS, 30.5 - (z1 - z0) * DENS)]
+            else:
+                q = (circ * DENS) % 24
+                uvs = [tuv(tile, q, 4 + (z1 - z0) * DENS), tuv(tile, q + arc * DENS, 4 + (z1 - z0) * DENS), tuv(tile, q + arc * DENS, 4), tuv(tile, q, 4)]
+            circ += arc
+            F([P(r00, c0, z0), P(r00, c1, z0), P(r01, c1, z1), P(r01, c0, z1)], uvs)
+            wt = "weari" if tile == "iron" else "wearw"
+            F([P(rout(z1), c0, z1), P(r01, c0, z1), P(r01, c1, z1), P(rout(z1), c1, z1)], [texel(wt, rng)] * 4)
+            F([P(rout(z0), c1, z0), P(r00, c1, z0), P(r00, c0, z0), P(rout(z0), c0, z0)], [texel(wt, rng)] * 4)
+            if i < NW and inner_over_slot and z0 >= wlo - 1e-6 and z1 <= whi + 1e-6:     # its inner side, over the slot
+                F([P(rout(z0), c1, z0), P(rout(z0), c0, z0), P(rout(z1), c0, z1), P(rout(z1), c1, z1)], uvs[::-1])
+        return new_obj(name, b)
+    slot_q = lambda f: wlo + f * (whi - wlo)
+    def slot_rivets(zc, out):
+        for a in (a0 - 0.035 / rout(zc), a1 + 0.035 / rout(zc)):
+            r = rout(zc) + out
+            rivet((x + r * math.cos(a), r * math.sin(a), DECK + zc), (math.cos(a), math.sin(a), 0), s=0.02, h=0.007)
+    def gauge_bar(f):
+        zc = slot_q(f)
+        ro = rout(zc)
+        half = ro * math.sin(NW * math.pi / N) + 0.045
+        yb = -ro * math.cos(NW * math.pi / N) - 0.004
+        iron("gauge", (2 * half, 0.012, 0.034), (x, yb - 0.006, DECK + zc))
+        for sx in (-1, 1): rivet((x + sx * (half - 0.018), yb - 0.012, DECK + zc), (0, -1, 0), s=0.02, h=0.007)
+    if staves:
+        hw = 0.055
+        for zc in (0.065, h - 0.075, slot_q(0.25), slot_q(0.75)):
+            band(zc - hw / 2, zc + hw / 2, "iron")
+        for zc in (slot_q(0.25), slot_q(0.75)): slot_rivets(zc, HOOPOUT)
+        gauge_bar(0.5)
+    else:
+        for f in (0.25, 0.5, 0.75): gauge_bar(f)
+    if kind == "bark":
+        band(0.05, 0.11, "root", out=0.012, name="lashing")
+        band(h - 0.125, h - 0.07, "root", out=0.012, name="lashing")
+        band(h - 0.06, h, "hewn", out=0.02, name="rim")
+    return {"item": item, "kind": kind, "x": x, "h": h, "rim": rimz, "prof": prof, "core": core, "N": N, "T": T, "ang": ang,
+            "rin": rin, "rout": rout, "wlo": wlo, "whi": whi}
+
+KEG_DX, KEG_YAW = 0.11, 18.0      # the label keg: right of the tub's axis (the slot stays readable), a little turned
+KEG_CLIP = None
+def make_keg(V):
+    """the real Sap item standing on the skid in front of its tub: its bounds bottom on the deck (the highest deck vertex under
+    it + 3 mm), 2 cm clear of the tub's lashing; checked against the frame"""
+    global KEG_CLIP
+    T = TEMPL["Sap"]; Vv = T["V"]
+    R = Matrix.Rotation(math.radians(KEG_YAW), 3, "Z")
+    W0 = Vv @ np.array(R).T
+    half_y = float(W0[:, 1].max())
+    x = V["x"] + KEG_DX
+    y = -(max(r for r, _ in V["prof"]) + 0.012 + 0.02) - half_y
+    near = (np.abs(FVn[:, 0] - x) < 0.16) & (np.abs(FVn[:, 1] - y) < 0.16) & (FVn[:, 2] < DECK + 0.05)
+    deck = float(FVn[near, 2].max()) if near.any() else DECK
+    z = deck + 0.003 - float(W0[:, 2].min())
+    M = Matrix.Translation((x, y, z)) @ R.to_4x4()
+    W = Vv @ np.array(M)[:3, :3].T + np.array(M)[:3, 3]
+    KEG_CLIP = len(fbvh.overlap(BVHTree.FromPolygons([Vector(tuple(float(a) for a in w)) for w in W], T["tris"])))
+    print("KEG at", round(x, 3), round(y, 3), "bottom", round(float(W[:, 2].min()), 4), "deck", round(deck, 4), "front", round(float(W[:, 1].min()), 3),
+          "clip", KEG_CLIP, flush=True)
+    return {"item": "Sap", "M": M, "obj": None}
+
+def build_liquids(VS):
+    """per liquid vessel: a closed cylinder of height 1 from the floor point, its 16 sides at the staves' own angles 5 mm inside
+    the inner faces, mapped on the sap tiles; returns the anchors entries and the objects to export"""
+    docs, obs = [], []
+    for vi, V in enumerate(VS):
+        if V["item"] not in LIQUID: continue
+        N = V["N"]; ang = V["ang"]
+        r = min(V["rin"](z) for z in np.linspace(FLREL, V["h"], 20)) - LIQ_INSET
+        bm = bmesh.new(); uvl = bm.loops.layers.uv.verify()
+        bot = [bm.verts.new((r * math.cos(a), r * math.sin(a), 0.0)) for a in ang[:N]]
+        top = [bm.verts.new((r * math.cos(a), r * math.sin(a), 1.0)) for a in ang[:N]]
+        for i in range(N):
+            j = (i + 1) % N
+            f = bm.faces.new((bot[i], bot[j], top[j], top[i]))
+            u0 = 1 + (i % 4) * 7
+            for l, (pu, pv) in zip(f.loops, ((u0, 15.5), (u0 + 6, 15.5), (u0 + 6, 0.5), (u0, 0.5))): l[uvl].uv = tuv("sapside", pu, pv)
+        f = bm.faces.new(top)
+        for l, v in zip(f.loops, top): l[uvl].uv = tuv("saptop", 16 + v.co.x * DENS * 0.4, 8 + v.co.y * DENS * 0.2)
+        f = bm.faces.new(bot[::-1])
+        for l in f.loops: l[uvl].uv = tuv("sapside", 16, 8)
+        bm.normal_update()
+        me = bpy.data.meshes.new("Liquid_" + V["item"]); bm.to_mesh(me); bm.free()
+        for p in me.polygons: p.use_smooth = False
+        ob = bpy.data.objects.new("Liquid_" + V["item"], me); bpy.context.scene.collection.objects.link(ob); ob.data.materials.append(MAT)
+        obs.append((ob, f"Liquid_{V['item']}.obj"))
+        floor = (V["x"], 0.0, FL + LIQ_FLOOR)
+        top_y = DECK + V["h"] - LIQ_FREEBOARD
+        # clipping: the full column (and a few fills) against the frame
+        for fill in (0.1, 0.5, 1.0):
+            pts = [Vector((floor[0] + v.co.x, v.co.y, floor[2] + v.co.z * (top_y - floor[2]) * fill)) for v in me.vertices]
+            tr = [(p.vertices[0], p.vertices[i], p.vertices[i + 1]) for p in me.polygons for i in range(1, len(p.vertices) - 1)]
+            hit = fbvh.overlap(BVHTree.FromPolygons(pts, tr))
+            LIQ_CLIP.append((V["item"], fill, len(hit)))
+        docs.append({"compartment": vi, "item": V["item"], "obj": f"Liquid_{V['item']}.obj",
+                     "floor": [round(a, 4) for a in b2u_vec(floor)], "top_y": round(top_y, 4),
+                     "radius": round(r, 4), "sides": N, "tris": 2 * N + 2 * (N - 2)})
+        print("LIQUID", json.dumps(docs[-1]), "clip", LIQ_CLIP[-3:], flush=True)
+    return docs, obs
+LIQ_CLIP = []
+
+def build_skid():
+    hl = L / 2
+    for xsl in (-1.92, -0.64, 0.64, 1.92):                     # sleepers 0.14 x 0.10, the outer ones under the deck ends
+        timber("sleeper", (0.14, D, SLEEPER_H), (xsl, 0, SLEEPER_H / 2), bevel=0.014, jitter=0.006)
+    n = 5; w = D / n
+    for k in range(n):                                         # deck planks 0.05 thick
+        timber("plank", (L, w - 0.006, PLANK_T), (rng.uniform(-0.01, 0.01), -D / 2 + w / 2 + k * w, SLEEPER_H + PLANK_T / 2),
+               bevel=0.010, jitter=0.003)
+    for sx in (-1, 1):                                         # iron straps over the deck ends, folded down front and back
+        xe = sx * 1.92                                         # over the end sleeper, folded down its ends to the ground
+        iron("strap", (0.07, D + 0.012, 0.006), (xe, 0, DECK + 0.003))
+        for sy in (-1, 1):
+            iron("strap", (0.07, 0.006, DECK - 0.01), (xe, sy * (D / 2 + 0.003), 0.01 + (DECK - 0.01) / 2))
+            for zr_ in (0.05, DECK - 0.025): rivet((xe, sy * (D / 2 + 0.006), zr_), (0, sy, 0))
+        for k in range(n): rivet((xe, -D / 2 + w / 2 + k * w, DECK + 0.006), (0, 0, 1), s=0.022, h=0.006)
+    # back: two corner posts and a rail behind the vessels, iron brackets with rivets where they meet
+    PH, PS = 0.80, 0.14
+    yp = D / 2 - PS / 2
+    for sx in (-1, 1):
+        timber("post", (PS, PS, PH - DECK), (sx * (hl - PS / 2), yp, DECK + (PH - DECK) / 2), bevel=0.016, jitter=0.006)
+    zr = 0.64; RH, RD = 0.12, 0.10
+    timber("rail", (L - 2 * PS + 0.01, RD, RH), (0, yp + 0.01, zr), bevel=0.016, jitter=0.006)
+    for sx in (-1, 1):
+        xp = sx * (hl - PS / 2)
+        yf = yp + 0.01 - RD / 2 - 0.003
+        iron("bracket", (0.05, 0.006, 0.20), (xp - sx * 0.035, yf - 0.012, zr - 0.02))      # down the post
+        iron("bracket", (0.20, 0.006, 0.05), (xp - sx * 0.14, yf + 0.0, zr))                 # along the rail
+        rivet((xp - sx * 0.035, yf - 0.015, zr - 0.09), (0, -1, 0))
+        rivet((xp - sx * 0.21, yf - 0.003, zr), (0, -1, 0))
+        rivet((xp - sx * 0.035, yf - 0.015, zr + 0.05), (0, -1, 0))
+
+def join(obs, name):
+    bpy.ops.object.select_all(action="DESELECT")
+    for o in obs: o.select_set(True)
+    bpy.context.view_layer.objects.active = obs[0]
+    bpy.ops.object.join(); ob = bpy.context.active_object; ob.name = name
+    return ob
+
+def tri_list(me):
+    V = [v.co.copy() for v in me.vertices]
+    T = [(p.vertices[0], p.vertices[i], p.vertices[i + 1]) for p in me.polygons for i in range(1, len(p.vertices) - 1)]
+    return V, T
+
+# ---------- items ----------
+TEMPL = {}
+def load_templates():
+    for item, *_ in VESSELS:
+        src = "Resin" if item == "Eitr" else item
+        ob = load_item(src, anchor="center")[0]
+        info = json.load(open(f"{ITEMS_DIR}/{src}/info.json"))
+        bmin, bmax = Vector(info["bounds_min"]), Vector(info["bounds_max"])
+        size = bmax - bmin
+        s = LONGS[item] / max(size)
+        ob.data.transform(Matrix.Diagonal((s, s, s, 1))); ob.data.update()
+        ob.location = (0, 0, -50); ob.hide_render = True; ob.name = "templ_" + item
+        V = np.array([tuple(v.co) for v in ob.data.vertices], np.float32)
+        bm = bmesh.new(); bm.from_mesh(ob.data)
+        hull = bmesh.ops.convex_hull(bm, input=bm.verts)
+        planes = []
+        for f in [g for g in hull["geom"] if isinstance(g, bmesh.types.BMFace)]:
+            n = f.normal.copy(); planes.append((n.x, n.y, n.z, n.dot(f.verts[0].co)))
+        hv = np.array(sorted({tuple(round(c, 5) for c in v.co) for v in hull["geom"] if isinstance(v, bmesh.types.BMVert)}), np.float32)
+        bm.free()
+        TEMPL[item] = {"obj": ob, "mesh": ob.data, "V": V, "s": float(s), "size": tuple(size), "center": tuple((bmin + bmax) / 2),
+                       "planes": np.array(planes, np.float32), "hv": hv, "radius": float(np.linalg.norm(V, axis=1).max()),
+                       "he": (V.max(0) - V.min(0)) / 2, "mid": (V.max(0) + V.min(0)) / 2, "src": src,
+                       "tris": [(p.vertices[0], p.vertices[i], p.vertices[i + 1]) for p in ob.data.polygons for i in range(1, len(p.vertices) - 1)]}
+
+def world_verts(item, M):
+    Mn = np.array(M); return TEMPL[item]["V"] @ Mn[:3, :3].T + Mn[:3, 3]
+
+def add_rb(ob, kind, shape, mass=1.0, damp=(0.25, 0.45)):
+    for o in bpy.context.view_layer.objects: o.select_set(False)
+    ob.select_set(True); bpy.context.view_layer.objects.active = ob
+    bpy.ops.rigidbody.object_add(type=kind)
+    rb = ob.rigid_body
+    rb.collision_shape = shape; rb.friction = 0.75; rb.restitution = 0.0
+    rb.use_margin = True; rb.collision_margin = MARGIN
+    if shape == "MESH": rb.mesh_source = "BASE"
+    if kind == "ACTIVE":
+        rb.mass = mass; rb.linear_damping, rb.angular_damping = damp
+        rb.use_deactivation = False
+
+def rcol(V, z):
+    """collider radius (polygon vertex radius) at world height z; straight up over the rim"""
+    zr = min(max(z - DECK, FLREL), V["h"])
+    return V["rin"](zr) - WALLGAP / math.cos(math.pi / V["N"])
+
+def collider(V):
+    N = V["N"]; ang = V["ang"]
+    zs = sorted(set([FLREL + 0.004] + [z for _r, z in V["core"] if z > FLREL] + list(np.linspace(FLREL + 0.004, V["h"], 7))))
+    rings = [(rcol(V, DECK + z), DECK + z) for z in zs] + [(rcol(V, DECK + V["h"]), DECK + V["h"] + 1.2)]
+    bm = bmesh.new()
+    R = [[bm.verts.new((V["x"] + r * math.cos(ang[i]), r * math.sin(ang[i]), z)) for i in range(N)] for r, z in rings]
+    for a, b in zip(R, R[1:]):
+        for i in range(N): bm.faces.new((a[i], a[(i + 1) % N], b[(i + 1) % N], b[i]))
+    bm.faces.new(R[0][::-1])
+    me = bpy.data.meshes.new("col"); bm.to_mesh(me); bm.free()
+    ob = bpy.data.objects.new(f"col_{V['item']}", me); bpy.context.scene.collection.objects.link(ob)
+    add_rb(ob, "PASSIVE", "MESH"); ob.hide_render = True
+    return ob
+
+def target(V, X, Y):
+    r = np.hypot(X - V["x"], Y)
+    Rm = rcol(V, V["rim"])
+    return np.minimum(V["rim"] - EDGE + CROWN * (Rm - r), V["rim"] + CAPOVER)
+
+def surface(V, HV):
+    Rb = max(rcol(V, DECK + z) for z in np.linspace(FLREL, V["h"], 20))
+    n = int(math.ceil(2 * Rb / GRID))
+    g = V["x"] - Rb + (np.arange(n) + 0.5) * GRID; gy = -Rb + (np.arange(n) + 0.5) * GRID
+    X, Y = np.meshgrid(g, gy, indexing="ij")
+    H = np.full((n, n), FL, np.float64)
+    if len(HV):
+        ix = np.clip(((HV[:, 0] - (V["x"] - Rb)) / GRID).astype(int), 0, n - 1); iy = np.clip(((HV[:, 1] + Rb) / GRID).astype(int), 0, n - 1)
+        np.maximum.at(H, (ix, iy), HV[:, 2])
+        P = np.pad(H, 1, mode="edge")
+        H = np.max([P[i:i + n, j:j + n] for i in range(3) for j in range(3)], axis=0)
+    mouth = np.hypot(X - V["x"], Y) < rcol(V, V["rim"]) - 0.03
+    return X, Y, H, target(V, X, Y), mouth
+
+def check_copy(V, item, M):
+    W = world_verts(item, M)
+    r = np.hypot(W[:, 0] - V["x"], W[:, 1])
+    rc = np.array([rcol(V, z) for z in W[:, 2]])                 # the collider's corner radius
+    escaped = bool((r > rc + 0.004).any() or (W[:, 2] < FL - 0.006).any())
+    # leaning on the invisible extension over the rim: a vertex over the rim within 4 mm of its faces
+    lean = bool(((W[:, 2] > V["rim"] - 0.005) & (r > rcol(V, V["rim"]) * math.cos(math.pi / V["N"]) - 0.004)).any())
+    clip = fbvh.overlap(BVHTree.FromPolygons([Vector(tuple(float(a) for a in w)) for w in W], TEMPL[item]["tris"]))
+    return escaped, lean, bool(clip)
+
+SIMLOG = {"vessels": {}, "frames": [], "retries": 0, "unsettled": 0, "resid": []}
+def simulate_vessel(V):
+    sc = bpy.context.scene
+    rbw = sc.rigidbody_world
+    coll = bpy.data.collections.new(f"rb_{V['item']}")
+    rbw.collection = coll
+    col = collider(V)
+    item = V["item"]; T_ = TEMPL[item]; R = T_["radius"]
+    HV = np.zeros((0, 3), np.float32)
+    copies = []
+    fails = 0; t0 = time.time()
+    Rm = rcol(V, V["rim"])
+    while len(copies) < CAP and fails < 6:
+        X, Y, H, Tg, mouth = surface(V, HV)
+        cover = float(((Tg - H)[mouth] < COVER_TOL).mean())
+        if cover >= 0.92: break
+        deficit = Tg - H
+        placed = False
+        # round 2: drop spots over the vessel's width at the heap's current level (the belly, not just the mouth), so big
+        # lumps fill the floor and the belly before they pile up in the middle
+        level = float(np.median(H[mouth]))
+        rlev = min(rcol(V, z) for z in np.linspace(level, level + 2 * R, 6)) * math.cos(math.pi / V["N"])
+        for attempt in range(6):
+            inset = R * 0.55 + 0.01 + 0.015 * attempt
+            rr = max(0.02, rlev - inset)
+            best = None
+            for _c in range(16):
+                a = crng.uniform(0, math.tau); d = rr * math.sqrt(crng.random())
+                px, py = V["x"] + d * math.cos(a), d * math.sin(a)
+                i = min(max(int((px - X[0, 0] + GRID / 2) / GRID), 0), X.shape[0] - 1)
+                j = min(max(int((py - Y[0, 0] + GRID / 2) / GRID), 0), X.shape[1] - 1)
+                sc_ = -float(deficit[i, j]) + crng.uniform(0, 0.02 + 0.01 * attempt)
+                if best is None or sc_ < best[0]: best = (sc_, px, py)
+            _s, px, py = best
+            m = (HV[:, 0] - px) ** 2 + (HV[:, 1] - py) ** 2 < (R + 0.06) ** 2 if len(HV) else None
+            lt = float(HV[m, 2].max()) if m is not None and m.any() else FL
+            ob = bpy.data.objects.new(f"c_{item}_{len(copies)}_{attempt}", T_["mesh"]); sc.collection.objects.link(ob)
+            ob.rotation_euler = Euler((crng.uniform(0, math.tau), crng.uniform(0, math.tau), crng.uniform(0, math.tau)), "XYZ")
+            ob.location = (px, py, lt + 0.02 + R)
+            add_rb(ob, "ACTIVE", "CONVEX_HULL", mass=0.4)
+            bpy.context.view_layer.update()
+            sc.frame_set(1)
+            prev = None; still = 0; f = 1; dp = dr = 0.0
+            while f < 300:
+                f += 1; sc.frame_set(f)
+                cur = (ob.matrix_world.translation.copy(), ob.matrix_world.to_quaternion())
+                if prev:
+                    dp = (cur[0] - prev[0]).length; dr = cur[1].rotation_difference(prev[1]).angle
+                    still = still + 1 if (dp < 2e-4 and dr < 4e-3 and f > 8) else 0
+                    if still >= 3: break
+                prev = cur
+            M = ob.matrix_world.copy()
+            esc, lean, clip = check_copy(V, item, M)
+            # round 2: no towers (big lumps balanced on each other in the middle): nothing higher than the crown cap + 6 cm
+            tall = float(world_verts(item, M)[:, 2].max()) > V["rim"] + CAPOVER + 0.06
+            if esc or lean or clip or tall or still < 3:
+                bpy.data.objects.remove(ob, do_unlink=True); SIMLOG["retries"] += 1
+                if still < 3: SIMLOG["unsettled"] += 1
+                continue
+            SIMLOG["frames"].append(f); SIMLOG["resid"].append((round(dp * 1000, 3), round(dr, 4)))
+            ob.rigid_body.type = "PASSIVE"
+            ob.matrix_world = M
+            bpy.context.view_layer.update()
+            sc.frame_set(1)
+            copies.append({"item": item, "M": M.copy(), "obj": ob})
+            Mn = np.array(M)
+            HV = np.concatenate([HV, (T_["hv"] @ Mn[:3, :3].T + Mn[:3, 3]).astype(np.float32)])
+            placed = True
+            break
+        fails = 0 if placed else fails + 1
+    X, Y, H, Tg, mouth = surface(V, HV)
+    cover = float(((Tg - H)[mouth] < COVER_TOL).mean())
+    SIMLOG["vessels"][item] = {"copies": len(copies), "cover_6cm": round(cover, 3), "peak": round(float(HV[:, 2].max()), 3) if len(HV) else None,
+                               "rim": V["rim"], "seconds": round(time.time() - t0, 1)}
+    print("VESSEL", item, json.dumps(SIMLOG["vessels"][item]), flush=True)
+    bpy.data.objects.remove(col, do_unlink=True)
+    return copies
+
+# ---------- checks ----------
+def interpenetration(cps):
+    P = np.array([np.array(cp["M"])[:3, 3] for cp in cps]); R = np.array([TEMPL[cp["item"]]["radius"] for cp in cps])
+    worst = 0.0; npairs = 0; over = []
+    for i in range(len(cps)):
+        d = np.linalg.norm(P - P[i], axis=1)
+        for j in np.nonzero((d < R + R[i]) & (np.arange(len(cps)) > i))[0]:
+            npairs += 1
+            for a, b in ((i, int(j)), (int(j), i)):
+                Ma, Mb = np.array(cps[a]["M"]), np.array(cps[b]["M"])
+                Ta, Tb = TEMPL[cps[a]["item"]], TEMPL[cps[b]["item"]]
+                x = Ta["hv"] @ Ma[:3, :3].T + Ma[:3, 3]
+                xb = (x - Mb[:3, 3]) @ Mb[:3, :3]
+                pl = Tb["planes"]
+                m = float((pl[:, 3][None, :] - xb @ pl[:, :3].T).min(axis=1).max())
+                if m > 0: over.append(m)
+                worst = max(worst, m)
+    return worst, npairs, over
+
+# ---------- anchors (Unity prefab space: ux=-bx, uy=bz, uz=-by) ----------
+CB2U = Matrix(((-1, 0, 0), (0, 0, 1), (0, -1, 0)))
+def b2u_vec(v): return (-v[0], v[2], -v[1])
+def rot_to_unity(R):
+    Ru = CB2U @ R @ CB2U.transposed()
+    q = Ru.to_quaternion()
+    e = Ru.to_euler("ZXY")
+    ex = Matrix.Rotation(e.x, 3, "X"); ey = Matrix.Rotation(e.y, 3, "Y"); ez = Matrix.Rotation(e.z, 3, "Z")
+    err = max(abs(a - b) for ra, rb in zip((ey @ ex @ ez), Ru) for a, b in zip(ra, rb))
+    return [round(math.degrees(e.x), 3), round(math.degrees(e.y), 3), round(math.degrees(e.z), 3)], [round(q.x, 5), round(q.y, 5), round(q.z, 5), round(q.w, 5)], err
+
+def bounds_low(cp):
+    M = np.array(cp["M"]); T = TEMPL[cp["item"]]
+    c = M[:3, :3] @ T["mid"] + M[:3, 3]
+    return float(c[2] - np.abs(M[2, :3]) @ T["he"])
+
+def bounds_high(cp):
+    M = np.array(cp["M"]); T = TEMPL[cp["item"]]
+    c = M[:3, :3] @ T["mid"] + M[:3, 3]
+    return float(c[2] + np.abs(M[2, :3]) @ T["he"])
+
+def build_units(VS, seqs):
+    """cut each vessel's copy sequence into its units (drop order), then interleave the 64 units by fill fraction"""
+    units = []
+    for vi, (V, seq) in enumerate(zip(VS, seqs)):
+        nu = VESSELS[vi][4]; C = len(seq)
+        if C < nu and V["item"] not in LIQUID: print("WARNING fewer copies than units", V["item"], C, nu, flush=True)
+        for k in range(nu):
+            # round 2: unit 0 gets the first copy, the rest spread evenly over units 1..n-1 with the last unit taking the last copy
+            # (with fewer copies than units the copy-less units fall in between, so the crown only shows at full)
+            a = 0 if k == 0 else 1 + (k - 1) * (C - 1) // (nu - 1)
+            b = 1 if k == 0 else 1 + k * (C - 1) // (nu - 1)
+            cps = ([KEG] if k == 0 else []) if V["item"] in LIQUID else seq[a:b]     # a liquid: the label copy on its first unit
+            units.append({"vessel": vi, "item": V["item"], "k": k, "frac": (k + 0.5) / nu + crng.uniform(-0.01, 0.01), "copies": cps})
+    units.sort(key=lambda u: (u["frac"], u["vessel"]))
+    for n, u in enumerate(units): u["index"] = n; u["step"] = n * 8 // NUNITS
+    return units
+
+def build_anchors(VS, units, frame_info, checks):
+    allc = [cp for u in units for cp in u["copies"]]
+    floor = min(bounds_low(cp) for cp in allc) - 0.002
+    top = max(bounds_high(cp) for cp in allc)
+    H0 = (floor + top) / 2
+    maxerr = 0; out = []
+    for u in units:
+        V = VS[u["vessel"]]
+        if u["copies"]:
+            W = np.concatenate([world_verts(cp["item"], cp["M"]) for cp in u["copies"]])
+        else:      # a unit without a copy (a vessel with fewer copies than units): the vessel's axis, its inner width
+            rw = max(V["rin"](z) for z in np.linspace(FLREL, V["h"], 20)); W = np.array([[V["x"] - rw, 0, FL], [V["x"] + rw, 0, FL]])
+        cx = float((W[:, 0].min() + W[:, 0].max()) / 2)
+        c = Vector((cx, 0.0, H0))
+        cps = []
+        for cp in u["copies"]:
+            M = cp["M"]; eul, quat, err = rot_to_unity(M.to_3x3().normalized()); maxerr = max(maxerr, err)
+            T = TEMPL[cp["item"]]
+            cps.append({"item": cp["item"], "offset": [round(a, 4) for a in b2u_vec(M.translation - c)], "euler": eul, "quat_xyzw": quat,
+                        "scale": round(T["s"], 5), "fit_longest_m": LONGS[cp["item"]], "world_position": [round(a, 4) for a in b2u_vec(M.translation)]})
+        rin_max = max(V["rin"](z) for z in np.linspace(FLREL, V["h"], 20))
+        out.append({"index": u["index"], "step": u["step"], "kind": "liquid" if u["item"] in LIQUID else "heap_step", "item": u["item"], "compartment": u["vessel"],
+                    "position": [round(a, 4) for a in b2u_vec(c)], "rotation": [0, 0, 0],
+                    "box": [round(float(W[:, 0].max() - W[:, 0].min()), 4), round(2 * (H0 - floor), 4), round(1.4 * rin_max, 4)],
+                    "layer": 0, "copies": cps})
+    vessels = []
+    for vi, V in enumerate(VS):
+        us = [u for u in units if u["vessel"] == vi]
+        rin_max = max(V["rin"](z) for z in np.linspace(FLREL, V["h"], 20))
+        vessels.append({"compartment": vi, "item": V["item"], "vessel": V["kind"], "units": len(us), "copies": sum(len(u["copies"]) for u in us),
+                        "copies_per_unit": [len(u["copies"]) for u in sorted(us, key=lambda u: u["k"])],
+                        "centre_x": round(-V["x"], 4), "rim_y": V["rim"], "floor_y": round(FL, 3), "inner_radius_max": round(rin_max, 4),
+                        "slot_y": [round(DECK + V["wlo"], 3), round(DECK + V["whi"], 3)],
+                        "heap_peak_y": SIMLOG["vessels"].get(V["item"], {}).get("peak"), "cover_6cm": SIMLOG["vessels"].get(V["item"], {}).get("cover_6cm")})
+    items = {}
+    for it, *_ in VESSELS:
+        T = TEMPL[it]
+        items[it] = {"model": T["src"], "bounds_size_unity": [round(T["size"][0], 4), round(T["size"][2], 4), round(T["size"][1], 4)],
+                     "bounds_center_unity": [round(a, 4) for a in b2u_vec(T["center"])], "scale_used": round(T["s"], 5), "fit_longest_m": LONGS[it]}
+    items["Eitr"]["note"] = ("Eitr's prefab uses a built-in Unity mesh the extractor cannot read: this vessel was laid out with Resin lumps at "
+                             "Resin's size; the mod draws the game's own Eitr model with its longest side at fit_longest_m.")
+    doc = {
+        "store": "Cooper's Row round 4 (Sap as a light green liquid in round 2's birch-bark tub, the Sap keg standing in front as its label): six vessels for sticky goods on one timber skid (Tar barrel, Resin clay pot, Sap birch-bark tub (liquid), "
+                 "Guck half barrel, Eitr cask, Ooze dark clay pot), one kind per vessel, heaped and crowned over the rim when full",
+        "slots": NUNITS, "units": len(out), "steps": 8, "stack_per_unit": 1, "frame": frame_info,
+        "space": "Unity prefab space, origin = skid footprint centre on the ground. Blender z-up/-y front -> Unity y-up/+z front: ux=-bx, uy=bz, uz=-by. "
+                 "OBJ export (forward NEGATIVE_Z, up Y) writes (bx, bz, -by); Unity's importer negates x, same mapping.",
+        "unit_semantics": "SETTLED: every copy has an explicit final pose from a rigid-body simulation (convex-hull items, friction 0.75, restitution 0, "
+                          "damping 0.25/0.45), dropped one copy at a time onto the frozen earlier ones; each vessel's copy sequence is cut into its "
+                          "units in drop order. Each copy: the item's bounds centre at unit.position + copy.offset (= copy.world_position), rotated by "
+                          "copy.quat_xyzw (or copy.euler, Unity ZXY), longest side fit_longest_m. unit.position: x = centre of the unit's copies, "
+                          "y = one height for all units, z = 0, so ByGroup tells the vessels apart by x only (left to right). unit.box: x = the copies' "
+                          "width, y = from the lowest rotated-bounds corner of any copy in the store to the highest (the never-below-the-floor lift "
+                          "leaves every settled copy alone), z = the chord a divider board may take inside the round vessel (70% of its inner diameter).",
+        "fill_order": "units are listed in fill order (interleaved over the vessels); within a vessel its units fill bottom up. Show the first n "
+                      "copies of a unit for a partial stack. Later copies rest on earlier ones, earlier ones never move. One item kind per vessel "
+                      "(compartment = vessel 0-5, left to right as seen from the front).",
+        "liquids": LIQUIDS_DOC,
+        "liquids_doc": "per liquid group: obj = a closed cylinder of height 1 (y 0..1) in this folder, drawn with the frame's material as "
+                       "T(floor) * S(1, (top_y - floor.y) * fill, 1); floor = bottom centre of the liquid (prefab space), top_y = its surface when full. "
+                       "The group's units name the item; its first unit carries one copy (the item standing in front of the vessel as its label), "
+                       "the others none.",
+        "compartments": vessels, "items": items, "checks": checks, "rotation_convert_max_err": maxerr, "units_list": out}
+    return doc
+
+# ---------- scene + frame ----------
+bpy.ops.wm.read_factory_settings(use_empty=True)
+sc = bpy.context.scene
+atlas = build_atlas()
+MAT = bpy.data.materials.new("coopersrow"); MAT.use_nodes = True
+_b = MAT.node_tree.nodes["Principled BSDF"]
+_t = MAT.node_tree.nodes.new("ShaderNodeTexImage"); _t.image = atlas; _t.interpolation = "Closest"
+MAT.node_tree.links.new(_t.outputs["Color"], _b.inputs["Base Color"])
+_b.inputs["Roughness"].default_value = 1.0; _b.inputs["Specular IOR Level"].default_value = 0.0
+
+build_skid()
+VS = [vessel(i) for i in range(len(VESSELS))]
+frame = join(list(PARTS), "CoopersRow")
+FV_, FT_ = tri_list(frame.data)
+frame_tris = len(FT_)
+fbvh = BVHTree.FromPolygons(FV_, FT_, all_triangles=True)
+FVn = np.array([tuple(v) for v in FV_])
+frame_size = (float(FVn[:, 0].max() - FVn[:, 0].min()), float(FVn[:, 2].max()), float(FVn[:, 1].max() - FVn[:, 1].min()))
+print("FRAME tris", frame_tris, "size W H D", [round(a, 3) for a in frame_size], "x range", round(FVn[:, 0].min(), 3), round(FVn[:, 0].max(), 3),
+      "y range", round(FVn[:, 1].min(), 3), round(FVn[:, 1].max(), 3), flush=True)
+for V in VS: print("VESSEL GEOM", V["item"], V["kind"], "x", round(V["x"], 3), "rim", V["rim"], "slot", round(DECK + V["wlo"], 3), round(DECK + V["whi"], 3),
+                   "inner r at rim", round(V["rin"](V["h"]), 3))
+
+load_templates()
+sc.render.fps = FPS
+bpy.ops.rigidbody.world_add()
+rbw = sc.rigidbody_world
+rbw.substeps_per_frame = 20; rbw.solver_iterations = 40; rbw.time_scale = 1.0
+rbw.point_cache.frame_start = 1; rbw.point_cache.frame_end = 400
+sc.frame_start = 1; sc.frame_end = 400
+t0 = time.time()
+seqs = [[] if V["item"] in LIQUID else simulate_vessel(V) for V in VS]
+LIQUIDS_DOC, LIQ_OBS = build_liquids(VS)
+print("SIM seconds", round(time.time() - t0, 1), "retries", SIMLOG["retries"], "unsettled tries", SIMLOG["unsettled"], flush=True)
+allc = [cp for s in seqs for cp in s]
+clip = [cp for cp in allc if check_copy(VS[[V["item"] for V in VS].index(cp["item"])], cp["item"], cp["M"])[2]]
+esc = [cp for cp in allc if check_copy(VS[[V["item"] for V in VS].index(cp["item"])], cp["item"], cp["M"])[0]]
+lean = [cp for cp in allc if check_copy(VS[[V["item"] for V in VS].index(cp["item"])], cp["item"], cp["M"])[1]]
+pen, npairs, over = interpenetration(allc)
+print("CLIPPING", len(clip), "of", len(allc), "; ESCAPED", len(esc), "; LEANING over the rim", len(lean))
+print("INTERPENETRATION max", round(pen * 1000, 2), "mm over", npairs, "near pairs;", len(over), "pairs penetrate, median",
+      round(float(np.median(over)) * 1000, 2) if over else 0, "mm")
+KEG = make_keg(VS[[V["item"] for V in VS].index("Sap")])
+units = build_units(VS, seqs)
+tris_full = sum(len(TEMPL[cp["item"]]["tris"]) for cp in allc + [KEG])
+checks = {"clipping": len(clip), "label_copy_clipping": KEG_CLIP, "liquid_clipping": sum(c for _i, _f, c in LIQ_CLIP), "of_copies": len(allc), "escaped": len(esc), "leaning_over_rim": len(lean),
+          "interpenetration_max_m": round(max(pen, 0.0), 5), "retries": SIMLOG["retries"],
+          "contents_tris_full_ripped_models": tris_full,
+          "per_vessel": SIMLOG["vessels"]}
+frame_info = {"obj": "CoopersRow.obj", "tris": frame_tris, "size_m": [round(a, 3) for a in frame_size], "atlas": "coopersrow_atlas.png 128x128",
+              "atlas_sources": "rows 0-31 hewn timber, 32-63 x0-63 end grain, 64-79 iron: assets/bunker_r4; 32-63 x64-95 dark oiled timber, "
+                               "x96-127 wear swatch: assets/metalpallet_r3; 80-111: clay, dark clay, birch bark, root lashing (new)"}
+doc = build_anchors(VS, units, frame_info, checks)
+print("UNITS", len(units), "copies per vessel", {V["item"]: len(s) for V, s in zip(VS, seqs)}, "rot err", doc["rotation_convert_max_err"])
+json.dump(SIMLOG, open(os.path.join(OUT, "simlog.json"), "w"), indent=1)
+for cp in allc: bpy.data.objects.remove(cp["obj"], do_unlink=True)
+bpy.ops.rigidbody.world_remove()
+# files: atlas (saved) -> OBJ -> anchors last (temp file + rename)
+bpy.ops.object.select_all(action="DESELECT"); frame.select_set(True); bpy.context.view_layer.objects.active = frame
+bpy.ops.wm.obj_export(filepath=os.path.join(OUTA, "CoopersRow.obj"), export_selected_objects=True, export_materials=False,
+                      export_triangulated_mesh=True, forward_axis="NEGATIVE_Z", up_axis="Y")
+for lo, fn in LIQ_OBS:
+    bpy.ops.object.select_all(action="DESELECT"); lo.select_set(True); bpy.context.view_layer.objects.active = lo
+    bpy.ops.wm.obj_export(filepath=os.path.join(OUTA, fn), export_selected_objects=True, export_materials=False,
+                          export_triangulated_mesh=True, forward_axis="NEGATIVE_Z", up_axis="Y")
+tmp = os.path.join(OUT, "coopersrow_anchors.json.tmp")
+json.dump(doc, open(tmp, "w"), indent=1)
+os.replace(tmp, os.path.join(OUTA, "coopersrow_anchors.json"))
+print("COOPERSROW frame tris", frame_tris, "copies", len(allc), "contents tris full", tris_full, flush=True)
+if NORENDER:
+    print("DONE"); sys.exit(0)
+
+# ---------- renders: replayed from the EXPORTED files the mod's way ----------
+for o in list(bpy.data.objects): bpy.data.objects.remove(o, do_unlink=True)
+C = Matrix(((-1, 0, 0), (0, 0, 1), (0, -1, 0)))
+def u2b_pos(p): return Vector((-p[0], -p[2], p[1]))
+def u2b_rot(q): return C.transposed() @ Quaternion((q[3], q[0], q[1], q[2])).to_matrix() @ C
+
+def atlas_mat(png, name):
+    m = bpy.data.materials.new(name); m.use_nodes = True
+    b = m.node_tree.nodes["Principled BSDF"]
+    t = m.node_tree.nodes.new("ShaderNodeTexImage"); t.image = bpy.data.images.load(png); t.interpolation = "Closest"
+    m.node_tree.links.new(t.outputs["Color"], b.inputs["Base Color"])
+    b.inputs["Roughness"].default_value = 1.0; b.inputs["Specular IOR Level"].default_value = 0.0
+    return m
+
+def import_frame(objpath, png, dx, dy):
+    before = set(bpy.data.objects)
+    bpy.ops.wm.obj_import(filepath=objpath, forward_axis="NEGATIVE_Z", up_axis="Y")
+    new = [o for o in bpy.data.objects if o not in before]
+    m = atlas_mat(png, os.path.basename(png) + str(dx))
+    for o in new:
+        o.data.materials.clear(); o.data.materials.append(m); o.location = (dx, dy, 0)
+    return new
+
+RAW = {}
+def raw_mesh(item):
+    if item not in RAW:
+        src = "Resin" if item == "Eitr" else item
+        ob = load_item(src, anchor="center")[0]
+        info = json.load(open(f"{ITEMS_DIR}/{src}/info.json"))
+        for m in ob.data.materials:
+            b = m.node_tree.nodes.get("Principled BSDF")
+            if not b: continue
+            b.inputs["Specular IOR Level"].default_value = 0.25
+            b.inputs["Roughness"].default_value = 0.35 if item in ("Tar", "Resin", "Guck", "Sap", "Eitr") else 0.7
+        if item == "Eitr":       # stand-in look: Resin's lump tinted blue-violet, glowing a little (render only)
+            me = ob.data.copy(); ob.data = me
+            for i, m in enumerate(me.materials):
+                m2 = m.copy(); me.materials[i] = m2
+                for n in m2.node_tree.nodes:
+                    if n.type == "MIX": n.inputs["B"].default_value = (0.30, 0.42, 1.0, 1)
+                b = m2.node_tree.nodes.get("Principled BSDF")
+                b.inputs["Emission Color"].default_value = (0.25, 0.35, 1.0, 1); b.inputs["Emission Strength"].default_value = 0.6
+        if item == "Tar":
+            for m in ob.data.materials:
+                b = m.node_tree.nodes.get("Principled BSDF")
+                if b: b.inputs["Base Color"].default_value = (0.03, 0.03, 0.035, 1)
+        RAW[item] = (ob.data, np.array([tuple(v.co) for v in ob.data.vertices], np.float32), max(Vector(info["bounds_max"]) - Vector(info["bounds_min"])))
+        bpy.data.objects.remove(ob, do_unlink=True)
+    return RAW[item]
+
+LIFTS = {}
+def spawn_file(folder, obj, png, anchors, fill, dx, dy, tag, grouped=True):
+    """a store replayed from its files: per group (vessel / compartment) its first fill x units in list order, a partial last unit,
+    copies at unit.position + copy.offset, longest side fit_longest_m (or copy.scale), the mod's never-below-the-floor lift"""
+    import_frame(os.path.join(folder, obj), os.path.join(folder, png), dx, dy)
+    if fill <= 0: return
+    d = json.load(open(os.path.join(folder, anchors)))
+    for lq in d.get("liquids", []):          # the mod's liquid: T(floor) * S(1, (top_y - floor.y) * fill, 1)
+        lob = import_frame(os.path.join(folder, lq["obj"]), os.path.join(folder, png), 0, 0)[0]
+        bpy.ops.object.select_all(action="DESELECT"); lob.select_set(True); bpy.context.view_layer.objects.active = lob
+        lob.location = (0, 0, 0); bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)   # the importer's axis turn into the mesh
+        lob.location = u2b_pos(lq["floor"]) + Vector((dx, dy, 0))
+        lob.scale = (1, 1, (lq["top_y"] - lq["floor"][1]) * fill)
+    ul = d["units_list"]
+    groups = {}
+    for u in ul: groups.setdefault(json.dumps(u.get("compartment")), []).append(u)
+    lifts = 0
+    for g, us in groups.items():
+        exact = fill * len(us); n = int(math.floor(exact + 1e-9)); part = exact - n
+        for ui, u in enumerate(us[:n + (1 if part > 1e-6 else 0)]):
+            cps = u["copies"] if ui < n else u["copies"][:max(1, math.ceil(len(u["copies"]) * part))]
+            floor = u["position"][1] - u["box"][1] / 2
+            for cp in cps:
+                mesh, Vv, longest = raw_mesh(cp["item"])
+                s = cp["fit_longest_m"] / longest if "fit_longest_m" in cp else cp["scale"]
+                Rb = u2b_rot(cp["quat_xyzw"])
+                p = u2b_pos([a + b for a, b in zip(u["position"], cp["offset"])])
+                he = (Vv.max(0) - Vv.min(0)) / 2 * s; mid = (Vv.max(0) + Vv.min(0)) / 2 * s
+                Rn = np.array(Rb)
+                low = float((Rn @ mid)[2] + p.z - np.abs(Rn[2]) @ he)
+                if low < floor - 1e-4: p.z += floor - low; lifts += 1
+                ob = bpy.data.objects.new(f"{tag}_item", mesh); sc.collection.objects.link(ob)
+                ob.matrix_world = Matrix.Translation(p + Vector((dx, dy, 0))) @ Rb.to_4x4() @ Matrix.Diagonal((s,) * 3 + (1,))
+    LIFTS[f"{tag}@{fill}"] = lifts
+
+pm = bpy.data.materials.new("plain"); pm.use_nodes = True
+pm.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = (0.62, 0.60, 0.55, 1)
+def post(x, y):
+    bpy.ops.mesh.primitive_cube_add(size=1.0, location=(x, y, 0.9)); p = bpy.context.active_object
+    p.scale = (0.12, 0.12, 1.8); p.data.materials.append(pm); p.name = "post_1.8m"
+
+A_ = (OUTA, "CoopersRow.obj", "coopersrow_atlas.png", "coopersrow_anchors.json")
+ROWS = {"empty": 0.0, "half": 8.0, "full": 16.0, "fam": 26.0}
+spawn_file(*A_, 0.0, 0.0, ROWS["empty"], "e")
+spawn_file(*A_, 0.5, 0.0, ROWS["half"], "h")
+spawn_file(*A_, 1.0, 0.0, ROWS["full"], "f")
+post(2.45, ROWS["full"] + 0.2)
+# family: the bunker (frame) and the ore bin (full) at the same scale
+spawn_file(*A_, 1.0, 0.0, ROWS["fam"], "fam")
+import_frame(os.path.join(REPO, "assets", "bunker_r4", "Bunker.obj"), os.path.join(REPO, "assets", "bunker_r4", "bunker_atlas.png"), -4.6, ROWS["fam"] + 0.5)
+spawn_file(os.path.join(REPO, "assets", "orebin_r5"), "OreBin.obj", "orebin_atlas.png", "orebin_anchors.json", 1.0, 4.7, ROWS["fam"] + 0.4, "ore")
+print("MOD FLOOR LIFTS", LIFTS, flush=True)
+
+world = bpy.data.worlds.new("w"); sc.world = world; world.use_nodes = True
+world.node_tree.nodes["Background"].inputs[0].default_value = (0.42, 0.45, 0.5, 1)
+world.node_tree.nodes["Background"].inputs[1].default_value = 0.9
+sun = bpy.data.objects.new("sun", bpy.data.lights.new("sun", "SUN")); sun.data.energy = 3.2
+sun.rotation_euler = (math.radians(50), 0, math.radians(35)); sc.collection.objects.link(sun)
+bpy.ops.mesh.primitive_plane_add(size=160, location=(0, 12, 0))
+gm = bpy.data.materials.new("ground"); gm.use_nodes = True
+gm.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = (0.16, 0.14, 0.11, 1)
+bpy.context.active_object.data.materials.append(gm)
+cam = bpy.data.objects.new("cam", bpy.data.cameras.new("cam")); sc.collection.objects.link(cam); sc.camera = cam
+sc.render.engine = "BLENDER_EEVEE_NEXT"
+sc.render.resolution_x, sc.render.resolution_y = (1000, 562) if QUICK else (1600, 900)
+sc.view_settings.view_transform = "Standard"
+EYE = 1.75
+VIEWS = {  # name: (yaw deg, horizontal distance, eye height, target, lens)
+    "empty34": (-30, 4.8, EYE, (0.0, ROWS["empty"], 0.5), 35),
+    "half34": (-30, 4.8, EYE, (0.0, ROWS["half"], 0.5), 35),
+    "full34": (-30, 4.8, EYE, (0.0, ROWS["full"], 0.5), 35),
+    "halfstanding": (0, 3.2, EYE, (0.0, ROWS["half"], 0.55), 30),
+    "fullpost": (-20, 5.4, 1.5, (0.3, ROWS["full"], 0.8), 35),
+    "family": (-12, 10.5, 2.6, (0.0, ROWS["fam"] + 0.4, 0.8), 35),
+    "sapclose": (-14, 1.9, 1.45, (xs[2], ROWS["half"], 0.5), 32),
+    "halfclose": (-8, 2.3, 1.5, (-1.0, ROWS["half"], 0.55), 30),
+}
+for vn, (yaw, dist, hgt, tgt, lens) in VIEWS.items():
+    if VIEWSEL and vn not in VIEWSEL: continue
+    t = Vector(tgt)
+    cam.location = t + Vector((math.sin(math.radians(yaw)) * dist, -math.cos(math.radians(yaw)) * dist, hgt - t.z))
+    cam.rotation_euler = (t - cam.location).to_track_quat("-Z", "Y").to_euler(); cam.data.lens = lens
+    sc.render.filepath = os.path.join(OUT, f"coopersrow4-{vn}.png")
+    bpy.ops.render.render(write_still=True)
+    print("RENDER", vn, flush=True)
+print("DONE")

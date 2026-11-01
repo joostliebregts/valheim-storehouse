@@ -1,0 +1,1562 @@
+{
+ "schema": "storehouse-anchors/1",
+ "furniture": "Low Metal Rack (half)",
+ "slug": "metalracklowhalf",
+ "round": 1,
+ "unit_count": 16,
+ "slots_designed_for": 16,
+ "stack_per_unit": true,
+ "mirror": true,
+ "row_width": 4,
+ "frame": {
+  "obj": "MetalRackLowHalf.obj",
+  "atlas": "metalracklowhalf_atlas.png 128x128 point",
+  "tris": 2992,
+  "size_m": [
+   1.44,
+   1.2,
+   0.7
+  ],
+  "bounds_unity": {
+   "min": [
+    -0.72,
+    0.0,
+    -0.35
+   ],
+   "max": [
+    0.72,
+    1.2,
+    0.35
+   ]
+  },
+  "post_centres_unity_x": [
+   -0.676,
+   0.676
+  ],
+  "post_centres_unity_z": [
+   -0.306,
+   0.306
+  ],
+  "modular": "cell = the half low module (1.44 x 1.20 x 0.70). Whole = two halves side by side, tall = two lows stacked: same footprint, post positions, flat top and foot, and shelf heights. Posts 4 mm inside the bounds, iron bands flush with them, so the mod's bounding-box corner snap points stack and line up any two modules.",
+  "shelf_tops_y": [
+   0.05,
+   0.3325,
+   0.615,
+   0.8975
+  ],
+  "contents_top_limit_y": 1.155
+ },
+ "space": {
+  "unity": "prefab space, origin on the floor at the centre of the footprint, +z front, +y up, +x to the furniture's left seen from the front",
+  "from_blender": "ux=-bx, uy=bz, uz=-by"
+ },
+ "fill_order": "MIRROR grid order: index = grid_row * 4 + grid_col; grid_row 0 = the top shelf; each row left to right seen from the front. All 4 units of a shelf share one position.y, so the mod's GridOrder (rows of 4 by position.y descending, each by position.x descending) gives exactly this order.",
+ "position": "unit position = bottom centre of its pile, 1 mm over the shelf top. box_size = [x, y, z] Unity, informational.",
+ "copy_rule": "Each copy = one bar at TRUE SIZE: align (long axis -> +z, into the depth; thin axis -> up), then_rotate (a little yaw, the top bar sometimes turned end for end), fit_longest_m 0.6226 = the vanilla bar's own longest side, so scale 1.000; anchor bottom. Layer j sits at offset.y = j * 0.1249 m. 2 bars per unit, bottom first.",
+ "items": {
+  "all_bars": {
+   "bounds_size_unity": [
+    0.3045,
+    0.1239,
+    0.6226
+   ],
+   "longest_m": 0.6226,
+   "scale": 1.0,
+   "source": "ValheimRip/items/Iron/info.json size [0.3045, 0.6226, 0.1239]",
+   "note": "Copper, Tin, Bronze, Iron, Silver, BlackMetal, Flametal and FlametalNew share one 44-triangle bar mesh"
+  }
+ },
+ "layout": {
+  "shelves": 4,
+  "piles_per_shelf": 4,
+  "shelf_pitch_m": 0.2825,
+  "headroom_per_shelf_m": 0.0077,
+  "pile_pitch_x_m": 0.3158,
+  "pile_gap_x_m": 0.0113,
+  "layers_per_pile": 2,
+  "bars_per_unit": 2
+ },
+ "checks": {
+  "grid_mirror_order_ok": true,
+  "Copper": {
+   "copies": 32,
+   "bar_scale": [
+    1.00016
+   ],
+   "clipping": 0,
+   "bar_overlaps": 0,
+   "outside_inner_box": 0,
+   "contents_x": [
+    -0.6274,
+    0.6289
+   ],
+   "contents_y": [
+    -0.3342,
+    0.2968
+   ],
+   "contents_top_z": 1.1473,
+   "top_limit_z": 1.155
+  },
+  "BlackMetal": {
+   "copies": 32,
+   "bar_scale": [
+    1.0
+   ],
+   "clipping": 0,
+   "bar_overlaps": 0,
+   "outside_inner_box": 0,
+   "contents_x": [
+    -0.6274,
+    0.6288
+   ],
+   "contents_y": [
+    -0.3341,
+    0.2967
+   ],
+   "contents_top_z": 1.1473,
+   "top_limit_z": 1.155
+  }
+ },
+ "units_data": [
+  {
+   "index": 0,
+   "grid_row": 0,
+   "grid_col": 0,
+   "shelf_from_bottom": 3,
+   "position": [
+    0.47375,
+    0.8985,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00067,
+      0.0,
+      0.00166
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.239,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.002084,
+       0.0,
+       0.999998
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      -6e-05,
+      0.1249,
+      0.00027
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.115,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.001006,
+       0.0,
+       0.999999
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "grid_row": 0,
+   "grid_col": 1,
+   "shelf_from_bottom": 3,
+   "position": [
+    0.15792,
+    0.8985,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00171,
+      0.0,
+      -0.00266
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.213,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.001861,
+       0.0,
+       0.999998
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00038,
+      0.1249,
+      0.00148
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       180.043,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       1.0,
+       0.0,
+       -0.000373
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "grid_row": 0,
+   "grid_col": 2,
+   "shelf_from_bottom": 3,
+   "position": [
+    -0.15792,
+    0.8985,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      0.00099,
+      0.0,
+      0.00308
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.102,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.000888,
+       0.0,
+       1.0
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.0014,
+      0.1249,
+      0.00073
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.029,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.000255,
+       0.0,
+       1.0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "grid_row": 0,
+   "grid_col": 3,
+   "shelf_from_bottom": 3,
+   "position": [
+    -0.47375,
+    0.8985,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00191,
+      0.0,
+      -0.00194
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.173,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.001506,
+       0.0,
+       0.999999
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00194,
+      0.1249,
+      0.00021
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.062,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.000544,
+       0.0,
+       1.0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "grid_row": 1,
+   "grid_col": 0,
+   "shelf_from_bottom": 2,
+   "position": [
+    0.47375,
+    0.616,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      0.00015,
+      0.0,
+      -0.00263
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.235,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.002053,
+       0.0,
+       0.999998
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00106,
+      0.1249,
+      0.00317
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.002,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -2.1e-05,
+       0.0,
+       1.0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "grid_row": 1,
+   "grid_col": 1,
+   "shelf_from_bottom": 2,
+   "position": [
+    0.15792,
+    0.616,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00027,
+      0.0,
+      0.00022
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.044,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.000386,
+       0.0,
+       1.0
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00174,
+      0.1249,
+      -0.00046
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.008,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       6.9e-05,
+       0.0,
+       1.0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "grid_row": 1,
+   "grid_col": 2,
+   "shelf_from_bottom": 2,
+   "position": [
+    -0.15792,
+    0.616,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -5e-05,
+      0.0,
+      -0.00045
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.03,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.000266,
+       0.0,
+       1.0
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      -0.00195,
+      0.1249,
+      -0.00194
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       179.909,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       1.0,
+       0.0,
+       0.000794
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "grid_row": 1,
+   "grid_col": 3,
+   "shelf_from_bottom": 2,
+   "position": [
+    -0.47375,
+    0.616,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      0.00145,
+      0.0,
+      0.00291
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.252,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.002198,
+       0.0,
+       0.999998
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      -0.00199,
+      0.1249,
+      0.00018
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.082,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.000716,
+       0.0,
+       1.0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "grid_row": 2,
+   "grid_col": 0,
+   "shelf_from_bottom": 1,
+   "position": [
+    0.47375,
+    0.3335,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00077,
+      0.0,
+      -0.00228
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.293,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.00256,
+       0.0,
+       0.999997
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      -0.00185,
+      0.1249,
+      0.00116
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.03,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.000259,
+       0.0,
+       1.0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "grid_row": 2,
+   "grid_col": 1,
+   "shelf_from_bottom": 1,
+   "position": [
+    0.15792,
+    0.3335,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      0.00152,
+      0.0,
+      -0.00353
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.252,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.002196,
+       0.0,
+       0.999998
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00049,
+      0.1249,
+      0.00013
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.034,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.000297,
+       0.0,
+       1.0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "grid_row": 2,
+   "grid_col": 2,
+   "shelf_from_bottom": 1,
+   "position": [
+    -0.15792,
+    0.3335,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00159,
+      0.0,
+      -0.00313
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.13,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.001138,
+       0.0,
+       0.999999
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00054,
+      0.1249,
+      -0.00346
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       179.871,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.999999,
+       0.0,
+       0.001126
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "grid_row": 2,
+   "grid_col": 3,
+   "shelf_from_bottom": 1,
+   "position": [
+    -0.47375,
+    0.3335,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00149,
+      0.0,
+      0.00322
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.098,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.000858,
+       0.0,
+       1.0
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      -0.00128,
+      0.1249,
+      0.00398
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       180.069,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       1.0,
+       0.0,
+       -0.000604
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "grid_row": 3,
+   "grid_col": 0,
+   "shelf_from_bottom": 0,
+   "position": [
+    0.47375,
+    0.051,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00198,
+      0.0,
+      0.00037
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.286,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.002492,
+       0.0,
+       0.999997
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      -0.00024,
+      0.1249,
+      0.00211
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.131,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.001147,
+       0.0,
+       0.999999
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "grid_row": 3,
+   "grid_col": 1,
+   "shelf_from_bottom": 0,
+   "position": [
+    0.15792,
+    0.051,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      0.00161,
+      0.0,
+      -0.0018
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.009,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -8.1e-05,
+       0.0,
+       1.0
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00017,
+      0.1249,
+      0.0016
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.243,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.002118,
+       0.0,
+       0.999998
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "grid_row": 3,
+   "grid_col": 2,
+   "shelf_from_bottom": 0,
+   "position": [
+    -0.15792,
+    0.051,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      -0.00076,
+      0.0,
+      -0.00091
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.093,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.000814,
+       0.0,
+       1.0
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00094,
+      0.1249,
+      0.00018
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       180.27,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.999997,
+       0.0,
+       -0.002359
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "grid_row": 3,
+   "grid_col": 3,
+   "shelf_from_bottom": 0,
+   "position": [
+    -0.47375,
+    0.051,
+    0.0187
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.3045,
+    0.2488,
+    0.6226
+   ],
+   "render_item": "Copper",
+   "copies": [
+    {
+     "layer": 0,
+     "offset": [
+      0.00114,
+      0.0,
+      -0.00037
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       0.053,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       0.000462,
+       0.0,
+       1.0
+      ]
+     }
+    },
+    {
+     "layer": 1,
+     "offset": [
+      0.00117,
+      0.1249,
+      0.00301
+     ],
+     "longest_m": 0.6226,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       0,
+       1
+      ],
+      "thin_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "then_rotate_euler_zxy": [
+       0.0,
+       -0.207,
+       0.0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.0,
+       -0.001808,
+       0.0,
+       0.999998
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

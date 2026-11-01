@@ -1,0 +1,3177 @@
+{
+ "schema": "storehouse-anchors/1",
+ "furniture": "Larder Hutch",
+ "units": 64,
+ "slots_designed_for": 64,
+ "stack_per_unit": true,
+ "space": {
+  "unity": "prefab space, origin on the floor at the centre of the footprint, +z front, +y up, +x to the furniture's left when seen from the front",
+  "from_blender": "ux=-bx, uy=bz, uz=-by; rotations R_u = C R_b C^T (C=[[-1,0,0],[0,0,1],[0,-1,0]]), Unity Euler order Ry*Rx*Rz"
+ },
+ "fill_order": "grid order, mirroring the 8 x 8 container grid: index = grid_row * 8 + grid_col; grid rows top to bottom (rows 0-4 = the five shelves from the top, rows 5-7 = the three drawer rows from the top), each row left to right seen from the front. Every grid row has its own height, so rows of 8 by position.y descending, each sorted by position.x descending, give the same order",
+ "position": "unit position = bottom centre of its box. box_size = [x, y, z] in Unity axes",
+ "copy_rule": "One copy per unit at offset 0: the stored item's bounds, turned by the copy rotation, are fitted uniformly into box_x*0.96 x box_y x box_z*0.96 and stand on the unit position (bottom centre).",
+ "note": "r5 (Joost, 22 Oct): 64 units like the Mead Rack, mirroring the chest grid: 5 shelves of 8, then 3 rows of 4 drawers standing ajar (8.5 cm of 45 cm), 2 units per drawer, low and at the front of the drawer",
+ "units_data": [
+  {
+   "index": 0,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 0,
+   "grid_col": 0,
+   "shelf": 4,
+   "row": "single",
+   "position": [
+    0.7875,
+    1.632,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "LoxPie",
+   "example_scale": 0.3413,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 0,
+   "grid_col": 1,
+   "shelf": 4,
+   "row": "single",
+   "position": [
+    0.5625,
+    1.632,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishAndBread",
+   "example_scale": 0.3897,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -0.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 0,
+   "grid_col": 2,
+   "shelf": 4,
+   "row": "single",
+   "position": [
+    0.3375,
+    1.632,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "LoxPie",
+   "example_scale": 0.3517,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -3.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 0,
+   "grid_col": 3,
+   "shelf": 4,
+   "row": "single",
+   "position": [
+    0.1125,
+    1.632,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "TurnipStew",
+   "example_scale": 0.4119,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 0,
+   "grid_col": 4,
+   "shelf": 4,
+   "row": "single",
+   "position": [
+    -0.1125,
+    1.632,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CookedDeerMeat",
+   "example_scale": 0.6985,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -3.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 0,
+   "grid_col": 5,
+   "shelf": 4,
+   "row": "single",
+   "position": [
+    -0.3375,
+    1.632,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "LoxPie",
+   "example_scale": 0.3443,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -4.5,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 0,
+   "grid_col": 6,
+   "shelf": 4,
+   "row": "single",
+   "position": [
+    -0.5625,
+    1.632,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "Bread",
+   "example_scale": 0.4094,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      3.7,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 0,
+   "grid_col": 7,
+   "shelf": 4,
+   "row": "single",
+   "position": [
+    -0.7875,
+    1.632,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "QueensJam",
+   "example_scale": 0.7327,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      4.9,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 1,
+   "grid_col": 0,
+   "shelf": 3,
+   "row": "single",
+   "position": [
+    0.7875,
+    1.347,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "BloodPudding",
+   "example_scale": 0.3851,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      3.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 1,
+   "grid_col": 1,
+   "shelf": 3,
+   "row": "single",
+   "position": [
+    0.5625,
+    1.347,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "SerpentStew",
+   "example_scale": 0.3804,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      1.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 1,
+   "grid_col": 2,
+   "shelf": 3,
+   "row": "single",
+   "position": [
+    0.3375,
+    1.347,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishAndBread",
+   "example_scale": 0.3713,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      5.7,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 1,
+   "grid_col": 3,
+   "shelf": 3,
+   "row": "single",
+   "position": [
+    0.1125,
+    1.347,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishWraps",
+   "example_scale": 0.545,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      0.9,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 1,
+   "grid_col": 4,
+   "shelf": 3,
+   "row": "single",
+   "position": [
+    -0.1125,
+    1.347,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishAndBread",
+   "example_scale": 0.3733,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 1,
+   "grid_col": 5,
+   "shelf": 3,
+   "row": "single",
+   "position": [
+    -0.3375,
+    1.347,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishCooked",
+   "example_scale": 0.6582,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 1,
+   "grid_col": 6,
+   "shelf": 3,
+   "row": "single",
+   "position": [
+    -0.5625,
+    1.347,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "TurnipStew",
+   "example_scale": 0.4246,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -3.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 1,
+   "grid_col": 7,
+   "shelf": 3,
+   "row": "single",
+   "position": [
+    -0.7875,
+    1.347,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "HoneyGlazedChicken",
+   "example_scale": 0.3181,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -4.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 2,
+   "grid_col": 0,
+   "shelf": 2,
+   "row": "single",
+   "position": [
+    0.7875,
+    1.062,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "Sausages",
+   "example_scale": 0.3055,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      6.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 2,
+   "grid_col": 1,
+   "shelf": 2,
+   "row": "single",
+   "position": [
+    0.5625,
+    1.062,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CookedMeat",
+   "example_scale": 0.6163,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -4.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 2,
+   "grid_col": 2,
+   "shelf": 2,
+   "row": "single",
+   "position": [
+    0.3375,
+    1.062,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishCooked",
+   "example_scale": 0.6674,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -2.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 2,
+   "grid_col": 3,
+   "shelf": 2,
+   "row": "single",
+   "position": [
+    0.1125,
+    1.062,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "MeatPlatter",
+   "example_scale": 0.2233,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.8,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 2,
+   "grid_col": 4,
+   "shelf": 2,
+   "row": "single",
+   "position": [
+    -0.1125,
+    1.062,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "Sausages",
+   "example_scale": 0.3023,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -6.7,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 21,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 2,
+   "grid_col": 5,
+   "shelf": 2,
+   "row": "single",
+   "position": [
+    -0.3375,
+    1.062,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "MushroomOmelette",
+   "example_scale": 0.3498,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      4.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 22,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 2,
+   "grid_col": 6,
+   "shelf": 2,
+   "row": "single",
+   "position": [
+    -0.5625,
+    1.062,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishAndBread",
+   "example_scale": 0.3767,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      3.9,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 23,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 2,
+   "grid_col": 7,
+   "shelf": 2,
+   "row": "single",
+   "position": [
+    -0.7875,
+    1.062,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CarrotSoup",
+   "example_scale": 0.5532,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      1.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 24,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 3,
+   "grid_col": 0,
+   "shelf": 1,
+   "row": "single",
+   "position": [
+    0.7875,
+    0.777,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CarrotSoup",
+   "example_scale": 0.5299,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -4.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 25,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 3,
+   "grid_col": 1,
+   "shelf": 1,
+   "row": "single",
+   "position": [
+    0.5625,
+    0.777,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "SerpentStew",
+   "example_scale": 0.3491,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      6.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 26,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 3,
+   "grid_col": 2,
+   "shelf": 1,
+   "row": "single",
+   "position": [
+    0.3375,
+    0.777,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "Bread",
+   "example_scale": 0.3889,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      6.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 27,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 3,
+   "grid_col": 3,
+   "shelf": 1,
+   "row": "single",
+   "position": [
+    0.1125,
+    0.777,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "BloodPudding",
+   "example_scale": 0.3726,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -6.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 28,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 3,
+   "grid_col": 4,
+   "shelf": 1,
+   "row": "single",
+   "position": [
+    -0.1125,
+    0.777,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "Bread",
+   "example_scale": 0.4,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 29,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 3,
+   "grid_col": 5,
+   "shelf": 1,
+   "row": "single",
+   "position": [
+    -0.3375,
+    0.777,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "HoneyGlazedChicken",
+   "example_scale": 0.309,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      6.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 30,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 3,
+   "grid_col": 6,
+   "shelf": 1,
+   "row": "single",
+   "position": [
+    -0.5625,
+    0.777,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CookedDeerMeat",
+   "example_scale": 0.7477,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      0.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 31,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 3,
+   "grid_col": 7,
+   "shelf": 1,
+   "row": "single",
+   "position": [
+    -0.7875,
+    0.777,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "QueensJam",
+   "example_scale": 0.7668,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -1.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 32,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 4,
+   "grid_col": 0,
+   "shelf": 0,
+   "row": "single",
+   "position": [
+    0.7875,
+    0.492,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "TurnipStew",
+   "example_scale": 0.4038,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -6.5,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 33,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 4,
+   "grid_col": 1,
+   "shelf": 0,
+   "row": "single",
+   "position": [
+    0.5625,
+    0.492,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CookedDeerMeat",
+   "example_scale": 0.7477,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -0.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 34,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 4,
+   "grid_col": 2,
+   "shelf": 0,
+   "row": "single",
+   "position": [
+    0.3375,
+    0.492,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "Sausages",
+   "example_scale": 0.305,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -6.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 35,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 4,
+   "grid_col": 3,
+   "shelf": 0,
+   "row": "single",
+   "position": [
+    0.1125,
+    0.492,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CookedDeerMeat",
+   "example_scale": 0.6887,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -3.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 36,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 4,
+   "grid_col": 4,
+   "shelf": 0,
+   "row": "single",
+   "position": [
+    -0.1125,
+    0.492,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "QueensJam",
+   "example_scale": 0.7509,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      3.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 37,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 4,
+   "grid_col": 5,
+   "shelf": 0,
+   "row": "single",
+   "position": [
+    -0.3375,
+    0.492,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishCooked",
+   "example_scale": 0.6666,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      2.8,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 38,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 4,
+   "grid_col": 6,
+   "shelf": 0,
+   "row": "single",
+   "position": [
+    -0.5625,
+    0.492,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "MushroomOmelette",
+   "example_scale": 0.3621,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -2.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 39,
+   "kind": "single",
+   "place": "shelf",
+   "grid_row": 4,
+   "grid_col": 7,
+   "shelf": 0,
+   "row": "single",
+   "position": [
+    -0.7875,
+    0.492,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.22,
+    0.21,
+    0.4
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "BloodPudding",
+   "example_scale": 0.3975,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      0.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 40,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 5,
+   "grid_col": 0,
+   "drawer_row": 2,
+   "drawer": 0,
+   "row": "single",
+   "position": [
+    0.7705,
+    0.347,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CookedMeat",
+   "example_scale": 0.2604,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      5.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 41,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 5,
+   "grid_col": 1,
+   "drawer_row": 2,
+   "drawer": 0,
+   "row": "single",
+   "position": [
+    0.5795,
+    0.347,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishCooked",
+   "example_scale": 0.2396,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.4,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 42,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 5,
+   "grid_col": 2,
+   "drawer_row": 2,
+   "drawer": 1,
+   "row": "single",
+   "position": [
+    0.3205,
+    0.347,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "LoxPie",
+   "example_scale": 0.2752,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -2.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 43,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 5,
+   "grid_col": 3,
+   "drawer_row": 2,
+   "drawer": 1,
+   "row": "single",
+   "position": [
+    0.1295,
+    0.347,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "Sausages",
+   "example_scale": 0.2021,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      2.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 44,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 5,
+   "grid_col": 4,
+   "drawer_row": 2,
+   "drawer": 2,
+   "row": "single",
+   "position": [
+    -0.1295,
+    0.347,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CarrotSoup",
+   "example_scale": 0.4199,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -2.4,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 45,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 5,
+   "grid_col": 5,
+   "drawer_row": 2,
+   "drawer": 2,
+   "row": "single",
+   "position": [
+    -0.3205,
+    0.347,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishWraps",
+   "example_scale": 0.2813,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      1.4,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 46,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 5,
+   "grid_col": 6,
+   "drawer_row": 2,
+   "drawer": 3,
+   "row": "single",
+   "position": [
+    -0.5795,
+    0.347,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "MeatPlatter",
+   "example_scale": 0.172,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -6.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 47,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 5,
+   "grid_col": 7,
+   "drawer_row": 2,
+   "drawer": 3,
+   "row": "single",
+   "position": [
+    -0.7705,
+    0.347,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "HoneyGlazedChicken",
+   "example_scale": 0.2436,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      4.8,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 48,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 6,
+   "grid_col": 0,
+   "drawer_row": 1,
+   "drawer": 0,
+   "row": "single",
+   "position": [
+    0.7705,
+    0.207,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "SerpentStew",
+   "example_scale": 0.2789,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -4.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 49,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 6,
+   "grid_col": 1,
+   "drawer_row": 1,
+   "drawer": 0,
+   "row": "single",
+   "position": [
+    0.5795,
+    0.207,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "BloodPudding",
+   "example_scale": 0.3047,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -1.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 50,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 6,
+   "grid_col": 2,
+   "drawer_row": 1,
+   "drawer": 1,
+   "row": "single",
+   "position": [
+    0.3205,
+    0.207,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CarrotSoup",
+   "example_scale": 0.3933,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -6.8,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 51,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 6,
+   "grid_col": 3,
+   "drawer_row": 1,
+   "drawer": 1,
+   "row": "single",
+   "position": [
+    0.1295,
+    0.207,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CookedMeat",
+   "example_scale": 0.2615,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -4.4,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 52,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 6,
+   "grid_col": 4,
+   "drawer_row": 1,
+   "drawer": 2,
+   "row": "single",
+   "position": [
+    -0.1295,
+    0.207,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "Bread",
+   "example_scale": 0.1761,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      2.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 53,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 6,
+   "grid_col": 5,
+   "drawer_row": 1,
+   "drawer": 2,
+   "row": "single",
+   "position": [
+    -0.3205,
+    0.207,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "TurnipStew",
+   "example_scale": 0.3245,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -3.8,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 54,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 6,
+   "grid_col": 6,
+   "drawer_row": 1,
+   "drawer": 3,
+   "row": "single",
+   "position": [
+    -0.5795,
+    0.207,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "HoneyGlazedChicken",
+   "example_scale": 0.2591,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -0.9,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 55,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 6,
+   "grid_col": 7,
+   "drawer_row": 1,
+   "drawer": 3,
+   "row": "single",
+   "position": [
+    -0.7705,
+    0.207,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "MeatPlatter",
+   "example_scale": 0.1769,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      2.7,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 56,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 7,
+   "grid_col": 0,
+   "drawer_row": 0,
+   "drawer": 0,
+   "row": "single",
+   "position": [
+    0.7705,
+    0.067,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "MushroomOmelette",
+   "example_scale": 0.2663,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 57,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 7,
+   "grid_col": 1,
+   "drawer_row": 0,
+   "drawer": 0,
+   "row": "single",
+   "position": [
+    0.5795,
+    0.067,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishWraps",
+   "example_scale": 0.273,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -4.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 58,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 7,
+   "grid_col": 2,
+   "drawer_row": 0,
+   "drawer": 1,
+   "row": "single",
+   "position": [
+    0.3205,
+    0.067,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "SerpentStew",
+   "example_scale": 0.2819,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -3.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 59,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 7,
+   "grid_col": 3,
+   "drawer_row": 0,
+   "drawer": 1,
+   "row": "single",
+   "position": [
+    0.1295,
+    0.067,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "QueensJam",
+   "example_scale": 0.2716,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      2.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 60,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 7,
+   "grid_col": 4,
+   "drawer_row": 0,
+   "drawer": 2,
+   "row": "single",
+   "position": [
+    -0.1295,
+    0.067,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "MeatPlatter",
+   "example_scale": 0.1804,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -0.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 61,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 7,
+   "grid_col": 5,
+   "drawer_row": 0,
+   "drawer": 2,
+   "row": "single",
+   "position": [
+    -0.3205,
+    0.067,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "FishWraps",
+   "example_scale": 0.2694,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -5.7,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 62,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 7,
+   "grid_col": 6,
+   "drawer_row": 0,
+   "drawer": 3,
+   "row": "single",
+   "position": [
+    -0.5795,
+    0.067,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "CookedMeat",
+   "example_scale": 0.2649,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      2.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "index": 63,
+   "kind": "single",
+   "place": "drawer",
+   "grid_row": 7,
+   "grid_col": 7,
+   "drawer_row": 0,
+   "drawer": 3,
+   "row": "single",
+   "position": [
+    -0.7705,
+    0.067,
+    0.266
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box_size": [
+    0.17,
+    0.085,
+    0.17
+   ],
+   "layout": {
+    "cols": 1,
+    "rows": 1,
+    "layers": 1,
+    "pitch_frac": 1.0
+   },
+   "example_item": "MushroomOmelette",
+   "example_scale": 0.2745,
+   "copies": [
+    {
+     "layer": 0,
+     "row": 0,
+     "col": 0,
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      -3.2,
+      0.0
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5092 @@
+{
+ "schema": "storehouse-anchors/1",
+ "furniture": "Bomb Crate",
+ "slug": "bombcrate",
+ "round": 3,
+ "placement": "ground",
+ "unit_count": 64,
+ "slots_designed_for": 64,
+ "stack_per_unit": true,
+ "mirror": false,
+ "heap": false,
+ "homes": true,
+ "slots_note": "12 trays x 4 units + the reserve's 16 = 64 stacks of up to 50 bombs (3200 bombs); eight chest rows of eight = 64 slots",
+ "frame": {
+  "obj": "BombCrate.obj",
+  "atlas": "bombcrate_atlas.png 128x128 point",
+  "tris": 7400,
+  "size_m": [
+   3.202,
+   1.055,
+   1.297
+  ],
+  "size_note": "[x, y (up), z] Unity; x includes the bucket hung at the right end (body 2.913 wide)",
+  "bounds_unity": {
+   "min": [
+    -1.745,
+    0.0,
+    -0.649
+   ],
+   "max": [
+    1.457,
+    1.055,
+    0.649
+   ]
+  },
+  "contents_top_y_full": 0.984,
+  "stacking": "not stackable (stepped, open trays)"
+ },
+ "space": {
+  "unity": "prefab space, origin on the floor at the centre of the footprint, +z front, +y up, +x to the furniture's left seen from the front",
+  "from_blender": "ux=-bx, uy=bz, uz=-by"
+ },
+ "groups": {
+  "key": "compartment",
+  "rows": "two rows of six trays: tier 0 (front) groups 7-12, tier 1 groups 0-5, left to right seen from the front; tier 2 group 6, the raised rear reserve",
+  "homes": {
+   "0": "BombBile",
+   "1": "BombLava",
+   "2": "BombOoze",
+   "3": "BombSmoke",
+   "4": "BombDynamite",
+   "5": "BombSiege",
+   "7": "BombBlob_Frost",
+   "8": "BombBlob_Lava",
+   "9": "BombBlob_Morkhalla",
+   "10": "BombBlob_Poison",
+   "11": "BombBlob_PoisonElite",
+   "12": "BombBlob_Tar",
+   "6": "spare: any bomb kind"
+  },
+  "rule": "Homes store: each group's units carry 'item', the bomb kind its tray is for (the reserve has none, only 'example_item'). Group 6 is the reserve (spare) with 16 units. A kind that fills its tray takes an empty one; every layout is packed against all eight bomb shapes, so any kind may lie in any tray without a copy touching another."
+ },
+ "band": {
+  "BombBile": "bile yellow-green",
+  "BombLava": "basalt slate",
+  "BombOoze": "ooze cream",
+  "BombSmoke": "smoke ash",
+  "BombDynamite": "ember red",
+  "BombSiege": "payload rust",
+  "BombBlob_Frost": "frost blue",
+  "BombBlob_Lava": "magma orange",
+  "BombBlob_Morkhalla": "pulp olive",
+  "BombBlob_Poison": "poison green",
+  "BombBlob_PoisonElite": "elite violet",
+  "BombBlob_Tar": "tar black",
+  "spare": "spare chalk"
+ },
+ "band_note": "paint mark colour per kind: a worn band on the tray's front board (front wall or riser); the reserve has chalk bands and a faded skull",
+ "extra_place": "a sand bucket hangs on an iron hook at the right end (seen from the front): no group, no units",
+ "fill_order": "units are listed compartment by compartment; step 0 is the front-left nest, then left to right, then the back row",
+ "position": "unit position = the copy's foot: the anchor plane 0.010 over its tray floor (tier floors y [0.185, 0.405, 0.785]); box informational",
+ "copy_rule": "bombs, no align: independent per-unit rot_quat_xyzw (full 360-degree yaw, bedding-safe 2-14 degree tilt), fit_longest_m 0.22, anchor bottom, offset 0. All unit anchors in a tray share one plane; every kind's measured lowest point stays above the floor and under its own straw (0.066 +- 0.005 over the floor).",
+ "layout": {
+  "compartments": 13,
+  "units_each": {
+   "tray": 4,
+   "reserve": 16
+  },
+  "copies_per_unit": 1,
+  "copies_full": 64,
+  "cell_inner_m": 0.402,
+  "rim_over_floor_m": 0.2,
+  "rim_over_straw_peaks_m": 0.129,
+  "heap_top_over_straw_peaks_m": 0.16,
+  "rows": {
+   "tier0": {
+    "floor_top": 0.185,
+    "rim": 0.385,
+    "y_blender": -0.299
+   },
+   "tier1": {
+    "floor_top": 0.405,
+    "rim": 0.605,
+    "y_blender": 0.153
+   },
+   "tier2": {
+    "floor_top": 0.785,
+    "rim": 0.985,
+    "y_blender": 0.299
+   }
+  },
+  "x_blender": [
+   -1.1175,
+   -0.6705,
+   -0.2235,
+   0.2235,
+   0.6705,
+   1.1175
+  ],
+  "one layout": "reserve floor 0.785 m overlaps the rear homes in plan; 100 mm bearers clear their tallest bombs. Four independent seeded nest poses per home tray; no repeated layout. The reserve: 16 independently seeded poses, nominally 2 rows of 8, with horizontal jitter and bedding-safe tilt"
+ },
+ "items": {
+  "found": {
+   "BombBile": {
+    "name": "Bile Bomb",
+    "item_bounds_centre": [
+     -0.0016,
+     0.0261,
+     -0.0043
+    ],
+    "item_bounds_size": [
+     0.3069,
+     0.3339,
+     0.2994
+    ],
+    "x_fit": 0.659,
+    "triangles": 1294
+   },
+   "BombLava": {
+    "name": "Basalt Bomb",
+    "item_bounds_centre": [
+     -0.001,
+     0.0697,
+     -0.0278
+    ],
+    "item_bounds_size": [
+     0.2356,
+     0.2503,
+     0.2647
+    ],
+    "x_fit": 0.831,
+    "triangles": 160
+   },
+   "BombOoze": {
+    "name": "Ooze Bomb",
+    "item_bounds_centre": [
+     -0.0236,
+     0.0665,
+     0.0044
+    ],
+    "item_bounds_size": [
+     0.2542,
+     0.3016,
+     0.2787
+    ],
+    "x_fit": 0.729,
+    "triangles": 158
+   },
+   "BombSmoke": {
+    "name": "Smoke Bomb",
+    "item_bounds_centre": [
+     -0.0185,
+     0.0579,
+     -0.0278
+    ],
+    "item_bounds_size": [
+     0.2928,
+     0.2079,
+     0.2931
+    ],
+    "x_fit": 0.751,
+    "triangles": 956
+   },
+   "BombSiege": {
+    "name": "Explosive Payload",
+    "item_bounds_centre": [
+     -0.0017,
+     0.1912,
+     0.0116
+    ],
+    "item_bounds_size": [
+     0.8591,
+     1.2153,
+     1.2211
+    ],
+    "x_fit": 0.18,
+    "triangles": 1280
+   },
+   "BombDynamite": {
+    "name": "Ember Charge",
+    "item_bounds_centre": [
+     -0.0006,
+     0.0181,
+     0.0044
+    ],
+    "item_bounds_size": [
+     0.1687,
+     0.2596,
+     0.1776
+    ],
+    "x_fit": 0.847,
+    "triangles": 150
+   },
+   "BombBlob_Frost": {
+    "name": "Blob Bomb: Frost",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_Lava": {
+    "name": "Blob Bomb: Lava",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_Morkhalla": {
+    "name": "Blob Bomb: Pulp",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_Poison": {
+    "name": "Blob Bomb: Poison",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_PoisonElite": {
+    "name": "Blob Bomb: Elite Poison",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_Tar": {
+    "name": "Blob Bomb: Tar",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   }
+  },
+  "checked_shapes": [
+   "BombBile",
+   "BombLava",
+   "BombOoze",
+   "BombSmoke",
+   "BombSiege",
+   "BombDynamite",
+   "BombBlob_Frost",
+   "BombBlob_Lava"
+  ],
+  "same_mesh_as": {
+   "BombBlob_Morkhalla": "BombBlob_Lava",
+   "BombBlob_Poison": "BombBlob_Lava",
+   "BombBlob_PoisonElite": "BombBlob_Lava",
+   "BombBlob_Tar": "BombBlob_Lava"
+  },
+  "not_in_game": [
+   "Dynamite (the mod's Fletcher list names it; the item is BombDynamite)"
+  ],
+  "modded": "none found in Player.log (r1)"
+ },
+ "checks": {
+  "coplanar_frame": {
+   "same_facing_overlaps": 0,
+   "back_to_back": 496,
+   "tolerance_mm": 2.0,
+   "min_area_cm2": 0.002
+  },
+  "per_model": {
+   "BombBile": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombLava": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombOoze": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombSmoke": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombSiege": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombDynamite": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Frost": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Lava": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Morkhalla": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Poison": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_PoisonElite": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Tar": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   }
+  },
+  "full_store": {
+   "copies": 64,
+   "frame_clipping": 0,
+   "between_compartments": 0,
+   "contents_top_z": 0.984
+  },
+  "spare_holds_each_kind": {
+   "BombBile": [
+    0,
+    0
+   ],
+   "BombLava": [
+    0,
+    0
+   ],
+   "BombOoze": [
+    0,
+    0
+   ],
+   "BombSmoke": [
+    0,
+    0
+   ],
+   "BombSiege": [
+    0,
+    0
+   ],
+   "BombDynamite": [
+    0,
+    0
+   ],
+   "BombBlob_Frost": [
+    0,
+    0
+   ],
+   "BombBlob_Lava": [
+    0,
+    0
+   ],
+   "BombBlob_Morkhalla": [
+    0,
+    0
+   ],
+   "BombBlob_Poison": [
+    0,
+    0
+   ],
+   "BombBlob_PoisonElite": [
+    0,
+    0
+   ],
+   "BombBlob_Tar": [
+    0,
+    0
+   ]
+  },
+  "one_kind_everywhere": {
+   "BombBile": [
+    0,
+    0
+   ],
+   "BombLava": [
+    0,
+    0
+   ],
+   "BombOoze": [
+    0,
+    0
+   ],
+   "BombSmoke": [
+    0,
+    0
+   ],
+   "BombSiege": [
+    0,
+    0
+   ],
+   "BombDynamite": [
+    0,
+    0
+   ],
+   "BombBlob_Frost": [
+    0,
+    0
+   ],
+   "BombBlob_Lava": [
+    0,
+    0
+   ],
+   "BombBlob_Morkhalla": [
+    0,
+    0
+   ],
+   "BombBlob_Poison": [
+    0,
+    0
+   ],
+   "BombBlob_PoisonElite": [
+    0,
+    0
+   ],
+   "BombBlob_Tar": [
+    0,
+    0
+   ]
+  },
+  "bedding": {
+   "BombBile": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 23.6,
+    "bedded_mm_max": 35.1,
+    "wall_clearance_mm_min": 5.2,
+    "lowest_over_floor_mm_min": 33.5
+   },
+   "BombLava": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 31.8,
+    "bedded_mm_max": 43.4,
+    "wall_clearance_mm_min": 5.2,
+    "lowest_over_floor_mm_min": 26.6
+   },
+   "BombOoze": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 20.8,
+    "bedded_mm_max": 34.4,
+    "wall_clearance_mm_min": 4.1,
+    "lowest_over_floor_mm_min": 35.5
+   },
+   "BombSmoke": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 47.9,
+    "bedded_mm_max": 64.3,
+    "wall_clearance_mm_min": 4.3,
+    "lowest_over_floor_mm_min": 5.2
+   },
+   "BombSiege": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 5.3,
+    "bedded_mm_max": 16.1,
+    "wall_clearance_mm_min": 8.3,
+    "lowest_over_floor_mm_min": 52.9
+   },
+   "BombDynamite": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 48.4,
+    "bedded_mm_max": 57.6,
+    "wall_clearance_mm_min": 9.2,
+    "lowest_over_floor_mm_min": 12.0
+   },
+   "BombBlob_Frost": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 54.3,
+    "bedded_mm_max": 66.6,
+    "wall_clearance_mm_min": 20.8,
+    "lowest_over_floor_mm_min": 3.0
+   },
+   "BombBlob_Lava": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 54.3,
+    "bedded_mm_max": 66.6,
+    "wall_clearance_mm_min": 20.8,
+    "lowest_over_floor_mm_min": 3.0
+   },
+   "BombBlob_Morkhalla": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 54.3,
+    "bedded_mm_max": 66.6,
+    "wall_clearance_mm_min": 20.8,
+    "lowest_over_floor_mm_min": 3.0
+   },
+   "BombBlob_Poison": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 54.3,
+    "bedded_mm_max": 66.6,
+    "wall_clearance_mm_min": 20.8,
+    "lowest_over_floor_mm_min": 3.0
+   },
+   "BombBlob_PoisonElite": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 54.3,
+    "bedded_mm_max": 66.6,
+    "wall_clearance_mm_min": 20.8,
+    "lowest_over_floor_mm_min": 3.0
+   },
+   "BombBlob_Tar": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 54.3,
+    "bedded_mm_max": 66.6,
+    "wall_clearance_mm_min": 20.8,
+    "lowest_over_floor_mm_min": 3.0
+   }
+  },
+  "pose_variation": {
+   "method": "Match logical front-left/front-right/back-left/back-right nests, remove tray translation; position RMS is Euclidean horizontal distance; yaw RMS uses shortest wrapped angle. Reserve windows have their native pitch removed before comparison. Combined = hypot(position_RMS_mm/10, yaw_RMS_deg/30), not a physical unit.",
+   "seed_scheme": "20261025 + group*4099 + nest*137, independent rejection-sampling streams",
+   "yaw_sampling": "uniform full 0\u2013360 degrees per unit",
+   "units": 64,
+   "yaw_range_deg": [
+    4.2955,
+    351.7592
+   ],
+   "yaw_45_degree_bin_counts": [
+    13,
+    2,
+    9,
+    8,
+    12,
+    7,
+    9,
+    4
+   ],
+   "tilted_units": 64,
+   "tilt_range_deg": [
+    2.123,
+    12.1769
+   ],
+   "maximum_anchor_plane_spread_mm": 0.0,
+   "home_trays": {
+    "pairs": 66,
+    "minimum_position": {
+     "a": "home_2",
+     "b": "home_5",
+     "position_rms_mm": 3.73888,
+     "yaw_rms_deg": 98.07909,
+     "combined_normalized": 3.290613
+    },
+    "minimum_yaw": {
+     "a": "home_9",
+     "b": "home_11",
+     "position_rms_mm": 10.70347,
+     "yaw_rms_deg": 33.04449,
+     "combined_normalized": 1.535873
+    },
+    "minimum_combined": {
+     "a": "home_9",
+     "b": "home_11",
+     "position_rms_mm": 10.70347,
+     "yaw_rms_deg": 33.04449,
+     "combined_normalized": 1.535873
+    },
+    "duplicate_arrangements": 0,
+    "all_pairs": [
+     {
+      "a": "home_0",
+      "b": "home_1",
+      "position_rms_mm": 14.25725,
+      "yaw_rms_deg": 56.72256,
+      "combined_normalized": 2.368045
+     },
+     {
+      "a": "home_0",
+      "b": "home_2",
+      "position_rms_mm": 15.83131,
+      "yaw_rms_deg": 64.49658,
+      "combined_normalized": 2.66989
+     },
+     {
+      "a": "home_0",
+      "b": "home_3",
+      "position_rms_mm": 11.95538,
+      "yaw_rms_deg": 72.78609,
+      "combined_normalized": 2.704768
+     },
+     {
+      "a": "home_0",
+      "b": "home_4",
+      "position_rms_mm": 19.89171,
+      "yaw_rms_deg": 75.83608,
+      "combined_normalized": 3.216664
+     },
+     {
+      "a": "home_0",
+      "b": "home_5",
+      "position_rms_mm": 18.4814,
+      "yaw_rms_deg": 95.96054,
+      "combined_normalized": 3.694212
+     },
+     {
+      "a": "home_0",
+      "b": "home_7",
+      "position_rms_mm": 16.79492,
+      "yaw_rms_deg": 94.58316,
+      "combined_normalized": 3.572207
+     },
+     {
+      "a": "home_0",
+      "b": "home_8",
+      "position_rms_mm": 23.7453,
+      "yaw_rms_deg": 132.04785,
+      "combined_normalized": 5.001243
+     },
+     {
+      "a": "home_0",
+      "b": "home_9",
+      "position_rms_mm": 20.47022,
+      "yaw_rms_deg": 92.54172,
+      "combined_normalized": 3.702137
+     },
+     {
+      "a": "home_0",
+      "b": "home_10",
+      "position_rms_mm": 14.31325,
+      "yaw_rms_deg": 91.81744,
+      "combined_normalized": 3.378735
+     },
+     {
+      "a": "home_0",
+      "b": "home_11",
+      "position_rms_mm": 25.05954,
+      "yaw_rms_deg": 83.72201,
+      "combined_normalized": 3.750733
+     },
+     {
+      "a": "home_0",
+      "b": "home_12",
+      "position_rms_mm": 20.99228,
+      "yaw_rms_deg": 101.42213,
+      "combined_normalized": 3.979465
+     },
+     {
+      "a": "home_1",
+      "b": "home_2",
+      "position_rms_mm": 8.95334,
+      "yaw_rms_deg": 69.03948,
+      "combined_normalized": 2.469348
+     },
+     {
+      "a": "home_1",
+      "b": "home_3",
+      "position_rms_mm": 6.33866,
+      "yaw_rms_deg": 106.08632,
+      "combined_normalized": 3.592572
+     },
+     {
+      "a": "home_1",
+      "b": "home_4",
+      "position_rms_mm": 12.22402,
+      "yaw_rms_deg": 54.36017,
+      "combined_normalized": 2.185779
+     },
+     {
+      "a": "home_1",
+      "b": "home_5",
+      "position_rms_mm": 12.40188,
+      "yaw_rms_deg": 110.73185,
+      "combined_normalized": 3.893842
+     },
+     {
+      "a": "home_1",
+      "b": "home_7",
+      "position_rms_mm": 10.03423,
+      "yaw_rms_deg": 97.98038,
+      "combined_normalized": 3.416679
+     },
+     {
+      "a": "home_1",
+      "b": "home_8",
+      "position_rms_mm": 14.78095,
+      "yaw_rms_deg": 121.18138,
+      "combined_normalized": 4.301319
+     },
+     {
+      "a": "home_1",
+      "b": "home_9",
+      "position_rms_mm": 12.8418,
+      "yaw_rms_deg": 101.0613,
+      "combined_normalized": 3.60518
+     },
+     {
+      "a": "home_1",
+      "b": "home_10",
+      "position_rms_mm": 11.27382,
+      "yaw_rms_deg": 61.69628,
+      "combined_normalized": 2.345284
+     },
+     {
+      "a": "home_1",
+      "b": "home_11",
+      "position_rms_mm": 13.98456,
+      "yaw_rms_deg": 106.31883,
+      "combined_normalized": 3.8099
+     },
+     {
+      "a": "home_1",
+      "b": "home_12",
+      "position_rms_mm": 8.94506,
+      "yaw_rms_deg": 114.75157,
+      "combined_normalized": 3.928252
+     },
+     {
+      "a": "home_2",
+      "b": "home_3",
+      "position_rms_mm": 5.70023,
+      "yaw_rms_deg": 125.62058,
+      "combined_normalized": 4.225973
+     },
+     {
+      "a": "home_2",
+      "b": "home_4",
+      "position_rms_mm": 7.99891,
+      "yaw_rms_deg": 69.04828,
+      "combined_normalized": 2.436643
+     },
+     {
+      "a": "home_2",
+      "b": "home_5",
+      "position_rms_mm": 3.73888,
+      "yaw_rms_deg": 98.07909,
+      "combined_normalized": 3.290613
+     },
+     {
+      "a": "home_2",
+      "b": "home_7",
+      "position_rms_mm": 11.57252,
+      "yaw_rms_deg": 90.23161,
+      "combined_normalized": 3.222672
+     },
+     {
+      "a": "home_2",
+      "b": "home_8",
+      "position_rms_mm": 8.59188,
+      "yaw_rms_deg": 76.44425,
+      "combined_normalized": 2.689095
+     },
+     {
+      "a": "home_2",
+      "b": "home_9",
+      "position_rms_mm": 6.03641,
+      "yaw_rms_deg": 83.34907,
+      "combined_normalized": 2.843123
+     },
+     {
+      "a": "home_2",
+      "b": "home_10",
+      "position_rms_mm": 9.04881,
+      "yaw_rms_deg": 128.76111,
+      "combined_normalized": 4.386387
+     },
+     {
+      "a": "home_2",
+      "b": "home_11",
+      "position_rms_mm": 12.92255,
+      "yaw_rms_deg": 89.19831,
+      "combined_normalized": 3.241959
+     },
+     {
+      "a": "home_2",
+      "b": "home_12",
+      "position_rms_mm": 11.15784,
+      "yaw_rms_deg": 117.48939,
+      "combined_normalized": 4.07216
+     },
+     {
+      "a": "home_3",
+      "b": "home_4",
+      "position_rms_mm": 12.34903,
+      "yaw_rms_deg": 96.50379,
+      "combined_normalized": 3.445685
+     },
+     {
+      "a": "home_3",
+      "b": "home_5",
+      "position_rms_mm": 8.9621,
+      "yaw_rms_deg": 112.00692,
+      "combined_normalized": 3.839621
+     },
+     {
+      "a": "home_3",
+      "b": "home_7",
+      "position_rms_mm": 11.10611,
+      "yaw_rms_deg": 116.63231,
+      "combined_normalized": 4.043267
+     },
+     {
+      "a": "home_3",
+      "b": "home_8",
+      "position_rms_mm": 13.61806,
+      "yaw_rms_deg": 136.63559,
+      "combined_normalized": 4.753753
+     },
+     {
+      "a": "home_3",
+      "b": "home_9",
+      "position_rms_mm": 10.76156,
+      "yaw_rms_deg": 110.8308,
+      "combined_normalized": 3.84791
+     },
+     {
+      "a": "home_3",
+      "b": "home_10",
+      "position_rms_mm": 9.99025,
+      "yaw_rms_deg": 104.54524,
+      "combined_normalized": 3.625213
+     },
+     {
+      "a": "home_3",
+      "b": "home_11",
+      "position_rms_mm": 15.29491,
+      "yaw_rms_deg": 94.20978,
+      "combined_normalized": 3.492991
+     },
+     {
+      "a": "home_3",
+      "b": "home_12",
+      "position_rms_mm": 11.40966,
+      "yaw_rms_deg": 126.77026,
+      "combined_normalized": 4.377001
+     },
+     {
+      "a": "home_4",
+      "b": "home_5",
+      "position_rms_mm": 8.06016,
+      "yaw_rms_deg": 64.77677,
+      "combined_normalized": 2.30476
+     },
+     {
+      "a": "home_4",
+      "b": "home_7",
+      "position_rms_mm": 13.57814,
+      "yaw_rms_deg": 48.70984,
+      "combined_normalized": 2.116586
+     },
+     {
+      "a": "home_4",
+      "b": "home_8",
+      "position_rms_mm": 8.35899,
+      "yaw_rms_deg": 107.4277,
+      "combined_normalized": 3.677192
+     },
+     {
+      "a": "home_4",
+      "b": "home_9",
+      "position_rms_mm": 7.01986,
+      "yaw_rms_deg": 89.76198,
+      "combined_normalized": 3.073312
+     },
+     {
+      "a": "home_4",
+      "b": "home_10",
+      "position_rms_mm": 10.70325,
+      "yaw_rms_deg": 97.51182,
+      "combined_normalized": 3.422084
+     },
+     {
+      "a": "home_4",
+      "b": "home_11",
+      "position_rms_mm": 13.30903,
+      "yaw_rms_deg": 105.37867,
+      "combined_normalized": 3.756304
+     },
+     {
+      "a": "home_4",
+      "b": "home_12",
+      "position_rms_mm": 13.4685,
+      "yaw_rms_deg": 79.69039,
+      "combined_normalized": 2.978285
+     },
+     {
+      "a": "home_5",
+      "b": "home_7",
+      "position_rms_mm": 14.34372,
+      "yaw_rms_deg": 47.11914,
+      "combined_normalized": 2.127046
+     },
+     {
+      "a": "home_5",
+      "b": "home_8",
+      "position_rms_mm": 6.89008,
+      "yaw_rms_deg": 115.23403,
+      "combined_normalized": 3.902441
+     },
+     {
+      "a": "home_5",
+      "b": "home_9",
+      "position_rms_mm": 5.07456,
+      "yaw_rms_deg": 101.8193,
+      "combined_normalized": 3.431704
+     },
+     {
+      "a": "home_5",
+      "b": "home_10",
+      "position_rms_mm": 11.22662,
+      "yaw_rms_deg": 102.83868,
+      "combined_normalized": 3.607111
+     },
+     {
+      "a": "home_5",
+      "b": "home_11",
+      "position_rms_mm": 13.63398,
+      "yaw_rms_deg": 119.38001,
+      "combined_normalized": 4.206418
+     },
+     {
+      "a": "home_5",
+      "b": "home_12",
+      "position_rms_mm": 13.76859,
+      "yaw_rms_deg": 59.288,
+      "combined_normalized": 2.408603
+     },
+     {
+      "a": "home_7",
+      "b": "home_8",
+      "position_rms_mm": 14.41918,
+      "yaw_rms_deg": 112.57718,
+      "combined_normalized": 4.020066
+     },
+     {
+      "a": "home_7",
+      "b": "home_9",
+      "position_rms_mm": 12.37457,
+      "yaw_rms_deg": 97.24813,
+      "combined_normalized": 3.469769
+     },
+     {
+      "a": "home_7",
+      "b": "home_10",
+      "position_rms_mm": 6.23844,
+      "yaw_rms_deg": 69.63036,
+      "combined_normalized": 2.403389
+     },
+     {
+      "a": "home_7",
+      "b": "home_11",
+      "position_rms_mm": 11.00374,
+      "yaw_rms_deg": 112.6758,
+      "combined_normalized": 3.913733
+     },
+     {
+      "a": "home_7",
+      "b": "home_12",
+      "position_rms_mm": 9.41288,
+      "yaw_rms_deg": 59.71986,
+      "combined_normalized": 2.201989
+     },
+     {
+      "a": "home_8",
+      "b": "home_9",
+      "position_rms_mm": 4.93495,
+      "yaw_rms_deg": 67.55655,
+      "combined_normalized": 2.305325
+     },
+     {
+      "a": "home_8",
+      "b": "home_10",
+      "position_rms_mm": 12.95385,
+      "yaw_rms_deg": 136.22601,
+      "combined_normalized": 4.722022
+     },
+     {
+      "a": "home_8",
+      "b": "home_11",
+      "position_rms_mm": 9.01497,
+      "yaw_rms_deg": 81.4003,
+      "combined_normalized": 2.859183
+     },
+     {
+      "a": "home_8",
+      "b": "home_12",
+      "position_rms_mm": 13.27042,
+      "yaw_rms_deg": 96.89768,
+      "combined_normalized": 3.491911
+     },
+     {
+      "a": "home_9",
+      "b": "home_10",
+      "position_rms_mm": 10.19521,
+      "yaw_rms_deg": 130.88691,
+      "combined_normalized": 4.480434
+     },
+     {
+      "a": "home_9",
+      "b": "home_11",
+      "position_rms_mm": 10.70347,
+      "yaw_rms_deg": 33.04449,
+      "combined_normalized": 1.535873
+     },
+     {
+      "a": "home_9",
+      "b": "home_12",
+      "position_rms_mm": 12.10286,
+      "yaw_rms_deg": 143.58622,
+      "combined_normalized": 4.936859
+     },
+     {
+      "a": "home_10",
+      "b": "home_11",
+      "position_rms_mm": 13.51483,
+      "yaw_rms_deg": 130.77603,
+      "combined_normalized": 4.563895
+     },
+     {
+      "a": "home_10",
+      "b": "home_12",
+      "position_rms_mm": 12.68602,
+      "yaw_rms_deg": 101.61247,
+      "combined_normalized": 3.61686
+     },
+     {
+      "a": "home_11",
+      "b": "home_12",
+      "position_rms_mm": 10.58498,
+      "yaw_rms_deg": 155.4826,
+      "combined_normalized": 5.28974
+     }
+    ]
+   },
+   "including_reserve_windows": {
+    "pairs": 120,
+    "minimum_position": {
+     "a": "home_2",
+     "b": "home_5",
+     "position_rms_mm": 3.73888,
+     "yaw_rms_deg": 98.07909,
+     "combined_normalized": 3.290613
+    },
+    "minimum_yaw": {
+     "a": "reserve_window_2",
+     "b": "home_10",
+     "position_rms_mm": 40.9254,
+     "yaw_rms_deg": 28.26379,
+     "combined_normalized": 4.199582
+    },
+    "minimum_combined": {
+     "a": "home_9",
+     "b": "home_11",
+     "position_rms_mm": 10.70347,
+     "yaw_rms_deg": 33.04449,
+     "combined_normalized": 1.535873
+    },
+    "duplicate_arrangements": 0,
+    "all_pairs": [
+     {
+      "a": "home_0",
+      "b": "home_1",
+      "position_rms_mm": 14.25725,
+      "yaw_rms_deg": 56.72256,
+      "combined_normalized": 2.368045
+     },
+     {
+      "a": "home_0",
+      "b": "home_2",
+      "position_rms_mm": 15.83131,
+      "yaw_rms_deg": 64.49658,
+      "combined_normalized": 2.66989
+     },
+     {
+      "a": "home_0",
+      "b": "home_3",
+      "position_rms_mm": 11.95538,
+      "yaw_rms_deg": 72.78609,
+      "combined_normalized": 2.704768
+     },
+     {
+      "a": "home_0",
+      "b": "home_4",
+      "position_rms_mm": 19.89171,
+      "yaw_rms_deg": 75.83608,
+      "combined_normalized": 3.216664
+     },
+     {
+      "a": "home_0",
+      "b": "home_5",
+      "position_rms_mm": 18.4814,
+      "yaw_rms_deg": 95.96054,
+      "combined_normalized": 3.694212
+     },
+     {
+      "a": "home_0",
+      "b": "reserve_window_0",
+      "position_rms_mm": 31.33217,
+      "yaw_rms_deg": 142.69068,
+      "combined_normalized": 5.69561
+     },
+     {
+      "a": "home_0",
+      "b": "reserve_window_1",
+      "position_rms_mm": 24.54312,
+      "yaw_rms_deg": 96.17892,
+      "combined_normalized": 4.037555
+     },
+     {
+      "a": "home_0",
+      "b": "reserve_window_2",
+      "position_rms_mm": 47.70507,
+      "yaw_rms_deg": 87.45953,
+      "combined_normalized": 5.590779
+     },
+     {
+      "a": "home_0",
+      "b": "reserve_window_3",
+      "position_rms_mm": 34.23912,
+      "yaw_rms_deg": 121.52525,
+      "combined_normalized": 5.304007
+     },
+     {
+      "a": "home_0",
+      "b": "home_7",
+      "position_rms_mm": 16.79492,
+      "yaw_rms_deg": 94.58316,
+      "combined_normalized": 3.572207
+     },
+     {
+      "a": "home_0",
+      "b": "home_8",
+      "position_rms_mm": 23.7453,
+      "yaw_rms_deg": 132.04785,
+      "combined_normalized": 5.001243
+     },
+     {
+      "a": "home_0",
+      "b": "home_9",
+      "position_rms_mm": 20.47022,
+      "yaw_rms_deg": 92.54172,
+      "combined_normalized": 3.702137
+     },
+     {
+      "a": "home_0",
+      "b": "home_10",
+      "position_rms_mm": 14.31325,
+      "yaw_rms_deg": 91.81744,
+      "combined_normalized": 3.378735
+     },
+     {
+      "a": "home_0",
+      "b": "home_11",
+      "position_rms_mm": 25.05954,
+      "yaw_rms_deg": 83.72201,
+      "combined_normalized": 3.750733
+     },
+     {
+      "a": "home_0",
+      "b": "home_12",
+      "position_rms_mm": 20.99228,
+      "yaw_rms_deg": 101.42213,
+      "combined_normalized": 3.979465
+     },
+     {
+      "a": "home_1",
+      "b": "home_2",
+      "position_rms_mm": 8.95334,
+      "yaw_rms_deg": 69.03948,
+      "combined_normalized": 2.469348
+     },
+     {
+      "a": "home_1",
+      "b": "home_3",
+      "position_rms_mm": 6.33866,
+      "yaw_rms_deg": 106.08632,
+      "combined_normalized": 3.592572
+     },
+     {
+      "a": "home_1",
+      "b": "home_4",
+      "position_rms_mm": 12.22402,
+      "yaw_rms_deg": 54.36017,
+      "combined_normalized": 2.185779
+     },
+     {
+      "a": "home_1",
+      "b": "home_5",
+      "position_rms_mm": 12.40188,
+      "yaw_rms_deg": 110.73185,
+      "combined_normalized": 3.893842
+     },
+     {
+      "a": "home_1",
+      "b": "reserve_window_0",
+      "position_rms_mm": 23.68953,
+      "yaw_rms_deg": 129.60929,
+      "combined_normalized": 4.927171
+     },
+     {
+      "a": "home_1",
+      "b": "reserve_window_1",
+      "position_rms_mm": 27.12678,
+      "yaw_rms_deg": 80.94502,
+      "combined_normalized": 3.826059
+     },
+     {
+      "a": "home_1",
+      "b": "reserve_window_2",
+      "position_rms_mm": 42.68545,
+      "yaw_rms_deg": 68.78008,
+      "combined_normalized": 4.845288
+     },
+     {
+      "a": "home_1",
+      "b": "reserve_window_3",
+      "position_rms_mm": 35.31595,
+      "yaw_rms_deg": 105.55429,
+      "combined_normalized": 4.985162
+     },
+     {
+      "a": "home_1",
+      "b": "home_7",
+      "position_rms_mm": 10.03423,
+      "yaw_rms_deg": 97.98038,
+      "combined_normalized": 3.416679
+     },
+     {
+      "a": "home_1",
+      "b": "home_8",
+      "position_rms_mm": 14.78095,
+      "yaw_rms_deg": 121.18138,
+      "combined_normalized": 4.301319
+     },
+     {
+      "a": "home_1",
+      "b": "home_9",
+      "position_rms_mm": 12.8418,
+      "yaw_rms_deg": 101.0613,
+      "combined_normalized": 3.60518
+     },
+     {
+      "a": "home_1",
+      "b": "home_10",
+      "position_rms_mm": 11.27382,
+      "yaw_rms_deg": 61.69628,
+      "combined_normalized": 2.345284
+     },
+     {
+      "a": "home_1",
+      "b": "home_11",
+      "position_rms_mm": 13.98456,
+      "yaw_rms_deg": 106.31883,
+      "combined_normalized": 3.8099
+     },
+     {
+      "a": "home_1",
+      "b": "home_12",
+      "position_rms_mm": 8.94506,
+      "yaw_rms_deg": 114.75157,
+      "combined_normalized": 3.928252
+     },
+     {
+      "a": "home_2",
+      "b": "home_3",
+      "position_rms_mm": 5.70023,
+      "yaw_rms_deg": 125.62058,
+      "combined_normalized": 4.225973
+     },
+     {
+      "a": "home_2",
+      "b": "home_4",
+      "position_rms_mm": 7.99891,
+      "yaw_rms_deg": 69.04828,
+      "combined_normalized": 2.436643
+     },
+     {
+      "a": "home_2",
+      "b": "home_5",
+      "position_rms_mm": 3.73888,
+      "yaw_rms_deg": 98.07909,
+      "combined_normalized": 3.290613
+     },
+     {
+      "a": "home_2",
+      "b": "reserve_window_0",
+      "position_rms_mm": 19.2214,
+      "yaw_rms_deg": 113.5907,
+      "combined_normalized": 4.246307
+     },
+     {
+      "a": "home_2",
+      "b": "reserve_window_1",
+      "position_rms_mm": 27.02417,
+      "yaw_rms_deg": 116.04859,
+      "combined_normalized": 4.71876
+     },
+     {
+      "a": "home_2",
+      "b": "reserve_window_2",
+      "position_rms_mm": 38.40871,
+      "yaw_rms_deg": 123.50662,
+      "combined_normalized": 5.630369
+     },
+     {
+      "a": "home_2",
+      "b": "reserve_window_3",
+      "position_rms_mm": 32.19218,
+      "yaw_rms_deg": 133.29173,
+      "combined_normalized": 5.486723
+     },
+     {
+      "a": "home_2",
+      "b": "home_7",
+      "position_rms_mm": 11.57252,
+      "yaw_rms_deg": 90.23161,
+      "combined_normalized": 3.222672
+     },
+     {
+      "a": "home_2",
+      "b": "home_8",
+      "position_rms_mm": 8.59188,
+      "yaw_rms_deg": 76.44425,
+      "combined_normalized": 2.689095
+     },
+     {
+      "a": "home_2",
+      "b": "home_9",
+      "position_rms_mm": 6.03641,
+      "yaw_rms_deg": 83.34907,
+      "combined_normalized": 2.843123
+     },
+     {
+      "a": "home_2",
+      "b": "home_10",
+      "position_rms_mm": 9.04881,
+      "yaw_rms_deg": 128.76111,
+      "combined_normalized": 4.386387
+     },
+     {
+      "a": "home_2",
+      "b": "home_11",
+      "position_rms_mm": 12.92255,
+      "yaw_rms_deg": 89.19831,
+      "combined_normalized": 3.241959
+     },
+     {
+      "a": "home_2",
+      "b": "home_12",
+      "position_rms_mm": 11.15784,
+      "yaw_rms_deg": 117.48939,
+      "combined_normalized": 4.07216
+     },
+     {
+      "a": "home_3",
+      "b": "home_4",
+      "position_rms_mm": 12.34903,
+      "yaw_rms_deg": 96.50379,
+      "combined_normalized": 3.445685
+     },
+     {
+      "a": "home_3",
+      "b": "home_5",
+      "position_rms_mm": 8.9621,
+      "yaw_rms_deg": 112.00692,
+      "combined_normalized": 3.839621
+     },
+     {
+      "a": "home_3",
+      "b": "reserve_window_0",
+      "position_rms_mm": 22.6025,
+      "yaw_rms_deg": 118.28271,
+      "combined_normalized": 4.544674
+     },
+     {
+      "a": "home_3",
+      "b": "reserve_window_1",
+      "position_rms_mm": 26.66758,
+      "yaw_rms_deg": 84.52498,
+      "combined_normalized": 3.87942
+     },
+     {
+      "a": "home_3",
+      "b": "reserve_window_2",
+      "position_rms_mm": 42.27901,
+      "yaw_rms_deg": 92.38255,
+      "combined_normalized": 5.230484
+     },
+     {
+      "a": "home_3",
+      "b": "reserve_window_3",
+      "position_rms_mm": 34.72226,
+      "yaw_rms_deg": 88.68565,
+      "combined_normalized": 4.560198
+     },
+     {
+      "a": "home_3",
+      "b": "home_7",
+      "position_rms_mm": 11.10611,
+      "yaw_rms_deg": 116.63231,
+      "combined_normalized": 4.043267
+     },
+     {
+      "a": "home_3",
+      "b": "home_8",
+      "position_rms_mm": 13.61806,
+      "yaw_rms_deg": 136.63559,
+      "combined_normalized": 4.753753
+     },
+     {
+      "a": "home_3",
+      "b": "home_9",
+      "position_rms_mm": 10.76156,
+      "yaw_rms_deg": 110.8308,
+      "combined_normalized": 3.84791
+     },
+     {
+      "a": "home_3",
+      "b": "home_10",
+      "position_rms_mm": 9.99025,
+      "yaw_rms_deg": 104.54524,
+      "combined_normalized": 3.625213
+     },
+     {
+      "a": "home_3",
+      "b": "home_11",
+      "position_rms_mm": 15.29491,
+      "yaw_rms_deg": 94.20978,
+      "combined_normalized": 3.492991
+     },
+     {
+      "a": "home_3",
+      "b": "home_12",
+      "position_rms_mm": 11.40966,
+      "yaw_rms_deg": 126.77026,
+      "combined_normalized": 4.377001
+     },
+     {
+      "a": "home_4",
+      "b": "home_5",
+      "position_rms_mm": 8.06016,
+      "yaw_rms_deg": 64.77677,
+      "combined_normalized": 2.30476
+     },
+     {
+      "a": "home_4",
+      "b": "reserve_window_0",
+      "position_rms_mm": 21.26904,
+      "yaw_rms_deg": 133.00791,
+      "combined_normalized": 4.917368
+     },
+     {
+      "a": "home_4",
+      "b": "reserve_window_1",
+      "position_rms_mm": 26.53047,
+      "yaw_rms_deg": 120.21351,
+      "combined_normalized": 4.805793
+     },
+     {
+      "a": "home_4",
+      "b": "reserve_window_2",
+      "position_rms_mm": 37.46538,
+      "yaw_rms_deg": 112.55575,
+      "combined_normalized": 5.302168
+     },
+     {
+      "a": "home_4",
+      "b": "reserve_window_3",
+      "position_rms_mm": 30.37607,
+      "yaw_rms_deg": 115.5771,
+      "combined_normalized": 4.906053
+     },
+     {
+      "a": "home_4",
+      "b": "home_7",
+      "position_rms_mm": 13.57814,
+      "yaw_rms_deg": 48.70984,
+      "combined_normalized": 2.116586
+     },
+     {
+      "a": "home_4",
+      "b": "home_8",
+      "position_rms_mm": 8.35899,
+      "yaw_rms_deg": 107.4277,
+      "combined_normalized": 3.677192
+     },
+     {
+      "a": "home_4",
+      "b": "home_9",
+      "position_rms_mm": 7.01986,
+      "yaw_rms_deg": 89.76198,
+      "combined_normalized": 3.073312
+     },
+     {
+      "a": "home_4",
+      "b": "home_10",
+      "position_rms_mm": 10.70325,
+      "yaw_rms_deg": 97.51182,
+      "combined_normalized": 3.422084
+     },
+     {
+      "a": "home_4",
+      "b": "home_11",
+      "position_rms_mm": 13.30903,
+      "yaw_rms_deg": 105.37867,
+      "combined_normalized": 3.756304
+     },
+     {
+      "a": "home_4",
+      "b": "home_12",
+      "position_rms_mm": 13.4685,
+      "yaw_rms_deg": 79.69039,
+      "combined_normalized": 2.978285
+     },
+     {
+      "a": "home_5",
+      "b": "reserve_window_0",
+      "position_rms_mm": 17.79864,
+      "yaw_rms_deg": 133.61908,
+      "combined_normalized": 4.796432
+     },
+     {
+      "a": "home_5",
+      "b": "reserve_window_1",
+      "position_rms_mm": 28.97853,
+      "yaw_rms_deg": 108.27628,
+      "combined_normalized": 4.628601
+     },
+     {
+      "a": "home_5",
+      "b": "reserve_window_2",
+      "position_rms_mm": 36.85048,
+      "yaw_rms_deg": 113.75088,
+      "combined_normalized": 5.287394
+     },
+     {
+      "a": "home_5",
+      "b": "reserve_window_3",
+      "position_rms_mm": 32.5875,
+      "yaw_rms_deg": 59.93363,
+      "combined_normalized": 3.822382
+     },
+     {
+      "a": "home_5",
+      "b": "home_7",
+      "position_rms_mm": 14.34372,
+      "yaw_rms_deg": 47.11914,
+      "combined_normalized": 2.127046
+     },
+     {
+      "a": "home_5",
+      "b": "home_8",
+      "position_rms_mm": 6.89008,
+      "yaw_rms_deg": 115.23403,
+      "combined_normalized": 3.902441
+     },
+     {
+      "a": "home_5",
+      "b": "home_9",
+      "position_rms_mm": 5.07456,
+      "yaw_rms_deg": 101.8193,
+      "combined_normalized": 3.431704
+     },
+     {
+      "a": "home_5",
+      "b": "home_10",
+      "position_rms_mm": 11.22662,
+      "yaw_rms_deg": 102.83868,
+      "combined_normalized": 3.607111
+     },
+     {
+      "a": "home_5",
+      "b": "home_11",
+      "position_rms_mm": 13.63398,
+      "yaw_rms_deg": 119.38001,
+      "combined_normalized": 4.206418
+     },
+     {
+      "a": "home_5",
+      "b": "home_12",
+      "position_rms_mm": 13.76859,
+      "yaw_rms_deg": 59.288,
+      "combined_normalized": 2.408603
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "reserve_window_1",
+      "position_rms_mm": 43.1374,
+      "yaw_rms_deg": 86.97513,
+      "combined_normalized": 5.197456
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "reserve_window_2",
+      "position_rms_mm": 22.94165,
+      "yaw_rms_deg": 105.05602,
+      "combined_normalized": 4.186439
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "reserve_window_3",
+      "position_rms_mm": 35.74753,
+      "yaw_rms_deg": 86.71897,
+      "combined_normalized": 4.59724
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "home_7",
+      "position_rms_mm": 26.13275,
+      "yaw_rms_deg": 130.1568,
+      "combined_normalized": 5.064811
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "home_8",
+      "position_rms_mm": 16.7647,
+      "yaw_rms_deg": 75.24336,
+      "combined_normalized": 3.016816
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "home_9",
+      "position_rms_mm": 20.38604,
+      "yaw_rms_deg": 78.03757,
+      "combined_normalized": 3.304909
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "home_10",
+      "position_rms_mm": 24.93297,
+      "yaw_rms_deg": 88.01035,
+      "combined_normalized": 3.850064
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "home_11",
+      "position_rms_mm": 20.65884,
+      "yaw_rms_deg": 91.16464,
+      "combined_normalized": 3.674549
+     },
+     {
+      "a": "reserve_window_0",
+      "b": "home_12",
+      "position_rms_mm": 23.06253,
+      "yaw_rms_deg": 124.34831,
+      "combined_normalized": 4.743349
+     },
+     {
+      "a": "reserve_window_1",
+      "b": "reserve_window_2",
+      "position_rms_mm": 56.35472,
+      "yaw_rms_deg": 83.64272,
+      "combined_normalized": 6.287447
+     },
+     {
+      "a": "reserve_window_1",
+      "b": "reserve_window_3",
+      "position_rms_mm": 28.54228,
+      "yaw_rms_deg": 88.90845,
+      "combined_normalized": 4.114563
+     },
+     {
+      "a": "reserve_window_1",
+      "b": "home_7",
+      "position_rms_mm": 22.69438,
+      "yaw_rms_deg": 99.20125,
+      "combined_normalized": 4.01057
+     },
+     {
+      "a": "reserve_window_1",
+      "b": "home_8",
+      "position_rms_mm": 31.10344,
+      "yaw_rms_deg": 131.3165,
+      "combined_normalized": 5.369754
+     },
+     {
+      "a": "reserve_window_1",
+      "b": "home_9",
+      "position_rms_mm": 27.28838,
+      "yaw_rms_deg": 97.25873,
+      "combined_normalized": 4.237552
+     },
+     {
+      "a": "reserve_window_1",
+      "b": "home_10",
+      "position_rms_mm": 21.30686,
+      "yaw_rms_deg": 83.15987,
+      "combined_normalized": 3.496253
+     },
+     {
+      "a": "reserve_window_1",
+      "b": "home_11",
+      "position_rms_mm": 31.55677,
+      "yaw_rms_deg": 89.91154,
+      "combined_normalized": 4.352082
+     },
+     {
+      "a": "reserve_window_1",
+      "b": "home_12",
+      "position_rms_mm": 26.2296,
+      "yaw_rms_deg": 132.57463,
+      "combined_normalized": 5.138953
+     },
+     {
+      "a": "reserve_window_2",
+      "b": "reserve_window_3",
+      "position_rms_mm": 36.73507,
+      "yaw_rms_deg": 115.60936,
+      "combined_normalized": 5.324025
+     },
+     {
+      "a": "reserve_window_2",
+      "b": "home_7",
+      "position_rms_mm": 43.07192,
+      "yaw_rms_deg": 83.75373,
+      "combined_normalized": 5.132836
+     },
+     {
+      "a": "reserve_window_2",
+      "b": "home_8",
+      "position_rms_mm": 35.02018,
+      "yaw_rms_deg": 135.54913,
+      "combined_normalized": 5.716573
+     },
+     {
+      "a": "reserve_window_2",
+      "b": "home_9",
+      "position_rms_mm": 38.86307,
+      "yaw_rms_deg": 139.90537,
+      "combined_normalized": 6.070562
+     },
+     {
+      "a": "reserve_window_2",
+      "b": "home_10",
+      "position_rms_mm": 40.9254,
+      "yaw_rms_deg": 28.26379,
+      "combined_normalized": 4.199582
+     },
+     {
+      "a": "reserve_window_2",
+      "b": "home_11",
+      "position_rms_mm": 38.43426,
+      "yaw_rms_deg": 127.64057,
+      "combined_normalized": 5.733609
+     },
+     {
+      "a": "reserve_window_2",
+      "b": "home_12",
+      "position_rms_mm": 42.15536,
+      "yaw_rms_deg": 97.00572,
+      "combined_normalized": 5.312855
+     },
+     {
+      "a": "reserve_window_3",
+      "b": "home_7",
+      "position_rms_mm": 31.92524,
+      "yaw_rms_deg": 94.2176,
+      "combined_normalized": 4.478336
+     },
+     {
+      "a": "reserve_window_3",
+      "b": "home_8",
+      "position_rms_mm": 33.4613,
+      "yaw_rms_deg": 132.16382,
+      "combined_normalized": 5.532149
+     },
+     {
+      "a": "reserve_window_3",
+      "b": "home_9",
+      "position_rms_mm": 33.09311,
+      "yaw_rms_deg": 117.41032,
+      "combined_normalized": 5.125271
+     },
+     {
+      "a": "reserve_window_3",
+      "b": "home_10",
+      "position_rms_mm": 28.56649,
+      "yaw_rms_deg": 110.71329,
+      "combined_normalized": 4.666885
+     },
+     {
+      "a": "reserve_window_3",
+      "b": "home_11",
+      "position_rms_mm": 36.31199,
+      "yaw_rms_deg": 124.80314,
+      "combined_normalized": 5.521963
+     },
+     {
+      "a": "reserve_window_3",
+      "b": "home_12",
+      "position_rms_mm": 34.28097,
+      "yaw_rms_deg": 106.72214,
+      "combined_normalized": 4.940342
+     },
+     {
+      "a": "home_7",
+      "b": "home_8",
+      "position_rms_mm": 14.41918,
+      "yaw_rms_deg": 112.57718,
+      "combined_normalized": 4.020066
+     },
+     {
+      "a": "home_7",
+      "b": "home_9",
+      "position_rms_mm": 12.37457,
+      "yaw_rms_deg": 97.24813,
+      "combined_normalized": 3.469769
+     },
+     {
+      "a": "home_7",
+      "b": "home_10",
+      "position_rms_mm": 6.23844,
+      "yaw_rms_deg": 69.63036,
+      "combined_normalized": 2.403389
+     },
+     {
+      "a": "home_7",
+      "b": "home_11",
+      "position_rms_mm": 11.00374,
+      "yaw_rms_deg": 112.6758,
+      "combined_normalized": 3.913733
+     },
+     {
+      "a": "home_7",
+      "b": "home_12",
+      "position_rms_mm": 9.41288,
+      "yaw_rms_deg": 59.71986,
+      "combined_normalized": 2.201989
+     },
+     {
+      "a": "home_8",
+      "b": "home_9",
+      "position_rms_mm": 4.93495,
+      "yaw_rms_deg": 67.55655,
+      "combined_normalized": 2.305325
+     },
+     {
+      "a": "home_8",
+      "b": "home_10",
+      "position_rms_mm": 12.95385,
+      "yaw_rms_deg": 136.22601,
+      "combined_normalized": 4.722022
+     },
+     {
+      "a": "home_8",
+      "b": "home_11",
+      "position_rms_mm": 9.01497,
+      "yaw_rms_deg": 81.4003,
+      "combined_normalized": 2.859183
+     },
+     {
+      "a": "home_8",
+      "b": "home_12",
+      "position_rms_mm": 13.27042,
+      "yaw_rms_deg": 96.89768,
+      "combined_normalized": 3.491911
+     },
+     {
+      "a": "home_9",
+      "b": "home_10",
+      "position_rms_mm": 10.19521,
+      "yaw_rms_deg": 130.88691,
+      "combined_normalized": 4.480434
+     },
+     {
+      "a": "home_9",
+      "b": "home_11",
+      "position_rms_mm": 10.70347,
+      "yaw_rms_deg": 33.04449,
+      "combined_normalized": 1.535873
+     },
+     {
+      "a": "home_9",
+      "b": "home_12",
+      "position_rms_mm": 12.10286,
+      "yaw_rms_deg": 143.58622,
+      "combined_normalized": 4.936859
+     },
+     {
+      "a": "home_10",
+      "b": "home_11",
+      "position_rms_mm": 13.51483,
+      "yaw_rms_deg": 130.77603,
+      "combined_normalized": 4.563895
+     },
+     {
+      "a": "home_10",
+      "b": "home_12",
+      "position_rms_mm": 12.68602,
+      "yaw_rms_deg": 101.61247,
+      "combined_normalized": 3.61686
+     },
+     {
+      "a": "home_11",
+      "b": "home_12",
+      "position_rms_mm": 10.58498,
+      "yaw_rms_deg": 155.4826,
+      "combined_normalized": 5.28974
+     }
+    ]
+   },
+   "unit_poses": [
+    {
+     "index": 0,
+     "compartment": 0,
+     "step": 0,
+     "yaw_deg": 7.28201,
+     "tilt_deg": 5.89852
+    },
+    {
+     "index": 1,
+     "compartment": 0,
+     "step": 1,
+     "yaw_deg": 178.23365,
+     "tilt_deg": 8.74658
+    },
+    {
+     "index": 2,
+     "compartment": 0,
+     "step": 2,
+     "yaw_deg": 269.16557,
+     "tilt_deg": 9.06313
+    },
+    {
+     "index": 3,
+     "compartment": 0,
+     "step": 3,
+     "yaw_deg": 348.17914,
+     "tilt_deg": 5.72767
+    },
+    {
+     "index": 4,
+     "compartment": 1,
+     "step": 0,
+     "yaw_deg": 91.91696,
+     "tilt_deg": 10.46649
+    },
+    {
+     "index": 5,
+     "compartment": 1,
+     "step": 1,
+     "yaw_deg": 148.94143,
+     "tilt_deg": 10.46066
+    },
+    {
+     "index": 6,
+     "compartment": 1,
+     "step": 2,
+     "yaw_deg": 273.95584,
+     "tilt_deg": 10.27015
+    },
+    {
+     "index": 7,
+     "compartment": 1,
+     "step": 3,
+     "yaw_deg": 278.71161,
+     "tilt_deg": 3.99016
+    },
+    {
+     "index": 8,
+     "compartment": 2,
+     "step": 0,
+     "yaw_deg": 64.40262,
+     "tilt_deg": 10.03939
+    },
+    {
+     "index": 9,
+     "compartment": 2,
+     "step": 1,
+     "yaw_deg": 94.73321,
+     "tilt_deg": 11.48454
+    },
+    {
+     "index": 10,
+     "compartment": 2,
+     "step": 2,
+     "yaw_deg": 341.31979,
+     "tilt_deg": 9.93365
+    },
+    {
+     "index": 11,
+     "compartment": 2,
+     "step": 3,
+     "yaw_deg": 22.79008,
+     "tilt_deg": 11.07096
+    },
+    {
+     "index": 12,
+     "compartment": 3,
+     "step": 0,
+     "yaw_deg": 286.54629,
+     "tilt_deg": 9.74319
+    },
+    {
+     "index": 13,
+     "compartment": 3,
+     "step": 1,
+     "yaw_deg": 281.70164,
+     "tilt_deg": 2.8518
+    },
+    {
+     "index": 14,
+     "compartment": 3,
+     "step": 2,
+     "yaw_deg": 272.94857,
+     "tilt_deg": 5.88148
+    },
+    {
+     "index": 15,
+     "compartment": 3,
+     "step": 3,
+     "yaw_deg": 285.30571,
+     "tilt_deg": 8.99865
+    },
+    {
+     "index": 16,
+     "compartment": 4,
+     "step": 0,
+     "yaw_deg": 157.23493,
+     "tilt_deg": 6.42401
+    },
+    {
+     "index": 17,
+     "compartment": 4,
+     "step": 1,
+     "yaw_deg": 162.31122,
+     "tilt_deg": 11.45682
+    },
+    {
+     "index": 18,
+     "compartment": 4,
+     "step": 2,
+     "yaw_deg": 266.86186,
+     "tilt_deg": 5.9265
+    },
+    {
+     "index": 19,
+     "compartment": 4,
+     "step": 3,
+     "yaw_deg": 4.29549,
+     "tilt_deg": 6.77847
+    },
+    {
+     "index": 20,
+     "compartment": 5,
+     "step": 0,
+     "yaw_deg": 222.32645,
+     "tilt_deg": 10.00999
+    },
+    {
+     "index": 21,
+     "compartment": 5,
+     "step": 1,
+     "yaw_deg": 171.59001,
+     "tilt_deg": 9.30149
+    },
+    {
+     "index": 22,
+     "compartment": 5,
+     "step": 2,
+     "yaw_deg": 313.64729,
+     "tilt_deg": 6.47343
+    },
+    {
+     "index": 23,
+     "compartment": 5,
+     "step": 3,
+     "yaw_deg": 105.64755,
+     "tilt_deg": 2.99301
+    },
+    {
+     "index": 48,
+     "compartment": 6,
+     "step": 0,
+     "yaw_deg": 143.1097,
+     "tilt_deg": 11.06282
+    },
+    {
+     "index": 49,
+     "compartment": 6,
+     "step": 1,
+     "yaw_deg": 328.0769,
+     "tilt_deg": 6.56297
+    },
+    {
+     "index": 50,
+     "compartment": 6,
+     "step": 2,
+     "yaw_deg": 40.13623,
+     "tilt_deg": 5.48063
+    },
+    {
+     "index": 51,
+     "compartment": 6,
+     "step": 3,
+     "yaw_deg": 249.89011,
+     "tilt_deg": 5.16947
+    },
+    {
+     "index": 52,
+     "compartment": 6,
+     "step": 4,
+     "yaw_deg": 34.13187,
+     "tilt_deg": 2.61199
+    },
+    {
+     "index": 53,
+     "compartment": 6,
+     "step": 5,
+     "yaw_deg": 192.86074,
+     "tilt_deg": 4.50141
+    },
+    {
+     "index": 54,
+     "compartment": 6,
+     "step": 6,
+     "yaw_deg": 231.87106,
+     "tilt_deg": 9.83617
+    },
+    {
+     "index": 55,
+     "compartment": 6,
+     "step": 7,
+     "yaw_deg": 207.64762,
+     "tilt_deg": 9.00652
+    },
+    {
+     "index": 56,
+     "compartment": 6,
+     "step": 8,
+     "yaw_deg": 92.21546,
+     "tilt_deg": 10.74686
+    },
+    {
+     "index": 57,
+     "compartment": 6,
+     "step": 9,
+     "yaw_deg": 252.11139,
+     "tilt_deg": 12.17695
+    },
+    {
+     "index": 58,
+     "compartment": 6,
+     "step": 10,
+     "yaw_deg": 351.75917,
+     "tilt_deg": 6.63649
+    },
+    {
+     "index": 59,
+     "compartment": 6,
+     "step": 11,
+     "yaw_deg": 193.37026,
+     "tilt_deg": 5.74717
+    },
+    {
+     "index": 60,
+     "compartment": 6,
+     "step": 12,
+     "yaw_deg": 194.61014,
+     "tilt_deg": 6.09031
+    },
+    {
+     "index": 61,
+     "compartment": 6,
+     "step": 13,
+     "yaw_deg": 192.92677,
+     "tilt_deg": 2.97062
+    },
+    {
+     "index": 62,
+     "compartment": 6,
+     "step": 14,
+     "yaw_deg": 30.58521,
+     "tilt_deg": 5.90853
+    },
+    {
+     "index": 63,
+     "compartment": 6,
+     "step": 15,
+     "yaw_deg": 189.65626,
+     "tilt_deg": 10.65382
+    },
+    {
+     "index": 24,
+     "compartment": 7,
+     "step": 0,
+     "yaw_deg": 160.76632,
+     "tilt_deg": 7.01351
+    },
+    {
+     "index": 25,
+     "compartment": 7,
+     "step": 1,
+     "yaw_deg": 187.90903,
+     "tilt_deg": 7.24958
+    },
+    {
+     "index": 26,
+     "compartment": 7,
+     "step": 2,
+     "yaw_deg": 244.91268,
+     "tilt_deg": 7.90124
+    },
+    {
+     "index": 27,
+     "compartment": 7,
+     "step": 3,
+     "yaw_deg": 95.62517,
+     "tilt_deg": 8.1942
+    },
+    {
+     "index": 28,
+     "compartment": 8,
+     "step": 0,
+     "yaw_deg": 140.21474,
+     "tilt_deg": 8.05775
+    },
+    {
+     "index": 29,
+     "compartment": 8,
+     "step": 1,
+     "yaw_deg": 32.25978,
+     "tilt_deg": 3.06842
+    },
+    {
+     "index": 30,
+     "compartment": 8,
+     "step": 2,
+     "yaw_deg": 98.35298,
+     "tilt_deg": 5.82238
+    },
+    {
+     "index": 31,
+     "compartment": 8,
+     "step": 3,
+     "yaw_deg": 28.05536,
+     "tilt_deg": 5.42784
+    },
+    {
+     "index": 32,
+     "compartment": 9,
+     "step": 0,
+     "yaw_deg": 101.8202,
+     "tilt_deg": 3.92164
+    },
+    {
+     "index": 33,
+     "compartment": 9,
+     "step": 1,
+     "yaw_deg": 295.55955,
+     "tilt_deg": 8.56354
+    },
+    {
+     "index": 34,
+     "compartment": 9,
+     "step": 2,
+     "yaw_deg": 13.01371,
+     "tilt_deg": 9.78708
+    },
+    {
+     "index": 35,
+     "compartment": 9,
+     "step": 3,
+     "yaw_deg": 15.90287,
+     "tilt_deg": 4.2775
+    },
+    {
+     "index": 36,
+     "compartment": 10,
+     "step": 0,
+     "yaw_deg": 87.44326,
+     "tilt_deg": 4.73011
+    },
+    {
+     "index": 37,
+     "compartment": 10,
+     "step": 1,
+     "yaw_deg": 208.82166,
+     "tilt_deg": 9.1456
+    },
+    {
+     "index": 38,
+     "compartment": 10,
+     "step": 2,
+     "yaw_deg": 197.94631,
+     "tilt_deg": 10.52114
+    },
+    {
+     "index": 39,
+     "compartment": 10,
+     "step": 3,
+     "yaw_deg": 202.27459,
+     "tilt_deg": 2.97488
+    },
+    {
+     "index": 40,
+     "compartment": 11,
+     "step": 0,
+     "yaw_deg": 39.00729,
+     "tilt_deg": 9.44634
+    },
+    {
+     "index": 41,
+     "compartment": 11,
+     "step": 1,
+     "yaw_deg": 284.94983,
+     "tilt_deg": 5.71841
+    },
+    {
+     "index": 42,
+     "compartment": 11,
+     "step": 2,
+     "yaw_deg": 29.81064,
+     "tilt_deg": 10.26705
+    },
+    {
+     "index": 43,
+     "compartment": 11,
+     "step": 3,
+     "yaw_deg": 21.15538,
+     "tilt_deg": 3.31094
+    },
+    {
+     "index": 44,
+     "compartment": 12,
+     "step": 0,
+     "yaw_deg": 239.59972,
+     "tilt_deg": 9.38561
+    },
+    {
+     "index": 45,
+     "compartment": 12,
+     "step": 1,
+     "yaw_deg": 105.46737,
+     "tilt_deg": 2.12302
+    },
+    {
+     "index": 46,
+     "compartment": 12,
+     "step": 2,
+     "yaw_deg": 217.55267,
+     "tilt_deg": 10.3955
+    },
+    {
+     "index": 47,
+     "compartment": 12,
+     "step": 3,
+     "yaw_deg": 118.11839,
+     "tilt_deg": 5.44419
+    }
+   ]
+  },
+  "method": "mesh against mesh (BVH), including clearance beneath the raised reserve: every copy of every one of the twelve bomb prefabs against the frame without its straw and against every other copy in its tray; the full fill also across trays, the reserve holding each kind in turn, and each kind in all 64 units. Bedding: straw height straight above each copy's lowest point, per kind in every unit."
+ },
+ "triangles": {
+  "frame": 7400,
+  "contents_full_each_kind_in_its_home": 48232,
+  "per_prefab_full_compartment": {
+   "BombBile": 5176,
+   "BombLava": 640,
+   "BombOoze": 632,
+   "BombSmoke": 3824,
+   "BombSiege": 5120,
+   "BombDynamite": 600,
+   "BombBlob_Frost": 1960,
+   "BombBlob_Lava": 1960,
+   "BombBlob_Morkhalla": 1960,
+   "BombBlob_Poison": 1960,
+   "BombBlob_PoisonElite": 1960,
+   "BombBlob_Tar": 1960
+  },
+  "worst_one_kind_all_64": {
+   "BombBile": 82816
+  }
+ },
+ "units_data": [
+  {
+   "index": 0,
+   "compartment": 0,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "bile yellow-green",
+   "position": [
+    1.18292,
+    0.415,
+    -0.052
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.030677,
+      0.062213,
+      0.041306,
+      0.996736
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "compartment": 0,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "bile yellow-green",
+   "position": [
+    1.02038,
+    0.415,
+    -0.06647
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.07466,
+      0.99695,
+      0.015511,
+      0.016612
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "compartment": 0,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "bile yellow-green",
+   "position": [
+    1.21853,
+    0.415,
+    -0.24321
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.039703,
+      -0.711125,
+      0.068308,
+      0.698612
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "compartment": 0,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "bile yellow-green",
+   "position": [
+    1.03301,
+    0.415,
+    -0.25258
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.042707,
+      -0.103807,
+      0.02593,
+      0.993342
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "compartment": 1,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "basalt slate",
+   "position": [
+    0.75691,
+    0.415,
+    -0.06868
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombLava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.048056,
+      0.717043,
+      0.077524,
+      0.691036
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "compartment": 1,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "basalt slate",
+   "position": [
+    0.58252,
+    0.415,
+    -0.06315
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombLava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.000562,
+      0.960044,
+      0.091158,
+      0.264584
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "compartment": 1,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "basalt slate",
+   "position": [
+    0.76228,
+    0.415,
+    -0.25888
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombLava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.046641,
+      -0.681061,
+      -0.076391,
+      0.726736
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "compartment": 1,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "basalt slate",
+   "position": [
+    0.58356,
+    0.415,
+    -0.2561
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombLava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.026438,
+      -0.650964,
+      -0.02265,
+      0.75831
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "compartment": 2,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "ooze cream",
+   "position": [
+    0.30111,
+    0.415,
+    -0.0612
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombOoze",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.080054,
+      0.527834,
+      0.035317,
+      0.844829
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "compartment": 2,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "ooze cream",
+   "position": [
+    0.115,
+    0.415,
+    -0.06916
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombOoze",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.100011,
+      0.728628,
+      0.002927,
+      0.677562
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "compartment": 2,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "ooze cream",
+   "position": [
+    0.29836,
+    0.415,
+    -0.24436
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombOoze",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.066094,
+      -0.158019,
+      -0.055924,
+      0.983633
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "compartment": 2,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "ooze cream",
+   "position": [
+    0.11473,
+    0.415,
+    -0.25065
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombOoze",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.080577,
+      0.199828,
+      -0.053031,
+      0.975071
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "compartment": 3,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "smoke ash",
+   "position": [
+    -0.16074,
+    0.415,
+    -0.06264
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSmoke",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.078068,
+      -0.593321,
+      -0.033426,
+      0.800474
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "compartment": 3,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "smoke ash",
+   "position": [
+    -0.33393,
+    0.415,
+    -0.0669
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSmoke",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.024666,
+      -0.630932,
+      0.003287,
+      0.775439
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "compartment": 3,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "smoke ash",
+   "position": [
+    -0.15394,
+    0.415,
+    -0.24546
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSmoke",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.011045,
+      -0.688659,
+      0.0501,
+      0.723268
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "compartment": 3,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "smoke ash",
+   "position": [
+    -0.33435,
+    0.415,
+    -0.25455
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSmoke",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.021019,
+      -0.606464,
+      -0.075579,
+      0.791231
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "compartment": 4,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "ember red",
+   "position": [
+    -0.57028,
+    0.415,
+    -0.06324
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombDynamite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.045164,
+      0.979028,
+      0.033161,
+      0.195871
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "compartment": 4,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "ember red",
+   "position": [
+    -0.76742,
+    0.415,
+    -0.07413
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombDynamite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.079548,
+      0.983809,
+      0.060289,
+      0.148851
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "compartment": 4,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "ember red",
+   "position": [
+    -0.57562,
+    0.415,
+    -0.25976
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombDynamite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.042294,
+      -0.724969,
+      -0.029726,
+      0.686839
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "compartment": 4,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "ember red",
+   "position": [
+    -0.76935,
+    0.415,
+    -0.25073
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombDynamite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.057357,
+      0.036475,
+      0.014325,
+      0.997584
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "compartment": 5,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "payload rust",
+   "position": [
+    -1.02362,
+    0.415,
+    -0.05354
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSiege",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.063448,
+      0.927924,
+      -0.05988,
+      -0.362416
+     ]
+    }
+   ]
+  },
+  {
+   "index": 21,
+   "compartment": 5,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "payload rust",
+   "position": [
+    -1.21464,
+    0.415,
+    -0.06797
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSiege",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.018661,
+      0.994161,
+      -0.078905,
+      0.071196
+     ]
+    }
+   ]
+  },
+  {
+   "index": 22,
+   "compartment": 5,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "payload rust",
+   "position": [
+    -1.03283,
+    0.415,
+    -0.23703
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSiege",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.034857,
+      -0.392203,
+      0.044417,
+      0.918144
+     ]
+    }
+   ]
+  },
+  {
+   "index": 23,
+   "compartment": 5,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "payload rust",
+   "position": [
+    -1.21673,
+    0.415,
+    -0.24484
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSiege",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.012999,
+      0.796657,
+      0.022651,
+      0.603867
+     ]
+    }
+   ]
+  },
+  {
+   "index": 24,
+   "compartment": 7,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "frost blue",
+   "position": [
+    1.20109,
+    0.195,
+    0.3659
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Frost",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.030085,
+      0.984406,
+      0.053256,
+      0.164937
+     ]
+    }
+   ]
+  },
+  {
+   "index": 25,
+   "compartment": 7,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "frost blue",
+   "position": [
+    1.02573,
+    0.195,
+    0.37588
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Frost",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.001436,
+      0.995648,
+      -0.063206,
+      -0.068462
+     ]
+    }
+   ]
+  },
+  {
+   "index": 26,
+   "compartment": 7,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "frost blue",
+   "position": [
+    1.21385,
+    0.195,
+    0.19014
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Frost",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.013714,
+      -0.843069,
+      -0.067518,
+      0.533374
+     ]
+    }
+   ]
+  },
+  {
+   "index": 27,
+   "compartment": 7,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "frost blue",
+   "position": [
+    1.02652,
+    0.195,
+    0.20278
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Frost",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.011733,
+      0.74062,
+      -0.070477,
+      0.668115
+     ]
+    }
+   ]
+  },
+  {
+   "index": 28,
+   "compartment": 8,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "magma orange",
+   "position": [
+    0.77304,
+    0.195,
+    0.38716
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Lava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.036884,
+      0.937671,
+      0.059799,
+      0.340347
+     ]
+    }
+   ]
+  },
+  {
+   "index": 29,
+   "compartment": 8,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "magma orange",
+   "position": [
+    0.5758,
+    0.195,
+    0.37888
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Lava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.021306,
+      0.277948,
+      0.016214,
+      0.960223
+     ]
+    }
+   ]
+  },
+  {
+   "index": 30,
+   "compartment": 8,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "magma orange",
+   "position": [
+    0.75286,
+    0.195,
+    0.205
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Lava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.044059,
+      0.755222,
+      -0.025263,
+      0.653498
+     ]
+    }
+   ]
+  },
+  {
+   "index": 31,
+   "compartment": 8,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "magma orange",
+   "position": [
+    0.57049,
+    0.195,
+    0.20979
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Lava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.012039,
+      0.242092,
+      0.045793,
+      0.969097
+     ]
+    }
+   ]
+  },
+  {
+   "index": 32,
+   "compartment": 9,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "pulp olive",
+   "position": [
+    0.31894,
+    0.195,
+    0.3796
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Morkhalla",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.032815,
+      0.775441,
+      0.009691,
+      0.630493
+     ]
+    }
+   ]
+  },
+  {
+   "index": 33,
+   "compartment": 9,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "pulp olive",
+   "position": [
+    0.13004,
+    0.195,
+    0.37059
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Morkhalla",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.035834,
+      -0.531978,
+      0.0655,
+      0.84346
+     ]
+    }
+   ]
+  },
+  {
+   "index": 34,
+   "compartment": 9,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "pulp olive",
+   "position": [
+    0.31093,
+    0.195,
+    0.19782
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Morkhalla",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.075534,
+      0.109535,
+      0.039642,
+      0.990316
+     ]
+    }
+   ]
+  },
+  {
+   "index": 35,
+   "compartment": 9,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "pulp olive",
+   "position": [
+    0.11967,
+    0.195,
+    0.19849
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Morkhalla",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.016635,
+      0.138881,
+      0.033407,
+      0.989606
+     ]
+    }
+   ]
+  },
+  {
+   "index": 36,
+   "compartment": 10,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "poison green",
+   "position": [
+    -0.13659,
+    0.195,
+    0.37055
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Poison",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.032447,
+      0.690394,
+      -0.025497,
+      0.722255
+     ]
+    }
+   ]
+  },
+  {
+   "index": 37,
+   "compartment": 10,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "poison green",
+   "position": [
+    -0.3188,
+    0.195,
+    0.36642
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Poison",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.079426,
+      0.965196,
+      0.006907,
+      -0.24908
+     ]
+    }
+   ]
+  },
+  {
+   "index": 38,
+   "compartment": 10,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "poison green",
+   "position": [
+    -0.12212,
+    0.195,
+    0.19033
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Poison",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.009245,
+      0.983923,
+      0.091218,
+      -0.15326
+     ]
+    }
+   ]
+  },
+  {
+   "index": 39,
+   "compartment": 10,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "poison green",
+   "position": [
+    -0.31408,
+    0.195,
+    0.19768
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Poison",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.015656,
+      0.980901,
+      -0.020705,
+      -0.192767
+     ]
+    }
+   ]
+  },
+  {
+   "index": 40,
+   "compartment": 11,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "elite violet",
+   "position": [
+    -0.58505,
+    0.195,
+    0.3836
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_PoisonElite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.073168,
+      0.329531,
+      -0.03777,
+      0.940547
+     ]
+    }
+   ]
+  },
+  {
+   "index": 41,
+   "compartment": 11,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "elite violet",
+   "position": [
+    -0.7714,
+    0.195,
+    0.39202
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_PoisonElite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.046699,
+      -0.607464,
+      -0.017533,
+      0.79278
+     ]
+    }
+   ]
+  },
+  {
+   "index": 42,
+   "compartment": 11,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "elite violet",
+   "position": [
+    -0.60187,
+    0.195,
+    0.20599
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_PoisonElite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.010832,
+      0.258874,
+      -0.088819,
+      0.961758
+     ]
+    }
+   ]
+  },
+  {
+   "index": 43,
+   "compartment": 11,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "elite violet",
+   "position": [
+    -0.77767,
+    0.195,
+    0.22449
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_PoisonElite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.027998,
+      0.183179,
+      0.007121,
+      0.982655
+     ]
+    }
+   ]
+  },
+  {
+   "index": 44,
+   "compartment": 12,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "tar black",
+   "position": [
+    -1.0292,
+    0.195,
+    0.37557
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Tar",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.081416,
+      0.863609,
+      -0.008054,
+      -0.49748
+     ]
+    }
+   ]
+  },
+  {
+   "index": 45,
+   "compartment": 12,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "tar black",
+   "position": [
+    -1.21197,
+    0.195,
+    0.39769
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Tar",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.017165,
+      0.795641,
+      0.006969,
+      0.605486
+     ]
+    }
+   ]
+  },
+  {
+   "index": 46,
+   "compartment": 12,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "tar black",
+   "position": [
+    -1.03214,
+    0.195,
+    0.20279
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Tar",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.069612,
+      0.943773,
+      -0.057977,
+      -0.317938
+     ]
+    }
+   ]
+  },
+  {
+   "index": 47,
+   "compartment": 12,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "tar black",
+   "position": [
+    -1.21718,
+    0.195,
+    0.2045
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Tar",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.040625,
+      0.856251,
+      -0.024598,
+      0.514372
+     ]
+    }
+   ]
+  },
+  {
+   "index": 48,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "spare chalk",
+   "position": [
+    1.16529,
+    0.795,
+    -0.21164
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.000811,
+      0.945112,
+      -0.096388,
+      0.312205
+     ]
+    }
+   ]
+  },
+  {
+   "index": 49,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "spare chalk",
+   "position": [
+    0.81472,
+    0.795,
+    -0.21872
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.05492,
+      -0.273115,
+      -0.016136,
+      0.960277
+     ]
+    }
+   ]
+  },
+  {
+   "index": 50,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "spare chalk",
+   "position": [
+    0.45884,
+    0.795,
+    -0.22917
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.047426,
+      0.34228,
+      0.006042,
+      0.938381
+     ]
+    }
+   ]
+  },
+  {
+   "index": 51,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "spare chalk",
+   "position": [
+    0.15239,
+    0.795,
+    -0.21515
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.027112,
+      -0.819212,
+      -0.036037,
+      0.571715
+     ]
+    }
+   ]
+  },
+  {
+   "index": 52,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 4,
+   "paint": "spare chalk",
+   "position": [
+    -0.12363,
+    0.795,
+    -0.21258
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.022631,
+      0.293212,
+      -0.002704,
+      0.955776
+     ]
+    }
+   ]
+  },
+  {
+   "index": 53,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 5,
+   "paint": "spare chalk",
+   "position": [
+    -0.52956,
+    0.795,
+    -0.23318
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.037953,
+      0.992967,
+      0.010093,
+      -0.111686
+     ]
+    }
+   ]
+  },
+  {
+   "index": 54,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 6,
+   "paint": "spare chalk",
+   "position": [
+    -0.81767,
+    0.795,
+    -0.22028
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.07208,
+      0.894539,
+      0.046415,
+      -0.438691
+     ]
+    }
+   ]
+  },
+  {
+   "index": 55,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 7,
+   "paint": "spare chalk",
+   "position": [
+    -1.19377,
+    0.795,
+    -0.21844
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.07624,
+      0.968038,
+      0.018767,
+      -0.238199
+     ]
+    }
+   ]
+  },
+  {
+   "index": 56,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 8,
+   "paint": "spare chalk",
+   "position": [
+    1.11623,
+    0.795,
+    -0.38714
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.039114,
+      0.719551,
+      -0.085087,
+      0.688097
+     ]
+    }
+   ]
+  },
+  {
+   "index": 57,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 9,
+   "paint": "spare chalk",
+   "position": [
+    0.84159,
+    0.795,
+    -0.39957
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0963,
+      -0.801042,
+      0.044451,
+      0.589137
+     ]
+    }
+   ]
+  },
+  {
+   "index": 58,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 10,
+   "paint": "spare chalk",
+   "position": [
+    0.5184,
+    0.795,
+    -0.39761
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.057818,
+      -0.071649,
+      -0.00272,
+      0.995749
+     ]
+    }
+   ]
+  },
+  {
+   "index": 59,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 11,
+   "paint": "spare chalk",
+   "position": [
+    0.14655,
+    0.795,
+    -0.39779
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.046538,
+      0.991829,
+      -0.018641,
+      -0.117315
+     ]
+    }
+   ]
+  },
+  {
+   "index": 60,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 12,
+   "paint": "spare chalk",
+   "position": [
+    -0.1962,
+    0.795,
+    -0.39564
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.05307,
+      0.990453,
+      0.002372,
+      -0.127204
+     ]
+    }
+   ]
+  },
+  {
+   "index": 61,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 13,
+   "paint": "spare chalk",
+   "position": [
+    -0.45425,
+    0.795,
+    -0.3917
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.019927,
+      0.993345,
+      -0.016577,
+      -0.112224
+     ]
+    }
+   ]
+  },
+  {
+   "index": 62,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 14,
+   "paint": "spare chalk",
+   "position": [
+    -0.79698,
+    0.795,
+    -0.3881
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.048004,
+      0.263667,
+      -0.018758,
+      0.963236
+     ]
+    }
+   ]
+  },
+  {
+   "index": 63,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 15,
+   "paint": "spare chalk",
+   "position": [
+    -1.13543,
+    0.795,
+    -0.38893
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      -0.065067,
+      0.992499,
+      0.066221,
+      -0.079539
+     ]
+    }
+   ]
+  }
+ ]
+}

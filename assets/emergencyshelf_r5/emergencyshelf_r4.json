@@ -1,0 +1,122 @@
+{
+ "atlas": "emergencyshelf_r4_atlas.png",
+ "layout": "packing",
+ "conversion": "Blender z-up/-y front -> Unity y-up/+z front: ux=-bx, uy=bz, uz=-by. Origin: wall plane, centred in x, bottom plank underside = y 0.",
+ "how_to_use": "Runtime packing: stacks in slot order, one item each at scale 1, filled from +x (left as seen from the front) to -x along planks[0], then planks[1], ... (planks are listed in fill order: TOP plank first) Each plank: y = top surface, z = row centre, x = [min, max] between the side boards, z_back..z_front = usable depth (wall .. lip), lip_top = lip height above y, clear_height = free height above y. Gap 0.03 m between items and at the ends.",
+ "tallest_item_m": 0.504,
+ "display_size": 0.7,
+ "clear_height": 0.42,
+ "pitch": 0.48,
+ "depth": 0.45,
+ "width": 2.0,
+ "gap": 0.03,
+ "long_item_m": 0.35,
+ "min_saving_m": 0.03,
+ "pieces": {
+  "1": {
+   "frame_obj": "EmergencyShelf1.obj",
+   "frame_tris": 588,
+   "planks": [
+    {
+     "y": 0.06,
+     "z": 0.211,
+     "x": [
+      -0.94,
+      0.94
+     ],
+     "z_back": 0.01,
+     "z_front": 0.412,
+     "lip_top": 0.035,
+     "clear_height": 0.42
+    }
+   ],
+   "size_m": [
+    2.034,
+    0.338,
+    0.479
+   ]
+  },
+  "2": {
+   "frame_obj": "EmergencyShelf2.obj",
+   "frame_tris": 900,
+   "planks": [
+    {
+     "y": 0.54,
+     "z": 0.211,
+     "x": [
+      -0.94,
+      0.94
+     ],
+     "z_back": 0.01,
+     "z_front": 0.412,
+     "lip_top": 0.035,
+     "clear_height": 0.42
+    },
+    {
+     "y": 0.06,
+     "z": 0.211,
+     "x": [
+      -0.94,
+      0.94
+     ],
+     "z_back": 0.01,
+     "z_front": 0.412,
+     "lip_top": 0.035,
+     "clear_height": 0.42
+    }
+   ],
+   "size_m": [
+    2.034,
+    0.818,
+    0.478
+   ]
+  },
+  "3": {
+   "frame_obj": "EmergencyShelf3.obj",
+   "frame_tris": 1212,
+   "planks": [
+    {
+     "y": 1.02,
+     "z": 0.211,
+     "x": [
+      -0.94,
+      0.94
+     ],
+     "z_back": 0.01,
+     "z_front": 0.412,
+     "lip_top": 0.035,
+     "clear_height": 0.42
+    },
+    {
+     "y": 0.54,
+     "z": 0.211,
+     "x": [
+      -0.94,
+      0.94
+     ],
+     "z_back": 0.01,
+     "z_front": 0.412,
+     "lip_top": 0.035,
+     "clear_height": 0.42
+    },
+    {
+     "y": 0.06,
+     "z": 0.211,
+     "x": [
+      -0.94,
+      0.94
+     ],
+     "z_back": 0.01,
+     "z_front": 0.412,
+     "lip_top": 0.035,
+     "clear_height": 0.42
+    }
+   ],
+   "size_m": [
+    2.034,
+    1.299,
+    0.481
+   ]
+  }
+ }
+}

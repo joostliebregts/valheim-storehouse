@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The mannequins' carved arms outside the game: ../ArmPose.cs as the game compiles it, on the shipped Frame.obj and anchors read
+       as StoreModel reads them. No Unity, no game assemblies. Storehouse.csproj does not reference this project; arm-gate.py builds
+       and runs it. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RollForward>Major</RollForward>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../ArmPose.cs" Link="ArmPose.cs" />
+  </ItemGroup>
+</Project>

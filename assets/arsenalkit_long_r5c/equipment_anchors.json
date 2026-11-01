@@ -1,0 +1,3823 @@
+{
+  "schema": "arsenal-kit/concept-3",
+  "author": "Sol 6.1",
+  "module": "long",
+  "round": "5c",
+  "label": "Sol 6.1 | Long Rack r5c",
+  "status": "local candidate; universal native fit incomplete; in-game self-test pending",
+  "footprint_m": [
+    1.2,
+    2
+  ],
+  "chest_size": 12,
+  "oversize_places": 0,
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png",
+    "triangles": 2266,
+    "bounds_blender": {
+      "min": [
+        -0.6000000238418579,
+        -1.0,
+        0.0
+      ],
+      "max": [
+        0.6000000834465027,
+        1.0,
+        2.3999998569488525
+      ]
+    },
+    "obj_sha256": "34f991cdfe594c6f9bcbab066e7898592172517122932dd0c2114cd0695efcd6",
+    "atlas_sha256": "2662a7a0e5e2ac7c9a5a20599c19736548e04b947692165a87c54dabf876955c"
+  },
+  "rows": [
+    {
+      "name": "long",
+      "tier": 0,
+      "face": -1,
+      "count": 6,
+      "pitch_m": 0.18,
+      "length_m": 1.2,
+      "centres_x": [
+        -0.45,
+        -0.27,
+        -0.09,
+        0.09,
+        0.27,
+        0.45
+      ]
+    },
+    {
+      "name": "long",
+      "tier": 0,
+      "face": 1,
+      "count": 6,
+      "pitch_m": 0.18,
+      "length_m": 1.2,
+      "centres_x": [
+        -0.45,
+        -0.27,
+        -0.09,
+        0.09,
+        0.27,
+        0.45
+      ]
+    }
+  ],
+  "places": [
+    {
+      "index": 0,
+      "place_index": 0,
+      "prefab": "SpearGold",
+      "fit": true,
+      "kind": "spear",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/SpearGold/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          -0.49398012480248515
+        ],
+        [
+          0.9848077297210693,
+          0.1736481487751007,
+          -6.12408470601622e-08,
+          -0.3161051179855401
+        ],
+        [
+          -0.1736481487751007,
+          0.9848077297210693,
+          8.746098245637768e-08,
+          1.8156265484306582
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          0.49398012480248515
+        ],
+        [
+          0.1736481487751007,
+          8.746098245637768e-08,
+          -0.9848077297210693,
+          1.8156265484306582
+        ],
+        [
+          0.9848077297210693,
+          6.12408470601622e-08,
+          0.1736481487751007,
+          0.3161051179855401
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.45451951026916504,
+        -0.45451951026916504,
+        0.5416751503944397,
+        0.5416752696037292
+      ],
+      "fitted_display_pivot_position_unity": [
+        0.4529800891448264,
+        1.349366237855973,
+        0.3997409793927895
+      ],
+      "position_unity": [
+        0.4529800891448264,
+        1.349366237855973,
+        0.3997409793927895
+      ],
+      "position_blender": [
+        -0.4529800891448264,
+        -0.3997409793927895,
+        1.349366237855973
+      ],
+      "game_tight_turned_center_unity": [
+        0.0014,
+        0.041,
+        0.4737
+      ],
+      "game_tight_center_source": "item-tight-bounds-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": 0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        -1
+      ],
+      "side_unity_z": "positive",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        -0.45,
+        -0.5705672335269559,
+        0.2105000015638022
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          -0.4647398492577466,
+          -0.4804999999999999,
+          0.766
+        ],
+        "frame_point_blender": [
+          -0.46474000811576843,
+          -0.48000001907348633,
+          0.7659997940063477
+        ],
+        "native_triangle_index": 403,
+        "frame_triangle_index": 1762,
+        "gap_m": 0.0004999936209060252,
+        "shaft_height_fraction": 0.2444661386412904
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          -0.48584410101354947,
+          -0.623307627414429,
+          0.2104999999999999
+        ],
+        "max": [
+          -0.42011608713205234,
+          -0.18054964366199844,
+          2.482798335824313
+        ]
+      },
+      "triangles": 1365,
+      "face": -1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        -0.45,
+        -0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          -0.534,
+          -0.7410000000000001,
+          0.21
+        ],
+        "max": [
+          -0.366,
+          -0.37900000000000006,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -1.134624716167569,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.23462471616756914,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 1,
+      "place_index": 1,
+      "prefab": "VAAtgeir_Flint",
+      "fit": true,
+      "kind": "atgeir",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/VAAtgeir_Flint/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          7.549790126404332e-08,
+          -1.0,
+          -0.21022287315763705
+        ],
+        [
+          -0.9848077297210693,
+          0.1736481487751007,
+          -6.12408470601622e-08,
+          -0.30556622971560865
+        ],
+        [
+          0.1736481487751007,
+          0.9848077297210693,
+          8.746098245637768e-08,
+          1.8376990611579185
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          1.0,
+          7.549790126404332e-08,
+          0.21022287315763705
+        ],
+        [
+          -0.1736481487751007,
+          8.746098245637768e-08,
+          -0.9848077297210693,
+          1.8376990611579185
+        ],
+        [
+          -0.9848077297210693,
+          6.12408470601622e-08,
+          0.1736481487751007,
+          0.30556622971560865
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.45451951026916504,
+        0.45451951026916504,
+        -0.5416751503944397,
+        0.5416752696037292
+      ],
+      "fitted_display_pivot_position_unity": [
+        0.2700028781918371,
+        1.7352743905579684,
+        0.36964052007096415
+      ],
+      "position_unity": [
+        0.2700028781918371,
+        1.7352743905579684,
+        0.36964052007096415
+      ],
+      "position_blender": [
+        -0.2700028781918371,
+        -0.36964052007096415,
+        1.7352743905579684
+      ],
+      "game_tight_turned_center_unity": [
+        -0.045315,
+        0.05978,
+        0.11199500000000007
+      ],
+      "game_tight_center_source": "item-points-20261027.json tight_turned",
+      "game_formula_max_error_m": 8.881784197001252e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": 0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        -1
+      ],
+      "side_unity_z": "positive",
+      "yaw_source_blender_degrees": 270,
+      "butt_point_blender": [
+        -0.27,
+        -0.55824206028365,
+        0.2104999999999999
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          -0.2700009561764085,
+          -0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          -0.27006641030311584,
+          -0.48000001907348633,
+          0.7660006880760193
+        ],
+        "native_triangle_index": 260,
+        "frame_triangle_index": 1762,
+        "gap_m": 0.000504259136505425,
+        "shaft_height_fraction": 0.1835075015458706
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          -0.31032979943182254,
+          -0.5839424094624113,
+          0.2104999999999999
+        ],
+        "max": [
+          -0.2296737933424638,
+          -0.050404701291106524,
+          3.237624206479069
+        ]
+      },
+      "triangles": 300,
+      "face": -1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        -0.27,
+        -0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          -0.35400000000000004,
+          -0.7410000000000001,
+          0.21
+        ],
+        "max": [
+          -0.186,
+          -0.37900000000000006,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.9546247161675692,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.41462471616756913,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 2,
+      "place_index": 2,
+      "prefab": "VABronzeSledge",
+      "fit": true,
+      "kind": "sledge",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/VABronzeSledge/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          -0.11199955632362378
+        ],
+        [
+          0.9848077297210693,
+          0.1736481487751007,
+          -6.12408470601622e-08,
+          -0.4886621013237093
+        ],
+        [
+          -0.1736481487751007,
+          0.9848077297210693,
+          8.746098245637768e-08,
+          0.8967680884414356
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          0.11199955632362378
+        ],
+        [
+          0.1736481487751007,
+          8.746098245637768e-08,
+          -0.9848077297210693,
+          0.8967680884414356
+        ],
+        [
+          0.9848077297210693,
+          6.12408470601622e-08,
+          0.1736481487751007,
+          0.4886621013237093
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.45451951026916504,
+        -0.45451951026916504,
+        0.5416751503944397,
+        0.5416752696037292
+      ],
+      "fitted_display_pivot_position_unity": [
+        0.08999957826482385,
+        1.1300204153329616,
+        0.5138204774222181
+      ],
+      "position_unity": [
+        0.08999957826482385,
+        1.1300204153329616,
+        0.5138204774222181
+      ],
+      "position_blender": [
+        -0.08999957826482385,
+        -0.5138204774222181,
+        1.1300204153329616
+      ],
+      "game_tight_turned_center_unity": [
+        0.06528,
+        0.022,
+        -0.22533999999999998
+      ],
+      "game_tight_center_source": "item-points-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": 0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        -1
+      ],
+      "side_unity_z": "positive",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        -0.09,
+        -0.549047683051417,
+        0.2105000027115091
+      ],
+      "butt_floor_gap_m": 0.0005000000000000282,
+      "contact": {
+        "native_point_blender": [
+          -0.09258604584801344,
+          -0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          -0.09245157241821289,
+          -0.48000001907348633,
+          0.7660025954246521
+        ],
+        "native_triangle_index": 7335,
+        "frame_triangle_index": 1762,
+        "gap_m": 0.0005177684361115098,
+        "shaft_height_fraction": 0.3038002371666061
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          -0.18615463935470564,
+          -0.7678170089020437,
+          0.21050000000000002
+        ],
+        "max": [
+          0.006155385328049712,
+          -0.03332242960788784,
+          2.0390041683340097
+        ]
+      },
+      "triangles": 28694,
+      "face": -1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        -0.09,
+        -0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          -0.174,
+          -0.7410000000000001,
+          0.21
+        ],
+        "max": [
+          -0.0059999999999999915,
+          -0.37900000000000006,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.7746247161675691,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.5946247161675692,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 3,
+      "place_index": 3,
+      "prefab": "VAbronze_greatsword",
+      "fit": true,
+      "kind": "sword_long",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/VAbronze_greatsword/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          0.05200091429810439
+        ],
+        [
+          0.9848077297210693,
+          0.1736481487751007,
+          -6.12408470601622e-08,
+          -0.42760690356909853
+        ],
+        [
+          -0.1736481487751007,
+          0.9848077297210693,
+          8.746098245637768e-08,
+          1.32841039991582
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          -0.05200091429810439
+        ],
+        [
+          0.1736481487751007,
+          8.746098245637768e-08,
+          -0.9848077297210693,
+          1.32841039991582
+        ],
+        [
+          0.9848077297210693,
+          6.12408470601622e-08,
+          0.1736481487751007,
+          0.42760690356909853
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.45451951026916504,
+        -0.45451951026916504,
+        0.5416751503944397,
+        0.5416752696037292
+      ],
+      "fitted_display_pivot_position_unity": [
+        -0.0900009282769183,
+        1.146068328042833,
+        0.45975872888270447
+      ],
+      "position_unity": [
+        -0.0900009282769183,
+        1.146068328042833,
+        0.45975872888270447
+      ],
+      "position_blender": [
+        0.0900009282769183,
+        -0.45975872888270447,
+        1.146068328042833
+      ],
+      "game_tight_turned_center_unity": [
+        0.0,
+        0.038,
+        0.18515499999999996
+      ],
+      "game_tight_center_source": "item-points-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": -0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        -1
+      ],
+      "side_unity_z": "positive",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        0.09,
+        -0.6247246438671377,
+        0.2104999999999999
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          0.0900009602478584,
+          -0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          0.08989390730857849,
+          -0.48000001907348633,
+          0.7660058736801147
+        ],
+        "native_triangle_index": 227,
+        "frame_triangle_index": 1762,
+        "gap_m": 0.0005113590741530061,
+        "shaft_height_fraction": 0.2968779009755227
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          0.05879885952316906,
+          -0.6452537954714639,
+          0.2104999999999999
+        ],
+        "max": [
+          0.12120285952324455,
+          -0.2570571830797656,
+          2.0816396105087676
+        ]
+      },
+      "triangles": 368,
+      "face": -1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        0.09,
+        -0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          0.0059999999999999915,
+          -0.7410000000000001,
+          0.21
+        ],
+        "max": [
+          0.174,
+          -0.37900000000000006,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.5946247161675692,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.7746247161675691,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 4,
+      "place_index": 4,
+      "prefab": "THSwordGold",
+      "fit": true,
+      "kind": "sword_long",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/THSwordGold/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          0.23299791607290907
+        ],
+        [
+          0.9848077297210693,
+          0.1736481487751007,
+          -6.12408470601622e-08,
+          -0.42506855588066206
+        ],
+        [
+          -0.1736481487751007,
+          0.9848077297210693,
+          8.746098245637768e-08,
+          1.3047712218250065
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          -0.23299791607290907
+        ],
+        [
+          0.1736481487751007,
+          8.746098245637768e-08,
+          -0.9848077297210693,
+          1.3047712218250065
+        ],
+        [
+          0.9848077297210693,
+          6.12408470601622e-08,
+          0.1736481487751007,
+          0.42506855588066206
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.45451951026916504,
+        -0.45451951026916504,
+        0.5416751503944397,
+        0.5416752696037292
+      ],
+      "fitted_display_pivot_position_unity": [
+        -0.26939792671056334,
+        1.166498511639455,
+        0.44884050874514286
+      ],
+      "position_unity": [
+        -0.26939792671056334,
+        1.166498511639455,
+        0.44884050874514286
+      ],
+      "position_blender": [
+        0.26939792671056334,
+        -0.44884050874514286,
+        1.166498511639455
+      ],
+      "game_tight_turned_center_unity": [
+        -0.0006,
+        0.0364,
+        0.1403
+      ],
+      "game_tight_center_source": "item-tight-bounds-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": -0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        -1
+      ],
+      "side_unity_z": "positive",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        0.27,
+        -0.6174067849973843,
+        0.2104999999999999
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          0.269999623906424,
+          -0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          0.2698633372783661,
+          -0.48000001907348633,
+          0.7659993767738342
+        ],
+        "native_triangle_index": 13,
+        "frame_triangle_index": 1762,
+        "gap_m": 0.0005182353197596967,
+        "shaft_height_fraction": 0.2901887994113273
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          0.2304318561188177,
+          -0.6346201898631857,
+          0.2104999999999999
+        ],
+        "max": [
+          0.30843285673941045,
+          -0.21685903563255274,
+          2.1247709888420196
+        ]
+      },
+      "triangles": 1904,
+      "face": -1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        0.27,
+        -0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          0.186,
+          -0.7410000000000001,
+          0.21
+        ],
+        "max": [
+          0.35400000000000004,
+          -0.37900000000000006,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.41462471616756913,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.9546247161675692,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 5,
+      "place_index": 5,
+      "prefab": "SpearChitin",
+      "fit": true,
+      "kind": "spear",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/SpearChitin/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          7.549790126404332e-08,
+          -1.0,
+          0.41326509912353504
+        ],
+        [
+          -0.9848077297210693,
+          0.1736481487751007,
+          -6.12408470601622e-08,
+          -0.37068102194292624
+        ],
+        [
+          0.1736481487751007,
+          0.9848077297210693,
+          8.746098245637768e-08,
+          1.483524396794955
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          1.0,
+          7.549790126404332e-08,
+          -0.41326509912353504
+        ],
+        [
+          -0.1736481487751007,
+          8.746098245637768e-08,
+          -0.9848077297210693,
+          1.483524396794955
+        ],
+        [
+          -0.9848077297210693,
+          6.12408470601622e-08,
+          0.1736481487751007,
+          0.37068102194292624
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.45451951026916504,
+        0.45451951026916504,
+        -0.5416751503944397,
+        0.5416752696037292
+      ],
+      "fitted_display_pivot_position_unity": [
+        -0.3903650892861585,
+        1.3552039516151562,
+        0.39330737713073727
+      ],
+      "position_unity": [
+        -0.3903650892861585,
+        1.3552039516151562,
+        0.39330737713073727
+      ],
+      "position_blender": [
+        0.3903650892861585,
+        -0.39330737713073727,
+        1.3552039516151562
+      ],
+      "game_tight_turned_center_unity": [
+        -0.0,
+        0.0229,
+        0.1303
+      ],
+      "game_tight_center_source": "item-tight-bounds-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": -0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        -1
+      ],
+      "side_unity_z": "positive",
+      "yaw_source_blender_degrees": 270,
+      "butt_point_blender": [
+        0.4395755002413291,
+        -0.5737325499967615,
+        0.21075980513183212
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          0.4303527203138016,
+          -0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          0.4303542375564575,
+          -0.48000001907348633,
+          0.7660000324249268
+        ],
+        "native_triangle_index": 28,
+        "frame_triangle_index": 1764,
+        "gap_m": 0.0004999958910048008,
+        "shaft_height_fraction": 0.2429641969760277
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          0.29519212154256136,
+          -0.6186292611210229,
+          0.2104999999999999
+        ],
+        "max": [
+          0.4855360019514698,
+          -0.19200425621459838,
+          2.4968450949310403
+        ]
+      },
+      "triangles": 520,
+      "face": -1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        0.45,
+        -0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          0.366,
+          -0.7410000000000001,
+          0.21
+        ],
+        "max": [
+          0.534,
+          -0.37900000000000006,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.23462471616756914,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          1.134624716167569,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 6,
+      "place_index": 6,
+      "prefab": "VASpearBlackmetal",
+      "fit": true,
+      "kind": "spear",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/VASpearBlackmetal/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          -0.466128063188346
+        ],
+        [
+          0.9848077297210693,
+          -0.1736481487751007,
+          -8.746098245637768e-08,
+          0.4992959302056634
+        ],
+        [
+          0.1736481487751007,
+          0.9848077297210693,
+          6.12408470601622e-08,
+          1.1837947949594718
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          0.466128063188346
+        ],
+        [
+          -0.1736481487751007,
+          6.12408470601622e-08,
+          -0.9848077297210693,
+          1.1837947949594718
+        ],
+        [
+          0.9848077297210693,
+          8.746098245637768e-08,
+          -0.1736481487751007,
+          -0.4992959302056634
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5416752099990845,
+        -0.5416752099990845,
+        0.45451951026916504,
+        0.4545195698738098
+      ],
+      "fitted_display_pivot_position_unity": [
+        0.4182980792354249,
+        1.3975641514142603,
+        -0.46550186479108946
+      ],
+      "position_unity": [
+        0.4182980792354249,
+        1.3975641514142603,
+        -0.46550186479108946
+      ],
+      "position_blender": [
+        -0.4182980792354249,
+        0.46550186479108946,
+        1.3975641514142603
+      ],
+      "game_tight_turned_center_unity": [
+        -0.003839999999999996,
+        0.04783,
+        -0.21639000000000003
+      ],
+      "game_tight_center_source": "item-points-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": 0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        1
+      ],
+      "side_unity_z": "negative",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        -0.45,
+        0.5402621453515821,
+        0.2104999999999999
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          -0.43867061990947914,
+          0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          -0.4386698603630066,
+          0.48000001907348633,
+          0.7659998536109924
+        ],
+        "native_triangle_index": 3824,
+        "frame_triangle_index": 2052,
+        "gap_m": 0.0004999941447749734,
+        "shaft_height_fraction": 0.23564770869667706
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          -0.47230799957147396,
+          0.28688979596017916,
+          0.2104999999999999
+        ],
+        "max": [
+          -0.36428411971422864,
+          0.5802935703549618,
+          2.56783249040428
+        ]
+      },
+      "triangles": 14814,
+      "face": 1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        -0.45,
+        0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          -0.534,
+          0.37900000000000006,
+          0.21
+        ],
+        "max": [
+          -0.366,
+          0.7410000000000001,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -1.134624716167569,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.23462471616756914,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 7,
+      "place_index": 7,
+      "prefab": "AtgeirWood",
+      "fit": true,
+      "kind": "atgeir",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/AtgeirWood/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          -0.2979621276864295
+        ],
+        [
+          0.9848077297210693,
+          -0.1736481487751007,
+          -8.746098245637768e-08,
+          0.3079560005549049
+        ],
+        [
+          0.1736481487751007,
+          0.9848077297210693,
+          6.12408470601622e-08,
+          1.8832602775573979
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          0.2979621276864295
+        ],
+        [
+          -0.1736481487751007,
+          6.12408470601622e-08,
+          -0.9848077297210693,
+          1.8832602775573979
+        ],
+        [
+          0.9848077297210693,
+          8.746098245637768e-08,
+          -0.1736481487751007,
+          -0.3079560005549049
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5416752099990845,
+        -0.5416752099990845,
+        0.45451951026916504,
+        0.4545195698738098
+      ],
+      "fitted_display_pivot_position_unity": [
+        0.2647620984838413,
+        1.5836602524049155,
+        -0.43206650417981624
+      ],
+      "position_unity": [
+        0.2647620984838413,
+        1.5836602524049155,
+        -0.43206650417981624
+      ],
+      "position_blender": [
+        -0.2647620984838413,
+        0.43206650417981624,
+        1.5836602524049155
+      ],
+      "game_tight_turned_center_unity": [
+        -0.0702,
+        0.0332,
+        0.3166
+      ],
+      "game_tight_center_source": "item-tight-bounds-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": 0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        1
+      ],
+      "side_unity_z": "negative",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        -0.2633510000047186,
+        0.5965766578696516,
+        0.2105424363683026
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          -0.25276013773373773,
+          0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          -0.2527572512626648,
+          0.48000001907348633,
+          0.7660001516342163
+        ],
+        "native_triangle_index": 207,
+        "frame_triangle_index": 2052,
+        "gap_m": 0.0005000019446015358,
+        "shaft_height_fraction": 0.20305482317532889
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          -0.30736718205133573,
+          0.13655330833808715,
+          0.2104999999999999
+        ],
+        "max": [
+          -0.22216300121083532,
+          0.6383445851319486,
+          2.9462143815310915
+        ]
+      },
+      "triangles": 224,
+      "face": 1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        -0.27,
+        0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          -0.35400000000000004,
+          0.37900000000000006,
+          0.21
+        ],
+        "max": [
+          -0.186,
+          0.7410000000000001,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.9546247161675692,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.41462471616756913,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 8,
+      "place_index": 8,
+      "prefab": "THSwordWood",
+      "fit": true,
+      "kind": "sword_long",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/THSwordWood/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          -0.10000208386254024
+        ],
+        [
+          0.9848077297210693,
+          -0.1736481487751007,
+          -8.746098245637768e-08,
+          0.46736625798461295
+        ],
+        [
+          0.1736481487751007,
+          0.9848077297210693,
+          6.12408470601622e-08,
+          1.3044175326400265
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          0.10000208386254024
+        ],
+        [
+          -0.1736481487751007,
+          6.12408470601622e-08,
+          -0.9848077297210693,
+          1.3044175326400265
+        ],
+        [
+          0.9848077297210693,
+          8.746098245637768e-08,
+          -0.1736481487751007,
+          -0.46736625798461295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5416752099990845,
+        -0.5416752099990845,
+        0.45451951026916504,
+        0.4545195698738098
+      ],
+      "fitted_display_pivot_position_unity": [
+        0.09000207213016638,
+        1.1513784120537807,
+        -0.4943511794296538
+      ],
+      "position_unity": [
+        0.09000207213016638,
+        1.1513784120537807,
+        -0.4943511794296538
+      ],
+      "position_blender": [
+        -0.09000207213016638,
+        0.4943511794296538,
+        1.1513784120537807
+      ],
+      "game_tight_turned_center_unity": [
+        0.0,
+        0.01,
+        0.1554
+      ],
+      "game_tight_center_source": "item-tight-bounds-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": 0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        1
+      ],
+      "side_unity_z": "negative",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        -0.08999999999999998,
+        0.6602534052321687,
+        0.21050000073250175
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          -0.07803936664959928,
+          0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          -0.07803267240524292,
+          0.48000001907348633,
+          0.7660002112388611
+        ],
+        "native_triangle_index": 84,
+        "frame_triangle_index": 2052,
+        "gap_m": 0.0005000383825972676,
+        "shaft_height_fraction": 0.2948959425275455
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          -0.13450912560918024,
+          0.23661469822623504,
+          0.2104999999999999
+        ],
+        "max": [
+          -0.045494099864244915,
+          0.7124607569166195,
+          2.0942153039096567
+        ]
+      },
+      "triangles": 166,
+      "face": 1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        -0.09,
+        0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          -0.174,
+          0.37900000000000006,
+          0.21
+        ],
+        "max": [
+          -0.0059999999999999915,
+          0.7410000000000001,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.7746247161675691,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.5946247161675692,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 9,
+      "place_index": 9,
+      "prefab": "VABlackmetal_greatsword",
+      "fit": true,
+      "kind": "sword_long",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/VABlackmetal_greatsword/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          0.07399991594259968
+        ],
+        [
+          0.9848077297210693,
+          -0.1736481487751007,
+          -8.746098245637768e-08,
+          0.44517193750107864
+        ],
+        [
+          0.1736481487751007,
+          0.9848077297210693,
+          6.12408470601622e-08,
+          1.2904976622571818
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          -0.07399991594259968
+        ],
+        [
+          -0.1736481487751007,
+          6.12408470601622e-08,
+          -0.9848077297210693,
+          1.2904976622571818
+        ],
+        [
+          0.9848077297210693,
+          8.746098245637768e-08,
+          -0.1736481487751007,
+          -0.44517193750107864
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5416752099990845,
+        -0.5416752099990845,
+        0.45451951026916504,
+        0.4545195698738098
+      ],
+      "fitted_display_pivot_position_unity": [
+        -0.08832992791543434,
+        1.1268440966212545,
+        -0.4674738928262559
+      ],
+      "position_unity": [
+        -0.08832992791543434,
+        1.1268440966212545,
+        -0.4674738928262559
+      ],
+      "position_blender": [
+        0.08832992791543434,
+        0.4674738928262559,
+        1.1268440966212545
+      ],
+      "game_tight_turned_center_unity": [
+        0.0064549999999999955,
+        0.014329999999999999,
+        0.16503999999999996
+      ],
+      "game_tight_center_source": "item-points-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": -0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        1
+      ],
+      "side_unity_z": "negative",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        0.09,
+        0.6500338477412742,
+        0.2104999999999999
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          0.0899999511531096,
+          0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          0.0900070071220398,
+          0.48000001907348633,
+          0.7660003900527954
+        ],
+        "native_triangle_index": 14,
+        "frame_triangle_index": 2052,
+        "gap_m": 0.0005000435630790889,
+        "shaft_height_fraction": 0.3026012193916977
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          0.05282585942607876,
+          0.2725302584051697,
+          0.2104999999999999
+        ],
+        "max": [
+          0.12382686227295363,
+          0.6669498901146929,
+          2.046249377073531
+        ]
+      },
+      "triangles": 3155,
+      "face": 1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        0.09,
+        0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          0.0059999999999999915,
+          0.37900000000000006,
+          0.21
+        ],
+        "max": [
+          0.174,
+          0.7410000000000001,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.5946247161675692,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.7746247161675691,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 10,
+      "place_index": 10,
+      "prefab": "VASilverSledge",
+      "fit": true,
+      "kind": "sledge",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/VASilverSledge/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          0.25629893542755106
+        ],
+        [
+          0.9848077297210693,
+          -0.1736481487751007,
+          -8.746098245637768e-08,
+          0.47947029223281545
+        ],
+        [
+          0.1736481487751007,
+          0.9848077297210693,
+          6.12408470601622e-08,
+          1.0358170617992517
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          -0.25629893542755106
+        ],
+        [
+          -0.1736481487751007,
+          6.12408470601622e-08,
+          -0.9848077297210693,
+          1.0358170617992517
+        ],
+        [
+          0.9848077297210693,
+          8.746098245637768e-08,
+          -0.1736481487751007,
+          -0.47947029223281545
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5416752099990845,
+        -0.5416752099990845,
+        0.45451951026916504,
+        0.4545195698738098
+      ],
+      "fitted_display_pivot_position_unity": [
+        -0.2702989209383713,
+        1.149968603796405,
+        -0.39373558601126923
+      ],
+      "position_unity": [
+        -0.2702989209383713,
+        1.149968603796405,
+        -0.39373558601126923
+      ],
+      "position_blender": [
+        0.2702989209383713,
+        0.39373558601126923,
+        1.149968603796405
+      ],
+      "game_tight_turned_center_unity": [
+        0.06461,
+        0.013999999999999999,
+        -0.127305
+      ],
+      "game_tight_center_source": "item-points-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": -0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        1
+      ],
+      "side_unity_z": "negative",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        0.270000000120998,
+        0.6415299577657807,
+        0.21088487804059186
+      ],
+      "butt_floor_gap_m": 0.0005000000000000282,
+      "contact": {
+        "native_point_blender": [
+          0.2699999520414365,
+          0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          0.2700045704841614,
+          0.48000001907348633,
+          0.7659998536109924
+        ],
+        "native_triangle_index": 805,
+        "frame_triangle_index": 2052,
+        "gap_m": 0.0005000149249099195,
+        "shaft_height_fraction": 0.287226711933515
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          0.14253683928301225,
+          -0.12649200714358588,
+          0.21050000000000002
+        ],
+        "max": [
+          0.398059879474169,
+          0.7778672198814977,
+          2.144512321697234
+        ]
+      },
+      "triangles": 1098,
+      "face": 1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        0.27,
+        0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          0.186,
+          0.37900000000000006,
+          0.21
+        ],
+        "max": [
+          0.35400000000000004,
+          0.7410000000000001,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.41462471616756913,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          0.9546247161675692,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    },
+    {
+      "index": 11,
+      "place_index": 11,
+      "prefab": "VAsilver_greatsword",
+      "fit": true,
+      "kind": "sword_long",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/long-r5c/real-items-r5c/VAsilver_greatsword/model.obj",
+      "matrix_blender": [
+        [
+          7.549790126404332e-08,
+          -7.549790126404332e-08,
+          1.0,
+          0.4289999153246494
+        ],
+        [
+          0.9848077297210693,
+          -0.1736481487751007,
+          -8.746098245637768e-08,
+          0.42417516700554947
+        ],
+        [
+          0.1736481487751007,
+          0.9848077297210693,
+          6.12408470601622e-08,
+          1.3127030594951825
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_source_root_matrix_unity": [
+        [
+          7.549790126404332e-08,
+          -1.0,
+          -7.549790126404332e-08,
+          -0.4289999153246494
+        ],
+        [
+          -0.1736481487751007,
+          6.12408470601622e-08,
+          -0.9848077297210693,
+          1.3127030594951825
+        ],
+        [
+          0.9848077297210693,
+          8.746098245637768e-08,
+          -0.1736481487751007,
+          -0.42417516700554947
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5416752099990845,
+        -0.5416752099990845,
+        0.45451951026916504,
+        0.4545195698738098
+      ],
+      "fitted_display_pivot_position_unity": [
+        -0.44999992812720596,
+        1.1480212017707823,
+        -0.4552438691592985
+      ],
+      "position_unity": [
+        -0.44999992812720596,
+        1.1480212017707823,
+        -0.4552438691592985
+      ],
+      "position_blender": [
+        0.44999992812720596,
+        0.4552438691592985,
+        1.1480212017707823
+      ],
+      "game_tight_turned_center_unity": [
+        -0.0020000000000000018,
+        0.020999999999999998,
+        0.16757500000000003
+      ],
+      "game_tight_center_source": "item-points-20261027.json tight_turned",
+      "game_formula_max_error_m": 4.440892098500626e-16,
+      "lean_degrees": 10.000000000000012,
+      "inward_lean_degrees": 10,
+      "lateral_lean_blender_degrees": -0.0,
+      "lean_direction_unity": [
+        0,
+        0,
+        1
+      ],
+      "side_unity_z": "negative",
+      "yaw_source_blender_degrees": 90,
+      "butt_point_blender": [
+        0.45,
+        0.620554128422814,
+        0.2104999999999999
+      ],
+      "butt_floor_gap_m": 0.0004999999999999172,
+      "contact": {
+        "native_point_blender": [
+          0.44999995373143514,
+          0.4805,
+          0.766
+        ],
+        "frame_point_blender": [
+          0.4499996304512024,
+          0.48000001907348633,
+          0.7660003900527954
+        ],
+        "native_triangle_index": 94,
+        "frame_triangle_index": 637,
+        "gap_m": 0.0004999938537366688,
+        "shaft_height_fraction": 0.2962598110804453
+      },
+      "intrusion_m": 0.0,
+      "frame_surface_crossings": 0,
+      "bounds_blender": {
+        "min": [
+          0.4185018592521316,
+          0.2570727800499373,
+          0.2104999999999999
+        ],
+        "max": [
+          0.4814978592521316,
+          0.625231563308286,
+          2.0855433883492944
+        ]
+      },
+      "triangles": 378,
+      "face": 1,
+      "tier": 0,
+      "oversize": false,
+      "kind_filter": [
+        "spear",
+        "atgeir",
+        "two_handed_axe",
+        "sledge",
+        "sword_long",
+        "staff",
+        "berserkir_axes"
+      ],
+      "accepted_prefabs": [
+        "AtgeirBlackmetal",
+        "AtgeirBronze",
+        "AtgeirGold",
+        "AtgeirGold_BloodLightning",
+        "AtgeirGold_FrostFire",
+        "AtgeirHimminAfl",
+        "AtgeirIron",
+        "AtgeirWood",
+        "AxeBerzerkr",
+        "AxeBerzerkrBlood",
+        "AxeBerzerkrLightning",
+        "AxeBerzerkrNature",
+        "AxeEarly",
+        "Battleaxe",
+        "BattleaxeBlackmetal",
+        "BattleaxeCrystal",
+        "BattleaxeGold",
+        "BattleaxeGold_BloodLightning",
+        "BattleaxeGold_FrostFire",
+        "BattleaxeSkullSplittur",
+        "BattleaxeWood",
+        "FW_BattleaxeCrystal",
+        "SP_BattleaxeCrystal",
+        "SledgeCheat",
+        "SledgeDemolisher",
+        "SledgeGold",
+        "SledgeGold_BloodLightning",
+        "SledgeGold_FrostFire",
+        "SledgeIron",
+        "SledgeStagbreaker",
+        "SledgeWood",
+        "SpearBronze",
+        "SpearCarapace",
+        "SpearChitin",
+        "SpearElderbark",
+        "SpearFlint",
+        "SpearGold",
+        "SpearGold_BloodLightning",
+        "SpearGold_FrostFire",
+        "SpearSplitner",
+        "SpearSplitner_Blood",
+        "SpearSplitner_Lightning",
+        "SpearSplitner_Nature",
+        "SpearWolfFang",
+        "SpearWood",
+        "THSwordGold",
+        "THSwordGold_BloodLightning",
+        "THSwordGold_FrostFire",
+        "THSwordKrom",
+        "THSwordSlayer",
+        "THSwordSlayerBlood",
+        "THSwordSlayerLightning",
+        "THSwordSlayerNature",
+        "THSwordWood",
+        "VAAntler_greataxe",
+        "VAAtgeirChitin",
+        "VAAtgeir_Flint",
+        "VABlackmetal_dualaxes",
+        "VABlackmetal_greatsword",
+        "VABone_dualaxes",
+        "VABonemassGreatsword",
+        "VABonemassWarhammer",
+        "VABronzeSledge",
+        "VABronze_dualaxes",
+        "VACrystal_dualaxes",
+        "VAElderHammer",
+        "VAFlametalAxe_2h",
+        "VAFlametalAxe_blood_2h",
+        "VAFlametalAxe_lightning_2h",
+        "VAFlametalAxe_primal_2h",
+        "VAFlint_Greatsword",
+        "VAFlint_dualaxes",
+        "VAFlint_greataxe",
+        "VAGold_dualaxes",
+        "VAGold_dualaxes_frostfire",
+        "VAGold_dualaxes_thunderblood",
+        "VAGreatswordFader",
+        "VAIron_dualaxes",
+        "VAJotunn_2h_axe",
+        "VAJotunn_dualaxes",
+        "VAMeteorAtgeir",
+        "VAMeteorAtgeir_blood",
+        "VAMeteorAtgeir_lightning",
+        "VAMeteorAtgeir_nature",
+        "VAModer_dualaxes",
+        "VAModer_greatsword",
+        "VAQueen_greatsword",
+        "VASilverAtgeir",
+        "VASilverSledge",
+        "VASpearBlackmetal",
+        "VASpearFader",
+        "VASpearFlint",
+        "VASpearModer",
+        "VAYagluthAtgeir",
+        "VAYagluth_greatsword",
+        "VAatgeir_antler",
+        "VAblackmetal_2h_axe",
+        "VAblackmetal_battleaxe",
+        "VAblackmetal_sledge",
+        "VAbronze_battleaxe",
+        "VAbronze_greatsword",
+        "VAflametal_sledge",
+        "VAflametal_sledge_blood",
+        "VAflametal_sledge_lightning",
+        "VAflametal_sledge_nature",
+        "VAiron_greatsword",
+        "VAsilver_greatsword"
+      ],
+      "lean_back_degrees": 10,
+      "slot_pitch_m": 0.18,
+      "slot_center_blender": [
+        0.45,
+        0.56,
+        0.21
+      ],
+      "floor_pocket_blender": {
+        "min": [
+          0.366,
+          0.37900000000000006,
+          0.21
+        ],
+        "max": [
+          0.534,
+          0.7410000000000001,
+          0.265
+        ]
+      },
+      "support_mode": "butt on structural floor within identical slot; lower shaft against continuous shared crossbar; straw carries no weight",
+      "clearance_authority": "measurements/r5c/long-lean-table.json; use only fit:true for the exact place/prefab, never a box or example pose alone",
+      "clear_box": {
+        "min_blender": [
+          -0.23462471616756914,
+          -0.9246923810796001,
+          0.21
+        ],
+        "max_blender": [
+          1.134624716167569,
+          0.9246923810796001,
+          3.237624206479069
+        ],
+        "size_blender": [
+          1.3692494323351383,
+          1.8493847621592001,
+          3.027624206479069
+        ],
+        "frame_free": false,
+        "definition": "Common maximal successful-pose envelope at all places. Overlaps neighbouring envelopes and includes support timber; not an empty cuboid and not a universal-fit proof."
+      },
+      "clearance_profile_complete": false
+    }
+  ],
+  "snap_points": [
+    {
+      "name": "run_left",
+      "position_blender": [
+        -0.6,
+        0,
+        0
+      ],
+      "position_unity": [
+        0.6000000238418579,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "run_right",
+      "position_blender": [
+        0.6,
+        0,
+        0
+      ],
+      "position_unity": [
+        -0.6000000238418579,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "uv": {
+    "authority": "r3 family UV | exporter = shader",
+    "method": "Final polygon orthonormal projection with isotropic scale, source-colour atlas repack, no collapsed UVs. Coordinator uvcheck is a mandatory build gate.",
+    "result": "OK   /Users/joost/storehouse-m-20261025/sol/arsenal-kit/exports/arsenalkit_long_r5b/Frame.obj: collapsed tris on textured texels 0 (+0 on flat colour, allowed), uvs out of [0,1] 0 (+0 allowed u-wraps in full-width strips), tris crossing a region border 0, tris >3x coarser than region median 0 (+0 >3x finer, reported only), tris stretched >4:1 0; textured density px/m p5/p50/p95 40/40/40; region medians (bands, wrap strips [(0, 32), (32, 64), (64, 96), (96, 128)], atlas atlas.png) rows 32-64 40, rows 64-96 40"
+  },
+  "space": {
+    "blender": "X run, Y depth, Z up",
+    "obj": "bx,bz,-by; Unity loader flips X",
+    "unity": "-bx,bz,-by"
+  },
+  "crossbars": [
+    {
+      "face": -1,
+      "center": [
+        0,
+        -0.43,
+        0.72
+      ],
+      "size": [
+        1.2,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "face": 1,
+      "center": [
+        0,
+        0.43,
+        0.72
+      ],
+      "size": [
+        1.2,
+        0.1,
+        0.1
+      ]
+    }
+  ],
+  "lean_table": "../../measurements/r5c/long-lean-table.json",
+  "universal_fit_claim": false,
+  "accepted_prefabs": [
+    "AtgeirBlackmetal",
+    "AtgeirBronze",
+    "AtgeirGold",
+    "AtgeirGold_BloodLightning",
+    "AtgeirGold_FrostFire",
+    "AtgeirHimminAfl",
+    "AtgeirIron",
+    "AtgeirWood",
+    "AxeBerzerkr",
+    "AxeBerzerkrBlood",
+    "AxeBerzerkrLightning",
+    "AxeBerzerkrNature",
+    "AxeEarly",
+    "Battleaxe",
+    "BattleaxeBlackmetal",
+    "BattleaxeCrystal",
+    "BattleaxeGold",
+    "BattleaxeGold_BloodLightning",
+    "BattleaxeGold_FrostFire",
+    "BattleaxeSkullSplittur",
+    "BattleaxeWood",
+    "FW_BattleaxeCrystal",
+    "SP_BattleaxeCrystal",
+    "SledgeCheat",
+    "SledgeDemolisher",
+    "SledgeGold",
+    "SledgeGold_BloodLightning",
+    "SledgeGold_FrostFire",
+    "SledgeIron",
+    "SledgeStagbreaker",
+    "SledgeWood",
+    "SpearBronze",
+    "SpearCarapace",
+    "SpearChitin",
+    "SpearElderbark",
+    "SpearFlint",
+    "SpearGold",
+    "SpearGold_BloodLightning",
+    "SpearGold_FrostFire",
+    "SpearSplitner",
+    "SpearSplitner_Blood",
+    "SpearSplitner_Lightning",
+    "SpearSplitner_Nature",
+    "SpearWolfFang",
+    "SpearWood",
+    "THSwordGold",
+    "THSwordGold_BloodLightning",
+    "THSwordGold_FrostFire",
+    "THSwordKrom",
+    "THSwordSlayer",
+    "THSwordSlayerBlood",
+    "THSwordSlayerLightning",
+    "THSwordSlayerNature",
+    "THSwordWood",
+    "VAAntler_greataxe",
+    "VAAtgeirChitin",
+    "VAAtgeir_Flint",
+    "VABlackmetal_dualaxes",
+    "VABlackmetal_greatsword",
+    "VABone_dualaxes",
+    "VABonemassGreatsword",
+    "VABonemassWarhammer",
+    "VABronzeSledge",
+    "VABronze_dualaxes",
+    "VACrystal_dualaxes",
+    "VAElderHammer",
+    "VAFlametalAxe_2h",
+    "VAFlametalAxe_blood_2h",
+    "VAFlametalAxe_lightning_2h",
+    "VAFlametalAxe_primal_2h",
+    "VAFlint_Greatsword",
+    "VAFlint_dualaxes",
+    "VAFlint_greataxe",
+    "VAGold_dualaxes",
+    "VAGold_dualaxes_frostfire",
+    "VAGold_dualaxes_thunderblood",
+    "VAGreatswordFader",
+    "VAIron_dualaxes",
+    "VAJotunn_2h_axe",
+    "VAJotunn_dualaxes",
+    "VAMeteorAtgeir",
+    "VAMeteorAtgeir_blood",
+    "VAMeteorAtgeir_lightning",
+    "VAMeteorAtgeir_nature",
+    "VAModer_dualaxes",
+    "VAModer_greatsword",
+    "VAQueen_greatsword",
+    "VASilverAtgeir",
+    "VASilverSledge",
+    "VASpearBlackmetal",
+    "VASpearFader",
+    "VASpearFlint",
+    "VASpearModer",
+    "VAYagluthAtgeir",
+    "VAYagluth_greatsword",
+    "VAatgeir_antler",
+    "VAblackmetal_2h_axe",
+    "VAblackmetal_battleaxe",
+    "VAblackmetal_sledge",
+    "VAbronze_battleaxe",
+    "VAbronze_greatsword",
+    "VAflametal_sledge",
+    "VAflametal_sledge_blood",
+    "VAflametal_sledge_lightning",
+    "VAflametal_sledge_nature",
+    "VAiron_greatsword",
+    "VAsilver_greatsword"
+  ],
+  "clearance_contract": "Exact native per-prefab pose table is mandatory; fit:false cannot be bypassed by permissive kind filters. Broad common envelopes do not authorize arbitrary fills. Every multi-item arrangement still needs pair-collision checks."
+}

@@ -1,0 +1,1039 @@
+{
+  "version": 3,
+  "status": "internal concept",
+  "variant": "Rail r3 3",
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "armory_atlas.png"
+  },
+  "convention": "Frame OBJ=(Blender x,z,-y), Y up; loader flipX. Anchors=Unity(-Blender x,Blender z,-Blender y); yaw about Unity Y. Native worn geometry remains Z up.",
+  "size_m": {
+    "width": 3.561,
+    "depth": 1.0
+  },
+  "tiling": {
+    "pitch_m": 1.187,
+    "count": 3,
+    "end_to_nearest_center_m": 0.5935,
+    "unit_width_m": 3.561,
+    "texture_repeat_length_m": 1.187,
+    "back_height_m": 1.2325,
+    "join": "Exact half posts and feet combine at a join; deck/back rail continue flush. UV tiles repeat per pitch without wrapping, with isotropic deck scale. Every real-area face has finite atlas area."
+  },
+  "mannequins": [
+    {
+      "index": 0,
+      "set": "Bronze",
+      "side": "front",
+      "bay": 0,
+      "items": {
+        "helmet": "HelmetBronze",
+        "chest": "ArmorBronzeChest",
+        "legs": "ArmorBronzeLegs",
+        "cape": "CapeDeerHide",
+        "weapon": "SwordBronze",
+        "shield": "ShieldBronzeBuckler"
+      },
+      "position": [
+        1.187,
+        0.25747362710535526,
+        -0.025
+      ],
+      "yaw": 3.5,
+      "equipment_attachments": [
+        {
+          "kind": "weapon",
+          "prefab": "SwordBronze",
+          "side": "Right",
+          "attach_joint": "RightHand_Attach",
+          "joint_matrix_blender": [
+            [
+              1.000002145767212,
+              -2.9802322387695312e-08,
+              -1.3422686606645584e-07,
+              0.3408546447753906
+            ],
+            [
+              -1.3259705156087875e-07,
+              -8.568167686462402e-08,
+              1.0000007152557373,
+              0.3650888502597809
+            ],
+            [
+              1.8812716007232666e-07,
+              -1.0000027418136597,
+              6.51925802230835e-08,
+              1.4531782865524292
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_delta_blender": [
+            [
+              0.6398778557777405,
+              -0.02083730697631836,
+              -0.7681937217712402,
+              0.7292960286140442
+            ],
+            [
+              0.7660389542579651,
+              -0.06226047873497009,
+              0.639771580696106,
+              -0.7363389730453491
+            ],
+            [
+              -0.061158984899520874,
+              -0.9978424310684204,
+              -0.02387697994709015,
+              1.4527959823608398
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "objects": [
+            "SwordBronze__Viking_Sword (1)"
+          ],
+          "joint_world_blender": [
+            [
+              0.9482300877571106,
+              -3.3228594986667304e-08,
+              0.05799592658877373,
+              -0.8426184058189392
+            ],
+            [
+              -0.05799626186490059,
+              -7.951735625510992e-08,
+              0.9482287168502808,
+              0.3514192998409271
+            ],
+            [
+              1.7872079638436844e-07,
+              -0.9500026106834412,
+              6.193295121192932e-08,
+              1.6379929780960083
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "kind": "shield",
+          "prefab": "ShieldBronzeBuckler",
+          "side": "Left",
+          "attach_joint": "LeftHand_Attach",
+          "joint_matrix_blender": [
+            [
+              0.9119237661361694,
+              0.007483263500034809,
+              0.4102967083454132,
+              0.021399032324552536
+            ],
+            [
+              0.41036558151245117,
+              -0.016629301011562347,
+              -0.9117704629898071,
+              0.18025262653827667
+            ],
+            [
+              9.685754776000977e-08,
+              0.9998365640640259,
+              -0.018235240131616592,
+              1.4308602809906006
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_delta_blender": [
+            [
+              -0.26967328786849976,
+              0.014010339975357056,
+              -0.9628498554229736,
+              0.8275418281555176
+            ],
+            [
+              -0.9600175619125366,
+              -0.08191141486167908,
+              0.26768767833709717,
+              -0.6645996570587158
+            ],
+            [
+              -0.07511794567108154,
+              0.9965412616729736,
+              0.035539209842681885,
+              1.4111577272415161
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "objects": [
+            "ShieldBronzeBuckler__model (1)"
+          ],
+          "joint_world_blender": [
+            [
+              0.8885112404823303,
+              0.006131407339125872,
+              0.336175799369812,
+              -1.1562548875808716
+            ],
+            [
+              0.3362322151660919,
+              -0.016202369704842567,
+              -0.8883618712425232,
+              0.19467952847480774
+            ],
+            [
+              9.201466610875286e-08,
+              0.9498447179794312,
+              -0.017323477193713188,
+              1.6167908906936646
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "equipment_objects": [
+        "SwordBronze__Viking_Sword (1)",
+        "ShieldBronzeBuckler__model (1)"
+      ],
+      "outfit_armor_objects": [
+        "ArmorBronzeChest__BronzeArmor.001",
+        "ArmorBronzeChest__player_material_surface",
+        "ArmorBronzeLegs__BronzeArmor",
+        "ArmorBronzeLegs__player_material_surface",
+        "CapeDeerHide__cape2",
+        "HelmetBronze__bronzehelmet"
+      ],
+      "hand_objects": [
+        "carved_right_hand",
+        "carved_left_hand"
+      ],
+      "visual_scale": 0.95,
+      "pose_name": "calm_1",
+      "pose": {
+        "method": "rotation-only two-segment arm pose; native bone lengths retained",
+        "upper_direction_right": [
+          0.11,
+          0.25,
+          -0.29
+        ],
+        "upper_direction_left": [
+          -0.11,
+          0.16,
+          -0.29
+        ],
+        "forearm_direction_right": [
+          -0.12,
+          0.35,
+          0.11
+        ],
+        "forearm_direction_left": [
+          0.3,
+          0.09,
+          0.11
+        ]
+      },
+      "front_axis": "Blender local +Y; Unity local -Z",
+      "armor_objects": [
+        "ArmorBronzeChest__BronzeArmor.001",
+        "ArmorBronzeChest__player_material_surface",
+        "ArmorBronzeLegs__BronzeArmor",
+        "ArmorBronzeLegs__player_material_surface",
+        "CapeDeerHide__cape2",
+        "HelmetBronze__bronzehelmet",
+        "SwordBronze__Viking_Sword (1)",
+        "ShieldBronzeBuckler__model (1)"
+      ],
+      "form_objects": [
+        "mannequin_Bronze_shoulder_yoke",
+        "mannequin_Bronze_neck",
+        "mannequin_Bronze_head_knob",
+        "mannequin_Bronze_Left_upper",
+        "mannequin_Bronze_Left_forearm",
+        "mannequin_Bronze_Left_thigh",
+        "mannequin_Bronze_Left_calf",
+        "mannequin_Bronze_Left_foot",
+        "mannequin_Bronze_Right_upper",
+        "mannequin_Bronze_Right_forearm",
+        "mannequin_Bronze_Right_thigh",
+        "mannequin_Bronze_Right_calf",
+        "mannequin_Bronze_Right_foot",
+        "mannequin_Bronze_carved_solid_torso",
+        "mannequin_Bronze_waist_stem",
+        "mannequin_Bronze_carved_hip",
+        "carved_right_hand",
+        "carved_left_hand",
+        "mannequin_Bronze_Right_wrist_core",
+        "mannequin_Bronze_Left_wrist_core",
+        "mannequin_Bronze_waist_core",
+        "mannequin_Bronze_Left_hip_core",
+        "mannequin_Bronze_Right_hip_core",
+        "B2_Bronze_foot_block",
+        "B2_Bronze_boot_fixing_pin",
+        "B2_Bronze_boot_fixing_pin.001"
+      ],
+      "clear_box": {
+        "min": [
+          0.7707574367523193,
+          0.2499999850988388,
+          -0.42573922872543335
+        ],
+        "max": [
+          1.5489128828048706,
+          2.216150999069214,
+          0.23547455668449402
+        ],
+        "convention": "Unity metres; sorted axis-aligned bounds"
+      },
+      "source_island_set_index": 0,
+      "source_to_rail_blender": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.42800000309944153
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "set": "Iron",
+      "side": "front",
+      "bay": 1,
+      "items": {
+        "helmet": "HelmetIron",
+        "chest": "ArmorIronChest",
+        "legs": "ArmorIronLegs",
+        "cape": "CapeLinen",
+        "weapon": "SwordIron",
+        "shield": "ShieldIronBuckler"
+      },
+      "position": [
+        -0.0,
+        0.2540951338596642,
+        -0.025
+      ],
+      "yaw": -2.0,
+      "equipment_attachments": [
+        {
+          "kind": "weapon",
+          "prefab": "SwordIron",
+          "side": "Right",
+          "attach_joint": "RightHand_Attach",
+          "joint_matrix_blender": [
+            [
+              1.000002145767212,
+              1.1175870895385742e-08,
+              4.272442311048508e-08,
+              0.3444824814796448
+            ],
+            [
+              -1.280568540096283e-08,
+              -1.043081283569336e-07,
+              1.0000008344650269,
+              0.36729344725608826
+            ],
+            [
+              1.5087425708770752e-07,
+              -1.0000026226043701,
+              -1.0617077350616455e-07,
+              1.4531095027923584
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_delta_blender": [
+            [
+              0.6398780345916748,
+              -0.02083727717399597,
+              -0.7681936621665955,
+              0.732923686504364
+            ],
+            [
+              0.7660391330718994,
+              -0.06226050853729248,
+              0.639771580696106,
+              -0.7341344952583313
+            ],
+            [
+              -0.06115913391113281,
+              -0.9978423118591309,
+              -0.023877054452896118,
+              1.4527274370193481
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "objects": [
+            "SwordIron__Viking_Sword (1)"
+          ],
+          "joint_world_blender": [
+            [
+              0.9494233131408691,
+              1.4068898934738172e-08,
+              -0.03315454348921776,
+              0.3148815631866455
+            ],
+            [
+              0.03315461799502373,
+              -9.866182182349803e-08,
+              0.9494220614433289,
+              0.3851374089717865
+            ],
+            [
+              1.4333053854898026e-07,
+              -0.9500024914741516,
+              -1.0086223056759991e-07,
+              1.6345491409301758
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "kind": "shield",
+          "prefab": "ShieldIronBuckler",
+          "side": "Left",
+          "attach_joint": "LeftHand_Attach",
+          "joint_matrix_blender": [
+            [
+              0.9050257205963135,
+              0.007698070257902145,
+              0.4252917468547821,
+              0.018536195158958435
+            ],
+            [
+              0.4253619611263275,
+              -0.01637886092066765,
+              -0.9048761129379272,
+              0.1867234706878662
+            ],
+            [
+              2.7939677238464355e-08,
+              0.9998389482498169,
+              -0.01809746026992798,
+              1.43150794506073
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_delta_blender": [
+            [
+              -0.25378575921058655,
+              0.015302017331123352,
+              -0.9671391248703003,
+              0.8385155200958252
+            ],
+            [
+              -0.9643473625183105,
+              -0.08154475688934326,
+              0.2517627477645874,
+              -0.6447099447250366
+            ],
+            [
+              -0.07501250505447388,
+              0.9965522289276123,
+              0.03545117378234863,
+              1.4119571447372437
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "objects": [
+            "ShieldIronBuckler__model (1)"
+          ],
+          "joint_world_blender": [
+            [
+              0.845147967338562,
+              0.007851745933294296,
+              0.43378180265426636,
+              0.011407924816012383
+            ],
+            [
+              0.433853417634964,
+              -0.015295213088393211,
+              -0.8450082540512085,
+              0.20289382338523865
+            ],
+            [
+              2.6542693376541138e-08,
+              0.9498469829559326,
+              -0.01719258725643158,
+              1.614027738571167
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "equipment_objects": [
+        "SwordIron__Viking_Sword (1)",
+        "ShieldIronBuckler__model (1)"
+      ],
+      "outfit_armor_objects": [
+        "ArmorIronChest__IronArmor",
+        "ArmorIronChest__player_material_surface",
+        "ArmorIronLegs__SilverWolfArmor_Legs.001",
+        "ArmorIronLegs__player_material_surface",
+        "CapeLinen__cape1",
+        "HelmetIron__bronzehelmet"
+      ],
+      "hand_objects": [
+        "carved_right_hand.001",
+        "carved_left_hand.001"
+      ],
+      "visual_scale": 0.95,
+      "pose_name": "calm_2",
+      "pose": {
+        "method": "rotation-only two-segment arm pose; native bone lengths retained",
+        "upper_direction_right": [
+          0.113,
+          0.253,
+          -0.29
+        ],
+        "upper_direction_left": [
+          -0.113,
+          0.163,
+          -0.29
+        ],
+        "forearm_direction_right": [
+          -0.118,
+          0.353,
+          0.108
+        ],
+        "forearm_direction_left": [
+          0.298,
+          0.093,
+          0.108
+        ]
+      },
+      "front_axis": "Blender local +Y; Unity local -Z",
+      "armor_objects": [
+        "ArmorIronChest__IronArmor",
+        "ArmorIronChest__player_material_surface",
+        "ArmorIronLegs__SilverWolfArmor_Legs.001",
+        "ArmorIronLegs__player_material_surface",
+        "CapeLinen__cape1",
+        "HelmetIron__bronzehelmet",
+        "SwordIron__Viking_Sword (1)",
+        "ShieldIronBuckler__model (1)"
+      ],
+      "form_objects": [
+        "mannequin_Iron_shoulder_yoke",
+        "mannequin_Iron_neck",
+        "mannequin_Iron_head_knob",
+        "mannequin_Iron_Left_upper",
+        "mannequin_Iron_Left_forearm",
+        "mannequin_Iron_Left_thigh",
+        "mannequin_Iron_Left_calf",
+        "mannequin_Iron_Left_foot",
+        "mannequin_Iron_Right_upper",
+        "mannequin_Iron_Right_forearm",
+        "mannequin_Iron_Right_thigh",
+        "mannequin_Iron_Right_calf",
+        "mannequin_Iron_Right_foot",
+        "mannequin_Iron_carved_solid_torso",
+        "mannequin_Iron_waist_stem",
+        "mannequin_Iron_carved_hip",
+        "carved_right_hand.001",
+        "carved_left_hand.001",
+        "mannequin_Iron_Right_wrist_core",
+        "mannequin_Iron_Left_wrist_core",
+        "mannequin_Iron_waist_core",
+        "mannequin_Iron_Left_hip_core",
+        "mannequin_Iron_Right_hip_core",
+        "B2_Iron_foot_block",
+        "B2_Iron_boot_fixing_pin",
+        "B2_Iron_boot_fixing_pin.001"
+      ],
+      "clear_box": {
+        "min": [
+          -0.46522781252861023,
+          0.25,
+          -0.47777774930000305
+        ],
+        "max": [
+          0.3926125466823578,
+          2.2127726078033447,
+          0.2665722370147705
+        ],
+        "convention": "Unity metres; sorted axis-aligned bounds"
+      },
+      "source_island_set_index": 1,
+      "source_to_rail_blender": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.42800000309944153
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "set": "Root",
+      "side": "front",
+      "bay": 2,
+      "items": {
+        "helmet": "HelmetRoot",
+        "chest": "ArmorRootChest",
+        "legs": "ArmorRootLegs",
+        "cape": "CapeTrollHide",
+        "weapon": "AxeIron",
+        "shield": "ShieldIronBuckler"
+      },
+      "position": [
+        -1.187,
+        0.2574649783782661,
+        -0.025
+      ],
+      "yaw": 1.3000000000000114,
+      "equipment_attachments": [
+        {
+          "kind": "weapon",
+          "prefab": "AxeIron",
+          "side": "Right",
+          "attach_joint": "RightHand_Attach",
+          "joint_matrix_blender": [
+            [
+              -1.000002145767212,
+              2.9802322387695312e-08,
+              1.3422686606645584e-07,
+              0.13807255029678345
+            ],
+            [
+              -1.4551915228366852e-08,
+              -2.421438694000244e-08,
+              -1.000001072883606,
+              0.42943665385246277
+            ],
+            [
+              3.5390257835388184e-08,
+              -1.0000028610229492,
+              4.190951585769653e-08,
+              1.4530401229858398
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_delta_blender": [
+            [
+              -0.6398779153823853,
+              0.02083730697631836,
+              0.7681938409805298,
+              -0.2503689229488373
+            ],
+            [
+              -0.766039252281189,
+              0.06226038932800293,
+              -0.6397716403007507,
+              1.5308647155761719
+            ],
+            [
+              -0.061159104108810425,
+              -0.9978424906730652,
+              -0.023876875638961792,
+              1.4526578187942505
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "objects": [
+            "AxeIron__Viking_Axe"
+          ],
+          "joint_world_blender": [
+            [
+              -0.9497575163841248,
+              2.7783025657868166e-08,
+              -0.02155292220413685,
+              1.3273909091949463
+            ],
+            [
+              0.02155306003987789,
+              -2.3640078339326465e-08,
+              -0.9497565031051636,
+              0.4298839271068573
+            ],
+            [
+              3.36207435225333e-08,
+              -0.9500027298927307,
+              3.9814040064811707e-08,
+              1.6378531455993652
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "kind": "shield",
+          "prefab": "ShieldIronBuckler",
+          "side": "Left",
+          "attach_joint": "LeftHand_Attach",
+          "joint_matrix_blender": [
+            [
+              0.8979925513267517,
+              0.007901276461780071,
+              0.4399445652961731,
+              0.015651583671569824
+            ],
+            [
+              0.44001615047454834,
+              -0.01612520031630993,
+              -0.8978459239006042,
+              0.1931406557559967
+            ],
+            [
+              1.1548399925231934e-07,
+              0.999841570854187,
+              -0.017956692725419998,
+              1.432134747505188
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_delta_blender": [
+            [
+              -0.2380731999874115,
+              0.016563624143600464,
+              -0.9711058735847473,
+              0.8490380644798279
+            ],
+            [
+              -0.9683544039726257,
+              -0.08115929365158081,
+              0.23601387441158295,
+              -0.6248571872711182
+            ],
+            [
+              -0.07490488886833191,
+              0.9965636134147644,
+              0.03536111116409302,
+              1.4127390384674072
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "objects": [
+            "ShieldIronBuckler__model (1).001"
+          ],
+          "joint_world_blender": [
+            [
+              0.8623570799827576,
+              0.007156733889132738,
+              0.39848846197128296,
+              1.2060279846191406
+            ],
+            [
+              0.3985532820224762,
+              -0.015485293231904507,
+              -0.8622162342071533,
+              0.20809903740882874
+            ],
+            [
+              1.0970979502644695e-07,
+              0.9498494863510132,
+              -0.017058858647942543,
+              1.6179929971694946
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "equipment_objects": [
+        "AxeIron__Viking_Axe",
+        "ShieldIronBuckler__model (1).001"
+      ],
+      "outfit_armor_objects": [
+        "ArmorRootChest__RootArmorSkirt",
+        "ArmorRootChest__player_material_surface",
+        "ArmorRootLegs__RootArmorPants.005",
+        "ArmorRootLegs__player_material_surface",
+        "CapeTrollHide__cape2",
+        "HelmetRoot__default"
+      ],
+      "hand_objects": [
+        "carved_right_hand.002",
+        "carved_left_hand.002"
+      ],
+      "visual_scale": 0.95,
+      "pose_name": "calm_3",
+      "pose": {
+        "method": "rotation-only two-segment arm pose; native bone lengths retained",
+        "upper_direction_right": [
+          0.116,
+          0.256,
+          -0.29
+        ],
+        "upper_direction_left": [
+          -0.116,
+          0.166,
+          -0.29
+        ],
+        "forearm_direction_right": [
+          -0.11599999999999999,
+          0.356,
+          0.106
+        ],
+        "forearm_direction_left": [
+          0.296,
+          0.096,
+          0.106
+        ]
+      },
+      "front_axis": "Blender local +Y; Unity local -Z",
+      "armor_objects": [
+        "ArmorRootChest__RootArmorSkirt",
+        "ArmorRootChest__player_material_surface",
+        "ArmorRootLegs__RootArmorPants.005",
+        "ArmorRootLegs__player_material_surface",
+        "CapeTrollHide__cape2",
+        "HelmetRoot__default",
+        "AxeIron__Viking_Axe",
+        "ShieldIronBuckler__model (1).001"
+      ],
+      "form_objects": [
+        "mannequin_Root_shoulder_yoke",
+        "mannequin_Root_neck",
+        "mannequin_Root_head_knob",
+        "mannequin_Root_Left_upper",
+        "mannequin_Root_Left_forearm",
+        "mannequin_Root_Left_thigh",
+        "mannequin_Root_Left_calf",
+        "mannequin_Root_Left_foot",
+        "mannequin_Root_Right_upper",
+        "mannequin_Root_Right_forearm",
+        "mannequin_Root_Right_thigh",
+        "mannequin_Root_Right_calf",
+        "mannequin_Root_Right_foot",
+        "mannequin_Root_carved_solid_torso",
+        "mannequin_Root_waist_stem",
+        "mannequin_Root_carved_hip",
+        "carved_right_hand.002",
+        "carved_left_hand.002",
+        "mannequin_Root_Right_wrist_core",
+        "mannequin_Root_Left_wrist_core",
+        "mannequin_Root_waist_core",
+        "mannequin_Root_Left_hip_core",
+        "mannequin_Root_Right_hip_core",
+        "B2_Root_foot_block",
+        "B2_Root_boot_fixing_pin",
+        "B2_Root_boot_fixing_pin.001"
+      ],
+      "clear_box": {
+        "min": [
+          -1.6186466217041016,
+          0.25,
+          -0.4469643533229828
+        ],
+        "max": [
+          -0.7743717432022095,
+          2.4702579975128174,
+          0.3235797584056854
+        ],
+        "convention": "Unity metres; sorted axis-aligned bounds"
+      },
+      "source_island_set_index": 2,
+      "source_to_rail_blender": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.42800000309944153
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "spares": [],
+  "spare_capacity": 0,
+  "inventory_display_slots": 18,
+  "inventory_slot_order": [
+    "helmet",
+    "chest",
+    "legs",
+    "cape",
+    "weapon",
+    "shield"
+  ],
+  "source": "reference/R3_island_source.blend: unchanged baked island forms, poses, grips and native equipment, rigid placement only",
+  "snap_points": [
+    {
+      "name": "corner_left_back",
+      "position_blender": [
+        -1.7805,
+        -0.5,
+        0.0
+      ],
+      "position_unity": [
+        1.7805,
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "name": "corner_left_front",
+      "position_blender": [
+        -1.7805,
+        0.5,
+        0.0
+      ],
+      "position_unity": [
+        1.7805,
+        0.0,
+        -0.5
+      ]
+    },
+    {
+      "name": "corner_right_back",
+      "position_blender": [
+        1.7805,
+        -0.5,
+        0.0
+      ],
+      "position_unity": [
+        -1.7805,
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "name": "corner_right_front",
+      "position_blender": [
+        1.7805,
+        0.5,
+        0.0
+      ],
+      "position_unity": [
+        -1.7805,
+        0.0,
+        -0.5
+      ]
+    }
+  ]
+}

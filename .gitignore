@@ -1,0 +1,8 @@
+bin/
+obj/
+*.zip
+package/plugins/
+package/CHANGELOG.md
+package/README.md
+package/LICENSE
+__pycache__/

@@ -1,0 +1,24 @@
+{
+  "_doc": "Which pieces the Armory Rail and Island dress together, and which weapon and shield go with them (first present wins, else any one-handed weapon / any shield). Prefab names; checked against the game at load, misses logged. Pieces not listed group by set name, else by name stem. Edit freely; the mod reads it at start (W, 25 Oct 2026, from M's list; names checked against the game's prefab inventory).",
+  "outfits": [
+    { "name": "bronze", "pieces": ["ArmorBronzeChest", "ArmorBronzeLegs", "HelmetBronze"], "weapon": ["SwordBronze", "MaceBronze", "AxeBronze"], "shield": ["ShieldBronzeBuckler"] },
+    { "name": "iron", "pieces": ["ArmorIronChest", "ArmorIronLegs", "HelmetIron"], "weapon": ["SwordIron", "MaceIron", "AxeIron"], "shield": ["ShieldBanded", "ShieldIronBuckler", "ShieldIronSquare"] },
+    { "name": "root", "pieces": ["ArmorRootChest", "ArmorRootLegs", "HelmetRoot"], "weapon": ["SwordIron", "MaceIron", "AxeIron"], "shield": ["ShieldBanded", "ShieldIronBuckler"] },
+    { "name": "leather", "pieces": ["ArmorLeatherChest", "ArmorLeatherLegs", "HelmetLeather", "CapeDeerHide"], "weapon": ["KnifeFlint", "AxeFlint"], "shield": ["ShieldWood"] },
+    { "name": "troll", "pieces": ["ArmorTrollLeatherChest", "ArmorTrollLeatherLegs", "HelmetTrollLeather", "CapeTrollHide"], "weapon": ["KnifeCopper", "SwordBronze"], "shield": ["ShieldBronzeBuckler", "ShieldWood"] },
+    { "name": "wolf", "pieces": ["ArmorWolfChest", "ArmorWolfLegs", "HelmetDrake", "CapeWolf"], "weapon": ["SwordSilver", "MaceSilver"], "shield": ["ShieldSilver"] },
+    { "name": "fenring", "pieces": ["ArmorFenringChest", "ArmorFenringLegs", "HelmetFenring"], "weapon": ["SwordSilver", "MaceSilver"], "shield": ["ShieldSilver"] },
+    { "name": "padded", "pieces": ["ArmorPaddedCuirass", "ArmorPaddedGreaves", "HelmetPadded", "CapeLox"], "weapon": ["SwordBlackmetal", "AxeBlackMetal", "KnifeBlackMetal"], "shield": ["ShieldBlackmetal"] },
+    { "name": "lox", "pieces": ["ArmorLoxChest", "ArmorLoxLegs", "HelmetLox"], "weapon": ["SwordBlackmetal", "AxeBlackMetal"], "shield": ["ShieldBlackmetal"] },
+    { "name": "carapace", "pieces": ["ArmorCarapaceChest", "ArmorCarapaceLegs", "HelmetCarapace"], "weapon": ["SwordMistwalker", "KnifeChitin"], "shield": ["ShieldCarapace", "ShieldCarapaceBuckler"] },
+    { "name": "mage", "pieces": ["ArmorMageChest", "ArmorMageLegs", "HelmetMage", "CapeFeather"], "weapon": ["SwordMistwalker"], "shield": ["ShieldCarapace", "ShieldCarapaceBuckler"] },
+    { "name": "flametal", "pieces": ["ArmorFlametalChest", "ArmorFlametalLegs", "HelmetFlametal"], "weapon": ["SwordNiedhogg", "AxeBerzerkr"], "shield": ["ShieldFlametal"] },
+    { "name": "ashlands", "pieces": ["ArmorAshlandsMediumChest", "ArmorAshlandsMediumlegs", "HelmetAshlandsMediumHood", "CapeAsh"], "weapon": ["SwordNiedhogg", "AxeBerzerkr"], "shield": ["ShieldFlametal"] },
+    { "name": "ashlandsmage", "pieces": ["ArmorMageChest_Ashlands", "ArmorMageLegs_Ashlands", "HelmetMage_Ashlands"], "weapon": ["SwordNiedhogg"], "shield": ["ShieldFlametal"] },
+    { "name": "berserker", "pieces": ["ArmorBerserkerChest", "ArmorBerserkerLegs", "HelmetBerserkerHood"], "weapon": ["AxeBerzerkr"], "shield": ["ShieldFlametal"] },
+    { "name": "berserkerundead", "pieces": ["ArmorBerserkerUndeadChest", "ArmorBerserkerUndeadLegs", "HelmetBerserkerUndead"], "weapon": ["AxeBerzerkr"], "shield": ["ShieldFlametal"] },
+    { "name": "deepnorthheavy", "pieces": ["ArmorDeepNorthHeavyChest", "ArmorDeepNorthHeavylegs", "HelmetDNHeavy"], "weapon": [], "shield": [] },
+    { "name": "deepnorthmedium", "pieces": ["ArmorDeepNorthMediumChest", "ArmorDeepNorthMediumlegs", "HelmetDNMediumHood", "CapeDeepNorth"], "weapon": [], "shield": [] },
+    { "name": "deepnorthmage", "pieces": ["ArmorDeepNorthMageChest", "ArmorDeepNorthMagelegs", "HelmetDNMage", "CapeDeepNorthMage"], "weapon": [], "shield": [] }
+  ]
+}

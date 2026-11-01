@@ -1,0 +1,3263 @@
+{
+ "schema": "storehouse-anchors/1",
+ "furniture": "Bomb Crate",
+ "slug": "bombcrate",
+ "round": 2,
+ "placement": "ground",
+ "unit_count": 64,
+ "slots_designed_for": 64,
+ "stack_per_unit": true,
+ "mirror": false,
+ "heap": false,
+ "homes": true,
+ "slots_note": "12 trays x 4 units + the reserve's 16 = 64 stacks of up to 50 bombs (3200 bombs); eight chest rows of eight = 64 slots",
+ "frame": {
+  "obj": "BombCrate.obj",
+  "atlas": "bombcrate_atlas.png 128x128 point",
+  "tris": 8340,
+  "size_m": [
+   2.38,
+   0.995,
+   2.127
+  ],
+  "size_note": "[x, y (up), z] Unity; x includes the bucket hung at the right end (body 2.091 wide)",
+  "bounds_unity": {
+   "min": [
+    -1.334,
+    0.0,
+    -1.064
+   ],
+   "max": [
+    1.045,
+    0.995,
+    1.064
+   ]
+  },
+  "contents_top_y_full": 0.921,
+  "stacking": "not stackable (stepped, open trays)"
+ },
+ "space": {
+  "unity": "prefab space, origin on the floor at the centre of the footprint, +z front, +y up, +x to the furniture's left seen from the front",
+  "from_blender": "ux=-bx, uy=bz, uz=-by"
+ },
+ "groups": {
+  "key": "compartment",
+  "rows": "four tiers stepping up to the back: tier 0 (front) groups 9-12, tier 1 groups 4, 5, 7, 8, tier 2 groups 0-3, each left to right seen from the front; tier 3 (back, highest) group 6, the reserve",
+  "homes": {
+   "0": "BombBile",
+   "1": "BombLava",
+   "2": "BombOoze",
+   "3": "BombSmoke",
+   "4": "BombDynamite",
+   "5": "BombSiege",
+   "7": "BombBlob_Frost",
+   "8": "BombBlob_Lava",
+   "9": "BombBlob_Morkhalla",
+   "10": "BombBlob_Poison",
+   "11": "BombBlob_PoisonElite",
+   "12": "BombBlob_Tar",
+   "6": "spare: any bomb kind"
+  },
+  "rule": "Homes store: each group's units carry 'item', the bomb kind its tray is for (the reserve has none, only 'example_item'). Group 6 is the reserve (spare) with 16 units. A kind that fills its tray takes an empty one; every layout is packed against all eight bomb shapes, so any kind may lie in any tray without a copy touching another."
+ },
+ "band": {
+  "BombBile": "bile yellow-green",
+  "BombLava": "basalt slate",
+  "BombOoze": "ooze cream",
+  "BombSmoke": "smoke ash",
+  "BombDynamite": "ember red",
+  "BombSiege": "payload rust",
+  "BombBlob_Frost": "frost blue",
+  "BombBlob_Lava": "magma orange",
+  "BombBlob_Morkhalla": "pulp olive",
+  "BombBlob_Poison": "poison green",
+  "BombBlob_PoisonElite": "elite violet",
+  "BombBlob_Tar": "tar black",
+  "spare": "spare chalk"
+ },
+ "band_note": "paint mark colour per kind: a worn band on the tray's front board (front wall or riser); the reserve has chalk bands and a faded skull",
+ "extra_place": "a sand bucket hangs on an iron hook at the right end (seen from the front): no group, no units",
+ "fill_order": "units are listed compartment by compartment; step 0 is the front-left nest, then left to right, then the back row",
+ "position": "unit position = the copy's foot: the anchor plane 0.010 over its tray floor (tier floors y [0.185, 0.365, 0.545, 0.725]); box informational",
+ "copy_rule": "bombs, no align: rot_quat_xyzw (a spin about up only, no tilt), fit_longest_m 0.22, anchor bottom, offset 0: every kind's lowest point lies at its own bounds gap (0-46 mm) over the anchor plane, under the straw surface (0.066 +- 0.005 over the floor).",
+ "layout": {
+  "compartments": 13,
+  "units_each": {
+   "tray": 4,
+   "reserve": 16
+  },
+  "copies_per_unit": 1,
+  "copies_full": 64,
+  "cell_inner_m": 0.42,
+  "rim_over_floor_m": 0.2,
+  "rim_over_straw_peaks_m": 0.129,
+  "heap_top_over_straw_peaks_m": 0.159,
+  "rows": {
+   "tier0": {
+    "floor_top": 0.185,
+    "rim": 0.385,
+    "y_blender": -0.705
+   },
+   "tier1": {
+    "floor_top": 0.365,
+    "rim": 0.565,
+    "y_blender": -0.235
+   },
+   "tier2": {
+    "floor_top": 0.545,
+    "rim": 0.745,
+    "y_blender": 0.235
+   },
+   "tier3": {
+    "floor_top": 0.725,
+    "rim": 0.925,
+    "y_blender": 0.705
+   }
+  },
+  "x_blender": [
+   -0.6975,
+   -0.2325,
+   0.2325,
+   0.6975
+  ],
+  "one layout": "the same four nests in every tray, turned by a multiple of 90 degrees per tray; the reserve: 2 rows of 8 nests along the full width"
+ },
+ "items": {
+  "found": {
+   "BombBile": {
+    "name": "Bile Bomb",
+    "item_bounds_centre": [
+     -0.0016,
+     0.0261,
+     -0.0043
+    ],
+    "item_bounds_size": [
+     0.3069,
+     0.3339,
+     0.2994
+    ],
+    "x_fit": 0.659,
+    "triangles": 1294
+   },
+   "BombLava": {
+    "name": "Basalt Bomb",
+    "item_bounds_centre": [
+     -0.001,
+     0.0697,
+     -0.0278
+    ],
+    "item_bounds_size": [
+     0.2356,
+     0.2503,
+     0.2647
+    ],
+    "x_fit": 0.831,
+    "triangles": 160
+   },
+   "BombOoze": {
+    "name": "Ooze Bomb",
+    "item_bounds_centre": [
+     -0.0236,
+     0.0665,
+     0.0044
+    ],
+    "item_bounds_size": [
+     0.2542,
+     0.3016,
+     0.2787
+    ],
+    "x_fit": 0.729,
+    "triangles": 158
+   },
+   "BombSmoke": {
+    "name": "Smoke Bomb",
+    "item_bounds_centre": [
+     -0.0185,
+     0.0579,
+     -0.0278
+    ],
+    "item_bounds_size": [
+     0.2928,
+     0.2079,
+     0.2931
+    ],
+    "x_fit": 0.751,
+    "triangles": 956
+   },
+   "BombSiege": {
+    "name": "Explosive Payload",
+    "item_bounds_centre": [
+     -0.0017,
+     0.1912,
+     0.0116
+    ],
+    "item_bounds_size": [
+     0.8591,
+     1.2153,
+     1.2211
+    ],
+    "x_fit": 0.18,
+    "triangles": 1280
+   },
+   "BombDynamite": {
+    "name": "Ember Charge",
+    "item_bounds_centre": [
+     -0.0006,
+     0.0181,
+     0.0044
+    ],
+    "item_bounds_size": [
+     0.1687,
+     0.2596,
+     0.1776
+    ],
+    "x_fit": 0.847,
+    "triangles": 150
+   },
+   "BombBlob_Frost": {
+    "name": "Blob Bomb: Frost",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_Lava": {
+    "name": "Blob Bomb: Lava",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_Morkhalla": {
+    "name": "Blob Bomb: Pulp",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_Poison": {
+    "name": "Blob Bomb: Poison",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_PoisonElite": {
+    "name": "Blob Bomb: Elite Poison",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   },
+   "BombBlob_Tar": {
+    "name": "Blob Bomb: Tar",
+    "item_bounds_centre": [
+     -0.001,
+     0.231,
+     -0.0065
+    ],
+    "item_bounds_size": [
+     0.286,
+     0.4605,
+     0.2812
+    ],
+    "x_fit": 0.478,
+    "triangles": 490
+   }
+  },
+  "checked_shapes": [
+   "BombBile",
+   "BombLava",
+   "BombOoze",
+   "BombSmoke",
+   "BombSiege",
+   "BombDynamite",
+   "BombBlob_Frost",
+   "BombBlob_Lava"
+  ],
+  "same_mesh_as": {
+   "BombBlob_Morkhalla": "BombBlob_Lava",
+   "BombBlob_Poison": "BombBlob_Lava",
+   "BombBlob_PoisonElite": "BombBlob_Lava",
+   "BombBlob_Tar": "BombBlob_Lava"
+  },
+  "not_in_game": [
+   "Dynamite (the mod's Fletcher list names it; the item is BombDynamite)"
+  ],
+  "modded": "none found in Player.log (r1)"
+ },
+ "checks": {
+  "coplanar_frame": {
+   "same_facing_overlaps": 0,
+   "back_to_back": 675,
+   "tolerance_mm": 2.0,
+   "min_area_cm2": 0.002
+  },
+  "per_model": {
+   "BombBile": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombLava": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombOoze": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombSmoke": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombSiege": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombDynamite": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Frost": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Lava": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Morkhalla": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Poison": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_PoisonElite": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BombBlob_Tar": {
+    "copies": 64,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   }
+  },
+  "full_store": {
+   "copies": 64,
+   "frame_clipping": 0,
+   "between_compartments": 0,
+   "contents_top_z": 0.921
+  },
+  "spare_holds_each_kind": {
+   "BombBile": [
+    0,
+    0
+   ],
+   "BombLava": [
+    0,
+    0
+   ],
+   "BombOoze": [
+    0,
+    0
+   ],
+   "BombSmoke": [
+    0,
+    0
+   ],
+   "BombSiege": [
+    0,
+    0
+   ],
+   "BombDynamite": [
+    0,
+    0
+   ],
+   "BombBlob_Frost": [
+    0,
+    0
+   ],
+   "BombBlob_Lava": [
+    0,
+    0
+   ],
+   "BombBlob_Morkhalla": [
+    0,
+    0
+   ],
+   "BombBlob_Poison": [
+    0,
+    0
+   ],
+   "BombBlob_PoisonElite": [
+    0,
+    0
+   ],
+   "BombBlob_Tar": [
+    0,
+    0
+   ]
+  },
+  "one_kind_everywhere": {
+   "BombBile": [
+    0,
+    0
+   ],
+   "BombLava": [
+    0,
+    0
+   ],
+   "BombOoze": [
+    0,
+    0
+   ],
+   "BombSmoke": [
+    0,
+    0
+   ],
+   "BombSiege": [
+    0,
+    0
+   ],
+   "BombDynamite": [
+    0,
+    0
+   ],
+   "BombBlob_Frost": [
+    0,
+    0
+   ],
+   "BombBlob_Lava": [
+    0,
+    0
+   ],
+   "BombBlob_Morkhalla": [
+    0,
+    0
+   ],
+   "BombBlob_Poison": [
+    0,
+    0
+   ],
+   "BombBlob_PoisonElite": [
+    0,
+    0
+   ],
+   "BombBlob_Tar": [
+    0,
+    0
+   ]
+  },
+  "bedding": {
+   "BombBile": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 24.0,
+    "bedded_mm_max": 32.8,
+    "wall_clearance_mm_min": 6.6,
+    "lowest_over_floor_mm_min": 37.8
+   },
+   "BombLava": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 33.8,
+    "bedded_mm_max": 41.7,
+    "wall_clearance_mm_min": 9.7,
+    "lowest_over_floor_mm_min": 28.1
+   },
+   "BombOoze": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 23.3,
+    "bedded_mm_max": 31.5,
+    "wall_clearance_mm_min": 4.1,
+    "lowest_over_floor_mm_min": 38.9
+   },
+   "BombSmoke": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 51.0,
+    "bedded_mm_max": 59.6,
+    "wall_clearance_mm_min": 5.6,
+    "lowest_over_floor_mm_min": 10.8
+   },
+   "BombSiege": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 6.1,
+    "bedded_mm_max": 14.5,
+    "wall_clearance_mm_min": 16.4,
+    "lowest_over_floor_mm_min": 55.7
+   },
+   "BombDynamite": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 49.8,
+    "bedded_mm_max": 57.8,
+    "wall_clearance_mm_min": 22.2,
+    "lowest_over_floor_mm_min": 12.1
+   },
+   "BombBlob_Frost": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 52.1,
+    "bedded_mm_max": 60.0,
+    "wall_clearance_mm_min": 39.9,
+    "lowest_over_floor_mm_min": 10.1
+   },
+   "BombBlob_Lava": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 52.1,
+    "bedded_mm_max": 60.0,
+    "wall_clearance_mm_min": 39.9,
+    "lowest_over_floor_mm_min": 10.1
+   },
+   "BombBlob_Morkhalla": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 52.1,
+    "bedded_mm_max": 60.0,
+    "wall_clearance_mm_min": 39.9,
+    "lowest_over_floor_mm_min": 10.1
+   },
+   "BombBlob_Poison": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 52.1,
+    "bedded_mm_max": 60.0,
+    "wall_clearance_mm_min": 39.9,
+    "lowest_over_floor_mm_min": 10.1
+   },
+   "BombBlob_PoisonElite": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 52.1,
+    "bedded_mm_max": 60.0,
+    "wall_clearance_mm_min": 39.9,
+    "lowest_over_floor_mm_min": 10.1
+   },
+   "BombBlob_Tar": {
+    "copies": 64,
+    "hovering": 0,
+    "no_straw_below": 0,
+    "bedded_mm_min": 52.1,
+    "bedded_mm_max": 60.0,
+    "wall_clearance_mm_min": 39.9,
+    "lowest_over_floor_mm_min": 10.1
+   }
+  },
+  "method": "mesh against mesh (BVH): every copy of every one of the twelve bomb prefabs against the frame without its straw and against every other copy in its tray; the full fill also across trays, the reserve holding each kind in turn, and each kind in all 64 units. Bedding: straw height straight above each copy's lowest point, per kind in every unit."
+ },
+ "triangles": {
+  "frame": 8340,
+  "contents_full_each_kind_in_its_home": 48232,
+  "per_prefab_full_compartment": {
+   "BombBile": 5176,
+   "BombLava": 640,
+   "BombOoze": 632,
+   "BombSmoke": 3824,
+   "BombSiege": 5120,
+   "BombDynamite": 600,
+   "BombBlob_Frost": 1960,
+   "BombBlob_Lava": 1960,
+   "BombBlob_Morkhalla": 1960,
+   "BombBlob_Poison": 1960,
+   "BombBlob_PoisonElite": 1960,
+   "BombBlob_Tar": 1960
+  },
+  "worst_one_kind_all_64": {
+   "BombBile": 82816
+  }
+ },
+ "units_data": [
+  {
+   "index": 0,
+   "compartment": 0,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "bile yellow-green",
+   "position": [
+    0.79447,
+    0.555,
+    -0.33944
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.90607,
+      0.0,
+      -0.423129
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "compartment": 0,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "bile yellow-green",
+   "position": [
+    0.60291,
+    0.555,
+    -0.34617
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.959324,
+      0.0,
+      -0.282307
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "compartment": 0,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "bile yellow-green",
+   "position": [
+    0.80879,
+    0.555,
+    -0.13106
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.917699,
+      0.0,
+      0.397277
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "compartment": 0,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "bile yellow-green",
+   "position": [
+    0.59001,
+    0.555,
+    -0.13302
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.204414,
+      0.0,
+      0.978885
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "compartment": 1,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "basalt slate",
+   "position": [
+    0.32947,
+    0.555,
+    -0.33944
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombLava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.90607,
+      0.0,
+      -0.423129
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "compartment": 1,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "basalt slate",
+   "position": [
+    0.13791,
+    0.555,
+    -0.34617
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombLava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.959324,
+      0.0,
+      -0.282307
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "compartment": 1,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "basalt slate",
+   "position": [
+    0.34379,
+    0.555,
+    -0.13106
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombLava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.917699,
+      0.0,
+      0.397277
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "compartment": 1,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "basalt slate",
+   "position": [
+    0.12501,
+    0.555,
+    -0.13302
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombLava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.204414,
+      0.0,
+      0.978885
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "compartment": 2,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "ooze cream",
+   "position": [
+    -0.13553,
+    0.555,
+    -0.33944
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombOoze",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.90607,
+      0.0,
+      -0.423129
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "compartment": 2,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "ooze cream",
+   "position": [
+    -0.32709,
+    0.555,
+    -0.34617
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombOoze",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.959324,
+      0.0,
+      -0.282307
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "compartment": 2,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "ooze cream",
+   "position": [
+    -0.12121,
+    0.555,
+    -0.13106
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombOoze",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.917699,
+      0.0,
+      0.397277
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "compartment": 2,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "ooze cream",
+   "position": [
+    -0.33999,
+    0.555,
+    -0.13302
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombOoze",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.204414,
+      0.0,
+      0.978885
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "compartment": 3,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "smoke ash",
+   "position": [
+    -0.60053,
+    0.555,
+    -0.33944
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSmoke",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.90607,
+      0.0,
+      -0.423129
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "compartment": 3,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "smoke ash",
+   "position": [
+    -0.79209,
+    0.555,
+    -0.34617
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSmoke",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.959324,
+      0.0,
+      -0.282307
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "compartment": 3,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "smoke ash",
+   "position": [
+    -0.58621,
+    0.555,
+    -0.13106
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSmoke",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.917699,
+      0.0,
+      0.397277
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "compartment": 3,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "smoke ash",
+   "position": [
+    -0.80499,
+    0.555,
+    -0.13302
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSmoke",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.204414,
+      0.0,
+      0.978885
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "compartment": 4,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "ember red",
+   "position": [
+    0.79447,
+    0.375,
+    0.13056
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombDynamite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.90607,
+      0.0,
+      -0.423129
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "compartment": 4,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "ember red",
+   "position": [
+    0.60291,
+    0.375,
+    0.12383
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombDynamite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.959324,
+      0.0,
+      -0.282307
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "compartment": 4,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "ember red",
+   "position": [
+    0.80879,
+    0.375,
+    0.33894
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombDynamite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.917699,
+      0.0,
+      0.397277
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "compartment": 4,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "ember red",
+   "position": [
+    0.59001,
+    0.375,
+    0.33698
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombDynamite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.204414,
+      0.0,
+      0.978885
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "compartment": 5,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "payload rust",
+   "position": [
+    0.32947,
+    0.375,
+    0.13056
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSiege",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.90607,
+      0.0,
+      -0.423129
+     ]
+    }
+   ]
+  },
+  {
+   "index": 21,
+   "compartment": 5,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "payload rust",
+   "position": [
+    0.13791,
+    0.375,
+    0.12383
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSiege",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.959324,
+      0.0,
+      -0.282307
+     ]
+    }
+   ]
+  },
+  {
+   "index": 22,
+   "compartment": 5,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "payload rust",
+   "position": [
+    0.34379,
+    0.375,
+    0.33894
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSiege",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.917699,
+      0.0,
+      0.397277
+     ]
+    }
+   ]
+  },
+  {
+   "index": 23,
+   "compartment": 5,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "payload rust",
+   "position": [
+    0.12501,
+    0.375,
+    0.33698
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombSiege",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.204414,
+      0.0,
+      0.978885
+     ]
+    }
+   ]
+  },
+  {
+   "index": 24,
+   "compartment": 7,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "frost blue",
+   "position": [
+    -0.12133,
+    0.375,
+    0.14041
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Frost",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.877966,
+      0.0,
+      0.478724
+     ]
+    }
+   ]
+  },
+  {
+   "index": 25,
+   "compartment": 7,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "frost blue",
+   "position": [
+    -0.33448,
+    0.375,
+    0.12751
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Frost",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.547633,
+      0.0,
+      0.836718
+     ]
+    }
+   ]
+  },
+  {
+   "index": 26,
+   "compartment": 7,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "frost blue",
+   "position": [
+    -0.12806,
+    0.375,
+    0.33197
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Frost",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.939885,
+      0.0,
+      0.341491
+     ]
+    }
+   ]
+  },
+  {
+   "index": 27,
+   "compartment": 7,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "frost blue",
+   "position": [
+    -0.33644,
+    0.375,
+    0.34629
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Frost",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.367994,
+      0.0,
+      0.929828
+     ]
+    }
+   ]
+  },
+  {
+   "index": 28,
+   "compartment": 8,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "magma orange",
+   "position": [
+    -0.58633,
+    0.375,
+    0.14041
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Lava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.877966,
+      0.0,
+      0.478724
+     ]
+    }
+   ]
+  },
+  {
+   "index": 29,
+   "compartment": 8,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "magma orange",
+   "position": [
+    -0.79948,
+    0.375,
+    0.12751
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Lava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.547633,
+      0.0,
+      0.836718
+     ]
+    }
+   ]
+  },
+  {
+   "index": 30,
+   "compartment": 8,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "magma orange",
+   "position": [
+    -0.59306,
+    0.375,
+    0.33197
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Lava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.939885,
+      0.0,
+      0.341491
+     ]
+    }
+   ]
+  },
+  {
+   "index": 31,
+   "compartment": 8,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "magma orange",
+   "position": [
+    -0.80144,
+    0.375,
+    0.34629
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Lava",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.367994,
+      0.0,
+      0.929828
+     ]
+    }
+   ]
+  },
+  {
+   "index": 32,
+   "compartment": 9,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "pulp olive",
+   "position": [
+    0.80867,
+    0.195,
+    0.61041
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Morkhalla",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.877966,
+      0.0,
+      0.478724
+     ]
+    }
+   ]
+  },
+  {
+   "index": 33,
+   "compartment": 9,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "pulp olive",
+   "position": [
+    0.59552,
+    0.195,
+    0.59751
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Morkhalla",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.547633,
+      0.0,
+      0.836718
+     ]
+    }
+   ]
+  },
+  {
+   "index": 34,
+   "compartment": 9,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "pulp olive",
+   "position": [
+    0.80194,
+    0.195,
+    0.80197
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Morkhalla",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.939885,
+      0.0,
+      0.341491
+     ]
+    }
+   ]
+  },
+  {
+   "index": 35,
+   "compartment": 9,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "pulp olive",
+   "position": [
+    0.59356,
+    0.195,
+    0.81629
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Morkhalla",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.367994,
+      0.0,
+      0.929828
+     ]
+    }
+   ]
+  },
+  {
+   "index": 36,
+   "compartment": 10,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "poison green",
+   "position": [
+    0.34367,
+    0.195,
+    0.61041
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Poison",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.877966,
+      0.0,
+      0.478724
+     ]
+    }
+   ]
+  },
+  {
+   "index": 37,
+   "compartment": 10,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "poison green",
+   "position": [
+    0.13052,
+    0.195,
+    0.59751
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Poison",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.547633,
+      0.0,
+      0.836718
+     ]
+    }
+   ]
+  },
+  {
+   "index": 38,
+   "compartment": 10,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "poison green",
+   "position": [
+    0.33694,
+    0.195,
+    0.80197
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Poison",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.939885,
+      0.0,
+      0.341491
+     ]
+    }
+   ]
+  },
+  {
+   "index": 39,
+   "compartment": 10,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "poison green",
+   "position": [
+    0.12856,
+    0.195,
+    0.81629
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Poison",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.367994,
+      0.0,
+      0.929828
+     ]
+    }
+   ]
+  },
+  {
+   "index": 40,
+   "compartment": 11,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "elite violet",
+   "position": [
+    -0.12133,
+    0.195,
+    0.61041
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_PoisonElite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.877966,
+      0.0,
+      0.478724
+     ]
+    }
+   ]
+  },
+  {
+   "index": 41,
+   "compartment": 11,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "elite violet",
+   "position": [
+    -0.33448,
+    0.195,
+    0.59751
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_PoisonElite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.547633,
+      0.0,
+      0.836718
+     ]
+    }
+   ]
+  },
+  {
+   "index": 42,
+   "compartment": 11,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "elite violet",
+   "position": [
+    -0.12806,
+    0.195,
+    0.80197
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_PoisonElite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.939885,
+      0.0,
+      0.341491
+     ]
+    }
+   ]
+  },
+  {
+   "index": 43,
+   "compartment": 11,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "elite violet",
+   "position": [
+    -0.33644,
+    0.195,
+    0.81629
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_PoisonElite",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.367994,
+      0.0,
+      0.929828
+     ]
+    }
+   ]
+  },
+  {
+   "index": 44,
+   "compartment": 12,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "tar black",
+   "position": [
+    -0.58633,
+    0.195,
+    0.61041
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Tar",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.877966,
+      0.0,
+      0.478724
+     ]
+    }
+   ]
+  },
+  {
+   "index": 45,
+   "compartment": 12,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "tar black",
+   "position": [
+    -0.79948,
+    0.195,
+    0.59751
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Tar",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.547633,
+      0.0,
+      0.836718
+     ]
+    }
+   ]
+  },
+  {
+   "index": 46,
+   "compartment": 12,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "tar black",
+   "position": [
+    -0.59306,
+    0.195,
+    0.80197
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Tar",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.939885,
+      0.0,
+      0.341491
+     ]
+    }
+   ]
+  },
+  {
+   "index": 47,
+   "compartment": 12,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "tar black",
+   "position": [
+    -0.80144,
+    0.195,
+    0.81629
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "item": "BombBlob_Tar",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.367994,
+      0.0,
+      0.929828
+     ]
+    }
+   ]
+  },
+  {
+   "index": 48,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 0,
+   "paint": "spare chalk",
+   "position": [
+    0.80445,
+    0.735,
+    -0.80526
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.947992,
+      0.0,
+      -0.318294
+     ]
+    }
+   ]
+  },
+  {
+   "index": 49,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 1,
+   "paint": "spare chalk",
+   "position": [
+    0.57159,
+    0.735,
+    -0.80955
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.800308,
+      0.0,
+      0.599589
+     ]
+    }
+   ]
+  },
+  {
+   "index": 50,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 2,
+   "paint": "spare chalk",
+   "position": [
+    0.33344,
+    0.735,
+    -0.8068
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.96973,
+      0.0,
+      -0.24418
+     ]
+    }
+   ]
+  },
+  {
+   "index": 51,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 3,
+   "paint": "spare chalk",
+   "position": [
+    0.12522,
+    0.735,
+    -0.79912
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.538264,
+      0.0,
+      0.842777
+     ]
+    }
+   ]
+  },
+  {
+   "index": 52,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 4,
+   "paint": "spare chalk",
+   "position": [
+    -0.12436,
+    0.735,
+    -0.80272
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.69425,
+      0.0,
+      0.719734
+     ]
+    }
+   ]
+  },
+  {
+   "index": 53,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 5,
+   "paint": "spare chalk",
+   "position": [
+    -0.33684,
+    0.735,
+    -0.81059
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.648006,
+      0.0,
+      0.761635
+     ]
+    }
+   ]
+  },
+  {
+   "index": 54,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 6,
+   "paint": "spare chalk",
+   "position": [
+    -0.55778,
+    0.735,
+    -0.81596
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.594812,
+      0.0,
+      0.803865
+     ]
+    }
+   ]
+  },
+  {
+   "index": 55,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 7,
+   "paint": "spare chalk",
+   "position": [
+    -0.8027,
+    0.735,
+    -0.79888
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.169452,
+      0.0,
+      0.985538
+     ]
+    }
+   ]
+  },
+  {
+   "index": 56,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 8,
+   "paint": "spare chalk",
+   "position": [
+    0.79111,
+    0.735,
+    -0.6058
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.599934,
+      0.0,
+      0.80005
+     ]
+    }
+   ]
+  },
+  {
+   "index": 57,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 9,
+   "paint": "spare chalk",
+   "position": [
+    0.56363,
+    0.735,
+    -0.60957
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.348197,
+      0.0,
+      0.937421
+     ]
+    }
+   ]
+  },
+  {
+   "index": 58,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 10,
+   "paint": "spare chalk",
+   "position": [
+    0.34105,
+    0.735,
+    -0.59392
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.990565,
+      0.0,
+      -0.137046
+     ]
+    }
+   ]
+  },
+  {
+   "index": 59,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 11,
+   "paint": "spare chalk",
+   "position": [
+    0.11872,
+    0.735,
+    -0.60997
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.671325,
+      0.0,
+      0.741163
+     ]
+    }
+   ]
+  },
+  {
+   "index": 60,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 12,
+   "paint": "spare chalk",
+   "position": [
+    -0.10527,
+    0.735,
+    -0.60713
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.422272,
+      0.0,
+      0.906469
+     ]
+    }
+   ]
+  },
+  {
+   "index": 61,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 13,
+   "paint": "spare chalk",
+   "position": [
+    -0.3492,
+    0.735,
+    -0.59304
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.626422,
+      0.0,
+      0.779484
+     ]
+    }
+   ]
+  },
+  {
+   "index": 62,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 14,
+   "paint": "spare chalk",
+   "position": [
+    -0.57877,
+    0.735,
+    -0.60894
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      0.788815,
+      0.0,
+      0.61463
+     ]
+    }
+   ]
+  },
+  {
+   "index": 63,
+   "compartment": 6,
+   "holder": "compartment",
+   "kind": "bomb",
+   "step": 15,
+   "paint": "spare chalk",
+   "position": [
+    -0.78699,
+    0.735,
+    -0.61056
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "example_item": "BombBile",
+   "copies": [
+    {
+     "offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "longest_m": 0.22,
+     "anchor": "bottom",
+     "rot_quat_xyzw": [
+      0.0,
+      -0.825945,
+      0.0,
+      0.56375
+     ]
+    }
+   ]
+  }
+ ]
+}

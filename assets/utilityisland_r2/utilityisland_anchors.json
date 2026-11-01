@@ -1,0 +1,2767 @@
+{
+  "schema": "storehouse-anchors/1",
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png"
+  },
+  "author": "Sol 6.1 / extra high",
+  "prototype": true,
+  "units": 64,
+  "slots_designed_for": 64,
+  "stack_per_unit": false,
+  "display_places": 37,
+  "display_caps": {
+    "tools": 13,
+    "saddles": 2,
+    "larger_worn": 5,
+    "small_trinkets": 15,
+    "backpacks": 2
+  },
+  "space": {
+    "position": "Unity local metres ux=-bx,uy=bz,uz=-by",
+    "rotation": "R_u=C*R_b*C^T; ItemVisual already applies180Y, do not add another half-turn",
+    "anchor": "source bounds centre derived from actual native vertices"
+  },
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "tools",
+      "place": "open end floor-backed tool bay",
+      "position": [
+        2.9200001,
+        1.14,
+        0.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.68,
+        2.04,
+        0.64
+      ],
+      "example_item": "Shovel",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071068,
+            0.0,
+            0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.9200001,
+        0.12,
+        0.1
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.68,
+        2.04,
+        0.64
+      ],
+      "clear_box_bottom_unity": [
+        2.9200001,
+        0.12,
+        0.1
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -2.92,
+          -0.1,
+          0.12
+        ],
+        "size": [
+          0.68,
+          0.64,
+          2.04
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "kind": "tools",
+      "place": "open end floor-backed tool bay",
+      "position": [
+        2.3599999,
+        1.1,
+        0.28
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.37,
+        1.96,
+        0.44
+      ],
+      "example_item": "Cultivator",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7061377,
+            -0.0370071,
+            0.0370071,
+            0.7061377
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.3599999,
+        0.12,
+        0.28
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.37,
+        1.96,
+        0.44
+      ],
+      "clear_box_bottom_unity": [
+        2.3599999,
+        0.12,
+        0.28
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -2.36,
+          -0.28,
+          0.12
+        ],
+        "size": [
+          0.37,
+          0.44,
+          1.96
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "kind": "tools",
+      "place": "open end floor-backed tool bay",
+      "position": [
+        2.0,
+        1.1,
+        -0.03
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.24,
+        1.96,
+        1.13
+      ],
+      "example_item": "Scythe",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5086501,
+            -0.4911976,
+            0.4911977,
+            0.50865
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.0,
+        0.12,
+        -0.03
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.24,
+        1.96,
+        1.13
+      ],
+      "clear_box_bottom_unity": [
+        2.0,
+        0.12,
+        -0.03
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -2.0,
+          0.03,
+          0.12
+        ],
+        "size": [
+          0.24,
+          1.13,
+          1.96
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "kind": "tools",
+      "place": "open end tool plinth; 2.04m long-tool bay",
+      "position": [
+        -3.04,
+        1.14,
+        -0.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.3,
+        2.04,
+        1.13
+      ],
+      "example_item": "Scythe",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.4956177,
+            -0.5043442,
+            0.5043442,
+            0.4956177
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -3.04,
+        0.12,
+        -0.02
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.3,
+        2.04,
+        1.13
+      ],
+      "clear_box_bottom_unity": [
+        -3.04,
+        0.12,
+        -0.02
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          3.04,
+          0.02,
+          0.12
+        ],
+        "size": [
+          0.3,
+          1.13,
+          2.04
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "kind": "saddles",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        0.7,
+        1.43,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        1.4,
+        0.7,
+        0.94
+      ],
+      "example_item": "SaddleAsksvin",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            -0.0,
+            -0.7071068,
+            -0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "saddles",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.7,
+        1.08,
+        0.0
+      ],
+      "accepted_item_types": [
+        "Saddle"
+      ],
+      "clear_box": [
+        1.4,
+        0.7,
+        0.94
+      ],
+      "clear_box_bottom_unity": [
+        0.7,
+        1.08,
+        0.0
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -0.7,
+          0,
+          1.08
+        ],
+        "size": [
+          1.4,
+          0.94,
+          0.7
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "kind": "saddles",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -1.04,
+        1.465,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        1.78,
+        0.77,
+        1.12
+      ],
+      "example_item": "SaddleMoose",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.7071068,
+            0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "saddles",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.04,
+        1.08,
+        0.0
+      ],
+      "accepted_item_types": [
+        "Saddle"
+      ],
+      "clear_box": [
+        1.78,
+        0.77,
+        1.12
+      ],
+      "clear_box_bottom_unity": [
+        -1.04,
+        1.08,
+        0.0
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          1.04,
+          0,
+          1.08
+        ],
+        "size": [
+          1.78,
+          1.12,
+          0.77
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "kind": "backpacks",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        1.3,
+        0.46,
+        0.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.6,
+        0.68,
+        0.66
+      ],
+      "example_item": "Backpack_envelope",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "backpacks",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.3,
+        0.12,
+        0.08
+      ],
+      "accepted_item_types": [
+        "Shoulder"
+      ],
+      "clear_box": [
+        0.6,
+        0.68,
+        0.66
+      ],
+      "clear_box_bottom_unity": [
+        1.3,
+        0.12,
+        0.08
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -1.3,
+          -0.08,
+          0.12
+        ],
+        "size": [
+          0.6,
+          0.66,
+          0.68
+        ]
+      },
+      "item_name_filter": "(?i)backpack",
+      "proxy_source": "coverage.md maximum backpack envelope [0.56,0.64,0.63] Unity metres"
+    },
+    {
+      "index": 7,
+      "kind": "backpacks",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        0.64,
+        0.46,
+        0.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.6,
+        0.68,
+        0.66
+      ],
+      "example_item": "Backpack_envelope",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "backpacks",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.64,
+        0.12,
+        0.08
+      ],
+      "accepted_item_types": [
+        "Shoulder"
+      ],
+      "clear_box": [
+        0.6,
+        0.68,
+        0.66
+      ],
+      "clear_box_bottom_unity": [
+        0.64,
+        0.12,
+        0.08
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -0.64,
+          -0.08,
+          0.12
+        ],
+        "size": [
+          0.6,
+          0.66,
+          0.68
+        ]
+      },
+      "item_name_filter": "(?i)backpack",
+      "proxy_source": "coverage.md maximum backpack envelope [0.56,0.64,0.63] Unity metres"
+    },
+    {
+      "index": 8,
+      "kind": "larger_worn",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -0.22,
+        0.275,
+        0.19
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        1.02,
+        0.31,
+        0.77
+      ],
+      "example_item": "Wishbone",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.7009093,
+            0.0,
+            0.7132505
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.22,
+        0.12,
+        0.19
+      ],
+      "accepted_item_types": [
+        "Utility"
+      ],
+      "clear_box": [
+        1.02,
+        0.31,
+        0.77
+      ],
+      "clear_box_bottom_unity": [
+        -0.22,
+        0.12,
+        0.19
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.22,
+          -0.19,
+          0.12
+        ],
+        "size": [
+          1.02,
+          0.77,
+          0.31
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "kind": "larger_worn",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -1.1,
+        0.28,
+        0.17
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.61,
+        0.32,
+        0.6
+      ],
+      "example_item": "BeltStrength",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0261769,
+            0.0,
+            0.9996573
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.1,
+        0.12,
+        0.17
+      ],
+      "accepted_item_types": [
+        "Utility"
+      ],
+      "clear_box": [
+        0.61,
+        0.32,
+        0.6
+      ],
+      "clear_box_bottom_unity": [
+        -1.1,
+        0.12,
+        0.17
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          1.1,
+          -0.17,
+          0.12
+        ],
+        "size": [
+          0.61,
+          0.6,
+          0.32
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "kind": "larger_worn",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -1.76,
+        0.28,
+        0.17
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.61,
+        0.32,
+        0.6
+      ],
+      "example_item": "IceShoes",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0348995,
+            0.0,
+            0.9993908
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.76,
+        0.12,
+        0.17
+      ],
+      "accepted_item_types": [
+        "Utility"
+      ],
+      "clear_box": [
+        0.61,
+        0.32,
+        0.6
+      ],
+      "clear_box_bottom_unity": [
+        -1.76,
+        0.12,
+        0.17
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          1.76,
+          -0.17,
+          0.12
+        ],
+        "size": [
+          0.61,
+          0.6,
+          0.32
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "kind": "larger_worn",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -2.5699999,
+        0.28,
+        -0.13
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.63,
+        0.32,
+        0.6
+      ],
+      "example_item": "IceSkates",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0436194,
+            0.0,
+            0.9990482
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.5699999,
+        0.12,
+        -0.13
+      ],
+      "accepted_item_types": [
+        "Utility"
+      ],
+      "clear_box": [
+        0.63,
+        0.32,
+        0.6
+      ],
+      "clear_box_bottom_unity": [
+        -2.5699999,
+        0.12,
+        -0.13
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          2.57,
+          0.13,
+          0.12
+        ],
+        "size": [
+          0.63,
+          0.6,
+          0.32
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "kind": "larger_worn",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -2.0999999,
+        0.2,
+        -0.38
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "example_item": "Demister",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.1045285,
+            0.0,
+            0.9945219
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "larger_worn",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.0999999,
+        0.12,
+        -0.38
+      ],
+      "accepted_item_types": [
+        "Utility"
+      ],
+      "clear_box": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "clear_box_bottom_unity": [
+        -2.0999999,
+        0.12,
+        -0.38
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          2.1,
+          0.38,
+          0.12
+        ],
+        "size": [
+          0.16,
+          0.16,
+          0.16
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "kind": "tools",
+      "place": "serving tray lies flat on broad end shelf",
+      "position": [
+        -2.5699999,
+        0.76,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.24,
+        1.02
+      ],
+      "example_item": "Feaster",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.6883546,
+            0.0,
+            0.7253744
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.5699999,
+        0.64,
+        0.0
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.57,
+        0.24,
+        1.02
+      ],
+      "clear_box_bottom_unity": [
+        -2.5699999,
+        0.64,
+        0.0
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          2.57,
+          0,
+          0.64
+        ],
+        "size": [
+          0.57,
+          1.02,
+          0.24
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "kind": "tools",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -0.43,
+        0.76,
+        0.12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.46,
+        0.52,
+        0.47
+      ],
+      "example_item": "Hammer",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7053843,
+            0.0493253,
+            -0.0493253,
+            0.7053844
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.43,
+        0.5,
+        0.12
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.46,
+        0.52,
+        0.47
+      ],
+      "clear_box_bottom_unity": [
+        -0.43,
+        0.5,
+        0.12
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.43,
+          -0.12,
+          0.5
+        ],
+        "size": [
+          0.46,
+          0.47,
+          0.52
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "kind": "tools",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -1.02,
+        0.76,
+        0.12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.46,
+        0.52,
+        0.47
+      ],
+      "example_item": "Hoe",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.1305262,
+            0.0,
+            0.9914449
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.02,
+        0.5,
+        0.12
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.46,
+        0.52,
+        0.47
+      ],
+      "clear_box_bottom_unity": [
+        -1.02,
+        0.5,
+        0.12
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          1.02,
+          -0.12,
+          0.5
+        ],
+        "size": [
+          0.46,
+          0.47,
+          0.52
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "kind": "tools",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -1.61,
+        0.76,
+        0.12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.46,
+        0.52,
+        0.47
+      ],
+      "example_item": "Hammer",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7053843,
+            -0.0493253,
+            0.0493253,
+            0.7053844
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.61,
+        0.5,
+        0.12
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.46,
+        0.52,
+        0.47
+      ],
+      "clear_box_bottom_unity": [
+        -1.61,
+        0.5,
+        0.12
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          1.61,
+          -0.12,
+          0.5
+        ],
+        "size": [
+          0.46,
+          0.47,
+          0.52
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "kind": "tools",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        2.99,
+        0.87,
+        -0.42
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.4,
+        0.3,
+        0.32
+      ],
+      "example_item": "Hoe",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0958458,
+            0.0,
+            0.9953962
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.99,
+        0.72,
+        -0.42
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.4,
+        0.3,
+        0.32
+      ],
+      "clear_box_bottom_unity": [
+        2.99,
+        0.72,
+        -0.42
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -2.99,
+          0.42,
+          0.72
+        ],
+        "size": [
+          0.4,
+          0.32,
+          0.3
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "kind": "tools",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        2.45,
+        0.985,
+        -0.43
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.44,
+        0.53,
+        0.31
+      ],
+      "example_item": "Hammer",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7064338,
+            -0.0308436,
+            0.0308436,
+            0.7064338
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        2.45,
+        0.72,
+        -0.43
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.44,
+        0.53,
+        0.31
+      ],
+      "clear_box_bottom_unity": [
+        2.45,
+        0.72,
+        -0.43
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -2.45,
+          0.43,
+          0.72
+        ],
+        "size": [
+          0.44,
+          0.31,
+          0.53
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "kind": "tools",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -2.5699999,
+        1.25,
+        0.34
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.49,
+        0.54,
+        0.48
+      ],
+      "example_item": "Hammer",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7064338,
+            0.0308436,
+            -0.0308436,
+            0.7064338
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.5699999,
+        0.98,
+        0.34
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.49,
+        0.54,
+        0.48
+      ],
+      "clear_box_bottom_unity": [
+        -2.5699999,
+        0.98,
+        0.34
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          2.57,
+          -0.34,
+          0.98
+        ],
+        "size": [
+          0.49,
+          0.48,
+          0.54
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "kind": "tools",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -2.5699999,
+        1.25,
+        -0.34
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.49,
+        0.54,
+        0.48
+      ],
+      "example_item": "Hoe",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0784591,
+            0.0,
+            0.9969173
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -2.5699999,
+        0.98,
+        -0.34
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        0.49,
+        0.54,
+        0.48
+      ],
+      "clear_box_bottom_unity": [
+        -2.5699999,
+        0.98,
+        -0.34
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          2.57,
+          0.34,
+          0.98
+        ],
+        "size": [
+          0.49,
+          0.48,
+          0.54
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        1.3,
+        0.5517545,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "example_item": "TrinketBlackStamina",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0087265,
+            0.0,
+            0.9999619
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.3,
+        0.4,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        1.3,
+        0.4,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -1.3,
+          0.44,
+          0.4
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.30350899904966355
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        0.65,
+        0.5517545,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "example_item": "TrinketFlametalEitr",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0697565,
+            0.0,
+            0.9975641
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.65,
+        0.4,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        0.65,
+        0.4,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -0.65,
+          0.44,
+          0.4
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.30350899904966355
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        0.0,
+        0.5517545,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "example_item": "TrinketChitinSwim",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.052336,
+            0.0,
+            0.9986295
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.0,
+        0.4,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        0.0,
+        0.4,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.0,
+          0.44,
+          0.4
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.30350899904966355
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -0.65,
+        0.5517545,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "example_item": "TrinketBlackDamageHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0261769,
+            0.0,
+            0.9996573
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.65,
+        0.4,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        -0.65,
+        0.4,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.6500000000000001,
+          0.44,
+          0.4
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.30350899904966355
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -1.3,
+        0.5517545,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "example_item": "TrinketFlametalStaminaHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0610485,
+            0.0,
+            0.9981348
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.3,
+        0.4,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.30350899904966355,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        -1.3,
+        0.4,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          1.3,
+          0.44,
+          0.4
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.30350899904966355
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        1.3,
+        0.8044735,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "example_item": "TrinketSilverDamage",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0784591,
+            0.0,
+            0.9969173
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.3,
+        0.773509,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        1.3,
+        0.773509,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -1.3,
+          0.44,
+          0.7735089990496635
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0619290016964078
+        ]
+      }
+    },
+    {
+      "index": 27,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        0.65,
+        0.8044735,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "example_item": "TrinketBloodGoldStamina",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0174524,
+            0.0,
+            0.9998477
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.65,
+        0.773509,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        0.65,
+        0.773509,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -0.65,
+          0.44,
+          0.7735089990496635
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0619290016964078
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        0.0,
+        0.8044735,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "example_item": "TrinketSilverResist",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0697565,
+            0.0,
+            0.9975641
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.0,
+        0.773509,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        0.0,
+        0.773509,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.0,
+          0.44,
+          0.7735089990496635
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0619290016964078
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -0.65,
+        0.8044735,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "example_item": "TrinketScaleStaminaDamage",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0436194,
+            0.0,
+            0.9990482
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.65,
+        0.773509,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        -0.65,
+        0.773509,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.6500000000000001,
+          0.44,
+          0.7735089990496635
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0619290016964078
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -1.3,
+        0.8044735,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "example_item": "TrinketBloodGoldHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0958458,
+            0.0,
+            0.9953962
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.3,
+        0.773509,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0619290016964078,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        -1.3,
+        0.773509,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          1.3,
+          0.44,
+          0.7735089990496635
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0619290016964078
+        ]
+      }
+    },
+    {
+      "index": 31,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        1.3,
+        0.926494,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "example_item": "TrinketCarapaceEitr",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0348995,
+            0.0,
+            0.9993908
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        1.3,
+        0.905438,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        1.3,
+        0.905438,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -1.3,
+          0.44,
+          0.9054380007460714
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0421119996951893
+        ]
+      }
+    },
+    {
+      "index": 32,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        0.65,
+        0.926494,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "example_item": "TrinketIronHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.052336,
+            0.0,
+            0.9986295
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.65,
+        0.905438,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        0.65,
+        0.905438,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          -0.65,
+          0.44,
+          0.9054380007460714
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0421119996951893
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        0.0,
+        0.926494,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "example_item": "TrinketBronzeHealth",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0784591,
+            0.0,
+            0.9969173
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        0.0,
+        0.905438,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        0.0,
+        0.905438,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.0,
+          0.44,
+          0.9054380007460714
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0421119996951893
+        ]
+      }
+    },
+    {
+      "index": 34,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -0.65,
+        0.926494,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "example_item": "TrinketIronStamina",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            -0.0348995,
+            0.0,
+            0.9993908
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.65,
+        0.905438,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        -0.65,
+        0.905438,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.6500000000000001,
+          0.44,
+          0.9054380007460714
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0421119996951893
+        ]
+      }
+    },
+    {
+      "index": 35,
+      "kind": "small_trinkets",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -1.3,
+        0.926494,
+        -0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "example_item": "TrinketBronzeStamina",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0174524,
+            0.0,
+            0.9998477
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "small_trinkets",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -1.3,
+        0.905438,
+        -0.44
+      ],
+      "accepted_item_types": [
+        "Trinket"
+      ],
+      "clear_box": [
+        0.57,
+        0.0421119996951893,
+        0.35
+      ],
+      "clear_box_bottom_unity": [
+        -1.3,
+        0.905438,
+        -0.44
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          1.3,
+          0.44,
+          0.9054380007460714
+        ],
+        "size": [
+          0.57,
+          0.35,
+          0.0421119996951893
+        ]
+      }
+    },
+    {
+      "index": 36,
+      "kind": "tools",
+      "place": "flat timber shelf; bottom-centred gravity placement",
+      "position": [
+        -0.18,
+        0.955,
+        0.52
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        3.94,
+        0.13,
+        0.25
+      ],
+      "example_item": "FishingRod",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            -0.0,
+            -0.7071068,
+            -0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "bottom_center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "tools",
+      "requires_true_scale": true,
+      "bottom_position_unity": [
+        -0.18,
+        0.89,
+        0.52
+      ],
+      "accepted_item_types": [
+        "Tool",
+        "Torch"
+      ],
+      "clear_box": [
+        3.94,
+        0.13,
+        0.25
+      ],
+      "clear_box_bottom_unity": [
+        -0.18,
+        0.89,
+        0.52
+      ],
+      "clear_box_method": "Maximal within reserved allocation cell; exported triangles independently checked in verify_geometry.py",
+      "allocation_cell_blender": {
+        "bottom": [
+          0.18,
+          -0.52,
+          0.89
+        ],
+        "size": [
+          3.94,
+          0.25,
+          0.13
+        ]
+      }
+    }
+  ],
+  "runtime_required": [
+    "Fit true turned bounds against clear_box exactly, without the old 1.25 multiplier or 2cm allowance.",
+    "Use bottom_position_unity, not legacy position as a bottom.",
+    "Classify backpack names before generic Shoulder and enforce item_name_filter; keep generic armor out.",
+    "Respect accepted_item_types in overflow; no cross-type fallback into empty backpack, saddle or flat tray cells.",
+    "Reserve Feaster for its flat quaternion; never rotate a Tool upright solely to fill a place.",
+    "Keep root scale 1; do not substitute type median dimensions for unknown mod tools."
+  ],
+  "coordinate_validation": {
+    "loader_half_turn_accounted": true,
+    "native_scale": 1.0,
+    "method": "Independent raw OBJ vertex transform readback against serialized final mirror meshes",
+    "sampled_vertex_error_m": 4.2611774839839585e-07,
+    "maximum_bottom_error_m": 7.629394538355427e-08,
+    "source": "measurements/final-verification.json"
+  },
+  "clear_box_contract": {
+    "space": "Unity prefab axes x,up,front; same as box_size",
+    "format": "[width,height,depth] metres, bottom centred at clear_box_bottom_unity = bottom_position_unity",
+    "scope": "largest box within the reserved, non-overlapping allocation cell; no finite global maximum exists in an open bay",
+    "fit": "true rotated item bounds <= clear_box, no multiplier and no padding"
+  }
+}

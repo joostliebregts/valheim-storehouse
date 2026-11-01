@@ -1,0 +1,2549 @@
+{
+  "schema": "arsenal-kit/concept-3",
+  "author": "Sol 6.1 / high",
+  "module": "bow",
+  "round": 3,
+  "footprint_m": [
+    0.9,
+    2
+  ],
+  "chest_size": 8,
+  "oversize_places": 1,
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png",
+    "triangles": 2554,
+    "bounds_blender": {
+      "min": [
+        -0.44999998807907104,
+        -1.0,
+        0.0
+      ],
+      "max": [
+        0.44999998807907104,
+        1.0,
+        2.3999998569488525
+      ]
+    }
+  },
+  "rows": [
+    {
+      "name": "bow",
+      "tier": 0,
+      "face": 0,
+      "count": 6,
+      "pitch_m": 0.15,
+      "length_m": 0.9,
+      "centres_x": [
+        -0.375,
+        -0.225,
+        -0.07500000000000001,
+        0.07499999999999996,
+        0.22499999999999998,
+        0.375
+      ]
+    },
+    {
+      "name": "crossbow",
+      "tier": 1,
+      "face": 0,
+      "count": 2,
+      "pitch_m": 0.45,
+      "length_m": 0.9,
+      "centres_x": [
+        -0.225,
+        0.225
+      ]
+    }
+  ],
+  "places": [
+    {
+      "prefab": "BowFineWood",
+      "kind": "bow",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-concepts-sol61-20261025/real-items/items/BowFineWood/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          -0.39836451411247253
+        ],
+        [
+          1.0,
+          1.910685465164705e-15,
+          4.371138828673793e-08,
+          -0.026195505633950233
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.8710409998893738
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.375,
+        0.0,
+        0.9082930152298282
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        -0.0,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "position_unity": [
+        0.375,
+        0.9082930088043213,
+        0.0
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.4183245301246643,
+          -0.17286650836467743,
+          0.12099999189376831
+        ],
+        "max": [
+          -0.3316754996776581,
+          0.17286649346351624,
+          1.6955859661102295
+        ]
+      },
+      "triangles": 544,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native bow heel on individual runner in thickness-fitted skinny slot",
+      "slot_pitch_m": 0.15,
+      "slot_clear_width_m": 0.09564903044700622,
+      "index": 0,
+      "kind_filter": [
+        "bow"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.4233245301246643,
+          -0.17786650836467743,
+          0.315
+        ],
+        "max_blender": [
+          -0.3266754996776581,
+          0.17786649346351624,
+          1.7005859661102294
+        ],
+        "size_blender": [
+          0.09664903044700623,
+          0.3557330018281937,
+          1.3855859661102294
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        -0.375,
+        0.0,
+        0.9082930152298282
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_name": "bow",
+      "slot_envelope_blender": {
+        "min": [
+          -0.4233245301246643,
+          -0.17786650836467743,
+          0.1159999918937683
+        ],
+        "max": [
+          -0.3266754996776581,
+          0.17786649346351624,
+          1.7005859661102294
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.4233245301246643,
+            -0.04713576,
+            0.12
+          ],
+          "max_blender": [
+            -0.3266754996776581,
+            0.05974416,
+            0.31200001
+          ],
+          "size_blender": [
+            0.09664903044700623,
+            0.10687991999999999,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            -0.42132455,
+            0.05974416,
+            0.12
+          ],
+          "max_blender": [
+            -0.32867548,
+            0.06373117,
+            0.31200001
+          ],
+          "size_blender": [
+            0.09264907,
+            0.003987010000000006,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            -0.4233245301246643,
+            -0.04713576,
+            0.31200001
+          ],
+          "max_blender": [
+            -0.3266754996776581,
+            0.05974416,
+            0.315
+          ],
+          "size_blender": [
+            0.09664903044700623,
+            0.10687991999999999,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            -0.42132455,
+            0.06373117,
+            0.12
+          ],
+          "max_blender": [
+            -0.32867548,
+            0.17786649346351624,
+            0.31200001
+          ],
+          "size_blender": [
+            0.09264907,
+            0.11413532346351624,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            -0.42132455,
+            0.06373117,
+            0.31200001
+          ],
+          "max_blender": [
+            -0.32867548,
+            0.17786649346351624,
+            0.315
+          ],
+          "size_blender": [
+            0.09264907,
+            0.11413532346351624,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            -0.4233245301246643,
+            -0.17786650836467743,
+            0.315
+          ],
+          "max_blender": [
+            -0.3266754996776581,
+            0.17786649346351624,
+            1.7005859661102294
+          ],
+          "size_blender": [
+            0.09664903044700623,
+            0.3557330018281937,
+            1.3855859661102294
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "BowDraugrFang",
+      "kind": "bow",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/eq-weapons/real-items/BowDraugrFang/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          -0.25001099705696106
+        ],
+        [
+          1.0,
+          1.910685465164705e-15,
+          4.371138828673793e-08,
+          0.04546400159597397
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9784129858016968
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.225,
+        0.0,
+        1.0165284933659247
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        -0.0,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "position_unity": [
+        0.22499999403953552,
+        1.0165284872055054,
+        0.0
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.2750590145587921,
+          -0.2903589904308319,
+          0.12099999189376831
+        ],
+        "max": [
+          -0.17494097352027893,
+          0.2903589904308319,
+          1.9120569229125977
+        ]
+      },
+      "triangles": 2448,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native bow heel on individual runner in thickness-fitted skinny slot",
+      "slot_pitch_m": 0.15,
+      "slot_clear_width_m": 0.10911804103851318,
+      "index": 1,
+      "kind_filter": [
+        "bow"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.2800590145587921,
+          -0.2953589904308319,
+          0.315
+        ],
+        "max_blender": [
+          -0.16994097352027893,
+          0.2953589904308319,
+          1.9170569229125975
+        ],
+        "size_blender": [
+          0.11011804103851319,
+          0.5907179808616638,
+          1.6020569229125976
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        -0.225,
+        0.0,
+        1.0165284933659247
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_name": "bow",
+      "slot_envelope_blender": {
+        "min": [
+          -0.2800590145587921,
+          -0.2953589904308319,
+          0.1159999918937683
+        ],
+        "max": [
+          -0.16994097352027893,
+          0.2953589904308319,
+          1.9170569229125975
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.2800590145587921,
+            -0.03418437,
+            0.12
+          ],
+          "max_blender": [
+            -0.16994097352027893,
+            0.054,
+            0.315
+          ],
+          "size_blender": [
+            0.11011804103851319,
+            0.08818437,
+            0.195
+          ]
+        },
+        {
+          "min_blender": [
+            -0.2800590145587921,
+            0.054,
+            0.12
+          ],
+          "max_blender": [
+            -0.16994097352027893,
+            0.17542651,
+            0.315
+          ],
+          "size_blender": [
+            0.11011804103851319,
+            0.12142651000000002,
+            0.195
+          ]
+        },
+        {
+          "min_blender": [
+            -0.27805904,
+            0.17542651,
+            0.12
+          ],
+          "max_blender": [
+            -0.17194098,
+            0.1784265,
+            0.31200001
+          ],
+          "size_blender": [
+            0.10611805999999999,
+            0.00299998999999998,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            -0.27805904,
+            0.1784265,
+            0.12
+          ],
+          "max_blender": [
+            -0.17194098,
+            0.2953589904308319,
+            0.31200001
+          ],
+          "size_blender": [
+            0.10611805999999999,
+            0.11693249043083193,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            -0.27805904,
+            0.17542651,
+            0.31200001
+          ],
+          "max_blender": [
+            -0.17194098,
+            0.1784265,
+            0.315
+          ],
+          "size_blender": [
+            0.10611805999999999,
+            0.00299998999999998,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            -0.27805904,
+            0.1784265,
+            0.31200001
+          ],
+          "max_blender": [
+            -0.17194098,
+            0.2953589904308319,
+            0.315
+          ],
+          "size_blender": [
+            0.10611805999999999,
+            0.11693249043083193,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            -0.2800590145587921,
+            -0.2953589904308319,
+            0.315
+          ],
+          "max_blender": [
+            -0.16994097352027893,
+            0.2953589904308319,
+            1.9170569229125975
+          ],
+          "size_blender": [
+            0.11011804103851319,
+            0.5907179808616638,
+            1.6020569229125976
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "BowAshlandsBlood",
+      "kind": "bow",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/arsenal-kit/real-items-r2/BowAshlandsBlood/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          -0.11813550442457199
+        ],
+        [
+          1.0,
+          1.910685465164705e-15,
+          4.371138828673793e-08,
+          0.00822899304330349
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.1241120100021362
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.07500000000000001,
+        0.0,
+        1.1628300030187713
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        -0.0,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "position_unity": [
+        0.07500000298023224,
+        1.1628299951553345,
+        0.0
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.10807248204946518,
+          -0.23753000795841217,
+          0.12100005149841309
+        ],
+        "max": [
+          -0.04192750155925751,
+          0.23752999305725098,
+          2.204659938812256
+        ]
+      },
+      "triangles": 1026,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native bow heel on individual runner in thickness-fitted skinny slot",
+      "slot_pitch_m": 0.15,
+      "slot_clear_width_m": 0.07514498049020767,
+      "index": 2,
+      "kind_filter": [
+        "bow"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.11307248204946518,
+          -0.24253000795841217,
+          0.315
+        ],
+        "max_blender": [
+          -0.03692750155925751,
+          0.24252999305725098,
+          2.2096599388122558
+        ],
+        "size_blender": [
+          0.07614498049020768,
+          0.48506000101566316,
+          1.8946599388122558
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        -0.07500000000000001,
+        0.0,
+        1.1628300030187713
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_name": "bow",
+      "slot_envelope_blender": {
+        "min": [
+          -0.11307248204946518,
+          -0.24253000795841217,
+          0.11600005149841308
+        ],
+        "max": [
+          -0.03692750155925751,
+          0.24252999305725098,
+          2.2096599388122558
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.11307248204946518,
+            -0.01340953,
+            0.12
+          ],
+          "max_blender": [
+            -0.03692750155925751,
+            0.127242,
+            0.315
+          ],
+          "size_blender": [
+            0.07614498049020768,
+            0.14065153,
+            0.195
+          ]
+        },
+        {
+          "min_blender": [
+            -0.11107248,
+            0.13024199,
+            0.12
+          ],
+          "max_blender": [
+            -0.0389275,
+            0.24252999305725098,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07214498,
+            0.11228800305725098,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            -0.11107248,
+            0.127242,
+            0.31200001
+          ],
+          "max_blender": [
+            -0.0389275,
+            0.13024199,
+            0.315
+          ],
+          "size_blender": [
+            0.07214498,
+            0.002999990000000008,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            -0.11107248,
+            0.13024199,
+            0.31200001
+          ],
+          "max_blender": [
+            -0.0389275,
+            0.24252999305725098,
+            0.315
+          ],
+          "size_blender": [
+            0.07214498,
+            0.11228800305725098,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            -0.11307248204946518,
+            -0.24253000795841217,
+            0.315
+          ],
+          "max_blender": [
+            -0.03692750155925751,
+            0.24252999305725098,
+            2.2096599388122558
+          ],
+          "size_blender": [
+            0.07614498049020768,
+            0.48506000101566316,
+            1.8946599388122558
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "BowAshlandsRoot",
+      "kind": "bow",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/arsenal-kit/real-items-r2/BowAshlandsRoot/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          0.04124000295996666
+        ],
+        [
+          1.0,
+          1.910685465164705e-15,
+          4.371138828673793e-08,
+          -0.05823000147938728
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9448919892311096
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.07499999999999996,
+        0.0,
+        0.9935349909353484
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        -0.0,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "position_unity": [
+        -0.07500000298023224,
+        0.9935349822044373,
+        0.0
+      ],
+      "bounds_blender": {
+        "min": [
+          0.03949002921581268,
+          -0.1658650040626526,
+          0.12099999189376831
+        ],
+        "max": [
+          0.1105099767446518,
+          0.1658650040626526,
+          1.866070032119751
+        ]
+      },
+      "triangles": 2608,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native bow heel on individual runner in thickness-fitted skinny slot",
+      "slot_pitch_m": 0.15,
+      "slot_clear_width_m": 0.0800199475288391,
+      "index": 3,
+      "kind_filter": [
+        "bow"
+      ],
+      "clear_box": {
+        "min_blender": [
+          0.034490029215812686,
+          -0.1708650040626526,
+          0.315
+        ],
+        "max_blender": [
+          0.1155099767446518,
+          0.1708650040626526,
+          1.8710700321197509
+        ],
+        "size_blender": [
+          0.08101994752883912,
+          0.3417300081253052,
+          1.556070032119751
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0.07499999999999996,
+        0.0,
+        0.9935349909353484
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_name": "bow",
+      "slot_envelope_blender": {
+        "min": [
+          0.034490029215812686,
+          -0.1708650040626526,
+          0.1159999918937683
+        ],
+        "max": [
+          0.1155099767446518,
+          0.1708650040626526,
+          1.8710700321197509
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.034490029215812686,
+            -0.1708650040626526,
+            0.12
+          ],
+          "max_blender": [
+            0.1155099767446518,
+            -0.102642,
+            0.31200001
+          ],
+          "size_blender": [
+            0.08101994752883912,
+            0.0682230040626526,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            -0.102642,
+            0.12
+          ],
+          "max_blender": [
+            0.11351001,
+            -0.078642,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07701999,
+            0.023999999999999994,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            -0.078642,
+            0.12
+          ],
+          "max_blender": [
+            0.11351001,
+            -0.054,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07701999,
+            0.024642000000000004,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            -0.054,
+            0.12
+          ],
+          "max_blender": [
+            0.11351001,
+            0.00443797,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07701999,
+            0.05843797,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            -0.1708650040626526,
+            0.31200001
+          ],
+          "max_blender": [
+            0.11351001,
+            -0.099642,
+            0.315
+          ],
+          "size_blender": [
+            0.07701999,
+            0.0712230040626526,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            -0.099642,
+            0.31200001
+          ],
+          "max_blender": [
+            0.11351001,
+            0.00443797,
+            0.315
+          ],
+          "size_blender": [
+            0.07701999,
+            0.10407997,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            0.00443797,
+            0.12
+          ],
+          "max_blender": [
+            0.11351001,
+            0.054,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07701999,
+            0.04956203,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            0.054,
+            0.12
+          ],
+          "max_blender": [
+            0.11351001,
+            0.094358,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07701999,
+            0.040358,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            0.094358,
+            0.12
+          ],
+          "max_blender": [
+            0.11351001,
+            0.1708650040626526,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07701999,
+            0.0765070040626526,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            0.00443797,
+            0.31200001
+          ],
+          "max_blender": [
+            0.11351001,
+            0.094358,
+            0.315
+          ],
+          "size_blender": [
+            0.07701999,
+            0.08992003,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.03649002,
+            0.094358,
+            0.31200001
+          ],
+          "max_blender": [
+            0.11351001,
+            0.1708650040626526,
+            0.315
+          ],
+          "size_blender": [
+            0.07701999,
+            0.0765070040626526,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.034490029215812686,
+            -0.1708650040626526,
+            0.315
+          ],
+          "max_blender": [
+            0.1155099767446518,
+            0.1708650040626526,
+            1.8710700321197509
+          ],
+          "size_blender": [
+            0.08101994752883912,
+            0.3417300081253052,
+            1.556070032119751
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "Bow",
+      "kind": "bow",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-concepts-sol61-20261025/real-items/items/Bow/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          0.20692700147628784
+        ],
+        [
+          1.0,
+          1.910685465164705e-15,
+          4.371138828673793e-08,
+          -0.19705750048160553
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.8794900178909302
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.22499999999999998,
+        0.0,
+        0.8631540022710269
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        -0.0,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "position_unity": [
+        -0.22499999403953552,
+        0.8631539940834045,
+        0.0
+      ],
+      "bounds_blender": {
+        "min": [
+          0.16753795742988586,
+          -0.23343849182128906,
+          0.12099999189376831
+        ],
+        "max": [
+          0.282461941242218,
+          0.23343850672245026,
+          1.6053080558776855
+        ]
+      },
+      "triangles": 260,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native bow heel on individual runner in thickness-fitted skinny slot",
+      "slot_pitch_m": 0.15,
+      "slot_clear_width_m": 0.12392398381233215,
+      "index": 4,
+      "kind_filter": [
+        "bow"
+      ],
+      "clear_box": {
+        "min_blender": [
+          0.16253795742988586,
+          -0.23843849182128907,
+          0.315
+        ],
+        "max_blender": [
+          0.287461941242218,
+          0.23843850672245026,
+          1.6103080558776854
+        ],
+        "size_blender": [
+          0.12492398381233216,
+          0.4768769985437393,
+          1.2953080558776855
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0.22499999999999998,
+        0.0,
+        0.8631540022710269
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_name": "bow",
+      "slot_envelope_blender": {
+        "min": [
+          0.16253795742988586,
+          -0.23843849182128907,
+          0.1159999918937683
+        ],
+        "max": [
+          0.287461941242218,
+          0.23843850672245026,
+          1.6103080558776854
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.16253795742988586,
+            -0.08000001,
+            0.12
+          ],
+          "max_blender": [
+            0.287461941242218,
+            0.01806544,
+            0.315
+          ],
+          "size_blender": [
+            0.12492398381233216,
+            0.09806545,
+            0.195
+          ]
+        },
+        {
+          "min_blender": [
+            0.16453797,
+            0.01806544,
+            0.12
+          ],
+          "max_blender": [
+            0.28546196,
+            0.0592825,
+            0.31200001
+          ],
+          "size_blender": [
+            0.12092399000000001,
+            0.04121706,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.16453797,
+            0.01806544,
+            0.31200001
+          ],
+          "max_blender": [
+            0.28546196,
+            0.0592825,
+            0.315
+          ],
+          "size_blender": [
+            0.12092399000000001,
+            0.04121706,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.16453797,
+            0.0592825,
+            0.12
+          ],
+          "max_blender": [
+            0.28546196,
+            0.23028252,
+            0.31200001
+          ],
+          "size_blender": [
+            0.12092399000000001,
+            0.17100001999999997,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.16453797,
+            0.23028252,
+            0.12
+          ],
+          "max_blender": [
+            0.28546196,
+            0.23843850672245026,
+            0.31200001
+          ],
+          "size_blender": [
+            0.12092399000000001,
+            0.00815598672245027,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.16453797,
+            0.0592825,
+            0.31200001
+          ],
+          "max_blender": [
+            0.28546196,
+            0.23843850672245026,
+            0.315
+          ],
+          "size_blender": [
+            0.12092399000000001,
+            0.17915600672245025,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.16253795742988586,
+            -0.23843849182128907,
+            0.315
+          ],
+          "max_blender": [
+            0.287461941242218,
+            0.23843850672245026,
+            1.6103080558776854
+          ],
+          "size_blender": [
+            0.12492398381233216,
+            0.4768769985437393,
+            1.2953080558776855
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "BowAshlands",
+      "kind": "bow",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/eq-weapons/real-items/BowAshlands/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          0.36092299222946167
+        ],
+        [
+          1.0,
+          1.910685465164705e-15,
+          4.371138828673793e-08,
+          -0.049091000109910965
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9564710259437561
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.375,
+        0.0,
+        0.976640978052335
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        -0.0,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "position_unity": [
+        -0.375,
+        0.9766409993171692,
+        0.0
+      ],
+      "bounds_blender": {
+        "min": [
+          0.3390680253505707,
+          -0.1658650040626526,
+          0.12100005149841309
+        ],
+        "max": [
+          0.4109320044517517,
+          0.1658650040626526,
+          1.8322820663452148
+        ]
+      },
+      "triangles": 502,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native bow heel on individual runner in thickness-fitted skinny slot",
+      "slot_pitch_m": 0.15,
+      "slot_clear_width_m": 0.08086397910118102,
+      "index": 5,
+      "kind_filter": [
+        "bow"
+      ],
+      "clear_box": {
+        "min_blender": [
+          0.3340680253505707,
+          -0.1708650040626526,
+          0.315
+        ],
+        "max_blender": [
+          0.4159320044517517,
+          0.0,
+          1.0761410331726073
+        ],
+        "size_blender": [
+          0.08186397910118104,
+          0.1708650040626526,
+          0.7611410331726074
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0.375,
+        0.0,
+        0.976640978052335
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_name": "bow",
+      "slot_envelope_blender": {
+        "min": [
+          0.3340680253505707,
+          -0.1708650040626526,
+          0.11600005149841308
+        ],
+        "max": [
+          0.4159320044517517,
+          0.1708650040626526,
+          1.8372820663452147
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.33606803,
+            -0.067632,
+            0.12
+          ],
+          "max_blender": [
+            0.41393203,
+            -0.054,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07786399999999999,
+            0.013631999999999998,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.33606803,
+            -0.054,
+            0.12
+          ],
+          "max_blender": [
+            0.41393203,
+            0.03379206,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07786399999999999,
+            0.08779206,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.33606803,
+            -0.067632,
+            0.31200001
+          ],
+          "max_blender": [
+            0.41393203,
+            0.03379206,
+            0.315
+          ],
+          "size_blender": [
+            0.07786399999999999,
+            0.10142406,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.33606803,
+            0.03379206,
+            0.12
+          ],
+          "max_blender": [
+            0.41393203,
+            0.103368,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07786399999999999,
+            0.06957594,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.33606803,
+            0.103368,
+            0.12
+          ],
+          "max_blender": [
+            0.41393203,
+            0.1708650040626526,
+            0.31200001
+          ],
+          "size_blender": [
+            0.07786399999999999,
+            0.06749700406265259,
+            0.19200001
+          ]
+        },
+        {
+          "min_blender": [
+            0.33606803,
+            0.03379206,
+            0.31200001
+          ],
+          "max_blender": [
+            0.41393203,
+            0.126368,
+            0.315
+          ],
+          "size_blender": [
+            0.07786399999999999,
+            0.09257594000000001,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.33606803,
+            0.126368,
+            0.31200001
+          ],
+          "max_blender": [
+            0.41393203,
+            0.1708650040626526,
+            0.315
+          ],
+          "size_blender": [
+            0.07786399999999999,
+            0.044497004062652584,
+            0.002999990000000008
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            -0.1708650040626526,
+            0.315
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.0,
+            1.0761410331726073
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.1708650040626526,
+            0.7611410331726074
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            -0.1708650040626526,
+            1.0761410331726073
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.0,
+            1.4567115497589112
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.1708650040626526,
+            0.3805705165863038
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            -0.1708650040626526,
+            1.4567115497589112
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.0,
+            1.646996808052063
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.1708650040626526,
+            0.1902852582931518
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            -0.0854325020313263,
+            1.646996808052063
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.0,
+            1.742139437198639
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.0854325020313263,
+            0.09514262914657601
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            -0.0854325020313263,
+            1.742139437198639
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.0,
+            1.8372820663452147
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.0854325020313263,
+            0.09514262914657579
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0,
+            0.315
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.1708650040626526,
+            1.0761410331726073
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.1708650040626526,
+            0.7611410331726074
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0,
+            1.0761410331726073
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.1708650040626526,
+            1.4567115497589112
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.1708650040626526,
+            0.3805705165863038
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0,
+            1.4567115497589112
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.1708650040626526,
+            1.646996808052063
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.1708650040626526,
+            0.1902852582931518
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0,
+            1.646996808052063
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.0854325020313263,
+            1.742139437198639
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.0854325020313263,
+            0.09514262914657601
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0854325020313263,
+            1.646996808052063
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.1708650040626526,
+            1.694568122625351
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.0854325020313263,
+            0.047571314573288115
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0854325020313263,
+            1.694568122625351
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.12814875304698944,
+            1.742139437198639
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.04271625101566315,
+            0.04757131457328789
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.12814875304698944,
+            1.694568122625351
+          ],
+          "max_blender": [
+            0.3750000149011612,
+            0.1708650040626526,
+            1.718353779911995
+          ],
+          "size_blender": [
+            0.04093198955059052,
+            0.04271625101566315,
+            0.023785657286643946
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.12814875304698944,
+            1.718353779911995
+          ],
+          "max_blender": [
+            0.3750000149011612,
+            0.14950687855482103,
+            1.742139437198639
+          ],
+          "size_blender": [
+            0.04093198955059052,
+            0.021358125507831588,
+            0.023785657286643946
+          ]
+        },
+        {
+          "min_blender": [
+            0.3750000149011612,
+            0.12814875304698944,
+            1.694568122625351
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.1708650040626526,
+            1.718353779911995
+          ],
+          "size_blender": [
+            0.04093198955059052,
+            0.04271625101566315,
+            0.023785657286643946
+          ]
+        },
+        {
+          "min_blender": [
+            0.3750000149011612,
+            0.12814875304698944,
+            1.718353779911995
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.14950687855482103,
+            1.742139437198639
+          ],
+          "size_blender": [
+            0.04093198955059052,
+            0.021358125507831588,
+            0.023785657286643946
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0,
+            1.742139437198639
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.0854325020313263,
+            1.8372820663452147
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.0854325020313263,
+            0.09514262914657579
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0854325020313263,
+            1.742139437198639
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.12814875304698944,
+            1.7897107517719268
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.04271625101566315,
+            0.04757131457328789
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.12814875304698944,
+            1.742139437198639
+          ],
+          "max_blender": [
+            0.3750000149011612,
+            0.14950687855482103,
+            1.765925094485283
+          ],
+          "size_blender": [
+            0.04093198955059052,
+            0.021358125507831588,
+            0.023785657286643946
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.12814875304698944,
+            1.765925094485283
+          ],
+          "max_blender": [
+            0.3750000149011612,
+            0.14950687855482103,
+            1.7897107517719268
+          ],
+          "size_blender": [
+            0.04093198955059052,
+            0.021358125507831588,
+            0.023785657286643946
+          ]
+        },
+        {
+          "min_blender": [
+            0.3750000149011612,
+            0.12814875304698944,
+            1.742139437198639
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.14950687855482103,
+            1.765925094485283
+          ],
+          "size_blender": [
+            0.04093198955059052,
+            0.021358125507831588,
+            0.023785657286643946
+          ]
+        },
+        {
+          "min_blender": [
+            0.3340680253505707,
+            0.0854325020313263,
+            1.7897107517719268
+          ],
+          "max_blender": [
+            0.4159320044517517,
+            0.12814875304698944,
+            1.8372820663452147
+          ],
+          "size_blender": [
+            0.08186397910118104,
+            0.04271625101566315,
+            0.04757131457328789
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "CrossbowArbalest",
+      "kind": "crossbow",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-concepts-sol61-20261025/real-items/items/CrossbowArbalest/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          -0.2653274548053741
+        ],
+        [
+          1.0,
+          1.910685465164705e-15,
+          4.371138828673793e-08,
+          0.3
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.311061978340149
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.2199999713897705,
+        0.299999988079071,
+        1.1799985089801024
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        -0.0,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "position_unity": [
+        0.21999996900558472,
+        1.179998517036438,
+        -0.29999998211860657
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.3356834948062897,
+          -0.33598196506500244,
+          0.32999998331069946
+        ],
+        "max": [
+          -0.10431650280952454,
+          0.9359819889068604,
+          2.029996871948242
+        ]
+      },
+      "triangles": 620,
+      "tier": 1,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "crossbow limbs resting across paired pegs attached to splayed A-frame",
+      "peg_contacts": [
+        {
+          "y": -0.33999998807907106,
+          "top_z": 1.569799840750649,
+          "gap_m": 0.0003,
+          "point_blender": [
+            -0.15371411796312762,
+            -0.32199998807907104,
+            1.570099840750649
+          ]
+        },
+        {
+          "y": 0.620000011920929,
+          "top_z": 1.5819889804840088,
+          "gap_m": 0.0003,
+          "point_blender": [
+            -0.1346342268429297,
+            0.638000011920929,
+            1.5822889804840088
+          ]
+        }
+      ],
+      "end_face_stock_tilt_degrees": 0.0,
+      "index": 6,
+      "kind_filter": [
+        "crossbow"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.32499999,
+          0.08,
+          0.33499998
+        ],
+        "max_blender": [
+          -0.09931650280952453,
+          0.81741595,
+          1.52479982
+        ],
+        "size_blender": [
+          0.22568348719047548,
+          0.73741595,
+          1.18979984
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        -0.225,
+        0.299999988079071,
+        1.1799985089801024
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.0050000286102294955,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.45,
+      "row_name": "crossbow",
+      "slot_envelope_blender": {
+        "min": [
+          -0.3406834948062897,
+          -0.34098196506500245,
+          0.32499998331069946
+        ],
+        "max": [
+          -0.09931650280952453,
+          0.9409819889068604,
+          2.034996871948242
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.331,
+            0.08,
+            0.32499998331069946
+          ],
+          "max_blender": [
+            -0.32499999,
+            0.448707975,
+            0.33499998
+          ],
+          "size_blender": [
+            0.00600001,
+            0.36870797499999997,
+            0.009999996689300517
+          ]
+        },
+        {
+          "min_blender": [
+            -0.32499999,
+            0.08,
+            0.32499998331069946
+          ],
+          "max_blender": [
+            -0.09931650280952453,
+            0.81741595,
+            0.33499998
+          ],
+          "size_blender": [
+            0.22568348719047548,
+            0.73741595,
+            0.009999996689300517
+          ]
+        },
+        {
+          "min_blender": [
+            -0.3406834948062897,
+            0.08,
+            0.33499998
+          ],
+          "max_blender": [
+            -0.331,
+            0.448707975,
+            0.9298998999999999
+          ],
+          "size_blender": [
+            0.00968349480628966,
+            0.36870797499999997,
+            0.5948999199999999
+          ]
+        },
+        {
+          "min_blender": [
+            -0.331,
+            0.08,
+            0.33499998
+          ],
+          "max_blender": [
+            -0.32499999,
+            0.448707975,
+            0.9298998999999999
+          ],
+          "size_blender": [
+            0.00600001,
+            0.36870797499999997,
+            0.5948999199999999
+          ]
+        },
+        {
+          "min_blender": [
+            -0.32499999,
+            0.08,
+            0.33499998
+          ],
+          "max_blender": [
+            -0.09931650280952453,
+            0.81741595,
+            1.52479982
+          ],
+          "size_blender": [
+            0.22568348719047548,
+            0.73741595,
+            1.18979984
+          ]
+        },
+        {
+          "min_blender": [
+            -0.32499999,
+            -0.32199997,
+            1.52479982
+          ],
+          "max_blender": [
+            -0.09931650280952453,
+            -0.08,
+            1.5697999
+          ],
+          "size_blender": [
+            0.22568348719047548,
+            0.24199997,
+            0.04500008000000011
+          ]
+        },
+        {
+          "min_blender": [
+            -0.32499999,
+            -0.34098196506500245,
+            1.5697999
+          ],
+          "max_blender": [
+            -0.09931650280952453,
+            -0.08,
+            2.034996871948242
+          ],
+          "size_blender": [
+            0.22568348719047548,
+            0.26098196506500243,
+            0.46519697194824206
+          ]
+        },
+        {
+          "min_blender": [
+            -0.32499999,
+            -0.08,
+            1.5697999
+          ],
+          "max_blender": [
+            -0.09931650280952453,
+            0.08,
+            2.034996871948242
+          ],
+          "size_blender": [
+            0.22568348719047548,
+            0.16,
+            0.46519697194824206
+          ]
+        },
+        {
+          "min_blender": [
+            -0.32499999,
+            0.08,
+            1.52479982
+          ],
+          "max_blender": [
+            -0.09931650280952453,
+            0.602,
+            2.034996871948242
+          ],
+          "size_blender": [
+            0.22568348719047548,
+            0.522,
+            0.5101970519482422
+          ]
+        },
+        {
+          "min_blender": [
+            -0.3406834948062897,
+            0.63800001,
+            1.52479982
+          ],
+          "max_blender": [
+            -0.09931650280952453,
+            0.9409819889068604,
+            1.58198905
+          ],
+          "size_blender": [
+            0.24136699199676515,
+            0.3029819789068604,
+            0.05718923000000009
+          ]
+        },
+        {
+          "min_blender": [
+            -0.3406834948062897,
+            0.602,
+            1.58198905
+          ],
+          "max_blender": [
+            -0.09931650280952453,
+            0.9409819889068604,
+            2.034996871948242
+          ],
+          "size_blender": [
+            0.24136699199676515,
+            0.3389819889068604,
+            0.4530078219482421
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "CrossbowGold",
+      "kind": "crossbow",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/arsenal-kit/real-items/CrossbowGold/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          0.13757550865411758
+        ],
+        [
+          0.9902680516242981,
+          0.13917303085327148,
+          3.7202543268222144e-08,
+          -0.24264166951179506
+        ],
+        [
+          -0.13917303085327148,
+          0.9902680516242981,
+          -4.936943653888193e-08,
+          1.3752962350845337
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.1500000014901161,
+        -0.2583795726299286,
+        1.2541933899096713
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        7.999996522934481,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.46390387415885925,
+        -0.46390387415885925,
+        0.5336602330207825,
+        0.5336602330207825
+      ],
+      "position_unity": [
+        -0.15000000596046448,
+        1.2541934251785278,
+        0.25837957859039307
+      ],
+      "bounds_blender": {
+        "min": [
+          0.01005546934902668,
+          -0.8951244354248047,
+          0.40000003576278687
+        ],
+        "max": [
+          0.28994452953338623,
+          0.4951244294643402,
+          2.1151108741760254
+        ]
+      },
+      "triangles": 5404,
+      "tier": 1,
+      "face": 0,
+      "oversize": true,
+      "support_mode": "crossbow limbs resting across paired pegs attached to splayed A-frame",
+      "peg_contacts": [
+        {
+          "y": -0.5200000029802323,
+          "top_z": 1.6873588096495877,
+          "gap_m": 0.0003,
+          "point_blender": [
+            0.23626904557100462,
+            -0.5020000029802323,
+            1.6876588096495877
+          ]
+        },
+        {
+          "y": 0.27999999701976774,
+          "top_z": 1.5749262016625625,
+          "gap_m": 0.0003,
+          "point_blender": [
+            0.2362686698185955,
+            0.29799999701976776,
+            1.5752262016625624
+          ]
+        }
+      ],
+      "end_face_stock_tilt_degrees": 7.999996522934481,
+      "index": 7,
+      "kind_filter": [
+        "crossbow"
+      ],
+      "clear_box": {
+        "min_blender": [
+          0.00505546934902668,
+          -0.9001244354248047,
+          0.39500003576278686
+        ],
+        "max_blender": [
+          0.29494452953338623,
+          0.5001244294643402,
+          1.52479982
+        ],
+        "size_blender": [
+          0.28988906018435956,
+          1.400248864889145,
+          1.1297997842372132
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0.225,
+        -0.2583795726299286,
+        1.2541933899096713
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        -0.0749999985098839,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.45,
+      "row_name": "crossbow",
+      "slot_envelope_blender": {
+        "min": [
+          0.00505546934902668,
+          -0.9001244354248047,
+          0.39500003576278686
+        ],
+        "max": [
+          0.29494452953338623,
+          0.5001244294643402,
+          2.1201108741760253
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.00505546934902668,
+            -0.9001244354248047,
+            0.39500003576278686
+          ],
+          "max_blender": [
+            0.29494452953338623,
+            0.5001244294643402,
+            1.52479982
+          ],
+          "size_blender": [
+            0.28988906018435956,
+            1.400248864889145,
+            1.1297997842372132
+          ]
+        },
+        {
+          "min_blender": [
+            0.00505546934902668,
+            -0.9001244354248047,
+            1.52479982
+          ],
+          "max_blender": [
+            0.29494452953338623,
+            -0.53799999,
+            1.68735886
+          ],
+          "size_blender": [
+            0.28988906018435956,
+            0.3621244454248047,
+            0.1625590400000001
+          ]
+        },
+        {
+          "min_blender": [
+            0.13450003,
+            -0.50199997,
+            1.52479982
+          ],
+          "max_blender": [
+            0.29494452953338623,
+            -0.35799998,
+            1.68735886
+          ],
+          "size_blender": [
+            0.16044449953338624,
+            0.14399998999999997,
+            0.1625590400000001
+          ]
+        },
+        {
+          "min_blender": [
+            0.13450003,
+            -0.35799998,
+            1.5697999
+          ],
+          "max_blender": [
+            0.29494452953338623,
+            -0.32199997,
+            1.68735886
+          ],
+          "size_blender": [
+            0.16044449953338624,
+            0.03600000999999997,
+            0.11755895999999999
+          ]
+        },
+        {
+          "min_blender": [
+            0.00505546934902668,
+            -0.9001244354248047,
+            1.68735886
+          ],
+          "max_blender": [
+            0.29494452953338623,
+            -0.32199997,
+            2.1201108741760253
+          ],
+          "size_blender": [
+            0.28988906018435956,
+            0.5781244654248047,
+            0.43275201417602527
+          ]
+        },
+        {
+          "min_blender": [
+            0.00505546934902668,
+            -0.32199997,
+            1.52479982
+          ],
+          "max_blender": [
+            0.29494452953338623,
+            0.26199999,
+            2.1201108741760253
+          ],
+          "size_blender": [
+            0.28988906018435956,
+            0.5839999600000001,
+            0.5953110541760254
+          ]
+        },
+        {
+          "min_blender": [
+            0.13450003,
+            0.29800001,
+            1.52479982
+          ],
+          "max_blender": [
+            0.29494452953338623,
+            0.5001244294643402,
+            1.57492626
+          ],
+          "size_blender": [
+            0.16044449953338624,
+            0.20212441946434023,
+            0.050126440000000105
+          ]
+        },
+        {
+          "min_blender": [
+            0.00505546934902668,
+            0.26199999,
+            1.57492626
+          ],
+          "max_blender": [
+            0.29494452953338623,
+            0.5001244294643402,
+            2.1201108741760253
+          ],
+          "size_blender": [
+            0.28988906018435956,
+            0.2381244394643402,
+            0.5451846141760253
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    }
+  ],
+  "snap_points": [
+    {
+      "name": "run_left",
+      "position_blender": [
+        -0.45,
+        0,
+        0
+      ],
+      "position_unity": [
+        0.44999998807907104,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "run_right",
+      "position_blender": [
+        0.45,
+        0,
+        0
+      ],
+      "position_unity": [
+        -0.44999998807907104,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "uv": {
+    "authority": "r3 family UV | exporter = shader",
+    "method": "Final polygon orthonormal projection with isotropic scale, source-colour atlas repack, no collapsed UVs. Coordinator uvcheck is a mandatory build gate.",
+    "result": "OK   /Users/joost/storehouse-m-20261025/sol/arsenal-kit/exports/arsenalkit_bow_r3/Frame.obj: collapsed tris on textured texels 0 (+0 on flat colour, allowed), uvs out of [0,1] 0 (+0 allowed u-wraps in full-width strips), tris crossing a region border 0, tris >3x coarser than region median 0 (+0 >3x finer, reported only), tris stretched >4:1 0; textured density px/m p5/p50/p95 40/40/40; region medians (bands, wrap strips [(0, 32), (32, 64), (64, 96), (96, 128)], atlas atlas.png) rows 32-64 40, rows 64-96 40"
+  },
+  "space": {
+    "blender": "X run, Y depth, Z up",
+    "obj": "bx,bz,-by; Unity loader flips X",
+    "unity": "-bx,bz,-by"
+  },
+  "anchor_position_contract": "slot_center_blender locates the constant-pitch display place; position_blender and matrix_blender locate its native example, which may sit asymmetrically within that place. Native pivot offsets are explicit. All clear boxes are measured absolute Blender coordinates.",
+  "clearance_note": "Hanging/retained pieces use a union of measured free boxes; the larger item envelope is never mislabeled as free space."
+}

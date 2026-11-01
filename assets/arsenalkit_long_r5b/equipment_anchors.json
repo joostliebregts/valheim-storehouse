@@ -1,0 +1,2707 @@
+{
+  "schema": "arsenal-kit/concept-3",
+  "author": "Sol 6.1 / high",
+  "module": "long",
+  "round": 5,
+  "footprint_m": [
+    1.2,
+    2
+  ],
+  "chest_size": 12,
+  "oversize_places": 1,
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png",
+    "triangles": 2524,
+    "bounds_blender": {
+      "min": [
+        -0.6000000238418579,
+        -1.0,
+        0.0
+      ],
+      "max": [
+        0.6000000834465027,
+        1.0,
+        2.3999998569488525
+      ]
+    }
+  },
+  "rows": [
+    {
+      "name": "long",
+      "tier": 0,
+      "face": 0,
+      "count": 3,
+      "pitch_m": 0.4,
+      "length_m": 1.2,
+      "centres_x": [
+        -0.4,
+        0,
+        0.4
+      ]
+    },
+    {
+      "name": "long",
+      "tier": 1,
+      "face": 0,
+      "count": 3,
+      "pitch_m": 0.4,
+      "length_m": 1.2,
+      "centres_x": [
+        -0.4,
+        0,
+        0.4
+      ]
+    },
+    {
+      "name": "long",
+      "tier": 2,
+      "face": 0,
+      "count": 3,
+      "pitch_m": 0.4,
+      "length_m": 1.2,
+      "centres_x": [
+        -0.4,
+        0,
+        0.4
+      ]
+    },
+    {
+      "name": "long",
+      "tier": 3,
+      "face": 0,
+      "count": 3,
+      "pitch_m": 0.4,
+      "length_m": 1.2,
+      "centres_x": [
+        -0.4,
+        0,
+        0.4
+      ]
+    }
+  ],
+  "places": [
+    {
+      "prefab": "SpearFlint",
+      "kind": "spear",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/eq-weapons/real-items/SpearFlint/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          -0.35554193258285527
+        ],
+        [
+          0.9902680516242981,
+          0.13917303085327148,
+          3.7202543268222144e-08,
+          -0.48309175729751597
+        ],
+        [
+          -0.13917303085327148,
+          0.9902680516242981,
+          -4.936943653888193e-08,
+          1.7719053030014038
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.3557429432868958,
+        -0.5379860186576845,
+        1.3813119069896331
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        7.999996522934481,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.46390387415885925,
+        -0.46390387415885925,
+        0.5336602330207825,
+        0.5336602330207825
+      ],
+      "position_unity": [
+        0.3557429313659668,
+        1.3813118934631348,
+        0.5379860401153564
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.4222310185432434,
+          -0.7240550518035889,
+          0.21100008487701416
+        ],
+        "max": [
+          -0.28925490379333496,
+          -0.33566534519195557,
+          2.5492963790893555
+        ]
+      },
+      "triangles": 120,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 8,
+      "lean_direction_blender": [
+        0,
+        1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        -0.37422211464892813,
+        -0.5772646888270907,
+        0.9420000000000001
+      ],
+      "index": 0,
+      "kind_filter": [
+        "spear"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.4272310185432434,
+          -0.7290550518035889,
+          0.94200003
+        ],
+        "max_blender": [
+          -0.28425490379333496,
+          -0.33066534519195556,
+          2.5542963790893554
+        ],
+        "size_blender": [
+          0.14297611474990846,
+          0.3983897066116333,
+          1.6122963490893554
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        -0.4,
+        -0.5379860186576845,
+        1.3813119069896331
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.044257056713104204,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          -0.4272310185432434,
+          -0.7290550518035889,
+          0.20600008487701416
+        ],
+        "max": [
+          -0.28425490379333496,
+          -0.33066534519195556,
+          2.5542963790893554
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.4272310185432434,
+            -0.7290550518035889,
+            0.21000001
+          ],
+          "max_blender": [
+            -0.28425490379333496,
+            -0.5562647,
+            0.91799998
+          ],
+          "size_blender": [
+            0.14297611474990846,
+            0.17279035180358893,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.4272310185432434,
+            -0.7290550518035889,
+            0.91799998
+          ],
+          "max_blender": [
+            -0.28425490379333496,
+            -0.57696468,
+            0.94200003
+          ],
+          "size_blender": [
+            0.14297611474990846,
+            0.15209037180358886,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.4272310185432434,
+            -0.7290550518035889,
+            0.94200003
+          ],
+          "max_blender": [
+            -0.28425490379333496,
+            -0.33066534519195556,
+            2.5542963790893554
+          ],
+          "size_blender": [
+            0.14297611474990846,
+            0.3983897066116333,
+            1.6122963490893554
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "SledgeIron",
+      "kind": "sledge",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/eq-weapons/real-items/SledgeIron/model.obj",
+      "matrix_blender": [
+        [
+          0.05233597382903099,
+          4.3651482428685995e-08,
+          0.9986295104026794,
+          0.03127133473753929
+        ],
+        [
+          0.9802818298339844,
+          0.19080910086631775,
+          -0.051374420523643494,
+          -0.5089391922950746
+        ],
+        [
+          -0.19054760038852692,
+          0.9816271662712097,
+          0.00998613703995943,
+          1.0995991230010986
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.030036255484446883,
+        -0.5517956399917604,
+        0.8788089900174629
+      ],
+      "rotation_blender_degrees": [
+        89.41714831165513,
+        10.984744794000449,
+        86.94395730376102
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.4613948166370392,
+        -0.4378473460674286,
+        0.5311513543128967,
+        0.5597167015075684
+      ],
+      "position_unity": [
+        -0.030036255717277527,
+        0.8788089752197266,
+        0.5517956614494324
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.07578112185001373,
+          -0.7674504518508911,
+          0.21100002527236938
+        ],
+        "max": [
+          0.13832834362983704,
+          -0.1588570773601532,
+          1.5874956846237183
+        ]
+      },
+      "triangles": 584,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 11,
+      "lean_direction_blender": [
+        0,
+        1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        0.033255145987067254,
+        -0.5573884497309728,
+        0.652
+      ],
+      "index": 1,
+      "kind_filter": [
+        "sledge"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.08078112185001374,
+          -0.7724504518508911,
+          0.65200001
+        ],
+        "max_blender": [
+          0.14332834362983704,
+          -0.1538570773601532,
+          1.5924956846237182
+        ],
+        "size_blender": [
+          0.22410946547985078,
+          0.6185933744907379,
+          0.9404956746237182
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0,
+        -0.5517956399917604,
+        0.8788089900174629
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.030036255484446883,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          -0.08078112185001374,
+          -0.7724504518508911,
+          0.20600002527236938
+        ],
+        "max": [
+          0.14332834362983704,
+          -0.1538570773601532,
+          1.5924956846237182
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.08078112185001374,
+            -0.7724504518508911,
+            0.21000001
+          ],
+          "max_blender": [
+            0.14332834362983704,
+            -0.53638846,
+            0.62799996
+          ],
+          "size_blender": [
+            0.22410946547985078,
+            0.23606199185089116,
+            0.41799995
+          ]
+        },
+        {
+          "min_blender": [
+            -0.08078112185001374,
+            -0.7724504518508911,
+            0.62799996
+          ],
+          "max_blender": [
+            0.14332834362983704,
+            -0.55708843,
+            0.65200001
+          ],
+          "size_blender": [
+            0.22410946547985078,
+            0.21536202185089115,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.08078112185001374,
+            -0.7724504518508911,
+            0.65200001
+          ],
+          "max_blender": [
+            0.14332834362983704,
+            -0.1538570773601532,
+            1.5924956846237182
+          ],
+          "size_blender": [
+            0.22410946547985078,
+            0.6185933744907379,
+            0.9404956746237182
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "SpearBronze",
+      "kind": "spear",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-concepts-sol61-20261025/real-items/items/SpearBronze/model.obj",
+      "matrix_blender": [
+        [
+          -0.03489946201443672,
+          4.368476069771532e-08,
+          0.9993908405303955,
+          0.44798095822334294
+        ],
+        [
+          0.988413393497467,
+          0.14780928194522858,
+          0.0345161147415638,
+          -0.47377912759780894
+        ],
+        [
+          -0.14771924912929535,
+          0.9890158772468567,
+          -0.005158507730811834,
+          1.7474278211593628
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.4371580302715302,
+        -0.5240373396873476,
+        1.4136988369914234
+      ],
+      "rotation_blender_degrees": [
+        90.29884377123373,
+        8.494776280183851,
+        92.02218929128716
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.4534451365470886,
+        -0.4695560932159424,
+        0.5449466109275818,
+        0.5262488126754761
+      ],
+      "position_unity": [
+        -0.4371580183506012,
+        1.4136987924575806,
+        0.5240373611450195
+      ],
+      "bounds_blender": {
+        "min": [
+          0.378836065530777,
+          -0.7290312647819519,
+          0.21099984645843506
+        ],
+        "max": [
+          0.49785616993904114,
+          -0.32567334175109863,
+          2.6134397983551025
+        ]
+      },
+      "triangles": 232,
+      "tier": 0,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 8.5,
+      "lean_direction_blender": [
+        0,
+        1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        0.4258152266048285,
+        -0.5703929553799542,
+        0.9420000000000002
+      ],
+      "index": 2,
+      "kind_filter": [
+        "spear"
+      ],
+      "clear_box": {
+        "min_blender": [
+          0.373836065530777,
+          -0.7340312647819519,
+          0.94200003
+        ],
+        "max_blender": [
+          0.5028561699390411,
+          -0.32067334175109863,
+          2.6184397983551024
+        ],
+        "size_blender": [
+          0.12902010440826417,
+          0.4133579230308533,
+          1.6764397683551024
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0.4,
+        -0.5240373396873476,
+        1.4136988369914234
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.037158030271530196,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          0.373836065530777,
+          -0.7340312647819519,
+          0.20599984645843505
+        ],
+        "max": [
+          0.5028561699390411,
+          -0.32067334175109863,
+          2.6184397983551024
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.373836065530777,
+            -0.7340312647819519,
+            0.21000001
+          ],
+          "max_blender": [
+            0.5028561699390411,
+            -0.54939294,
+            0.91799998
+          ],
+          "size_blender": [
+            0.12902010440826417,
+            0.18463832478195186,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            0.373836065530777,
+            -0.7340312647819519,
+            0.91799998
+          ],
+          "max_blender": [
+            0.5028561699390411,
+            -0.57009298,
+            0.94200003
+          ],
+          "size_blender": [
+            0.12902010440826417,
+            0.16393828478195194,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            0.373836065530777,
+            -0.7340312647819519,
+            0.94200003
+          ],
+          "max_blender": [
+            0.5028561699390411,
+            -0.32067334175109863,
+            2.6184397983551024
+          ],
+          "size_blender": [
+            0.12902010440826417,
+            0.4133579230308533,
+            1.6764397683551024
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "AtgeirBronze",
+      "kind": "atgeir",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/arsenal-kit/real-items-r2/AtgeirBronze/model.obj",
+      "matrix_blender": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          -0.423996913433075
+        ],
+        [
+          0.9890158772468567,
+          0.14780928194522858,
+          3.677030946391824e-08,
+          -0.17084338426589962
+        ],
+        [
+          -0.14780928194522858,
+          0.9890158772468567,
+          -4.969220412931463e-08,
+          1.9628371000289917
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.4174229323863984,
+        -0.198256584405899,
+        1.6959080927467494
+      ],
+      "rotation_blender_degrees": [
+        90.00000250447816,
+        8.499992837162448,
+        90.00000250447816
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.4615709185600281,
+        -0.4615709185600281,
+        0.535679280757904,
+        0.5356793403625488
+      ],
+      "position_unity": [
+        0.41742292046546936,
+        1.6959080696105957,
+        0.19825658202171326
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.46629688143730164,
+          -0.4978230893611908,
+          0.21099984645843506
+        ],
+        "max": [
+          -0.3685489892959595,
+          0.05264511704444885,
+          3.1972384452819824
+        ]
+      },
+      "triangles": 252,
+      "tier": 1,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 8.5,
+      "lean_direction_blender": [
+        0,
+        1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        -0.3991986884329963,
+        -0.30712141434820084,
+        0.9420000000000001
+      ],
+      "index": 3,
+      "kind_filter": [
+        "atgeir"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.47129688143730164,
+          -0.5028230893611908,
+          0.94200003
+        ],
+        "max_blender": [
+          -0.36354898929595947,
+          0.05764511704444885,
+          2.25999999
+        ],
+        "size_blender": [
+          0.10774789214134217,
+          0.5604682064056397,
+          1.3179999599999999
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        -0.4,
+        -0.198256584405899,
+        1.6959080927467494
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        -0.01742293238639836,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          -0.47129688143730164,
+          -0.5028230893611908,
+          0.20599984645843505
+        ],
+        "max": [
+          -0.36354898929595947,
+          0.05764511704444885,
+          3.2022384452819823
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.47129688143730164,
+            -0.5028230893611908,
+            0.21000001
+          ],
+          "max_blender": [
+            -0.36354898929595947,
+            -0.2861214,
+            0.91799998
+          ],
+          "size_blender": [
+            0.10774789214134217,
+            0.21670168936119077,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.47129688143730164,
+            -0.2581214,
+            0.21000001
+          ],
+          "max_blender": [
+            -0.36354898929595947,
+            0.05764511704444885,
+            0.91799998
+          ],
+          "size_blender": [
+            0.10774789214134217,
+            0.31576651704444886,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.47129688143730164,
+            -0.5028230893611908,
+            0.91799998
+          ],
+          "max_blender": [
+            -0.36354898929595947,
+            -0.30682144,
+            0.94200003
+          ],
+          "size_blender": [
+            0.10774789214134217,
+            0.1960016493611908,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.47129688143730164,
+            -0.2581214,
+            0.91799998
+          ],
+          "max_blender": [
+            -0.36354898929595947,
+            0.05764511704444885,
+            0.94200003
+          ],
+          "size_blender": [
+            0.10774789214134217,
+            0.31576651704444886,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.47129688143730164,
+            -0.5028230893611908,
+            0.94200003
+          ],
+          "max_blender": [
+            -0.36354898929595947,
+            0.05764511704444885,
+            2.25999999
+          ],
+          "size_blender": [
+            0.10774789214134217,
+            0.5604682064056397,
+            1.3179999599999999
+          ]
+        },
+        {
+          "min_blender": [
+            -0.47129688143730164,
+            -0.5028230893611908,
+            2.25999999
+          ],
+          "max_blender": [
+            -0.36354898929595947,
+            -0.08,
+            2.39999986
+          ],
+          "size_blender": [
+            0.10774789214134217,
+            0.4228230893611908,
+            0.13999987000000003
+          ]
+        },
+        {
+          "min_blender": [
+            -0.47129688143730164,
+            -0.5028230893611908,
+            2.39999986
+          ],
+          "max_blender": [
+            -0.36354898929595947,
+            0.05764511704444885,
+            3.2022384452819823
+          ],
+          "size_blender": [
+            0.10774789214134217,
+            0.5604682064056397,
+            0.8022385852819824
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "BattleaxeCrystal",
+      "kind": "two_handed_axe",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-concepts-sol61-20261025/real-items/items/BattleaxeCrystal/model.obj",
+      "matrix_blender": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.006631001830101013
+        ],
+        [
+          0.0,
+          0.2079116553068161,
+          -0.9781476259231567,
+          -0.06440001130104062
+        ],
+        [
+          0.0,
+          0.9781476259231567,
+          0.2079116553068161,
+          1.1575117111206055
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.05167950689792633,
+        -0.08974280059337611,
+        1.0892086849421383
+      ],
+      "rotation_blender_degrees": [
+        78.00000217054775,
+        -0.0,
+        0.0
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.6293203830718994,
+        0.0,
+        0.0,
+        0.7771459817886353
+      ],
+      "position_unity": [
+        0.05167950689792633,
+        1.089208722114563,
+        0.08974280208349228
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.4315829873085022,
+          -0.317060649394989,
+          0.2109999656677246
+        ],
+        "max": [
+          0.3282240033149719,
+          0.08266820013523102,
+          1.9641485214233398
+        ]
+      },
+      "triangles": 1029,
+      "tier": 1,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 12,
+      "lean_direction_blender": [
+        0,
+        1,
+        0
+      ],
+      "blade_inward": true,
+      "back_rest_contact_blender": [
+        -0.0017740155118654874,
+        -0.09485717794086201,
+        0.9420000000000001
+      ],
+      "index": 4,
+      "kind_filter": [
+        "two_handed_axe"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.4365829873085022,
+          -0.322060649394989,
+          0.94200003
+        ],
+        "max_blender": [
+          0.33322400331497193,
+          0.08766820013523102,
+          1.9691485214233397
+        ],
+        "size_blender": [
+          0.7698069906234741,
+          0.40972884953022004,
+          1.0271484914233397
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0,
+        -0.08974280059337611,
+        1.0892086849421383
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        -0.05167950689792633,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          -0.4365829873085022,
+          -0.322060649394989,
+          0.2059999656677246
+        ],
+        "max": [
+          0.33322400331497193,
+          0.08766820013523102,
+          1.9691485214233397
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.38519868,
+            -0.322060649394989,
+            0.21000001
+          ],
+          "max_blender": [
+            -0.04177403,
+            -0.2581214,
+            0.91799998
+          ],
+          "size_blender": [
+            0.34342465,
+            0.06393924939498902,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.4365829873085022,
+            -0.2581214,
+            0.21000001
+          ],
+          "max_blender": [
+            -0.04177403,
+            0.08766820013523102,
+            0.91799998
+          ],
+          "size_blender": [
+            0.3948089573085022,
+            0.345789600135231,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.4365829873085022,
+            -0.2581214,
+            0.91799998
+          ],
+          "max_blender": [
+            -0.04177403,
+            0.08766820013523102,
+            0.94200003
+          ],
+          "size_blender": [
+            0.3948089573085022,
+            0.345789600135231,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.04177403,
+            -0.322060649394989,
+            0.21000001
+          ],
+          "max_blender": [
+            0.33322400331497193,
+            -0.07385718,
+            0.91799998
+          ],
+          "size_blender": [
+            0.37499803331497195,
+            0.24820346939498902,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.04177403,
+            -0.322060649394989,
+            0.91799998
+          ],
+          "max_blender": [
+            0.33322400331497193,
+            -0.09455718,
+            0.94200003
+          ],
+          "size_blender": [
+            0.37499803331497195,
+            0.227503469394989,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.4365829873085022,
+            -0.322060649394989,
+            0.94200003
+          ],
+          "max_blender": [
+            0.33322400331497193,
+            0.08766820013523102,
+            1.9691485214233397
+          ],
+          "size_blender": [
+            0.7698069906234741,
+            0.40972884953022004,
+            1.0271484914233397
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "THSwordKrom",
+      "kind": "sword_long",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-concepts-sol61-20261025/real-items/items/THSwordKrom/model.obj",
+      "matrix_blender": [
+        [
+          -0.03489946201443672,
+          4.368476069771532e-08,
+          0.9993908405303955,
+          0.3900041460990906
+        ],
+        [
+          0.9870866537094116,
+          0.15643452107906342,
+          0.034469783306121826,
+          -0.13127953410148618
+        ],
+        [
+          -0.15633922815322876,
+          0.9876883029937744,
+          -0.005459523759782314,
+          1.2784899473190308
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.3999990344047547,
+        -0.1505477666854858,
+        1.1546038439779454
+      ],
+      "rotation_blender_degrees": [
+        90.31670471591332,
+        8.994475481182922,
+        92.02490770657683
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.4511445462703705,
+        -0.46717381477355957,
+        0.5469902753829956,
+        0.528222382068634
+      ],
+      "position_unity": [
+        -0.3999990224838257,
+        1.1546038389205933,
+        0.15054777264595032
+      ],
+      "bounds_blender": {
+        "min": [
+          0.3726360499858856,
+          -0.3222958445549011,
+          0.21100008487701416
+        ],
+        "max": [
+          0.4273621141910553,
+          0.046268999576568604,
+          2.098207712173462
+        ]
+      },
+      "triangles": 580,
+      "tier": 1,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 9,
+      "lean_direction_blender": [
+        0,
+        1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        0.39849303166267863,
+        -0.2086386972666198,
+        0.512
+      ],
+      "index": 5,
+      "kind_filter": [
+        "sword_long"
+      ],
+      "clear_box": {
+        "min_blender": [
+          0.3676360499858856,
+          -0.3272958445549011,
+          0.51200002
+        ],
+        "max_blender": [
+          0.4323621141910553,
+          0.0512689995765686,
+          2.103207712173462
+        ],
+        "size_blender": [
+          0.06472606420516969,
+          0.37856484413146974,
+          1.591207692173462
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0.4,
+        -0.1505477666854858,
+        1.1546038439779454
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        -9.655952453169192e-07,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          0.3676360499858856,
+          -0.3272958445549011,
+          0.20600008487701416
+        ],
+        "max": [
+          0.4323621141910553,
+          0.0512689995765686,
+          2.103207712173462
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.3676360499858856,
+            -0.3272958445549011,
+            0.21000001
+          ],
+          "max_blender": [
+            0.4323621141910553,
+            -0.1876387,
+            0.48800001
+          ],
+          "size_blender": [
+            0.06472606420516969,
+            0.13965714455490114,
+            0.278
+          ]
+        },
+        {
+          "min_blender": [
+            0.3676360499858856,
+            -0.3272958445549011,
+            0.48800001
+          ],
+          "max_blender": [
+            0.4323621141910553,
+            -0.20833869,
+            0.51200002
+          ],
+          "size_blender": [
+            0.06472606420516969,
+            0.11895715455490113,
+            0.024000010000000016
+          ]
+        },
+        {
+          "min_blender": [
+            0.3676360499858856,
+            -0.3272958445549011,
+            0.51200002
+          ],
+          "max_blender": [
+            0.4323621141910553,
+            0.0512689995765686,
+            2.103207712173462
+          ],
+          "size_blender": [
+            0.06472606420516969,
+            0.37856484413146974,
+            1.591207692173462
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "SpearWolfFang",
+      "kind": "spear",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/arsenal-kit/real-items-r2/SpearWolfFang/model.obj",
+      "matrix_blender": [
+        [
+          0.11347352713346481,
+          4.342905768339733e-08,
+          0.9935410022735596,
+          -0.4302467135746979
+        ],
+        [
+          0.9838719367980957,
+          -0.13917303085327148,
+          -0.11236920207738876,
+          0.2650580016443912
+        ],
+        [
+          0.13827411830425262,
+          0.9902680516242981,
+          -0.015792498365044594,
+          1.8335000276565552
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.4172791582583939,
+        0.3297992062076604,
+        1.3620669233810394
+      ],
+      "rotation_blender_degrees": [
+        90.91365641918327,
+        -7.947988901273066,
+        83.42093889967927
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5631250143051147,
+        -0.5024706721305847,
+        0.43679118156433105,
+        0.4895171523094177
+      ],
+      "position_unity": [
+        0.4172791540622711,
+        1.3620668649673462,
+        -0.32979920506477356
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.48545557260513306,
+          0.15599192678928375,
+          0.21099984645843506
+        ],
+        "max": [
+          -0.3491376042366028,
+          0.5080147981643677,
+          2.5141849517822266
+        ]
+      },
+      "triangles": 280,
+      "tier": 2,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 8,
+      "lean_direction_blender": [
+        0,
+        -1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        -0.4299679010613406,
+        0.3748218029177839,
+        0.9420000000000001
+      ],
+      "index": 6,
+      "kind_filter": [
+        "spear"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.49045557260513306,
+          0.15099192678928375,
+          0.94200003
+        ],
+        "max_blender": [
+          -0.3441376042366028,
+          0.5130147981643677,
+          2.5191849517822265
+        ],
+        "size_blender": [
+          0.14631796836853028,
+          0.36202287137508393,
+          1.5771849217822265
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        -0.4,
+        0.3297992062076604,
+        1.3620669233810394
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        -0.01727915825839388,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          -0.49045557260513306,
+          0.15099192678928375,
+          0.20599984645843505
+        ],
+        "max": [
+          -0.3441376042366028,
+          0.5130147981643677,
+          2.5191849517822265
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.49045557260513306,
+            0.35382181,
+            0.21000001
+          ],
+          "max_blender": [
+            -0.3441376042366028,
+            0.5130147981643677,
+            0.91799998
+          ],
+          "size_blender": [
+            0.14631796836853028,
+            0.15919298816436767,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.49045557260513306,
+            0.37452182,
+            0.91799998
+          ],
+          "max_blender": [
+            -0.3441376042366028,
+            0.5130147981643677,
+            0.94200003
+          ],
+          "size_blender": [
+            0.14631796836853028,
+            0.13849297816436767,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.49045557260513306,
+            0.15099192678928375,
+            0.94200003
+          ],
+          "max_blender": [
+            -0.3441376042366028,
+            0.5130147981643677,
+            2.5191849517822265
+          ],
+          "size_blender": [
+            0.14631796836853028,
+            0.36202287137508393,
+            1.5771849217822265
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "BattleaxeGold",
+      "kind": "two_handed_axe",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/arsenal-kit/real-items/BattleaxeGold/model.obj",
+      "matrix_blender": [
+        [
+          0.7709866166114807,
+          2.783765573610708e-08,
+          0.6368513107299805,
+          0.1415347995464697
+        ],
+        [
+          0.6281173229217529,
+          -0.16504764556884766,
+          -0.7604129910469055,
+          0.43509434878725894
+        ],
+        [
+          0.1051107868552208,
+          0.9862856268882751,
+          -0.1272495537996292,
+          1.2509713172912598
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.1733773711479745,
+        0.418781984148906,
+        1.1148851094828454
+      ],
+      "rotation_blender_degrees": [
+        97.3516288062972,
+        -6.033549629281491,
+        39.16945807858189
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.7182067632675171,
+        -0.25826898217201233,
+        0.21864084899425507,
+        0.6080068945884705
+      ],
+      "position_unity": [
+        -0.1733773648738861,
+        1.1148850917816162,
+        -0.41878199577331543
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.14354899525642395,
+          0.03792896121740341,
+          0.2109999656677246
+        ],
+        "max": [
+          0.49030381441116333,
+          0.612165093421936,
+          2.0515387058258057
+        ]
+      },
+      "triangles": 3023,
+      "tier": 2,
+      "face": 0,
+      "oversize": true,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 9.5,
+      "lean_direction_blender": [
+        0,
+        -1,
+        0
+      ],
+      "blade_inward": true,
+      "back_rest_contact_blender": [
+        0.15542819470329144,
+        0.4190839649219114,
+        0.9420000000000001
+      ],
+      "index": 7,
+      "kind_filter": [
+        "two_handed_axe"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.14854899525642395,
+          0.032928961217403414,
+          0.94200003
+        ],
+        "max_blender": [
+          0.49530381441116333,
+          0.617165093421936,
+          2.0565387058258056
+        ],
+        "size_blender": [
+          0.6438528096675873,
+          0.5842361322045326,
+          1.1145386758258056
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0,
+        0.418781984148906,
+        1.1148851094828454
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.1733773711479745,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          -0.14854899525642395,
+          0.032928961217403414,
+          0.2059999656677246
+        ],
+        "max": [
+          0.49530381441116333,
+          0.617165093421936,
+          2.0565387058258056
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.01212597,
+            0.39808396,
+            0.21000001
+          ],
+          "max_blender": [
+            0.16942823,
+            0.617165093421936,
+            0.51199996
+          ],
+          "size_blender": [
+            0.15730226000000003,
+            0.21908113342193603,
+            0.30199995
+          ]
+        },
+        {
+          "min_blender": [
+            0.16942823,
+            0.34621349,
+            0.21000001
+          ],
+          "max_blender": [
+            0.35817409,
+            0.617165093421936,
+            0.51199996
+          ],
+          "size_blender": [
+            0.18874586,
+            0.270951603421936,
+            0.30199995
+          ]
+        },
+        {
+          "min_blender": [
+            -0.14854899525642395,
+            0.032928961217403414,
+            0.51199996
+          ],
+          "max_blender": [
+            0.16942823,
+            0.37008396,
+            0.94200003
+          ],
+          "size_blender": [
+            0.31797722525642397,
+            0.3371549987825966,
+            0.43000006999999996
+          ]
+        },
+        {
+          "min_blender": [
+            -0.08678126,
+            0.37008396,
+            0.51199996
+          ],
+          "max_blender": [
+            0.14142823,
+            0.617165093421936,
+            0.91799998
+          ],
+          "size_blender": [
+            0.22820949,
+            0.24708113342193605,
+            0.40600002
+          ]
+        },
+        {
+          "min_blender": [
+            0.14142823,
+            0.39808396,
+            0.51199996
+          ],
+          "max_blender": [
+            0.16942823,
+            0.617165093421936,
+            0.91799998
+          ],
+          "size_blender": [
+            0.028000000000000025,
+            0.21908113342193603,
+            0.40600002
+          ]
+        },
+        {
+          "min_blender": [
+            -0.06078127,
+            0.41878396,
+            0.91799998
+          ],
+          "max_blender": [
+            0.16942823,
+            0.617165093421936,
+            0.94200003
+          ],
+          "size_blender": [
+            0.2302095,
+            0.19838113342193603,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            0.16942823,
+            0.032928961217403414,
+            0.51199996
+          ],
+          "max_blender": [
+            0.49530381441116333,
+            0.34621349,
+            0.94200003
+          ],
+          "size_blender": [
+            0.3258755844111633,
+            0.3132845287825966,
+            0.43000006999999996
+          ]
+        },
+        {
+          "min_blender": [
+            0.16942823,
+            0.34621349,
+            0.51199996
+          ],
+          "max_blender": [
+            0.36286473,
+            0.617165093421936,
+            0.91799998
+          ],
+          "size_blender": [
+            0.1934365,
+            0.270951603421936,
+            0.40600002
+          ]
+        },
+        {
+          "min_blender": [
+            0.16942823,
+            0.41878396,
+            0.91799998
+          ],
+          "max_blender": [
+            0.33686471,
+            0.617165093421936,
+            0.94200003
+          ],
+          "size_blender": [
+            0.16743648,
+            0.19838113342193603,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.14854899525642395,
+            0.032928961217403414,
+            0.94200003
+          ],
+          "max_blender": [
+            0.49530381441116333,
+            0.617165093421936,
+            2.0565387058258056
+          ],
+          "size_blender": [
+            0.6438528096675873,
+            0.5842361322045326,
+            1.1145386758258056
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "AtgeirIron",
+      "kind": "atgeir",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/arsenal-kit/real-items-r2/AtgeirIron/model.obj",
+      "matrix_blender": [
+        [
+          -0.03489946201443672,
+          4.368476069771532e-08,
+          0.9993908405303955,
+          0.3743835866451264
+        ],
+        [
+          0.984207808971405,
+          -0.1736481487751007,
+          0.03436926752328873,
+          0.38646190166473393
+        ],
+        [
+          0.17354236543178558,
+          0.9848077297210693,
+          0.006060183979570866,
+          1.9702550172805786
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.3805228292942048,
+        0.4453816533088685,
+        1.7084601151469283
+      ],
+      "rotation_blender_degrees": [
+        89.6474281395221,
+        -9.993844001103447,
+        92.03082265039806
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5321391820907593,
+        -0.5510462522506714,
+        0.4623827338218689,
+        0.44651779532432556
+      ],
+      "position_unity": [
+        -0.38052281737327576,
+        1.7084600925445557,
+        -0.44538164138793945
+      ],
+      "bounds_blender": {
+        "min": [
+          0.3330942392349243,
+          0.13142788410186768,
+          0.2109999656677246
+        ],
+        "max": [
+          0.4307391941547394,
+          0.6800192594528198,
+          3.186641216278076
+        ]
+      },
+      "triangles": 252,
+      "tier": 2,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 10,
+      "lean_direction_blender": [
+        0,
+        -1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        0.3981740941953167,
+        0.6118400134997921,
+        0.512
+      ],
+      "index": 8,
+      "kind_filter": [
+        "atgeir"
+      ],
+      "clear_box": {
+        "min_blender": [
+          0.3280942392349243,
+          0.12642788410186767,
+          0.94200003
+        ],
+        "max_blender": [
+          0.4357391941547394,
+          0.6850192594528198,
+          3.191641216278076
+        ],
+        "size_blender": [
+          0.10764495491981507,
+          0.5585913753509522,
+          2.249641186278076
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0.4,
+        0.4453816533088685,
+        1.7084601151469283
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        -0.019477170705795244,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          0.3280942392349243,
+          0.12642788410186767,
+          0.2059999656677246
+        ],
+        "max": [
+          0.4357391941547394,
+          0.6850192594528198,
+          3.191641216278076
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.3280942392349243,
+            0.59084004,
+            0.21000001
+          ],
+          "max_blender": [
+            0.4357391941547394,
+            0.6850192594528198,
+            0.48800001
+          ],
+          "size_blender": [
+            0.10764495491981507,
+            0.09417921945281982,
+            0.278
+          ]
+        },
+        {
+          "min_blender": [
+            0.3280942392349243,
+            0.61154002,
+            0.48800001
+          ],
+          "max_blender": [
+            0.4357391941547394,
+            0.6850192594528198,
+            0.51199996
+          ],
+          "size_blender": [
+            0.10764495491981507,
+            0.07347923945281987,
+            0.023999950000000048
+          ]
+        },
+        {
+          "min_blender": [
+            0.3280942392349243,
+            0.39491349,
+            0.51199996
+          ],
+          "max_blender": [
+            0.4357391941547394,
+            0.6850192594528198,
+            0.94200003
+          ],
+          "size_blender": [
+            0.10764495491981507,
+            0.29010576945281985,
+            0.43000006999999996
+          ]
+        },
+        {
+          "min_blender": [
+            0.3280942392349243,
+            0.12642788410186767,
+            0.94200003
+          ],
+          "max_blender": [
+            0.4357391941547394,
+            0.6850192594528198,
+            3.191641216278076
+          ],
+          "size_blender": [
+            0.10764495491981507,
+            0.5585913753509522,
+            2.249641186278076
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "AtgeirBlackmetal",
+      "kind": "atgeir",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/eq-weapons/real-items/AtgeirBlackmetal/model.obj",
+      "matrix_blender": [
+        [
+          -0.07416458427906036,
+          4.359100813644545e-08,
+          0.9972460269927979,
+          -0.32332448159918514
+        ],
+        [
+          0.9754538536071777,
+          -0.20791170001029968,
+          0.0725439190864563,
+          0.4006219668731692
+        ],
+        [
+          0.2073391228914261,
+          0.9781476259231567,
+          0.015419641509652138,
+          1.8679695129394531
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        -0.30247548215486597,
+        0.4708438461341862,
+        1.62751337935976
+      ],
+      "rotation_blender_degrees": [
+        89.09686025090572,
+        -11.966463251332014,
+        94.34788236405484
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5287550091743469,
+        -0.569538414478302,
+        0.46120312809944153,
+        0.4281773269176483
+      ],
+      "position_unity": [
+        0.3024754822254181,
+        1.6275134086608887,
+        -0.4708438515663147
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.33421146869659424,
+          0.07432481646537781,
+          0.21100008487701416
+        ],
+        "max": [
+          -0.26440271735191345,
+          0.753917932510376,
+          3.0461039543151855
+        ]
+      },
+      "triangles": 738,
+      "tier": 3,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 12,
+      "lean_direction_blender": [
+        0,
+        -1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        -0.29684941308438806,
+        0.557591742528735,
+        0.9420000000000001
+      ],
+      "index": 9,
+      "kind_filter": [
+        "atgeir"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.33921146869659424,
+          0.0693248164653778,
+          0.94200003
+        ],
+        "max_blender": [
+          -0.25940271735191345,
+          0.758917932510376,
+          2.25999999
+        ],
+        "size_blender": [
+          0.0798087513446808,
+          0.6895931160449982,
+          1.3179999599999999
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        -0.4,
+        0.4708438461341862,
+        1.62751337935976
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.09752451784513405,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          -0.33921146869659424,
+          0.0693248164653778,
+          0.20600008487701416
+        ],
+        "max": [
+          -0.25940271735191345,
+          0.758917932510376,
+          3.0511039543151854
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.33921146869659424,
+            0.0693248164653778,
+            0.21000001
+          ],
+          "max_blender": [
+            -0.25940271735191345,
+            0.50859177,
+            0.91799998
+          ],
+          "size_blender": [
+            0.0798087513446808,
+            0.4392669535346222,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.33921146869659424,
+            0.53659177,
+            0.21000001
+          ],
+          "max_blender": [
+            -0.25940271735191345,
+            0.758917932510376,
+            0.91799998
+          ],
+          "size_blender": [
+            0.0798087513446808,
+            0.22232616251037596,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.33921146869659424,
+            0.0693248164653778,
+            0.91799998
+          ],
+          "max_blender": [
+            -0.25940271735191345,
+            0.50859177,
+            0.94200003
+          ],
+          "size_blender": [
+            0.0798087513446808,
+            0.4392669535346222,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.33921146869659424,
+            0.55729175,
+            0.91799998
+          ],
+          "max_blender": [
+            -0.25940271735191345,
+            0.758917932510376,
+            0.94200003
+          ],
+          "size_blender": [
+            0.0798087513446808,
+            0.201626182510376,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.33921146869659424,
+            0.0693248164653778,
+            0.94200003
+          ],
+          "max_blender": [
+            -0.25940271735191345,
+            0.758917932510376,
+            2.25999999
+          ],
+          "size_blender": [
+            0.0798087513446808,
+            0.6895931160449982,
+            1.3179999599999999
+          ]
+        },
+        {
+          "min_blender": [
+            -0.33921146869659424,
+            0.08,
+            2.25999999
+          ],
+          "max_blender": [
+            -0.25940271735191345,
+            0.758917932510376,
+            2.39999986
+          ],
+          "size_blender": [
+            0.0798087513446808,
+            0.678917932510376,
+            0.13999987000000003
+          ]
+        },
+        {
+          "min_blender": [
+            -0.33921146869659424,
+            0.0693248164653778,
+            2.39999986
+          ],
+          "max_blender": [
+            -0.25940271735191345,
+            0.758917932510376,
+            3.0511039543151854
+          ],
+          "size_blender": [
+            0.0798087513446808,
+            0.6895931160449982,
+            0.6511040943151856
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "Battleaxe",
+      "kind": "two_handed_axe",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/eq-weapons/real-items/Battleaxe/model.obj",
+      "matrix_blender": [
+        [
+          0.9962864518165588,
+          3.76356990017257e-09,
+          0.08610044419765472,
+          -0.10797082353765225
+        ],
+        [
+          0.08421894162893295,
+          -0.20791174471378326,
+          -0.9745151996612549,
+          0.5488205612155916
+        ],
+        [
+          0.017901290208101273,
+          0.9781476259231567,
+          -0.20713965594768524,
+          1.1674505472183228
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.02734099374511159,
+        0.5659572274168018,
+        1.0382669749526
+      ],
+      "rotation_blender_degrees": [
+        101.95672675982739,
+        -1.0257232317198417,
+        4.831888408504937
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.7764241695404053,
+        -0.033487409353256226,
+        0.027117572724819183,
+        0.6287358403205872
+      ],
+      "position_unity": [
+        -0.027340993285179138,
+        1.0382670164108276,
+        -0.565957248210907
+      ],
+      "bounds_blender": {
+        "min": [
+          -0.1719246506690979,
+          0.31891557574272156,
+          0.2109999656677246
+        ],
+        "max": [
+          0.23044022917747498,
+          0.7953838109970093,
+          1.8674900531768799
+        ]
+      },
+      "triangles": 578,
+      "tier": 3,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 12,
+      "lean_direction_blender": [
+        0,
+        -1,
+        0
+      ],
+      "blade_inward": true,
+      "back_rest_contact_blender": [
+        -0.10078127723143056,
+        0.5400458874859769,
+        0.9420000000000001
+      ],
+      "index": 10,
+      "kind_filter": [
+        "two_handed_axe"
+      ],
+      "clear_box": {
+        "min_blender": [
+          -0.1769246506690979,
+          0.31391557574272155,
+          0.94200003
+        ],
+        "max_blender": [
+          0.23544022917747498,
+          0.8003838109970093,
+          1.8724900531768798
+        ],
+        "size_blender": [
+          0.4123648798465729,
+          0.48646823525428773,
+          0.9304900231768798
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0,
+        0.5659572274168018,
+        1.0382669749526
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        0.02734099374511159,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          -0.1769246506690979,
+          0.31391557574272155,
+          0.2059999656677246
+        ],
+        "max": [
+          0.23544022917747498,
+          0.8003838109970093,
+          1.8724900531768798
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            -0.1769246506690979,
+            0.51904589,
+            0.21000001
+          ],
+          "max_blender": [
+            0.23544022917747498,
+            0.8003838109970093,
+            0.91799998
+          ],
+          "size_blender": [
+            0.4123648798465729,
+            0.28133792099700927,
+            0.70799997
+          ]
+        },
+        {
+          "min_blender": [
+            -0.1769246506690979,
+            0.53974593,
+            0.91799998
+          ],
+          "max_blender": [
+            0.23544022917747498,
+            0.8003838109970093,
+            0.94200003
+          ],
+          "size_blender": [
+            0.4123648798465729,
+            0.26063788099700924,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            -0.1769246506690979,
+            0.31391557574272155,
+            0.94200003
+          ],
+          "max_blender": [
+            0.23544022917747498,
+            0.8003838109970093,
+            1.8724900531768798
+          ],
+          "size_blender": [
+            0.4123648798465729,
+            0.48646823525428773,
+            0.9304900231768798
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    },
+    {
+      "prefab": "SpearElderbark",
+      "kind": "spear",
+      "native_scale": 1,
+      "source": "/Users/joost/storehouse-m-20261025/sol/arsenal-kit/real-items-r2/SpearElderbark/model.obj",
+      "matrix_blender": [
+        [
+          0.0143054174259305,
+          4.370691542021632e-08,
+          0.9998976588249207,
+          0.39496589782888014
+        ],
+        [
+          0.9861847162246704,
+          -0.16504761576652527,
+          -0.01410922035574913,
+          0.27502046362311083
+        ],
+        [
+          0.16503071784973145,
+          0.9862856268882751,
+          -0.002361118094995618,
+          1.7931475639343262
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position_blender": [
+        0.390092612550472,
+        0.34829795860872326,
+        1.3553597735444258
+      ],
+      "rotation_blender_degrees": [
+        90.1371595332012,
+        -9.49901814007718,
+        89.16893923721686
+      ],
+      "rotation_unity_quat_xyzw": [
+        0.5435333847999573,
+        -0.5358127355575562,
+        0.4535989761352539,
+        0.46013492345809937
+      ],
+      "position_unity": [
+        -0.3900926113128662,
+        1.3553597927093506,
+        -0.34829795360565186
+      ],
+      "bounds_blender": {
+        "min": [
+          0.3292748034000397,
+          0.144924595952034,
+          0.21100008487701416
+        ],
+        "max": [
+          0.45044174790382385,
+          0.5641359686851501,
+          2.4963812828063965
+        ]
+      },
+      "triangles": 572,
+      "tier": 3,
+      "face": 0,
+      "oversize": false,
+      "support_mode": "native butt on structural box floor; individually leaning into fitted guide; straw carries no weight",
+      "lean_back_degrees": 9.5,
+      "lean_direction_blender": [
+        0,
+        -1,
+        0
+      ],
+      "blade_inward": null,
+      "back_rest_contact_blender": [
+        0.37686476667620195,
+        0.39521347716938887,
+        0.9420000000000001
+      ],
+      "index": 11,
+      "kind_filter": [
+        "spear"
+      ],
+      "clear_box": {
+        "min_blender": [
+          0.32427480340003967,
+          0.139924595952034,
+          0.94200003
+        ],
+        "max_blender": [
+          0.45544174790382386,
+          0.5691359686851502,
+          2.5013812828063964
+        ],
+        "size_blender": [
+          0.1311669445037842,
+          0.42921137273311616,
+          1.5593812528063964
+        ],
+        "definition": "Largest frame-free region in this item-specific measured box profile; use all clear_box_regions to represent the complete suspended/retained shape.",
+        "frame_free": true
+      },
+      "slot_center_blender": [
+        0.4,
+        0.34829795860872326,
+        1.3553597735444258
+      ],
+      "native_pivot_offset_from_slot_blender": [
+        -0.009907387449528016,
+        0.0,
+        0.0
+      ],
+      "slot_pitch_m": 0.4,
+      "row_name": "long",
+      "slot_envelope_blender": {
+        "min": [
+          0.32427480340003967,
+          0.139924595952034,
+          0.20600008487701416
+        ],
+        "max": [
+          0.45544174790382386,
+          0.5691359686851502,
+          2.5013812828063964
+        ]
+      },
+      "clear_box_regions": [
+        {
+          "min_blender": [
+            0.32427480340003967,
+            0.37421349,
+            0.21000001
+          ],
+          "max_blender": [
+            0.45544174790382386,
+            0.56284004,
+            0.48800001
+          ],
+          "size_blender": [
+            0.1311669445037842,
+            0.18862655,
+            0.278
+          ]
+        },
+        {
+          "min_blender": [
+            0.32427480340003967,
+            0.56284004,
+            0.21000001
+          ],
+          "max_blender": [
+            0.38417411,
+            0.5691359686851502,
+            0.48800001
+          ],
+          "size_blender": [
+            0.059899306599960345,
+            0.006295928685150165,
+            0.278
+          ]
+        },
+        {
+          "min_blender": [
+            0.32427480340003967,
+            0.37421349,
+            0.48800001
+          ],
+          "max_blender": [
+            0.45544174790382386,
+            0.56284004,
+            0.5
+          ],
+          "size_blender": [
+            0.1311669445037842,
+            0.18862655,
+            0.011999990000000016
+          ]
+        },
+        {
+          "min_blender": [
+            0.32427480340003967,
+            0.37421349,
+            0.5
+          ],
+          "max_blender": [
+            0.45544174790382386,
+            0.5691359686851502,
+            0.91799998
+          ],
+          "size_blender": [
+            0.1311669445037842,
+            0.19492247868515017,
+            0.41799998000000005
+          ]
+        },
+        {
+          "min_blender": [
+            0.32427480340003967,
+            0.39491349,
+            0.91799998
+          ],
+          "max_blender": [
+            0.45544174790382386,
+            0.5691359686851502,
+            0.94200003
+          ],
+          "size_blender": [
+            0.1311669445037842,
+            0.17422247868515017,
+            0.02400004999999994
+          ]
+        },
+        {
+          "min_blender": [
+            0.32427480340003967,
+            0.139924595952034,
+            0.94200003
+          ],
+          "max_blender": [
+            0.45544174790382386,
+            0.5691359686851502,
+            2.5013812828063964
+          ],
+          "size_blender": [
+            0.1311669445037842,
+            0.42921137273311616,
+            1.5593812528063964
+          ]
+        }
+      ],
+      "clearance_contract": "Every region is frame-free by exact triangle/AABB SAT on the final OBJ, with a 20 micrometre boundary skin. Regions jointly cover the native example surface. This is a measured shaped profile, not one rectangular universal replacement-item cell. Recheck actual replacement meshes and head/shaft support.",
+      "clearance_profile_complete": true
+    }
+  ],
+  "snap_points": [
+    {
+      "name": "run_left",
+      "position_blender": [
+        -0.6,
+        0,
+        0
+      ],
+      "position_unity": [
+        0.6000000238418579,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "run_right",
+      "position_blender": [
+        0.6,
+        0,
+        0
+      ],
+      "position_unity": [
+        -0.6000000238418579,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "uv": {
+    "authority": "r3 family UV | exporter = shader",
+    "method": "Final polygon orthonormal projection with isotropic scale, source-colour atlas repack, no collapsed UVs. Coordinator uvcheck is a mandatory build gate.",
+    "result": "OK   /Users/joost/storehouse-m-20261025/sol/arsenal-kit/exports/arsenalkit_long_r5b/Frame.obj: collapsed tris on textured texels 0 (+0 on flat colour, allowed), uvs out of [0,1] 0 (+0 allowed u-wraps in full-width strips), tris crossing a region border 0, tris >3x coarser than region median 0 (+0 >3x finer, reported only), tris stretched >4:1 0; textured density px/m p5/p50/p95 40/40/40; region medians (bands, wrap strips [(0, 32), (32, 64), (64, 96), (96, 128)], atlas atlas.png) rows 32-64 40, rows 64-96 40"
+  },
+  "space": {
+    "blender": "X run, Y depth, Z up",
+    "obj": "bx,bz,-by; Unity loader flips X",
+    "unity": "-bx,bz,-by"
+  },
+  "anchor_position_contract": "slot_center_blender locates the constant-pitch display place; position_blender and matrix_blender locate its native example, which may sit asymmetrically within that place. Native pivot offsets are explicit. All clear boxes are measured absolute Blender coordinates.",
+  "clearance_note": "Hanging/retained pieces use a union of measured free boxes; the larger item envelope is never mislabeled as free space."
+}

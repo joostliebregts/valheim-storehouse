@@ -1,0 +1,1842 @@
+{
+  "schema": "storehouse-anchors/1",
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png"
+  },
+  "author": "Sol 6.1 / extra high",
+  "prototype": true,
+  "units": 64,
+  "slots_designed_for": 64,
+  "stack_per_unit": false,
+  "display_places": 43,
+  "display_caps": {
+    "armor": 32,
+    "weapons": 8,
+    "shields": 3
+  },
+  "space": {
+    "position": "Unity local metres ux=-bx,uy=bz,uz=-by",
+    "rotation": "R_u=C*R_b*C^T; ItemVisual already applies180Y, do not add another half-turn",
+    "anchor": "source bounds centre derived from actual native vertices"
+  },
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        1.1,
+        0.2376605,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 1,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        1.1,
+        0.2376605,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 2,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        0.43,
+        0.2376605,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 3,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        0.43,
+        0.2376605,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 4,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        -0.24,
+        0.23212,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.14424,
+        0.627233
+      ],
+      "example_item": "ArmorIronLegs",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 5,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        -0.24,
+        0.23212,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.14424,
+        0.627233
+      ],
+      "example_item": "ArmorIronLegs",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 6,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        1.1,
+        0.3929605,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 7,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        1.1,
+        0.3929605,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 8,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        0.43,
+        0.38742,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.14424,
+        0.627233
+      ],
+      "example_item": "ArmorIronLegs",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 9,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        0.43,
+        0.38742,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.14424,
+        0.627233
+      ],
+      "example_item": "ArmorIronLegs",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 10,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        -0.24,
+        0.3818605,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 11,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        -0.24,
+        0.3818605,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 12,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        1.1,
+        0.54272,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.14424,
+        0.627233
+      ],
+      "example_item": "ArmorIronLegs",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 13,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        1.1,
+        0.54272,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.14424,
+        0.627233
+      ],
+      "example_item": "ArmorIronLegs",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 14,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        0.43,
+        0.5371605,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 15,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        0.43,
+        0.5371605,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 16,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        -0.24,
+        0.5371605,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 17,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        -0.24,
+        0.5371605,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 18,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        1.1,
+        0.6924604,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 19,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        1.1,
+        0.6924604,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 20,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        0.43,
+        0.6924604,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 21,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        0.43,
+        0.6924604,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "CapeDeerHide",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 22,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        -0.24,
+        0.6924604,
+        1.11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 23,
+      "kind": "armor",
+      "place": "individual flat armor drop in reserve chest",
+      "position": [
+        -0.24,
+        0.6924604,
+        0.44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.607184,
+        0.155321,
+        0.627233
+      ],
+      "example_item": "ArmorIronChest",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 24,
+      "kind": "armor",
+      "place": "eight-place helmet tray",
+      "position": [
+        -0.88,
+        0.6624835,
+        1.24
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.209352,
+        0.264967,
+        0.280821
+      ],
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 25,
+      "kind": "armor",
+      "place": "eight-place helmet tray",
+      "position": [
+        -0.88,
+        0.6624835,
+        0.92
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.209352,
+        0.264967,
+        0.280821
+      ],
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 26,
+      "kind": "armor",
+      "place": "eight-place helmet tray",
+      "position": [
+        -0.88,
+        0.6624835,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.209352,
+        0.264967,
+        0.280821
+      ],
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 27,
+      "kind": "armor",
+      "place": "eight-place helmet tray",
+      "position": [
+        -0.88,
+        0.6624835,
+        0.28
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.209352,
+        0.264967,
+        0.280821
+      ],
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 28,
+      "kind": "armor",
+      "place": "eight-place helmet tray",
+      "position": [
+        -1.16,
+        0.6624835,
+        1.24
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.209352,
+        0.264967,
+        0.280821
+      ],
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 29,
+      "kind": "armor",
+      "place": "eight-place helmet tray",
+      "position": [
+        -1.16,
+        0.6624835,
+        0.92
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.209352,
+        0.264967,
+        0.280821
+      ],
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 30,
+      "kind": "armor",
+      "place": "eight-place helmet tray",
+      "position": [
+        -1.16,
+        0.6624835,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.209352,
+        0.264967,
+        0.280821
+      ],
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 31,
+      "kind": "armor",
+      "place": "eight-place helmet tray",
+      "position": [
+        -1.16,
+        0.6624835,
+        0.28
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.209352,
+        0.264967,
+        0.280821
+      ],
+      "example_item": "HelmetIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "armor",
+      "requires_true_scale": true
+    },
+    {
+      "index": 32,
+      "kind": "weapons",
+      "place": "individual weapon socket; auto display",
+      "position": [
+        1.3200002,
+        0.675788,
+        -0.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.220836,
+        1.031576,
+        0.216421
+      ],
+      "example_item": "MaceIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "weapons",
+      "requires_true_scale": true
+    },
+    {
+      "index": 33,
+      "kind": "weapons",
+      "place": "individual weapon socket; auto display",
+      "position": [
+        0.83,
+        0.5998215,
+        -0.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.063281,
+        0.879643,
+        0.283191
+      ],
+      "example_item": "AxeIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "weapons",
+      "requires_true_scale": true
+    },
+    {
+      "index": 34,
+      "kind": "weapons",
+      "place": "individual weapon socket; auto display",
+      "position": [
+        0.34,
+        0.4825405,
+        -0.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.037982,
+        0.645081,
+        0.191522
+      ],
+      "example_item": "KnifeSilver",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "weapons",
+      "requires_true_scale": true
+    },
+    {
+      "index": 35,
+      "kind": "weapons",
+      "place": "individual weapon socket; auto display",
+      "position": [
+        -0.15,
+        1.0457245,
+        -0.5500001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.1753121,
+        1.771449,
+        0.759807
+      ],
+      "example_item": "BattleaxeCrystal",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "weapons",
+      "requires_true_scale": true
+    },
+    {
+      "index": 36,
+      "kind": "weapons",
+      "place": "individual weapon socket; auto display",
+      "position": [
+        1.3200001,
+        0.7946535,
+        -1.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.05408,
+        1.269307,
+        0.14399
+      ],
+      "example_item": "SwordIron",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "weapons",
+      "requires_true_scale": true
+    },
+    {
+      "index": 37,
+      "kind": "weapons",
+      "place": "individual weapon socket; auto display",
+      "position": [
+        0.83,
+        0.807009,
+        -1.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.05408,
+        1.294018,
+        0.203724
+      ],
+      "example_item": "SwordSilver",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "weapons",
+      "requires_true_scale": true
+    },
+    {
+      "index": 38,
+      "kind": "weapons",
+      "place": "individual weapon socket; auto display",
+      "position": [
+        0.34,
+        0.8038836,
+        -1.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.059238,
+        1.287767,
+        0.194616
+      ],
+      "example_item": "SwordBlackmetal",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "weapons",
+      "requires_true_scale": true
+    },
+    {
+      "index": 39,
+      "kind": "weapons",
+      "place": "individual weapon socket; auto display",
+      "position": [
+        -0.15,
+        1.115366,
+        -1.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.05205,
+        1.910732,
+        0.244902
+      ],
+      "example_item": "THSwordKrom",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "weapons",
+      "requires_true_scale": true
+    },
+    {
+      "index": 40,
+      "kind": "shields",
+      "place": "edge-on reserve shield slot like a CD",
+      "position": [
+        -0.86,
+        0.637098,
+        -0.88
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.147681,
+        0.954196,
+        0.94547
+      ],
+      "example_item": "ShieldBanded",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "shields",
+      "requires_true_scale": true
+    },
+    {
+      "index": 41,
+      "kind": "shields",
+      "place": "edge-on reserve shield slot like a CD",
+      "position": [
+        -1.22,
+        0.4660005,
+        -0.88
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        0.176743,
+        0.612001,
+        0.611841
+      ],
+      "example_item": "ShieldIronBuckler",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "shields",
+      "requires_true_scale": true
+    },
+    {
+      "index": 42,
+      "kind": "shields",
+      "place": "featured best shield face; runtime ranking required",
+      "position": [
+        -1.0599999,
+        1.5836946,
+        -0.12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_size": [
+        1.16689,
+        1.167389,
+        0.194462
+      ],
+      "example_item": "ShieldFlametal",
+      "example_scale": 1.0,
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071068,
+            0.0,
+            0.0,
+            0.7071068
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale": 1.0,
+      "allocation_group": "shields",
+      "requires_true_scale": true
+    }
+  ],
+  "runtime_required": [
+    "type/size allocation including modded gear; do not sequentially assign saddle to trinket cell",
+    "native scale1.0 override bypasses display clamp and ItemSize grow",
+    "overflow quantities stay in64 logical slots; display cap is separate",
+    "automatic best-shield ranking; edge-on reserve copies keep quaternion"
+  ],
+  "coordinate_validation": {
+    "sampled_vertex_error_m": 2.384185791015625e-07,
+    "loader_half_turn_accounted": true,
+    "native_scale": 1.0
+  }
+}

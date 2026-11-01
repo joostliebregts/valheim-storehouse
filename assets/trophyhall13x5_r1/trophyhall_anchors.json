@@ -1,0 +1,5588 @@
+{
+  "schema": "storehouse-anchors/1",
+  "furniture": "Trophy Hall (13 x 5)",
+  "units": 65,
+  "slots_designed_for": 65,
+  "stack_per_unit": true,
+  "grid": {
+    "columns": 13,
+    "rows": 5,
+    "doc": "container width x height = 13 x 5: the wall itself. index = row * 13 + column, row 0 the top row, column 0 the left as seen from the front."
+  },
+  "space": {
+    "unity": "prefab space, origin on the floor at the centre of the footprint (the runners), +z front, +y up, +x to the furniture's left when seen from the front",
+    "from_blender": "ux=-bx, uy=bz, uz=-by"
+  },
+  "frame": {
+    "obj": "TrophyHall.obj",
+    "atlas": "trophyhall_atlas.png",
+    "size_m": [
+      4.875,
+      0.5,
+      1.654
+    ],
+    "size_doc": "width (x) x depth incl. the runners (y) x height (z). Width = 13 x 0.375 m: half-pitch ends, two side by side continue the board grid. The back is flat: every part is at or in front of the back plane (Unity z = -0.25), so the piece stands flush against a wall; the 0.50 m runners run forward only. Trophies reach the runner tips (0.34 m in front of the board face)."
+  },
+  "fill_order": "grid order, mirroring the 13 x 5 container grid: index = grid_row * 13 + grid_col; rows top to bottom, each row left to right seen from the front. Every row has its own height, so rows of 13 by position.y descending, each by position.x descending, give the same order.",
+  "position": "unit position = the hang point: the centre of the board's FRONT face. box_size = the fit box [x width, y height, z depth] in Unity axes.",
+  "copy_rule": "After item_rotation, s=min(max(DisplaySize*RootScale,0.23/max(turnedBounds.x,turnedBounds.y)),1.15*min(box/turnedBounds)). Keep original back anchor and cell cap. One actual representative per inventory stack, empty board stays empty. NEW in the 13 x 5 variant: copies[0].rotation per place is a small hand-hung turn (Unity euler x pitch +-0.8, y yaw +-1.0, z roll = the plaque's own roll +-0.6 plus +-0.4 deg; neighbours never alike), applied after item_rotation (r = c.Rot * align, already in Storehouse.cs). The fit uses the item turn only, so the amplitudes are sized for r3's place box: that box (0.363 x 0.2605 x 0.322) turned by them stays clear of its neighbours' boxes and of the plaque's iron; measured again on the real meshes.",
+  "item_rotation": {
+    "TrophyAbomination": [
+      90,
+      0,
+      0
+    ],
+    "TrophyAsksvin": [
+      50,
+      0,
+      0
+    ],
+    "TrophyBarka": [
+      60,
+      0,
+      0
+    ],
+    "TrophyBjorn": [
+      60,
+      0,
+      0
+    ],
+    "TrophyBjornUndead": [
+      15,
+      0,
+      0
+    ],
+    "TrophyBlob": [
+      100,
+      0,
+      0
+    ],
+    "TrophyBlob_Frost": [
+      90,
+      0,
+      0
+    ],
+    "TrophyBlob_Lava": [
+      90,
+      0,
+      0
+    ],
+    "TrophyBlob_Morkhalla": [
+      90,
+      0,
+      0
+    ],
+    "TrophyBoar": [
+      70,
+      0,
+      0
+    ],
+    "TrophyBonemass": [
+      90,
+      0,
+      0
+    ],
+    "TrophyBonemawSerpent": [
+      100,
+      0,
+      0
+    ],
+    "TrophyCharredArcher": [
+      90,
+      0,
+      0
+    ],
+    "TrophyCharredMage": [
+      90,
+      0,
+      0
+    ],
+    "TrophyCharredMelee": [
+      100,
+      0,
+      0
+    ],
+    "TrophyCultist": [
+      95,
+      0,
+      0
+    ],
+    "TrophyCultist_Hildir": [
+      95,
+      0,
+      0
+    ],
+    "TrophyDeathsquito": [
+      100,
+      0,
+      0
+    ],
+    "TrophyDeer": [
+      62,
+      0,
+      0
+    ],
+    "TrophyDeerWhite": [
+      62,
+      0,
+      0
+    ],
+    "TrophyDragonQueen": [
+      90,
+      0,
+      0
+    ],
+    "TrophyDraugr": [
+      95,
+      0,
+      0
+    ],
+    "TrophyDraugrElite": [
+      95,
+      0,
+      0
+    ],
+    "TrophyDraugrFem": [
+      95,
+      0,
+      0
+    ],
+    "TrophyDvergr": [
+      90,
+      0,
+      0
+    ],
+    "TrophyEikthyr": [
+      70,
+      0,
+      0
+    ],
+    "TrophyElaking": [
+      20,
+      0,
+      0
+    ],
+    "TrophyFader": [
+      40,
+      0,
+      0
+    ],
+    "TrophyFallenValkyrie": [
+      30,
+      0,
+      0
+    ],
+    "TrophyFenring": [
+      90,
+      0,
+      0
+    ],
+    "TrophyForestTroll": [
+      20,
+      0,
+      0
+    ],
+    "TrophyFrostTroll": [
+      20,
+      0,
+      0
+    ],
+    "TrophyGhost": [
+      75,
+      0,
+      0
+    ],
+    "TrophyGjall": [
+      90,
+      0,
+      0
+    ],
+    "TrophyGoblin": [
+      90,
+      0,
+      0
+    ],
+    "TrophyGoblinBrute": [
+      40,
+      0,
+      0
+    ],
+    "TrophyGoblinBruteBrosBrute": [
+      40,
+      0,
+      0
+    ],
+    "TrophyGoblinBruteBrosShaman": [
+      55,
+      0,
+      0
+    ],
+    "TrophyGoblinKing": [
+      35,
+      0,
+      0
+    ],
+    "TrophyGoblinShaman": [
+      90,
+      0,
+      0
+    ],
+    "TrophyGreydwarf": [
+      60,
+      0,
+      0
+    ],
+    "TrophyGreydwarfBrute": [
+      60,
+      0,
+      0
+    ],
+    "TrophyGreydwarfShaman": [
+      60,
+      0,
+      0
+    ],
+    "TrophyGrowth": [
+      90,
+      0,
+      0
+    ],
+    "TrophyHare": [
+      30,
+      0,
+      0
+    ],
+    "TrophyHatchling": [
+      15,
+      0,
+      0
+    ],
+    "TrophyJotunWarrior": [
+      20,
+      0,
+      0
+    ],
+    "TrophyJotunWitch": [
+      30,
+      0,
+      0
+    ],
+    "TrophyKvastur": [
+      90,
+      0,
+      0
+    ],
+    "TrophyLeech": [
+      60,
+      0,
+      0
+    ],
+    "TrophyLox": [
+      80,
+      0,
+      0
+    ],
+    "TrophyMole": [
+      90,
+      0,
+      0
+    ],
+    "TrophyMoose": [
+      40,
+      0,
+      0
+    ],
+    "TrophyMorgen": [
+      75,
+      0,
+      0
+    ],
+    "TrophyNeck": [
+      40,
+      0,
+      0
+    ],
+    "TrophySGolem": [
+      0,
+      0,
+      0
+    ],
+    "TrophySeal": [
+      40,
+      0,
+      0
+    ],
+    "TrophySeeker": [
+      90,
+      0,
+      0
+    ],
+    "TrophySeekerBrute": [
+      45,
+      0,
+      0
+    ],
+    "TrophySeekerQueen": [
+      10,
+      0,
+      0
+    ],
+    "TrophySerpent": [
+      45,
+      0,
+      0
+    ],
+    "TrophySkeleton": [
+      70,
+      0,
+      0
+    ],
+    "TrophySkeletonHildir": [
+      70,
+      0,
+      0
+    ],
+    "TrophySkeletonPoison": [
+      70,
+      0,
+      0
+    ],
+    "TrophySurtling": [
+      75,
+      0,
+      0
+    ],
+    "TrophyTheElder": [
+      45,
+      0,
+      0
+    ],
+    "TrophyTick": [
+      90,
+      0,
+      0
+    ],
+    "TrophyUlv": [
+      90,
+      0,
+      0
+    ],
+    "TrophyVolture": [
+      45,
+      0,
+      0
+    ],
+    "TrophyWolf": [
+      85,
+      0,
+      0
+    ],
+    "TrophyWraith": [
+      90,
+      0,
+      0
+    ],
+    "TrophyWrithan": [
+      90,
+      0,
+      0
+    ]
+  },
+  "item_rotation_doc": "NEW in r2. Top-level, per trophy prefab name, Unity euler degrees (Quaternion.Euler) of the mounting turn: the item turned about its bounds centre BEFORE Aligned and the copy's rotation, so the face (or muzzle) looks out of the wall (+z) and ~15 degrees down. 0 = as ripped (the game's models lie face up, so most heads need x 15..105). A kind missing from the table is unturned.",
+  "placement": {
+    "anchor_back": "NEW. 'anchor': 'back' = the item's bounds hang on the unit's plane instead of standing on it. In Storehouse.cs: StoreCopy gets 'public bool Back;'; Copy(): 'if (S(cd, \"anchor\") is { } anchor) { c.Bottom = anchor.StartsWith(\"bottom\", StringComparison.Ordinal); c.Back = anchor.StartsWith(\"back\", StringComparison.Ordinal); }'; Place(): after 'if (c.Bottom) centre.y += s * d.y * 0.5f;' add 'if (c.Back) centre.z += s * d.z * 0.5f;'. Nothing else changes (offset.z then adds the 18 mm clearance).",
+    "without_it": "Without the change the trophy is centred on the hang point, half its depth inside the board (up to 0.16 m): the file still loads, it just looks sunk.",
+    "kind": "board (every unit): display store, mirror = true, container 13 x 5, one trophy per stack; the stack count does not matter (one model per stack).",
+    "demo": "example_item / example_scale per unit = the trophy in the full render: Joost's 65 non-boss kinds by biome (bosses are refused), then repeats of common heads.",
+    "item_rotation": "NEW in r2, Storehouse.cs, 4 small edits. (1) StoreUnit: 'public Dictionary<string, Quaternion> ItemRot;'. (2) ItemVisual: 'public string PrefabName => prefabName;'. (3) Anchors.Parse: before the unit loop 'var itemRot = ItemRotations(doc);', in the StoreUnit initializer 'ItemRot = itemRot,', and the helper 'static Dictionary<string, Quaternion> ItemRotations(Dictionary<string, object> doc) { if (Json.Obj(doc, \"item_rotation\") is not { } t) return null; var d = new Dictionary<string, Quaternion>(); foreach (var kv in t) if (V(t, kv.Key) is { } e) d[kv.Key] = Quaternion.Euler(e); return d; }'. (4) StoreModel.Place: right after 'var align = Aligned(c, size);' add 'if (u.ItemRot != null && item.PrefabName != null && u.ItemRot.TryGetValue(item.PrefabName, out var turn)) align *= turn;'. Nothing else: r = c.Rot * align and d = Turned(align, size) then include the item turn, so the fit box, the 'back' anchor and the turn about the bounds centre follow by themselves."
+  },
+  "box": {
+    "fit_box_xyz_m": [
+      0.3157,
+      0.2265,
+      0.28
+    ],
+    "max_shown_xyz_m": [
+      0.363,
+      0.2605,
+      0.322
+    ],
+    "cell_pitch_xy_m": [
+      0.375,
+      0.2725
+    ],
+    "back_clearance_m": 0.018,
+    "display_size": 0.7,
+    "tolerance": 1.15
+  },
+  "note": "Trophy Hall 13 x 5 r1 (Claude Opus 5.5, 25 Oct 2026; Joost 25 Oct 19:2x: 'add both' sizes for his 65 non-boss trophies, on the wall or on the floor): r3's boards, pitch, fit box, hang clearance, atlas and item_rotation unchanged; new frame: flat back (stud frame behind a plank skin, runners forward only), half-pitch ends with half-width end posts, runners and straps (two units tile without a seam), 3 bays. 65 places = the 65 non-boss kinds: full looks full.",
+  "checks": {
+    "kinds_checked": 71,
+    "boards_per_kind": 65,
+    "frame_clip_pairs": 0,
+    "worst_cell_overshoot_mm": 2.17,
+    "coplanar_frame": {
+      "same_facing_overlaps": 0,
+      "back_to_back": 45,
+      "tolerance_mm": 2.0,
+      "min_area_cm2": 0.002
+    },
+    "max_back_gap_mm": 39.0,
+    "item_rotation_applied": true,
+    "doc": "every ripped trophy (71 kinds), turned by item_rotation and its place's copy rotation and placed by the mod rule on EVERY board (4615 placements per rule), against the whole frame (BVH overlap of the real triangles): clip pairs r3 rule 0, runtime rule 0, cap rule (1.15 x fit, the largest any rule gives) 0. Worst clearance between two neighbours for any pair of kinds (r3 rule): 8.7 mm sideways, 9.6 mm up/down. coplanar_frame: see zaudit (independent check)."
+  },
+  "tris": {
+    "frame": 7784,
+    "all_kinds_once": 118864,
+    "full_store_all_kinds_once": 126648,
+    "heaviest": {
+      "TrophyBonemass": 15717,
+      "TrophyEikthyr": 11676,
+      "TrophyBonemawSerpent": 5351,
+      "TrophySeekerQueen": 4502,
+      "TrophyFader": 4364
+    },
+    "worst_case_80_of_the_heaviest": 355599
+  },
+  "kinds": {
+    "TrophyAbomination": {
+      "scale": 0.0924,
+      "shown_w": 0.251,
+      "shown_h": 0.26,
+      "shown_d": 0.084,
+      "true_size": [
+        2.714,
+        2.82,
+        0.913
+      ],
+      "tris": 1364,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.54,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyAsksvin": {
+      "scale": 0.2765,
+      "shown_w": 0.215,
+      "shown_h": 0.26,
+      "shown_d": 0.258,
+      "true_size": [
+        0.777,
+        0.697,
+        0.635
+      ],
+      "tris": 1217,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        50,
+        0,
+        0
+      ],
+      "back_gap_mm": 23.7
+    },
+    "TrophyBarka": {
+      "scale": 0.0669,
+      "shown_w": 0.131,
+      "shown_h": 0.26,
+      "shown_d": 0.22,
+      "true_size": [
+        1.961,
+        3.451,
+        1.812
+      ],
+      "tris": 832,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        60,
+        0,
+        0
+      ],
+      "back_gap_mm": 19.2
+    },
+    "TrophyBjorn": {
+      "scale": 0.1268,
+      "shown_w": 0.21,
+      "shown_h": 0.26,
+      "shown_d": 0.242,
+      "true_size": [
+        1.66,
+        1.647,
+        1.257
+      ],
+      "tris": 1374,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        60,
+        0,
+        0
+      ],
+      "back_gap_mm": 38.7
+    },
+    "TrophyBjornUndead": {
+      "scale": 0.2202,
+      "shown_w": 0.274,
+      "shown_h": 0.26,
+      "shown_d": 0.317,
+      "true_size": [
+        1.246,
+        1.254,
+        0.889
+      ],
+      "tris": 1060,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        15,
+        0,
+        0
+      ],
+      "back_gap_mm": 19.9
+    },
+    "TrophyBlob": {
+      "scale": 0.4701,
+      "shown_w": 0.218,
+      "shown_h": 0.26,
+      "shown_d": 0.178,
+      "true_size": [
+        0.463,
+        0.511,
+        0.295
+      ],
+      "tris": 338,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        100,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyBlob_Frost": {
+      "scale": 0.5101,
+      "shown_w": 0.236,
+      "shown_h": 0.26,
+      "shown_d": 0.149,
+      "true_size": [
+        0.463,
+        0.511,
+        0.293
+      ],
+      "tris": 48,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.07,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyBlob_Lava": {
+      "scale": 0.667,
+      "shown_w": 0.241,
+      "shown_h": 0.26,
+      "shown_d": 0.169,
+      "true_size": [
+        0.361,
+        0.391,
+        0.253
+      ],
+      "tris": 672,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.62,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyBlob_Morkhalla": {
+      "scale": 0.5063,
+      "shown_w": 0.243,
+      "shown_h": 0.26,
+      "shown_d": 0.116,
+      "true_size": [
+        0.48,
+        0.514,
+        0.229
+      ],
+      "tris": 48,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.05,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyBoar": {
+      "scale": 0.3566,
+      "shown_w": 0.144,
+      "shown_h": 0.26,
+      "shown_d": 0.287,
+      "true_size": [
+        0.404,
+        0.537,
+        0.661
+      ],
+      "tris": 1370,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        70,
+        0,
+        0
+      ],
+      "back_gap_mm": 19.1
+    },
+    "TrophyBonemass": {
+      "scale": 0.0869,
+      "shown_w": 0.267,
+      "shown_h": 0.26,
+      "shown_d": 0.115,
+      "true_size": [
+        3.075,
+        2.996,
+        1.322
+      ],
+      "tris": 15717,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.42,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyBonemawSerpent": {
+      "scale": 0.0415,
+      "shown_w": 0.174,
+      "shown_h": 0.26,
+      "shown_d": 0.229,
+      "true_size": [
+        4.197,
+        5.558,
+        4.622
+      ],
+      "tris": 5351,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        100,
+        0,
+        0
+      ],
+      "back_gap_mm": 13.4
+    },
+    "TrophyCharredArcher": {
+      "scale": 0.1639,
+      "shown_w": 0.096,
+      "shown_h": 0.26,
+      "shown_d": 0.067,
+      "true_size": [
+        0.587,
+        1.59,
+        0.408
+      ],
+      "tris": 894,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.77,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyCharredMage": {
+      "scale": 0.2258,
+      "shown_w": 0.23,
+      "shown_h": 0.26,
+      "shown_d": 0.1,
+      "true_size": [
+        1.019,
+        1.154,
+        0.443
+      ],
+      "tris": 2601,
+      "clip_pairs": 0,
+      "outside_cell_mm": 1.62,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyCharredMelee": {
+      "scale": 0.6944,
+      "shown_w": 0.149,
+      "shown_h": 0.26,
+      "shown_d": 0.215,
+      "true_size": [
+        0.214,
+        0.336,
+        0.255
+      ],
+      "tris": 698,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        100,
+        0,
+        0
+      ],
+      "back_gap_mm": 24.1
+    },
+    "TrophyCultist": {
+      "scale": 0.2312,
+      "shown_w": 0.211,
+      "shown_h": 0.26,
+      "shown_d": 0.267,
+      "true_size": [
+        0.914,
+        1.038,
+        1.068
+      ],
+      "tris": 1286,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        95,
+        0,
+        0
+      ],
+      "back_gap_mm": 5.8
+    },
+    "TrophyCultist_Hildir": {
+      "scale": 0.2383,
+      "shown_w": 0.218,
+      "shown_h": 0.26,
+      "shown_d": 0.275,
+      "true_size": [
+        0.914,
+        1.004,
+        1.072
+      ],
+      "tris": 1286,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        95,
+        0,
+        0
+      ],
+      "back_gap_mm": 6.7
+    },
+    "TrophyDeathsquito": {
+      "scale": 0.4203,
+      "shown_w": 0.201,
+      "shown_h": 0.133,
+      "shown_d": 0.322,
+      "true_size": [
+        0.479,
+        0.191,
+        0.744
+      ],
+      "tris": 2274,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        100,
+        0,
+        0
+      ],
+      "back_gap_mm": 4.0
+    },
+    "TrophyDeer": {
+      "scale": 0.2087,
+      "shown_w": 0.155,
+      "shown_h": 0.26,
+      "shown_d": 0.209,
+      "true_size": [
+        0.741,
+        1.128,
+        0.536
+      ],
+      "tris": 1258,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        62,
+        0,
+        0
+      ],
+      "back_gap_mm": 27.4
+    },
+    "TrophyDeerWhite": {
+      "scale": 0.2087,
+      "shown_w": 0.155,
+      "shown_h": 0.26,
+      "shown_d": 0.209,
+      "true_size": [
+        0.741,
+        1.128,
+        0.536
+      ],
+      "tris": 1258,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        62,
+        0,
+        0
+      ],
+      "back_gap_mm": 27.4
+    },
+    "TrophyDragonQueen": {
+      "scale": 0.0844,
+      "shown_w": 0.223,
+      "shown_h": 0.26,
+      "shown_d": 0.142,
+      "true_size": [
+        2.646,
+        3.085,
+        1.677
+      ],
+      "tris": 4018,
+      "clip_pairs": 0,
+      "outside_cell_mm": 1.61,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyDraugr": {
+      "scale": 0.4164,
+      "shown_w": 0.197,
+      "shown_h": 0.26,
+      "shown_d": 0.202,
+      "true_size": [
+        0.472,
+        0.59,
+        0.434
+      ],
+      "tris": 1166,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.04,
+      "item_rotation": [
+        95,
+        0,
+        0
+      ],
+      "back_gap_mm": 8.1
+    },
+    "TrophyDraugrElite": {
+      "scale": 0.593,
+      "shown_w": 0.209,
+      "shown_h": 0.26,
+      "shown_d": 0.243,
+      "true_size": [
+        0.352,
+        0.408,
+        0.375
+      ],
+      "tris": 724,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        95,
+        0,
+        0
+      ],
+      "back_gap_mm": 7.6
+    },
+    "TrophyDraugrFem": {
+      "scale": 0.4159,
+      "shown_w": 0.278,
+      "shown_h": 0.26,
+      "shown_d": 0.273,
+      "true_size": [
+        0.668,
+        0.576,
+        0.608
+      ],
+      "tris": 1356,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        95,
+        0,
+        0
+      ],
+      "back_gap_mm": 7.2
+    },
+    "TrophyDvergr": {
+      "scale": 0.5823,
+      "shown_w": 0.168,
+      "shown_h": 0.26,
+      "shown_d": 0.062,
+      "true_size": [
+        0.289,
+        0.447,
+        0.106
+      ],
+      "tris": 520,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.58,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyEikthyr": {
+      "scale": 0.0799,
+      "shown_w": 0.184,
+      "shown_h": 0.26,
+      "shown_d": 0.195,
+      "true_size": [
+        2.298,
+        2.91,
+        1.533
+      ],
+      "tris": 11676,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        70,
+        0,
+        0
+      ],
+      "back_gap_mm": 10.8
+    },
+    "TrophyElaking": {
+      "scale": 0.5023,
+      "shown_w": 0.294,
+      "shown_h": 0.26,
+      "shown_d": 0.288,
+      "true_size": [
+        0.586,
+        0.473,
+        0.38
+      ],
+      "tris": 1350,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        20,
+        0,
+        0
+      ],
+      "back_gap_mm": 25.2
+    },
+    "TrophyFader": {
+      "scale": 0.0507,
+      "shown_w": 0.274,
+      "shown_h": 0.26,
+      "shown_d": 0.263,
+      "true_size": [
+        5.406,
+        3.824,
+        3.496
+      ],
+      "tris": 4364,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        40,
+        0,
+        0
+      ],
+      "back_gap_mm": 34.4
+    },
+    "TrophyFallenValkyrie": {
+      "scale": 0.1859,
+      "shown_w": 0.13,
+      "shown_h": 0.26,
+      "shown_d": 0.303,
+      "true_size": [
+        0.697,
+        1.419,
+        0.798
+      ],
+      "tris": 1174,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        30,
+        0,
+        0
+      ],
+      "back_gap_mm": 22.0
+    },
+    "TrophyFenring": {
+      "scale": 0.1483,
+      "shown_w": 0.082,
+      "shown_h": 0.26,
+      "shown_d": 0.065,
+      "true_size": [
+        0.556,
+        1.756,
+        0.438
+      ],
+      "tris": 520,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.15,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyFrostTroll": {
+      "scale": 0.1157,
+      "shown_w": 0.155,
+      "shown_h": 0.26,
+      "shown_d": 0.255,
+      "true_size": [
+        1.342,
+        1.702,
+        1.777
+      ],
+      "tris": 1328,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        20,
+        0,
+        0
+      ],
+      "back_gap_mm": 38.2
+    },
+    "TrophyGhost": {
+      "scale": 0.7744,
+      "shown_w": 0.125,
+      "shown_h": 0.23,
+      "shown_d": 0.196,
+      "true_size": [
+        0.161,
+        0.256,
+        0.193
+      ],
+      "tris": 614,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        75,
+        0,
+        0
+      ],
+      "back_gap_mm": 17.5
+    },
+    "TrophyGjall": {
+      "scale": 0.0665,
+      "shown_w": 0.122,
+      "shown_h": 0.26,
+      "shown_d": 0.068,
+      "true_size": [
+        1.826,
+        3.915,
+        1.022
+      ],
+      "tris": 1002,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.46,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyGoblin": {
+      "scale": 0.5903,
+      "shown_w": 0.363,
+      "shown_h": 0.185,
+      "shown_d": 0.159,
+      "true_size": [
+        0.615,
+        0.314,
+        0.27
+      ],
+      "tris": 622,
+      "clip_pairs": 0,
+      "outside_cell_mm": 2.17,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyGoblinBrute": {
+      "scale": 0.1591,
+      "shown_w": 0.31,
+      "shown_h": 0.26,
+      "shown_d": 0.272,
+      "true_size": [
+        1.95,
+        1.491,
+        0.886
+      ],
+      "tris": 1702,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        40,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyGoblinBruteBrosBrute": {
+      "scale": 0.1587,
+      "shown_w": 0.232,
+      "shown_h": 0.26,
+      "shown_d": 0.272,
+      "true_size": [
+        1.461,
+        1.498,
+        0.886
+      ],
+      "tris": 1702,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        40,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyGoblinBruteBrosShaman": {
+      "scale": 0.5274,
+      "shown_w": 0.277,
+      "shown_h": 0.26,
+      "shown_d": 0.248,
+      "true_size": [
+        0.525,
+        0.395,
+        0.296
+      ],
+      "tris": 722,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        55,
+        0,
+        0
+      ],
+      "back_gap_mm": 26.8
+    },
+    "TrophyGoblinKing": {
+      "scale": 0.0625,
+      "shown_w": 0.288,
+      "shown_h": 0.26,
+      "shown_d": 0.268,
+      "true_size": [
+        4.613,
+        3.261,
+        2.802
+      ],
+      "tris": 3778,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        35,
+        0,
+        0
+      ],
+      "back_gap_mm": 26.2
+    },
+    "TrophyGoblinShaman": {
+      "scale": 0.586,
+      "shown_w": 0.363,
+      "shown_h": 0.251,
+      "shown_d": 0.134,
+      "true_size": [
+        0.62,
+        0.429,
+        0.229
+      ],
+      "tris": 224,
+      "clip_pairs": 0,
+      "outside_cell_mm": 2.06,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyGreydwarf": {
+      "scale": 0.3425,
+      "shown_w": 0.116,
+      "shown_h": 0.26,
+      "shown_d": 0.2,
+      "true_size": [
+        0.339,
+        0.733,
+        0.252
+      ],
+      "tris": 230,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        60,
+        0,
+        0
+      ],
+      "back_gap_mm": 24.9
+    },
+    "TrophyGreydwarfBrute": {
+      "scale": 0.1891,
+      "shown_w": 0.097,
+      "shown_h": 0.26,
+      "shown_d": 0.196,
+      "true_size": [
+        0.514,
+        1.35,
+        0.415
+      ],
+      "tris": 366,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        60,
+        0,
+        0
+      ],
+      "back_gap_mm": 15.1
+    },
+    "TrophyGreydwarfShaman": {
+      "scale": 0.175,
+      "shown_w": 0.282,
+      "shown_h": 0.26,
+      "shown_d": 0.204,
+      "true_size": [
+        1.61,
+        1.413,
+        0.529
+      ],
+      "tris": 342,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.26,
+      "item_rotation": [
+        60,
+        0,
+        0
+      ],
+      "back_gap_mm": 10.1
+    },
+    "TrophyGrowth": {
+      "scale": 0.5101,
+      "shown_w": 0.348,
+      "shown_h": 0.26,
+      "shown_d": 0.238,
+      "true_size": [
+        0.682,
+        0.511,
+        0.466
+      ],
+      "tris": 648,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.89,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyHare": {
+      "scale": 0.5398,
+      "shown_w": 0.18,
+      "shown_h": 0.26,
+      "shown_d": 0.271,
+      "true_size": [
+        0.333,
+        0.387,
+        0.334
+      ],
+      "tris": 188,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        30,
+        0,
+        0
+      ],
+      "back_gap_mm": 37.3
+    },
+    "TrophyHatchling": {
+      "scale": 0.2923,
+      "shown_w": 0.172,
+      "shown_h": 0.2,
+      "shown_d": 0.322,
+      "true_size": [
+        0.587,
+        1.024,
+        0.434
+      ],
+      "tris": 1126,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        15,
+        0,
+        0
+      ],
+      "back_gap_mm": 28.6
+    },
+    "TrophyJotunWarrior": {
+      "scale": 0.3128,
+      "shown_w": 0.24,
+      "shown_h": 0.26,
+      "shown_d": 0.293,
+      "true_size": [
+        0.767,
+        0.777,
+        0.603
+      ],
+      "tris": 2460,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        20,
+        0,
+        0
+      ],
+      "back_gap_mm": 38.6
+    },
+    "TrophyJotunWitch": {
+      "scale": 0.2479,
+      "shown_w": 0.127,
+      "shown_h": 0.26,
+      "shown_d": 0.251,
+      "true_size": [
+        0.511,
+        0.706,
+        0.805
+      ],
+      "tris": 2516,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        30,
+        0,
+        0
+      ],
+      "back_gap_mm": 20.5
+    },
+    "TrophyKvastur": {
+      "scale": 0.1059,
+      "shown_w": 0.094,
+      "shown_h": 0.26,
+      "shown_d": 0.066,
+      "true_size": [
+        0.887,
+        2.46,
+        0.624
+      ],
+      "tris": 784,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.41,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyLeech": {
+      "scale": 0.1809,
+      "shown_w": 0.28,
+      "shown_h": 0.26,
+      "shown_d": 0.264,
+      "true_size": [
+        1.55,
+        1.035,
+        1.087
+      ],
+      "tris": 322,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        60,
+        0,
+        0
+      ],
+      "back_gap_mm": 12.3
+    },
+    "TrophyLox": {
+      "scale": 0.112,
+      "shown_w": 0.198,
+      "shown_h": 0.26,
+      "shown_d": 0.274,
+      "true_size": [
+        1.766,
+        1.986,
+        2.131
+      ],
+      "tris": 652,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        80,
+        0,
+        0
+      ],
+      "back_gap_mm": 28.7
+    },
+    "TrophyMole": {
+      "scale": 0.1032,
+      "shown_w": 0.175,
+      "shown_h": 0.26,
+      "shown_d": 0.047,
+      "true_size": [
+        1.692,
+        2.523,
+        0.457
+      ],
+      "tris": 868,
+      "clip_pairs": 0,
+      "outside_cell_mm": 1.11,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyMoose": {
+      "scale": 0.1173,
+      "shown_w": 0.249,
+      "shown_h": 0.26,
+      "shown_d": 0.268,
+      "true_size": [
+        2.122,
+        1.876,
+        1.323
+      ],
+      "tris": 4154,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        40,
+        0,
+        0
+      ],
+      "back_gap_mm": 2.1
+    },
+    "TrophyMorgen": {
+      "scale": 0.3347,
+      "shown_w": 0.315,
+      "shown_h": 0.26,
+      "shown_d": 0.155,
+      "true_size": [
+        0.94,
+        0.73,
+        0.283
+      ],
+      "tris": 1140,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        75,
+        0,
+        0
+      ],
+      "back_gap_mm": 12.7
+    },
+    "TrophyNeck": {
+      "scale": 0.3505,
+      "shown_w": 0.157,
+      "shown_h": 0.26,
+      "shown_d": 0.264,
+      "true_size": [
+        0.448,
+        0.574,
+        0.488
+      ],
+      "tris": 726,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        40,
+        0,
+        0
+      ],
+      "back_gap_mm": 18.4
+    },
+    "TrophySGolem": {
+      "scale": 0.1277,
+      "shown_w": 0.186,
+      "shown_h": 0.26,
+      "shown_d": 0.14,
+      "true_size": [
+        1.453,
+        1.094,
+        2.039
+      ],
+      "tris": 530,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.74,
+      "item_rotation": [
+        0,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophySeal": {
+      "scale": 0.3277,
+      "shown_w": 0.363,
+      "shown_h": 0.251,
+      "shown_d": 0.256,
+      "true_size": [
+        1.108,
+        0.604,
+        0.494
+      ],
+      "tris": 1662,
+      "clip_pairs": 0,
+      "outside_cell_mm": 2.0,
+      "item_rotation": [
+        40,
+        0,
+        0
+      ],
+      "back_gap_mm": 23.0
+    },
+    "TrophySeeker": {
+      "scale": 0.0839,
+      "shown_w": 0.363,
+      "shown_h": 0.244,
+      "shown_d": 0.017,
+      "true_size": [
+        4.325,
+        2.904,
+        0.204
+      ],
+      "tris": 864,
+      "clip_pairs": 0,
+      "outside_cell_mm": 1.93,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophySeekerBrute": {
+      "scale": 0.1101,
+      "shown_w": 0.144,
+      "shown_h": 0.26,
+      "shown_d": 0.26,
+      "true_size": [
+        1.31,
+        2.519,
+        0.826
+      ],
+      "tris": 1478,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        45,
+        0,
+        0
+      ],
+      "back_gap_mm": 10.4
+    },
+    "TrophySeekerQueen": {
+      "scale": 0.0534,
+      "shown_w": 0.247,
+      "shown_h": 0.26,
+      "shown_d": 0.27,
+      "true_size": [
+        4.616,
+        4.388,
+        4.179
+      ],
+      "tris": 4502,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        10,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophySerpent": {
+      "scale": 0.0544,
+      "shown_w": 0.249,
+      "shown_h": 0.26,
+      "shown_d": 0.26,
+      "true_size": [
+        4.58,
+        3.697,
+        3.07
+      ],
+      "tris": 2044,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        45,
+        0,
+        0
+      ],
+      "back_gap_mm": 3.0
+    },
+    "TrophySkeleton": {
+      "scale": 0.6483,
+      "shown_w": 0.141,
+      "shown_h": 0.26,
+      "shown_d": 0.242,
+      "true_size": [
+        0.218,
+        0.326,
+        0.279
+      ],
+      "tris": 582,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        70,
+        0,
+        0
+      ],
+      "back_gap_mm": 21.5
+    },
+    "TrophySkeletonHildir": {
+      "scale": 0.6483,
+      "shown_w": 0.141,
+      "shown_h": 0.26,
+      "shown_d": 0.242,
+      "true_size": [
+        0.218,
+        0.326,
+        0.279
+      ],
+      "tris": 582,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        70,
+        0,
+        0
+      ],
+      "back_gap_mm": 21.5
+    },
+    "TrophySkeletonPoison": {
+      "scale": 0.5401,
+      "shown_w": 0.141,
+      "shown_h": 0.26,
+      "shown_d": 0.242,
+      "true_size": [
+        0.261,
+        0.391,
+        0.335
+      ],
+      "tris": 582,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        70,
+        0,
+        0
+      ],
+      "back_gap_mm": 21.6
+    },
+    "TrophySurtling": {
+      "scale": 0.6111,
+      "shown_w": 0.127,
+      "shown_h": 0.26,
+      "shown_d": 0.206,
+      "true_size": [
+        0.207,
+        0.375,
+        0.248
+      ],
+      "tris": 202,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        75,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyTheElder": {
+      "scale": 0.1197,
+      "shown_w": 0.14,
+      "shown_h": 0.26,
+      "shown_d": 0.26,
+      "true_size": [
+        1.167,
+        1.914,
+        1.165
+      ],
+      "tris": 844,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        45,
+        0,
+        0
+      ],
+      "back_gap_mm": 39.0
+    },
+    "TrophyTick": {
+      "scale": 0.4599,
+      "shown_w": 0.137,
+      "shown_h": 0.26,
+      "shown_d": 0.12,
+      "true_size": [
+        0.297,
+        0.566,
+        0.262
+      ],
+      "tris": 696,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.93,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyUlv": {
+      "scale": 0.1898,
+      "shown_w": 0.245,
+      "shown_h": 0.26,
+      "shown_d": 0.089,
+      "true_size": [
+        1.289,
+        1.373,
+        0.472
+      ],
+      "tris": 168,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.92,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyVolture": {
+      "scale": 0.2003,
+      "shown_w": 0.363,
+      "shown_h": 0.194,
+      "shown_d": 0.194,
+      "true_size": [
+        1.812,
+        0.626,
+        0.741
+      ],
+      "tris": 4254,
+      "clip_pairs": 0,
+      "outside_cell_mm": 1.15,
+      "item_rotation": [
+        45,
+        0,
+        0
+      ],
+      "back_gap_mm": 36.0
+    },
+    "TrophyWolf": {
+      "scale": 0.4726,
+      "shown_w": 0.229,
+      "shown_h": 0.26,
+      "shown_d": 0.262,
+      "true_size": [
+        0.484,
+        0.508,
+        0.513
+      ],
+      "tris": 934,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.0,
+      "item_rotation": [
+        85,
+        0,
+        0
+      ],
+      "back_gap_mm": 4.3
+    },
+    "TrophyWraith": {
+      "scale": 0.1176,
+      "shown_w": 0.128,
+      "shown_h": 0.26,
+      "shown_d": 0.037,
+      "true_size": [
+        1.093,
+        2.215,
+        0.319
+      ],
+      "tris": 2004,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.03,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    },
+    "TrophyWrithan": {
+      "scale": 0.3246,
+      "shown_w": 0.307,
+      "shown_h": 0.26,
+      "shown_d": 0.112,
+      "true_size": [
+        0.945,
+        0.802,
+        0.344
+      ],
+      "tris": 906,
+      "clip_pairs": 0,
+      "outside_cell_mm": 0.59,
+      "item_rotation": [
+        90,
+        0,
+        0
+      ],
+      "back_gap_mm": 0.0
+    }
+  },
+  "kinds_missing": {
+    "TrophyForestTroll": "no mesh in the game bundle (null MeshFilter mesh); the mod measures the real prefab at run time, the fit rule is the same. Its item_rotation entry [20, 0, 0] is copied from TrophyFrostTroll (same troll head model family) and NOT verified on a mesh."
+  },
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 0,
+      "row": "board",
+      "position": [
+        2.25,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBoar",
+      "example_scale": 0.3566,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.75,
+            0.54,
+            0.24
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 1,
+      "row": "board",
+      "position": [
+        1.875,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyDeer",
+      "example_scale": 0.2087,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.26,
+            -0.99,
+            -0.28
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 2,
+      "row": "board",
+      "position": [
+        1.5,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyDeerWhite",
+      "example_scale": 0.2087,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.78,
+            -0.2,
+            -0.08
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 3,
+      "row": "board",
+      "position": [
+        1.125,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyNeck",
+      "example_scale": 0.3505,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.21,
+            -0.92,
+            -0.77
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 4,
+      "row": "board",
+      "position": [
+        0.75,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBjorn",
+      "example_scale": 0.1268,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.7,
+            0.69,
+            -0.05
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 5,
+      "row": "board",
+      "position": [
+        0.375,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyForestTroll",
+      "example_scale": 0.1157,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.78,
+            -0.88,
+            0.42
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 6,
+      "row": "board",
+      "position": [
+        -0.0,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGhost",
+      "example_scale": 0.7744,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.72,
+            -0.04,
+            -0.21
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 7,
+      "row": "board",
+      "position": [
+        -0.375,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGreydwarf",
+      "example_scale": 0.3425,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.18,
+            0.77,
+            0.45
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 8,
+      "row": "board",
+      "position": [
+        -0.75,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGreydwarfBrute",
+      "example_scale": 0.1891,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.71,
+            -0.94,
+            -0.11
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 9,
+      "row": "board",
+      "position": [
+        -1.125,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGreydwarfShaman",
+      "example_scale": 0.175,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.1,
+            0.55,
+            0.17
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 10,
+      "row": "board",
+      "position": [
+        -1.5,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySkeleton",
+      "example_scale": 0.6483,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.51,
+            0.12,
+            0.11
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 11,
+      "row": "board",
+      "position": [
+        -1.875,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySkeletonHildir",
+      "example_scale": 0.6483,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.06,
+            -0.9,
+            -0.25
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 0,
+      "grid_col": 12,
+      "row": "board",
+      "position": [
+        -2.25,
+        1.3763,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyAbomination",
+      "example_scale": 0.0924,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.29,
+            0.35,
+            0.04
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 0,
+      "row": "board",
+      "position": [
+        2.25,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBlob",
+      "example_scale": 0.4701,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.46,
+            -0.23,
+            -0.06
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 1,
+      "row": "board",
+      "position": [
+        1.875,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyDraugr",
+      "example_scale": 0.4164,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.13,
+            0.26,
+            0.21
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 2,
+      "row": "board",
+      "position": [
+        1.5,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyDraugrElite",
+      "example_scale": 0.593,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.66,
+            0.88,
+            -0.28
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 3,
+      "row": "board",
+      "position": [
+        1.125,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyDraugrFem",
+      "example_scale": 0.4159,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.29,
+            -0.03,
+            0.51
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 4,
+      "row": "board",
+      "position": [
+        0.75,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyLeech",
+      "example_scale": 0.1809,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.32,
+            -0.9,
+            0.92
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 5,
+      "row": "board",
+      "position": [
+        0.375,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySkeletonPoison",
+      "example_scale": 0.5401,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.62,
+            0.02,
+            -0.53
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 6,
+      "row": "board",
+      "position": [
+        -0.0,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySurtling",
+      "example_scale": 0.6111,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.38,
+            -0.62,
+            0.4
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 7,
+      "row": "board",
+      "position": [
+        -0.375,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyWraith",
+      "example_scale": 0.1176,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.54,
+            -0.2,
+            0.02
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 8,
+      "row": "board",
+      "position": [
+        -0.75,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyCultist",
+      "example_scale": 0.2312,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.06,
+            0.38,
+            -0.29
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 9,
+      "row": "board",
+      "position": [
+        -1.125,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyCultist_Hildir",
+      "example_scale": 0.2383,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.68,
+            -0.4,
+            -0.16
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 10,
+      "row": "board",
+      "position": [
+        -1.5,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyFenring",
+      "example_scale": 0.1483,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.57,
+            0.63,
+            0.83
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 11,
+      "row": "board",
+      "position": [
+        -1.875,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyFrostTroll",
+      "example_scale": 0.1157,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.05,
+            0.04,
+            -0.15
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 1,
+      "grid_col": 12,
+      "row": "board",
+      "position": [
+        -2.25,
+        1.1038,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyHatchling",
+      "example_scale": 0.2923,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.4,
+            -0.46,
+            -0.92
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 0,
+      "row": "board",
+      "position": [
+        2.25,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySGolem",
+      "example_scale": 0.1277,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.34,
+            0.83,
+            0.24
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 1,
+      "row": "board",
+      "position": [
+        1.875,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyUlv",
+      "example_scale": 0.1898,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.03,
+            -0.21,
+            -0.12
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 2,
+      "row": "board",
+      "position": [
+        1.5,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyWolf",
+      "example_scale": 0.4726,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.45,
+            0.28,
+            0.1
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 3,
+      "row": "board",
+      "position": [
+        1.125,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyDeathsquito",
+      "example_scale": 0.4203,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.79,
+            -0.69,
+            -0.34
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 4,
+      "row": "board",
+      "position": [
+        0.75,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGoblin",
+      "example_scale": 0.5903,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.24,
+            -0.12,
+            -0.11
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 5,
+      "row": "board",
+      "position": [
+        0.375,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGoblinBrute",
+      "example_scale": 0.1591,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.38,
+            0.99,
+            -0.75
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 6,
+      "row": "board",
+      "position": [
+        -0.0,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGoblinBruteBrosBrute",
+      "example_scale": 0.1587,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.56,
+            0.35,
+            -0.35
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 7,
+      "row": "board",
+      "position": [
+        -0.375,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGoblinBruteBrosShaman",
+      "example_scale": 0.5274,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.18,
+            -0.66,
+            0.68
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 8,
+      "row": "board",
+      "position": [
+        -0.75,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGoblinShaman",
+      "example_scale": 0.586,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.63,
+            -0.13,
+            -0.84
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 9,
+      "row": "board",
+      "position": [
+        -1.125,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGrowth",
+      "example_scale": 0.5101,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.07,
+            0.7,
+            -0.39
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 10,
+      "row": "board",
+      "position": [
+        -1.5,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyLox",
+      "example_scale": 0.112,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.65,
+            -0.36,
+            -0.01
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 11,
+      "row": "board",
+      "position": [
+        -1.875,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyDvergr",
+      "example_scale": 0.5823,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.32,
+            -0.91,
+            0.52
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 2,
+      "grid_col": 12,
+      "row": "board",
+      "position": [
+        -2.25,
+        0.8313,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyGjall",
+      "example_scale": 0.0665,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.12,
+            0.01,
+            0.48
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 0,
+      "row": "board",
+      "position": [
+        2.25,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyHare",
+      "example_scale": 0.5398,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.64,
+            0.19,
+            -0.41
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 1,
+      "row": "board",
+      "position": [
+        1.875,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySeeker",
+      "example_scale": 0.0839,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.63,
+            -0.72,
+            0.29
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 2,
+      "row": "board",
+      "position": [
+        1.5,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySeekerBrute",
+      "example_scale": 0.1101,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.33,
+            0.89,
+            -0.51
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 3,
+      "row": "board",
+      "position": [
+        1.125,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyTick",
+      "example_scale": 0.4599,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.72,
+            0.03,
+            0.32
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 4,
+      "row": "board",
+      "position": [
+        0.75,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyKvastur",
+      "example_scale": 0.1059,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.22,
+            -0.83,
+            -0.25
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 5,
+      "row": "board",
+      "position": [
+        0.375,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyAsksvin",
+      "example_scale": 0.2765,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.68,
+            -0.42,
+            -0.16
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 6,
+      "row": "board",
+      "position": [
+        -0.0,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBjornUndead",
+      "example_scale": 0.2202,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.14,
+            -0.92,
+            -0.41
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 7,
+      "row": "board",
+      "position": [
+        -0.375,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBlob_Lava",
+      "example_scale": 0.667,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.56,
+            0.35,
+            -0.38
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 8,
+      "row": "board",
+      "position": [
+        -0.75,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBlob_Morkhalla",
+      "example_scale": 0.5063,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.78,
+            -0.53,
+            0.34
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 9,
+      "row": "board",
+      "position": [
+        -1.125,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBonemawSerpent",
+      "example_scale": 0.0415,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.06,
+            0.16,
+            -0.84
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 10,
+      "row": "board",
+      "position": [
+        -1.5,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyCharredArcher",
+      "example_scale": 0.1639,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.45,
+            0.88,
+            -0.04
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 11,
+      "row": "board",
+      "position": [
+        -1.875,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyCharredMage",
+      "example_scale": 0.2258,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.66,
+            -0.08,
+            -0.46
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 3,
+      "grid_col": 12,
+      "row": "board",
+      "position": [
+        -2.25,
+        0.5588,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyCharredMelee",
+      "example_scale": 0.6944,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.25,
+            0.63,
+            -0.49
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 0,
+      "row": "board",
+      "position": [
+        2.25,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyFallenValkyrie",
+      "example_scale": 0.1859,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.22,
+            0.9,
+            0.09
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 1,
+      "row": "board",
+      "position": [
+        1.875,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyMorgen",
+      "example_scale": 0.3347,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.77,
+            0.4,
+            0.07
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 2,
+      "row": "board",
+      "position": [
+        1.5,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyVolture",
+      "example_scale": 0.2003,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.34,
+            -0.5,
+            0.13
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 3,
+      "row": "board",
+      "position": [
+        1.125,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBarka",
+      "example_scale": 0.0669,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.17,
+            -0.98,
+            0.13
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 4,
+      "row": "board",
+      "position": [
+        0.75,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyBlob_Frost",
+      "example_scale": 0.5101,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.69,
+            0.91,
+            0.41
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 5,
+      "row": "board",
+      "position": [
+        0.375,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyElaking",
+      "example_scale": 0.5023,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.23,
+            0.2,
+            -0.51
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 6,
+      "row": "board",
+      "position": [
+        -0.0,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyJotunWarrior",
+      "example_scale": 0.3128,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.36,
+            -0.22,
+            0.32
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 7,
+      "row": "board",
+      "position": [
+        -0.375,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyJotunWitch",
+      "example_scale": 0.2479,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.37,
+            0.76,
+            0.47
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 8,
+      "row": "board",
+      "position": [
+        -0.75,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyMole",
+      "example_scale": 0.1032,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.36,
+            -0.12,
+            -0.35
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 9,
+      "row": "board",
+      "position": [
+        -1.125,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyMoose",
+      "example_scale": 0.1173,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.02,
+            0.89,
+            0.14
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 10,
+      "row": "board",
+      "position": [
+        -1.5,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySeal",
+      "example_scale": 0.3277,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            0.38,
+            -0.25,
+            -0.79
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 11,
+      "row": "board",
+      "position": [
+        -1.875,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophyWrithan",
+      "example_scale": 0.3246,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.78,
+            0.44,
+            0.79
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "kind": "board",
+      "place": "board",
+      "grid_row": 4,
+      "grid_col": 12,
+      "row": "board",
+      "position": [
+        -2.25,
+        0.2863,
+        -0.09
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "box_size": [
+        0.3157,
+        0.2265,
+        0.28
+      ],
+      "example_item": "TrophySerpent",
+      "example_scale": 0.0544,
+      "copies": [
+        {
+          "layer": 0,
+          "row": 0,
+          "col": 0,
+          "offset": [
+            0.0,
+            0.0,
+            0.018
+          ],
+          "rotation": [
+            -0.35,
+            -0.29,
+            0.34
+          ],
+          "fit_box": [
+            0.3157,
+            0.2265,
+            0.28
+          ],
+          "anchor": "back"
+        }
+      ]
+    }
+  ],
+  "review_variant": {
+    "author": "Claude Opus 5.5",
+    "intent": "Trophy Hall 13 x 5: r3 boards and facing, flat back, half-pitch ends, hand-hung copy turns",
+    "source_sha256": "37eda5f5456eb8ca4041668415bda27060b27743c93a3a686724ad08551c8314"
+  },
+  "small_identity_min_projected_m": 0.23,
+  "item_visual_overrides": {
+    "TrophyBonemass": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        3.0755,
+        1.3222,
+        2.9962
+      ],
+      "source_bounds_center_unity": [
+        -0.02044999599456787,
+        0.36180001497268677,
+        0.4117000102996826
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophyBonemass_0.obj",
+          "atlas": "Item_TrophyBonemass_0.png",
+          "color": [
+            0.755,
+            0.661,
+            0.527,
+            1.0
+          ],
+          "alpha_mode": "clip",
+          "alpha_cutoff": 0.8149999976158142,
+          "triangles_display": 710,
+          "source_atlas_sha256": "48c5ba17d92edc4e32ad0b5496e379b5a348e0ced2050221ab9da9ac2e3e028f",
+          "internal_plane_repairs": {
+            "patches": [],
+            "maximum_patch_displacement_m_at_display_scale": 0.0
+          }
+        },
+        {
+          "obj": "Item_TrophyBonemass_1.obj",
+          "atlas": "Item_TrophyBonemass_1.png",
+          "color": [
+            1.0,
+            0.884,
+            0.755,
+            1.0
+          ],
+          "alpha_mode": "opaque",
+          "alpha_cutoff": 0.5,
+          "triangles_display": 2018,
+          "source_atlas_sha256": "eb3b12fc7032b5932319a681b15325fc42e87e0b8d7cb898c43c7f20f2704a9c",
+          "internal_plane_repairs": {
+            "patches": [],
+            "maximum_patch_displacement_m_at_display_scale": 0.0
+          }
+        }
+      ],
+      "source_obj_sha256": "90c0a03850b7e5a98ecc849bd5915ecb7e164c24eea76323cd4f6b1ed5318cdc",
+      "triangles_original": 15717,
+      "triangles_imported": 15717,
+      "triangles_display": 2728,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    },
+    "TrophyBonemawSerpent": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        4.1969,
+        4.622,
+        5.558
+      ],
+      "source_bounds_center_unity": [
+        0.043849945068359375,
+        1.6130999326705933,
+        0.42729997634887695
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophyBonemawSerpent_0.obj",
+          "atlas": "Item_TrophyBonemawSerpent_0.png",
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "alpha_mode": "clip",
+          "alpha_cutoff": 0.5,
+          "triangles_display": 2730,
+          "source_atlas_sha256": "813492975ed9d86270a0c9217d7af9eb88007e4a158a9123c48c98d6c1075ee5",
+          "internal_plane_repairs": {
+            "patches": [],
+            "maximum_patch_displacement_m_at_display_scale": 0.0
+          }
+        }
+      ],
+      "source_obj_sha256": "0cb75f265193a3f6c50e21a27049179645e974829e7e40d9d8f301a7488ab82b",
+      "triangles_original": 5351,
+      "triangles_imported": 5351,
+      "triangles_display": 2730,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    },
+    "TrophyDragonQueen": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        2.646,
+        1.677,
+        3.0848999999999998
+      ],
+      "source_bounds_center_unity": [
+        -0.0,
+        0.17779996991157532,
+        -0.5233500003814697
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophyDragonQueen_0.obj",
+          "atlas": "Item_TrophyDragonQueen_0.png",
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "alpha_mode": "clip",
+          "alpha_cutoff": 0.4399999976158142,
+          "triangles_display": 2015,
+          "source_atlas_sha256": "dcf43428ba1f6ff65627f95a6a45408c0253582cda3af7ecdc886c72e1585bb6",
+          "internal_plane_repairs": {
+            "patches": [
+              {
+                "face": 7,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0037077368409171862
+              },
+              {
+                "face": 88,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0014382686413239032
+              }
+            ],
+            "maximum_patch_displacement_m_at_display_scale": 0.000338
+          }
+        }
+      ],
+      "source_obj_sha256": "53b4aecb692b24285499842888a740f8fd87a4191c22387dfd1e767ddf6925b0",
+      "triangles_original": 4018,
+      "triangles_imported": 2015,
+      "triangles_display": 2015,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    },
+    "TrophyEikthyr": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        2.2976,
+        1.5334,
+        2.9103
+      ],
+      "source_bounds_center_unity": [
+        -0.0,
+        0.6525999903678894,
+        -0.41015005111694336
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophyEikthyr_0.obj",
+          "atlas": "Item_TrophyEikthyr_0.png",
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "alpha_mode": "clip",
+          "alpha_cutoff": 0.5,
+          "triangles_display": 2730,
+          "source_atlas_sha256": "a4063df6ccdef7873f54347dc8a10c6bb98b28dd671738f94faa25c284723f27",
+          "internal_plane_repairs": {
+            "patches": [
+              {
+                "face": 2060,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 1.1218992938208258e-06
+              }
+            ],
+            "maximum_patch_displacement_m_at_display_scale": 0.00032
+          }
+        }
+      ],
+      "source_obj_sha256": "2a99ef85cd8d2b325c08a63adf1df18e23f7859010d02201a28ac90926f52b3f",
+      "triangles_original": 11676,
+      "triangles_imported": 11676,
+      "triangles_display": 2730,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    },
+    "TrophyFader": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        5.4062,
+        3.4963,
+        3.8236999999999997
+      ],
+      "source_bounds_center_unity": [
+        0.026000022888183594,
+        1.600849986076355,
+        0.6312500834465027
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophyFader_0.obj",
+          "atlas": "Item_TrophyFader_0.png",
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "alpha_mode": "opaque",
+          "alpha_cutoff": 0.5,
+          "triangles_display": 2730,
+          "source_atlas_sha256": "a8d6c7d5fad73f4f05d8851bd7dc210ca040774f1901aa10d48528262bee4d9f",
+          "internal_plane_repairs": {
+            "patches": [],
+            "maximum_patch_displacement_m_at_display_scale": 0.0
+          }
+        }
+      ],
+      "source_obj_sha256": "b4ccffe2bffafee8f49edf32be2b3235eae46a6baff6a5b14a104f76dead6cb8",
+      "triangles_original": 4364,
+      "triangles_imported": 4364,
+      "triangles_display": 2730,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    },
+    "TrophyGoblinKing": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        4.6129999999999995,
+        2.8017000000000003,
+        3.261
+      ],
+      "source_bounds_center_unity": [
+        -0.000800013542175293,
+        1.2132500410079956,
+        -0.22630000114440918
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophyGoblinKing_0.obj",
+          "atlas": "Item_TrophyGoblinKing_0.png",
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "alpha_mode": "clip",
+          "alpha_cutoff": 0.1120000034570694,
+          "triangles_display": 2730,
+          "source_atlas_sha256": "35b552ab8dc1b44530b12c466e629cf3859f9ccb63a6b79e19bfe901398a313d",
+          "internal_plane_repairs": {
+            "patches": [
+              {
+                "face": 741,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 8.533468204702244e-05
+              },
+              {
+                "face": 400,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 8.53169271989862e-05
+              }
+            ],
+            "maximum_patch_displacement_m_at_display_scale": 0.00025
+          }
+        }
+      ],
+      "source_obj_sha256": "e4e29b36aad13a32bb79500d24785d8ad72c8f45bbbcbd38fce05b2fefaa94a2",
+      "triangles_original": 3778,
+      "triangles_imported": 3778,
+      "triangles_display": 2730,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    },
+    "TrophyMoose": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        2.1222,
+        1.3234,
+        1.8763
+      ],
+      "source_bounds_center_unity": [
+        -0.008000016212463379,
+        0.26749998331069946,
+        -0.23264998197555542
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophyMoose_0.obj",
+          "atlas": "Item_TrophyMoose_0.png",
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "alpha_mode": "clip",
+          "alpha_cutoff": 0.5,
+          "triangles_display": 2730,
+          "source_atlas_sha256": "8279a416c4782b533b81d628306a611334fdb86fd1d9cbb5944f7c9f48ce4223",
+          "internal_plane_repairs": {
+            "patches": [
+              {
+                "face": 494,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0037420497151235584
+              },
+              {
+                "face": 183,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0037420495039116562
+              },
+              {
+                "face": 493,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0034496753031997354
+              },
+              {
+                "face": 182,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.003449672523994904
+              },
+              {
+                "face": 2593,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0024236095968817803
+              },
+              {
+                "face": 2554,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0024236053223041717
+              },
+              {
+                "face": 2545,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0017188540007245581
+              },
+              {
+                "face": 2578,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0017188540007245581
+              },
+              {
+                "face": 2570,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0013994927523307
+              },
+              {
+                "face": 2601,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0013994927523307
+              },
+              {
+                "face": 217,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0004507585702928224
+              },
+              {
+                "face": 500,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.001007409137658994
+              },
+              {
+                "face": 528,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0004507585365426253
+              },
+              {
+                "face": 207,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0004346359625814686
+              },
+              {
+                "face": 518,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.00043463574631179584
+              },
+              {
+                "face": 2428,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 8.926036245304747e-05
+              },
+              {
+                "face": 2488,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 8.926036245304747e-05
+              },
+              {
+                "face": 162,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 5.283633354673635e-07
+              },
+              {
+                "face": 2376,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 3.14589118075026e-07
+              },
+              {
+                "face": 2304,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 3.145891180611482e-07
+              }
+            ],
+            "maximum_patch_displacement_m_at_display_scale": 0.000469
+          }
+        }
+      ],
+      "source_obj_sha256": "8d438a807865e4d52d88e85ec8b7092d433ee4c8aa9be18f3679b470dcbe2e86",
+      "triangles_original": 4154,
+      "triangles_imported": 3834,
+      "triangles_display": 2730,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    },
+    "TrophySeekerQueen": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        4.616,
+        4.1791,
+        4.3883
+      ],
+      "source_bounds_center_unity": [
+        -0.0,
+        1.4766499996185303,
+        0.4176499843597412
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophySeekerQueen_0.obj",
+          "atlas": "Item_TrophySeekerQueen_0.png",
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "alpha_mode": "clip",
+          "alpha_cutoff": 0.30000001192092896,
+          "triangles_display": 2730,
+          "source_atlas_sha256": "d91703d16fdfc79c051f124b9d265bf6fe88f3c55429ca649e71352e7cb09883",
+          "internal_plane_repairs": {
+            "patches": [
+              {
+                "face": 351,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 1.093045006887278e-05
+              }
+            ],
+            "maximum_patch_displacement_m_at_display_scale": 0.000214
+          }
+        }
+      ],
+      "source_obj_sha256": "8a166ccf7dc638fb7038e5c673afe644b571dcca06ee465e04672fe571b574a6",
+      "triangles_original": 4502,
+      "triangles_imported": 4502,
+      "triangles_display": 2730,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    },
+    "TrophyVolture": {
+      "geometry_anchor": "original_bounds_center",
+      "bounds_center": [
+        0,
+        0,
+        0
+      ],
+      "bounds_size": [
+        1.8124,
+        0.741,
+        0.6257999999999999
+      ],
+      "source_bounds_center_unity": [
+        -0.0,
+        0.259799987077713,
+        -0.008900001645088196
+      ],
+      "parts": [
+        {
+          "obj": "Item_TrophyVolture_0.obj",
+          "atlas": "Item_TrophyVolture_0.png",
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "alpha_mode": "clip",
+          "alpha_cutoff": 0.6549999713897705,
+          "triangles_display": 2730,
+          "source_atlas_sha256": "597251d3618eafcbb64648b6e8d59176c4afa4f8da6ba7ec01826eaf9a979842",
+          "internal_plane_repairs": {
+            "patches": [
+              {
+                "face": 534,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.000504502900290594
+              },
+              {
+                "face": 1978,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 0.0005045029002905937
+              },
+              {
+                "face": 621,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 1.5921998263418446e-05
+              },
+              {
+                "face": 1006,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 1.5921998263418446e-05
+              },
+              {
+                "face": 1693,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 1.5921998263418446e-05
+              },
+              {
+                "face": 2077,
+                "outward_original_item_m": 0.004,
+                "overlap_area_original_m2": 1.5921998263418446e-05
+              }
+            ],
+            "maximum_patch_displacement_m_at_display_scale": 0.000801
+          }
+        }
+      ],
+      "source_obj_sha256": "67673e09d4099192823cc76a19f2ca558ae276fe06c527b62100b3f0b6978d91",
+      "triangles_original": 4254,
+      "triangles_imported": 3678,
+      "triangles_display": 2730,
+      "combined_material_same_facing_overlaps": 0,
+      "note": "Actual mesh reduced separately per original material; exact UV/PNG/alpha retained. Storage display only."
+    }
+  },
+  "small_identity_rule": "After item_rotation, s=min(max(DisplaySize*RootScale,0.23/max(turnedBounds.x,turnedBounds.y)),1.15*min(box/turnedBounds)). Keep original back anchor and cell cap.",
+  "frame_contacts": {
+    "part_count": 382,
+    "isolated": 0,
+    "ungrounded": 0
+  }
+}

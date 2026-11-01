@@ -1,0 +1,9237 @@
+{
+ "schema": "storehouse-anchors/1",
+ "furniture": "Bolt Crate",
+ "slug": "bolttubs",
+ "round": 1,
+ "placement": "ground",
+ "unit_count": 64,
+ "slots_designed_for": 64,
+ "stack_per_unit": true,
+ "mirror": false,
+ "heap": false,
+ "homes": true,
+ "frame": {
+  "obj": "BoltTubs.obj",
+  "atlas": "bolttubs_atlas.png 128x128 point",
+  "tris": 8029,
+  "size_m": [
+   1.786,
+   0.86,
+   1.807
+  ],
+  "size_note": "[x, y (up), z] Unity",
+  "bounds_unity": {
+   "min": [
+    -0.893,
+    0.0,
+    -0.904
+   ],
+   "max": [
+    0.893,
+    0.86,
+    0.904
+   ]
+  },
+  "contents_top_y_full": 0.949,
+  "stacking": "not stackable: stepped terraces, the bolts stand above the rims"
+ },
+ "space": {
+  "unity": "prefab space, origin on the floor at the centre of the footprint, +z front, +y up, +x to the furniture's left seen from the front",
+  "from_blender": "ux=-bx, uy=bz, uz=-by"
+ },
+ "groups": {
+  "key": "compartment",
+  "rows": "g = 4 * row + column; row 0 is the front, column 0 the left seen from the front; each row stands 0.12 m higher than the one in front",
+  "homes": {
+   "0": "BoltBone",
+   "1": "BoltIron",
+   "2": "BoltBlackmetal",
+   "3": "BoltCarapace",
+   "4": "BoltCharred",
+   "5": "VABoltWood",
+   "6": "VABoltCoreWood",
+   "7": "VAbolt_bronze",
+   "8": "VAbolt_poison",
+   "9": "VAbolt_frost",
+   "10": "VAFireBolt",
+   "11": "VASurtlingBolt",
+   "12": "VAObsidianBolt",
+   "13": "VABoltNeedle",
+   "14": "spare: any bolt kind",
+   "15": "spare: any bolt kind"
+  },
+  "rule": "Homes store: each group's units carry 'item', the bolt kind its cell is for (the two spares have none, only 'example_item'). One layout serves all sixteen cells, packed against all 14 models, so a kind that fills its home may take an empty cell (the spares first) without a copy touching another or the frame."
+ },
+ "band": {
+  "BoltBone": "bone white",
+  "BoltIron": "iron slate blue",
+  "BoltBlackmetal": "black metal char",
+  "BoltCarapace": "carapace verdigris",
+  "BoltCharred": "soot brown",
+  "VABoltWood": "birch tan",
+  "VABoltCoreWood": "core wood moss",
+  "VAbolt_bronze": "bronze",
+  "VAbolt_poison": "poison green",
+  "VAbolt_frost": "frost blue",
+  "VAFireBolt": "flame orange",
+  "VASurtlingBolt": "surtling ember red",
+  "VAObsidianBolt": "obsidian violet",
+  "VABoltNeedle": "needle glow teal",
+  "spare": [
+   "spare chalk",
+   "spare silver grey"
+  ]
+ },
+ "band_note": "paint colour per kind: a painted slab on the rim of the cell's front wall and a band on that wall's face; paint swatches 0-15 in the atlas (u 64 + 4 k, v 32); the spares are chalk white and silver grey",
+ "fill_order": "units are listed cell by cell; step 0 is the core bundle (the middle of the cell), steps 1-3 stand round it",
+ "position": "unit position = mean of its copies' feet, on the floor of its cell (row j: y [0.185, 0.305, 0.425, 0.545]); box informational",
+ "copy_rule": "bolts: align (long axis -> up, thin axis -> x), then_rotate = a lean of 1-5 degrees times a spin about the shaft, fit_longest_m 0.32, anchor bottom, offset.y = the foot height in the straw (0 .. 0.08 in steps) plus the lift a lean needs (a leaning copy dips below its bounds)",
+ "straw": "every cell is packed with straw to 0.11 m over its floor; the straw surface is part of the frame, each triangle that any copy of any model touches cut away",
+ "heads": {
+  "note": "Align.Axes turns the item's +long axis to up and the models differ in sign, so the end that stands up is per model; spread = the widest radius of the top and bottom 7 cm of the standing bolt (the wide end is the fletching)",
+  "ends": {
+   "BoltBone": {
+    "spread_top_m": 0.011,
+    "spread_bottom_m": 0.039
+   },
+   "BoltIron": {
+    "spread_top_m": 0.011,
+    "spread_bottom_m": 0.048
+   },
+   "BoltBlackmetal": {
+    "spread_top_m": 0.011,
+    "spread_bottom_m": 0.035
+   },
+   "BoltCarapace": {
+    "spread_top_m": 0.022,
+    "spread_bottom_m": 0.036
+   },
+   "BoltCharred": {
+    "spread_top_m": 0.009,
+    "spread_bottom_m": 0.017
+   },
+   "VABoltWood": {
+    "spread_top_m": 0.01,
+    "spread_bottom_m": 0.028
+   },
+   "VABoltCoreWood": {
+    "spread_top_m": 0.01,
+    "spread_bottom_m": 0.028
+   },
+   "VAbolt_bronze": {
+    "spread_top_m": 0.015,
+    "spread_bottom_m": 0.027
+   },
+   "VAbolt_poison": {
+    "spread_top_m": 0.014,
+    "spread_bottom_m": 0.034
+   },
+   "VAbolt_frost": {
+    "spread_top_m": 0.014,
+    "spread_bottom_m": 0.034
+   },
+   "VAFireBolt": {
+    "spread_top_m": 0.01,
+    "spread_bottom_m": 0.028
+   },
+   "VASurtlingBolt": {
+    "spread_top_m": 0.017,
+    "spread_bottom_m": 0.027
+   },
+   "VAObsidianBolt": {
+    "spread_top_m": 0.018,
+    "spread_bottom_m": 0.026
+   },
+   "VABoltNeedle": {
+    "spread_top_m": 0.028,
+    "spread_bottom_m": 0.002
+   }
+  }
+ },
+ "layout": {
+  "cells": 16,
+  "columns": 4,
+  "rows": 4,
+  "units_each": 4,
+  "copies_per_unit": 4,
+  "copies_full": 256,
+  "cell_inner_m": 0.34,
+  "divider_m": 0.05,
+  "rim_over_floor_m": 0.2,
+  "row_step_m": 0.12,
+  "floor_tops_y": [
+   0.185,
+   0.305,
+   0.425,
+   0.545
+  ],
+  "x_blender": [
+   -0.5850000000000001,
+   -0.19500000000000006,
+   0.19499999999999995,
+   0.5849999999999999
+  ],
+  "y_blender": [
+   -0.5850000000000001,
+   -0.1950000000000001,
+   0.19499999999999992,
+   0.5849999999999999
+  ],
+  "foot_levels_m": [
+   0.0,
+   0.03,
+   0.055,
+   0.08
+  ],
+  "gather_height_m": 0.25,
+  "straw_over_floor_m": 0.11,
+  "one layout": "the same sixteen copies in every cell, turned by a multiple of 90 degrees per cell"
+ },
+ "items": {
+  "found": {
+   "BoltBone": {
+    "name": "Bone Bolt",
+    "item_bounds_centre": [
+     0.0073,
+     -0.0548,
+     0.0968
+    ],
+    "item_bounds_size": [
+     0.1413,
+     0.1413,
+     0.5733
+    ],
+    "x_fit": 0.558,
+    "triangles": 86,
+    "source": "game files"
+   },
+   "BoltIron": {
+    "name": "Iron Bolt",
+    "item_bounds_centre": [
+     0.0054,
+     -0.0567,
+     -0.0
+    ],
+    "item_bounds_size": [
+     0.1675,
+     0.1675,
+     0.5591
+    ],
+    "x_fit": 0.572,
+    "triangles": 26,
+    "source": "game files"
+   },
+   "BoltBlackmetal": {
+    "name": "Blackmetal Bolt",
+    "item_bounds_centre": [
+     0.0081,
+     -0.051,
+     0.0105
+    ],
+    "item_bounds_size": [
+     0.1292,
+     0.1292,
+     0.5841
+    ],
+    "x_fit": 0.548,
+    "triangles": 38,
+    "source": "game files"
+   },
+   "BoltCarapace": {
+    "name": "Carapace Bolt",
+    "item_bounds_centre": [
+     -0.0,
+     -0.0547,
+     0.016
+    ],
+    "item_bounds_size": [
+     0.1292,
+     0.1292,
+     0.5797
+    ],
+    "x_fit": 0.552,
+    "triangles": 326,
+    "source": "game files"
+   },
+   "BoltCharred": {
+    "name": "Charred Bolt",
+    "item_bounds_centre": [
+     0.2675,
+     -0.0539,
+     0.1105
+    ],
+    "item_bounds_size": [
+     0.0526,
+     0.0407,
+     0.5786
+    ],
+    "x_fit": 0.553,
+    "triangles": 48,
+    "source": "game files"
+   },
+   "VABoltWood": {
+    "name": "ValheimArmory wood bolt",
+    "item_bounds_centre": [
+     0.0077,
+     -0.0535,
+     0.0806
+    ],
+    "item_bounds_size": [
+     0.131,
+     0.131,
+     0.5885
+    ],
+    "x_fit": 0.544,
+    "triangles": 132,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   },
+   "VABoltCoreWood": {
+    "name": "ValheimArmory core wood bolt",
+    "item_bounds_centre": [
+     0.0077,
+     -0.0535,
+     0.0806
+    ],
+    "item_bounds_size": [
+     0.131,
+     0.131,
+     0.5885
+    ],
+    "x_fit": 0.544,
+    "triangles": 132,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   },
+   "VAbolt_bronze": {
+    "name": "ValheimArmory bronze bolt",
+    "item_bounds_centre": [
+     0.0027,
+     0.1411,
+     -0.0011
+    ],
+    "item_bounds_size": [
+     0.1326,
+     0.6099,
+     0.1325
+    ],
+    "x_fit": 0.525,
+    "triangles": 132,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   },
+   "VAbolt_poison": {
+    "name": "ValheimArmory poison bolt",
+    "item_bounds_centre": [
+     -0.0867,
+     0.1367,
+     0.0018
+    ],
+    "item_bounds_size": [
+     0.1026,
+     0.4774,
+     0.1017
+    ],
+    "x_fit": 0.67,
+    "triangles": 100,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   },
+   "VAbolt_frost": {
+    "name": "ValheimArmory frost bolt",
+    "item_bounds_centre": [
+     -0.0867,
+     0.1367,
+     0.0018
+    ],
+    "item_bounds_size": [
+     0.1026,
+     0.4774,
+     0.1017
+    ],
+    "x_fit": 0.67,
+    "triangles": 100,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   },
+   "VAFireBolt": {
+    "name": "ValheimArmory fire bolt",
+    "item_bounds_centre": [
+     0.0079,
+     0.0044,
+     0.2405
+    ],
+    "item_bounds_size": [
+     0.1431,
+     0.1431,
+     0.6432
+    ],
+    "x_fit": 0.498,
+    "triangles": 132,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   },
+   "VASurtlingBolt": {
+    "name": "ValheimArmory surtling bolt",
+    "item_bounds_centre": [
+     0.0094,
+     0.0016,
+     0.278
+    ],
+    "item_bounds_size": [
+     0.1572,
+     0.1572,
+     0.738
+    ],
+    "x_fit": 0.434,
+    "triangles": 546,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   },
+   "VAObsidianBolt": {
+    "name": "ValheimArmory obsidian bolt",
+    "item_bounds_centre": [
+     0.0078,
+     0.0012,
+     0.2306
+    ],
+    "item_bounds_size": [
+     0.131,
+     0.131,
+     0.6202
+    ],
+    "x_fit": 0.516,
+    "triangles": 106,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   },
+   "VABoltNeedle": {
+    "name": "ValheimArmory needle bolt",
+    "item_bounds_centre": [
+     -0.005,
+     0.0125,
+     0.0265
+    ],
+    "item_bounds_size": [
+     0.5244,
+     0.528,
+     1.084
+    ],
+    "x_fit": 0.295,
+    "triangles": 28,
+    "source": "ValheimArmory 1.36.1 bundle (computed)"
+   }
+  },
+  "checked_models": [
+   "BoltBone",
+   "BoltIron",
+   "BoltBlackmetal",
+   "BoltCarapace",
+   "BoltCharred",
+   "VABoltWood",
+   "VABoltCoreWood",
+   "VAbolt_bronze",
+   "VAbolt_poison",
+   "VAbolt_frost",
+   "VAFireBolt",
+   "VASurtlingBolt",
+   "VAObsidianBolt",
+   "VABoltNeedle"
+  ],
+  "needle": "VABoltNeedle's two blend feather quads count where their texture alpha is above 0.5 in the checks"
+ },
+ "checks": {
+  "coplanar_frame": {
+   "same_facing_overlaps": 0,
+   "back_to_back": 679,
+   "tolerance_mm": 2.0,
+   "min_area_cm2": 0.002
+  },
+  "per_model": {
+   "BoltBone": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BoltIron": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BoltBlackmetal": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BoltCarapace": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "BoltCharred": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VABoltWood": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VABoltCoreWood": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VAbolt_bronze": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VAbolt_poison": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VAbolt_frost": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VAFireBolt": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VASurtlingBolt": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VAObsidianBolt": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   },
+   "VABoltNeedle": {
+    "copies": 256,
+    "frame_clipping": 0,
+    "copy_overlaps": 0
+   }
+  },
+  "full_store": {
+   "copies": 256,
+   "frame_clipping": 0,
+   "between_compartments": 0,
+   "contents_top_z": 0.949
+  },
+  "spares_hold_each_kind": {
+   "BoltBone": [
+    0,
+    0
+   ],
+   "BoltIron": [
+    0,
+    0
+   ],
+   "BoltBlackmetal": [
+    0,
+    0
+   ],
+   "BoltCarapace": [
+    0,
+    0
+   ],
+   "BoltCharred": [
+    0,
+    0
+   ],
+   "VABoltWood": [
+    0,
+    0
+   ],
+   "VABoltCoreWood": [
+    0,
+    0
+   ],
+   "VAbolt_bronze": [
+    0,
+    0
+   ],
+   "VAbolt_poison": [
+    0,
+    0
+   ],
+   "VAbolt_frost": [
+    0,
+    0
+   ],
+   "VAFireBolt": [
+    0,
+    0
+   ],
+   "VASurtlingBolt": [
+    0,
+    0
+   ],
+   "VAObsidianBolt": [
+    0,
+    0
+   ],
+   "VABoltNeedle": [
+    0,
+    0
+   ]
+  },
+  "each_kind_in_all_cells": {
+   "BoltBone": [
+    0,
+    0
+   ],
+   "BoltIron": [
+    0,
+    0
+   ],
+   "BoltBlackmetal": [
+    0,
+    0
+   ],
+   "BoltCarapace": [
+    0,
+    0
+   ],
+   "BoltCharred": [
+    0,
+    0
+   ],
+   "VABoltWood": [
+    0,
+    0
+   ],
+   "VABoltCoreWood": [
+    0,
+    0
+   ],
+   "VAbolt_bronze": [
+    0,
+    0
+   ],
+   "VAbolt_poison": [
+    0,
+    0
+   ],
+   "VAbolt_frost": [
+    0,
+    0
+   ],
+   "VAFireBolt": [
+    0,
+    0
+   ],
+   "VASurtlingBolt": [
+    0,
+    0
+   ],
+   "VAObsidianBolt": [
+    0,
+    0
+   ],
+   "VABoltNeedle": [
+    0,
+    0
+   ]
+  },
+  "method": "mesh against mesh (BVH): every copy of every one of the 14 models against the frame (straw included) and against every other copy in its cell; the full fill also across cells, the spares holding each kind in turn, and each kind in all sixteen cells at once."
+ },
+ "triangles": {
+  "frame": 8029,
+  "contents_full": 32704,
+  "total_full": 40733,
+  "per_prefab_full_cell": {
+   "BoltBone": 1376,
+   "BoltIron": 416,
+   "BoltBlackmetal": 608,
+   "BoltCarapace": 5216,
+   "BoltCharred": 768,
+   "VABoltWood": 2112,
+   "VABoltCoreWood": 2112,
+   "VAbolt_bronze": 2112,
+   "VAbolt_poison": 1600,
+   "VAbolt_frost": 1600,
+   "VAFireBolt": 2112,
+   "VASurtlingBolt": 8736,
+   "VAObsidianBolt": 1696,
+   "VABoltNeedle": 448
+  }
+ },
+ "units_data": [
+  {
+   "index": 0,
+   "compartment": 0,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "bone white",
+   "position": [
+    0.59107,
+    0.185,
+    0.59643
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "BoltBone",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "compartment": 0,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "bone white",
+   "position": [
+    0.49053,
+    0.185,
+    0.58036
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "BoltBone",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "compartment": 0,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "bone white",
+   "position": [
+    0.67518,
+    0.185,
+    0.52184
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "BoltBone",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "compartment": 0,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "bone white",
+   "position": [
+    0.56232,
+    0.185,
+    0.69322
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "BoltBone",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "compartment": 1,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "iron slate blue",
+   "position": [
+    0.20107,
+    0.185,
+    0.59643
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "compartment": 1,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "iron slate blue",
+   "position": [
+    0.10053,
+    0.185,
+    0.58036
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "compartment": 1,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "iron slate blue",
+   "position": [
+    0.28518,
+    0.185,
+    0.52184
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "compartment": 1,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "iron slate blue",
+   "position": [
+    0.17232,
+    0.185,
+    0.69322
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "compartment": 2,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "black metal char",
+   "position": [
+    -0.18893,
+    0.185,
+    0.59643
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "BoltBlackmetal",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "compartment": 2,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "black metal char",
+   "position": [
+    -0.28947,
+    0.185,
+    0.58036
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "BoltBlackmetal",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "compartment": 2,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "black metal char",
+   "position": [
+    -0.10482,
+    0.185,
+    0.52184
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "BoltBlackmetal",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "compartment": 2,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "black metal char",
+   "position": [
+    -0.21768,
+    0.185,
+    0.69322
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "BoltBlackmetal",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "compartment": 3,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "carapace verdigris",
+   "position": [
+    -0.57893,
+    0.185,
+    0.59643
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "BoltCarapace",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "compartment": 3,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "carapace verdigris",
+   "position": [
+    -0.67947,
+    0.185,
+    0.58036
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "BoltCarapace",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "compartment": 3,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "carapace verdigris",
+   "position": [
+    -0.49482,
+    0.185,
+    0.52184
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "BoltCarapace",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "compartment": 3,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "carapace verdigris",
+   "position": [
+    -0.60768,
+    0.185,
+    0.69322
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "BoltCarapace",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "compartment": 4,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "soot brown",
+   "position": [
+    0.59107,
+    0.305,
+    0.20643
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "BoltCharred",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "compartment": 4,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "soot brown",
+   "position": [
+    0.49053,
+    0.305,
+    0.19036
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "BoltCharred",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "compartment": 4,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "soot brown",
+   "position": [
+    0.67518,
+    0.305,
+    0.13184
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "BoltCharred",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "compartment": 4,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "soot brown",
+   "position": [
+    0.56232,
+    0.305,
+    0.30322
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "BoltCharred",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "compartment": 5,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "birch tan",
+   "position": [
+    0.20107,
+    0.305,
+    0.20643
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VABoltWood",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 21,
+   "compartment": 5,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "birch tan",
+   "position": [
+    0.10053,
+    0.305,
+    0.19036
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VABoltWood",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 22,
+   "compartment": 5,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "birch tan",
+   "position": [
+    0.28518,
+    0.305,
+    0.13184
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VABoltWood",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 23,
+   "compartment": 5,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "birch tan",
+   "position": [
+    0.17232,
+    0.305,
+    0.30322
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VABoltWood",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 24,
+   "compartment": 6,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "core wood moss",
+   "position": [
+    -0.18893,
+    0.305,
+    0.20643
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VABoltCoreWood",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 25,
+   "compartment": 6,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "core wood moss",
+   "position": [
+    -0.28947,
+    0.305,
+    0.19036
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VABoltCoreWood",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 26,
+   "compartment": 6,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "core wood moss",
+   "position": [
+    -0.10482,
+    0.305,
+    0.13184
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VABoltCoreWood",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 27,
+   "compartment": 6,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "core wood moss",
+   "position": [
+    -0.21768,
+    0.305,
+    0.30322
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VABoltCoreWood",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 28,
+   "compartment": 7,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "bronze",
+   "position": [
+    -0.57893,
+    0.305,
+    0.20643
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VAbolt_bronze",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 29,
+   "compartment": 7,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "bronze",
+   "position": [
+    -0.67947,
+    0.305,
+    0.19036
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VAbolt_bronze",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 30,
+   "compartment": 7,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "bronze",
+   "position": [
+    -0.49482,
+    0.305,
+    0.13184
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VAbolt_bronze",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 31,
+   "compartment": 7,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "bronze",
+   "position": [
+    -0.60768,
+    0.305,
+    0.30322
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VAbolt_bronze",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 32,
+   "compartment": 8,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "poison green",
+   "position": [
+    0.59107,
+    0.425,
+    -0.18357
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VAbolt_poison",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 33,
+   "compartment": 8,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "poison green",
+   "position": [
+    0.49053,
+    0.425,
+    -0.19964
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VAbolt_poison",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 34,
+   "compartment": 8,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "poison green",
+   "position": [
+    0.67518,
+    0.425,
+    -0.25816
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VAbolt_poison",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 35,
+   "compartment": 8,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "poison green",
+   "position": [
+    0.56232,
+    0.425,
+    -0.08678
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VAbolt_poison",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 36,
+   "compartment": 9,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "frost blue",
+   "position": [
+    0.20107,
+    0.425,
+    -0.18357
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VAbolt_frost",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 37,
+   "compartment": 9,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "frost blue",
+   "position": [
+    0.10053,
+    0.425,
+    -0.19964
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VAbolt_frost",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 38,
+   "compartment": 9,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "frost blue",
+   "position": [
+    0.28518,
+    0.425,
+    -0.25816
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VAbolt_frost",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 39,
+   "compartment": 9,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "frost blue",
+   "position": [
+    0.17232,
+    0.425,
+    -0.08678
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VAbolt_frost",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 40,
+   "compartment": 10,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "flame orange",
+   "position": [
+    -0.18893,
+    0.425,
+    -0.18357
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VAFireBolt",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 41,
+   "compartment": 10,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "flame orange",
+   "position": [
+    -0.28947,
+    0.425,
+    -0.19964
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VAFireBolt",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 42,
+   "compartment": 10,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "flame orange",
+   "position": [
+    -0.10482,
+    0.425,
+    -0.25816
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VAFireBolt",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 43,
+   "compartment": 10,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "flame orange",
+   "position": [
+    -0.21768,
+    0.425,
+    -0.08678
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VAFireBolt",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 44,
+   "compartment": 11,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "surtling ember red",
+   "position": [
+    -0.57893,
+    0.425,
+    -0.18357
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VASurtlingBolt",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 45,
+   "compartment": 11,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "surtling ember red",
+   "position": [
+    -0.67947,
+    0.425,
+    -0.19964
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VASurtlingBolt",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 46,
+   "compartment": 11,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "surtling ember red",
+   "position": [
+    -0.49482,
+    0.425,
+    -0.25816
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VASurtlingBolt",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 47,
+   "compartment": 11,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "surtling ember red",
+   "position": [
+    -0.60768,
+    0.425,
+    -0.08678
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VASurtlingBolt",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 48,
+   "compartment": 12,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "obsidian violet",
+   "position": [
+    0.59107,
+    0.545,
+    -0.57357
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VAObsidianBolt",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 49,
+   "compartment": 12,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "obsidian violet",
+   "position": [
+    0.49053,
+    0.545,
+    -0.58964
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VAObsidianBolt",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 50,
+   "compartment": 12,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "obsidian violet",
+   "position": [
+    0.67518,
+    0.545,
+    -0.64816
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VAObsidianBolt",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 51,
+   "compartment": 12,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "obsidian violet",
+   "position": [
+    0.56232,
+    0.545,
+    -0.47678
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VAObsidianBolt",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 52,
+   "compartment": 13,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "needle glow teal",
+   "position": [
+    0.20107,
+    0.545,
+    -0.57357
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "item": "VABoltNeedle",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 53,
+   "compartment": 13,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "needle glow teal",
+   "position": [
+    0.10053,
+    0.545,
+    -0.58964
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "item": "VABoltNeedle",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 54,
+   "compartment": 13,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "needle glow teal",
+   "position": [
+    0.28518,
+    0.545,
+    -0.64816
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "item": "VABoltNeedle",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 55,
+   "compartment": 13,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "needle glow teal",
+   "position": [
+    0.17232,
+    0.545,
+    -0.47678
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "item": "VABoltNeedle",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 56,
+   "compartment": 14,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "spare chalk",
+   "position": [
+    -0.18893,
+    0.545,
+    -0.57357
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "example_item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 57,
+   "compartment": 14,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "spare chalk",
+   "position": [
+    -0.28947,
+    0.545,
+    -0.58964
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "example_item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 58,
+   "compartment": 14,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "spare chalk",
+   "position": [
+    -0.10482,
+    0.545,
+    -0.64816
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "example_item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 59,
+   "compartment": 14,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "spare chalk",
+   "position": [
+    -0.21768,
+    0.545,
+    -0.47678
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "example_item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 60,
+   "compartment": 15,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 0,
+   "paint": "spare silver grey",
+   "position": [
+    -0.57893,
+    0.545,
+    -0.57357
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.171,
+    0.32,
+    0.123
+   ],
+   "example_item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      -0.01024,
+      0.05777,
+      -0.01289
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.002428,
+       -0.119795,
+       -0.011059,
+       0.992734
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.04657,
+      0.08267,
+      -0.03162
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.007909,
+       0.716645,
+       -0.00585,
+       0.697368
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.06432,
+      0.00289,
+      0.01305
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008761,
+       0.82627,
+       0.009949,
+       0.563118
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02798,
+      0.03277,
+      0.03147
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.014224,
+       0.49269,
+       0.005563,
+       0.870071
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 61,
+   "compartment": 15,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 1,
+   "paint": "spare silver grey",
+   "position": [
+    -0.67947,
+    0.545,
+    -0.58964
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.124,
+    0.32,
+    0.15
+   ],
+   "example_item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      0.00136,
+      0.08284,
+      -0.00213
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.008574,
+       0.816841,
+       0.009177,
+       0.576726
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.02655,
+      0.00263,
+      -0.01451
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006604,
+       0.525377,
+       0.006767,
+       0.850817
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.03783,
+      0.00276,
+      -0.03651
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.010819,
+       -0.648159,
+       -0.004538,
+       0.761415
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.01264,
+      0.05776,
+      0.05315
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.010997,
+       0.137201,
+       -0.001784,
+       0.990481
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 62,
+   "compartment": 15,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 2,
+   "paint": "spare silver grey",
+   "position": [
+    -0.49482,
+    0.545,
+    -0.64816
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.134,
+    0.32,
+    0.146
+   ],
+   "example_item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      -0.00703,
+      0.00285,
+      0.01533
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.016276,
+       -0.861004,
+       -0.005683,
+       0.508306
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.02677,
+      0.05787,
+      -0.03855
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.007555,
+       0.685,
+       -0.010678,
+       0.728425
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.0271,
+      0.08317,
+      0.04722
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       0.017696,
+       0.025352,
+       -0.020003,
+       0.999322
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.04684,
+      0.0582,
+      -0.024
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.009532,
+       0.999546,
+       -0.019128,
+       0.021216
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 63,
+   "compartment": 15,
+   "holder": "cell",
+   "kind": "bolt",
+   "step": 3,
+   "paint": "spare silver grey",
+   "position": [
+    -0.60768,
+    0.545,
+    -0.47678
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "box": [
+    0.155,
+    0.32,
+    0.117
+   ],
+   "example_item": "BoltIron",
+   "copies": [
+    {
+     "offset": [
+      0.01299,
+      0.08395,
+      0.00199
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.006833,
+       0.86533,
+       0.03283,
+       0.500079
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.0376,
+      0.05872,
+      0.02462
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.002296,
+       0.401065,
+       0.032784,
+       0.91546
+      ]
+     }
+    },
+    {
+     "offset": [
+      0.05788,
+      0.0027,
+      0.00613
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.001349,
+       -0.333943,
+       -0.011439,
+       0.942523
+      ]
+     }
+    },
+    {
+     "offset": [
+      -0.03326,
+      0.03265,
+      -0.03274
+     ],
+     "longest_m": 0.32,
+     "anchor": "bottom",
+     "align": {
+      "long_axis_to": [
+       0,
+       1,
+       0
+      ],
+      "thin_axis_to": [
+       1,
+       0,
+       0
+      ],
+      "then_rotate_quat_xyzw": [
+       -0.0025,
+       0.915693,
+       -0.009287,
+       -0.401764
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

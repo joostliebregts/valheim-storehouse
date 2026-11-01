@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "status": "concept",
+  "variant": "A",
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "armory_atlas.png"
+  },
+  "convention": "OBJ=(Blender x,z,-y), Y up; game loader flipX. Anchor position=Unity(-Blender x,Blender z,-Blender y); yaw about Unity Y. Worn source exports remain Blender Z up. Local armor front +Y maps to Unity -Z.",
+  "size_m": {
+    "width": 7.0,
+    "depth": 1.0
+  },
+  "mannequins": [
+    {
+      "index": 0,
+      "set": "Bronze",
+      "items": {
+        "helmet": "HelmetBronze",
+        "chest": "ArmorBronzeChest",
+        "legs": "ArmorBronzeLegs",
+        "cape": "CapeDeerHide"
+      },
+      "position": [
+        2.6683005422353743,
+        0.16747362710535527,
+        0.1
+      ],
+      "yaw": 3.5,
+      "pose_name": "calm_1",
+      "pose": {
+        "left_arm_global_y_degrees": -19,
+        "right_arm_global_y_degrees": 21,
+        "forearm_global_x_degrees": 1.2
+      },
+      "front_axis": "Unity -Z before anchor yaw; Blender local +Y",
+      "armor_objects": [
+        "ArmorBronzeChest__BronzeArmor.001",
+        "ArmorBronzeChest__player_material_surface",
+        "ArmorBronzeLegs__BronzeArmor",
+        "ArmorBronzeLegs__player_material_surface",
+        "CapeDeerHide__cape2",
+        "HelmetBronze__bronzehelmet"
+      ],
+      "form_objects": [
+        "mannequin_Bronze_spine",
+        "mannequin_Bronze_hip_yoke",
+        "mannequin_Bronze_shoulder_yoke",
+        "mannequin_Bronze_neck",
+        "mannequin_Bronze_head_knob",
+        "mannequin_Bronze_spine_binding",
+        "mannequin_Bronze_Left_upper",
+        "mannequin_Bronze_Left_forearm",
+        "mannequin_Bronze_Left_thigh",
+        "mannequin_Bronze_Left_calf",
+        "mannequin_Bronze_Left_foot",
+        "mannequin_Bronze_Right_upper",
+        "mannequin_Bronze_Right_forearm",
+        "mannequin_Bronze_Right_thigh",
+        "mannequin_Bronze_Right_calf",
+        "mannequin_Bronze_Right_foot"
+      ],
+      "visual_scale": 0.95
+    },
+    {
+      "index": 1,
+      "set": "Iron",
+      "items": {
+        "helmet": "HelmetIron",
+        "chest": "ArmorIronChest",
+        "legs": "ArmorIronLegs",
+        "cape": "CapeLinen"
+      },
+      "position": [
+        1.77836463034153,
+        0.1640951338596642,
+        0.1
+      ],
+      "yaw": -2.0,
+      "pose_name": "calm_2",
+      "pose": {
+        "left_arm_global_y_degrees": -22,
+        "right_arm_global_y_degrees": 20,
+        "forearm_global_x_degrees": 2.2
+      },
+      "front_axis": "Unity -Z before anchor yaw; Blender local +Y",
+      "armor_objects": [
+        "ArmorIronChest__IronArmor",
+        "ArmorIronChest__player_material_surface",
+        "ArmorIronLegs__SilverWolfArmor_Legs.001",
+        "ArmorIronLegs__player_material_surface",
+        "CapeLinen__cape1",
+        "HelmetIron__bronzehelmet"
+      ],
+      "form_objects": [
+        "mannequin_Iron_spine",
+        "mannequin_Iron_hip_yoke",
+        "mannequin_Iron_shoulder_yoke",
+        "mannequin_Iron_neck",
+        "mannequin_Iron_head_knob",
+        "mannequin_Iron_spine_binding",
+        "mannequin_Iron_Left_upper",
+        "mannequin_Iron_Left_forearm",
+        "mannequin_Iron_Left_thigh",
+        "mannequin_Iron_Left_calf",
+        "mannequin_Iron_Left_foot",
+        "mannequin_Iron_Right_upper",
+        "mannequin_Iron_Right_forearm",
+        "mannequin_Iron_Right_thigh",
+        "mannequin_Iron_Right_calf",
+        "mannequin_Iron_Right_foot"
+      ],
+      "visual_scale": 0.95
+    },
+    {
+      "index": 2,
+      "set": "Root",
+      "items": {
+        "helmet": "HelmetRoot",
+        "chest": "ArmorRootChest",
+        "legs": "ArmorRootLegs",
+        "cape": "CapeTrollHide"
+      },
+      "position": [
+        0.7650792008638383,
+        0.1674649783782661,
+        0.1
+      ],
+      "yaw": 1.3,
+      "pose_name": "calm_3",
+      "pose": {
+        "left_arm_global_y_degrees": -23,
+        "right_arm_global_y_degrees": 24,
+        "forearm_global_x_degrees": -0.5
+      },
+      "front_axis": "Unity -Z before anchor yaw; Blender local +Y",
+      "armor_objects": [
+        "ArmorRootChest__RootArmorSkirt",
+        "ArmorRootChest__player_material_surface",
+        "ArmorRootLegs__RootArmorPants.005",
+        "ArmorRootLegs__player_material_surface",
+        "CapeTrollHide__cape2",
+        "HelmetRoot__default"
+      ],
+      "form_objects": [
+        "mannequin_Root_spine",
+        "mannequin_Root_hip_yoke",
+        "mannequin_Root_shoulder_yoke",
+        "mannequin_Root_neck",
+        "mannequin_Root_head_knob",
+        "mannequin_Root_spine_binding",
+        "mannequin_Root_Left_upper",
+        "mannequin_Root_Left_forearm",
+        "mannequin_Root_Left_thigh",
+        "mannequin_Root_Left_calf",
+        "mannequin_Root_Left_foot",
+        "mannequin_Root_Right_upper",
+        "mannequin_Root_Right_forearm",
+        "mannequin_Root_Right_thigh",
+        "mannequin_Root_Right_calf",
+        "mannequin_Root_Right_foot"
+      ],
+      "visual_scale": 0.95
+    },
+    {
+      "index": 3,
+      "set": "Wolf",
+      "items": {
+        "helmet": "HelmetDrake",
+        "chest": "ArmorWolfChest",
+        "legs": "ArmorWolfLegs",
+        "cape": "CapeWolf"
+      },
+      "position": [
+        -0.1566009825468062,
+        0.16409512128680945,
+        0.1
+      ],
+      "yaw": -3.8,
+      "pose_name": "calm_4",
+      "pose": {
+        "left_arm_global_y_degrees": -21,
+        "right_arm_global_y_degrees": 25,
+        "forearm_global_x_degrees": 1.4
+      },
+      "front_axis": "Unity -Z before anchor yaw; Blender local +Y",
+      "armor_objects": [
+        "ArmorWolfChest__SilverWolfArmor",
+        "ArmorWolfChest__player_material_surface",
+        "ArmorWolfLegs__Cube.008",
+        "ArmorWolfLegs__player_material_surface",
+        "CapeWolf__WolfCape_cloth",
+        "CapeWolf__WolfCape",
+        "HelmetDrake__default"
+      ],
+      "form_objects": [
+        "mannequin_Wolf_spine",
+        "mannequin_Wolf_hip_yoke",
+        "mannequin_Wolf_shoulder_yoke",
+        "mannequin_Wolf_neck",
+        "mannequin_Wolf_head_knob",
+        "mannequin_Wolf_spine_binding",
+        "mannequin_Wolf_Left_upper",
+        "mannequin_Wolf_Left_forearm",
+        "mannequin_Wolf_Left_thigh",
+        "mannequin_Wolf_Left_calf",
+        "mannequin_Wolf_Left_foot",
+        "mannequin_Wolf_Right_upper",
+        "mannequin_Wolf_Right_forearm",
+        "mannequin_Wolf_Right_thigh",
+        "mannequin_Wolf_Right_calf",
+        "mannequin_Wolf_Right_foot"
+      ],
+      "visual_scale": 0.95
+    },
+    {
+      "index": 4,
+      "set": "Padded",
+      "items": {
+        "helmet": "HelmetPadded",
+        "chest": "ArmorPaddedCuirass",
+        "legs": "ArmorPaddedGreaves",
+        "cape": "CapeAsksvin"
+      },
+      "position": [
+        -1.3465525525808333,
+        0.17031823735684157,
+        0.1
+      ],
+      "yaw": 2.6,
+      "pose_name": "calm_5",
+      "pose": {
+        "left_arm_global_y_degrees": -25,
+        "right_arm_global_y_degrees": 23,
+        "forearm_global_x_degrees": 0.4
+      },
+      "front_axis": "Unity -Z before anchor yaw; Blender local +Y",
+      "armor_objects": [
+        "ArmorPaddedCuirass__Padded_Cuirrass",
+        "ArmorPaddedCuirass__player_material_surface",
+        "ArmorPaddedGreaves__Padded_Grieves",
+        "ArmorPaddedGreaves__player_material_surface",
+        "CapeAsksvin__Asksvincape",
+        "HelmetPadded__default"
+      ],
+      "form_objects": [
+        "mannequin_Padded_spine",
+        "mannequin_Padded_hip_yoke",
+        "mannequin_Padded_shoulder_yoke",
+        "mannequin_Padded_neck",
+        "mannequin_Padded_head_knob",
+        "mannequin_Padded_spine_binding",
+        "mannequin_Padded_Left_upper",
+        "mannequin_Padded_Left_forearm",
+        "mannequin_Padded_Left_thigh",
+        "mannequin_Padded_Left_calf",
+        "mannequin_Padded_Left_foot",
+        "mannequin_Padded_Right_upper",
+        "mannequin_Padded_Right_forearm",
+        "mannequin_Padded_Right_thigh",
+        "mannequin_Padded_Right_calf",
+        "mannequin_Padded_Right_foot"
+      ],
+      "visual_scale": 0.95
+    },
+    {
+      "index": 5,
+      "set": "Carapace",
+      "items": {
+        "helmet": "HelmetCarapace",
+        "chest": "ArmorCarapaceChest",
+        "legs": "ArmorCarapaceLegs",
+        "cape": "CapeOdin"
+      },
+      "position": [
+        -2.541576716303825,
+        0.17833326369524002,
+        0.1
+      ],
+      "yaw": -1.1,
+      "pose_name": "calm_6",
+      "pose": {
+        "left_arm_global_y_degrees": -24,
+        "right_arm_global_y_degrees": 26,
+        "forearm_global_x_degrees": 2.7
+      },
+      "front_axis": "Unity -Z before anchor yaw; Blender local +Y",
+      "armor_objects": [
+        "ArmorCarapaceChest__CarapaceArmor",
+        "ArmorCarapaceChest__player_material_surface",
+        "ArmorCarapaceLegs__CarapaceLegs",
+        "ArmorCarapaceLegs__player_material_surface",
+        "CapeOdin__cape1",
+        "HelmetCarapace__default"
+      ],
+      "form_objects": [
+        "mannequin_Carapace_spine",
+        "mannequin_Carapace_hip_yoke",
+        "mannequin_Carapace_shoulder_yoke",
+        "mannequin_Carapace_neck",
+        "mannequin_Carapace_head_knob",
+        "mannequin_Carapace_spine_binding",
+        "mannequin_Carapace_Left_upper",
+        "mannequin_Carapace_Left_forearm",
+        "mannequin_Carapace_Left_thigh",
+        "mannequin_Carapace_Left_calf",
+        "mannequin_Carapace_Left_foot",
+        "mannequin_Carapace_Right_upper",
+        "mannequin_Carapace_Right_forearm",
+        "mannequin_Carapace_Right_thigh",
+        "mannequin_Carapace_Right_calf",
+        "mannequin_Carapace_Right_foot"
+      ],
+      "visual_scale": 0.95
+    }
+  ],
+  "spares": [
+    {
+      "kind": "helmet",
+      "prefab": "HelmetIron",
+      "position": [
+        3.38,
+        1.21,
+        -0.12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "support": "head knob on a timber peg",
+      "clear_box": {
+        "min": [
+          3.2753236293792725,
+          1.1537590026855469,
+          -0.24122799932956696
+        ],
+        "max": [
+          3.4846765995025635,
+          1.3930366039276123,
+          0.048677198588848114
+        ],
+        "convention": "Unity metres; exact used-triangle AABB"
+      },
+      "objects": [
+        "HelmetIron__bronzehelmet.001"
+      ],
+      "visual_scale": 0.95,
+      "rotation_convention": "Unity Euler XYZ degrees"
+    },
+    {
+      "kind": "helmet",
+      "prefab": "HelmetBronze",
+      "position": [
+        -3.38,
+        1.33,
+        -0.12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "support": "head knob on a timber peg",
+      "clear_box": {
+        "min": [
+          -3.482800245285034,
+          1.2840969562530518,
+          -0.247431680560112
+        ],
+        "max": [
+          -3.2771999835968018,
+          1.5130366086959839,
+          0.012407496571540833
+        ],
+        "convention": "Unity metres; exact used-triangle AABB"
+      },
+      "objects": [
+        "HelmetBronze__bronzehelmet.001"
+      ],
+      "visual_scale": 0.95,
+      "rotation_convention": "Unity Euler XYZ degrees"
+    }
+  ]
+}

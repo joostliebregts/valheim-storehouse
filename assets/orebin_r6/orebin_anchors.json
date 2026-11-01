@@ -1,0 +1,9198 @@
+{
+ "bin": "OreBin round 5 (round 4's furniture, heaped to the wall tops when full, physically settled)",
+ "slots": 80,
+ "units": 80,
+ "steps": 8,
+ "stack_per_unit": 1,
+ "frame": {
+  "obj": "OreBin.obj",
+  "tris": 9732,
+  "size_m": [
+   3.847,
+   1.645,
+   1.945
+  ],
+  "atlas": "orebin_atlas.png 128x128",
+  "source": "assets/orebin_r4 (OBJ and atlas copied byte-identical)"
+ },
+ "space": "Unity prefab space, origin = bin footprint centre on the ground. Blender z-up/-y front -> Unity y-up/+z front: ux=-bx, uy=bz, uz=-by. OBJ export (forward NEGATIVE_Z, up Y) writes (bx, bz, -by); Unity's importer negates x, same mapping.",
+ "unit_semantics": "SETTLED: every copy has an explicit final pose from a rigid-body simulation (convex-hull items, friction 0.75, restitution 0, damping 0.25/0.45, dropped stack by stack in fill order, earlier stacks frozen). unit.position = centre of unit.box; each copy: place the item's prefab so that its BOUNDS CENTRE sits at unit.position + copy.offset (= copy.world_position, prefab space), rotated by copy.euler (Unity Quaternion.Euler, ZXY) or copy.quat_xyzw, uniform scale copy.scale relative to the item prefab's native size. Item root = bounds centre - R * (scale * item.bounds_center_unity). unit.box = bounding box of the unit's copies, its bottom lowered to the lowest corner of any copy's rotated bounds (so a never-below-the-floor lift leaves the settled heap alone).",
+ "fill_order": "units are listed in fill order; show the first n (a partial stack: its first k copies). Later stacks lie on earlier ones, earlier stacks never move. Each compartment holds one item type (compartments[]); unit.item is its type, copies keep it.",
+ "compartments": [
+  {
+   "compartment": [
+    0,
+    1
+   ],
+   "item": "CopperOre",
+   "stacks": 12,
+   "x": [
+    0.67,
+    1.655
+   ],
+   "z": [
+    -0.72,
+    -0.05
+   ],
+   "floor_y": 0.3,
+   "copies": 41,
+   "heap_peak_y": 1.528
+  },
+  {
+   "compartment": [
+    1,
+    1
+   ],
+   "item": "FlametalOreNew",
+   "stacks": 10,
+   "x": [
+    -0.49,
+    0.49
+   ],
+   "z": [
+    -0.72,
+    -0.05
+   ],
+   "floor_y": 0.3,
+   "copies": 26,
+   "heap_peak_y": 1.526
+  },
+  {
+   "compartment": [
+    2,
+    1
+   ],
+   "item": "SilverOre",
+   "stacks": 14,
+   "x": [
+    -1.655,
+    -0.67
+   ],
+   "z": [
+    -0.72,
+    -0.05
+   ],
+   "floor_y": 0.3,
+   "copies": 40,
+   "heap_peak_y": 1.458
+  },
+  {
+   "compartment": [
+    0,
+    0
+   ],
+   "item": "TinOre",
+   "stacks": 15,
+   "x": [
+    0.67,
+    1.655
+   ],
+   "z": [
+    0.17,
+    0.705
+   ],
+   "floor_y": 0.14,
+   "copies": 28,
+   "heap_peak_y": 1.101
+  },
+  {
+   "compartment": [
+    1,
+    0
+   ],
+   "item": "BlackMetalScrap",
+   "stacks": 15,
+   "x": [
+    -0.49,
+    0.49
+   ],
+   "z": [
+    0.17,
+    0.705
+   ],
+   "floor_y": 0.14,
+   "copies": 55,
+   "heap_peak_y": 1.193
+  },
+  {
+   "compartment": [
+    2,
+    0
+   ],
+   "item": "IronScrap",
+   "stacks": 14,
+   "x": [
+    -1.655,
+    -0.67
+   ],
+   "z": [
+    0.17,
+    0.705
+   ],
+   "floor_y": 0.14,
+   "copies": 63,
+   "heap_peak_y": 1.131
+  }
+ ],
+ "items": {
+  "CopperOre": {
+   "bounds_size_unity": [
+    0.5186,
+    0.4179,
+    0.7298
+   ],
+   "bounds_center_unity": [
+    -0.0092,
+    0.0411,
+    -0.0445
+   ],
+   "scale_used": 0.45
+  },
+  "TinOre": {
+   "bounds_size_unity": [
+    0.4258,
+    0.4488,
+    0.6078
+   ],
+   "bounds_center_unity": [
+    -0.0151,
+    -0.0014,
+    -0.0072
+   ],
+   "scale_used": 0.48
+  },
+  "IronScrap": {
+   "bounds_size_unity": [
+    0.3503,
+    0.2205,
+    0.6335
+   ],
+   "bounds_center_unity": [
+    -0.0024,
+    0.0221,
+    0.0221
+   ],
+   "scale_used": 0.5
+  },
+  "SilverOre": {
+   "bounds_size_unity": [
+    0.5186,
+    0.4179,
+    0.7298
+   ],
+   "bounds_center_unity": [
+    -0.0092,
+    0.0411,
+    -0.0445
+   ],
+   "scale_used": 0.45
+  },
+  "BlackMetalScrap": {
+   "bounds_size_unity": [
+    0.3669,
+    0.231,
+    0.6636
+   ],
+   "bounds_center_unity": [
+    -0.0019,
+    0.0201,
+    -0.0066
+   ],
+   "scale_used": 0.5
+  },
+  "FlametalOreNew": {
+   "bounds_size_unity": [
+    0.8875,
+    0.665,
+    0.9222
+   ],
+   "bounds_center_unity": [
+    -0.0493,
+    0.1521,
+    0.0274
+   ],
+   "scale_used": 0.36
+  }
+ },
+ "clip_check": {
+  "clipping": 0,
+  "of_copies": 253
+ },
+ "interpenetration_max_m": 0.0,
+ "rotation_convert_max_err": 8.568167686462402e-07,
+ "checks_per_item": {
+  "CopperOre": {
+   "copies": 41,
+   "copies_per_stack": [
+    4,
+    3,
+    4,
+    3,
+    3,
+    4,
+    3,
+    4,
+    3,
+    3,
+    4,
+    3
+   ],
+   "clipping": 0,
+   "interpenetration_max_m": 0.0,
+   "escaped": 0,
+   "leaning_above_wall": 0,
+   "longest_m": 0.328,
+   "tris_per_copy": 1380,
+   "tris_full": 56580
+  },
+  "TinOre": {
+   "copies": 28,
+   "copies_per_stack": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ],
+   "clipping": 0,
+   "interpenetration_max_m": 0.0,
+   "escaped": 0,
+   "leaning_above_wall": 0,
+   "longest_m": 0.292,
+   "tris_per_copy": 1764,
+   "tris_full": 49392
+  },
+  "IronScrap": {
+   "copies": 63,
+   "copies_per_stack": [
+    5,
+    4,
+    5,
+    4,
+    5,
+    4,
+    5,
+    4,
+    5,
+    4,
+    5,
+    4,
+    5,
+    4
+   ],
+   "clipping": 0,
+   "interpenetration_max_m": 0.0,
+   "escaped": 0,
+   "leaning_above_wall": 0,
+   "longest_m": 0.317,
+   "tris_per_copy": 176,
+   "tris_full": 11088
+  },
+  "SilverOre": {
+   "copies": 40,
+   "copies_per_stack": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    1
+   ],
+   "clipping": 0,
+   "interpenetration_max_m": 0.0,
+   "escaped": 0,
+   "leaning_above_wall": 0,
+   "longest_m": 0.328,
+   "tris_per_copy": 1380,
+   "tris_full": 55200
+  },
+  "BlackMetalScrap": {
+   "copies": 55,
+   "copies_per_stack": [
+    4,
+    4,
+    3,
+    4,
+    4,
+    3,
+    4,
+    4,
+    3,
+    4,
+    4,
+    3,
+    4,
+    4,
+    3
+   ],
+   "clipping": 0,
+   "interpenetration_max_m": 0.0,
+   "escaped": 0,
+   "leaning_above_wall": 0,
+   "longest_m": 0.332,
+   "tris_per_copy": 176,
+   "tris_full": 9680
+  },
+  "FlametalOreNew": {
+   "copies": 26,
+   "copies_per_stack": [
+    3,
+    3,
+    2,
+    3,
+    3,
+    2,
+    3,
+    3,
+    2,
+    2
+   ],
+   "clipping": 0,
+   "interpenetration_max_m": 0.0,
+   "escaped": 0,
+   "leaning_above_wall": 0,
+   "longest_m": 0.332,
+   "tris_per_copy": 64,
+   "tris_full": 1664
+  }
+ },
+ "units_list": [
+  {
+   "index": 0,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.1438,
+    0.4021,
+    -0.3884
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9362,
+    0.2648,
+    0.6569
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.3048,
+      -0.0035,
+      0.2155
+     ],
+     "euler": [
+      -2.688,
+      -86.43,
+      -6.516
+     ],
+     "quat_xyzw": [
+      0.02184,
+      -0.68442,
+      -0.05744,
+      0.7265
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.4485,
+      0.3986,
+      -0.1728
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.3077,
+      0.0182,
+      -0.2359
+     ],
+     "euler": [
+      4.551,
+      76.839,
+      -99.378
+     ],
+     "quat_xyzw": [
+      -0.45335,
+      0.42542,
+      -0.61293,
+      0.48765
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.8361,
+      0.4203,
+      -0.6242
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.2445,
+      -0.004,
+      -0.1362
+     ],
+     "euler": [
+      -10.765,
+      52.944,
+      -178.298
+     ],
+     "quat_xyzw": [
+      -0.445,
+      -0.07737,
+      -0.89048,
+      0.05505
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.3882,
+      0.3981,
+      -0.5246
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    0.0296,
+    0.1934,
+    0.3942
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6622,
+    0.2858,
+    0.4425
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0623,
+      0.0072,
+      -0.073
+     ],
+     "euler": [
+      26.603,
+      151.312,
+      -14.73
+     ],
+     "quat_xyzw": [
+      -0.06433,
+      0.94236,
+      -0.25197,
+      0.21053
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0919,
+      0.2006,
+      0.3212
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.2381,
+      0.0121,
+      0.0558
+     ],
+     "euler": [
+      5.521,
+      -18.135,
+      -35.891
+     ],
+     "quat_xyzw": [
+      0.09374,
+      -0.1351,
+      -0.29669,
+      0.94071
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.2085,
+      0.2055,
+      0.45
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.2396,
+      0.0069,
+      0.0089
+     ],
+     "euler": [
+      27.025,
+      10.532,
+      -16.427
+     ],
+     "quat_xyzw": [
+      0.21753,
+      0.12156,
+      -0.15955,
+      0.95522
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2692,
+      0.2003,
+      0.4032
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.1078,
+      0.0476,
+      -0.0548
+     ],
+     "euler": [
+      3.965,
+      15.978,
+      89.172
+     ],
+     "quat_xyzw": [
+      0.1219,
+      0.07488,
+      0.69133,
+      0.70824
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.0782,
+      0.2411,
+      0.3395
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.1967,
+    0.3593,
+    -0.3987
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.869,
+    0.317,
+    0.6366
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.0542,
+      0.0385,
+      0.1291
+     ],
+     "euler": [
+      -19.483,
+      -26.002,
+      135.797
+     ],
+     "quat_xyzw": [
+      -0.26746,
+      0.06933,
+      0.87543,
+      0.39659
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.2509,
+      0.3978,
+      -0.2696
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.2957,
+      0.0392,
+      0.1735
+     ],
+     "euler": [
+      -2.857,
+      34.4,
+      -5.938
+     ],
+     "quat_xyzw": [
+      -0.0391,
+      0.29398,
+      -0.0421,
+      0.95408
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.4924,
+      0.3985,
+      -0.2252
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.2738,
+      0.0533,
+      -0.2072
+     ],
+     "euler": [
+      -11.705,
+      -95.901,
+      -36.92
+     ],
+     "quat_xyzw": [
+      0.16912,
+      -0.72231,
+      -0.2828,
+      0.60802
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.9229,
+      0.4126,
+      -0.606
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.2112,
+      0.048,
+      -0.1122
+     ],
+     "euler": [
+      169.634,
+      -20.079,
+      -44.924
+     ],
+     "quat_xyzw": [
+      0.91228,
+      0.36013,
+      0.12645,
+      0.14854
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.4078,
+      0.4073,
+      -0.5109
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.156,
+    0.2067,
+    0.4201
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6689,
+    0.3369,
+    0.4943
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.2059,
+      0.036,
+      0.1414
+     ],
+     "euler": [
+      -20.811,
+      94.648,
+      84.983
+     ],
+     "quat_xyzw": [
+      0.39817,
+      0.6159,
+      0.54826,
+      0.40192
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.9501,
+      0.2427,
+      0.5615
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      0.2188,
+      0.0374,
+      -0.1366
+     ],
+     "euler": [
+      38.159,
+      -40.023,
+      -149.565
+     ],
+     "quat_xyzw": [
+      0.39269,
+      0.21149,
+      -0.82751,
+      0.34103
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.3748,
+      0.2441,
+      0.2835
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.2302,
+    0.1761,
+    0.4411
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8437,
+    0.2424,
+    0.5218
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.3201,
+      0.0219,
+      0.1035
+     ],
+     "euler": [
+      27.025,
+      -20.487,
+      -16.427
+     ],
+     "quat_xyzw": [
+      0.25228,
+      -0.13829,
+      -0.09557,
+      0.95294
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.91,
+      0.198,
+      0.5446
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.0407,
+      0.0219,
+      0.0953
+     ],
+     "euler": [
+      27.025,
+      91.713,
+      -16.427
+     ],
+     "quat_xyzw": [
+      0.06138,
+      0.71383,
+      -0.2627,
+      0.64628
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.1895,
+      0.198,
+      0.5363
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.2624,
+      0.0219,
+      -0.1741
+     ],
+     "euler": [
+      27.025,
+      112.928,
+      -16.427
+     ],
+     "quat_xyzw": [
+      0.01198,
+      0.82059,
+      -0.26951,
+      0.50384
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.9677,
+      0.198,
+      0.267
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.1006,
+      0.0219,
+      -0.0843
+     ],
+     "euler": [
+      27.025,
+      -31.907,
+      -16.427
+     ],
+     "quat_xyzw": [
+      0.26053,
+      -0.23241,
+      -0.07,
+      0.93446
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.3307,
+      0.198,
+      0.3568
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2632,
+      0.0508,
+      0.1828
+     ],
+     "euler": [
+      -156.013,
+      94.575,
+      16.314
+     ],
+     "quat_xyzw": [
+      -0.63514,
+      0.24528,
+      0.73145,
+      0.03755
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.4933,
+      0.2269,
+      0.6238
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    -0.0,
+    0.3896,
+    -0.3426
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.974,
+    0.4011,
+    0.4713
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.0339,
+      0.0202,
+      -0.0752
+     ],
+     "euler": [
+      10.707,
+      -79.286,
+      -161.531
+     ],
+     "quat_xyzw": [
+      0.63851,
+      -0.03103,
+      -0.74719,
+      0.18179
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0339,
+      0.4098,
+      -0.4178
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.3158,
+      0.0291,
+      0.0838
+     ],
+     "euler": [
+      17.939,
+      -140.743,
+      3.876
+     ],
+     "quat_xyzw": [
+      0.02088,
+      -0.93161,
+      0.15799,
+      0.32665
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.3158,
+      0.4186,
+      -0.2588
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.3486,
+      0.0565,
+      0.0702
+     ],
+     "euler": [
+      135.28,
+      43.47,
+      -66.019
+     ],
+     "quat_xyzw": [
+      0.64365,
+      0.58614,
+      -0.4797,
+      0.10976
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3486,
+      0.4461,
+      -0.2724
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.1055,
+    0.2581,
+    0.4375
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7631,
+    0.4064,
+    0.529
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.2894,
+      -0.0254,
+      0.1049
+     ],
+     "euler": [
+      -147.655,
+      6.741,
+      -39.749
+     ],
+     "quat_xyzw": [
+      -0.90723,
+      -0.31054,
+      -0.04142,
+      0.28068
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.1839,
+      0.2327,
+      0.5424
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.1933,
+      -0.0377,
+      -0.1473
+     ],
+     "euler": [
+      0.956,
+      121.458,
+      -55.046
+     ],
+     "quat_xyzw": [
+      -0.39947,
+      0.77545,
+      -0.23239,
+      0.43022
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.2988,
+      0.2204,
+      0.2902
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.1513,
+      0.0474,
+      -0.1767
+     ],
+     "euler": [
+      76.197,
+      -129.415,
+      -1.521
+     ],
+     "quat_xyzw": [
+      0.27303,
+      -0.70795,
+      0.55336,
+      0.34359
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0459,
+      0.3055,
+      0.2608
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.2769,
+      0.0188,
+      0.0101
+     ],
+     "euler": [
+      63.56,
+      -36.906,
+      -35.003
+     ],
+     "quat_xyzw": [
+      0.55737,
+      -0.10637,
+      -0.08352,
+      0.81917
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3824,
+      0.277,
+      0.4476
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.1308,
+    0.213,
+    0.4163
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6004,
+    0.3171,
+    0.4769
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.1931,
+      0.0364,
+      -0.0972
+     ],
+     "euler": [
+      -31.277,
+      3.071,
+      -113.942
+     ],
+     "quat_xyzw": [
+      -0.16851,
+      -0.21186,
+      -0.80313,
+      0.53075
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.9377,
+      0.2494,
+      0.3191
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      0.1581,
+      0.0297,
+      0.1199
+     ],
+     "euler": [
+      -20.811,
+      42.099,
+      84.983
+     ],
+     "quat_xyzw": [
+      0.11433,
+      0.37435,
+      0.66788,
+      0.63303
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.2889,
+      0.2427,
+      0.5362
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.0401,
+    0.4196,
+    -0.3981
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.471,
+    0.3635,
+    0.6378
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.0925,
+      -0.02,
+      -0.0209
+     ],
+     "euler": [
+      -3.257,
+      37.333,
+      2.988
+     ],
+     "quat_xyzw": [
+      -0.01858,
+      0.32052,
+      0.03379,
+      0.94646
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.9476,
+      0.3996,
+      -0.419
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.1098,
+      -0.021,
+      0.1556
+     ],
+     "euler": [
+      -2.606,
+      168.355,
+      -6.797
+     ],
+     "quat_xyzw": [
+      -0.06126,
+      0.9927,
+      0.01657,
+      0.10258
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.1499,
+      0.3986,
+      -0.2425
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.1293,
+      0.0373,
+      -0.2056
+     ],
+     "euler": [
+      57.642,
+      37.253,
+      116.564
+     ],
+     "quat_xyzw": [
+      0.47821,
+      -0.24147,
+      0.62529,
+      0.56747
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.1694,
+      0.4569,
+      -0.6037
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.2719,
+    0.2086,
+    0.4257
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7601,
+    0.3083,
+    0.5055
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.195,
+      0.0348,
+      -0.0511
+     ],
+     "euler": [
+      130.969,
+      -0.2,
+      129.032
+     ],
+     "quat_xyzw": [
+      0.39082,
+      -0.82164,
+      0.37525,
+      0.1771
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.467,
+      0.2434,
+      0.3747
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2201,
+      0.0482,
+      -0.1908
+     ],
+     "euler": [
+      17.554,
+      92.603,
+      -74.416
+     ],
+     "quat_xyzw": [
+      -0.34812,
+      0.63282,
+      -0.50074,
+      0.47708
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.492,
+      0.2568,
+      0.235
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.2203,
+      0.0475,
+      -0.0088
+     ],
+     "euler": [
+      -29.165,
+      94.068,
+      56.322
+     ],
+     "quat_xyzw": [
+      0.18294,
+      0.70534,
+      0.47373,
+      0.49458
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.0517,
+      0.2562,
+      0.417
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.2042,
+      0.0643,
+      0.1329
+     ],
+     "euler": [
+      27.413,
+      61.595,
+      6.39
+     ],
+     "quat_xyzw": [
+      0.23095,
+      0.4853,
+      -0.07462,
+      0.83999
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.0677,
+      0.2729,
+      0.5587
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.1286,
+    0.4529,
+    -0.4495
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.5934,
+    0.5042,
+    0.5351
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.1427,
+      -0.0551,
+      0.1423
+     ],
+     "euler": [
+      -160.517,
+      -61.923,
+      -44.203
+     ],
+     "quat_xyzw": [
+      0.75029,
+      0.39864,
+      0.52438,
+      0.05634
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.9859,
+      0.3978,
+      -0.3072
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.0146,
+      0.0829,
+      -0.0935
+     ],
+     "euler": [
+      39.133,
+      17.467,
+      -91.914
+     ],
+     "quat_xyzw": [
+      0.12728,
+      0.33741,
+      -0.70481,
+      0.6109
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.114,
+      0.5358,
+      -0.543
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1789,
+      0.093,
+      -0.172
+     ],
+     "euler": [
+      -72.447,
+      45.652,
+      129.415
+     ],
+     "quat_xyzw": [
+      0.05025,
+      0.62616,
+      0.77021,
+      0.1104
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.3075,
+      0.5458,
+      -0.6215
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    -0.1053,
+    0.4839,
+    -0.3671
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7635,
+    0.5273,
+    0.6283
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.0112,
+      0.0293,
+      0.1741
+     ],
+     "euler": [
+      44.22,
+      8.593,
+      -66.192
+     ],
+     "quat_xyzw": [
+      0.27653,
+      0.26309,
+      -0.52809,
+      0.75857
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.1165,
+      0.5131,
+      -0.193
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.2236,
+      0.119,
+      0.1459
+     ],
+     "euler": [
+      -137.756,
+      -36.218,
+      78.981
+     ],
+     "quat_xyzw": [
+      -0.75546,
+      0.4774,
+      -0.00594,
+      0.44871
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.1183,
+      0.6028,
+      -0.2212
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.2399,
+      -0.017,
+      -0.1991
+     ],
+     "euler": [
+      24.955,
+      119.003,
+      -37.828
+     ],
+     "quat_xyzw": [
+      -0.16897,
+      0.83141,
+      -0.33674,
+      0.40843
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3452,
+      0.4668,
+      -0.5663
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.1103,
+    0.3064,
+    0.5308
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.4572,
+    0.3573,
+    0.3425
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.1132,
+      0.0276,
+      0.0936
+     ],
+     "euler": [
+      39.86,
+      73.746,
+      124.602
+     ],
+     "quat_xyzw": [
+      0.62621,
+      0.02078,
+      0.5708,
+      0.53067
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.2235,
+      0.3341,
+      0.6244
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0749,
+      -0.0785,
+      0.062
+     ],
+     "euler": [
+      -11.709,
+      -112.532,
+      -5.222
+     ],
+     "quat_xyzw": [
+      -0.0189,
+      -0.82901,
+      -0.10991,
+      0.548
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.0354,
+      0.2279,
+      0.5928
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0311,
+      0.0489,
+      -0.0735
+     ],
+     "euler": [
+      -12.285,
+      -111.757,
+      -33.531
+     ],
+     "quat_xyzw": [
+      0.17996,
+      -0.80542,
+      -0.2457,
+      0.50847
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.0792,
+      0.3553,
+      0.4573
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.3457,
+    0.2397,
+    0.3869
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6127,
+    0.3372,
+    0.4278
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.1974,
+      0.041,
+      -0.0995
+     ],
+     "euler": [
+      -154.919,
+      27.649,
+      -16.199
+     ],
+     "quat_xyzw": [
+      -0.94572,
+      -0.08218,
+      0.20122,
+      0.2416
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.1483,
+      0.2807,
+      0.2873
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      0.1949,
+      0.0366,
+      0.0978
+     ],
+     "euler": [
+      -48.894,
+      -72.291,
+      60.585
+     ],
+     "quat_xyzw": [
+      -0.55941,
+      -0.29507,
+      0.16003,
+      0.75788
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.5406,
+      0.2764,
+      0.4846
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.1625,
+    0.2915,
+    0.4397
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.979,
+    0.3431,
+    0.5247
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.422,
+      -0.0668,
+      0.0182
+     ],
+     "euler": [
+      -0.535,
+      179.24,
+      -69.544
+     ],
+     "quat_xyzw": [
+      -0.57032,
+      0.82138,
+      6e-05,
+      0.00811
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.7404,
+      0.2247,
+      0.4579
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.0364,
+      -0.0018,
+      -0.1784
+     ],
+     "euler": [
+      16.625,
+      109.013,
+      -36.388
+     ],
+     "quat_xyzw": [
+      -0.1718,
+      0.79156,
+      -0.29121,
+      0.50904
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.1261,
+      0.2897,
+      0.2613
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2264,
+      0.0639,
+      -0.1481
+     ],
+     "euler": [
+      43.575,
+      52.0,
+      -31.288
+     ],
+     "quat_xyzw": [
+      0.21148,
+      0.48193,
+      -0.38174,
+      0.7598
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.3889,
+      0.3554,
+      0.2915
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.3312,
+      0.0829,
+      0.1834
+     ],
+     "euler": [
+      -21.322,
+      -96.82,
+      65.118
+     ],
+     "quat_xyzw": [
+      -0.49906,
+      -0.5534,
+      0.23445,
+      0.62428
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.4937,
+      0.3744,
+      0.6231
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.1226,
+      0.0321,
+      0.1081
+     ],
+     "euler": [
+      -10.655,
+      30.32,
+      -34.248
+     ],
+     "quat_xyzw": [
+      -0.16232,
+      0.22246,
+      -0.25976,
+      0.92558
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2851,
+      0.3236,
+      0.5478
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.1625,
+    0.4342,
+    -0.3609
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.979,
+    0.4678,
+    0.6158
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.1886,
+      0.1423,
+      -0.1788
+     ],
+     "euler": [
+      12.895,
+      -49.249,
+      4.257
+     ],
+     "quat_xyzw": [
+      0.08664,
+      -0.41754,
+      0.08031,
+      0.90095
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.9739,
+      0.5765,
+      -0.5397
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.3868,
+      0.0769,
+      0.0102
+     ],
+     "euler": [
+      -4.52,
+      157.546,
+      66.57
+     ],
+     "quat_xyzw": [
+      0.53147,
+      0.82353,
+      0.1391,
+      0.14141
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.5493,
+      0.5112,
+      -0.3507
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.3685,
+      -0.0203,
+      0.1738
+     ],
+     "euler": [
+      -149.744,
+      -39.843,
+      -56.663
+     ],
+     "quat_xyzw": [
+      -0.75667,
+      -0.50898,
+      -0.40597,
+      0.05987
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.794,
+      0.4139,
+      -0.187
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.1625,
+    0.4812,
+    -0.4112
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.979,
+    0.4891,
+    0.6117
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.3422,
+      0.0517,
+      -0.0474
+     ],
+     "euler": [
+      -29.007,
+      -113.819,
+      104.255
+     ],
+     "quat_xyzw": [
+      -0.72421,
+      -0.39002,
+      0.28843,
+      0.49012
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.8203,
+      0.5329,
+      -0.4586
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.3813,
+      0.0943,
+      -0.2015
+     ],
+     "euler": [
+      -62.332,
+      -5.945,
+      -62.669
+     ],
+     "quat_xyzw": [
+      -0.41837,
+      -0.30667,
+      -0.4673,
+      0.71593
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.5438,
+      0.5756,
+      -0.6126
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.3764,
+      -0.0268,
+      0.2026
+     ],
+     "euler": [
+      -59.162,
+      165.791,
+      -37.796
+     ],
+     "quat_xyzw": [
+      -0.33727,
+      0.79669,
+      0.42862,
+      0.26041
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.7861,
+      0.4544,
+      -0.2086
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.3608,
+      0.1005,
+      0.0594
+     ],
+     "euler": [
+      46.685,
+      130.606,
+      -73.87
+     ],
+     "quat_xyzw": [
+      -0.36893,
+      0.76625,
+      -0.51826,
+      0.09032
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.5233,
+      0.5817,
+      -0.3518
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.2578,
+    0.4076,
+    0.3034
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7884,
+    0.3859,
+    0.2607
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.2672,
+      0.061,
+      -0.0252
+     ],
+     "euler": [
+      38.973,
+      -28.984,
+      -154.701
+     ],
+     "quat_xyzw": [
+      0.30091,
+      0.26347,
+      -0.87229,
+      0.28132
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.9906,
+      0.4686,
+      0.2782
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      0.2435,
+      0.0087,
+      0.0183
+     ],
+     "euler": [
+      28.053,
+      -83.058,
+      136.302
+     ],
+     "quat_xyzw": [
+      -0.5295,
+      -0.4078,
+      0.73393,
+      0.12115
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.5013,
+      0.4163,
+      0.3216
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    0.1034,
+    0.3121,
+    0.4375
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7672,
+    0.3988,
+    0.529
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.2278,
+      0.1005,
+      0.1777
+     ],
+     "euler": [
+      -130.382,
+      89.985,
+      -32.258
+     ],
+     "quat_xyzw": [
+      -0.69908,
+      0.10665,
+      0.53407,
+      0.46334
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.1244,
+      0.4125,
+      0.6152
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.2575,
+      -0.0792,
+      0.1358
+     ],
+     "euler": [
+      -3.734,
+      -53.299,
+      -64.771
+     ],
+     "quat_xyzw": [
+      0.21553,
+      -0.39416,
+      -0.4908,
+      0.74652
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.3609,
+      0.2328,
+      0.5733
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.2983,
+      -0.0061,
+      -0.1528
+     ],
+     "euler": [
+      -43.985,
+      38.384,
+      11.199
+     ],
+     "quat_xyzw": [
+      -0.32224,
+      0.33787,
+      0.20797,
+      0.85951
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.4018,
+      0.306,
+      0.2847
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0814,
+      0.0473,
+      0.1766
+     ],
+     "euler": [
+      -29.476,
+      72.361,
+      161.185
+     ],
+     "quat_xyzw": [
+      -0.52967,
+      -0.2959,
+      -0.79465,
+      0.02057
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.1848,
+      0.3593,
+      0.6141
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.1341,
+    0.3425,
+    0.3837
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8595,
+    0.3534,
+    0.4215
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.2159,
+      -0.0107,
+      -0.0769
+     ],
+     "euler": [
+      33.253,
+      76.247,
+      -30.955
+     ],
+     "quat_xyzw": [
+      0.05907,
+      0.63016,
+      -0.37139,
+      0.67932
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.9183,
+      0.3319,
+      0.3068
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.1468,
+      0.048,
+      -0.0026
+     ],
+     "euler": [
+      -31.681,
+      -103.066,
+      -58.569
+     ],
+     "quat_xyzw": [
+      0.22034,
+      -0.74003,
+      -0.47913,
+      0.41742
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2809,
+      0.3906,
+      0.3811
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2628,
+      0.0726,
+      0.12
+     ],
+     "euler": [
+      29.095,
+      -99.359,
+      -38.653
+     ],
+     "quat_xyzw": [
+      0.39761,
+      -0.64262,
+      -0.02656,
+      0.6544
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.397,
+      0.4151,
+      0.5037
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.3571,
+      0.0371,
+      -0.0536
+     ],
+     "euler": [
+      25.989,
+      5.546,
+      -47.107
+     ],
+     "quat_xyzw": [
+      0.18705,
+      0.13296,
+      -0.39889,
+      0.88782
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.7771,
+      0.3797,
+      0.3302
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.1534,
+    0.5326,
+    -0.4457
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9608,
+    0.3883,
+    0.5427
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.321,
+      0.067,
+      -0.1701
+     ],
+     "euler": [
+      -16.542,
+      -80.374,
+      -55.129
+     ],
+     "quat_xyzw": [
+      0.19808,
+      -0.61694,
+      -0.43213,
+      0.62723
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.4744,
+      0.5997,
+      -0.6157
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.3908,
+      0.0405,
+      0.0433
+     ],
+     "euler": [
+      120.985,
+      5.023,
+      87.437
+     ],
+     "quat_xyzw": [
+      0.64331,
+      -0.5853,
+      0.31251,
+      0.38199
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.7626,
+      0.5731,
+      -0.4023
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.1861,
+      0.0209,
+      0.1683
+     ],
+     "euler": [
+      124.739,
+      -35.098,
+      -105.048
+     ],
+     "quat_xyzw": [
+      0.62493,
+      0.5853,
+      -0.18839,
+      0.48104
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.3396,
+      0.5535,
+      -0.2773
+     ]
+    }
+   ]
+  },
+  {
+   "index": 21,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    0.1034,
+    0.4909,
+    -0.5638
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7018,
+    0.5334,
+    0.3065
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.1893,
+      -0.0482,
+      0.0314
+     ],
+     "euler": [
+      -58.203,
+      -0.028,
+      171.02
+     ],
+     "quat_xyzw": [
+      -0.03828,
+      0.48485,
+      0.87107,
+      0.06852
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2927,
+      0.4427,
+      -0.5324
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.2223,
+      0.1133,
+      -0.0027
+     ],
+     "euler": [
+      69.392,
+      -126.298,
+      -49.12
+     ],
+     "quat_xyzw": [
+      0.53873,
+      -0.56031,
+      0.30755,
+      0.54885
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.1189,
+      0.6042,
+      -0.5665
+     ]
+    }
+   ]
+  },
+  {
+   "index": 22,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.2081,
+    0.6279,
+    -0.2705
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8878,
+    0.473,
+    0.435
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.1507,
+      -0.0674,
+      0.093
+     ],
+     "euler": [
+      14.053,
+      -60.841,
+      -22.229
+     ],
+     "quat_xyzw": [
+      0.20038,
+      -0.47278,
+      -0.10421,
+      0.85174
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.0574,
+      0.5605,
+      -0.1774
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.3344,
+      0.053,
+      -0.0617
+     ],
+     "euler": [
+      21.222,
+      14.692,
+      136.047
+     ],
+     "quat_xyzw": [
+      0.18489,
+      -0.12232,
+      0.89519,
+      0.38665
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.8737,
+      0.6808,
+      -0.3322
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.3329,
+      0.0794,
+      0.1287
+     ],
+     "euler": [
+      -69.398,
+      161.5,
+      -24.538
+     ],
+     "quat_xyzw": [
+      -0.26185,
+      0.77349,
+      0.52094,
+      0.24854
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.541,
+      0.7072,
+      -0.1418
+     ]
+    }
+   ]
+  },
+  {
+   "index": 23,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0647,
+    0.3582,
+    0.4194
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8446,
+    0.4439,
+    0.4929
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.0984,
+      0.0064,
+      -0.1495
+     ],
+     "euler": [
+      -5.693,
+      83.246,
+      -27.509
+     ],
+     "quat_xyzw": [
+      -0.19379,
+      0.63556,
+      -0.14548,
+      0.73304
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.1631,
+      0.3646,
+      0.2699
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.3381,
+      0.0757,
+      -0.1534
+     ],
+     "euler": [
+      51.967,
+      -26.423,
+      -171.478
+     ],
+     "quat_xyzw": [
+      0.23657,
+      0.41008,
+      -0.86527,
+      0.16488
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2734,
+      0.4339,
+      0.266
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.3554,
+      -0.0481,
+      -0.1248
+     ],
+     "euler": [
+      85.92,
+      -135.566,
+      -24.012
+     ],
+     "quat_xyzw": [
+      0.39297,
+      -0.60908,
+      0.55953,
+      0.4019
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.4201,
+      0.3101,
+      0.2946
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.1286,
+      0.0771,
+      0.0872
+     ],
+     "euler": [
+      15.884,
+      -142.396,
+      27.714
+     ],
+     "quat_xyzw": [
+      -0.18131,
+      -0.92094,
+      0.20344,
+      0.27859
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0639,
+      0.4353,
+      0.5067
+     ]
+    }
+   ]
+  },
+  {
+   "index": 24,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    0.981,
+    0.3737,
+    0.5831
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6161,
+    0.345,
+    0.2378
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      0.1832,
+      0.061,
+      -0.0042
+     ],
+     "euler": [
+      -55.077,
+      34.89,
+      9.566
+     ],
+     "quat_xyzw": [
+      -0.41738,
+      0.30167,
+      0.20866,
+      0.83141
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.1643,
+      0.4346,
+      0.5789
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.1896,
+      -0.0017,
+      0.019
+     ],
+     "euler": [
+      -155.679,
+      63.106,
+      -6.96
+     ],
+     "quat_xyzw": [
+      -0.83819,
+      0.05946,
+      0.49971,
+      0.21023
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.7915,
+      0.3719,
+      0.6021
+     ]
+    }
+   ]
+  },
+  {
+   "index": 25,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.1996,
+    0.3268,
+    0.4375
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9048,
+    0.4139,
+    0.529
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.0537,
+      0.0887,
+      -0.2003
+     ],
+     "euler": [
+      41.323,
+      95.482,
+      -61.288
+     ],
+     "quat_xyzw": [
+      -0.14883,
+      0.71674,
+      -0.5454,
+      0.40825
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2532,
+      0.4155,
+      0.2372
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.3023,
+      0.0049,
+      0.1748
+     ],
+     "euler": [
+      -10.334,
+      -54.577,
+      23.445
+     ],
+     "quat_xyzw": [
+      -0.17113,
+      -0.43083,
+      0.1394,
+      0.87502
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.8972,
+      0.3317,
+      0.6123
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.3932,
+      -0.0287,
+      -0.0377
+     ],
+     "euler": [
+      42.975,
+      -1.734,
+      96.508
+     ],
+     "quat_xyzw": [
+      0.23336,
+      -0.28264,
+      0.69786,
+      0.61535
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.5928,
+      0.298,
+      0.3998
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.0941,
+      0.0689,
+      0.0257
+     ],
+     "euler": [
+      22.404,
+      15.807,
+      -9.167
+     ],
+     "quat_xyzw": [
+      0.18103,
+      0.14983,
+      -0.10427,
+      0.96639
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.1055,
+      0.3957,
+      0.4633
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.0793,
+      0.1376,
+      0.1648
+     ],
+     "euler": [
+      -10.657,
+      92.805,
+      -155.368
+     ],
+     "quat_xyzw": [
+      -0.71814,
+      0.09124,
+      -0.65646,
+      0.21216
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.1203,
+      0.4643,
+      0.6023
+     ]
+    }
+   ]
+  },
+  {
+   "index": 26,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.2692,
+    0.5951,
+    -0.3164
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7657,
+    0.5621,
+    0.5268
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.0517,
+      0.0378,
+      -0.1418
+     ],
+     "euler": [
+      -23.817,
+      60.147,
+      163.806
+     ],
+     "quat_xyzw": [
+      0.46029,
+      0.24586,
+      0.85288,
+      0.01689
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.2175,
+      0.6329,
+      -0.4582
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.2677,
+      -0.0687,
+      0.1227
+     ],
+     "euler": [
+      50.129,
+      25.235,
+      157.448
+     ],
+     "quat_xyzw": [
+      0.27489,
+      -0.36674,
+      0.8488,
+      0.2636
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.0015,
+      0.5264,
+      -0.1937
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.2751,
+      0.1225,
+      0.1431
+     ],
+     "euler": [
+      -71.642,
+      -43.811,
+      -14.929
+     ],
+     "quat_xyzw": [
+      -0.4991,
+      -0.37049,
+      -0.31423,
+      0.71756
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.5443,
+      0.7176,
+      -0.1733
+     ]
+    }
+   ]
+  },
+  {
+   "index": 27,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    0.0112,
+    0.6786,
+    -0.385
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9516,
+    0.4139,
+    0.664
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.3338,
+      0.0747,
+      0.1771
+     ],
+     "euler": [
+      174.943,
+      32.737,
+      23.309
+     ],
+     "quat_xyzw": [
+      0.94128,
+      -0.18146,
+      -0.26719,
+      0.09833
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.345,
+      0.7533,
+      -0.2079
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.3173,
+      0.0027,
+      -0.0163
+     ],
+     "euler": [
+      28.791,
+      -67.478,
+      -169.955
+     ],
+     "quat_xyzw": [
+      0.55401,
+      0.15885,
+      -0.79029,
+      0.20807
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3062,
+      0.6813,
+      -0.4013
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.1477,
+      -0.0039,
+      -0.1921
+     ],
+     "euler": [
+      175.489,
+      -62.573,
+      7.048
+     ],
+     "quat_xyzw": [
+      0.85105,
+      -0.07289,
+      0.52,
+      0.00168
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.1589,
+      0.6747,
+      -0.5771
+     ]
+    }
+   ]
+  },
+  {
+   "index": 28,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.0189,
+    0.4924,
+    0.319
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6917,
+    0.3129,
+    0.2859
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      0.1975,
+      -0.0069,
+      0.0259
+     ],
+     "euler": [
+      -13.227,
+      116.206,
+      -88.717
+     ],
+     "quat_xyzw": [
+      -0.63313,
+      0.56043,
+      -0.29705,
+      0.44364
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.2163,
+      0.4855,
+      0.3448
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.2451,
+      0.0255,
+      -0.0287
+     ],
+     "euler": [
+      -151.385,
+      19.845,
+      -11.141
+     ],
+     "quat_xyzw": [
+      -0.95412,
+      -0.05027,
+      0.14255,
+      0.25849
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.7738,
+      0.5179,
+      0.2902
+     ]
+    }
+   ]
+  },
+  {
+   "index": 29,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.1354,
+    0.651,
+    -0.2695
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6154,
+    0.5731,
+    0.4331
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1804,
+      -0.0712,
+      0.1054
+     ],
+     "euler": [
+      -55.323,
+      -64.03,
+      105.499
+     ],
+     "quat_xyzw": [
+      -0.61203,
+      0.02911,
+      0.44882,
+      0.65049
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.3157,
+      0.5798,
+      -0.1641
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1603,
+      -0.0172,
+      -0.098
+     ],
+     "euler": [
+      120.282,
+      55.477,
+      12.698
+     ],
+     "quat_xyzw": [
+      0.7885,
+      0.14543,
+      -0.35245,
+      0.48259
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.2957,
+      0.6338,
+      -0.3675
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.1801,
+      0.1463,
+      0.1106
+     ],
+     "euler": [
+      49.362,
+      63.059,
+      42.689
+     ],
+     "quat_xyzw": [
+      0.50446,
+      0.31302,
+      0.07852,
+      0.80086
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.9553,
+      0.7974,
+      -0.1589
+     ]
+    }
+   ]
+  },
+  {
+   "index": 30,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    0.1087,
+    0.4275,
+    0.5505
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7567,
+    0.4347,
+    0.3029
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.2019,
+      0.137,
+      0.0716
+     ],
+     "euler": [
+      2.182,
+      -71.404,
+      42.273
+     ],
+     "quat_xyzw": [
+      -0.19597,
+      -0.54978,
+      0.30314,
+      0.75329
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.0933,
+      0.5644,
+      0.6221
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.3019,
+      -0.0196,
+      -0.0503
+     ],
+     "euler": [
+      -125.3,
+      25.285,
+      73.403
+     ],
+     "quat_xyzw": [
+      -0.63478,
+      0.59858,
+      0.42378,
+      0.24324
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.4105,
+      0.4079,
+      0.5002
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.1844,
+      0.0499,
+      0.052
+     ],
+     "euler": [
+      -2.791,
+      69.65,
+      177.76
+     ],
+     "quat_xyzw": [
+      0.57041,
+      0.03115,
+      0.82077,
+      0.00214
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2931,
+      0.4773,
+      0.6026
+     ]
+    }
+   ]
+  },
+  {
+   "index": 31,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.2017,
+    0.491,
+    0.3603
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9006,
+    0.3482,
+    0.3746
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.0149,
+      0.0197,
+      0.004
+     ],
+     "euler": [
+      -5.069,
+      -163.29,
+      -11.514
+     ],
+     "quat_xyzw": [
+      0.09276,
+      -0.98408,
+      -0.0581,
+      0.14004
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2166,
+      0.5106,
+      0.3643
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.3519,
+      -0.0222,
+      0.0794
+     ],
+     "euler": [
+      26.32,
+      -64.268,
+      172.705
+     ],
+     "quat_xyzw": [
+      0.50462,
+      0.22535,
+      -0.8306,
+      0.06839
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.5536,
+      0.4688,
+      0.4397
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.3026,
+      -0.0234,
+      -0.0966
+     ],
+     "euler": [
+      -10.343,
+      88.923,
+      -20.926
+     ],
+     "quat_xyzw": [
+      -0.18994,
+      0.6743,
+      -0.067,
+      0.71046
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.8991,
+      0.4676,
+      0.2637
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.3725,
+      0.0128,
+      -0.1009
+     ],
+     "euler": [
+      -52.031,
+      110.066,
+      -38.589
+     ],
+     "quat_xyzw": [
+      -0.48059,
+      0.61203,
+      0.16907,
+      0.60487
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.5742,
+      0.5038,
+      0.2594
+     ]
+    }
+   ]
+  },
+  {
+   "index": 32,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.2091,
+    0.7138,
+    -0.385
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8858,
+    0.3991,
+    0.664
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.3006,
+      0.065,
+      -0.23
+     ],
+     "euler": [
+      -29.449,
+      -108.965,
+      100.011
+     ],
+     "quat_xyzw": [
+      -0.69799,
+      -0.39283,
+      0.29749,
+      0.51961
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.9085,
+      0.7788,
+      -0.615
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.2892,
+      0.0046,
+      -0.0558
+     ],
+     "euler": [
+      14.883,
+      76.512,
+      169.75
+     ],
+     "quat_xyzw": [
+      0.62059,
+      -0.04645,
+      0.76836,
+      0.14943
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.4984,
+      0.7184,
+      -0.4408
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.0365,
+      -0.013,
+      0.1944
+     ],
+     "euler": [
+      16.175,
+      -49.177,
+      -144.195
+     ],
+     "quat_xyzw": [
+      0.43133,
+      -0.0049,
+      -0.83869,
+      0.33245
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.1726,
+      0.7008,
+      -0.1906
+     ]
+    }
+   ]
+  },
+  {
+   "index": 33,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.4199,
+    0.4543,
+    0.5289
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2942,
+    0.3004,
+    0.2323
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      0.0026,
+      0.0348,
+      0.0074
+     ],
+     "euler": [
+      -18.503,
+      104.519,
+      -122.589
+     ],
+     "quat_xyzw": [
+      -0.73184,
+      0.28857,
+      -0.46882,
+      0.40167
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.4226,
+      0.489,
+      0.5363
+     ]
+    }
+   ]
+  },
+  {
+   "index": 34,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.1016,
+    0.4526,
+    0.3627
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.711,
+    0.4069,
+    0.3528
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.1954,
+      0.0353,
+      -0.07
+     ],
+     "euler": [
+      -4.202,
+      -92.637,
+      4.611
+     ],
+     "quat_xyzw": [
+      -0.05437,
+      -0.7211,
+      0.00127,
+      0.69069
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.2969,
+      0.4879,
+      0.2928
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.287,
+      -0.0167,
+      -0.0307
+     ],
+     "euler": [
+      -142.345,
+      -1.709,
+      108.505
+     ],
+     "quat_xyzw": [
+      -0.5568,
+      0.76527,
+      0.25365,
+      0.19998
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.1854,
+      0.4358,
+      0.332
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.1041,
+      0.0501,
+      -0.0441
+     ],
+     "euler": [
+      15.757,
+      54.723,
+      -8.912
+     ],
+     "quat_xyzw": [
+      0.086,
+      0.46334,
+      -0.13116,
+      0.87219
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0026,
+      0.5026,
+      0.3187
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0306,
+      0.0837,
+      0.1076
+     ],
+     "euler": [
+      32.306,
+      -98.53,
+      -133.618
+     ],
+     "quat_xyzw": [
+      0.7405,
+      -0.11973,
+      -0.49314,
+      0.4406
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.071,
+      0.5363,
+      0.4703
+     ]
+    }
+   ]
+  },
+  {
+   "index": 35,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.237,
+    0.8052,
+    -0.4953
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.83,
+    0.5654,
+    0.4433
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.088,
+      0.0186,
+      -0.0971
+     ],
+     "euler": [
+      56.942,
+      69.843,
+      -28.942
+     ],
+     "quat_xyzw": [
+      0.25272,
+      0.58493,
+      -0.44435,
+      0.62971
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.325,
+      0.8238,
+      -0.5925
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.3088,
+      0.1294,
+      -0.0985
+     ],
+     "euler": [
+      -122.732,
+      33.356,
+      26.132
+     ],
+     "quat_xyzw": [
+      -0.78792,
+      0.32404,
+      0.34915,
+      0.39022
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.5458,
+      0.9347,
+      -0.5939
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.3153,
+      -0.0786,
+      0.106
+     ],
+     "euler": [
+      -61.311,
+      -157.068,
+      14.986
+     ],
+     "quat_xyzw": [
+      -0.21043,
+      -0.82266,
+      -0.47313,
+      0.23471
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.9217,
+      0.7267,
+      -0.3893
+     ]
+    }
+   ]
+  },
+  {
+   "index": 36,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.1538,
+    0.6876,
+    -0.4765
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8478,
+    0.4429,
+    0.4811
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.2704,
+      0.0139,
+      -0.1429
+     ],
+     "euler": [
+      -19.019,
+      -73.725,
+      100.072
+     ],
+     "quat_xyzw": [
+      -0.53837,
+      -0.27872,
+      0.54113,
+      0.5828
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.8834,
+      0.7015,
+      -0.6194
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.007,
+      0.0906,
+      -0.1249
+     ],
+     "euler": [
+      40.361,
+      51.957,
+      -98.153
+     ],
+     "quat_xyzw": [
+      -0.10751,
+      0.50365,
+      -0.73653,
+      0.43853
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.1468,
+      0.7781,
+      -0.6014
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.3121,
+      0.0982,
+      0.0298
+     ],
+     "euler": [
+      -168.026,
+      34.823,
+      60.782
+     ],
+     "quat_xyzw": [
+      0.80279,
+      -0.50701,
+      -0.30705,
+      0.06471
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.4659,
+      0.7857,
+      -0.4466
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.0825,
+      -0.0123,
+      0.1006
+     ],
+     "euler": [
+      -28.372,
+      42.592,
+      39.388
+     ],
+     "quat_xyzw": [
+      -0.09632,
+      0.40846,
+      0.38821,
+      0.82047
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.0713,
+      0.6752,
+      -0.3759
+     ]
+    }
+   ]
+  },
+  {
+   "index": 37,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    -0.1745,
+    0.7812,
+    -0.385
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.625,
+    0.4287,
+    0.664
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.1626,
+      0.0962,
+      0.1733
+     ],
+     "euler": [
+      -2.122,
+      -19.186,
+      173.374
+     ],
+     "quat_xyzw": [
+      -0.1674,
+      0.0086,
+      0.98402,
+      0.06005
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3371,
+      0.8774,
+      -0.2117
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.15,
+      0.0032,
+      0.0335
+     ],
+     "euler": [
+      120.62,
+      -30.386,
+      -8.787
+     ],
+     "quat_xyzw": [
+      0.84583,
+      -0.0652,
+      0.19038,
+      0.49403
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.0245,
+      0.7844,
+      -0.3515
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.0475,
+      0.069,
+      -0.2137
+     ],
+     "euler": [
+      49.498,
+      173.117,
+      -9.671
+     ],
+     "quat_xyzw": [
+      -0.05137,
+      0.9054,
+      -0.421,
+      0.0191
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.222,
+      0.8501,
+      -0.5987
+     ]
+    }
+   ]
+  },
+  {
+   "index": 38,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.126,
+    0.4663,
+    0.4375
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7713,
+    0.3936,
+    0.529
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.1107,
+      0.0514,
+      -0.0766
+     ],
+     "euler": [
+      -14.959,
+      -125.009,
+      -68.712
+     ],
+     "quat_xyzw": [
+      0.44672,
+      -0.75998,
+      -0.35365,
+      0.31274
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.0153,
+      0.5177,
+      0.361
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.1791,
+      0.0685,
+      0.183
+     ],
+     "euler": [
+      28.731,
+      -87.097,
+      14.461
+     ],
+     "quat_xyzw": [
+      0.09439,
+      -0.68475,
+      0.25795,
+      0.67503
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.3051,
+      0.5348,
+      0.6205
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2526,
+      0.0964,
+      0.0339
+     ],
+     "euler": [
+      0.696,
+      -55.818,
+      148.471
+     ],
+     "quat_xyzw": [
+      -0.449,
+      -0.13233,
+      0.85121,
+      0.23734
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.3786,
+      0.5627,
+      0.4714
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.221,
+      0.1148,
+      -0.1926
+     ],
+     "euler": [
+      33.216,
+      -92.064,
+      25.794
+     ],
+     "quat_xyzw": [
+      0.03949,
+      -0.71659,
+      0.34902,
+      0.6026
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.905,
+      0.5811,
+      0.2449
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.2512,
+      -0.0113,
+      0.0582
+     ],
+     "euler": [
+      -50.833,
+      -95.051,
+      100.429
+     ],
+     "quat_xyzw": [
+      -0.69739,
+      -0.20359,
+      0.26611,
+      0.63355
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.8748,
+      0.455,
+      0.4957
+     ]
+    }
+   ]
+  },
+  {
+   "index": 39,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.2401,
+    0.5383,
+    0.4738
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.812,
+    0.3878,
+    0.3848
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.2793,
+      -0.0383,
+      0.0487
+     ],
+     "euler": [
+      2.085,
+      44.743,
+      -138.762
+     ],
+     "quat_xyzw": [
+      -0.35024,
+      0.14976,
+      -0.86779,
+      0.31911
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.9608,
+      0.4999,
+      0.5225
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      0.2651,
+      0.0772,
+      -0.087
+     ],
+     "euler": [
+      -14.63,
+      86.385,
+      107.494
+     ],
+     "quat_xyzw": [
+      0.49257,
+      0.47631,
+      0.63467,
+      0.35734
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.5052,
+      0.6155,
+      0.3868
+     ]
+    }
+   ]
+  },
+  {
+   "index": 40,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0627,
+    0.5809,
+    0.4561
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8486,
+    0.2871,
+    0.4919
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.2619,
+      -0.001,
+      -0.0588
+     ],
+     "euler": [
+      -4.878,
+      -121.905,
+      -75.319
+     ],
+     "quat_xyzw": [
+      0.51728,
+      -0.70407,
+      -0.32583,
+      0.3613
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3246,
+      0.5799,
+      0.3973
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0824,
+      0.0374,
+      -0.1421
+     ],
+     "euler": [
+      44.538,
+      68.959,
+      -21.85
+     ],
+     "quat_xyzw": [
+      0.20744,
+      0.5736,
+      -0.35522,
+      0.70836
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0197,
+      0.6183,
+      0.314
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.2408,
+      0.0421,
+      0.185
+     ],
+     "euler": [
+      28.123,
+      85.173,
+      -83.672
+     ],
+     "quat_xyzw": [
+      -0.30456,
+      0.60839,
+      -0.59886,
+      0.42245
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.1781,
+      0.623,
+      0.641
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.3283,
+      0.0037,
+      -0.0514
+     ],
+     "euler": [
+      -1.561,
+      -18.469,
+      -172.186
+     ],
+     "quat_xyzw": [
+      0.15917,
+      -0.02434,
+      -0.9848,
+      0.06506
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2656,
+      0.5846,
+      0.4046
+     ]
+    }
+   ]
+  },
+  {
+   "index": 41,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.2043,
+    0.613,
+    0.4375
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6799,
+    0.3373,
+    0.529
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.241,
+      0.0525,
+      -0.0865
+     ],
+     "euler": [
+      -22.898,
+      159.29,
+      -11.631
+     ],
+     "quat_xyzw": [
+      -0.13319,
+      0.95556,
+      0.17641,
+      0.19505
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.9634,
+      0.6655,
+      0.351
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.0582,
+      0.0119,
+      -0.0224
+     ],
+     "euler": [
+      -35.058,
+      169.653,
+      42.916
+     ],
+     "quat_xyzw": [
+      -0.32214,
+      -0.89379,
+      -0.31063,
+      0.02971
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.1461,
+      0.6249,
+      0.4151
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.1999,
+      -0.0146,
+      -0.1587
+     ],
+     "euler": [
+      23.183,
+      112.668,
+      -77.281
+     ],
+     "quat_xyzw": [
+      -0.4221,
+      0.70638,
+      -0.46972,
+      0.31973
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.4042,
+      0.5984,
+      0.2788
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.1109,
+      0.0023,
+      0.1468
+     ],
+     "euler": [
+      40.293,
+      137.299,
+      -19.352
+     ],
+     "quat_xyzw": [
+      -0.02335,
+      0.88302,
+      -0.37367,
+      0.28302
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.0934,
+      0.6153,
+      0.5843
+     ]
+    }
+   ]
+  },
+  {
+   "index": 42,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.1039,
+    0.8198,
+    -0.3779
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8618,
+    0.4011,
+    0.4015
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.0255,
+      0.0308,
+      0.0151
+     ],
+     "euler": [
+      168.294,
+      57.858,
+      -34.158
+     ],
+     "quat_xyzw": [
+      -0.81778,
+      -0.30286,
+      0.48619,
+      0.05601
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.1294,
+      0.8506,
+      -0.3628
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.339,
+      0.0467,
+      -0.0836
+     ],
+     "euler": [
+      -65.899,
+      -133.848,
+      14.156
+     ],
+     "quat_xyzw": [
+      -0.30669,
+      -0.73985,
+      -0.45604,
+      0.38805
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.7649,
+      0.8665,
+      -0.4615
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.2845,
+      0.0123,
+      0.096
+     ],
+     "euler": [
+      -148.079,
+      76.332,
+      -38.32
+     ],
+     "quat_xyzw": [
+      -0.76981,
+      -0.08759,
+      0.49025,
+      0.39921
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.3883,
+      0.8321,
+      -0.2819
+     ]
+    }
+   ]
+  },
+  {
+   "index": 43,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.1625,
+    0.9405,
+    -0.5161
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.979,
+    0.3718,
+    0.4019
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1245,
+      0.0287,
+      -0.1004
+     ],
+     "euler": [
+      122.138,
+      -100.549,
+      28.485
+     ],
+     "quat_xyzw": [
+      0.45062,
+      -0.49825,
+      0.72851,
+      0.13406
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.287,
+      0.9692,
+      -0.6165
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.3755,
+      -0.0518,
+      0.0369
+     ],
+     "euler": [
+      4.709,
+      0.491,
+      -10.451
+     ],
+     "quat_xyzw": [
+      0.04052,
+      0.00801,
+      -0.09117,
+      0.99498
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.787,
+      0.8887,
+      -0.4792
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.3913,
+      0.0306,
+      -0.0384
+     ],
+     "euler": [
+      -22.968,
+      2.087,
+      -116.003
+     ],
+     "quat_xyzw": [
+      -0.12062,
+      -0.15936,
+      -0.82902,
+      0.52228
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.5538,
+      0.9711,
+      -0.5545
+     ]
+    }
+   ]
+  },
+  {
+   "index": 44,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    0.1997,
+    0.8839,
+    -0.5519
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.5746,
+    0.3938,
+    0.3304
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.1398,
+      0.0759,
+      -0.0107
+     ],
+     "euler": [
+      -14.821,
+      175.661,
+      54.788
+     ],
+     "quat_xyzw": [
+      -0.4516,
+      -0.88206,
+      -0.13171,
+      0.02597
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0599,
+      0.9597,
+      -0.5625
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.1617,
+      0.0018,
+      -0.0031
+     ],
+     "euler": [
+      178.486,
+      16.999,
+      -68.582
+     ],
+     "quat_xyzw": [
+      -0.81594,
+      -0.55877,
+      0.12946,
+      0.07247
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.3615,
+      0.8857,
+      -0.5549
+     ]
+    }
+   ]
+  },
+  {
+   "index": 45,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.1365,
+    0.6265,
+    0.4142
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2858,
+    0.3629,
+    0.453
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.0436,
+      0.0329,
+      -0.1052
+     ],
+     "euler": [
+      -119.316,
+      7.333,
+      -12.163
+     ],
+     "quat_xyzw": [
+      -0.85983,
+      -0.05912,
+      0.00147,
+      0.50714
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.0929,
+      0.6594,
+      0.3091
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      0.0347,
+      0.0249,
+      0.1092
+     ],
+     "euler": [
+      38.042,
+      97.088,
+      31.598
+     ],
+     "quat_xyzw": [
+      0.40053,
+      0.62303,
+      -0.06462,
+      0.66876
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.1712,
+      0.6514,
+      0.5235
+     ]
+    }
+   ]
+  },
+  {
+   "index": 46,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0009,
+    0.4566,
+    0.4206
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9722,
+    0.6481,
+    0.4954
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.3299,
+      0.2333,
+      -0.1345
+     ],
+     "euler": [
+      8.137,
+      136.337,
+      -2.486
+     ],
+     "quat_xyzw": [
+      0.00629,
+      0.9263,
+      -0.0739,
+      0.36942
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.329,
+      0.6899,
+      0.2861
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0579,
+      0.2582,
+      -0.0061
+     ],
+     "euler": [
+      6.012,
+      110.163,
+      4.781
+     ],
+     "quat_xyzw": [
+      0.06415,
+      0.81687,
+      -0.01912,
+      0.57292
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.057,
+      0.7148,
+      0.4145
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.4085,
+      -0.1394,
+      0.168
+     ],
+     "euler": [
+      79.458,
+      23.164,
+      48.512
+     ],
+     "quat_xyzw": [
+      0.6343,
+      -0.11645,
+      0.19252,
+      0.73962
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.4094,
+      0.3172,
+      0.5887
+     ]
+    }
+   ]
+  },
+  {
+   "index": 47,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.2894,
+    0.9767,
+    -0.4564
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7252,
+    0.3761,
+    0.4593
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.2659,
+      0.0124,
+      -0.0835
+     ],
+     "euler": [
+      -23.086,
+      -153.483,
+      37.576
+     ],
+     "quat_xyzw": [
+      -0.35059,
+      -0.88806,
+      -0.11202,
+      0.27546
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.0235,
+      0.9891,
+      -0.5399
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.04,
+      0.0362,
+      -0.057
+     ],
+     "euler": [
+      37.672,
+      -32.39,
+      -155.217
+     ],
+     "quat_xyzw": [
+      0.32436,
+      0.24618,
+      -0.86839,
+      0.28299
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.2494,
+      1.0129,
+      -0.5134
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.2705,
+      0.0469,
+      0.0862
+     ],
+     "euler": [
+      -143.16,
+      -4.711,
+      -98.04
+     ],
+     "quat_xyzw": [
+      -0.61187,
+      -0.72417,
+      -0.26391,
+      0.1776
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.5599,
+      1.0236,
+      -0.3703
+     ]
+    }
+   ]
+  },
+  {
+   "index": 48,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.1625,
+    0.5541,
+    0.4375
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.979,
+    0.4868,
+    0.529
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.0154,
+      0.1211,
+      -0.144
+     ],
+     "euler": [
+      -34.375,
+      -18.743,
+      60.19
+     ],
+     "quat_xyzw": [
+      -0.33025,
+      0.0116,
+      0.43102,
+      0.83966
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.1779,
+      0.6752,
+      0.2935
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2565,
+      0.0964,
+      0.1749
+     ],
+     "euler": [
+      133.879,
+      34.749,
+      80.706
+     ],
+     "quat_xyzw": [
+      0.74492,
+      -0.47944,
+      0.03267,
+      0.46279
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.419,
+      0.6504,
+      0.6124
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.4344,
+      -0.0607,
+      0.0158
+     ],
+     "euler": [
+      57.904,
+      -0.0,
+      -90.0
+     ],
+     "quat_xyzw": [
+      0.34229,
+      0.34229,
+      -0.61874,
+      0.61874
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.7281,
+      0.4934,
+      0.4533
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.4298,
+      0.02,
+      0.1093
+     ],
+     "euler": [
+      7.311,
+      -0.0,
+      77.34
+     ],
+     "quat_xyzw": [
+      0.04978,
+      -0.03984,
+      0.62357,
+      0.77917
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.5923,
+      0.5741,
+      0.5468
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.1599,
+      0.1497,
+      -0.1111
+     ],
+     "euler": [
+      21.563,
+      162.608,
+      50.217
+     ],
+     "quat_xyzw": [
+      0.43766,
+      0.86729,
+      -0.10442,
+      0.21296
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.3224,
+      0.7038,
+      0.3264
+     ]
+    }
+   ]
+  },
+  {
+   "index": 49,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.2112,
+    0.9342,
+    -0.3208
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6168,
+    0.5114,
+    0.5356
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.0249,
+      -0.0674,
+      -0.0527
+     ],
+     "euler": [
+      -14.114,
+      -29.296,
+      -3.913
+     ],
+     "quat_xyzw": [
+      -0.11022,
+      -0.25488,
+      -0.06383,
+      0.95855
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.2361,
+      0.8669,
+      -0.3735
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1723,
+      -0.059,
+      0.1445
+     ],
+     "euler": [
+      42.226,
+      -60.493,
+      -10.64
+     ],
+     "quat_xyzw": [
+      0.3534,
+      -0.43903,
+      0.10594,
+      0.81923
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.3835,
+      0.8753,
+      -0.1763
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.1898,
+      -0.0169,
+      -0.1492
+     ],
+     "euler": [
+      79.14,
+      -72.606,
+      50.57
+     ],
+     "quat_xyzw": [
+      0.26926,
+      -0.63193,
+      0.60636,
+      0.40061
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.0214,
+      0.9173,
+      -0.47
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1379,
+      0.1302,
+      -0.135
+     ],
+     "euler": [
+      -151.681,
+      -41.209,
+      12.675
+     ],
+     "quat_xyzw": [
+      -0.91155,
+      0.01463,
+      -0.31386,
+      0.26524
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.3491,
+      1.0644,
+      -0.4558
+     ]
+    }
+   ]
+  },
+  {
+   "index": 50,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.3237,
+    0.6698,
+    0.4264
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2854,
+    0.3338,
+    0.5069
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      0.0419,
+      0.028,
+      0.1199
+     ],
+     "euler": [
+      52.588,
+      19.793,
+      -167.856
+     ],
+     "quat_xyzw": [
+      -0.10706,
+      0.45024,
+      -0.88629,
+      0.01772
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.3656,
+      0.6978,
+      0.5463
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.0234,
+      0.0335,
+      -0.1241
+     ],
+     "euler": [
+      12.284,
+      -119.505,
+      -115.366
+     ],
+     "quat_xyzw": [
+      0.75467,
+      -0.41362,
+      -0.37385,
+      0.34587
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.3003,
+      0.7033,
+      0.3023
+     ]
+    }
+   ]
+  },
+  {
+   "index": 51,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    0.0047,
+    1.0343,
+    -0.385
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7882,
+    0.5829,
+    0.664
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.2359,
+      0.1237,
+      -0.2121
+     ],
+     "euler": [
+      14.755,
+      -81.399,
+      -82.103
+     ],
+     "quat_xyzw": [
+      0.49812,
+      -0.42375,
+      -0.43063,
+      0.62198
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2406,
+      1.158,
+      -0.5971
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.2756,
+      0.0393,
+      -0.0025
+     ],
+     "euler": [
+      -128.021,
+      99.944,
+      -0.669
+     ],
+     "quat_xyzw": [
+      -0.58007,
+      0.33217,
+      0.68664,
+      0.28585
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.2709,
+      1.0736,
+      -0.3875
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.1121,
+      -0.1001,
+      0.2071
+     ],
+     "euler": [
+      -0.371,
+      128.081,
+      72.531
+     ],
+     "quat_xyzw": [
+      0.5307,
+      0.72577,
+      0.26128,
+      0.35122
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.1168,
+      0.9343,
+      -0.1779
+     ]
+    }
+   ]
+  },
+  {
+   "index": 52,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0,
+    0.6723,
+    0.4168
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9741,
+    0.4459,
+    0.4875
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0636,
+      0.0606,
+      -0.1761
+     ],
+     "euler": [
+      81.612,
+      124.518,
+      -26.503
+     ],
+     "quat_xyzw": [
+      0.14253,
+      0.72181,
+      -0.64375,
+      0.21037
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0636,
+      0.7329,
+      0.2406
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.3145,
+      0.0383,
+      0.0271
+     ],
+     "euler": [
+      2.957,
+      -112.299,
+      -72.918
+     ],
+     "quat_xyzw": [
+      0.50491,
+      -0.65919,
+      -0.31367,
+      0.4606
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3145,
+      0.7106,
+      0.4438
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.3778,
+      -0.0316,
+      0.1541
+     ],
+     "euler": [
+      40.267,
+      112.054,
+      115.676
+     ],
+     "quat_xyzw": [
+      0.76153,
+      0.25165,
+      0.29219,
+      0.52093
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.3778,
+      0.6407,
+      0.5708
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.1805,
+      -0.0131,
+      0.1566
+     ],
+     "euler": [
+      -10.159,
+      99.535,
+      -46.29
+     ],
+     "quat_xyzw": [
+      -0.35148,
+      0.67675,
+      -0.19073,
+      0.61814
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.1805,
+      0.6592,
+      0.5734
+     ]
+    }
+   ]
+  },
+  {
+   "index": 53,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.3564,
+    0.7542,
+    0.4107
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.5912,
+    0.4008,
+    0.4754
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.1278,
+      -0.0096,
+      -0.0886
+     ],
+     "euler": [
+      -16.312,
+      32.463,
+      16.153
+     ],
+     "quat_xyzw": [
+      -0.09599,
+      0.29308,
+      0.17279,
+      0.93543
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.4842,
+      0.7446,
+      0.3221
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.1296,
+      0.0288,
+      -0.1736
+     ],
+     "euler": [
+      25.134,
+      94.426,
+      -63.745
+     ],
+     "quat_xyzw": [
+      -0.25271,
+      0.68634,
+      -0.48569,
+      0.47872
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2268,
+      0.783,
+      0.2371
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.159,
+      0.0983,
+      -0.1598
+     ],
+     "euler": [
+      -17.167,
+      106.408,
+      -44.932
+     ],
+     "quat_xyzw": [
+      -0.38519,
+      0.69755,
+      -0.11588,
+      0.59298
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.5154,
+      0.8524,
+      0.2509
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.1179,
+      -0.0557,
+      0.1507
+     ],
+     "euler": [
+      141.438,
+      64.25,
+      -0.763
+     ],
+     "quat_xyzw": [
+      0.7982,
+      0.18091,
+      -0.5038,
+      0.2763
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2385,
+      0.6985,
+      0.5614
+     ]
+    }
+   ]
+  },
+  {
+   "index": 54,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.1116,
+    0.8445,
+    -0.385
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8773,
+    0.7908,
+    0.664
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.2959,
+      0.2796,
+      -0.2037
+     ],
+     "euler": [
+      -20.516,
+      -40.141,
+      -147.843
+     ],
+     "quat_xyzw": [
+      0.27815,
+      -0.25425,
+      -0.90503,
+      0.19725
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.4075,
+      1.1241,
+      -0.5887
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.2355,
+      -0.1731,
+      0.2418
+     ],
+     "euler": [
+      45.787,
+      111.529,
+      61.978
+     ],
+     "quat_xyzw": [
+      0.57976,
+      0.54021,
+      -0.00886,
+      0.6099
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.8761,
+      0.6714,
+      -0.1432
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.3431,
+      0.0049,
+      0.159
+     ],
+     "euler": [
+      -68.285,
+      -42.627,
+      -37.129
+     ],
+     "quat_xyzw": [
+      -0.39988,
+      -0.45164,
+      -0.43886,
+      0.66597
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.7685,
+      0.8494,
+      -0.226
+     ]
+    }
+   ]
+  },
+  {
+   "index": 55,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    0.1203,
+    0.7167,
+    0.4003
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7334,
+    0.4555,
+    0.4546
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.2897,
+      0.0364,
+      0.0518
+     ],
+     "euler": [
+      10.601,
+      -7.805,
+      -56.939
+     ],
+     "quat_xyzw": [
+      0.11332,
+      -0.01564,
+      -0.46802,
+      0.87628
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.41,
+      0.7532,
+      0.4521
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.1741,
+      0.0968,
+      -0.1759
+     ],
+     "euler": [
+      140.755,
+      54.298,
+      48.75
+     ],
+     "quat_xyzw": [
+      0.82668,
+      -0.20633,
+      -0.26817,
+      0.44957
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2944,
+      0.8135,
+      0.2244
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0797,
+      0.1117,
+      -0.0734
+     ],
+     "euler": [
+      -12.451,
+      -131.566,
+      57.568
+     ],
+     "quat_xyzw": [
+      -0.47553,
+      -0.77318,
+      0.10967,
+      0.40501
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2,
+      0.8284,
+      0.3269
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.2856,
+      -0.0279,
+      -0.1394
+     ],
+     "euler": [
+      -57.655,
+      117.903,
+      -52.233
+     ],
+     "quat_xyzw": [
+      -0.55369,
+      0.56446,
+      0.17201,
+      0.58756
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.1653,
+      0.6889,
+      0.2609
+     ]
+    }
+   ]
+  },
+  {
+   "index": 56,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    0.8345,
+    0.6039,
+    0.45
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.323,
+    0.4064,
+    0.4309
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.057,
+      -0.0065,
+      0.1046
+     ],
+     "euler": [
+      -34.631,
+      4.944,
+      160.298
+     ],
+     "quat_xyzw": [
+      -0.0103,
+      0.30002,
+      0.94193,
+      0.15053
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.7775,
+      0.5974,
+      0.5546
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      0.0623,
+      0.0865,
+      -0.091
+     ],
+     "euler": [
+      37.377,
+      28.961,
+      1.216
+     ],
+     "quat_xyzw": [
+      0.31274,
+      0.23356,
+      -0.07039,
+      0.91798
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.8968,
+      0.6904,
+      0.359
+     ]
+    }
+   ]
+  },
+  {
+   "index": 57,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    0.9513,
+    1.0307,
+    -0.385
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.5567,
+    0.4659,
+    0.6641
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1062,
+      0.0739,
+      -0.2236
+     ],
+     "euler": [
+      -64.774,
+      -25.164,
+      62.501
+     ],
+     "quat_xyzw": [
+      -0.54235,
+      0.11394,
+      0.32781,
+      0.76512
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.0575,
+      1.1046,
+      -0.6086
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.128,
+      0.0639,
+      -0.211
+     ],
+     "euler": [
+      27.042,
+      -54.061,
+      148.187
+     ],
+     "quat_xyzw": [
+      -0.36787,
+      -0.32139,
+      0.86204,
+      0.13517
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.8233,
+      1.0947,
+      -0.596
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.151,
+      -0.0326,
+      0.1937
+     ],
+     "euler": [
+      -145.533,
+      -46.447,
+      -19.709
+     ],
+     "quat_xyzw": [
+      -0.84477,
+      -0.26532,
+      -0.41766,
+      0.20379
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.1023,
+      0.9981,
+      -0.1913
+     ]
+    }
+   ]
+  },
+  {
+   "index": 58,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    0.1604,
+    1.107,
+    -0.3106
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6532,
+    0.5983,
+    0.4403
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.1751,
+      -0.096,
+      0.0785
+     ],
+     "euler": [
+      -174.854,
+      20.354,
+      73.61
+     ],
+     "quat_xyzw": [
+      0.78254,
+      -0.59542,
+      -0.1678,
+      0.07037
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.3355,
+      1.0111,
+      -0.2321
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.2098,
+      0.125,
+      -0.0648
+     ],
+     "euler": [
+      155.554,
+      -0.267,
+      72.218
+     ],
+     "quat_xyzw": [
+      0.78929,
+      -0.57636,
+      0.12661,
+      0.1697
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.3702,
+      1.232,
+      -0.3754
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.18,
+      0.0328,
+      -0.0641
+     ],
+     "euler": [
+      7.597,
+      113.893,
+      -148.2
+     ],
+     "quat_xyzw": [
+      -0.79442,
+      0.26387,
+      -0.53862,
+      0.09569
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.0196,
+      1.1398,
+      -0.3746
+     ]
+    }
+   ]
+  },
+  {
+   "index": 59,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.2229,
+    1.1404,
+    -0.385
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8582,
+    0.6353,
+    0.664
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.3047,
+      0.2037,
+      -0.1802
+     ],
+     "euler": [
+      7.411,
+      142.034,
+      49.423
+     ],
+     "quat_xyzw": [
+      0.41358,
+      0.84844,
+      0.08018,
+      0.32043
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.5277,
+      1.3442,
+      -0.5652
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.0256,
+      -0.181,
+      0.1803
+     ],
+     "euler": [
+      4.951,
+      -38.693,
+      -14.964
+     ],
+     "quat_xyzw": [
+      0.0835,
+      -0.32284,
+      -0.10856,
+      0.93649
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.2485,
+      0.9595,
+      -0.2048
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.2777,
+      -0.1202,
+      0.0755
+     ],
+     "euler": [
+      -13.348,
+      112.095,
+      35.917
+     ],
+     "quat_xyzw": [
+      0.19228,
+      0.80376,
+      0.26275,
+      0.49797
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.9452,
+      1.0202,
+      -0.3095
+     ]
+    }
+   ]
+  },
+  {
+   "index": 60,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.1665,
+    0.6017,
+    0.52
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9711,
+    0.6588,
+    0.3639
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.4135,
+      -0.1421,
+      0.0977
+     ],
+     "euler": [
+      -113.453,
+      6.507,
+      108.268
+     ],
+     "quat_xyzw": [
+      -0.46382,
+      0.69469,
+      0.4717,
+      0.28247
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.7529,
+      0.4596,
+      0.6177
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.217,
+      0.1732,
+      0.0014
+     ],
+     "euler": [
+      11.574,
+      -96.217,
+      -92.982
+     ],
+     "quat_xyzw": [
+      0.5835,
+      -0.46106,
+      -0.43013,
+      0.5118
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.3834,
+      0.7749,
+      0.5214
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.4001,
+      0.1815,
+      -0.0842
+     ],
+     "euler": [
+      65.282,
+      -19.986,
+      11.115
+     ],
+     "quat_xyzw": [
+      0.51454,
+      -0.19688,
+      0.17347,
+      0.81633
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.5665,
+      0.7832,
+      0.4358
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.0898,
+      0.2186,
+      -0.0966
+     ],
+     "euler": [
+      -19.763,
+      -96.011,
+      -75.515
+     ],
+     "quat_xyzw": [
+      0.35756,
+      -0.64918,
+      -0.50444,
+      0.44302
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2563,
+      0.8203,
+      0.4235
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.2709,
+      0.0208,
+      0.0569
+     ],
+     "euler": [
+      16.712,
+      33.231,
+      -105.162
+     ],
+     "quat_xyzw": [
+      -0.14007,
+      0.28251,
+      -0.77822,
+      0.54308
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.8956,
+      0.6225,
+      0.5769
+     ]
+    }
+   ]
+  },
+  {
+   "index": 61,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.0647,
+    0.7683,
+    0.5028
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.4245,
+    0.3745,
+    0.3984
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      0.1039,
+      0.0781,
+      -0.0753
+     ],
+     "euler": [
+      161.922,
+      53.978,
+      -12.73
+     ],
+     "quat_xyzw": [
+      0.8667,
+      0.16842,
+      -0.46094,
+      0.08945
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.1686,
+      0.8464,
+      0.4275
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.1041,
+      -0.0147,
+      0.0961
+     ],
+     "euler": [
+      -101.394,
+      15.63,
+      -116.233
+     ],
+     "quat_xyzw": [
+      -0.47806,
+      -0.60547,
+      -0.47728,
+      0.4208
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.9606,
+      0.7536,
+      0.5989
+     ]
+    }
+   ]
+  },
+  {
+   "index": 62,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    0.018,
+    0.8196,
+    0.4178
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.4522,
+    0.4383,
+    0.4715
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0628,
+      -0.0448,
+      0.1399
+     ],
+     "euler": [
+      -158.448,
+      68.937,
+      -21.24
+     ],
+     "quat_xyzw": [
+      -0.81553,
+      -0.04526,
+      0.51804,
+      0.25397
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0808,
+      0.7748,
+      0.5577
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.0928,
+      -0.0236,
+      -0.042
+     ],
+     "euler": [
+      51.142,
+      -50.443,
+      38.967
+     ],
+     "quat_xyzw": [
+      0.23992,
+      -0.49261,
+      0.44558,
+      0.70798
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.0748,
+      0.796,
+      0.3758
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0702,
+      0.1432,
+      -0.0975
+     ],
+     "euler": [
+      22.148,
+      148.185,
+      -6.907
+     ],
+     "quat_xyzw": [
+      -0.00431,
+      0.94526,
+      -0.20059,
+      0.25736
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.0882,
+      0.9628,
+      0.3204
+     ]
+    }
+   ]
+  },
+  {
+   "index": 63,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.152,
+    1.1277,
+    -0.3913
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.9581,
+    0.4988,
+    0.6515
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.005,
+      0.0359,
+      0.0099
+     ],
+     "euler": [
+      -55.667,
+      75.404,
+      -70.813
+     ],
+     "quat_xyzw": [
+      -0.61442,
+      0.22676,
+      -0.17264,
+      0.73571
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.147,
+      1.1636,
+      -0.3814
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.3545,
+      0.0934,
+      -0.2182
+     ],
+     "euler": [
+      110.476,
+      -67.621,
+      -32.276
+     ],
+     "quat_xyzw": [
+      0.74388,
+      -0.11504,
+      0.30745,
+      0.58214
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.5065,
+      1.2211,
+      -0.6095
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.3645,
+      -0.1248,
+      0.1668
+     ],
+     "euler": [
+      -5.764,
+      15.111,
+      -6.479
+     ],
+     "quat_xyzw": [
+      -0.05718,
+      0.12829,
+      -0.04935,
+      0.98886
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.7875,
+      1.0029,
+      -0.2245
+     ]
+    }
+   ]
+  },
+  {
+   "index": 64,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.275,
+    0.7811,
+    0.4383
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.754,
+    0.436,
+    0.5274
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.274,
+      -0.0164,
+      -0.0523
+     ],
+     "euler": [
+      48.541,
+      -23.499,
+      4.111
+     ],
+     "quat_xyzw": [
+      0.39551,
+      -0.19995,
+      0.11566,
+      0.88894
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.001,
+      0.7646,
+      0.386
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.2033,
+      0.0973,
+      -0.0662
+     ],
+     "euler": [
+      5.244,
+      44.37,
+      2.225
+     ],
+     "quat_xyzw": [
+      0.04967,
+      0.37631,
+      0.00069,
+      0.92516
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.0717,
+      0.8784,
+      0.3722
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2503,
+      -0.0324,
+      0.1925
+     ],
+     "euler": [
+      58.687,
+      -107.022,
+      -83.885
+     ],
+     "quat_xyzw": [
+      0.68518,
+      -0.3265,
+      -0.05343,
+      0.6489
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.5253,
+      0.7487,
+      0.6308
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.0582,
+      0.1475,
+      -0.1349
+     ],
+     "euler": [
+      -6.428,
+      55.598,
+      9.905
+     ],
+     "quat_xyzw": [
+      -0.00921,
+      0.46818,
+      0.1023,
+      0.87764
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2168,
+      0.9286,
+      0.3035
+     ]
+    }
+   ]
+  },
+  {
+   "index": 65,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.1004,
+    1.1008,
+    -0.4513
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7788,
+    0.4044,
+    0.5314
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.2331,
+      -0.0036,
+      0.1416
+     ],
+     "euler": [
+      1.235,
+      -69.545,
+      38.713
+     ],
+     "quat_xyzw": [
+      -0.18066,
+      -0.54098,
+      0.27804,
+      0.77291
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.3335,
+      1.0973,
+      -0.3097
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.2454,
+      0.0147,
+      -0.1697
+     ],
+     "euler": [
+      40.875,
+      81.375,
+      -110.432
+     ],
+     "quat_xyzw": [
+      -0.35068,
+      0.56597,
+      -0.71345,
+      0.21839
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.855,
+      1.1155,
+      -0.621
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.0022,
+      0.0911,
+      0.03
+     ],
+     "euler": [
+      20.492,
+      -6.059,
+      -79.521
+     ],
+     "quat_xyzw": [
+      0.1698,
+      0.07363,
+      -0.62128,
+      0.76142
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.0982,
+      1.192,
+      -0.4213
+     ]
+    }
+   ]
+  },
+  {
+   "index": 66,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0479,
+    0.7843,
+    0.4375
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8782,
+    0.4906,
+    0.5291
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.3137,
+      -0.053,
+      -0.1781
+     ],
+     "euler": [
+      -114.687,
+      80.934,
+      -28.768
+     ],
+     "quat_xyzw": [
+      -0.70743,
+      0.18012,
+      0.42731,
+      0.53339
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3616,
+      0.7313,
+      0.2595
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.3417,
+      0.1682,
+      -0.1081
+     ],
+     "euler": [
+      32.677,
+      32.827,
+      -0.671
+     ],
+     "quat_xyzw": [
+      0.26825,
+      0.27274,
+      -0.08488,
+      0.92003
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2938,
+      0.9525,
+      0.3294
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.3178,
+      -0.04,
+      0.1228
+     ],
+     "euler": [
+      34.145,
+      48.92,
+      21.784
+     ],
+     "quat_xyzw": [
+      0.33721,
+      0.33818,
+      0.04506,
+      0.87743
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3657,
+      0.7443,
+      0.5603
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.2094,
+      0.0435,
+      -0.0923
+     ],
+     "euler": [
+      -20.516,
+      22.836,
+      140.599
+     ],
+     "quat_xyzw": [
+      0.12456,
+      0.23001,
+      0.91997,
+      0.29196
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.2573,
+      0.8278,
+      0.3452
+     ]
+    }
+   ]
+  },
+  {
+   "index": 67,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.5418,
+    0.7981,
+    0.4139
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2205,
+    0.38,
+    0.4818
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      0.0161,
+      -0.0434,
+      0.1147
+     ],
+     "euler": [
+      -15.074,
+      -21.607,
+      -178.438
+     ],
+     "quat_xyzw": [
+      -0.18405,
+      0.13137,
+      0.97403,
+      0.01131
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.5579,
+      0.7547,
+      0.5286
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.0051,
+      0.0495,
+      -0.1341
+     ],
+     "euler": [
+      -107.864,
+      -73.487,
+      83.33
+     ],
+     "quat_xyzw": [
+      -0.71802,
+      0.16747,
+      -0.04763,
+      0.6739
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.5367,
+      0.8476,
+      0.2797
+     ]
+    }
+   ]
+  },
+  {
+   "index": 68,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    -0.1109,
+    1.2274,
+    -0.4944
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.7522,
+    0.4617,
+    0.4454
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.2345,
+      0.0171,
+      -0.113
+     ],
+     "euler": [
+      -57.119,
+      124.627,
+      63.764
+     ],
+     "quat_xyzw": [
+      0.22217,
+      0.77774,
+      0.57501,
+      0.12294
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3454,
+      1.2444,
+      -0.6074
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.2331,
+      0.1127,
+      0.044
+     ],
+     "euler": [
+      -157.156,
+      33.845,
+      6.978
+     ],
+     "quat_xyzw": [
+      -0.9325,
+      0.11461,
+      0.29632,
+      0.17175
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.1222,
+      1.34,
+      -0.4504
+     ]
+    }
+   ]
+  },
+  {
+   "index": 69,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.1625,
+    1.1452,
+    -0.3934
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.979,
+    0.6158,
+    0.6472
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1095,
+      0.1136,
+      -0.2049
+     ],
+     "euler": [
+      -19.773,
+      57.068,
+      -78.534
+     ],
+     "quat_xyzw": [
+      -0.41463,
+      0.26886,
+      -0.4843,
+      0.72198
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.272,
+      1.2588,
+      -0.5983
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.3095,
+      -0.0154,
+      0.0049
+     ],
+     "euler": [
+      -43.386,
+      -94.781,
+      64.994
+     ],
+     "quat_xyzw": [
+      -0.57847,
+      -0.44233,
+      0.10852,
+      0.67671
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.853,
+      1.1298,
+      -0.3885
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.3911,
+      -0.0841,
+      0.1847
+     ],
+     "euler": [
+      -135.775,
+      13.521,
+      53.953
+     ],
+     "quat_xyzw": [
+      -0.7998,
+      0.45683,
+      0.26676,
+      0.28366
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.5536,
+      1.061,
+      -0.2086
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.3507,
+      0.1785,
+      -0.2065
+     ],
+     "euler": [
+      146.403,
+      -77.085,
+      19.712
+     ],
+     "quat_xyzw": [
+      0.70689,
+      -0.30559,
+      0.6264,
+      0.1206
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.8118,
+      1.3236,
+      -0.5999
+     ]
+    }
+   ]
+  },
+  {
+   "index": 70,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.1056,
+    0.7659,
+    0.4243
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.8652,
+    0.5652,
+    0.4984
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.0618,
+      0.1261,
+      0.1207
+     ],
+     "euler": [
+      -147.94,
+      -80.839,
+      20.431
+     ],
+     "quat_xyzw": [
+      -0.75187,
+      -0.04644,
+      -0.576,
+      0.31742
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.1674,
+      0.892,
+      0.545
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2526,
+      0.147,
+      0.1755
+     ],
+     "euler": [
+      10.034,
+      -104.69,
+      92.688
+     ],
+     "quat_xyzw": [
+      -0.53372,
+      -0.58309,
+      0.48809,
+      0.37002
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.3582,
+      0.9129,
+      0.5998
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.338,
+      0.2047,
+      -0.0901
+     ],
+     "euler": [
+      23.37,
+      31.958,
+      17.192
+     ],
+     "quat_xyzw": [
+      0.23281,
+      0.23745,
+      0.08559,
+      0.9392
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.4437,
+      0.9706,
+      0.3342
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.3206,
+      -0.1172,
+      0.0425
+     ],
+     "euler": [
+      36.643,
+      55.859,
+      23.809
+     ],
+     "quat_xyzw": [
+      0.36348,
+      0.37779,
+      0.02894,
+      0.85107
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.785,
+      0.6487,
+      0.4669
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.3479,
+      0.0544,
+      -0.1609
+     ],
+     "euler": [
+      131.459,
+      74.877,
+      -19.83
+     ],
+     "quat_xyzw": [
+      0.66999,
+      0.37078,
+      -0.6021,
+      0.22608
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.7577,
+      0.8203,
+      0.2634
+     ]
+    }
+   ]
+  },
+  {
+   "index": 71,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    0.9465,
+    0.8555,
+    0.2881
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2889,
+    0.3008,
+    0.2302
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.0037,
+      0.0428,
+      -0.0022
+     ],
+     "euler": [
+      -21.331,
+      86.543,
+      40.25
+     ],
+     "quat_xyzw": [
+      0.10524,
+      0.67885,
+      0.36531,
+      0.6282
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.9428,
+      0.8983,
+      0.2859
+     ]
+    }
+   ]
+  },
+  {
+   "index": 72,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -1.1625,
+    1.2183,
+    -0.4299
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.979,
+    0.4448,
+    0.4119
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.3964,
+      -0.046,
+      0.0375
+     ],
+     "euler": [
+      -10.182,
+      -163.337,
+      60.776
+     ],
+     "quat_xyzw": [
+      -0.50963,
+      -0.84364,
+      -0.00273,
+      0.16892
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.7661,
+      1.1723,
+      -0.3924
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.1219,
+      0.0591,
+      -0.043
+     ],
+     "euler": [
+      11.758,
+      -15.908,
+      25.687
+     ],
+     "quat_xyzw": [
+      0.06831,
+      -0.15675,
+      0.23282,
+      0.95737
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.2844,
+      1.2774,
+      -0.4729
+     ]
+    },
+    {
+     "item": "SilverOre",
+     "offset": [
+      -0.381,
+      0.0666,
+      0.0837
+     ],
+     "euler": [
+      116.554,
+      -122.592,
+      -8.487
+     ],
+     "quat_xyzw": [
+      0.44154,
+      -0.4297,
+      0.72534,
+      0.30706
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -1.5435,
+      1.2849,
+      -0.3462
+     ]
+    }
+   ]
+  },
+  {
+   "index": 73,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    -0.0547,
+    0.9365,
+    0.4053
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.817,
+    0.5137,
+    0.4645
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.0823,
+      0.0092,
+      -0.0722
+     ],
+     "euler": [
+      48.805,
+      -132.277,
+      -2.147
+     ],
+     "quat_xyzw": [
+      0.1827,
+      -0.82955,
+      0.37086,
+      0.37541
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.1369,
+      0.9457,
+      0.3331
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.3331,
+      -0.0421,
+      0.0061
+     ],
+     "euler": [
+      24.615,
+      -175.267,
+      -48.569
+     ],
+     "quat_xyzw": [
+      0.4095,
+      -0.88619,
+      0.17754,
+      0.12436
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3878,
+      0.8943,
+      0.4114
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.0019,
+      0.1348,
+      -0.1251
+     ],
+     "euler": [
+      -30.958,
+      -37.128,
+      21.661
+     ],
+     "quat_xyzw": [
+      -0.30614,
+      -0.25381,
+      0.08821,
+      0.91328
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.0527,
+      1.0713,
+      0.2801
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.2547,
+      -0.0864,
+      0.1062
+     ],
+     "euler": [
+      26.562,
+      46.877,
+      -71.312
+     ],
+     "quat_xyzw": [
+      -0.0544,
+      0.43742,
+      -0.59477,
+      0.67228
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2,
+      0.8501,
+      0.5115
+     ]
+    }
+   ]
+  },
+  {
+   "index": 74,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "FlametalOreNew",
+   "compartment": [
+    1,
+    1
+   ],
+   "position": [
+    -0.2362,
+    1.3101,
+    -0.4747
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.5016,
+    0.4323,
+    0.4847
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      -0.1122,
+      0.0385,
+      0.1059
+     ],
+     "euler": [
+      51.814,
+      48.987,
+      -135.189
+     ],
+     "quat_xyzw": [
+      -0.19323,
+      0.50972,
+      -0.82581,
+      0.14453
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.3484,
+      1.3485,
+      -0.3688
+     ]
+    },
+    {
+     "item": "FlametalOreNew",
+     "offset": [
+      0.1097,
+      0.0658,
+      -0.0913
+     ],
+     "euler": [
+      33.503,
+      -159.076,
+      -64.419
+     ],
+     "quat_xyzw": [
+      0.54619,
+      -0.76884,
+      0.14713,
+      0.29819
+     ],
+     "scale": 0.36,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.1266,
+      1.3758,
+      -0.566
+     ]
+    }
+   ]
+  },
+  {
+   "index": 75,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "TinOre",
+   "compartment": [
+    0,
+    0
+   ],
+   "position": [
+    1.1541,
+    0.9153,
+    0.3986
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.5807,
+    0.3724,
+    0.4394
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "TinOre",
+     "offset": [
+      0.17,
+      -0.011,
+      -0.1159
+     ],
+     "euler": [
+      19.887,
+      63.885,
+      -108.711
+     ],
+     "quat_xyzw": [
+      -0.3381,
+      0.42276,
+      -0.73248,
+      0.41284
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      1.3241,
+      0.9042,
+      0.2827
+     ]
+    },
+    {
+     "item": "TinOre",
+     "offset": [
+      -0.1545,
+      0.0679,
+      0.0949
+     ],
+     "euler": [
+      15.001,
+      -72.629,
+      105.519
+     ],
+     "quat_xyzw": [
+      -0.40378,
+      -0.43905,
+      0.68278,
+      0.42191
+     ],
+     "scale": 0.48,
+     "fit_longest_m": 0.292,
+     "world_position": [
+      0.9996,
+      0.9832,
+      0.4935
+     ]
+    }
+   ]
+  },
+  {
+   "index": 76,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "CopperOre",
+   "compartment": [
+    0,
+    1
+   ],
+   "position": [
+    1.1806,
+    1.2168,
+    -0.3295
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.5702,
+    0.6229,
+    0.5032
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CopperOre",
+     "offset": [
+      -0.1916,
+      0.0974,
+      -0.0935
+     ],
+     "euler": [
+      -159.988,
+      -12.748,
+      84.329
+     ],
+     "quat_xyzw": [
+      -0.73838,
+      0.64267,
+      0.03488,
+      0.20138
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      0.989,
+      1.3143,
+      -0.423
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.0196,
+      0.1924,
+      -0.1089
+     ],
+     "euler": [
+      17.782,
+      47.863,
+      133.438
+     ],
+     "quat_xyzw": [
+      0.42398,
+      0.02863,
+      0.80474,
+      0.41451
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.2002,
+      1.4093,
+      -0.4384
+     ]
+    },
+    {
+     "item": "CopperOre",
+     "offset": [
+      0.1739,
+      -0.1155,
+      0.1354
+     ],
+     "euler": [
+      122.428,
+      110.673,
+      4.733
+     ],
+     "quat_xyzw": [
+      0.5144,
+      0.37515,
+      -0.70894,
+      0.30341
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      1.3546,
+      1.1014,
+      -0.1941
+     ]
+    }
+   ]
+  },
+  {
+   "index": 77,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "SilverOre",
+   "compartment": [
+    2,
+    1
+   ],
+   "position": [
+    -0.9934,
+    1.3097,
+    -0.5332
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2876,
+    0.2934,
+    0.2442
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverOre",
+     "offset": [
+      0.0043,
+      0.029,
+      -0.0041
+     ],
+     "euler": [
+      -31.194,
+      -104.217,
+      4.886
+     ],
+     "quat_xyzw": [
+      -0.19738,
+      -0.75239,
+      -0.18678,
+      0.60006
+     ],
+     "scale": 0.45,
+     "fit_longest_m": 0.328,
+     "world_position": [
+      -0.9892,
+      1.3387,
+      -0.5373
+     ]
+    }
+   ]
+  },
+  {
+   "index": 78,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "IronScrap",
+   "compartment": [
+    2,
+    0
+   ],
+   "position": [
+    -1.0227,
+    0.8504,
+    0.4268
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.6994,
+    0.5609,
+    0.5077
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.1864,
+      -0.0494,
+      0.0241
+     ],
+     "euler": [
+      -29.802,
+      -160.972,
+      -6.498
+     ],
+     "quat_xyzw": [
+      0.01158,
+      -0.95396,
+      -0.26226,
+      0.1451
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.8363,
+      0.801,
+      0.4509
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      -0.2615,
+      0.1555,
+      -0.0348
+     ],
+     "euler": [
+      34.166,
+      -10.284,
+      -23.417
+     ],
+     "quat_xyzw": [
+      0.30388,
+      -0.02452,
+      -0.16741,
+      0.93757
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.2842,
+      1.0059,
+      0.3921
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.0222,
+      0.128,
+      -0.1815
+     ],
+     "euler": [
+      118.025,
+      -85.928,
+      28.765
+     ],
+     "quat_xyzw": [
+      0.52052,
+      -0.49572,
+      0.65954,
+      0.21982
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -1.0005,
+      0.9783,
+      0.2453
+     ]
+    },
+    {
+     "item": "IronScrap",
+     "offset": [
+      0.2552,
+      -0.0938,
+      0.179
+     ],
+     "euler": [
+      -45.61,
+      -143.757,
+      -49.047
+     ],
+     "quat_xyzw": [
+      0.25396,
+      -0.84711,
+      -0.45415,
+      0.10796
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.317,
+     "world_position": [
+      -0.7675,
+      0.7566,
+      0.6058
+     ]
+    }
+   ]
+  },
+  {
+   "index": 79,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "BlackMetalScrap",
+   "compartment": [
+    1,
+    0
+   ],
+   "position": [
+    0.086,
+    0.8801,
+    0.4521
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.802,
+    0.491,
+    0.4997
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.1451,
+      0.0985,
+      0.0399
+     ],
+     "euler": [
+      57.312,
+      46.687,
+      -52.687
+     ],
+     "quat_xyzw": [
+      0.24027,
+      0.50698,
+      -0.52781,
+      0.63769
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.2311,
+      0.9786,
+      0.492
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      -0.2996,
+      -0.054,
+      0.1365
+     ],
+     "euler": [
+      -126.302,
+      25.858,
+      -28.139
+     ],
+     "quat_xyzw": [
+      -0.86806,
+      -0.11338,
+      0.08662,
+      0.47552
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      -0.2136,
+      0.8261,
+      0.5886
+     ]
+    },
+    {
+     "item": "BlackMetalScrap",
+     "offset": [
+      0.3205,
+      0.1377,
+      -0.089
+     ],
+     "euler": [
+      14.401,
+      1.469,
+      132.516
+     ],
+     "quat_xyzw": [
+      0.0621,
+      -0.10961,
+      0.90743,
+      0.40088
+     ],
+     "scale": 0.5,
+     "fit_longest_m": 0.332,
+     "world_position": [
+      0.4065,
+      1.0178,
+      0.3631
+     ]
+    }
+   ]
+  }
+ ],
+ "contents_tris_full": 183604
+}

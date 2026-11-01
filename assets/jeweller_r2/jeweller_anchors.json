@@ -1,0 +1,5280 @@
+{
+ "store": "Jeweller's Casket round 1: an open Viking-age casket on two hewn runners, low front, thirteen lined trays in three stepped rows (row 0 front: Gemstone blue, green, red, Crown jewel, spare; row 1: Ancient gemstone black, green, orange, purple; row 2 back: Ancient coin, Silver necklace, Pot shard green, Pot shard red); one item kind per tray, heaped and crowned over the rim when full",
+ "slots": 64,
+ "units": 64,
+ "steps": 8,
+ "stack_per_unit": 1,
+ "group_key": "compartment",
+ "frame": {
+  "obj": "JewellerCasket.obj",
+  "tris": 4044,
+  "size_m": [
+   1.53,
+   1.644,
+   1.289
+  ],
+  "body_size_m_lid_excluded": [
+   1.53,
+   0.686,
+   1.009
+  ],
+  "atlas": "jeweller_atlas.png 128x128",
+  "lid": {
+   "open_deg": -120.93,
+   "top_m": 1.621
+  },
+  "atlas_sources": "rows 0-31 hewn timber, 32-63 x0-63 end grain, 64-79 dark iron: assets/bunker_r4; 32-63 x64-95 dark oiled timber, x96-127 wear swatch: assets/metalpallet_r3; 80-111: undyed linen, dark felt, madder wool cloth (as treasure_r1), leather (new)"
+ },
+ "space": "Unity prefab space, origin = footprint centre on the ground. Blender z-up/-y front -> Unity y-up/+z front: ux=-bx, uy=bz, uz=-by. OBJ export (forward NEGATIVE_Z, up Y) writes (bx, bz, -by); Unity's importer negates x, same mapping.",
+ "unit_semantics": "SETTLED: every copy has an explicit final pose from a rigid-body simulation (convex-hull items, friction 0.75, restitution 0), dropped in batches onto the frozen earlier copies; each tray's copy sequence is cut into its units in drop order. Each copy: the item's bounds centre at unit.position + copy.offset (= copy.world_position), rotated by copy.quat_xyzw (or copy.euler, Unity ZXY), longest side fit_longest_m. unit.position = centre of unit.box = the bounding box of the unit's copies, its bottom lowered to the lowest rotated-bounds corner (the never-below-the-floor lift leaves every settled copy alone).",
+ "fill_order": "units are listed in fill order (interleaved over the trays); within a tray its units fill bottom up. Show the first n copies of a unit for a partial stack. Later copies rest on earlier ones, earlier ones never move. One item kind per tray (unit.compartment = tray group, unit.item = its prefab; compartment 12 is the empty spare tray).",
+ "compartments": [
+  {
+   "compartment": 0,
+   "item": "GemstoneBlue",
+   "row": 0,
+   "column": 0,
+   "lining": "cloth",
+   "spare": false,
+   "x": [
+    0.386,
+    0.61
+   ],
+   "z": [
+    0.1825,
+    0.41
+   ],
+   "floor_y": 0.258,
+   "rim_front_y": 0.39,
+   "rim_back_y": 0.4663,
+   "units": 7,
+   "copies": 12,
+   "copies_per_unit": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    1,
+    2
+   ],
+   "heap_peak_y": 0.488,
+   "cover_5cm": 1.0
+  },
+  {
+   "compartment": 1,
+   "item": "GemstoneGreen",
+   "row": 0,
+   "column": 1,
+   "lining": "cloth",
+   "spare": false,
+   "x": [
+    0.137,
+    0.361
+   ],
+   "z": [
+    0.1825,
+    0.41
+   ],
+   "floor_y": 0.258,
+   "rim_front_y": 0.39,
+   "rim_back_y": 0.4663,
+   "units": 7,
+   "copies": 8,
+   "copies_per_unit": [
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "heap_peak_y": 0.463,
+   "cover_5cm": 0.755
+  },
+  {
+   "compartment": 2,
+   "item": "GemstoneRed",
+   "row": 0,
+   "column": 2,
+   "lining": "linen",
+   "spare": false,
+   "x": [
+    -0.112,
+    0.112
+   ],
+   "z": [
+    0.1825,
+    0.41
+   ],
+   "floor_y": 0.258,
+   "rim_front_y": 0.39,
+   "rim_back_y": 0.4663,
+   "units": 7,
+   "copies": 8,
+   "copies_per_unit": [
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "heap_peak_y": 0.463,
+   "cover_5cm": 0.918
+  },
+  {
+   "compartment": 3,
+   "item": "CrownJewel",
+   "row": 0,
+   "column": 3,
+   "lining": "felt",
+   "spare": false,
+   "x": [
+    -0.361,
+    -0.137
+   ],
+   "z": [
+    0.1825,
+    0.41
+   ],
+   "floor_y": 0.258,
+   "rim_front_y": 0.39,
+   "rim_back_y": 0.4663,
+   "units": 5,
+   "copies": 10,
+   "copies_per_unit": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "heap_peak_y": 0.446,
+   "cover_5cm": 1.0
+  },
+  {
+   "compartment": 4,
+   "item": "AncientGemstoneBlack",
+   "row": 1,
+   "column": 0,
+   "lining": "linen",
+   "spare": false,
+   "x": [
+    0.3237,
+    0.61
+   ],
+   "z": [
+    -0.0875,
+    0.1575
+   ],
+   "floor_y": 0.338,
+   "rim_front_y": 0.4663,
+   "rim_back_y": 0.5484,
+   "units": 3,
+   "copies": 3,
+   "copies_per_unit": [
+    1,
+    1,
+    1
+   ],
+   "heap_peak_y": 0.567,
+   "cover_5cm": 0.725
+  },
+  {
+   "compartment": 5,
+   "item": "AncientGemstoneGreen",
+   "row": 1,
+   "column": 1,
+   "lining": "felt",
+   "spare": false,
+   "x": [
+    0.0125,
+    0.2987
+   ],
+   "z": [
+    -0.0875,
+    0.1575
+   ],
+   "floor_y": 0.338,
+   "rim_front_y": 0.4663,
+   "rim_back_y": 0.5484,
+   "units": 3,
+   "copies": 3,
+   "copies_per_unit": [
+    1,
+    1,
+    1
+   ],
+   "heap_peak_y": 0.565,
+   "cover_5cm": 0.738
+  },
+  {
+   "compartment": 6,
+   "item": "AncientGemstoneOrange",
+   "row": 1,
+   "column": 2,
+   "lining": "felt",
+   "spare": false,
+   "x": [
+    -0.2988,
+    -0.0125
+   ],
+   "z": [
+    -0.0875,
+    0.1575
+   ],
+   "floor_y": 0.338,
+   "rim_front_y": 0.4663,
+   "rim_back_y": 0.5484,
+   "units": 3,
+   "copies": 3,
+   "copies_per_unit": [
+    1,
+    1,
+    1
+   ],
+   "heap_peak_y": 0.584,
+   "cover_5cm": 0.725
+  },
+  {
+   "compartment": 7,
+   "item": "AncientGemstonePurple",
+   "row": 1,
+   "column": 3,
+   "lining": "linen",
+   "spare": false,
+   "x": [
+    -0.61,
+    -0.3238
+   ],
+   "z": [
+    -0.0875,
+    0.1575
+   ],
+   "floor_y": 0.338,
+   "rim_front_y": 0.4663,
+   "rim_back_y": 0.5484,
+   "units": 3,
+   "copies": 3,
+   "copies_per_unit": [
+    1,
+    1,
+    1
+   ],
+   "heap_peak_y": 0.565,
+   "cover_5cm": 0.688
+  },
+  {
+   "compartment": 8,
+   "item": "AncientCoin",
+   "row": 2,
+   "column": 0,
+   "lining": "felt",
+   "spare": false,
+   "x": [
+    0.3237,
+    0.61
+   ],
+   "z": [
+    -0.41,
+    -0.1125
+   ],
+   "floor_y": 0.418,
+   "rim_front_y": 0.5484,
+   "rim_back_y": 0.67,
+   "units": 6,
+   "copies": 15,
+   "copies_per_unit": [
+    2,
+    3,
+    3,
+    2,
+    2,
+    3
+   ],
+   "heap_peak_y": 0.703,
+   "cover_5cm": 0.909
+  },
+  {
+   "compartment": 9,
+   "item": "SilverNecklace",
+   "row": 2,
+   "column": 1,
+   "lining": "cloth",
+   "spare": false,
+   "x": [
+    0.0125,
+    0.2987
+   ],
+   "z": [
+    -0.41,
+    -0.1125
+   ],
+   "floor_y": 0.418,
+   "rim_front_y": 0.5484,
+   "rim_back_y": 0.67,
+   "units": 6,
+   "copies": 14,
+   "copies_per_unit": [
+    2,
+    3,
+    2,
+    2,
+    3,
+    2
+   ],
+   "heap_peak_y": 0.624,
+   "cover_5cm": 0.945
+  },
+  {
+   "compartment": 10,
+   "item": "Pot_Shard_Green",
+   "row": 2,
+   "column": 2,
+   "lining": "cloth",
+   "spare": false,
+   "x": [
+    -0.2988,
+    -0.0125
+   ],
+   "z": [
+    -0.41,
+    -0.1125
+   ],
+   "floor_y": 0.418,
+   "rim_front_y": 0.5484,
+   "rim_back_y": 0.67,
+   "units": 7,
+   "copies": 7,
+   "copies_per_unit": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "heap_peak_y": 0.674,
+   "cover_5cm": 0.682
+  },
+  {
+   "compartment": 11,
+   "item": "Pot_Shard_Red",
+   "row": 2,
+   "column": 3,
+   "lining": "felt",
+   "spare": false,
+   "x": [
+    -0.61,
+    -0.3238
+   ],
+   "z": [
+    -0.41,
+    -0.1125
+   ],
+   "floor_y": 0.418,
+   "rim_front_y": 0.5484,
+   "rim_back_y": 0.67,
+   "units": 7,
+   "copies": 9,
+   "copies_per_unit": [
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1
+   ],
+   "heap_peak_y": 0.724,
+   "cover_5cm": 0.964
+  },
+  {
+   "compartment": 12,
+   "item": null,
+   "row": 0,
+   "column": 4,
+   "lining": "cloth",
+   "spare": true,
+   "x": [
+    -0.61,
+    -0.386
+   ],
+   "z": [
+    0.1825,
+    0.41
+   ],
+   "floor_y": 0.258,
+   "rim_front_y": 0.39,
+   "rim_back_y": 0.4663,
+   "units": 0,
+   "note": "spare tray: lined and empty, holds no units; a kind without a tray of its own may take it"
+  }
+ ],
+ "items": {
+  "GemstoneBlue": {
+   "bounds_size_unity": [
+    0.2632,
+    0.0611,
+    0.2408
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0367,
+    -0.0
+   ],
+   "scale_used": 0.46,
+   "fit_longest_m": 0.1211,
+   "tris_per_copy_in_game": 188
+  },
+  "GemstoneGreen": {
+   "bounds_size_unity": [
+    0.2176,
+    0.1943,
+    0.2272
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0952,
+    -0.0
+   ],
+   "scale_used": 0.4,
+   "fit_longest_m": 0.0909,
+   "tris_per_copy_in_game": 44
+  },
+  "GemstoneRed": {
+   "bounds_size_unity": [
+    0.2122,
+    0.1574,
+    0.2122
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0779,
+    -0.0
+   ],
+   "scale_used": 0.42,
+   "fit_longest_m": 0.0891,
+   "tris_per_copy_in_game": 76
+  },
+  "CrownJewel": {
+   "bounds_size_unity": [
+    0.2524,
+    0.0995,
+    0.1987
+   ],
+   "bounds_center_unity": [
+    0.0001,
+    0.0464,
+    0.0082
+   ],
+   "scale_used": 0.46,
+   "fit_longest_m": 0.1161,
+   "tris_per_copy_in_game": 48
+  },
+  "AncientGemstoneBlack": {
+   "bounds_size_unity": [
+    0.48,
+    0.3394,
+    0.3394
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.15,
+    -0.05
+   ],
+   "scale_used": 0.32,
+   "fit_longest_m": 0.1536,
+   "tris_per_copy_in_game": 22
+  },
+  "AncientGemstoneGreen": {
+   "bounds_size_unity": [
+    0.48,
+    0.3394,
+    0.3394
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.15,
+    -0.05
+   ],
+   "scale_used": 0.32,
+   "fit_longest_m": 0.1536,
+   "tris_per_copy_in_game": 22
+  },
+  "AncientGemstoneOrange": {
+   "bounds_size_unity": [
+    0.48,
+    0.3394,
+    0.3394
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.15,
+    -0.05
+   ],
+   "scale_used": 0.32,
+   "fit_longest_m": 0.1536,
+   "tris_per_copy_in_game": 22
+  },
+  "AncientGemstonePurple": {
+   "bounds_size_unity": [
+    0.48,
+    0.3394,
+    0.3394
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.15,
+    -0.05
+   ],
+   "scale_used": 0.32,
+   "fit_longest_m": 0.1536,
+   "tris_per_copy_in_game": 22
+  },
+  "AncientCoin": {
+   "bounds_size_unity": [
+    0.4942,
+    0.0733,
+    0.4818
+   ],
+   "bounds_center_unity": [
+    -0.0,
+    0.0327,
+    0.0063
+   ],
+   "scale_used": 0.3,
+   "fit_longest_m": 0.1483,
+   "tris_per_copy_in_game": 52
+  },
+  "SilverNecklace": {
+   "bounds_size_unity": [
+    0.3662,
+    0.0635,
+    0.7086
+   ],
+   "bounds_center_unity": [
+    0.0063,
+    0.0452,
+    -0.0931
+   ],
+   "scale_used": 0.3,
+   "fit_longest_m": 0.2126,
+   "tris_per_copy_in_game": 156
+  },
+  "Pot_Shard_Green": {
+   "bounds_size_unity": [
+    0.4056,
+    0.4149,
+    0.4432
+   ],
+   "bounds_center_unity": [
+    -0.0243,
+    0.0045,
+    -0.0165
+   ],
+   "scale_used": 0.3,
+   "fit_longest_m": 0.133,
+   "tris_per_copy_in_game": 72
+  },
+  "Pot_Shard_Red": {
+   "bounds_size_unity": [
+    0.4056,
+    0.4149,
+    0.4432
+   ],
+   "bounds_center_unity": [
+    -0.0243,
+    0.0045,
+    -0.0165
+   ],
+   "scale_used": 0.3,
+   "fit_longest_m": 0.133,
+   "tris_per_copy_in_game": 72
+  }
+ },
+ "checks": {
+  "clipping": 0,
+  "of_copies": 95,
+  "escaped": 0,
+  "leaning_over_rim": 0,
+  "interpenetration_max_m": 0.0,
+  "retries": 113,
+  "batches_dropped": 81,
+  "contents_tris_full_in_game": 8076,
+  "frame_tris": 4044,
+  "total_tris_full": 12120,
+  "per_tray": {
+   "GemstoneBlue": {
+    "copies": 12,
+    "cover_5cm": 1.0,
+    "peak": 0.488,
+    "target_peak": 0.491,
+    "floor": 0.258,
+    "seconds": 1.0
+   },
+   "GemstoneGreen": {
+    "copies": 8,
+    "cover_5cm": 0.755,
+    "peak": 0.463,
+    "target_peak": 0.457,
+    "floor": 0.258,
+    "seconds": 0.3
+   },
+   "GemstoneRed": {
+    "copies": 8,
+    "cover_5cm": 0.918,
+    "peak": 0.463,
+    "target_peak": 0.457,
+    "floor": 0.258,
+    "seconds": 0.5
+   },
+   "CrownJewel": {
+    "copies": 10,
+    "cover_5cm": 1.0,
+    "peak": 0.446,
+    "target_peak": 0.457,
+    "floor": 0.258,
+    "seconds": 0.2
+   },
+   "AncientGemstoneBlack": {
+    "copies": 3,
+    "cover_5cm": 0.725,
+    "peak": 0.567,
+    "target_peak": 0.582,
+    "floor": 0.338,
+    "seconds": 0.6
+   },
+   "AncientGemstoneGreen": {
+    "copies": 3,
+    "cover_5cm": 0.738,
+    "peak": 0.565,
+    "target_peak": 0.557,
+    "floor": 0.338,
+    "seconds": 0.1
+   },
+   "AncientGemstoneOrange": {
+    "copies": 3,
+    "cover_5cm": 0.725,
+    "peak": 0.584,
+    "target_peak": 0.557,
+    "floor": 0.338,
+    "seconds": 0.1
+   },
+   "AncientGemstonePurple": {
+    "copies": 3,
+    "cover_5cm": 0.688,
+    "peak": 0.565,
+    "target_peak": 0.582,
+    "floor": 0.338,
+    "seconds": 0.5
+   },
+   "AncientCoin": {
+    "copies": 15,
+    "cover_5cm": 0.909,
+    "peak": 0.703,
+    "target_peak": 0.685,
+    "floor": 0.418,
+    "seconds": 0.6
+   },
+   "SilverNecklace": {
+    "copies": 14,
+    "cover_5cm": 0.945,
+    "peak": 0.624,
+    "target_peak": 0.639,
+    "floor": 0.418,
+    "seconds": 0.9
+   },
+   "Pot_Shard_Green": {
+    "copies": 7,
+    "cover_5cm": 0.682,
+    "peak": 0.674,
+    "target_peak": 0.639,
+    "floor": 0.418,
+    "seconds": 0.2
+   },
+   "Pot_Shard_Red": {
+    "copies": 9,
+    "cover_5cm": 0.964,
+    "peak": 0.724,
+    "target_peak": 0.688,
+    "floor": 0.418,
+    "seconds": 0.3
+   }
+  }
+ },
+ "rotation_convert_max_err": 5.364418029785156e-07,
+ "units_list": [
+  {
+   "index": 0,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "GemstoneRed",
+   "compartment": 2,
+   "position": [
+    -0.0493,
+    0.2864,
+    0.3401
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1074,
+    0.0904,
+    0.0982
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneRed",
+     "offset": [
+      0.0,
+      0.0119,
+      -0.0
+     ],
+     "euler": [
+      0.0,
+      58.31,
+      -133.176
+     ],
+     "quat_xyzw": [
+      -0.44706,
+      0.19357,
+      -0.80141,
+      0.347
+     ],
+     "scale": 0.42,
+     "fit_longest_m": 0.0891,
+     "world_position": [
+      -0.0493,
+      0.2983,
+      0.34
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Red",
+   "compartment": 11,
+   "position": [
+    -0.5176,
+    0.4139,
+    -0.2887
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1616,
+    0.1472,
+    0.1569
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      -0.0132,
+      0.0341,
+      0.0032
+     ],
+     "euler": [
+      27.036,
+      -130.81,
+      57.407
+     ],
+     "quat_xyzw": [
+      -0.33927,
+      -0.82217,
+      0.38078,
+      0.25286
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.5308,
+      0.448,
+      -0.2854
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "GemstoneGreen",
+   "compartment": 1,
+   "position": [
+    0.3062,
+    0.2873,
+    0.2372
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.0909,
+    0.1133,
+    0.0914
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneGreen",
+     "offset": [
+      -0.0,
+      0.0012,
+      0.0076
+     ],
+     "euler": [
+      -0.0,
+      -90.0,
+      -114.913
+     ],
+     "quat_xyzw": [
+      0.59608,
+      -0.38038,
+      -0.59608,
+      0.38038
+     ],
+     "scale": 0.4,
+     "fit_longest_m": 0.0909,
+     "world_position": [
+      0.3062,
+      0.2885,
+      0.2448
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "GemstoneBlue",
+   "compartment": 0,
+   "position": [
+    0.4786,
+    0.3104,
+    0.341
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1672,
+    0.1197,
+    0.1199
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0649,
+      0.0072,
+      -0.0
+     ],
+     "euler": [
+      109.559,
+      -60.71,
+      25.247
+     ],
+     "quat_xyzw": [
+      0.62421,
+      -0.43847,
+      0.51163,
+      0.3954
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4137,
+      0.3176,
+      0.341
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0293,
+      -0.0314,
+      0.0002
+     ],
+     "euler": [
+      -180.0,
+      76.543,
+      -0.0
+     ],
+     "quat_xyzw": [
+      -0.78509,
+      -0.0,
+      0.61939,
+      0.0
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.5079,
+      0.2791,
+      0.3413
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Green",
+   "compartment": 10,
+   "position": [
+    -0.1787,
+    0.4139,
+    -0.3178
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1659,
+    0.1472,
+    0.1653
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Green",
+     "offset": [
+      -0.008,
+      0.0341,
+      0.0115
+     ],
+     "euler": [
+      27.036,
+      -157.096,
+      57.407
+     ],
+     "quat_xyzw": [
+      -0.41697,
+      -0.85813,
+      0.29366,
+      0.05929
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.1867,
+      0.448,
+      -0.3063
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "SilverNecklace",
+   "compartment": 9,
+   "position": [
+    0.1633,
+    0.4356,
+    -0.2223
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2478,
+    0.0593,
+    0.1996
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      0.0328,
+      0.0046,
+      0.0137
+     ],
+     "euler": [
+      -174.337,
+      44.761,
+      13.2
+     ],
+     "quat_xyzw": [
+      -0.91526,
+      0.12483,
+      0.38302,
+      0.00167
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.1962,
+      0.4402,
+      -0.2086
+     ]
+    },
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      -0.0497,
+      -0.0031,
+      -0.0039
+     ],
+     "euler": [
+      2.008,
+      31.76,
+      -0.014
+     ],
+     "quat_xyzw": [
+      0.01682,
+      0.27358,
+      -0.00491,
+      0.96169
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.1136,
+      0.4325,
+      -0.2262
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "AncientCoin",
+   "compartment": 8,
+   "position": [
+    0.4669,
+    0.4628,
+    -0.2913
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2683,
+    0.1181,
+    0.2194
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientCoin",
+     "offset": [
+      0.0605,
+      0.0075,
+      -0.0341
+     ],
+     "euler": [
+      29.097,
+      -9.559,
+      18.266
+     ],
+     "quat_xyzw": [
+      0.23435,
+      -0.11936,
+      0.17376,
+      0.94902
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.5274,
+      0.4703,
+      -0.3254
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      -0.0599,
+      -0.0268,
+      0.0307
+     ],
+     "euler": [
+      0.001,
+      148.994,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.0,
+      0.96362,
+      -1e-05,
+      0.26729
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.4069,
+      0.436,
+      -0.2606
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "step": 0,
+   "kind": "heap_step",
+   "item": "CrownJewel",
+   "compartment": 3,
+   "position": [
+    -0.2329,
+    0.2806,
+    0.2973
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1721,
+    0.0608,
+    0.207
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CrownJewel",
+     "offset": [
+      -0.0283,
+      0.0063,
+      -0.0593
+     ],
+     "euler": [
+      9.91,
+      9.975,
+      177.492
+     ],
+     "quat_xyzw": [
+      0.08848,
+      -0.08413,
+      0.99209,
+      0.02923
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.2612,
+      0.2869,
+      0.238
+     ]
+    },
+    {
+     "item": "CrownJewel",
+     "offset": [
+      0.0427,
+      0.0074,
+      0.0511
+     ],
+     "euler": [
+      -17.165,
+      -68.294,
+      -179.566
+     ],
+     "quat_xyzw": [
+      -0.55456,
+      0.1256,
+      0.81864,
+      0.08067
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.1902,
+      0.2879,
+      0.3484
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "AncientGemstoneOrange",
+   "compartment": 6,
+   "position": [
+    -0.1144,
+    0.3983,
+    -0.0123
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1613,
+    0.1106,
+    0.1318
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneOrange",
+     "offset": [
+      -0.0,
+      0.001,
+      -0.0
+     ],
+     "euler": [
+      0.0,
+      152.558,
+      0.0
+     ],
+     "quat_xyzw": [
+      0.0,
+      0.97146,
+      0.0,
+      0.23719
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      -0.1144,
+      0.3993,
+      -0.0123
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "AncientGemstoneGreen",
+   "compartment": 5,
+   "position": [
+    0.2032,
+    0.3983,
+    0.0284
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1615,
+    0.1106,
+    0.1316
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneGreen",
+     "offset": [
+      -0.0,
+      0.001,
+      0.0
+     ],
+     "euler": [
+      0.0,
+      26.923,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.0,
+      0.2328,
+      -0.0,
+      0.97253
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      0.2032,
+      0.3993,
+      0.0284
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "AncientGemstonePurple",
+   "compartment": 7,
+   "position": [
+    -0.4018,
+    0.3781,
+    0.0406
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1381,
+    0.1737,
+    0.1551
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstonePurple",
+     "offset": [
+      -0.0,
+      0.0186,
+      -0.0
+     ],
+     "euler": [
+      -38.903,
+      -23.398,
+      -143.803
+     ],
+     "quat_xyzw": [
+      0.08044,
+      -0.36936,
+      -0.89863,
+      0.22265
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      -0.4018,
+      0.3967,
+      0.0406
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "AncientGemstoneBlack",
+   "compartment": 4,
+   "position": [
+    0.4356,
+    0.3859,
+    0.0099
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1266,
+    0.1603,
+    0.1651
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneBlack",
+     "offset": [
+      -0.0024,
+      0.015,
+      -0.0
+     ],
+     "euler": [
+      120.965,
+      9.988,
+      -109.464
+     ],
+     "quat_xyzw": [
+      0.46553,
+      0.73256,
+      -0.44448,
+      0.22155
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      0.4331,
+      0.4009,
+      0.0099
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Red",
+   "compartment": 11,
+   "position": [
+    -0.4732,
+    0.4627,
+    -0.216
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2213,
+    0.2085,
+    0.1724
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      0.0248,
+      -0.0022,
+      0.0159
+     ],
+     "euler": [
+      50.512,
+      82.591,
+      72.66
+     ],
+     "quat_xyzw": [
+      0.61185,
+      0.29093,
+      0.17572,
+      0.71423
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.4483,
+      0.4605,
+      -0.2001
+     ]
+    },
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      -0.0109,
+      0.0584,
+      -0.0121
+     ],
+     "euler": [
+      -44.896,
+      -113.845,
+      -94.364
+     ],
+     "quat_xyzw": [
+      0.42642,
+      -0.67923,
+      -0.58747,
+      0.10814
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.484,
+      0.5211,
+      -0.2281
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "GemstoneRed",
+   "compartment": 2,
+   "position": [
+    0.0683,
+    0.2864,
+    0.2978
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.0686,
+    0.0904,
+    0.0904
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneRed",
+     "offset": [
+      -0.0,
+      0.0119,
+      -0.0
+     ],
+     "euler": [
+      46.824,
+      -91.227,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.27794,
+      -0.6558,
+      0.28396,
+      0.64191
+     ],
+     "scale": 0.42,
+     "fit_longest_m": 0.0891,
+     "world_position": [
+      0.0683,
+      0.2983,
+      0.2978
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "GemstoneBlue",
+   "compartment": 0,
+   "position": [
+    0.4854,
+    0.2993,
+    0.229
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1071,
+    0.1136,
+    0.0751
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0,
+      0.0112,
+      -0.0
+     ],
+     "euler": [
+      -12.873,
+      -100.811,
+      -49.401
+     ],
+     "quat_xyzw": [
+      0.25506,
+      -0.72551,
+      -0.34314,
+      0.53929
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4854,
+      0.3105,
+      0.229
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "step": 1,
+   "kind": "heap_step",
+   "item": "GemstoneGreen",
+   "compartment": 1,
+   "position": [
+    0.3027,
+    0.3283,
+    0.2889
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.0986,
+    0.1284,
+    0.1172
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneGreen",
+     "offset": [
+      0.0197,
+      0.0012,
+      -0.0002
+     ],
+     "euler": [
+      -167.781,
+      -20.296,
+      -28.895
+     ],
+     "quat_xyzw": [
+      -0.94313,
+      -0.26236,
+      -0.19579,
+      0.05774
+     ],
+     "scale": 0.4,
+     "fit_longest_m": 0.0909,
+     "world_position": [
+      0.3224,
+      0.3295,
+      0.2887
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Green",
+   "compartment": 10,
+   "position": [
+    -0.1008,
+    0.4251,
+    -0.2143
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1581,
+    0.1559,
+    0.1525
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Green",
+     "offset": [
+      -0.0024,
+      0.0255,
+      0.0089
+     ],
+     "euler": [
+      18.292,
+      177.603,
+      56.925
+     ],
+     "quat_xyzw": [
+      0.47334,
+      0.86618,
+      -0.12986,
+      0.09389
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.1032,
+      0.4507,
+      -0.2055
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "AncientCoin",
+   "compartment": 8,
+   "position": [
+    0.4668,
+    0.4705,
+    -0.246
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2682,
+    0.0966,
+    0.2488
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientCoin",
+     "offset": [
+      0.0208,
+      -0.0151,
+      0.0519
+     ],
+     "euler": [
+      -163.404,
+      50.348,
+      0.0
+     ],
+     "quat_xyzw": [
+      -0.89555,
+      0.06139,
+      0.42091,
+      0.13061
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.4877,
+      0.4554,
+      -0.194
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      -0.0576,
+      0.0191,
+      -0.0593
+     ],
+     "euler": [
+      15.359,
+      155.004,
+      0.306
+     ],
+     "quat_xyzw": [
+      0.0315,
+      0.96747,
+      -0.12989,
+      0.21481
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.4092,
+      0.4896,
+      -0.3053
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      0.0634,
+      0.0048,
+      0.0494
+     ],
+     "euler": [
+      -9.044,
+      172.636,
+      13.972
+     ],
+     "quat_xyzw": [
+      0.11597,
+      0.98806,
+      0.08588,
+      0.05398
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.5302,
+      0.4753,
+      -0.1966
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "SilverNecklace",
+   "compartment": 9,
+   "position": [
+    0.1299,
+    0.4684,
+    -0.2615
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2168,
+    0.1012,
+    0.279
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      0.0154,
+      0.0074,
+      0.0586
+     ],
+     "euler": [
+      -167.197,
+      49.602,
+      1.247
+     ],
+     "quat_xyzw": [
+      -0.90155,
+      0.05658,
+      0.41793,
+      0.09667
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.1453,
+      0.4758,
+      -0.2029
+     ]
+    },
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      -0.0238,
+      -0.0094,
+      -0.0417
+     ],
+     "euler": [
+      7.145,
+      142.815,
+      -18.204
+     ],
+     "quat_xyzw": [
+      -0.13003,
+      0.9372,
+      -0.10866,
+      0.30487
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.1061,
+      0.459,
+      -0.3032
+     ]
+    },
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      0.0069,
+      0.0288,
+      0.0368
+     ],
+     "euler": [
+      -5.384,
+      -44.615,
+      169.448
+     ],
+     "quat_xyzw": [
+      -0.38155,
+      0.0084,
+      0.91858,
+      0.10273
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.1368,
+      0.4972,
+      -0.2247
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "CrownJewel",
+   "compartment": 3,
+   "position": [
+    -0.2482,
+    0.2917,
+    0.3076
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2044,
+    0.1244,
+    0.1868
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CrownJewel",
+     "offset": [
+      -0.053,
+      -0.0044,
+      0.0444
+     ],
+     "euler": [
+      5.273,
+      56.035,
+      -6.538
+     ],
+     "quat_xyzw": [
+      0.01378,
+      0.4708,
+      -0.07186,
+      0.8792
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.3012,
+      0.2873,
+      0.352
+     ]
+    },
+    {
+     "item": "CrownJewel",
+     "offset": [
+      0.0733,
+      0.0146,
+      -0.0434
+     ],
+     "euler": [
+      49.919,
+      44.578,
+      -60.646
+     ],
+     "quat_xyzw": [
+      0.16343,
+      0.49394,
+      -0.56167,
+      0.6433
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.1749,
+      0.3063,
+      0.2643
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "GemstoneGreen",
+   "compartment": 1,
+   "position": [
+    0.2467,
+    0.2873,
+    0.3462
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1027,
+    0.1133,
+    0.1013
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneGreen",
+     "offset": [
+      0.0182,
+      0.0012,
+      -0.0186
+     ],
+     "euler": [
+      0.0,
+      -136.542,
+      114.913
+     ],
+     "quat_xyzw": [
+      -0.78309,
+      -0.49972,
+      0.31208,
+      0.19915
+     ],
+     "scale": 0.4,
+     "fit_longest_m": 0.0909,
+     "world_position": [
+      0.2649,
+      0.2885,
+      0.3276
+     ]
+    }
+   ]
+  },
+  {
+   "index": 21,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Green",
+   "compartment": 10,
+   "position": [
+    -0.1616,
+    0.4784,
+    -0.2687
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1517,
+    0.1264,
+    0.1552
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Green",
+     "offset": [
+      -0.0198,
+      0.0284,
+      -0.0026
+     ],
+     "euler": [
+      -12.523,
+      -58.862,
+      -107.925
+     ],
+     "quat_xyzw": [
+      0.33909,
+      -0.36417,
+      -0.7316,
+      0.466
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.1814,
+      0.5068,
+      -0.2714
+     ]
+    }
+   ]
+  },
+  {
+   "index": 22,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "GemstoneBlue",
+   "compartment": 0,
+   "position": [
+    0.498,
+    0.3052,
+    0.3093
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.206,
+    0.1254,
+    0.1735
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0505,
+      0.0116,
+      -0.0441
+     ],
+     "euler": [
+      18.225,
+      36.988,
+      -124.512
+     ],
+     "quat_xyzw": [
+      -0.20727,
+      0.27873,
+      -0.85212,
+      0.39145
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4475,
+      0.3168,
+      0.2652
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.053,
+      0.0052,
+      0.025
+     ],
+     "euler": [
+      -35.597,
+      -42.567,
+      -18.59
+     ],
+     "quat_xyzw": [
+      -0.22526,
+      -0.38707,
+      -0.25279,
+      0.85763
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.551,
+      0.3104,
+      0.3343
+     ]
+    }
+   ]
+  },
+  {
+   "index": 23,
+   "step": 2,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Red",
+   "compartment": 11,
+   "position": [
+    -0.5133,
+    0.5161,
+    -0.3237
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1581,
+    0.1689,
+    0.1546
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      -0.004,
+      0.0114,
+      0.0183
+     ],
+     "euler": [
+      67.77,
+      169.112,
+      32.751
+     ],
+     "quat_xyzw": [
+      0.28374,
+      0.77798,
+      -0.5103,
+      0.23204
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.5172,
+      0.5274,
+      -0.3054
+     ]
+    }
+   ]
+  },
+  {
+   "index": 24,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "GemstoneRed",
+   "compartment": 2,
+   "position": [
+    -0.0468,
+    0.2864,
+    0.2468
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1045,
+    0.0904,
+    0.0885
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneRed",
+     "offset": [
+      0.0,
+      0.0119,
+      -0.0
+     ],
+     "euler": [
+      0.0,
+      69.567,
+      -46.824
+     ],
+     "quat_xyzw": [
+      -0.22667,
+      0.52351,
+      -0.32634,
+      0.7537
+     ],
+     "scale": 0.42,
+     "fit_longest_m": 0.0891,
+     "world_position": [
+      -0.0467,
+      0.2983,
+      0.2468
+     ]
+    }
+   ]
+  },
+  {
+   "index": 25,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "SilverNecklace",
+   "compartment": 9,
+   "position": [
+    0.156,
+    0.4907,
+    -0.2613
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2674,
+    0.1411,
+    0.2795
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      -0.0604,
+      0.0061,
+      -0.0466
+     ],
+     "euler": [
+      -28.821,
+      -18.476,
+      -161.265
+     ],
+     "quat_xyzw": [
+      0.11343,
+      -0.26767,
+      -0.94973,
+      0.11618
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.0956,
+      0.4968,
+      -0.3079
+     ]
+    },
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      0.0565,
+      0.0083,
+      0.0617
+     ],
+     "euler": [
+      -29.874,
+      -123.093,
+      10.755
+     ],
+     "quat_xyzw": [
+      -0.20188,
+      -0.83425,
+      -0.18248,
+      0.47956
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.2126,
+      0.499,
+      -0.1996
+     ]
+    }
+   ]
+  },
+  {
+   "index": 26,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "AncientCoin",
+   "compartment": 8,
+   "position": [
+    0.4766,
+    0.5179,
+    -0.2613
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2489,
+    0.1217,
+    0.2795
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientCoin",
+     "offset": [
+      0.0515,
+      -0.0114,
+      0.0566
+     ],
+     "euler": [
+      -3.495,
+      152.186,
+      16.227
+     ],
+     "quat_xyzw": [
+      0.12968,
+      0.96156,
+      0.06321,
+      0.23366
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.5281,
+      0.5065,
+      -0.2047
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      -0.0388,
+      0.0216,
+      0.0682
+     ],
+     "euler": [
+      14.67,
+      5.104,
+      20.598
+     ],
+     "quat_xyzw": [
+      0.13339,
+      0.02065,
+      0.17155,
+      0.97588
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.4378,
+      0.5395,
+      -0.1931
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      -0.0521,
+      0.0047,
+      -0.0784
+     ],
+     "euler": [
+      27.411,
+      -153.613,
+      18.679
+     ],
+     "quat_xyzw": [
+      -0.10014,
+      -0.94212,
+      0.2636,
+      0.18137
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.4244,
+      0.5226,
+      -0.3396
+     ]
+    }
+   ]
+  },
+  {
+   "index": 27,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "GemstoneBlue",
+   "compartment": 0,
+   "position": [
+    0.5036,
+    0.3143,
+    0.3149
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1948,
+    0.1469,
+    0.1692
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0737,
+      0.0052,
+      -0.0271
+     ],
+     "euler": [
+      -121.848,
+      51.501,
+      51.164
+     ],
+     "quat_xyzw": [
+      -0.61884,
+      0.53034,
+      0.53149,
+      0.23084
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.5774,
+      0.3194,
+      0.2877
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0569,
+      0.0278,
+      0.0306
+     ],
+     "euler": [
+      14.474,
+      177.77,
+      48.076
+     ],
+     "quat_xyzw": [
+      0.40626,
+      0.90483,
+      -0.10717,
+      0.06893
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4467,
+      0.342,
+      0.3455
+     ]
+    }
+   ]
+  },
+  {
+   "index": 28,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "AncientGemstonePurple",
+   "compartment": 7,
+   "position": [
+    -0.5375,
+    0.3983,
+    0.0214
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1232,
+    0.1106,
+    0.1619
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstonePurple",
+     "offset": [
+      -0.0,
+      0.001,
+      0.0
+     ],
+     "euler": [
+      -0.0,
+      -76.908,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.0,
+      -0.62188,
+      -0.0,
+      0.78311
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      -0.5375,
+      0.3993,
+      0.0214
+     ]
+    }
+   ]
+  },
+  {
+   "index": 29,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "GemstoneGreen",
+   "compartment": 1,
+   "position": [
+    0.2064,
+    0.3022,
+    0.2963
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1207,
+    0.1142,
+    0.2095
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneGreen",
+     "offset": [
+      -0.0281,
+      0.0012,
+      0.0464
+     ],
+     "euler": [
+      75.442,
+      -0.0,
+      164.975
+     ],
+     "quat_xyzw": [
+      0.07999,
+      -0.60657,
+      0.78421,
+      0.10341
+     ],
+     "scale": 0.4,
+     "fit_longest_m": 0.0909,
+     "world_position": [
+      0.1782,
+      0.3034,
+      0.3426
+     ]
+    },
+    {
+     "item": "GemstoneGreen",
+     "offset": [
+      0.0076,
+      0.0137,
+      -0.0554
+     ],
+     "euler": [
+      0.0,
+      -126.871,
+      19.385
+     ],
+     "quat_xyzw": [
+      -0.15058,
+      -0.88167,
+      0.07529,
+      0.44082
+     ],
+     "scale": 0.4,
+     "fit_longest_m": 0.0909,
+     "world_position": [
+      0.2139,
+      0.3159,
+      0.2409
+     ]
+    }
+   ]
+  },
+  {
+   "index": 30,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "AncientGemstoneGreen",
+   "compartment": 5,
+   "position": [
+    0.0866,
+    0.4288,
+    0.0692
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1302,
+    0.1768,
+    0.1297
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneGreen",
+     "offset": [
+      0.0011,
+      0.0147,
+      0.0
+     ],
+     "euler": [
+      8.575,
+      174.787,
+      -55.343
+     ],
+     "quat_xyzw": [
+      -0.45961,
+      0.88381,
+      -0.08721,
+      0.00548
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      0.0877,
+      0.4435,
+      0.0692
+     ]
+    }
+   ]
+  },
+  {
+   "index": 31,
+   "step": 3,
+   "kind": "heap_step",
+   "item": "AncientGemstoneOrange",
+   "compartment": 6,
+   "position": [
+    -0.174,
+    0.4097,
+    0.0863
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1716,
+    0.1621,
+    0.1244
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneOrange",
+     "offset": [
+      0.0,
+      0.0082,
+      0.003
+     ],
+     "euler": [
+      -65.895,
+      -128.593,
+      -66.212
+     ],
+     "quat_xyzw": [
+      0.2154,
+      -0.76222,
+      -0.60929,
+      0.03721
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      -0.174,
+      0.4179,
+      0.0893
+     ]
+    }
+   ]
+  },
+  {
+   "index": 32,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "AncientGemstoneBlack",
+   "compartment": 4,
+   "position": [
+    0.5395,
+    0.4207,
+    0.0253
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1208,
+    0.1554,
+    0.1528
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneBlack",
+     "offset": [
+      0.0157,
+      0.001,
+      -0.0
+     ],
+     "euler": [
+      132.453,
+      97.417,
+      -0.0
+     ],
+     "quat_xyzw": [
+      0.60389,
+      0.30289,
+      -0.68761,
+      0.26602
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      0.5552,
+      0.4217,
+      0.0253
+     ]
+    }
+   ]
+  },
+  {
+   "index": 33,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "CrownJewel",
+   "compartment": 3,
+   "position": [
+    -0.2902,
+    0.3138,
+    0.299
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1236,
+    0.1223,
+    0.1363
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CrownJewel",
+     "offset": [
+      -0.0267,
+      0.0097,
+      -0.0313
+     ],
+     "euler": [
+      -9.248,
+      -142.788,
+      114.55
+     ],
+     "quat_xyzw": [
+      -0.80862,
+      -0.48905,
+      0.22624,
+      0.2362
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.3169,
+      0.3235,
+      0.2677
+     ]
+    },
+    {
+     "item": "CrownJewel",
+     "offset": [
+      0.0372,
+      0.0141,
+      0.0187
+     ],
+     "euler": [
+      54.649,
+      37.968,
+      127.9
+     ],
+     "quat_xyzw": [
+      0.45027,
+      -0.26305,
+      0.68918,
+      0.50309
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.253,
+      0.328,
+      0.3176
+     ]
+    }
+   ]
+  },
+  {
+   "index": 34,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Red",
+   "compartment": 11,
+   "position": [
+    -0.3905,
+    0.4707,
+    -0.2634
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1156,
+    0.169,
+    0.1604
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      0.0207,
+      0.0135,
+      -0.0086
+     ],
+     "euler": [
+      -66.084,
+      -153.68,
+      -46.545
+     ],
+     "quat_xyzw": [
+      -0.20847,
+      0.79889,
+      0.56314,
+      0.03446
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.3698,
+      0.4842,
+      -0.272
+     ]
+    }
+   ]
+  },
+  {
+   "index": 35,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "GemstoneRed",
+   "compartment": 2,
+   "position": [
+    0.0374,
+    0.319,
+    0.2963
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1146,
+    0.1213,
+    0.2095
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneRed",
+     "offset": [
+      -0.0026,
+      0.0029,
+      -0.0597
+     ],
+     "euler": [
+      -13.473,
+      -49.554,
+      -71.955
+     ],
+     "quat_xyzw": [
+      0.15831,
+      -0.39937,
+      -0.56949,
+      0.7008
+     ],
+     "scale": 0.42,
+     "fit_longest_m": 0.0891,
+     "world_position": [
+      0.0347,
+      0.3219,
+      0.2366
+     ]
+    },
+    {
+     "item": "GemstoneRed",
+     "offset": [
+      -0.0,
+      0.0033,
+      0.0709
+     ],
+     "euler": [
+      -21.966,
+      85.809,
+      91.57
+     ],
+     "quat_xyzw": [
+      0.38168,
+      0.56607,
+      0.60583,
+      0.40849
+     ],
+     "scale": 0.42,
+     "fit_longest_m": 0.0891,
+     "world_position": [
+      0.0374,
+      0.3223,
+      0.3672
+     ]
+    }
+   ]
+  },
+  {
+   "index": 36,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Green",
+   "compartment": 10,
+   "position": [
+    -0.098,
+    0.4943,
+    -0.3455
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1446,
+    0.197,
+    0.111
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Green",
+     "offset": [
+      0.0065,
+      0.0041,
+      0.0204
+     ],
+     "euler": [
+      -28.048,
+      3.975,
+      18.825
+     ],
+     "quat_xyzw": [
+      -0.23342,
+      0.0728,
+      0.16686,
+      0.95518
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.0915,
+      0.4984,
+      -0.3251
+     ]
+    }
+   ]
+  },
+  {
+   "index": 37,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "SilverNecklace",
+   "compartment": 9,
+   "position": [
+    0.2116,
+    0.4939,
+    -0.3136
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1563,
+    0.1797,
+    0.1747
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      0.0351,
+      0.0066,
+      -0.0069
+     ],
+     "euler": [
+      -40.274,
+      -5.857,
+      -27.479
+     ],
+     "quat_xyzw": [
+      -0.32259,
+      -0.12826,
+      -0.23979,
+      0.90664
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.2467,
+      0.5005,
+      -0.3205
+     ]
+    },
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      -0.0031,
+      0.0117,
+      -0.0036
+     ],
+     "euler": [
+      -6.637,
+      35.948,
+      -44.775
+     ],
+     "quat_xyzw": [
+      -0.16825,
+      0.26388,
+      -0.34515,
+      0.88483
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.2085,
+      0.5056,
+      -0.3173
+     ]
+    }
+   ]
+  },
+  {
+   "index": 38,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "AncientCoin",
+   "compartment": 8,
+   "position": [
+    0.4768,
+    0.5547,
+    -0.3275
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2484,
+    0.1508,
+    0.1471
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientCoin",
+     "offset": [
+      0.0765,
+      0.0057,
+      -0.0034
+     ],
+     "euler": [
+      125.1,
+      73.702,
+      -19.242
+     ],
+     "quat_xyzw": [
+      0.65391,
+      0.39125,
+      -0.58638,
+      0.27474
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.5533,
+      0.5605,
+      -0.3308
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      -0.0541,
+      0.0027,
+      -0.0101
+     ],
+     "euler": [
+      3.83,
+      -105.874,
+      32.559
+     ],
+     "quat_xyzw": [
+      -0.20423,
+      -0.7712,
+      0.19445,
+      0.57073
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.4227,
+      0.5574,
+      -0.3376
+     ]
+    }
+   ]
+  },
+  {
+   "index": 39,
+   "step": 4,
+   "kind": "heap_step",
+   "item": "GemstoneBlue",
+   "compartment": 0,
+   "position": [
+    0.4893,
+    0.3652,
+    0.2892
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1886,
+    0.0727,
+    0.1955
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0369,
+      0.0067,
+      0.0431
+     ],
+     "euler": [
+      9.883,
+      -5.215,
+      -162.051
+     ],
+     "quat_xyzw": [
+      0.05819,
+      0.07792,
+      -0.98246,
+      0.15912
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.5262,
+      0.3719,
+      0.3323
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0407,
+      0.0194,
+      -0.0396
+     ],
+     "euler": [
+      5.51,
+      -72.63,
+      -7.833
+     ],
+     "quat_xyzw": [
+      0.07904,
+      -0.58751,
+      -0.02657,
+      0.80491
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4486,
+      0.3846,
+      0.2496
+     ]
+    }
+   ]
+  },
+  {
+   "index": 40,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "GemstoneGreen",
+   "compartment": 1,
+   "position": [
+    0.1915,
+    0.3632,
+    0.3175
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.0909,
+    0.143,
+    0.1203
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneGreen",
+     "offset": [
+      0.0065,
+      0.0014,
+      0.0086
+     ],
+     "euler": [
+      45.286,
+      -29.44,
+      -111.854
+     ],
+     "quat_xyzw": [
+      0.40286,
+      0.17705,
+      -0.68458,
+      0.58112
+     ],
+     "scale": 0.4,
+     "fit_longest_m": 0.0909,
+     "world_position": [
+      0.198,
+      0.3646,
+      0.3261
+     ]
+    }
+   ]
+  },
+  {
+   "index": 41,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "GemstoneRed",
+   "compartment": 2,
+   "position": [
+    -0.0625,
+    0.3589,
+    0.2819
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.0805,
+    0.0904,
+    0.1005
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneRed",
+     "offset": [
+      0.0,
+      0.0119,
+      -0.0
+     ],
+     "euler": [
+      -0.0,
+      13.205,
+      -133.176
+     ],
+     "quat_xyzw": [
+      -0.10551,
+      0.04569,
+      -0.91158,
+      0.39471
+     ],
+     "scale": 0.42,
+     "fit_longest_m": 0.0891,
+     "world_position": [
+      -0.0625,
+      0.3708,
+      0.2819
+     ]
+    }
+   ]
+  },
+  {
+   "index": 42,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Green",
+   "compartment": 10,
+   "position": [
+    -0.1973,
+    0.48,
+    -0.1609
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1616,
+    0.1821,
+    0.0774
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Green",
+     "offset": [
+      0.0032,
+      0.0027,
+      0.0121
+     ],
+     "euler": [
+      -70.403,
+      15.709,
+      42.23
+     ],
+     "quat_xyzw": [
+      -0.49248,
+      0.30988,
+      0.36509,
+      0.72674
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.1941,
+      0.4827,
+      -0.1488
+     ]
+    }
+   ]
+  },
+  {
+   "index": 43,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Red",
+   "compartment": 11,
+   "position": [
+    -0.5409,
+    0.5537,
+    -0.3269
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1202,
+    0.1698,
+    0.1482
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      -0.0029,
+      0.0161,
+      0.0002
+     ],
+     "euler": [
+      -61.756,
+      -24.455,
+      -55.028
+     ],
+     "quat_xyzw": [
+      -0.36087,
+      -0.39292,
+      -0.48389,
+      0.69371
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.5438,
+      0.5698,
+      -0.3267
+     ]
+    }
+   ]
+  },
+  {
+   "index": 44,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "CrownJewel",
+   "compartment": 3,
+   "position": [
+    -0.2708,
+    0.352,
+    0.3036
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1625,
+    0.1285,
+    0.1947
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CrownJewel",
+     "offset": [
+      0.0435,
+      0.0084,
+      -0.055
+     ],
+     "euler": [
+      13.903,
+      -56.538,
+      58.805
+     ],
+     "quat_xyzw": [
+      -0.13794,
+      -0.46191,
+      0.47915,
+      0.73351
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.2273,
+      0.3605,
+      0.2486
+     ]
+    },
+    {
+     "item": "CrownJewel",
+     "offset": [
+      -0.0379,
+      0.0137,
+      0.0655
+     ],
+     "euler": [
+      -17.926,
+      94.514,
+      69.746
+     ],
+     "quat_xyzw": [
+      0.32802,
+      0.65562,
+      0.47719,
+      0.48461
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.3087,
+      0.3658,
+      0.3691
+     ]
+    }
+   ]
+  },
+  {
+   "index": 45,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "AncientCoin",
+   "compartment": 8,
+   "position": [
+    0.4905,
+    0.5726,
+    -0.2613
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2121,
+    0.1261,
+    0.2795
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientCoin",
+     "offset": [
+      0.0355,
+      0.0092,
+      0.0719
+     ],
+     "euler": [
+      -8.896,
+      -48.824,
+      -44.452
+     ],
+     "quat_xyzw": [
+      0.09049,
+      -0.40814,
+      -0.37308,
+      0.82828
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.526,
+      0.5818,
+      -0.1894
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      -0.0272,
+      0.0145,
+      -0.0748
+     ],
+     "euler": [
+      -13.232,
+      58.662,
+      149.755
+     ],
+     "quat_xyzw": [
+      0.44354,
+      0.22391,
+      0.85073,
+      0.17144
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.4633,
+      0.5871,
+      -0.3361
+     ]
+    }
+   ]
+  },
+  {
+   "index": 46,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "SilverNecklace",
+   "compartment": 9,
+   "position": [
+    0.1636,
+    0.5358,
+    -0.261
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2523,
+    0.1696,
+    0.2791
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      0.0368,
+      -0.013,
+      0.0882
+     ],
+     "euler": [
+      -31.587,
+      -96.257,
+      -7.434
+     ],
+     "quat_xyzw": [
+      -0.13483,
+      -0.7268,
+      -0.24388,
+      0.62777
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.2004,
+      0.5228,
+      -0.1729
+     ]
+    },
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      -0.0239,
+      0.0006,
+      -0.0723
+     ],
+     "euler": [
+      -160.525,
+      -79.638,
+      -18.506
+     ],
+     "quat_xyzw": [
+      -0.72974,
+      -0.22862,
+      -0.64381,
+      0.02673
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.1397,
+      0.5364,
+      -0.3333
+     ]
+    },
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      0.0003,
+      0.0406,
+      -0.0436
+     ],
+     "euler": [
+      25.569,
+      -135.249,
+      -5.563
+     ],
+     "quat_xyzw": [
+      0.1279,
+      -0.89663,
+      0.18637,
+      0.38073
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.1639,
+      0.5764,
+      -0.3046
+     ]
+    }
+   ]
+  },
+  {
+   "index": 47,
+   "step": 5,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Green",
+   "compartment": 10,
+   "position": [
+    -0.2392,
+    0.4923,
+    -0.2726
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.101,
+    0.1691,
+    0.167
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Green",
+     "offset": [
+      -0.0198,
+      0.0092,
+      0.0086
+     ],
+     "euler": [
+      -68.207,
+      -8.546,
+      -22.583
+     ],
+     "quat_xyzw": [
+      -0.53623,
+      -0.16997,
+      -0.20264,
+      0.80157
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.259,
+      0.5015,
+      -0.2639
+     ]
+    }
+   ]
+  },
+  {
+   "index": 48,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "GemstoneGreen",
+   "compartment": 1,
+   "position": [
+    0.256,
+    0.3702,
+    0.2803
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1219,
+    0.1481,
+    0.1032
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneGreen",
+     "offset": [
+      0.001,
+      0.0014,
+      0.0134
+     ],
+     "euler": [
+      -43.844,
+      -51.937,
+      -136.635
+     ],
+     "quat_xyzw": [
+      0.25346,
+      -0.46198,
+      -0.83542,
+      0.15623
+     ],
+     "scale": 0.4,
+     "fit_longest_m": 0.0909,
+     "world_position": [
+      0.257,
+      0.3716,
+      0.2937
+     ]
+    }
+   ]
+  },
+  {
+   "index": 49,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Red",
+   "compartment": 11,
+   "position": [
+    -0.4669,
+    0.5788,
+    -0.2539
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2683,
+    0.1616,
+    0.2533
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      -0.076,
+      0.0196,
+      0.043
+     ],
+     "euler": [
+      7.245,
+      102.134,
+      67.37
+     ],
+     "quat_xyzw": [
+      0.46361,
+      0.62396,
+      0.30694,
+      0.54912
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.5428,
+      0.5984,
+      -0.2109
+     ]
+    },
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      0.0651,
+      0.0083,
+      -0.0383
+     ],
+     "euler": [
+      167.224,
+      15.993,
+      -75.78
+     ],
+     "quat_xyzw": [
+      0.76716,
+      0.61661,
+      -0.17677,
+      0.00204
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.4017,
+      0.5871,
+      -0.2922
+     ]
+    }
+   ]
+  },
+  {
+   "index": 50,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "GemstoneRed",
+   "compartment": 2,
+   "position": [
+    0.0159,
+    0.3619,
+    0.3116
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1102,
+    0.1191,
+    0.0747
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneRed",
+     "offset": [
+      -0.0,
+      0.0071,
+      -0.0
+     ],
+     "euler": [
+      61.85,
+      -112.134,
+      39.131
+     ],
+     "quat_xyzw": [
+      0.03196,
+      -0.76672,
+      0.56213,
+      0.30842
+     ],
+     "scale": 0.42,
+     "fit_longest_m": 0.0891,
+     "world_position": [
+      0.0159,
+      0.369,
+      0.3115
+     ]
+    }
+   ]
+  },
+  {
+   "index": 51,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "GemstoneBlue",
+   "compartment": 0,
+   "position": [
+    0.4949,
+    0.3953,
+    0.3001
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1207,
+    0.0562,
+    0.1212
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0,
+      0.0086,
+      -0.0
+     ],
+     "euler": [
+      -2.566,
+      -127.865,
+      -18.215
+     ],
+     "quat_xyzw": [
+      0.13243,
+      -0.88829,
+      -0.0894,
+      0.4306
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4949,
+      0.4039,
+      0.3001
+     ]
+    }
+   ]
+  },
+  {
+   "index": 52,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "AncientGemstonePurple",
+   "compartment": 7,
+   "position": [
+    -0.4657,
+    0.493,
+    0.0018
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1493,
+    0.1442,
+    0.1606
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstonePurple",
+     "offset": [
+      0.0,
+      0.0118,
+      -0.0
+     ],
+     "euler": [
+      70.694,
+      3.591,
+      45.43
+     ],
+     "quat_xyzw": [
+      0.54326,
+      -0.19971,
+      0.29809,
+      0.75903
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      -0.4657,
+      0.5049,
+      0.0018
+     ]
+    }
+   ]
+  },
+  {
+   "index": 53,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "AncientGemstoneBlack",
+   "compartment": 4,
+   "position": [
+    0.4718,
+    0.4881,
+    -0.007
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1672,
+    0.1577,
+    0.1415
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneBlack",
+     "offset": [
+      -0.0,
+      0.0159,
+      -0.0
+     ],
+     "euler": [
+      61.402,
+      113.025,
+      -56.26
+     ],
+     "quat_xyzw": [
+      -0.08967,
+      0.76522,
+      -0.59919,
+      0.21763
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      0.4718,
+      0.5039,
+      -0.007
+     ]
+    }
+   ]
+  },
+  {
+   "index": 54,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "AncientGemstoneOrange",
+   "compartment": 6,
+   "position": [
+    -0.1477,
+    0.5032,
+    0.0051
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1393,
+    0.1613,
+    0.1673
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneOrange",
+     "offset": [
+      -0.0,
+      0.0171,
+      -0.0
+     ],
+     "euler": [
+      15.637,
+      74.385,
+      28.329
+     ],
+     "quat_xyzw": [
+      0.25162,
+      0.55415,
+      0.11339,
+      0.78533
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      -0.1477,
+      0.5203,
+      0.0051
+     ]
+    }
+   ]
+  },
+  {
+   "index": 55,
+   "step": 6,
+   "kind": "heap_step",
+   "item": "AncientGemstoneGreen",
+   "compartment": 5,
+   "position": [
+    0.1354,
+    0.4764,
+    -0.0178
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1372,
+    0.1781,
+    0.1214
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientGemstoneGreen",
+     "offset": [
+      0.0,
+      0.0092,
+      -0.0039
+     ],
+     "euler": [
+      161.11,
+      -17.141,
+      26.922
+     ],
+     "quat_xyzw": [
+      0.94294,
+      -0.25085,
+      0.18074,
+      0.12359
+     ],
+     "scale": 0.32,
+     "fit_longest_m": 0.1536,
+     "world_position": [
+      0.1354,
+      0.4856,
+      -0.0217
+     ]
+    }
+   ]
+  },
+  {
+   "index": 56,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "CrownJewel",
+   "compartment": 3,
+   "position": [
+    -0.2428,
+    0.3622,
+    0.3325
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.156,
+    0.1681,
+    0.1371
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "CrownJewel",
+     "offset": [
+      -0.0289,
+      0.0431,
+      -0.027
+     ],
+     "euler": [
+      165.212,
+      -17.564,
+      -35.052
+     ],
+     "quat_xyzw": [
+      0.94048,
+      0.2764,
+      0.10607,
+      0.16688
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.2717,
+      0.4053,
+      0.3054
+     ]
+    },
+    {
+     "item": "CrownJewel",
+     "offset": [
+      0.0345,
+      -0.0097,
+      0.0281
+     ],
+     "euler": [
+      53.384,
+      -2.087,
+      -51.994
+     ],
+     "quat_xyzw": [
+      0.41081,
+      0.18223,
+      -0.38419,
+      0.80649
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1161,
+     "world_position": [
+      -0.2083,
+      0.3525,
+      0.3605
+     ]
+    }
+   ]
+  },
+  {
+   "index": 57,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "AncientCoin",
+   "compartment": 8,
+   "position": [
+    0.4616,
+    0.6016,
+    -0.2461
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2577,
+    0.2031,
+    0.2492
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "AncientCoin",
+     "offset": [
+      -0.0584,
+      -0.0312,
+      0.0468
+     ],
+     "euler": [
+      -27.865,
+      163.888,
+      -23.042
+     ],
+     "quat_xyzw": [
+      -0.225,
+      0.9349,
+      0.20644,
+      0.18089
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.4032,
+      0.5704,
+      -0.1993
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      0.0612,
+      0.0631,
+      -0.0502
+     ],
+     "euler": [
+      4.798,
+      66.417,
+      -22.039
+     ],
+     "quat_xyzw": [
+      -0.07022,
+      0.54381,
+      -0.18229,
+      0.81615
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.5229,
+      0.6647,
+      -0.2963
+     ]
+    },
+    {
+     "item": "AncientCoin",
+     "offset": [
+      0.0467,
+      0.0473,
+      -0.0177
+     ],
+     "euler": [
+      -10.358,
+      28.6,
+      159.881
+     ],
+     "quat_xyzw": [
+      0.22693,
+      0.12909,
+      0.95412,
+      0.14662
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.1483,
+     "world_position": [
+      0.5083,
+      0.6489,
+      -0.2638
+     ]
+    }
+   ]
+  },
+  {
+   "index": 58,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Red",
+   "compartment": 11,
+   "position": [
+    -0.4878,
+    0.6542,
+    -0.276
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1618,
+    0.1401,
+    0.1264
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Red",
+     "offset": [
+      0.0012,
+      0.0215,
+      -0.0001
+     ],
+     "euler": [
+      -35.139,
+      -88.528,
+      -91.74
+     ],
+     "quat_xyzw": [
+      0.32708,
+      -0.61848,
+      -0.63673,
+      0.32415
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.4866,
+      0.6757,
+      -0.2761
+     ]
+    }
+   ]
+  },
+  {
+   "index": 59,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "GemstoneRed",
+   "compartment": 2,
+   "position": [
+    0.0025,
+    0.4003,
+    0.2279
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1123,
+    0.1246,
+    0.0728
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneRed",
+     "offset": [
+      -0.0,
+      0.0079,
+      0.0
+     ],
+     "euler": [
+      155.572,
+      50.354,
+      63.19
+     ],
+     "quat_xyzw": [
+      0.80056,
+      -0.38675,
+      -0.25384,
+      0.38092
+     ],
+     "scale": 0.42,
+     "fit_longest_m": 0.0891,
+     "world_position": [
+      0.0025,
+      0.4082,
+      0.2279
+     ]
+    }
+   ]
+  },
+  {
+   "index": 60,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "Pot_Shard_Green",
+   "compartment": 10,
+   "position": [
+    -0.2084,
+    0.5881,
+    -0.3313
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1331,
+    0.1719,
+    0.1394
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "Pot_Shard_Green",
+     "offset": [
+      0.0126,
+      0.0127,
+      -0.0163
+     ],
+     "euler": [
+      9.73,
+      81.911,
+      130.385
+     ],
+     "quat_xyzw": [
+      0.61972,
+      0.21589,
+      0.65974,
+      0.36618
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.133,
+     "world_position": [
+      -0.1958,
+      0.6008,
+      -0.3476
+     ]
+    }
+   ]
+  },
+  {
+   "index": 61,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "GemstoneBlue",
+   "compartment": 0,
+   "position": [
+    0.5405,
+    0.4169,
+    0.2962
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.121,
+    0.1412,
+    0.2095
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0084,
+      -0.0016,
+      0.0516
+     ],
+     "euler": [
+      19.859,
+      80.44,
+      -154.828
+     ],
+     "quat_xyzw": [
+      -0.59208,
+      0.2671,
+      -0.75832,
+      0.05522
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.549,
+      0.4153,
+      0.3479
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0,
+      0.0109,
+      -0.0861
+     ],
+     "euler": [
+      57.964,
+      -71.812,
+      94.052
+     ],
+     "quat_xyzw": [
+      -0.10782,
+      -0.63686,
+      0.71212,
+      0.27509
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.5405,
+      0.4278,
+      0.2102
+     ]
+    }
+   ]
+  },
+  {
+   "index": 62,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "SilverNecklace",
+   "compartment": 9,
+   "position": [
+    0.13,
+    0.5724,
+    -0.2976
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.2042,
+    0.1022,
+    0.2061
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      0.001,
+      0.01,
+      -0.0107
+     ],
+     "euler": [
+      24.016,
+      -91.704,
+      8.306
+     ],
+     "quat_xyzw": [
+      0.0937,
+      -0.7105,
+      0.19823,
+      0.66867
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.131,
+      0.5824,
+      -0.3083
+     ]
+    },
+    {
+     "item": "SilverNecklace",
+     "offset": [
+      -0.0349,
+      0.0174,
+      0.0015
+     ],
+     "euler": [
+      3.328,
+      159.092,
+      -22.219
+     ],
+     "quat_xyzw": [
+      -0.18423,
+      0.96558,
+      -0.06296,
+      0.17247
+     ],
+     "scale": 0.3,
+     "fit_longest_m": 0.2126,
+     "world_position": [
+      0.0951,
+      0.5898,
+      -0.2962
+     ]
+    }
+   ]
+  },
+  {
+   "index": 63,
+   "step": 7,
+   "kind": "heap_step",
+   "item": "GemstoneGreen",
+   "compartment": 1,
+   "position": [
+    0.208,
+    0.4115,
+    0.2432
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.0923,
+    0.1032,
+    0.1035
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneGreen",
+     "offset": [
+      -0.0154,
+      0.0216,
+      -0.0213
+     ],
+     "euler": [
+      49.014,
+      -172.269,
+      -32.805
+     ],
+     "quat_xyzw": [
+      0.28319,
+      -0.863,
+      0.37969,
+      0.17571
+     ],
+     "scale": 0.4,
+     "fit_longest_m": 0.0909,
+     "world_position": [
+      0.1926,
+      0.4331,
+      0.2219
+     ]
+    }
+   ]
+  },
+  {
+   "index": 64,
+   "step": 0,
+   "kind": "heap_step",
+   "compartment": 12,
+   "position": [
+    -0.5174,
+    0.3104,
+    0.341
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1672,
+    0.1197,
+    0.1199
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0649,
+      0.0072,
+      -0.0
+     ],
+     "euler": [
+      109.559,
+      -60.71,
+      25.247
+     ],
+     "quat_xyzw": [
+      0.62421,
+      -0.43847,
+      0.51163,
+      0.3954
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4137,
+      0.3176,
+      0.341
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0293,
+      -0.0314,
+      0.0002
+     ],
+     "euler": [
+      -180.0,
+      76.543,
+      -0.0
+     ],
+     "quat_xyzw": [
+      -0.78509,
+      -0.0,
+      0.61939,
+      0.0
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.5079,
+      0.2791,
+      0.3413
+     ]
+    }
+   ],
+   "example_item": "GemstoneBlue",
+   "spare_from": 0
+  },
+  {
+   "index": 65,
+   "step": 1,
+   "kind": "heap_step",
+   "compartment": 12,
+   "position": [
+    -0.5106,
+    0.2993,
+    0.229
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1071,
+    0.1136,
+    0.0751
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0,
+      0.0112,
+      -0.0
+     ],
+     "euler": [
+      -12.873,
+      -100.811,
+      -49.401
+     ],
+     "quat_xyzw": [
+      0.25506,
+      -0.72551,
+      -0.34314,
+      0.53929
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4854,
+      0.3105,
+      0.229
+     ]
+    }
+   ],
+   "example_item": "GemstoneBlue",
+   "spare_from": 0
+  },
+  {
+   "index": 66,
+   "step": 2,
+   "kind": "heap_step",
+   "compartment": 12,
+   "position": [
+    -0.498,
+    0.3052,
+    0.3093
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.206,
+    0.1254,
+    0.1735
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0505,
+      0.0116,
+      -0.0441
+     ],
+     "euler": [
+      18.225,
+      36.988,
+      -124.512
+     ],
+     "quat_xyzw": [
+      -0.20727,
+      0.27873,
+      -0.85212,
+      0.39145
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4475,
+      0.3168,
+      0.2652
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.053,
+      0.0052,
+      0.025
+     ],
+     "euler": [
+      -35.597,
+      -42.567,
+      -18.59
+     ],
+     "quat_xyzw": [
+      -0.22526,
+      -0.38707,
+      -0.25279,
+      0.85763
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.551,
+      0.3104,
+      0.3343
+     ]
+    }
+   ],
+   "example_item": "GemstoneBlue",
+   "spare_from": 0
+  },
+  {
+   "index": 67,
+   "step": 3,
+   "kind": "heap_step",
+   "compartment": 12,
+   "position": [
+    -0.4924,
+    0.3143,
+    0.3149
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1948,
+    0.1469,
+    0.1692
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0737,
+      0.0052,
+      -0.0271
+     ],
+     "euler": [
+      -121.848,
+      51.501,
+      51.164
+     ],
+     "quat_xyzw": [
+      -0.61884,
+      0.53034,
+      0.53149,
+      0.23084
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.5774,
+      0.3194,
+      0.2877
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0569,
+      0.0278,
+      0.0306
+     ],
+     "euler": [
+      14.474,
+      177.77,
+      48.076
+     ],
+     "quat_xyzw": [
+      0.40626,
+      0.90483,
+      -0.10717,
+      0.06893
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4467,
+      0.342,
+      0.3455
+     ]
+    }
+   ],
+   "example_item": "GemstoneBlue",
+   "spare_from": 0
+  },
+  {
+   "index": 68,
+   "step": 4,
+   "kind": "heap_step",
+   "compartment": 12,
+   "position": [
+    -0.5067,
+    0.3652,
+    0.2892
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1886,
+    0.0727,
+    0.1955
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0369,
+      0.0067,
+      0.0431
+     ],
+     "euler": [
+      9.883,
+      -5.215,
+      -162.051
+     ],
+     "quat_xyzw": [
+      0.05819,
+      0.07792,
+      -0.98246,
+      0.15912
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.5262,
+      0.3719,
+      0.3323
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      -0.0407,
+      0.0194,
+      -0.0396
+     ],
+     "euler": [
+      5.51,
+      -72.63,
+      -7.833
+     ],
+     "quat_xyzw": [
+      0.07904,
+      -0.58751,
+      -0.02657,
+      0.80491
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4486,
+      0.3846,
+      0.2496
+     ]
+    }
+   ],
+   "example_item": "GemstoneBlue",
+   "spare_from": 0
+  },
+  {
+   "index": 69,
+   "step": 6,
+   "kind": "heap_step",
+   "compartment": 12,
+   "position": [
+    -0.5011,
+    0.3953,
+    0.3001
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.1207,
+    0.0562,
+    0.1212
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0,
+      0.0086,
+      -0.0
+     ],
+     "euler": [
+      -2.566,
+      -127.865,
+      -18.215
+     ],
+     "quat_xyzw": [
+      0.13243,
+      -0.88829,
+      -0.0894,
+      0.4306
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.4949,
+      0.4039,
+      0.3001
+     ]
+    }
+   ],
+   "example_item": "GemstoneBlue",
+   "spare_from": 0
+  },
+  {
+   "index": 70,
+   "step": 7,
+   "kind": "heap_step",
+   "compartment": 12,
+   "position": [
+    -0.4555,
+    0.4169,
+    0.2962
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "box": [
+    0.121,
+    0.1412,
+    0.2095
+   ],
+   "layer": 0,
+   "copies": [
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0084,
+      -0.0016,
+      0.0516
+     ],
+     "euler": [
+      19.859,
+      80.44,
+      -154.828
+     ],
+     "quat_xyzw": [
+      -0.59208,
+      0.2671,
+      -0.75832,
+      0.05522
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.549,
+      0.4153,
+      0.3479
+     ]
+    },
+    {
+     "item": "GemstoneBlue",
+     "offset": [
+      0.0,
+      0.0109,
+      -0.0861
+     ],
+     "euler": [
+      57.964,
+      -71.812,
+      94.052
+     ],
+     "quat_xyzw": [
+      -0.10782,
+      -0.63686,
+      0.71212,
+      0.27509
+     ],
+     "scale": 0.46,
+     "fit_longest_m": 0.1211,
+     "world_position": [
+      0.5405,
+      0.4278,
+      0.2102
+     ]
+    }
+   ],
+   "example_item": "GemstoneBlue",
+   "spare_from": 0
+  }
+ ],
+ "spare_note_runtime": [
+  "compartment 12: units copied from 0 (shifted ['-0.996', '0.000', '0.000']), no home item, so overflow can land there (review 25 Oct)"
+ ]
+}

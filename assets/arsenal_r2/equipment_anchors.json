@@ -1,0 +1,2792 @@
+{
+  "schema": "storehouse-anchors/1",
+  "furniture": "arsenal_sol61a_r2",
+  "author": "Sol 6.1 / extra high",
+  "units": 32,
+  "slots_designed_for": 64,
+  "stack_per_unit": true,
+  "capacity_note": "64 inventory slots; 32 typed display cells: 8 handheld, 12 long, 6 bows, 5 edge-on reserve shields, 1 featured shield. Excess remains stored unseen.",
+  "space": {
+    "from_blender": "ux=-bx,uy=bz,uz=-by; R_u=C R_b C^T. ItemVisual already adds 180 degree item-space correction; do not add another."
+  },
+  "frame": {
+    "obj": "Frame.obj",
+    "atlas": "atlas.png",
+    "size_blender_xyz_m": [
+      5.819999694824219,
+      1.4959999918937683,
+      0.8200000524520874
+    ]
+  },
+  "units_data": [
+    {
+      "index": 0,
+      "kind": "handheld",
+      "position": [
+        2.539999842643738,
+        0.6657879948616028,
+        0.5299999713897705
+      ],
+      "box_size": [
+        0.46,
+        1.6,
+        0.25
+      ],
+      "clear_box": [
+        0.46,
+        1.6,
+        0.25
+      ],
+      "render_item": "MaceIron",
+      "example_item": "MaceIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070462107658386,
+            -0.009255741722881794,
+            0.009255742654204369,
+            0.7070462107658386
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        2.5399999618530273,
+        0.15000000596046448,
+        0.5299999713897705
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -2.648221015930176,
+          -0.6403801441192627,
+          0.1499999761581421
+        ],
+        "max": [
+          -2.4317786693573,
+          -0.4196197986602783,
+          1.1815760135650635
+        ],
+        "size": [
+          0.21644234657287598,
+          0.22076034545898438,
+          1.0315760374069214
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          2.3099999618530274,
+          0.15,
+          0.4049999713897705
+        ],
+        "max": [
+          2.7699999618530273,
+          1.75,
+          0.6549999713897705
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.25,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 1,
+      "kind": "handheld",
+      "position": [
+        2.1149998903274536,
+        0.58982153236866,
+        0.5299999415874481
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "render_item": "AxeIron",
+      "example_item": "AxeIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.012340699322521687,
+            -0.7069991230964661,
+            0.7069990634918213,
+            0.012340699322521687
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        2.115000009536743,
+        0.15000000596046448,
+        0.5299999713897705
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -2.256535053253174,
+          -0.5613487958908081,
+          0.15000000596046448
+        ],
+        "max": [
+          -1.9734647274017334,
+          -0.49865108728408813,
+          1.0296430587768555
+        ],
+        "size": [
+          0.28307032585144043,
+          0.06269770860671997,
+          0.879643052816391
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          1.9450000095367432,
+          0.15,
+          0.4049999713897705
+        ],
+        "max": [
+          2.285000009536743,
+          1.75,
+          0.6549999713897705
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.25,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 2,
+      "kind": "handheld",
+      "position": [
+        1.75,
+        0.7846536338329315,
+        0.5300000011920929
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "render_item": "SwordIron",
+      "example_item": "SwordIron",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070798277854919,
+            0.006170592270791531,
+            -0.006170592270791531,
+            0.7070798277854919
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.75,
+        0.15000000596046448,
+        0.5299999713897705
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.821984052658081,
+          -0.5570358633995056,
+          0.15000003576278687
+        ],
+        "max": [
+          -1.678015947341919,
+          -0.5029641389846802,
+          1.4193072319030762
+        ],
+        "size": [
+          0.1439681053161621,
+          0.05407172441482544,
+          1.2693071961402893
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          1.58,
+          0.15,
+          0.4049999713897705
+        ],
+        "max": [
+          1.92,
+          1.75,
+          0.6549999713897705
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.25,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 3,
+      "kind": "handheld",
+      "position": [
+        1.384999930858612,
+        0.6174890398979187,
+        0.5299999862909317
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "render_item": "AxeBlackMetal",
+      "example_item": "AxeBlackMetal",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.006170588079839945,
+            0.7070798277854919,
+            -0.7070798277854919,
+            0.006170588079839945
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.3849999904632568,
+        0.15000000596046448,
+        0.5299999713897705
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.5487362146377563,
+          -0.5795825123786926,
+          0.1499999761581421
+        ],
+        "max": [
+          -1.2212636470794678,
+          -0.4804174602031708,
+          1.0849781036376953
+        ],
+        "size": [
+          0.3274725675582886,
+          0.09916505217552185,
+          0.9349781274795532
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          1.214999990463257,
+          0.15,
+          0.4049999713897705
+        ],
+        "max": [
+          1.5549999904632568,
+          1.75,
+          0.6549999713897705
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.25,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 4,
+      "kind": "handheld",
+      "position": [
+        2.5399999618530273,
+        0.6232565343379974,
+        0.2549999952316284
+      ],
+      "box_size": [
+        0.46,
+        1.6,
+        0.25
+      ],
+      "clear_box": [
+        0.46,
+        1.6,
+        0.25
+      ],
+      "render_item": "MaceSilver",
+      "example_item": "MaceSilver",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7069764733314514,
+            0.01357464212924242,
+            -0.01357464212924242,
+            0.7069764733314514
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        2.5399999618530273,
+        0.15000000596046448,
+        0.2549999952316284
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -2.760258913040161,
+          -0.33538976311683655,
+          0.15000003576278687
+        ],
+        "max": [
+          -2.3197410106658936,
+          -0.1746102273464203,
+          1.096513032913208
+        ],
+        "size": [
+          0.4405179023742676,
+          0.16077953577041626,
+          0.9465129971504211
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          2.3099999618530274,
+          0.15,
+          0.12999999523162842
+        ],
+        "max": [
+          2.7699999618530273,
+          1.75,
+          0.3799999952316284
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.25,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 5,
+      "kind": "handheld",
+      "position": [
+        2.115000009536743,
+        0.4725405126810074,
+        0.2549999952316284
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "render_item": "KnifeSilver",
+      "example_item": "KnifeSilver",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7069990634918213,
+            -0.012340715155005455,
+            0.012340715155005455,
+            0.7069991230964661
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        2.115000009536743,
+        0.15000000596046448,
+        0.2549999952316284
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -2.210702657699585,
+          -0.27522823214530945,
+          0.15000000596046448
+        ],
+        "max": [
+          -2.0192973613739014,
+          -0.2347717583179474,
+          0.7950810194015503
+        ],
+        "size": [
+          0.1914052963256836,
+          0.04045647382736206,
+          0.6450810134410858
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          1.9450000095367432,
+          0.15,
+          0.12999999523162842
+        ],
+        "max": [
+          2.285000009536743,
+          1.75,
+          0.3799999952316284
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.25,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 6,
+      "kind": "handheld",
+      "position": [
+        1.75,
+        0.7970089316368103,
+        0.2549999952316284
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "render_item": "SwordSilver",
+      "example_item": "SwordSilver",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.004936505109071732,
+            -0.7070895433425903,
+            0.7070895433425903,
+            0.004936505109071732
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.75,
+        0.15000000596046448,
+        0.2549999952316284
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.8518520593643188,
+          -0.2820373475551605,
+          0.1499999761581421
+        ],
+        "max": [
+          -1.6481479406356812,
+          -0.2279626429080963,
+          1.4440178871154785
+        ],
+        "size": [
+          0.2037041187286377,
+          0.05407470464706421,
+          1.2940179109573364
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          1.58,
+          0.15,
+          0.12999999523162842
+        ],
+        "max": [
+          1.92,
+          1.75,
+          0.3799999952316284
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.25,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 7,
+      "kind": "handheld",
+      "position": [
+        1.3849999904632568,
+        0.7938835024833679,
+        0.255000002682209
+      ],
+      "box_size": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "clear_box": [
+        0.34,
+        1.6,
+        0.25
+      ],
+      "render_item": "SwordBlackmetal",
+      "example_item": "SwordBlackmetal",
+      "accepted_item_types": [
+        "OneHandedWeapon"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070540189743042,
+            0.008638723753392696,
+            -0.008638724684715271,
+            0.7070539593696594
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.3849999904632568,
+        0.15000000596046448,
+        0.2549999952316284
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.4822789430618286,
+          -0.2868077754974365,
+          0.1499999761581421
+        ],
+        "max": [
+          -1.287721037864685,
+          -0.2231922298669815,
+          1.4377670288085938
+        ],
+        "size": [
+          0.19455790519714355,
+          0.06361554563045502,
+          1.2877670526504517
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          1.214999990463257,
+          0.15,
+          0.12999999523162842
+        ],
+        "max": [
+          1.5549999904632568,
+          1.75,
+          0.3799999952316284
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.34,
+        "depth": 0.25,
+        "height": 1.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 8,
+      "kind": "bow",
+      "position": [
+        2.5850000381469727,
+        1.005641132593155,
+        -0.2874999865889549
+      ],
+      "box_size": [
+        0.37,
+        2.6,
+        0.735
+      ],
+      "clear_box": [
+        0.37,
+        2.6,
+        0.735
+      ],
+      "render_item": "BowAshlands",
+      "example_item": "BowAshlands",
+      "accepted_item_types": [
+        "Bow"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.512917160987854,
+            -0.4867401421070099,
+            0.4867401719093323,
+            0.5129171013832092
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        2.5850000381469727,
+        0.15000000596046448,
+        -0.2874999940395355
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -2.614874839782715,
+          0.1215391606092453,
+          0.15000003576278687
+        ],
+        "max": [
+          -2.5551252365112305,
+          0.45346081256866455,
+          1.861282229423523
+        ],
+        "size": [
+          0.059749603271484375,
+          0.33192165195941925,
+          1.711282193660736
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          2.4000000381469726,
+          0.15,
+          -0.6549999940395355
+        ],
+        "max": [
+          2.7700000381469727,
+          2.75,
+          0.08000000596046447
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.37,
+        "depth": 0.735,
+        "height": 2.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 9,
+      "kind": "bow",
+      "position": [
+        2.1900001764297485,
+        1.0455285012722015,
+        -0.2875000089406967
+      ],
+      "box_size": [
+        0.37,
+        2.6,
+        0.735
+      ],
+      "clear_box": [
+        0.37,
+        2.6,
+        0.735
+      ],
+      "render_item": "BowDraugrFang",
+      "example_item": "BowDraugrFang",
+      "accepted_item_types": [
+        "Bow"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.4911976754665375,
+            -0.508650004863739,
+            0.5086500644683838,
+            0.4911976456642151
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        2.190000057220459,
+        0.15000000596046448,
+        -0.2874999940395355
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -2.2443222999572754,
+          -0.0021299421787261963,
+          0.15000003576278687
+        ],
+        "max": [
+          -2.1356780529022217,
+          0.5771299600601196,
+          1.9410569667816162
+        ],
+        "size": [
+          0.10864424705505371,
+          0.5792599022388458,
+          1.7910569310188293
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          2.005000057220459,
+          0.15,
+          -0.6549999940395355
+        ],
+        "max": [
+          2.375000057220459,
+          2.75,
+          0.08000000596046447
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.37,
+        "depth": 0.735,
+        "height": 2.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 10,
+      "kind": "bow",
+      "position": [
+        1.7949999570846558,
+        1.2562370300292969,
+        -0.2874999865889549
+      ],
+      "box_size": [
+        0.37,
+        2.6,
+        0.735
+      ],
+      "clear_box": [
+        0.37,
+        2.6,
+        0.735
+      ],
+      "render_item": "BowHuntsman",
+      "example_item": "BowHuntsman",
+      "accepted_item_types": [
+        "Bow"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.7949999570846558,
+        0.15000000596046448,
+        -0.2874999940395355
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.9132094383239746,
+          -0.0031420141458511353,
+          0.15000009536743164
+        ],
+        "max": [
+          -1.676790475845337,
+          0.578141987323761,
+          2.362473964691162
+        ],
+        "size": [
+          0.2364189624786377,
+          0.5812840014696121,
+          2.2124738693237305
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          1.6099999570846557,
+          0.15,
+          -0.6549999940395355
+        ],
+        "max": [
+          1.9799999570846558,
+          2.75,
+          0.08000000596046447
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.37,
+        "depth": 0.735,
+        "height": 2.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 11,
+      "kind": "bow",
+      "position": [
+        1.399999976158142,
+        0.9711165130138397,
+        -0.2875000014901161
+      ],
+      "box_size": [
+        0.37,
+        2.6,
+        0.735
+      ],
+      "clear_box": [
+        0.37,
+        2.6,
+        0.735
+      ],
+      "render_item": "BowSpineSnap",
+      "example_item": "BowSpineSnap",
+      "accepted_item_types": [
+        "Bow"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5086500644683838,
+            -0.4911976456642151,
+            0.4911976754665375,
+            0.508650004863739
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.399999976158142,
+        0.15000000596046448,
+        -0.2874999940395355
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.5010573863983154,
+          0.008963361382484436,
+          0.15000003576278687
+        ],
+        "max": [
+          -1.2989425659179688,
+          0.5660366415977478,
+          1.7922329902648926
+        ],
+        "size": [
+          0.20211482048034668,
+          0.5570732802152634,
+          1.6422329545021057
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          1.214999976158142,
+          0.15,
+          -0.6549999940395355
+        ],
+        "max": [
+          1.5849999761581421,
+          2.75,
+          0.08000000596046447
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.37,
+        "depth": 0.735,
+        "height": 2.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 12,
+      "kind": "bow",
+      "position": [
+        1.0400000214576721,
+        0.999998539686203,
+        -0.0
+      ],
+      "box_size": [
+        0.3,
+        2.6,
+        1.31
+      ],
+      "clear_box": [
+        0.3,
+        2.6,
+        1.31
+      ],
+      "render_item": "CrossbowArbalest",
+      "example_item": "CrossbowArbalest",
+      "accepted_item_types": [
+        "Bow"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        1.0399999618530273,
+        0.15000000596046448,
+        0.0
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -1.1556835174560547,
+          -0.6359819769859314,
+          0.15000003576278687
+        ],
+        "max": [
+          -0.9243165254592896,
+          0.6359819769859314,
+          1.8499970436096191
+        ],
+        "size": [
+          0.23136699199676514,
+          1.2719639539718628,
+          1.6999970078468323
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          0.8899999618530273,
+          0.15,
+          -0.655
+        ],
+        "max": [
+          1.1899999618530273,
+          2.75,
+          0.655
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.3,
+        "depth": 1.31,
+        "height": 2.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 13,
+      "kind": "bow",
+      "position": [
+        0.7149999439716339,
+        0.9372929930686951,
+        -0.0
+      ],
+      "box_size": [
+        0.3,
+        2.6,
+        1.31
+      ],
+      "clear_box": [
+        0.3,
+        2.6,
+        1.31
+      ],
+      "render_item": "BowFineWood",
+      "example_item": "BowFineWood",
+      "accepted_item_types": [
+        "Bow"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.7149999737739563,
+        0.15000000596046448,
+        0.0
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.7583244442939758,
+          -0.17286649346351624,
+          0.1499999761581421
+        ],
+        "max": [
+          -0.671675443649292,
+          0.17286649346351624,
+          1.724586009979248
+        ],
+        "size": [
+          0.08664900064468384,
+          0.34573298692703247,
+          1.574586033821106
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          0.5649999737739563,
+          0.15,
+          -0.655
+        ],
+        "max": [
+          0.8649999737739563,
+          2.75,
+          0.655
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.3,
+        "depth": 1.31,
+        "height": 2.6,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 14,
+      "kind": "long",
+      "position": [
+        0.024999991059303284,
+        1.0357246696949005,
+        0.5049999803304672
+      ],
+      "box_size": [
+        0.8,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.8,
+        3.0,
+        0.3
+      ],
+      "render_item": "BattleaxeCrystal",
+      "example_item": "BattleaxeCrystal",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070798277854919,
+            -0.006170592270791531,
+            0.006170592270791531,
+            0.7070798277854919
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.02500000037252903,
+        0.15000000596046448,
+        0.5049999952316284
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.40507808327674866,
+          -0.5929415822029114,
+          0.15000003576278687
+        ],
+        "max": [
+          0.3550781011581421,
+          -0.41705837845802307,
+          1.9214493036270142
+        ],
+        "size": [
+          0.7601561844348907,
+          0.1758832037448883,
+          1.7714492678642273
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.374999999627471,
+          0.15,
+          0.3549999952316284
+        ],
+        "max": [
+          0.42500000037252905,
+          3.15,
+          0.6549999952316284
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.8,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 15,
+      "kind": "long",
+      "position": [
+        -0.6299999952316284,
+        1.1636154055595398,
+        0.5049999952316284
+      ],
+      "box_size": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "render_item": "StaffFireball",
+      "example_item": "StaffFireball",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070462107658386,
+            0.009255741722881794,
+            -0.009255742654204369,
+            0.7070462107658386
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -0.6299999952316284,
+        0.15000000596046448,
+        0.5049999952316284
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.47831183671951294,
+          -0.6146436929702759,
+          0.1499999761581421
+        ],
+        "max": [
+          0.7816881537437439,
+          -0.39535629749298096,
+          2.1772308349609375
+        ],
+        "size": [
+          0.30337631702423096,
+          0.21928739547729492,
+          2.0272308588027954
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.8599999952316284,
+          0.15,
+          0.3549999952316284
+        ],
+        "max": [
+          -0.39999999523162844,
+          3.15,
+          0.6549999952316284
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 16,
+      "kind": "long",
+      "position": [
+        -1.115000069141388,
+        1.3633100390434265,
+        0.5050000101327896
+      ],
+      "box_size": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "render_item": "SpearBronze",
+      "example_item": "SpearBronze",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.707019567489624,
+            -0.011106752790510654,
+            0.011106752790510654,
+            0.7070196270942688
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.1150000095367432,
+        0.15000000596046448,
+        0.5049999952316284
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          1.0357874631881714,
+          -0.5643945932388306,
+          0.1499999761581421
+        ],
+        "max": [
+          1.1942126750946045,
+          -0.44560542702674866,
+          2.576620101928711
+        ],
+        "size": [
+          0.1584252119064331,
+          0.11878916621208191,
+          2.426620125770569
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -1.3450000095367431,
+          0.15,
+          0.3549999952316284
+        ],
+        "max": [
+          -0.8850000095367432,
+          3.15,
+          0.6549999952316284
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 17,
+      "kind": "long",
+      "position": [
+        0.024999991059303284,
+        0.8300030827522278,
+        0.18000000715255737
+      ],
+      "box_size": [
+        0.8,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.8,
+        3.0,
+        0.3
+      ],
+      "render_item": "SledgeIron",
+      "example_item": "SledgeIron",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070798277854919,
+            0.006170592270791531,
+            -0.006170592270791531,
+            0.7070798277854919
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.02500000037252903,
+        0.15000000596046448,
+        0.18000000715255737
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.3024841248989105,
+          -0.2778441905975342,
+          0.1499999761581421
+        ],
+        "max": [
+          0.25248414278030396,
+          -0.08215582370758057,
+          1.5100061893463135
+        ],
+        "size": [
+          0.5549682676792145,
+          0.1956883668899536,
+          1.3600062131881714
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.374999999627471,
+          0.15,
+          0.03000000715255738
+        ],
+        "max": [
+          0.42500000037252905,
+          3.15,
+          0.3300000071525574
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.8,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 18,
+      "kind": "long",
+      "position": [
+        -0.629999965429306,
+        1.1053659319877625,
+        0.18000001460313797
+      ],
+      "box_size": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "render_item": "THSwordKrom",
+      "example_item": "THSwordKrom",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7069990634918213,
+            -0.012340715155005455,
+            0.012340715155005455,
+            0.7069991230964661
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -0.6299999952316284,
+        0.15000000596046448,
+        0.18000000715255737
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.507623553276062,
+          -0.2073630541563034,
+          0.1499999761581421
+        ],
+        "max": [
+          0.75237637758255,
+          -0.15263697504997253,
+          2.060731887817383
+        ],
+        "size": [
+          0.24475282430648804,
+          0.05472607910633087,
+          1.9107319116592407
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.8599999952316284,
+          0.15,
+          0.03000000715255738
+        ],
+        "max": [
+          -0.39999999523162844,
+          3.15,
+          0.3300000071525574
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 19,
+      "kind": "long",
+      "position": [
+        -1.1150000095367432,
+        1.3294629454612732,
+        0.18000001087784767
+      ],
+      "box_size": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "render_item": "SpearFlint",
+      "example_item": "SpearFlint",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7069990634918213,
+            0.012340715155005455,
+            -0.012340715155005455,
+            0.7069991230964661
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.1150000095367432,
+        0.15000000596046448,
+        0.18000000715255737
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          1.0639541149139404,
+          -0.24644744396209717,
+          0.1499999761581421
+        ],
+        "max": [
+          1.166045904159546,
+          -0.11355257779359818,
+          2.5089259147644043
+        ],
+        "size": [
+          0.10209178924560547,
+          0.132894866168499,
+          2.358925938606262
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -1.3450000095367431,
+          0.15,
+          0.03000000715255738
+        ],
+        "max": [
+          -0.8850000095367432,
+          3.15,
+          0.3300000071525574
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 20,
+      "kind": "long",
+      "position": [
+        0.025000005960464478,
+        1.0001576244831085,
+        -0.14499999582767487
+      ],
+      "box_size": [
+        0.8,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.8,
+        3.0,
+        0.3
+      ],
+      "render_item": "Battleaxe",
+      "example_item": "Battleaxe",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070540189743042,
+            -0.008638723753392696,
+            0.008638724684715271,
+            0.7070539593696594
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.02500000037252903,
+        0.15000000596046448,
+        -0.14499999582767487
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.22688043117523193,
+          0.07191991806030273,
+          0.15000003576278687
+        ],
+        "max": [
+          0.17688041925430298,
+          0.218080073595047,
+          1.8503152132034302
+        ],
+        "size": [
+          0.4037608504295349,
+          0.14616015553474426,
+          1.7003151774406433
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.374999999627471,
+          0.15,
+          -0.2949999958276749
+        ],
+        "max": [
+          0.42500000037252905,
+          3.15,
+          0.005000004172325129
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.8,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 21,
+      "kind": "long",
+      "position": [
+        -0.6299999952316284,
+        1.16435307264328,
+        -0.14499999582767487
+      ],
+      "box_size": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "render_item": "StaffIceShards",
+      "example_item": "StaffIceShards",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070540189743042,
+            0.008638723753392696,
+            -0.008638724684715271,
+            0.7070539593696594
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -0.6299999952316284,
+        0.15000000596046448,
+        -0.14499999582767487
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.5533129572868347,
+          0.06689198315143585,
+          0.1499999761581421
+        ],
+        "max": [
+          0.7066870331764221,
+          0.22310800850391388,
+          2.178706169128418
+        ],
+        "size": [
+          0.1533740758895874,
+          0.15621602535247803,
+          2.028706192970276
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.8599999952316284,
+          0.15,
+          -0.2949999958276749
+        ],
+        "max": [
+          -0.39999999523162844,
+          3.15,
+          0.005000004172325129
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 22,
+      "kind": "long",
+      "position": [
+        -1.1150000095367432,
+        1.5944136381149292,
+        -0.14499999955296516
+      ],
+      "box_size": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "clear_box": [
+        0.46,
+        3.0,
+        0.3
+      ],
+      "render_item": "AtgeirBlackmetal",
+      "example_item": "AtgeirBlackmetal",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7070798277854919,
+            -0.006170592270791531,
+            0.006170592270791531,
+            0.7070798277854919
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.1150000095367432,
+        0.15000000596046448,
+        -0.14499999582767487
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.9720124006271362,
+          0.11028296500444412,
+          0.14999985694885254
+        ],
+        "max": [
+          1.25798761844635,
+          0.1797170341014862,
+          3.038827419281006
+        ],
+        "size": [
+          0.28597521781921387,
+          0.06943406909704208,
+          2.8888275623321533
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -1.3450000095367431,
+          0.15,
+          -0.2949999958276749
+        ],
+        "max": [
+          -0.8850000095367432,
+          3.15,
+          0.005000004172325129
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.3,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 23,
+      "kind": "long",
+      "position": [
+        0.025000005960464478,
+        1.223600596189499,
+        -0.48750001192092896
+      ],
+      "box_size": [
+        0.8,
+        3.0,
+        0.335
+      ],
+      "clear_box": [
+        0.8,
+        3.0,
+        0.335
+      ],
+      "render_item": "StaffClusterbomb",
+      "example_item": "StaffClusterbomb",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        0.02500000037252903,
+        0.15000000596046448,
+        -0.48750001192092896
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          -0.23484700918197632,
+          0.3600410223007202,
+          0.15000003576278687
+        ],
+        "max": [
+          0.18484699726104736,
+          0.6149590015411377,
+          2.297201156616211
+        ],
+        "size": [
+          0.4196940064430237,
+          0.2549179792404175,
+          2.147201120853424
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.374999999627471,
+          0.15,
+          -0.6550000119209289
+        ],
+        "max": [
+          0.42500000037252905,
+          3.15,
+          -0.320000011920929
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.8,
+        "depth": 0.335,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 24,
+      "kind": "long",
+      "position": [
+        -0.6299999803304672,
+        0.7937645614147186,
+        -0.48749999701976776
+      ],
+      "box_size": [
+        0.46,
+        3.0,
+        0.335
+      ],
+      "clear_box": [
+        0.46,
+        3.0,
+        0.335
+      ],
+      "render_item": "StaffLightning",
+      "example_item": "StaffLightning",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -0.6299999952316284,
+        0.15000000596046448,
+        -0.48750001192092896
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.46456196904182434,
+          0.3349755108356476,
+          0.15000003576278687
+        ],
+        "max": [
+          0.7954379916191101,
+          0.6400244832038879,
+          1.4375290870666504
+        ],
+        "size": [
+          0.33087602257728577,
+          0.30504897236824036,
+          1.2875290513038635
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -0.8599999952316284,
+          0.15,
+          -0.6550000119209289
+        ],
+        "max": [
+          -0.39999999523162844,
+          3.15,
+          -0.320000011920929
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.335,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 25,
+      "kind": "long",
+      "position": [
+        -1.1150000095367432,
+        1.2000002264976501,
+        -0.48750002682209015
+      ],
+      "box_size": [
+        0.46,
+        3.0,
+        0.335
+      ],
+      "clear_box": [
+        0.46,
+        3.0,
+        0.335
+      ],
+      "render_item": "VAStaff_Druid_Poison",
+      "example_item": "VAStaff_Druid_Poison",
+      "accepted_item_types": [
+        "OneHandedWeapon",
+        "TwoHandedWeapon",
+        "TwoHandedWeaponLeft"
+      ],
+      "allocation_group": "weapons",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.1150000095367432,
+        0.15000000596046448,
+        -0.48750001192092896
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          0.9950000047683716,
+          0.36749985814094543,
+          0.1499999761581421
+        ],
+        "max": [
+          1.2350000143051147,
+          0.6075001955032349,
+          2.250000476837158
+        ],
+        "size": [
+          0.24000000953674316,
+          0.24000033736228943,
+          2.100000500679016
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -1.3450000095367431,
+          0.15,
+          -0.6550000119209289
+        ],
+        "max": [
+          -0.8850000095367432,
+          3.15,
+          -0.320000011920929
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.46,
+        "depth": 0.335,
+        "height": 3.0,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 26,
+      "kind": "shield reserve",
+      "position": [
+        -1.6035000085830688,
+        0.6270980387926102,
+        -0.1574999988079071
+      ],
+      "box_size": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "clear_box": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "render_item": "ShieldBanded",
+      "example_item": "ShieldBanded",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.6035000085830688,
+        0.15000000596046448,
+        -0.1574999988079071
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          1.5296595096588135,
+          -0.3152350187301636,
+          0.15000000596046448
+        ],
+        "max": [
+          1.6773405075073242,
+          0.6302350163459778,
+          1.1041960716247559
+        ],
+        "size": [
+          0.14768099784851074,
+          0.9454700350761414,
+          0.9541960656642914
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -1.722000008583069,
+          0.15,
+          -0.6549999988079072
+        ],
+        "max": [
+          -1.4850000085830688,
+          1.65,
+          0.3400000011920929
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.237,
+        "depth": 0.995,
+        "height": 1.5,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 27,
+      "kind": "shield reserve",
+      "position": [
+        -1.8654999732971191,
+        0.45600052177906036,
+        -0.1574999988079071
+      ],
+      "box_size": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "clear_box": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "render_item": "ShieldIronBuckler",
+      "example_item": "ShieldIronBuckler",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -1.8654999732971191,
+        0.15000000596046448,
+        -0.1574999988079071
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          1.7771284580230713,
+          -0.148420512676239,
+          0.15000000596046448
+        ],
+        "max": [
+          1.953871488571167,
+          0.4634205102920532,
+          0.7620010375976562
+        ],
+        "size": [
+          0.1767430305480957,
+          0.6118410229682922,
+          0.6120010316371918
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -1.9839999732971192,
+          0.15,
+          -0.6549999988079072
+        ],
+        "max": [
+          -1.746999973297119,
+          1.65,
+          0.3400000011920929
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.237,
+        "depth": 0.995,
+        "height": 1.5,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 28,
+      "kind": "shield reserve",
+      "position": [
+        -2.1275001764297485,
+        0.6270980387926102,
+        -0.1574999988079071
+      ],
+      "box_size": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "clear_box": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "render_item": "ShieldBanded",
+      "example_item": "ShieldBanded",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -2.127500057220459,
+        0.15000000596046448,
+        -0.1574999988079071
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          2.053659677505493,
+          -0.3152350187301636,
+          0.15000000596046448
+        ],
+        "max": [
+          2.201340675354004,
+          0.6302350163459778,
+          1.1041960716247559
+        ],
+        "size": [
+          0.14768099784851074,
+          0.9454700350761414,
+          0.9541960656642914
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -2.246000057220459,
+          0.15,
+          -0.6549999988079072
+        ],
+        "max": [
+          -2.009000057220459,
+          1.65,
+          0.3400000011920929
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.237,
+        "depth": 0.995,
+        "height": 1.5,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 29,
+      "kind": "shield reserve",
+      "position": [
+        -2.3894999027252197,
+        0.45600052177906036,
+        -0.1574999988079071
+      ],
+      "box_size": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "clear_box": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "render_item": "ShieldIronBuckler",
+      "example_item": "ShieldIronBuckler",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -2.3894999027252197,
+        0.15000000596046448,
+        -0.1574999988079071
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          2.301128387451172,
+          -0.148420512676239,
+          0.15000000596046448
+        ],
+        "max": [
+          2.4778714179992676,
+          0.4634205102920532,
+          0.7620010375976562
+        ],
+        "size": [
+          0.1767430305480957,
+          0.6118410229682922,
+          0.6120010316371918
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -2.5079999027252198,
+          0.15,
+          -0.6549999988079072
+        ],
+        "max": [
+          -2.2709999027252197,
+          1.65,
+          0.3400000011920929
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.237,
+        "depth": 0.995,
+        "height": 1.5,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 30,
+      "kind": "shield reserve",
+      "position": [
+        -2.651500105857849,
+        0.6270980387926102,
+        -0.1574999988079071
+      ],
+      "box_size": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "clear_box": [
+        0.237,
+        1.5,
+        0.995
+      ],
+      "render_item": "ShieldBanded",
+      "example_item": "ShieldBanded",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.5,
+            -0.5,
+            0.5,
+            0.5
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -2.6514999866485596,
+        0.15000000596046448,
+        -0.1574999988079071
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          2.5776596069335938,
+          -0.3152350187301636,
+          0.15000000596046448
+        ],
+        "max": [
+          2.7253406047821045,
+          0.6302350163459778,
+          1.1041960716247559
+        ],
+        "size": [
+          0.14768099784851074,
+          0.9454700350761414,
+          0.9541960656642914
+        ]
+      },
+      "feature_priority": false,
+      "clear_box_bounds_unity": {
+        "min": [
+          -2.7699999866485596,
+          0.15,
+          -0.6549999988079072
+        ],
+        "max": [
+          -2.5329999866485595,
+          1.65,
+          0.3400000011920929
+        ]
+      },
+      "clear_box_domain": {
+        "width": 0.237,
+        "depth": 0.995,
+        "height": 1.5,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    },
+    {
+      "index": 31,
+      "kind": "featured shield",
+      "position": [
+        -2.1275001764297485,
+        0.6586036533117294,
+        0.5249999612569809
+      ],
+      "box_size": [
+        1.185,
+        1.5,
+        0.21
+      ],
+      "clear_box": [
+        1.185,
+        1.5,
+        0.21
+      ],
+      "render_item": "ShieldBlackmetal",
+      "example_item": "ShieldBlackmetal",
+      "accepted_item_types": [
+        "Shield"
+      ],
+      "allocation_group": "shields",
+      "copies": [
+        {
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "rot_quat_xyzw": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "scale": 1.0,
+          "anchor": "center"
+        }
+      ],
+      "native_scale_required": true,
+      "bottom_position_unity": [
+        -2.127500057220459,
+        0.15000000596046448,
+        0.5249999761581421
+      ],
+      "demo_bounds_blender": {
+        "min": [
+          1.607621192932129,
+          -0.6272804737091064,
+          0.15000006556510925
+        ],
+        "max": [
+          2.647379159927368,
+          -0.42271944880485535,
+          1.1672072410583496
+        ],
+        "size": [
+          1.0397579669952393,
+          0.2045610249042511,
+          1.0172071754932404
+        ]
+      },
+      "feature_priority": true,
+      "clear_box_bounds_unity": {
+        "min": [
+          -2.7200000572204592,
+          0.15,
+          0.4199999761581421
+        ],
+        "max": [
+          -1.535000057220459,
+          1.65,
+          0.6299999761581421
+        ]
+      },
+      "clear_box_domain": {
+        "width": 1.185,
+        "depth": 0.21,
+        "height": 1.5,
+        "reason": "Per-place allocation cell; width/depth terminate at physical dividers. Height is the finite open-top display domain."
+      },
+      "support": "Full timber floor at y=0.15 m, with grounded side partitions; no shaft-sized collars inside the clear volume."
+    }
+  ],
+  "runtime_needed": [
+    "Read clear_box as a strict prefab-axis size in metres; never use the old x1.25 +0.02 allowance.",
+    "Keep original native-scale type allocation and per-item rotated bottom placement. Long cells also accept OneHandedWeapon so spears can route there.",
+    "No type-ignoring fallback into unrelated bow or shield cells.",
+    "These are asset/mirror checks, not in-game runtime integration."
+  ],
+  "prototype_only": true,
+  "clear_box_contract": "clear_box is [width,height,depth] in prefab Unity axes, bottom-centred on bottom_position_unity. Strict rotated native bounds <= clear_box; no 1.25 factor and no 2cm allowance. Cell domain caps open-top height.",
+  "modules": [
+    {
+      "kind": "handheld and bow",
+      "x0": -2.84,
+      "width": 2.345
+    },
+    {
+      "kind": "long",
+      "x0": -0.49499999999999966,
+      "width": 1.91
+    },
+    {
+      "kind": "shield",
+      "x0": 1.4150000000000003,
+      "width": 1.425
+    }
+  ]
+}

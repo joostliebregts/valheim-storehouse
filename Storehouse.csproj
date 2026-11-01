@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildProjectDirectory)=.</PathMap>
+    <AssemblyName>Storehouse</AssemblyName>
+    <Version>0.1.0</Version>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <!-- Your own paths: set GameDir and ProfileDir as environment variables or with dotnet build -p:GameDir=... (BUILDING.md). -->
+    <GameDir Condition="'$(GameDir)' == ''">F:/SteamLibrary/steamapps/common/Valheim</GameDir>
+    <!-- Read only: the build references BepInEx, Harmony and Jotunn from this profile; it never writes into it. -->
+    <ProfileDir Condition="'$(ProfileDir)' == ''">C:/Users/joost/AppData/Roaming/com.kesomannen.gale/valheim/profiles/ValheimKK</ProfileDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Storehouse.cs" />
+    <Compile Include="DisplayPlan.cs" />
+    <Compile Include="ItemTightBounds.cs" />
+    <Compile Include="ArmPose.cs" />
+    <Reference Include="$(GameDir)/valheim_Data/Managed/*.dll" Exclude="$(GameDir)/valheim_Data/Managed/mscorlib.dll;$(GameDir)/valheim_Data/Managed/netstandard.dll;$(GameDir)/valheim_Data/Managed/System*.dll" Private="false" />
+    <Reference Include="$(ProfileDir)/BepInEx/core/BepInEx.dll" Private="false" />
+    <Reference Include="$(ProfileDir)/BepInEx/core/0Harmony.dll" Private="false" />
+    <!-- Jotunn 2.30.2 (MIT, Valheim-Modding): clones the vanilla pieces, config sync, icons. -->
+    <Reference Include="$(ProfileDir)/BepInEx/plugins/ValheimModding-Jotunn/Jotunn.dll" Private="false" />
+  </ItemGroup>
+</Project>

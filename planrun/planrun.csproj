@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The units style's plan outside the game: ../DisplayPlan.cs as the game compiles it, plus the REVIEW POLICY block cut from
+       ../Storehouse.cs at build time (the plan asks StorageReviewPolicy; that block stays in Storehouse.cs, where its own tests
+       read it). No Unity, no game assemblies. Storehouse.csproj does not reference this project. plan-gate.py builds and runs it. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RollForward>Major</RollForward>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../DisplayPlan.cs" Link="DisplayPlan.cs" />
+  </ItemGroup>
+
+  <UsingTask TaskName="CutReviewPolicy" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <Source ParameterType="System.String" Required="true" />
+      <Output ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System.IO" />
+      <Using Namespace="System.Text.RegularExpressions" />
+      <Code Type="Fragment" Language="cs"><![CDATA[
+        var m = Regex.Match(File.ReadAllText(Source), @"// REVIEW POLICY BEGIN[\s\S]*?// REVIEW POLICY END");
+        if (!m.Success) { Log.LogError("planrun: no REVIEW POLICY block in " + Source); return false; }
+        var text = "// Cut from Storehouse.cs at build time (planrun.csproj); do not edit.\nusing System;\nusing System.Collections.Generic;\nusing System.Globalization;\nusing System.IO;\nusing System.Linq;\nusing System.Text;\n\nnamespace Finn.Storehouse;\n\n" + m.Value.Replace("\r\n", "\n") + "\n";
+        Directory.CreateDirectory(Path.GetDirectoryName(Output));
+        if (!File.Exists(Output) || File.ReadAllText(Output) != text) File.WriteAllText(Output, text);
+      ]]></Code>
+    </Task>
+  </UsingTask>
+  <!-- DisplayPlan.cs keeps its JSON and dev log lines under #if !RELEASE, as the game's dev build has them; the SDK defines RELEASE
+       for -c Release, so it is taken out again here, whatever the configuration. -->
+  <Target Name="NoReleaseConstant" BeforeTargets="CoreCompile">
+    <PropertyGroup>
+      <DefineConstants>$([System.String]::Copy(';$(DefineConstants);').Replace(';RELEASE;', ';').Trim(';'))</DefineConstants>
+    </PropertyGroup>
+  </Target>
+  <Target Name="ReviewPolicy" BeforeTargets="CoreCompile">
+    <CutReviewPolicy Source="$(MSBuildProjectDirectory)/../Storehouse.cs" Output="$(MSBuildProjectDirectory)/$(IntermediateOutputPath)ReviewPolicy.g.cs" />
+    <ItemGroup>
+      <Compile Include="$(IntermediateOutputPath)ReviewPolicy.g.cs" />
+    </ItemGroup>
+  </Target>
+</Project>
